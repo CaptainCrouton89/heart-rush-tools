@@ -4,6 +4,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import { useState, useEffect } from 'react';
 import { CrossReferenceLink } from './CrossReferenceLink';
+import remarkGfm from 'remark-gfm';
 
 interface MarkdownRendererProps {
   content: string;
@@ -69,27 +70,31 @@ const mdxComponents = {
   
   // Enhanced table styling
   table: ({ children, ...props }: ComponentProps) => (
-    <div className="overflow-x-auto mb-6">
-      <table className="min-w-full divide-y divide-border border border-border rounded-lg" {...props}>
+    <div className="overflow-x-auto mb-6 rounded-lg border border-border shadow-sm">
+      <table className="min-w-full divide-y divide-border" {...props}>
         {children}
       </table>
     </div>
   ),
   
   thead: ({ children, ...props }: ComponentProps) => (
-    <thead className="bg-accent" {...props}>{children}</thead>
+    <thead className="bg-muted/50" {...props}>{children}</thead>
   ),
   
   tbody: ({ children, ...props }: ComponentProps) => (
     <tbody className="bg-card divide-y divide-border" {...props}>{children}</tbody>
   ),
   
+  tr: ({ children, ...props }: ComponentProps) => (
+    <tr className="hover:bg-accent/5 transition-colors" {...props}>{children}</tr>
+  ),
+  
   th: ({ children, ...props }: ComponentProps) => (
-    <th className="px-4 py-2 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider" {...props}>{children}</th>
+    <th className="px-4 py-3 text-left text-sm font-semibold text-foreground" {...props}>{children}</th>
   ),
   
   td: ({ children, ...props }: ComponentProps) => (
-    <td className="px-4 py-2 text-sm text-foreground" {...props}>{children}</td>
+    <td className="px-4 py-3 text-sm text-muted-foreground" {...props}>{children}</td>
   ),
   
   // Code blocks
@@ -176,7 +181,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         
         const serialized = await serialize(processedContent, {
           mdxOptions: {
-            remarkPlugins: [],
+            remarkPlugins: [remarkGfm],
             rehypePlugins: [],
           },
         });

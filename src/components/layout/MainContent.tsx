@@ -29,7 +29,7 @@ export function MainContent({
         </div>
 
         {/* Main article content */}
-        <article className="prose prose-lg dark:prose-invert max-w-none">
+        <article className="prose prose-lg dark:prose-invert max-w-none prose-table:m-0">
           <header className="mb-8">
             <h1 className="text-4xl font-bold text-primary mb-4">
               {content.title}
