@@ -7,16 +7,24 @@ import { SearchResult } from '../../types/content';
 interface SearchInputProps {
   onResults?: (results: SearchResult[]) => void;
   onQueryChange?: (query: string) => void;
+  onClose?: () => void;
+  searchResults?: SearchResult[];
+  value?: string;
 }
 
-export function SearchInput({ onResults, onQueryChange }: SearchInputProps) {
-  const [query, setQuery] = useState('');
+export function SearchInput({ onResults, onQueryChange, onClose, searchResults, value }: SearchInputProps) {
+  const [query, setQuery] = useState(value || '');
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   
   const inputRef = useRef<HTMLInputElement>(null);
   const debounceRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Update query when value prop changes
+  useEffect(() => {
+    setQuery(value || '');
+  }, [value]);
 
   const performSearch = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
@@ -78,8 +86,12 @@ export function SearchInput({ onResults, onQueryChange }: SearchInputProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setShowSuggestions(false);
-    if (query.trim()) {
-      performSearch(query);
+    
+    // Navigate to first search result if available
+    if (searchResults && searchResults.length > 0) {
+      window.location.href = `/${searchResults[0].slug}`;
+      setQuery('');
+      onClose?.();
     }
   };
 

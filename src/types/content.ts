@@ -10,6 +10,7 @@ export interface ContentSection {
   word_count: number;
   reading_time: number;
   order: number;
+  children?: ContentSection[];
 }
 
 export interface NavigationNode {

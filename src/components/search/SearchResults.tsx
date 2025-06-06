@@ -8,6 +8,7 @@ interface SearchResultsProps {
   query: string;
   isVisible: boolean;
   onClose?: () => void;
+  onClearInput?: () => void;
 }
 
 export function SearchResults({
@@ -15,6 +16,7 @@ export function SearchResults({
   query,
   isVisible,
   onClose,
+  onClearInput,
 }: SearchResultsProps) {
   if (!isVisible || !query.trim()) {
     return null;
@@ -107,7 +109,10 @@ export function SearchResults({
             <Link
               key={`${result.slug}-${index}`}
               href={`/${result.slug}`}
-              onClick={onClose}
+              onClick={() => {
+                onClose?.();
+                onClearInput?.();
+              }}
               className="block px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
             >
               <div className="flex items-start justify-between">

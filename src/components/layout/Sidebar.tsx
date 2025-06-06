@@ -103,12 +103,16 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
           <SearchInput 
             onResults={handleSearchResults}
             onQueryChange={handleQueryChange}
+            onClose={handleCloseSearch}
+            searchResults={searchResults}
+            value={searchQuery}
           />
           <SearchResults
             results={searchResults}
             query={searchQuery}
             isVisible={showSearchResults}
             onClose={handleCloseSearch}
+            onClearInput={handleCloseSearch}
           />
         </div>
 

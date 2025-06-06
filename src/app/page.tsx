@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { getNavigationTree, getCategories } from '../lib/content';
+import { getNavigationTree } from '../lib/content';
 
 export default async function HomePage() {
   const navigation = await getNavigationTree();
-  const categories = await getCategories();
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -115,25 +114,6 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
-
-      {categories.length > 0 && (
-        <section>
-          <h2 className="text-2xl font-semibold text-foreground mb-6">
-            Browse by Category
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {categories.map(category => (
-              <Link
-                key={category}
-                href={`/search?category=${encodeURIComponent(category)}`}
-                className="inline-block px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
-              >
-                {category}
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
     </div>
   );
 }

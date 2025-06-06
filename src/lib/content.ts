@@ -231,18 +231,42 @@ export async function getTags(): Promise<string[]> {
   }
 }
 
-// Get children of a specific content section
+// Get children of a specific content section with recursive structure
 export async function getChildContent(parentSlug: string): Promise<ContentSection[]> {
   try {
     const allMetadata = await getAllContentMetadata();
-    const childMetadata = allMetadata.filter(item => item.parent === parentSlug);
+    const allContent = new Map<string, ContentSection>();
+    
+    // Load all content sections first
+    const contentPromises = allMetadata.map(async (item) => {
+      const content = await getContentBySlug(item.slug);
+      if (content) {
+        allContent.set(item.slug, content);
+      }
+    });
+    await Promise.all(contentPromises);
 
-    const contentPromises = childMetadata.map(item => getContentBySlug(item.slug));
-    const contentResults = await Promise.all(contentPromises);
+    // Helper function to recursively build children structure
+    const buildChildrenTree = (slug: string): ContentSection[] => {
+      const directChildren = allMetadata
+        .filter(item => item.parent === slug)
+        .sort((a, b) => a.order - b.order);
 
-    return contentResults
-      .filter((content): content is ContentSection => content !== null)
-      .sort((a, b) => a.order - b.order);
+      return directChildren.map(child => {
+        const content = allContent.get(child.slug);
+        if (!content) return null;
+
+        // Recursively get children of this child
+        const grandchildren = buildChildrenTree(child.slug);
+        
+        return {
+          ...content,
+          children: grandchildren.length > 0 ? grandchildren : undefined
+        } as ContentSection;
+      }).filter((content): content is ContentSection => content !== null);
+    };
+
+    return buildChildrenTree(parentSlug);
   } catch (error) {
     console.error(`Error loading child content for ${parentSlug}:`, error);
     return [];
