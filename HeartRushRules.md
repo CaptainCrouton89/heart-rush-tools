@@ -1,4 +1,4 @@
-# # Introduction
+## Introduction
 
 Heart Rush is a crunchy, fantasy TTRPG ruleset.
 And it does combat really well.
@@ -205,7 +205,7 @@ Rules of the Game
 
 Rules of the Game
 
-# # Contents
+## Contents
 
 - Contents
 - Building Your Char acter
@@ -276,7 +276,7 @@ Rules of the Game
       - Ghoul
       - Savant
 
-# # Building Your Char acter
+## Building Your Char acter
 
 As you make a character in Heart Rush,
 remember that at the center of every Heart Rush
@@ -445,7 +445,7 @@ mean different things depending on how much
 damage you take. If it’s less than 10 damage, this
 ```
 
-## # BUILDING YOUR CHARACTER
+### BUILDING YOUR CHARACTER
 
 represents minor injuries—nothing that poses a real
 threat. However, if you take 10 or more damage, this
@@ -604,7 +604,7 @@ therefore cannot spend them on bonuses. Also look
 out for aspects that can be both positive and negative
 ```
 
-## # BUILDING YOUR CHARACTER
+### BUILDING YOUR CHARACTER
 
 ```
 Example
@@ -686,7 +686,7 @@ Rank Abilities Starting XP
 abilities
 ```
 
-## # 30
+### 30
 
 ```
 3 More subclass abilities 50
@@ -694,7 +694,7 @@ abilities
 abilities
 ```
 
-## # 80
+### 80
 
 ```
 5+ A paragon ability per
@@ -785,7 +785,7 @@ represent heroic level capstones to various combat
 archetypes.
 ```
 
-## # BUILDING YOUR CHARACTER
+### BUILDING YOUR CHARACTER
 
 ```
 Advice for New Groups
@@ -808,7 +808,7 @@ great reward for players accepting and defeating
 more dangerous fights.
 ```
 
-# # Gameplay Basics
+## Gameplay Basics
 
 This section describes how general gameplay
 should proceed.
@@ -879,7 +879,7 @@ Lo w High v. High
 Impossible
 ```
 
-## # – 2% 19%
+### – 2% 19%
 
 ```
 21 Heroic – – 4%
@@ -994,7 +994,7 @@ instance, if you have an ability that activates when a
 specific number is rolled, disregard the results from
 ```
 
-## # GAMEPLAY BASICS
+### GAMEPLAY BASICS
 
 the extra dice gained through advantage or
 disadvantage, and consider only the results of the
@@ -1182,7 +1182,7 @@ movement is stopped by a creature that is not
 wielding a shield, the movement is still stopped, and
 ```
 
-## # GAMEPLAY BASICS
+### GAMEPLAY BASICS
 
 the total damage is split evenly between the two
 creatures, rounded up for the creature being forced to
@@ -1361,7 +1361,7 @@ suddenly prevented from breathing, then you begin
 suffocating immediately.
 ```
 
-## # GAMEPLAY BASICS
+### GAMEPLAY BASICS
 
 Poisons
 
@@ -1572,9 +1572,9 @@ elemental attunements.
 Ty p e XP Cost Effect
 ```
 
-## # GAMEPLAY BASICS
+### GAMEPLAY BASICS
 
-## # 200XP
+### 200XP
 
 When you reach a cumulative 200 XP, increase
 your heart die to a d10.
@@ -1589,9 +1589,9 @@ your maximum heart die to a d12.
 When you reach a cumulative 1000 XP, increase
 your maximum heart die to a d20.
 
-## # GAMEPLAY BASICS
+### GAMEPLAY BASICS
 
-# # Journeys
+## Journeys
 
 When the travel is safe and not a focus of
 gameplay, such as on a well-traveled road between
@@ -1730,7 +1730,7 @@ Forest 11 9 5 5 8
 Grassland 5 6 6 6 7
 ```
 
-## # JOURNEYS
+### JOURNEYS
 
 ```
 GM Note
@@ -1907,7 +1907,7 @@ example, if you were riding a horse, ran out of food,
 entered a challenge phase, and then butchered your
 ```
 
-## # TRAVEL & SURVIVAL
+### TRAVEL & SURVIVAL
 
 ```
 GM Note
@@ -2088,9 +2088,9 @@ to fail. The remaining ones just act as
 disadvantage on the rolls during action phase.
 ```
 
-## # TRAVEL & SURVIVAL
+### TRAVEL & SURVIVAL
 
-# # Basic Needs
+## Basic Needs
 
 Although usually not necessary to track, basic
 needs such as water, food, and warmth are all things
@@ -2202,7 +2202,7 @@ Gear section for the different clothes. You cannot
 sleep in your clothes, but an insulated bedroll will
 also work.
 
-# # Equipment & Gear
+## Equipment & Gear
 
 Encumbrance
 
@@ -2251,7 +2251,7 @@ temperature by 1 (your choice). Can sleep four. See the Travel
 section.
 ```
 
-## # 6 150
+### 6 150
 
 ```
 Bed Roll Improves shelter in the wilderness. See the Travel section. 1 50
@@ -2259,7 +2259,7 @@ Insulated bedroll Improves shelter in the wilderness. See the Travel section.
 Increases your temperature by 1.
 ```
 
-## # 2 140
+### 2 140
 
 ```
 Hammock Improves shelter in the wilderness. Cannot be used in a tent. 1 20
@@ -2297,14 +2297,14 @@ Torch Casts bright light in 30-foot radius, dim light 30 feet past that. The
 torch lasts 3 hours.
 ```
 
-## # 1 15
+### 1 15
 
 ```
 Lantern Casts bright light in 15-foot radius, dim light 15 feet past that.
 Requires oil to burn.
 ```
 
-## # 1 30
+### 1 30
 
 ```
 Oil Used for lanterns. Enough oil for 24 hours. 1 20
@@ -2356,7 +2356,7 @@ Some of the gear in the table have limited uses, denoted by the “dX uses”. I
 then the die decreases in size. If that would occur on a d4, then instead, the item is used up.
 ```
 
-# # Combat
+## Combat
 
 Combat occurs in rounds, broken up by abilities
 and engagements. Engagements are short scenes of
@@ -2421,7 +2421,7 @@ As soon as someone enters an engagement, neither
 side has priority until the engagement ends.
 ```
 
-## # COMBAT
+### COMBAT
 
 ```
 Engagements Are Important
@@ -2614,7 +2614,7 @@ reason, enemies will do a lot to avoid getting
 hit with them. Use that to your advantage.
 ```
 
-## # COMBAT
+### COMBAT
 
 Minor Abilities
 
@@ -2790,7 +2790,7 @@ would be unable to attack or be attacked during the
 subsequent turns for the remaining stances.
 ```
 
-## # COMBAT
+### COMBAT
 
 At tacking
 
@@ -2918,7 +2918,7 @@ When your hit points reach zero, you are in bad
 condition. If you wish, you may choose to go
 ```
 
-## # COMBAT
+### COMBAT
 
 ```
 Example
@@ -3103,7 +3103,7 @@ themselves. At the GM’s discretion, you may make
 an opportunity attack against the creature.
 ```
 
-## # COMBAT
+### COMBAT
 
 Depending on the circumstances, the GM may also
 choose for the creature to immediately die instead.
@@ -3136,7 +3136,7 @@ that are specifically designed for uni-directional
 attacks, such as arrow slits, will provide three levels
 of cover.
 
-# # Rests & Healing
+## Rests & Healing
 
 There are a few ways to regain hit points. The
 primary method is by taking rests, but magic, racial
@@ -3185,7 +3185,7 @@ wounds by one, and heal hit points up to your current
 maximum (it will be reduced if you have wounds).
 ```
 
-## # RESTS & HEALING
+### RESTS & HEALING
 
 ```
 Example
@@ -3284,7 +3284,7 @@ combat is intermittent is plenty grueling for most
 parties.
 ```
 
-# # Conditions
+## Conditions
 
 A variety of conditions can affect players and
 enemies alike. They generally give advantage or
@@ -3369,7 +3369,7 @@ take actions, use abilities, speak, or make attack
 rolls.
 ```
 
-## # CONDITIONS
+### CONDITIONS
 
 Incapacitated
 _Ongoing._
@@ -3550,7 +3550,7 @@ rolls against creatures that don’t have the high
 ground.
 ```
 
-## # CONDITIONS
+### CONDITIONS
 
 Creature Climber
 _Ongoing._
@@ -3620,7 +3620,7 @@ takes due to forced movement is also applied to the
 other.
 ```
 
-# # Classes
+## Classes
 
 Your class is the general role in combat that you
 fill. It doesn’t say anything about what you do
@@ -3699,7 +3699,7 @@ Skirmisher
 Any Spelltouched
 ```
 
-## # CLASSES
+### CLASSES
 
 ```
 Part y C om p os i t ion
@@ -3904,7 +3904,7 @@ number of rush points you spend on this ability.
 - You get X levels of advantage on checks to
   maintain your grapple on the creature.
 
-## # CLASSES
+### CLASSES
 
 - Each round, as an action, you may roll your
   might die X times and deal that much damage to
@@ -4085,7 +4085,7 @@ disadvantage on defense rolls, but you may make
 called shots.
 ```
 
-## # CLASSES
+### CLASSES
 
 By aiming for a very specific location on your
 target, you maximize your potential damage, at the
@@ -4269,7 +4269,7 @@ You can spot out the weak points in your
 enemies’ defenses and direct your allies towards
 ```
 
-## # CLASSES
+### CLASSES
 
 them. Choose a creature within 30 feet. If the
 creature meets one of the following conditions,
@@ -4448,7 +4448,7 @@ Choose one.
 - ** Quick Reflexes** : You start this round with
   priority.
 
-## # CLASSES
+### CLASSES
 
 Elusive
 _Minor ability. Instant. Rank 3._
@@ -4630,7 +4630,7 @@ a creature triggers the listed effect.
   thunder. The target takes three levels of off-
   balanced.
 
-## # CLASSES
+### CLASSES
 
 - Water: Your attacks carry the might of the sea.
   The target takes three levels of weakened.
@@ -4709,7 +4709,7 @@ may choose for them to also gain a level of off-
 balanced.
 ```
 
-# # Par ag on A b i l i t i e s
+## Par ag on A b i l i t i e s
 
 After reaching combat rank 4, further ranks come
 in the form of paragon levels. Paragon levels are
@@ -4784,7 +4784,7 @@ slashing weapons against a creature, if there is
 another creature also within melee reach, you may
 ```
 
-## # PARAGON ABILITIES
+### PARAGON ABILITIES
 
 ```
 GM Note
@@ -4995,7 +4995,7 @@ confused. This ability can only be used on each
 creature once per day.
 ```
 
-## # PARAGON ABILITIES
+### PARAGON ABILITIES
 
 Relentless
 _Passive ability. Subclass: Bastion, Vicehand, Wrathguard, Ravager._
@@ -5142,9 +5142,9 @@ paragon level again, you may choose creatures with
 a fly speed of up to 40 feet.
 ```
 
-## # PARAGON ABILITIES
+### PARAGON ABILITIES
 
-# # Ta l e n t s
+## Ta l e n t s
 
 Talents represent specific abilities you have
 learned, been gifted, or know how to perform
@@ -5306,7 +5306,7 @@ you redirect their attack. A creature is considered
 behind you if at least one straight line can be drawn
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 from a corner of the attacker’s space, through your
 space, and to a corner of the new victim’s space.
@@ -5491,7 +5491,7 @@ As an action, you swear vengeance against a
 creature that you believe has wronged you. You can
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 only have a bloodoath against one creature at a time.
 While you have sworn vengeance against a creature
@@ -5682,7 +5682,7 @@ Whenever a creature within 10 feet of you takes
 damage, you may increase that damage by 1.
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 Destiny Level
 Whenever you increase damage this way, you
@@ -5871,7 +5871,7 @@ You may take this talent any number of times,
 choosing a different spell each time.
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 Destiny Level
 When you use this ability, you may cast the spell
@@ -6056,7 +6056,7 @@ If you have advantage on an attack roll, you gain
 an additional two levels of advantage.
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 Hotter Flames
 _Passive ability. Cognitive talent. Elemental attunement: Fire._
@@ -6238,7 +6238,7 @@ rolls made this round. Increase the die’s size by one
 for each consecutive time you chose this stance.
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 Night’s Embrace
 _Passive ability. Handmagic._
@@ -6422,7 +6422,7 @@ any amount, increasing the target’s hit points by half
 that amount.
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 Destiny Level
 The healing is equal to the full amount spent,
@@ -6600,7 +6600,7 @@ add 1d8 to your next attack roll in the current
 engagement.
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 Unarmed Combatant
 _Passive ability. Martial talent._
@@ -6779,7 +6779,7 @@ can identify your location from a successful
 navigation check.
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 Befuddle
 _Heart ability. Handmagic._
@@ -6954,7 +6954,7 @@ clothes and your hands are free. You can carry up to
 20 slots of items in this way. In addition, once per
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 day, you may produce any non-unique, inexpensive
 item from your person.
@@ -7140,7 +7140,7 @@ you can resupply and change out your equipment.
 - Your shelter counts as indoors for purpose of
   calculating odds of a successful night of sleep.
 
-## # TA L E N T S
+### TA L E N T S
 
 - Your bed counts as a straw bed for the purpose
   of calculating odds of a successful night of sleep.
@@ -7324,7 +7324,7 @@ using this talent until a significant amount of new
 information presents itself. You do not forget the
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 knowledge contained in any information you read or
 hear.
@@ -7503,7 +7503,7 @@ provide bonuses to both picking the lock and to
 doing so quietly.
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 Medic
 _Passive ability. Cognitive talent._
@@ -7679,7 +7679,7 @@ if any food or drink you eat contains any poison, as
 well as all of its properties.
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 Rapid Growth
 _Major ability. Full action. Handmagic._
@@ -7858,7 +7858,7 @@ than five people. The GM must truthfully answer
 two of the three questions.
 ```
 
-## # TA L E N T S
+### TA L E N T S
 
 Smell Something Fishy
 _Heart ability. Cognitive talent._
@@ -7970,9 +7970,9 @@ may have changed since the last time you talked with
 them). If the GM doesn’t believe this to be
 reasonable, you may choose not to use this ability.
 
-## # TA L E N T S
+### TA L E N T S
 
-# # Weapons, Cantrips & Armor
+## Weapons, Cantrips & Armor
 
 Equipment encompasses all of the gear you
 might use while adventuring. When you first create
@@ -8142,7 +8142,7 @@ inflict damage, and therefore are best used with high
 agility. Examples of slashing weapons include
 ```
 
-## # WEAPONS, CANTRIPS & ARMOR
+### WEAPONS, CANTRIPS & ARMOR
 
 swords and scythes. Whenever you wield a slashing
 weapon and use the agility stance, add an additional
@@ -8323,7 +8323,7 @@ crackling away from you. This attack deals damage
 as an ultralight, melee, spell-weapon attack. If targets
 ```
 
-## # WEAPONS, CANTRIPS & ARMOR
+### WEAPONS, CANTRIPS & ARMOR
 
 are wearing metal armor, double the result of your
 attack roll.
@@ -8467,9 +8467,9 @@ Light shields require 5 gear slots when not being
 worn.
 ```
 
-## # WEAPONS, CANTRIPS & ARMOR
+### WEAPONS, CANTRIPS & ARMOR
 
-# # Kethic Elementalism
+## Kethic Elementalism
 
 Kethic elementalism, also known as Kethic and
 elemental magic, is one of the most prevalent
@@ -8628,7 +8628,7 @@ Par ag on At t u n e m e n t
 The range of your sensing increases to 900 feet.
 ```
 
-## # ELEMENTAL MAGIC
+### ELEMENTAL MAGIC
 
 Creation & Destruction
 
@@ -8808,7 +8808,7 @@ Par ag on At t u n e m e n t
   smoke within 120 feet into shapes, patterns, and
   different colors.
 
-## # ELEMENTAL MAGIC
+### ELEMENTAL MAGIC
 
 Air
 
@@ -8986,7 +8986,7 @@ Basic Attunement
   radius, turning non-magical, bright light into dim
   light, or dim light into darkness.
 
-## # ELEMENTAL MAGIC
+### ELEMENTAL MAGIC
 
 ```
 A Note on Light and Dark
@@ -9125,7 +9125,7 @@ you into a hyper-flammable state, allowing you to
 easily ignite moments of already high-energy, such
 ```
 
-## # SPELLS
+### SPELLS
 
 as the impact of a blade. Whenever a creature within
 10 feet takes damage, you may have them take a
@@ -9315,7 +9315,7 @@ each other. At the end of each round, if the two
 creatures are not within 10 feet of each other, they
 ```
 
-## # SPELLS
+### SPELLS
 
 each takes two levels of dazed, off-balanced, and
 weakened, and 1d6 damage.
@@ -9500,7 +9500,7 @@ ground. Everyone within a 15-foot radius of the
 point takes 6d8 damage and a level of burning.
 ```
 
-## # SPELLS
+### SPELLS
 
 Oil Slick
 _Water and Earth. Ongoing._
@@ -9688,7 +9688,7 @@ slashing and piercing defense rolls, and your move
 speed decreases by 10 feet.
 ```
 
-## # SPELLS
+### SPELLS
 
 Su nbeams
 _Light. Ongoing._
@@ -9835,9 +9835,9 @@ adjacent to that and any other connected warped
 spaces.
 ```
 
-## # SPELLS
+### SPELLS
 
-# # Downtime Activity (WIP)
+## Downtime Activity (WIP)
 
 Downtime is something to be encouraged. After
 a nasty fight, it will take a while to heal. If you are in
@@ -9975,7 +9975,7 @@ Success:
 - New allies
 - Secrets
 
-# # Kin & Culture
+## Kin & Culture
 
 When you create a character, choose a race, and
 if available, an associated heritage within that race.
@@ -10108,7 +10108,7 @@ is easy to misinterpret a Neth’s silence at a joke as
 boredom or even worse, anger, but if you look
 ```
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 carefully, you may see a glint in their eyes, and they
 will soon fire back a joke of their own, all while
@@ -10286,7 +10286,7 @@ known for their formidable mercenary groups,
 trackers, and explorers.
 ```
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 Aspects
 
@@ -10472,7 +10472,7 @@ Aspects
 
 - Perceptive and stealthy
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 - Nature is my home
 
@@ -10572,7 +10572,7 @@ and other intellectual efforts. Additionally, within a
 single generation, the number of earth attuned
 ```
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 individuals increased drastically, enhancing the
 population’s ability to mine and control their
@@ -10676,7 +10676,7 @@ any one of the following abilities:
   or sunset to capture the sun’s rays. The sunlight
   within a flask expires after 12 hours.
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 Gnome
 
@@ -10777,7 +10777,7 @@ You gain the _Nature’s Child_ talent as a racial
 ability (it does not count towards the number of
 talents you have), along with its destiny level.
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 Goblin
 
@@ -10914,7 +10914,7 @@ following list.
 - Light
 - Dark
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 Minotaur
 
@@ -11044,7 +11044,7 @@ instead choose a willing creature within 30 feet and
 move it 5 feet in any direction. This movement does
 not provoke opportunity attacks.
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 Tr ol l k i n
 
@@ -11190,7 +11190,7 @@ effects:
 - You cannot take actions.
 - You cannot speak.
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 - Your physical body remains collapsed
   wherever you left it. You may return to it, or any
@@ -11282,7 +11282,7 @@ planes. This also excludes you from effects on
 creatures with souls or shadows.
 ```
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 Ghoul
 
@@ -11394,7 +11394,7 @@ range increases to 120 feet. The _Infuse_ option from
 your _Soul Eater_ can prevent creatures with elemental
 attunement from doing this.
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 Savant
 
@@ -11534,7 +11534,7 @@ you rolled, you may replace the result with the result
 from your die roll. After doing so, you cannot use
 that die again.
 
-## # KIN & CULTURE
+### KIN & CULTURE
 
 # Part 2
 
@@ -11542,7 +11542,7 @@ Rules for Specific Scenarios
 
 and O ther Uncommon Activities
 
-# # Contents
+## Contents
 
 Contents 151
 
@@ -11598,7 +11598,7 @@ Enemy Templates 227
 Factions 231
 ```
 
-# # Advanced Character Creation
+## Advanced Character Creation
 
 WARNING: This section is still work in
 progress.
@@ -11671,19 +11671,19 @@ Weeks
 Challenges Missions
 ```
 
-## # 1 1 - -
+### 1 1 - -
 
-## # 2 4 1 -
+### 2 4 1 -
 
-## # 3 9 2 1
+### 3 9 2 1
 
-## # 4 16 3 2
+### 4 16 3 2
 
-## # 5 25 4 3
+### 5 25 4 3
 
-## # 6 36 5 4
+### 6 36 5 4
 
-## # 7 49 6 5
+### 7 49 6 5
 
 ```
 Rank Downtime
@@ -11906,7 +11906,7 @@ Scou t
 Examples: explorer, treasure hunter, guide,
 cartographer, messenger, adventurer.
 
-## # •
+### •
 
 - You start with 25 ducat.
 
@@ -12553,7 +12553,7 @@ Tie r 4
 - You may spend twenty points of divine favor to
   garner the full attention of your god.
 
-# # Misc. Other Rules
+## Misc. Other Rules
 
 Le a r n i n g a La n g u a g e
 
@@ -12646,7 +12646,7 @@ outcome occurs.
   - Failure: Minor complication
   - Epic failure: Major complication
 
-# # Influence
+## Influence
 
 Your influence is a general measurement of your
 social power in society. As you gain fame or infamy,
@@ -12986,7 +12986,7 @@ revealing an impressive heist, then use the value of
 whatever object they are showing off to determine
 where they sit in this column.
 
-# # Strongholds
+## Strongholds
 
 Strongholds represent loci of power for players.
 Although not necessarily literally strongholds, they
@@ -13303,7 +13303,7 @@ Le v e l Die Le v e l Die
 4 d10 8 d2
 ```
 
-# # Chase
+## Chase
 
 A chase starts out with a chaser and their prey,
 each positioned on a number line. The chaser starts
@@ -13388,7 +13388,7 @@ wherever they wish in a spot behind the prey. If they
 wish to enter combat, they automatically go first,
 even if the other party wishes to retreat.
 
-# # Deoric Magic
+## Deoric Magic
 
 Deoric is the language of truth. The language is
 extremely complex, but whatever is spoken in the
@@ -13747,7 +13747,7 @@ A few
 seconds
 ```
 
-## # 1
+### 1
 
 ```
 minute
@@ -13890,7 +13890,7 @@ Magical, non-sentient creatures, most
 humans
 ```
 
-## # 3
+### 3
 
 ```
 Mythical creatures 4
@@ -14162,9 +14162,9 @@ Rank Number of Successes
 5 50
 ```
 
-## # 6 50
+### 6 50
 
-## # 7 50
+### 7 50
 
 ```
 Rank Number of Successes
@@ -14208,7 +14208,7 @@ A2 on Deoric spell casting checks to cast a spell more
 quickly
 ```
 
-## # 2,000
+### 2,000
 
 ```
 Intricate engraved pentacle, composed
@@ -14220,7 +14220,7 @@ A3 on Deoric spell casting checks to cast a spell more
 quickly
 ```
 
-## # 15,000
+### 15,000
 
 ```
 Simple stone altar or equivalent, used
@@ -14255,7 +14255,7 @@ don’t have complete domain knowledge for
 Used up after each use
 ```
 
-## # 5
+### 5
 
 ```
 Expensive incenses A2 on Deoric spell casting checks to cast a spell you don’t
@@ -14263,7 +14263,7 @@ have complete domain knowledge for
 Used up after each use
 ```
 
-## # 200
+### 200
 
 ```
 Titanweed & Dragonflower A3 on Deoric spell casting checks to cast a spell you don’t
@@ -14271,7 +14271,7 @@ have complete domain knowledge for
 Used up after each use
 ```
 
-## # 2,000–
+### 2,000–
 
 ```
 Not for
@@ -14473,7 +14473,7 @@ Passive* 500
 * Not available unless explicitly permitted by a player ability
 ```
 
-# # Traders & Merchants
+## Traders & Merchants
 
 Money is what makes the world go around, and
 in the world of Alaria, it is no different. If you are
@@ -14882,7 +14882,7 @@ Exotic Creatures 100+ 10+
 
 Resource Price (du c at) Weight (Lb s)
 
-# # Running a Ship
+## Running a Ship
 
 Ship Health
 
@@ -14972,7 +14972,7 @@ component to the new state, a brand new component
 must be installed. The cost and work required for this
 is up to the GM.
 
-# # Armies
+## Armies
 
 When large numbers of combatants collide, it
 may become more useful to use the rules for armies,
@@ -15369,7 +15369,7 @@ Player interaction:
 If you kill enemy commander, they lose.
 ```
 
-# # Smithing
+## Smithing
 
 - IS IT A PROBLEM SOLVING
   TOOL?
@@ -15427,7 +15427,7 @@ Exquisite 100% 25% +2
 Masterwork 200% 100% +3
 ```
 
-# # Magical Crafting
+## Magical Crafting
 
 Any bit of magical crafting begins with its
 components—a collection of magically potent
@@ -16775,7 +16775,7 @@ instincts.
 4.Blank someone’s mind, control their
 ```
 
-# # Followers
+## Followers
 
 Followers are like attendants, but have much
 more power and agency. Their goals heavily overlap
@@ -16793,7 +16793,7 @@ follower, they
 Spending money: If it’s a large portion of their
 wealth, track it. Otherwise, don’t bother.
 
-# # Factions
+## Factions
 
 ```
 1.Wealth
@@ -17103,7 +17103,7 @@ Lynchpin
 Tag Description
 ```
 
-# # Armies
+## Armies
 
 Armies are fairly simple to handle. Any faction
 can put together an army. It costs 1 surplus to recruit
@@ -17356,9 +17356,9 @@ _Major ability. Cognitive talent._
 Tradeoff abilities:
 ```
 
-# # Enemy
+## Enemy
 
-# # Te m pl at e s
+## Te m pl at e s
 
 First, find level of players. Takes some
 exploration. Roughly 1 level per adventure =>
@@ -17566,7 +17566,7 @@ Hostile creatures may risk their life or livelihood to
 make your life worse.
 ```
 
-# # Factions
+## Factions
 
 Followers are those who ascribe to your
 ideology. One in every hundred followers will
@@ -17698,7 +17698,7 @@ Rules and Advice
 
 for GMS
 
-# # Contents
+## Contents
 
 Contents 235
 
@@ -17718,7 +17718,7 @@ Wilderness Travel .............................................. 246
 Carrying Gear .................................................... 248
 Rules 2.0? .......................................................... 249
 
-# # Skill Checks
+## Skill Checks
 
 There are two different scales that Heart Rush is
 played at. The first is the moment-to-moment scale,
@@ -17726,7 +17726,7 @@ called micro-scale. This is the scale that combat and
 conversations usually play out at. When a player
 says what they want
 
-# # Pac i n g
+## Pac i n g
 
 ```
 Is the pace slowing down? Do one of these.
@@ -17781,7 +17781,7 @@ GM Moves
   moves related to the game’s broader threats and
   plot arcs.
 
-# # Scale
+## Scale
 
 There are two different scales that Heart Rush is
 played at. The first is the moment-to-moment scale,
@@ -17789,7 +17789,7 @@ called micro-scale. This is the scale that combat and
 conversations usually play out at. When a player
 says what they want
 
-# # Scale
+## Scale
 
 There are two different scales that Heart Rush is
 played at. The first is the moment-to-moment scale,
@@ -18061,7 +18061,7 @@ Complication Triggered:
 - The status quo is disturbed
 - People aren’t happy about it
 
-# # Creating a Monster
+## Creating a Monster
 
 RPGs are great when played by the seat of your
 pants. Unfortunately, Heart Rush is a fairly tactical
@@ -18138,9 +18138,9 @@ abilities to spark your imagination.
 - Forced movement
 - Additional damage
 
-# # Ru n ning a
+## Ru n ning a
 
-# # Sandbox Game
+## Sandbox Game
 
 ```
 Heart Rush runs best as a sandbox game.
@@ -18585,7 +18585,7 @@ Fulfills your need for
 food for two quarters
 ```
 
-## # 2.5 5
+### 2.5 5
 
 ```
 Ration of
@@ -18597,14 +18597,14 @@ Fulfills your need for
 water for two quarters.
 ```
 
-## # 3 0-2
+### 3 0-2
 
 ```
 Bedroll Grants a +20 to your
 sleeping check.
 ```
 
-## # 5 100
+### 5 100
 
 ```
 Insulated
@@ -18618,7 +18618,7 @@ Increases your
 temperature by 1.
 ```
 
-## # 10 200
+### 10 200
 
 ```
 Hammock Counts as a bedroll.
@@ -18626,7 +18626,7 @@ Cannot be used in a
 tent.
 ```
 
-## # 2 20
+### 2 20
 
 ```
 Bundle of
@@ -18639,7 +18639,7 @@ fire burning for one
 quarter.
 ```
 
-## # 20 5
+### 20 5
 
 ```
 Warm
@@ -18652,7 +18652,7 @@ Increases your
 temperature by 1.
 ```
 
-## # 10 60
+### 10 60
 
 ```
 Heavily
@@ -18665,7 +18665,7 @@ Increases your
 temperature by 2.
 ```
 
-## # 20 150
+### 20 150
 
 ```
 Tent Brings your
@@ -18674,7 +18674,7 @@ cozy by 1. Can fit 4
 people.
 ```
 
-## # 30 160
+### 30 160
 
 ```
 Firestarter
@@ -18686,7 +18686,7 @@ Allows you to start a
 fire.
 ```
 
-## # 1 10
+### 1 10
 
 ```
 Torch Casts bright light in a
@@ -18696,7 +18696,7 @@ beyond. Lasts for one
 quarter.
 ```
 
-## # 2 5
+### 2 5
 
 ```
 Candle Casts dim light in a 5
@@ -18704,7 +18704,7 @@ foot radius. Lasts for 4
 quarters.
 ```
 
-## # 1 3
+### 1 3
 
 ```
 Lantern Casts bright light in a
@@ -18714,7 +18714,7 @@ beyond that. Requires
 oil to provide light.
 ```
 
-## # 3 20
+### 3 20
 
 ```
 Oil flask Provides enough oil
@@ -18722,7 +18722,7 @@ for a lantern to burn
 for 1 quarter.
 ```
 
-## # 1 5
+### 1 5
 
 ```
 Fishing
@@ -18739,7 +18739,7 @@ Rope 50' Capable of holding
 200 pounds.
 ```
 
-## # 5 20
+### 5 20
 
 ```
 Strong
@@ -18751,7 +18751,7 @@ Capable of holding
 500 pounds.
 ```
 
-## # 10 60
+### 10 60
 
 ```
 Grappling
@@ -18764,7 +18764,7 @@ rope to locations you
 can't reach.
 ```
 
-## # 3 10
+### 3 10
 
 ```
 Hammer
@@ -18777,7 +18777,7 @@ construction and
 repairs.
 ```
 
-## # 3 10
+### 3 10
 
 ```
 Item Effect Weight Cost
@@ -19103,7 +19103,7 @@ advantage on the finding shelter check.
 
 # Appendix
 
-# # Appendix A: Prices
+## Appendix A: Prices
 
 While traveling the world, spending money, and
 slowly gathering money, you will also find yourself
@@ -19255,7 +19255,7 @@ Torch Casts bright light in 30-foot area, dim light 30 feet past that. The
 torch lasts one hour.
 ```
 
-## # 2 1–2L
+### 2 1–2L
 
 ```
 Lantern Casts bright light in 45-foot area, dim light 45 feet past that. 2 1–3D
@@ -19263,7 +19263,7 @@ Focusing Mirror Can focus lantern light. Light becomes 60-foot cone of bright li
 60 feet dim light past that.
 ```
 
-## # 1 2–10D
+### 1 2–10D
 
 ```
 Ultra-light
@@ -19275,21 +19275,21 @@ See ultra-light weapon section. Only uses slots if it is not your
 primary weapon.
 ```
 
-## # 2 1–500S
+### 2 1–500S
 
 ```
 Light Weapons See light weapon section. Only uses slots if it is not your primary
 weapon.
 ```
 
-## # 5 1–500D
+### 5 1–500D
 
 ```
 Heavy Weapons See heavy weapon section. Only uses slots if it is not your primary
 weapon.
 ```
 
-## # 10 1–5000E
+### 10 1–5000E
 
 Sleeping Pad Gives you +30% on sleep checks. 5 1–10S
 
@@ -19317,7 +19317,7 @@ Price
 Range
 ```
 
-# # Appendix B
+## Appendix B
 
 Besides knowing the rules, there are some ways
 to be a good Heart Rush player. This includes advice
@@ -19365,7 +19365,7 @@ material to work with for creating an immersive
 story.
 ```
 
-# # Appendix C: Magic Items
+## Appendix C: Magic Items
 
 A collection of examples of various magical
 items.
@@ -19386,7 +19386,7 @@ periods of time. As an action, you may choose to
 activate them. For the next minute, you levitate one
 foot of the ground. You gain a fly speed of 15 feet.
 
-# # Fix List
+## Fix List
 
 - Statting up enemies should be _effortless_. I
   want to be able to not prep enemies at all, just
@@ -19431,7 +19431,7 @@ Odds of not finding a place for shelter in the
 evening
 ```
 
-# # OSR PbtA
+## OSR PbtA
 
 ```
 Gritty, simulationist PbtA.
@@ -19475,7 +19475,7 @@ Best of all worlds:
 
 Kinda
 
-# # Special Thanks
+## Special Thanks
 
 Jess
 

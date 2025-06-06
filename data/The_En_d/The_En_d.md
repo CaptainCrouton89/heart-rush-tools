@@ -1,3 +1,0 @@
-# The En d
-
-Kinda

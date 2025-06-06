@@ -10,11 +10,7 @@ import os
 import time
 from pathlib import Path
 
-import openai
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
+from openai_config import get_openai_client, create_batch_request_body
 
 def create_batch_requests(data_dir):
     """Create batch requests for all markdown files in the data directory."""
@@ -51,42 +47,7 @@ def create_batch_requests(data_dir):
             "custom_id": f"format_fix_{i}_{str(relative_path).replace('/', '_').replace('.md', '')}",
             "method": "POST",
             "url": "/v1/chat/completions",
-            "body": {
-                "model": "gpt-4.1-nano",
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": """You are a markdown formatting expert. Your task is to fix formatting issues in this Heart Rush TTRPG rules document section.
-
-SPECIFIC TASKS:
-1. Fix malformed headers (ensure proper # spacing)
-2. Fix broken lists (ensure proper bullet spacing)
-3. Fix code block formatting (ensure ``` are on their own lines)
-4. Remove excessive blank lines (max 2 consecutive)
-5. Remove unnecessary line breaks
-6. Fix emphasis markers (**bold** and *italic*) spacing
-7. Fix any broken links or references
-8. Ensure consistent indentation
-9. Fix any character encoding issues
-10. Maintain the exact same content - only fix formatting, don't change wording
-
-IMPORTANT RULES:
-- Keep ALL original content intact
-- Only fix formatting and structure
-- Preserve the meaning and intent
-- Keep all game mechanics exactly as written
-- Don't add or remove any substantive content
-- Fix obvious typos only if they're clearly formatting-related
-
-Return the corrected markdown content with improved formatting."""
-                    },
-                    {
-                        "role": "user",
-                        "content": f"Please fix the formatting issues in this Heart Rush rules section:\n\n```markdown\n{content}\n```"
-                    }
-                ],
-                "temperature": 0.1
-            }
+            "body": create_batch_request_body(content)
         }
         
         batch_requests.append(request)
@@ -247,15 +208,13 @@ def download_results(client, batch, output_dir):
 def main():
     """Main function to orchestrate the batch processing."""
     
-    # Check for API key
-    api_key = os.getenv('OPENAI_API_KEY')
-    if not api_key:
-        print("❌ Error: OPENAI_API_KEY not found in environment variables")
+    # Initialize OpenAI client
+    try:
+        client = get_openai_client()
+    except ValueError as e:
+        print(f"❌ Error: {e}")
         print("💡 Make sure your .env file contains: OPENAI_API_KEY=your_key_here")
         return
-    
-    # Initialize OpenAI client
-    client = openai.OpenAI(api_key=api_key)
     
     data_dir = "data"
     batch_file = "heart_rush_batch_requests.jsonl"
@@ -307,23 +266,23 @@ def main():
 def check_status_command(batch_id):
     """Check status of a specific batch."""
     
-    api_key = os.getenv('OPENAI_API_KEY')
-    if not api_key:
-        print("❌ Error: OPENAI_API_KEY not found in environment variables")
+    try:
+        client = get_openai_client()
+    except ValueError as e:
+        print(f"❌ Error: {e}")
         return
     
-    client = openai.OpenAI(api_key=api_key)
     check_batch_status(client, batch_id)
 
 def download_command(batch_id):
     """Download results for a specific batch."""
     
-    api_key = os.getenv('OPENAI_API_KEY')
-    if not api_key:
-        print("❌ Error: OPENAI_API_KEY not found in environment variables")
+    try:
+        client = get_openai_client()
+    except ValueError as e:
+        print(f"❌ Error: {e}")
         return
     
-    client = openai.OpenAI(api_key=api_key)
     batch = client.batches.retrieve(batch_id)
     
     # Load output directory from batch info if available

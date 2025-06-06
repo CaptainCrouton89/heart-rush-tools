@@ -1,0 +1,410 @@
+## Kethic Elementalism
+
+Kethic elementalism, also known as Kethic and
+elemental magic, is one of the most prevalent
+systems of magic. Its basis is in one of attunement.
+By understanding a fundamental element completely,
+and having a primal bond with that thing, one can
+develop power to control that element. As that bond
+and understanding grows, one’s power over that
+element grows.
+There are nine fundamental elements: earth, air,
+fire, water, light, dark, force, time, and void. With
+these elements, nearly everything is created.
+By attuning to different elements, you have some
+basic power over those elements. There are three
+different levels of attunement for each element—
+each of which grant you increasing abilities.
+However, attuning to an element is difficult.
+Most people never attune to any elements in their life
+times, and your spirit must be able to handle the
+additional pressure of resonating with the your
+attuned element. Those who do will frequently do so
+by accident after an unusual or extreme exposure to
+one of these such elements. More advanced
+attunements require even more exposure, and
+paragon level attunements generally require special
+activity dedicated to developing an attunement to
+that element.
+Kethic also comes with limitations. Every living
+thing has some very low level attunement with all
+the elements, and for this reason, it is nearly
+impossible for another creature to interfere with
+elements especially close to another living being,
+such as its blood or flesh.
+
+Resonate
+
+Substances
+
+```
+One of the primary forms of elemental
+manipulation is through attunement to resonate
+substances. These are the collection of materials that
+you have control over. Different types of substances
+have different rules dictating your affinity to them at
+different levels, however. For example, a master of
+earth still won't be able to create as much stone as an
+equally skilled master of air can create breathable air
+—the solid stone is just fundamentally more difficult
+to work with.
+The limitations to your control over different
+types of substances is listed in the following
+sections. There are three different categories of
+substances: solids, liquids, and gasses.
+```
+
+Solids
+
+```
+Manipulation
+You can physically manipulate the shape and
+form of the substance with your hands as though it
+was clay. It is about as fast as literally shaping
+something out of clay.
+Advanced Attunement
+The range of your manipulation increases to
+substances within 15 feet. You do not have to
+physically touch the material to shape it. Even
+though your hands are not touching the material,
+```
+
+their movements control the manipulation as though
+the solid was in your hands.
+
+Par ag on At t u n e m e n t
+The range of your manipulation increases to
+substances within 45 feet.
+
+Sensing
+
+You can sense the direction and approximate
+shape and size of the substance within 15 feet, even
+if you can’t see them. Your approximations are in 5-
+foot cube increments.
+
+Advanced Attunement
+The range of your sensing increases to 45 feet.
+For substances that you can hold in your hands, you
+can sense precise details as though your were
+looking through it.
+
+```
+Par ag on At t u n e m e n t
+The range of your sensing increases to 120 feet.
+```
+
+Creation & Destruction
+
+As an action, you can create or destroy up to a 1-
+foot cube of the substance in your hands. If digging a
+passage way in this way, you can burrow a humanoid
+sized hole a rate of 1 foot per minute. When creating
+this solid, it is created in shapeless, 1-foot cubes, and
+require further action to shape them further.
+
+Advanced Attunement
+You can create or destroy up to a 1.5-foot cube in
+your hands as an action. You may burrow at a rate of
+2 feet per minute.
+
+Par ag on At t u n e m e n t
+You can create or destroy up to a 2-foot cube in
+your hands as an action. You may burrow at a rate of
+5 feet per minute.
+
+Li q u i d s
+
+```
+Manipulation
+As an action, you can crudely manipulate the
+flow of the substance in a 15 foot range around you,
+such as creating eddies or a current in one direction
+or another. Currents you create can be up to 2 miles
+per hour. Additionally, you can hold up to a 1-foot
+cube of it in your hands without a container.
+Advanced Attunement
+The range of your manipulation increases to
+substances within 45 feet. You can cause currents of
+up to 4 miles per hour.
+Par ag on At t u n e m e n t
+The range of your manipulation increases to
+substances within 120 feet. You can cause currents of
+up to 6 miles per hour.
+```
+
+```
+Movement
+While in this substance, your swim speed is
+increased by 10 feet.
+Advanced Attunement
+While in this substance, your swim speed is
+increased by 20 feet. Additionally, you can walk on
+this substance.
+Par ag on At t u n e m e n t
+While in this substance, your swim speed is
+increased by 40 feet.
+```
+
+```
+Sensing
+You can sense the direction of the substance
+within 120 feet, even if you can’t see it. Your
+approximations are in 20-foot cube increments.
+Advanced Attunement
+The range of your sensing increases to 300 feet.
+Par ag on At t u n e m e n t
+The range of your sensing increases to 900 feet.
+```
+
+### ELEMENTAL MAGIC
+
+Creation & Destruction
+
+You can create or destroy up to a 1-foot cube of
+the substance in your hands as an action.
+
+Advanced Attunement
+You can create or destroy up to a 1.5-foot cube in
+your hands as an action.
+
+Par ag on At t u n e m e n t
+You can create or destroy up to a 2-foot cube in
+your hands as an action.
+
+Gasses
+
+Manipulation
+
+As an action, you can crudely manipulate the
+flow of the substance in a 15 foot range around you,
+such as creating eddies or a current in one direction
+or another. Currents you create can be up to 10 miles
+per hour.
+
+Advanced Attunement
+The range of your manipulation increases to
+substances within 45 feet. You can cause air speeds
+up to 20 miles per hour.
+
+Par ag on At t u n e m e n t
+The range of your manipulation increases to
+substances within 120 feet. You can cause air speeds
+up to 40 miles per hour.
+
+Movement
+
+While in this substance, you fall at a rate of 50
+feet per round, and may travel 5 feet for every 5 feet
+you fall, up to 30 feet of lateral movement. You take
+half fall-damage if you fall through this substance.
+You can jump up to 10 feet in the air while in this
+substance, and over creatures size medium and
+smaller.
+
+Advanced Attunement
+While in this substance, you fall at a rate of 25
+feet per round, and may travel 10 feet for every 5
+
+```
+feet you fall, up to 60 feet of lateral movement. You
+take no fall damage from falling.
+You can jump up to 15 feet in the air while in this
+substance, and over creatures size large and smaller.
+Par ag on At t u n e m e n t
+You gain a fly speed of 30 feet (affected by
+armor and other movement penalties as well). You
+ascend at half speed.
+```
+
+```
+Sensing
+You can sense the direction of the substance
+within 120 feet, even if you can’t see it. Your
+approximations are in 20-foot cube increments.
+Advanced Attunement
+The range of your sensing increases to 300 feet.
+Par ag on At t u n e m e n t
+The range of your sensing increases to 900 feet.
+```
+
+```
+Creation & Destruction
+You can cause this substance to slowly appear or
+disappear from around you as an action. If this
+substance causes a condition such as blindness or
+suffocation, it can be produced at a maximum of a
+single level. You can produce a 5-foot cube once
+each round as an action, and in no more than a 5-foot
+radius from you. You cannot create or destroy in air-
+tight locations, including within liquids. Gasses
+dissipate after a minute, or immediately if blown
+away with a breeze.
+Advanced Attunement
+You can create or destroy up to a 10-foot cube as
+an action instead, and in a 15 foot radius.
+Par ag on At t u n e m e n t
+You can create or destroy up to a 15-foot cube as
+an action instead, and in a 45 foot radius.
+```
+
+Converting Between
+
+Substances
+
+Sometimes, you will be able to convert between
+different types of substances, such as with ice and
+water, or lava and stone. These conversions use the
+following rules.
+Conversions happen at a rate equal to twice the
+creation rate of whatever substance you are turning it
+into, and at a range equal to the corresponding
+manipulation range.
+For example, with an advanced attunement to a
+solid, you can create a 1.5-foot cube as an action. If
+you are instead turning a liquid into a solid, you can
+create a 2-foot cube of solid as an action, and you
+can do it at a range of 15 feet.
+If you instead were converting that solid into a
+liquid at an advanced level, you would have the
+same increase in volume, but would instead be able
+to do it at a range of 45 feet, since that is the
+advanced liquid manipulation range.
+
+Tr a pp i n g a C r e a t u r e
+
+If you try to convert the substance a creature is
+standing in into a solid, it is usually slow enough that
+the creature can escape becoming trapped, unless it
+already cannot move.
+
+The Ele me n t s
+
+There are nine different elements—fire, air,
+water, earth, light, dark, force, void, and time. When
+you have a level of attunement with an element, you
+gain all of its benefits, as well as the benefits from
+every level before it. Gaining attunements to
+elements is also one of the primary ways to gain
+attunements to resonate substances. You can gain an
+
+```
+elemental attunement with the Elemental Affinity
+talent, found in the Talents section.
+```
+
+Fire
+
+```
+Basic Attunement
+```
+
+- As an action, you can ignite or put out small
+  flames within 5 feet without touching them.
+- You can sense any fire within 45 feet,
+  including how much, its general direction, and
+  intensity.
+- You take half damage from the burning
+  condition.
+
+```
+Advanced Attunement
+```
+
+- Add ash to your resonate substances as a basic,
+  solid attunement.
+- Add smoke to your resonate substances as a
+  basic, gaseous substance attunement. Smoke blinds
+  and suffocates those who stand in it.
+- As an action, you can ignite or put out
+  flammable items within 45 feet.
+- You can sense fire within a 300 feet, including
+  how much, its general direction, and intensity.
+- You are immune to the burning condition.
+
+```
+Par ag on At t u n e m e n t
+```
+
+- Add lava rocks, such as pumice and obsidian to
+  your resonate substances at basic, solid substance
+  attunements.
+- Your attunements to ash and smoke become
+  advanced.
+- As an action, you can ignite or put out
+  flammable items within 120 feet.
+- As an action, you can manipulate all fire and
+  smoke within 120 feet into shapes, patterns, and
+  different colors.
+
+### ELEMENTAL MAGIC
+
+Air
+
+Basic Attunement
+
+- Add “neutral air” to your resonate substances
+  as a basic gaseous attunement. Neutral air is
+  breathable, inert, harmless, invisible, and
+  unscented.
+- You may turn any gaseous substance within the
+  range of your manipulation into “neutral air”.
+- You can breath underwater.
+
+Advanced Attunement
+
+- Your attunement to “neutral air” become
+  advanced.
+- Creatures within the range of your “neutral air”
+  attunement creation radius can also breath while
+  under water.
+
+Par ag on Le v e l
+
+- Your attunement to “neutral air” becomes
+  paragon.
+
+Wat e r
+
+Basic Attunement
+
+- Add water to your resonate substances as a
+  basic liquid attunement.
+
+Advanced Attunement
+
+- Your attunement to water becomes advanced.
+
+Advanced Attunement
+
+- Your attunement to water becomes paragon.
+
+Earth
+
+```
+Basic Attunement
+```
+
+- Add stone, dirt, and clay to your resonate
+  substances as basic solid attunements. Stone
+  includes all non-precious rocks.
+
+```
+Advanced Attunement
+```
+
+- Your attunements to stone, dirt, and clay
+  become advanced.
+
+```
+Advanced Attunement
+```
+
+- Your attunements to stone, dirt, and clay
+  become paragon.
+
+Void
+
+```
+Basic Attunement
+```

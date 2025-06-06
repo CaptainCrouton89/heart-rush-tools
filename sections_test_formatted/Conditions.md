@@ -1,0 +1,145 @@
+# Conditions
+
+A variety of conditions can affect players and enemies alike. They generally provide advantage or disadvantage to different types of rolls.
+
+## Tags
+
+Each condition can have one of three types of tags: **leveled**, **fading**, and **ongoing**.
+
+### Leveled
+
+Some conditions are **leveled**, meaning multiple instances of that condition can be applied. These levels stack, so if the same condition is applied, the levels are added together. For example, if a moon-viper bites you and applies two levels of poison, you would have disadvantage on all rolls (D2). If it bites you again, the total levels of poison would increase to four. Conditions cannot be stacked greater than five times; once a creature has five levels of a condition, further levels are ignored.
+
+### Fading
+
+Conditions with the **fading** tag will quickly alleviate. When you take levels of a fading condition, remove one level of that condition at the start of each round.
+
+### Ongoing
+
+An **ongoing** condition continues until otherwise noted. It may last moments, hours, days, or even indefinitely.
+
+---
+
+## Physical Conditions
+
+These conditions are likely to arise from basic combat.
+
+### Dazed
+**Leveled. Fading.**  
+You have disadvantage on all cunning checks.
+
+### Weakened
+**Leveled. Fading.**  
+You have disadvantage on all might checks.
+
+### Off-Balanced
+**Leveled. Fading.**  
+You have disadvantage on all agility checks.
+
+### Shaken
+**Leveled. Fading.**  
+You have disadvantage on all presence checks.
+
+### Restrained
+**Leveled. Ongoing.**  
+Your move speed becomes zero, and you cannot dash or sidestep. You have disadvantage on all attack/defense rolls and any ability checks requiring motion.
+
+### Stunned
+**Ongoing.**  
+Your move speed becomes zero, and you cannot take actions, use abilities, speak, or make attack rolls.
+
+### Incapacitated
+**Ongoing.**  
+Your move speed becomes zero, and you cannot take actions, use abilities, or make attack rolls. Enemies may choose to use their action to make opportunity attacks against you rather than enter engagements.
+
+### Poisoned
+**Leveled. Ongoing.**  
+You have disadvantage on attack/defense and ability rolls.
+
+### Blinded
+**Leveled. Fading.**  
+You have disadvantage on attack/defense and ability rolls requiring sight. If you have five levels of blinded, you cannot see anything.
+
+### Suffocating
+**Ongoing.**  
+You take 1d6 damage at the end of each round and whenever you move or take an action.
+
+### Slowed
+**Leveled. Fading.**  
+Your movement speed is halved, after accounting for armor and other penalties. Additional levels only result in a longer-lasting effect.
+
+### Crippled
+**Ongoing.**  
+Your move speed becomes 5 feet.
+
+### Vulnerability
+**Leveled. Ongoing.**  
+Complications and failures can occur on 1s as well as 2s when making skill checks in whichever state of vulnerability you are in. Physical vulnerability affects might and agility checks, while mental vulnerability affects cunning and presence checks. An additional level of vulnerability triggers complications or failures on 3s, and another level results in complications or failures on 4s. If you have four or more levels of vulnerability, you die.
+
+---
+
+## Mental Conditions
+
+These conditions are likely to arise from magical effects.
+
+### Confused
+**Leveled. Ongoing.**  
+You are addled. If you use your movement during a round, you cannot take an action. If you take an action, you cannot move. You have disadvantage on attack/defense and ability rolls. Additionally, you cannot cast spells. All levels of confused can be removed if another creature that can communicate with you takes the help action to help you calm and align your thoughts.
+
+### Frightened
+**Leveled. Ongoing.**  
+You are terrified of something. You have disadvantage on attack/defense and ability rolls while within line of sight of the source of your fear, and you cannot willingly approach it. As an action, you may make a cunning saving throw contested by the source’s presence challenge number to immediately remove all levels of frightened.
+
+**GM Note:** These mental conditions are powerful and should generally be used sparingly, typically for very powerful effects or magical sources.
+
+### Enraged
+**Leveled. Ongoing.**  
+You are overcome with rage at another creature. You have disadvantage on attack/defense and ability rolls against any creature other than the source of your rage. You may remove all levels of enraged if you make an attack roll against the source of your aggravation, or if another creature causes you to gain a level of enraged. Additionally, as an action, you may make a cunning saving throw contested by the source’s presence challenge number to immediately remove all levels of enraged.
+
+### Charmed
+**Leveled. Ongoing.**  
+For each level of charm, you move up one level on the enemy-to-friend track. If you are violent, you become hostile. If you are hostile, you become neutral. If you are neutral, you become friendly. If you are friendly, you become allied. The source of the charm has advantage on all presence checks made against you. If the charmer takes any hostile action against you, the charm effect ends immediately.
+
+---
+
+## Status Conditions
+
+While many of these conditions can be caused by combat, some relate more to your environment than to interactions with others.
+
+### Prone
+**Ongoing.**  
+You move at your climb speed (5 feet unless stated differently). You have advantage on defense rolls against ranged attacks and disadvantage on all other attack/defense rolls. You can stand up by spending half of your movement (after accounting for bonuses and penalties), or by taking the sidestep action.
+
+### Burning
+**Leveled. Fading.**  
+When you take levels of burning, immediately take Xd6 burning damage, where X is the number of levels of burning you received. While you have levels of burning, at the end of each round, take 1d6 damage for each level of burning affecting you. As an action, you or another creature can attempt to put out the fire and remove half of the levels affecting you, rounded up. If you are drenched or submerged in a non-flammable liquid, immediately remove all levels of burning.
+
+### Obscured
+**Ongoing.**  
+If you are not visible to a creature but have not hidden, you are obscured. While obscured, attacks against you have disadvantage (D5). Likewise, defense rolls against obscured creatures have disadvantage (D5).
+
+### Hidden
+**Ongoing.**  
+While hidden, you may make opportunity attacks against creatures who cannot see you. Once you make an attack, your position is revealed, and you are no longer hidden. Note that while hidden, you are also obscured.
+
+### High Ground
+**Ongoing.**  
+If you are above another creature (e.g., fighting from a hill or from the sky), you have the high ground. You have advantage on your attack rolls against creatures that do not have the high ground.
+
+### Creature Climber
+**Ongoing.**  
+You have advantage (A3) on attack rolls against the creature you are climbing on. You may move on the creature using your climb speed. The creature counts as difficult terrain. If you push the creature you are climbing on any distance, inflict 1d6 damage instead. If you take damage or are forced to move, you must roll a might or agility saving throw against the damage taken or distance pushed (whichever is greater) or fall off the creature on a failure. You may use 5 feet of movement to hop off the creature when you can move. Whenever the creature being climbed on moves, you move with it.
+
+### Climbed-On
+**Ongoing.**  
+You have disadvantage (D3) on attacks against creatures climbing on you. As an action, you may try to shake off the creatures climbing on you. Make a might or agility check contested by the might or agility check of each creature climbing on you. On a success, they are thrown off.
+
+### Grappling
+**Ongoing.**  
+Your move speed becomes zero, and you cannot take the dash action. You have disadvantage on all attack/defense rolls and any ability checks requiring motion. When you sidestep, the grappled creature moves to the space you were in previously. If you are prone, you cannot stand up while grappling. Whenever the creature you are grappling is forced to move, you may choose to be forced to move that distance with it or release the grapple, ending the grappled condition for it.
+
+> If you are forced to move, the grappled creature moves with you. Any damage that you or the grappled creature takes due to forced movement is also applied to the other.
+
+### Grappled
+**Ongoing.**  
+You have 1 level of restrained. As an action, you may try to break free. Make a might or agility check contested by the might or agility check of the creature grappling you. If either creature is larger, it gains a level of advantage on their roll for each level of size difference. On a success, you are no longer grappled. Levels of restrained inflicted from being grappled do not inflict disadvantage on this roll. Any damage that you or a creature grappling you takes due to forced movement is also applied to the other.

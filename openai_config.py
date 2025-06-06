@@ -5,6 +5,7 @@ Contains common model settings, prompts, and utility functions.
 """
 
 import os
+
 import openai
 from dotenv import load_dotenv
 
@@ -16,19 +17,15 @@ MODEL_NAME = "gpt-4.1-nano"
 TEMPERATURE = 0.1
 
 # Common system prompt for formatting
-SYSTEM_PROMPT = """You are a markdown formatting expert. Your task is to fix formatting issues in this Heart Rush TTRPG rules document section.
+SYSTEM_PROMPT = """You are a markdown formatting expert. Your task is to fix formatting issues in this custom TTRPG rules document section.
 
 SPECIFIC TASKS:
-1. Fix malformed headers (ensure proper # spacing)
-2. Fix broken lists (ensure proper bullet spacing)
-3. Fix code block formatting (ensure ``` are on their own lines)
-4. Remove excessive blank lines (max 2 consecutive)
-5. Remove unnecessary line breaks
-6. Fix emphasis markers (**bold** and *italic*) spacing
-7. Fix any broken links or references
-8. Ensure consistent indentation
-9. Fix any character encoding issues
-10. Maintain the exact same content - only fix formatting, don't change wording
+1. Fix malformed headers (ensure proper # spacing, or remove spaces if they are not needed)
+2. Remove excessive blank lines (max 2 consecutive)
+3. Remove unnecessary line breaks
+4. Fix emphasis markers (**bold** and *italic*) spacing
+5. Ensure consistent/correct indentation
+6. Maintain the exact same content - only fix formatting, don't change wording
 
 IMPORTANT RULES:
 - Keep ALL original content intact

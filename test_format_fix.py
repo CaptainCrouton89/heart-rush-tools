@@ -5,15 +5,9 @@ Processes a few files directly with OpenAI API to test formatting fixes.
 """
 
 import asyncio
-import os
-import time
 from pathlib import Path
 
-import openai
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
+from openai_config import get_openai_client, create_completion_params
 
 def get_test_files(data_dir, max_files=3):
     """Get a small sample of files for testing."""
@@ -70,42 +64,7 @@ async def format_file_with_openai(client, file_path, content):
     try:
         response = await asyncio.get_event_loop().run_in_executor(
             None,
-            lambda: client.chat.completions.create(
-                model="gpt-4.1-nano",
-                messages=[
-                    {
-                        "role": "system",
-                        "content": """You are a markdown formatting expert. Your task is to fix formatting issues in this Heart Rush TTRPG rules document section.
-
-SPECIFIC TASKS:
-1. Fix malformed headers (ensure proper # spacing)
-2. Fix broken lists (ensure proper bullet spacing)
-3. Fix code block formatting (ensure ``` are on their own lines)
-4. Remove excessive blank lines (max 2 consecutive)
-5. Remove unnecessary line breaks
-6. Fix emphasis markers (**bold** and *italic*) spacing
-7. Fix any broken links or references
-8. Ensure consistent indentation
-9. Fix any character encoding issues
-10. Maintain the exact same content - only fix formatting, don't change wording
-
-IMPORTANT RULES:
-- Keep ALL original content intact
-- Only fix formatting and structure
-- Preserve the meaning and intent
-- Keep all game mechanics exactly as written
-- Don't add or remove any substantive content
-- Fix obvious typos only if they're clearly formatting-related
-
-Return ONLY the corrected markdown content with improved formatting. Do not wrap in code blocks or add explanations."""
-                    },
-                    {
-                        "role": "user",
-                        "content": f"Please fix the formatting issues in this Heart Rush rules section:\n\n{content}"
-                    }
-                ],
-                temperature=0.1
-            )
+            lambda: client.chat.completions.create(**create_completion_params(content))
         )
         
         formatted_content = response.choices[0].message.content.strip()
@@ -179,15 +138,13 @@ def compare_files(original_path, formatted_path):
 async def main():
     """Main function to test formatting on a few files."""
     
-    # Check for API key
-    api_key = os.getenv('OPENAI_API_KEY')
-    if not api_key:
-        print("❌ Error: OPENAI_API_KEY not found in environment variables")
+    # Initialize OpenAI client
+    try:
+        client = get_openai_client()
+    except ValueError as e:
+        print(f"❌ Error: {e}")
         print("💡 Make sure your .env file contains: OPENAI_API_KEY=your_key_here")
         return
-    
-    # Initialize OpenAI client
-    client = openai.OpenAI(api_key=api_key)
     
     data_dir = "data"
     output_dir = "data_test_formatted"
@@ -259,7 +216,14 @@ async def main():
         print(f"{'='*60}")
         print(f"✅ Successfully processed: {successful_files}/{len(test_files)} files")
         print(f"🎯 Total tokens used: {total_tokens:,}")
-        print(f"💰 Estimated cost: ${total_tokens * 0.00015:.4f} (at $0.15/1K tokens)")
+        
+        # Calculate cost with correct pricing
+        # Input tokens: $0.05 per million = $0.00000005 per token
+        # Output tokens: $0.20 per million = $0.0000002 per token
+        # Using average of input/output for simplicity since we don't track separately
+        avg_cost_per_token = (0.00000005 + 0.0000002) / 2  # $0.000000125 per token
+        estimated_cost = total_tokens * avg_cost_per_token
+        print(f"💰 Estimated cost: ${estimated_cost:.4f} (at $0.05M input, $0.20M output tokens)")
         print(f"📁 Test results saved to: {output_dir}")
         
         if successful_files > 0:
