@@ -5,7 +5,7 @@ import { ContentSection } from "../../types/content";
 import { MarkdownRenderer } from "./MarkdownRenderer";
 
 interface ChildrenContentProps {
-  children: ContentSection[];
+  sections: ContentSection[];
   level?: number;
 }
 
@@ -18,7 +18,8 @@ function ChildSection({ child, level }: ChildSectionProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   
   // Determine header tag based on nesting level (h2 -> h6)
-  const HeaderTag = `h${Math.min(level + 2, 6)}` as keyof JSX.IntrinsicElements;
+  const headerLevel = Math.min(level + 2, 6);
+  const HeaderTag = `h${headerLevel}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   
   // Calculate text size based on level
   const getHeaderSize = (level: number) => {
@@ -72,7 +73,7 @@ function ChildSection({ child, level }: ChildSectionProps) {
           }`}
         >
           <div className="py-4 border-t border-border/20">
-            <ChildrenContent children={child.children!} level={level + 1} />
+            <ChildrenContent sections={child.children!} level={level + 1} />
           </div>
         </div>
       </section>
@@ -93,14 +94,14 @@ function ChildSection({ child, level }: ChildSectionProps) {
   }
 }
 
-export function ChildrenContent({ children, level = 0 }: ChildrenContentProps) {
-  if (!children || children.length === 0) {
+export function ChildrenContent({ sections, level = 0 }: ChildrenContentProps) {
+  if (!sections || sections.length === 0) {
     return null;
   }
 
   return (
     <div className="mt-6 space-y-4">
-      {children.map((child) => (
+      {sections.map((child) => (
         <ChildSection key={child.slug} child={child} level={level} />
       ))}
     </div>

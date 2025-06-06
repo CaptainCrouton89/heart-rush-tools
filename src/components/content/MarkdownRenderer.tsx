@@ -132,20 +132,34 @@ const mdxComponents = {
 
 // Function to process callout boxes in content
 function processCallouts(content: string): string {
+  // First, ensure we're not breaking paragraphs - add double newlines around callout patterns
+  let processedContent = content;
+  
   // Replace [[...]] patterns with custom callout syntax
-  return content.replace(/\[\[(.*?)\]\]/gs, (match, calloutContent) => {
+  processedContent = processedContent.replace(/\[\[(.*?)\]\]/gs, (match, calloutContent) => {
     // Clean up the content and split into lines
     const lines = calloutContent.trim().split('\n');
     const firstLine = lines[0].trim();
     const remainingContent = lines.slice(1).join('\n').trim();
     
+    // Escape any HTML-like tags in the content to prevent MDX parsing issues
+    const escapeHtml = (text: string) => {
+      return text
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    };
+    
     // Format first line as heading, rest as body content
     const formattedContent = remainingContent 
-      ? `**${firstLine}**\n\n${remainingContent}`
-      : `**${firstLine}**`;
+      ? `**${escapeHtml(firstLine)}**\n\n${escapeHtml(remainingContent)}`
+      : `**${escapeHtml(firstLine)}**`;
     
-    return `<CalloutBox>\n\n${formattedContent}\n\n</CalloutBox>`;
+    // Ensure the CalloutBox is on its own paragraph
+    return `\n\n<CalloutBox>\n\n${formattedContent}\n\n</CalloutBox>\n\n`;
   });
+  
+  // Clean up any multiple consecutive newlines
+  return processedContent.replace(/\n{4,}/g, '\n\n\n');
 }
 
 export function MarkdownRenderer({ content }: MarkdownRendererProps) {

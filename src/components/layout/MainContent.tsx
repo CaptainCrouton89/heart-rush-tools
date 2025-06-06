@@ -63,7 +63,7 @@ export function MainContent({
           </div>
           
           {/* Child content sections */}
-          <ChildrenContent children={childContent} />
+          <ChildrenContent sections={childContent} />
         </article>
 
         {/* Navigation footer */}

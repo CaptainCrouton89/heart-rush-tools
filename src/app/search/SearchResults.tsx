@@ -96,7 +96,7 @@ export default function SearchResults() {
                   </div>
                   
                   <p className="text-muted-foreground text-sm mb-4">
-                    Reading time: {item.readingTime} min
+                    Reading time: {item.reading_time} min
                   </p>
                   
                   <Link 
