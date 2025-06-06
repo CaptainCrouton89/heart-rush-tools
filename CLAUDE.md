@@ -105,7 +105,6 @@ Use functions from `src/lib/content.ts`:
 - All components must be properly typed
 - Do not test by running the application—it is already running
 - Use interfaces from `src/types/content.ts`
-- After each task in task master, clear your own memory except for a few words about what you just did, and the next task.
 
 ## Routing Structure
 

@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Sidebar } from './Sidebar';
+import { initializeSearchIndex } from '../../lib/search';
 
 interface AppLayoutProps {
   children: React.ReactNode;
@@ -9,6 +10,13 @@ interface AppLayoutProps {
 
 export function AppLayout({ children }: AppLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    // Initialize search index on app startup
+    initializeSearchIndex().catch(error => {
+      console.error('Failed to initialize search index:', error);
+    });
+  }, []);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);

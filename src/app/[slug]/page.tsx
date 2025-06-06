@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getContentBySlug, getAllContentMetadata } from '../../lib/content';
+import { getContentBySlug, getAllContentMetadata, getAdjacentContent } from '../../lib/content';
 import { MainContent } from '../../components/layout/MainContent';
 
 // Generate static params for all content pages
@@ -11,8 +11,9 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const content = await getContentBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const content = await getContentBySlug(slug);
   
   if (!content) {
     return {
@@ -20,23 +21,29 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
   }
   
+  // Extract first 160 characters from content for description
+  const description = content.content.replace(/[#*`]/g, '').slice(0, 160).trim() + '...';
+  
   return {
     title: `${content.title} | Heart Rush Rulebook`,
-    description: content.description || `${content.title} - Heart Rush TTRPG rules and guidance`,
+    description: description || `${content.title} - Heart Rush TTRPG rules and guidance`,
     openGraph: {
       title: `${content.title} | Heart Rush Rulebook`,
-      description: content.description || `${content.title} - Heart Rush TTRPG rules and guidance`,
+      description: description || `${content.title} - Heart Rush TTRPG rules and guidance`,
       type: 'article'
     }
   };
 }
 
-export default async function ContentPage({ params }: { params: { slug: string } }) {
-  const content = await getContentBySlug(params.slug);
+export default async function ContentPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const content = await getContentBySlug(slug);
   
   if (!content) {
     notFound();
   }
   
-  return <MainContent content={content} />;
+  const { previous, next } = await getAdjacentContent(slug);
+  
+  return <MainContent content={content} previousContent={previous} nextContent={next} />;
 }

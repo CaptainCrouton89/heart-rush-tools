@@ -2,12 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     domains: ['heart-rush-assets.vercel.app'],
   },
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
   },
   async headers() {

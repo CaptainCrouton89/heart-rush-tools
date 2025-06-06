@@ -6,7 +6,6 @@ import {
   SearchMatch,
   FilterState 
 } from '../types/content';
-import { getAllContentMetadata } from './content';
 
 // Default search configuration optimized for documentation search
 const DEFAULT_SEARCH_CONFIG: SearchConfig = {
@@ -26,13 +25,37 @@ const DEFAULT_SEARCH_CONFIG: SearchConfig = {
 let searchIndex: Fuse<ContentMetadata> | null = null;
 let searchData: ContentMetadata[] = [];
 
+// Fetch content metadata from API
+async function fetchContentMetadata(): Promise<ContentMetadata[]> {
+  try {
+    console.log('Fetching content metadata from API...');
+    const url = '/api/content/metadata';
+    console.log('Fetch URL:', url);
+    const response = await fetch(url);
+    console.log('API response status:', response.status, response.statusText);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch metadata: ${response.status} ${response.statusText}`);
+    }
+    const data = await response.json();
+    console.log('Successfully fetched metadata:', data.length, 'items');
+    return data;
+  } catch (error) {
+    console.error('Error fetching content metadata:', error);
+    console.error('Error type:', typeof error);
+    console.error('Error details:', error instanceof Error ? error.message : error);
+    return [];
+  }
+}
+
 // Initialize search index
 export async function initializeSearchIndex(): Promise<void> {
   try {
-    searchData = await getAllContentMetadata();
+    console.log('Initializing search index...');
+    searchData = await fetchContentMetadata();
+    console.log('Fetched metadata:', searchData.length, 'items');
     
     // Create Fuse configuration
-    const fuseConfig: Fuse.IFuseOptions<ContentMetadata> = {
+    const fuseConfig = {
       threshold: DEFAULT_SEARCH_CONFIG.threshold,
       includeScore: DEFAULT_SEARCH_CONFIG.includeScore,
       includeMatches: DEFAULT_SEARCH_CONFIG.includeMatches,
@@ -44,8 +67,10 @@ export async function initializeSearchIndex(): Promise<void> {
     };
 
     searchIndex = new Fuse(searchData, fuseConfig);
+    console.log('Search index initialized successfully');
   } catch (error) {
     console.error('Failed to initialize search index:', error);
+    console.error('Error details:', error instanceof Error ? error.message : error);
     searchData = [];
     searchIndex = null;
   }
@@ -61,7 +86,8 @@ async function getSearchIndex(): Promise<Fuse<ContentMetadata> | null> {
 
 // Convert Fuse.js results to our SearchResult format
 function convertFuseResults(
-  fuseResults: Fuse.FuseResult<ContentMetadata>[],
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  fuseResults: any[],
   query: string
 ): SearchResult[] {
   return fuseResults.map(result => {
@@ -222,8 +248,7 @@ export async function getSearchSuggestions(
   try {
     // Search with more relaxed threshold for suggestions
     const results = fuse.search(partialQuery, { 
-      limit: limit * 2,
-      threshold: 0.5 // More permissive for suggestions
+      limit: limit * 2
     });
 
     // Extract unique titles and first few words
@@ -259,7 +284,7 @@ export async function getSearchSuggestions(
 // Get popular search terms based on tag frequency
 export async function getPopularSearchTerms(limit = 10): Promise<string[]> {
   if (searchData.length === 0) {
-    await initializeSearchIndex();
+    searchData = await fetchContentMetadata();
   }
 
   try {
@@ -321,7 +346,7 @@ export async function getSearchStats(): Promise<{
   averageReadingTime: number;
 }> {
   if (searchData.length === 0) {
-    await initializeSearchIndex();
+    searchData = await fetchContentMetadata();
   }
 
   const categories = Array.from(new Set(searchData.map(item => item.category)));

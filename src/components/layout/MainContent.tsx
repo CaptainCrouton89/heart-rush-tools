@@ -1,15 +1,18 @@
 'use client';
 
-import { ContentSection } from '../../types/content';
+import { ContentSection, ContentMetadata } from '../../types/content';
 import { TableOfContents } from './TableOfContents';
 import { Breadcrumbs } from './Breadcrumbs';
 import { MarkdownRenderer } from '../content/MarkdownRenderer';
+import Link from 'next/link';
 
 interface MainContentProps {
   content: ContentSection;
+  previousContent: ContentMetadata | null;
+  nextContent: ContentMetadata | null;
 }
 
-export function MainContent({ content }: MainContentProps) {
+export function MainContent({ content, previousContent, nextContent }: MainContentProps) {
   return (
     <div className="flex-1 min-w-0">
       <div className="max-w-4xl mx-auto">
@@ -58,12 +61,29 @@ export function MainContent({ content }: MainContentProps) {
         {/* Navigation footer */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
           <div className="flex justify-between items-center">
-            <button className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
-              ← Previous: Building Your Character
-            </button>
-            <button className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
-              Next: Combat →
-            </button>
+            {previousContent ? (
+              <Link 
+                href={`/${previousContent.slug}`}
+                className="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center gap-1 group"
+              >
+                <span className="group-hover:translate-x-[-2px] transition-transform">←</span>
+                <span>Previous: {previousContent.title}</span>
+              </Link>
+            ) : (
+              <div></div>
+            )}
+            
+            {nextContent ? (
+              <Link 
+                href={`/${nextContent.slug}`}
+                className="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center gap-1 group"
+              >
+                <span>Next: {nextContent.title}</span>
+                <span className="group-hover:translate-x-[2px] transition-transform">→</span>
+              </Link>
+            ) : (
+              <div></div>
+            )}
           </div>
         </div>
       </div>

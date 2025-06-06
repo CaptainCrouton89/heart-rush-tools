@@ -2,7 +2,7 @@
 
 Your class is the general role in combat that you fill. It doesn’t say anything about what you do outside of combat, and in games where combat is more infrequent, your class will be less relevant to gameplay compared to your aspects and talents.
 
-There are three different classes—stronghearts, battlehearts, and cleverhearts. Each has a distinct combat style that makes them unique. 
+There are three different classes—stronghearts, battlehearts, and cleverhearts. Each has a distinct combat style that makes them unique.
 
 - Stronghearts are beefier, and are responsible for preventing enemies from killing their allies.
 - Battlehearts dish out the most damage, and are responsible for downing enemies quickly.
@@ -19,7 +19,7 @@ When you reach rank 1, choose one of the classes and gain the abilities listed w
 
 # Party Composition
 
-Heart Rush is a game where every role in the party will play a critical role in a team fight. Each class enables or takes advantage of the synergistic abilities of other classes, so a party where there is at least one of each class will almost always perform better than a party that’s missing one of the core classes. 
+Heart Rush is a game where every role in the party will play a critical role in a team fight. Each class enables or takes advantage of the synergistic abilities of other classes, so a party where there is at least one of each class will almost always perform better than a party that’s missing one of the core classes.
 
 Obviously, don’t feel like you have to choose a class because the rest of your party wants to choose the other classes—it’s just something to keep in mind.
 
@@ -27,7 +27,7 @@ Within each subclass, there are three different types of abilities: rank 2, rank
 
 # Strongheart
 
-Stronghearts are accustomed to taking the brunt of the damage in a fight. They can survive more hits than other classes, and do best when they are in the thick of the fight. They generally have ways of keeping enemies engaged with them, rather than threatening their allies. 
+Stronghearts are accustomed to taking the brunt of the damage in a fight. They can survive more hits than other classes, and do best when they are in the thick of the fight. They generally have ways of keeping enemies engaged with them, rather than threatening their allies.
 
 Three types of stronghearts exist—bastions, wrathguards, and vicehands.
 
@@ -71,7 +71,7 @@ Bastions are living fortresses, impenetrable and unmovable on the battlefield. T
 
 Passive ability. Rank 2.
 
-You have the ability to step in when those nearby are in a vulnerable position. If a creature adjacent to you is about to be harmed or attacked, and the attack, defense, or damage rolls haven't been been made yet, you can choose to intervene and place yourself between them and the source of harm. 
+You have the ability to step in when those nearby are in a vulnerable position. If a creature adjacent to you is about to be harmed or attacked, and the attack, defense, or damage rolls haven't been been made yet, you can choose to intervene and place yourself between them and the source of harm.
 
 - If it's an attack, you make the defense roll and absorb the damage in their place.
 - If it's unavoidable damage, you can take that on yourself too.
@@ -83,7 +83,7 @@ You can only save one creature during a round, but you can shield them from mult
 
 Minor ability. Instant. Rank 3.
 
-You hunker down, presenting a bristling wall of defense. Until the end of the round, you may add your weapon die to your defense rolls. 
+You hunker down, presenting a bristling wall of defense. Until the end of the round, you may add your weapon die to your defense rolls.
 
 If you would make a defense roll and get a result greater than their attack roll, the attacker takes damage equal to the difference as you parry their blow and counterattack.
 
@@ -91,16 +91,16 @@ If you would make a defense roll and get a result greater than their attack roll
 
 Minor ability. Instant. Rank 3.
 
-Your blows are slow, but absolutely devastating. After revealing stances, if you are wielding a heavy melee weapon, you may declare your attack to be a hulking blow. 
+Your blows are slow, but absolutely devastating. After revealing stances, if you are wielding a heavy melee weapon, you may declare your attack to be a hulking blow.
 
-- If you do, choose a creature in the engagement that you are able to attack. That creature may choose to forfeit all attack rolls during this engagement and instead automatically dodge your attack. 
+- If you do, choose a creature in the engagement that you are able to attack. That creature may choose to forfeit all attack rolls during this engagement and instead automatically dodge your attack.
 - If they don’t, you may double the result of all dice from your attack roll.
 
 ### Eternal Fortitude
 
 Major ability. Instant. Rank 4.
 
-While others may fall, you fight on—nothing can bring you to your knees. You may spend any number of rush points. 
+While others may fall, you fight on—nothing can bring you to your knees. You may spend any number of rush points.
 
 - For each rush point spent, set aside 2d6.
 - Whenever you make a defense roll, before seeing your result, you may remove and then roll any number of these dice and add them to your defense roll.
@@ -130,7 +130,7 @@ Passive. Rank 2.
 
 Minor ability. Rank 3.
 
-Until the end of the round, when you make an unarmed attack roll against a creature you are grappling, add your might die to the roll. 
+Until the end of the round, when you make an unarmed attack roll against a creature you are grappling, add your might die to the roll.
 
 Grappling the creature does not impose disadvantage on your attack rolls against the creature this round.
 
@@ -205,13 +205,13 @@ Major ability. Instant. Rank 4.
 
 More attacks against more people: any enemy that attacks an ally gets op attacked.
 
-Spend HP? Rewarded for losing HP! Rewarded for enemy attacking someone other than you. 
+Spend HP? Rewarded for losing HP! Rewarded for enemy attacking someone other than you.
 
 Whenever you take a wound from an enemy’s attack, bonus temporarily doubled?
 
 +X each turn from adjacent enemies to attack and defense where X is rush points spent.
 
-Your nearby allies are inspired with the same intensity as you are. You may spend any number of rush points, and set them aside. 
+Your nearby allies are inspired with the same intensity as you are. You may spend any number of rush points, and set them aside.
 
 Whenever an adjacent creature is the target of an attack, you may.
 
@@ -225,7 +225,7 @@ As you attune with the internal melody of combat, you and your allies become uns
 
 # Battleheart
 
-Battlehearts are best at dealing out lots of damage. Their abilities grant bonuses that make them more likely to hit, and more likely to deal more damage. 
+Battlehearts are best at dealing out lots of damage. Their abilities grant bonuses that make them more likely to hit, and more likely to deal more damage.
 
 Two types of battlehearts exist—strikers and ravagers.
 
@@ -285,7 +285,7 @@ Whenever you deal damage to a creature, you may choose for it to be an execution
 
 Major ability. Instant. Rank 4.
 
-You deliver a massive blow, potentially finishing off your enemy. 
+You deliver a massive blow, potentially finishing off your enemy.
 
 - Until the end of the round, you may use each of your minor abilities once for free.
 - You may spend any number of rush points to roll 1d6 and add it to your next attack roll this round.
@@ -319,7 +319,7 @@ Passive ability. Rank 2.
 
 Minor ability. Instant. Rank 3.
 
-Your reflexes are faster than anyone else’s on the battlefield. During this round, you keep priority after using abilities. 
+Your reflexes are faster than anyone else’s on the battlefield. During this round, you keep priority after using abilities.
 
 If you choose not to use an ability while you have priority in this way, priority is still passed to the other side as usual.
 
@@ -335,7 +335,7 @@ Minor ability. Instant. Rank 3.
 
 Major ability. Rank 4.
 
-The rhythm of your movements synchronizes perfectly with the fight. 
+The rhythm of your movements synchronizes perfectly with the fight.
 
 - Until the end of the round, you may spend one rush point to make a free opportunity attack against an enemy and take the sidestep action.
 - You cannot make an opportunity attack against the same target more than once.
@@ -350,7 +350,7 @@ Two types of cleverhearts exist—battleminds and spelltouched.
 
 Passive ability. Rank 1.
 
-Although not necessarily the best at dishing out the damage in a fight, cleverhearts excel at everything else. 
+Although not necessarily the best at dishing out the damage in a fight, cleverhearts excel at everything else.
 
 Once per round, you may make an object interaction, sidestep, help, or trip action for free.
 
@@ -358,7 +358,7 @@ Once per round, you may make an object interaction, sidestep, help, or trip acti
 
 Minor ability. Instant. Rank 1.
 
-You can spot out the weak points in your enemies’ defenses and direct your allies towards them. 
+You can spot out the weak points in your enemies’ defenses and direct your allies towards them.
 
 Choose a creature within 30 feet. If the creature meets one of the following conditions, attacks against them have advantage. For each additional condition met, attacks against that creature are made with an additional level of advantage until the end of the round:
 
@@ -372,7 +372,7 @@ Choose a creature within 30 feet. If the creature meets one of the following con
 
 Also known as: Commander, Mastermind, Tactician
 
-A battalion commander stands atop a boulder, her voice cutting through the chaos as she issues sharp, precise commands. 
+A battalion commander stands atop a boulder, her voice cutting through the chaos as she issues sharp, precise commands.
 
 Beneath her, soldiers move as one, each order turning the tide of battle further in their favor.
 
@@ -430,15 +430,15 @@ You cannot choose the same effect more than once until all effects have been cho
 
 Also known as: Rogue, Swashbuckler, Jack of All Trades
 
-A wiry figure darts between the shadows, slipping past a lumbering ogre’s sweeping fist. 
+A wiry figure darts between the shadows, slipping past a lumbering ogre’s sweeping fist.
 
 With a quick flick of the wrist, she throws a handful of sand into the creature’s eyes, blinding it and slipping away before it can even roar.
 
-Despite standing amid a dozen pikemen in a frenzied brawl, a goblin seems to simply melt away from the thrusting pikes, evading every swipe and thrust aimed at him. 
+Despite standing amid a dozen pikemen in a frenzied brawl, a goblin seems to simply melt away from the thrusting pikes, evading every swipe and thrust aimed at him.
 
 Then, with a sly grin, he lashes out, tripping an overzealous soldier and leaving him sprawled at the mercy of the goblin’s allies.
 
-Skirmishers are elusive and unpredictable, dancing around the battlefield with an unsettling ease. They specialize in dirty tricks and misdirection, exploiting every weakness to leave their enemies vulnerable. 
+Skirmishers are elusive and unpredictable, dancing around the battlefield with an unsettling ease. They specialize in dirty tricks and misdirection, exploiting every weakness to leave their enemies vulnerable.
 
 Hard to pin down and even harder to catch, they disrupt their foes and wear them down with a series of debilitating strikes.
 
@@ -496,19 +496,19 @@ Spelltouched can be used as a subclass for any other class. You can play a stron
 
 Also known as: Gish, Eldritch Knight, Arcane Archer, Spellsword
 
-A dwarf charges forward, cloaked in flames, his fists blazing with fiery energy. 
+A dwarf charges forward, cloaked in flames, his fists blazing with fiery energy.
 
 With a swift motion, he raises a wall of fire behind the ogre, trapping it, and then strikes with a searing punch, sending the creature tumbling back in a smoldering heap.
 
-A gnome darts ahead, each step propelled by the wind itself, carrying her swiftly toward the looming giant spider. 
+A gnome darts ahead, each step propelled by the wind itself, carrying her swiftly toward the looming giant spider.
 
 With a graceful twirl of her blade, she slashes at the creature’s thorax, releasing a concussive blast of air that hurls it backward.
 
-An elf raises her hand, and a towering wave rises from the earth, sweeping the fleeing thugs back toward her. 
+An elf raises her hand, and a towering wave rises from the earth, sweeping the fleeing thugs back toward her.
 
 With a sharp stomp, the cobblestone beneath them seems to melt, dragging the panicked foes into the ground, immobilized.
 
-Spelltouched blend elemental magic with martial prowess, wielding their attunements to shape the battlefield. 
+Spelltouched blend elemental magic with martial prowess, wielding their attunements to shape the battlefield.
 
 By casting spells, they can deny areas to their enemies, unleash devastating attacks, and manipulate the movement and position of their foes.
 
@@ -565,7 +565,7 @@ Passive ability. Rank 2.
 
 Minor ability. Rank 3.
 
-- When you gain this ability, choose three spells from the spell list that match your attunement(s). 
+- When you gain this ability, choose three spells from the spell list that match your attunement(s).
 - You know these spells. They do not count towards the total number of spells you know.
 - You may use this minor ability to cast any of your spells without using your action.
 - You can spend additional rush points to reduce the long rest wait before casting the spell again by one for every rush point spent. You must still wait a minimum of a short rest.
@@ -597,7 +597,7 @@ Major ability. Rank 4.
 
 #### Earth: Stone Soul
 
-- The ground around you erupts into motion, moving at your will. For the next minute, at the beginning of each round, choose a number of effects equal to the number of rush points spent on this ability. 
+- The ground around you erupts into motion, moving at your will. For the next minute, at the beginning of each round, choose a number of effects equal to the number of rush points spent on this ability.
 - You cannot choose the same option more than once until every option has been chosen:
   - Earthquake: Creatures of your choice within 45 feet take a level of off-balanced.
   - Liquefaction: Creatures of your choice within 45 feet gain 2 levels of slowed.

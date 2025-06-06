@@ -31,11 +31,24 @@ function NavigationItem({
   const hasChildren = node.children && node.children.length > 0;
   const indent = level * 16;
 
+  const handleItemClick = (e: React.MouseEvent) => {
+    // Don't navigate if clicking the expand/collapse button
+    if ((e.target as Element).closest('button')) {
+      return;
+    }
+    
+    if (onNavigate) {
+      onNavigate();
+    }
+  };
+
   return (
     <div>
-      <div 
+      <Link
+        href={`/${node.slug}`}
+        onClick={handleItemClick}
         className={`
-          flex items-center py-2 px-2 rounded-md text-sm
+          flex items-center py-2 px-2 rounded-md text-sm block
           ${isActive 
             ? 'bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100' 
             : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
@@ -45,7 +58,11 @@ function NavigationItem({
       >
         {hasChildren && (
           <button
-            onClick={onToggle}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onToggle();
+            }}
             className="mr-2 p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
             aria-label={isOpen ? 'Collapse section' : 'Expand section'}
           >
@@ -60,17 +77,15 @@ function NavigationItem({
           </button>
         )}
         
-        <Link
-          href={`/${node.slug}`}
-          onClick={onNavigate}
+        <span
           className={`
             flex-1 truncate
             ${!hasChildren ? 'ml-5' : ''}
           `}
         >
           {node.title}
-        </Link>
-      </div>
+        </span>
+      </Link>
 
       {hasChildren && isOpen && node.children && (
         <NavigationTree 

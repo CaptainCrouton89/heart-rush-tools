@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 import { NavigationTree } from './NavigationTree';
 import { SearchInput } from '../search/SearchInput';
+import { SearchResults } from '../search/SearchResults';
 import { ThemeToggle } from './ThemeToggle';
-import { NavigationNode } from '../../types/content';
+import { NavigationNode, SearchResult } from '../../types/content';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -14,6 +15,9 @@ interface SidebarProps {
 export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   const [navigation, setNavigation] = useState<NavigationNode[]>([]);
   const [loading, setLoading] = useState(true);
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showSearchResults, setShowSearchResults] = useState(false);
 
   useEffect(() => {
     const loadNavigation = async () => {
@@ -32,6 +36,22 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
 
     loadNavigation();
   }, []);
+
+  const handleSearchResults = (results: SearchResult[]) => {
+    setSearchResults(results);
+    setShowSearchResults(results.length > 0 || searchQuery.trim().length > 0);
+  };
+
+  const handleQueryChange = (query: string) => {
+    setSearchQuery(query);
+    setShowSearchResults(query.trim().length > 0);
+  };
+
+  const handleCloseSearch = () => {
+    setShowSearchResults(false);
+    setSearchResults([]);
+    setSearchQuery('');
+  };
 
   return (
     <>
@@ -75,8 +95,17 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
         </div>
 
         {/* Search */}
-        <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-          <SearchInput />
+        <div className="p-4 border-b border-gray-200 dark:border-gray-700 relative">
+          <SearchInput 
+            onResults={handleSearchResults}
+            onQueryChange={handleQueryChange}
+          />
+          <SearchResults
+            results={searchResults}
+            query={searchQuery}
+            isVisible={showSearchResults}
+            onClose={handleCloseSearch}
+          />
         </div>
 
         {/* Navigation */}
