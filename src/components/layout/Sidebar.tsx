@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { NavigationTree } from './NavigationTree';
 import { SearchInput } from '../search/SearchInput';
 import { SearchResults } from '../search/SearchResults';
@@ -75,14 +76,14 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
       >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-border bg-gradient-to-r from-primary/5 to-secondary/5">
-          <div className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">HR</span>
             </div>
             <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Heart Rush
             </h1>
-          </div>
+          </Link>
           <div className="flex items-center space-x-2">
             <ThemeToggle />
             <button
