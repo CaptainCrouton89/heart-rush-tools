@@ -1,0 +1,77 @@
+'use client';
+
+import { ContentSection } from '../../types/content';
+import { TableOfContents } from './TableOfContents';
+import { Breadcrumbs } from './Breadcrumbs';
+import { MarkdownRenderer } from '../content/MarkdownRenderer';
+
+interface MainContentProps {
+  content: ContentSection;
+}
+
+export function MainContent({ content }: MainContentProps) {
+  return (
+    <div className="flex-1 min-w-0">
+      <div className="max-w-4xl mx-auto">
+        {/* Breadcrumbs */}
+        <div className="mb-6">
+          <Breadcrumbs slug={content.slug} />
+        </div>
+
+        {/* Main article content */}
+        <article className="prose prose-lg dark:prose-invert max-w-none">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              {content.title}
+            </h1>
+            
+            {/* Content metadata */}
+            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-6">
+              <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded">
+                {content.category}
+              </span>
+              <span>{content.reading_time} min read</span>
+              <span>{content.word_count} words</span>
+            </div>
+
+            {/* Tags */}
+            {content.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {content.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </header>
+
+          {/* Rendered content */}
+          <div className="prose-headings:scroll-mt-20">
+            <MarkdownRenderer content={content.content} />
+          </div>
+        </article>
+
+        {/* Navigation footer */}
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+          <div className="flex justify-between items-center">
+            <button className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+              ← Previous: Building Your Character
+            </button>
+            <button className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+              Next: Combat →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Table of Contents - Fixed on large screens */}
+      <div className="hidden xl:block xl:fixed xl:top-20 xl:right-8 xl:w-64 xl:max-h-[calc(100vh-6rem)] xl:overflow-y-auto">
+        <TableOfContents content={content.content} />
+      </div>
+    </div>
+  );
+}

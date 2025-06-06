@@ -3,25 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack --port 3909",
-    "build": "next build",
+    "compile-content": "tsx scripts/compile-content.ts",
+    "dev": "npm run compile-content && next dev --turbopack --port 3909",
+    "build": "npm run compile-content && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "content:watch": "nodemon --watch heart_rush --ext md --exec 'npm run compile-content'"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.3.3",
+    "@types/mdx": "^2.0.13",
+    "fuse.js": "^7.1.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.513.0",
+    "next": "15.3.3",
+    "next-mdx-remote": "^5.0.0",
+    "nodemon": "^3.1.10",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "tsx": "^4.19.4"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
