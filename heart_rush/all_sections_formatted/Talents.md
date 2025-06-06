@@ -361,7 +361,7 @@ Add 2d8 to the roll instead.
 
 ### Divine Weapon
 
-_Major ability._
+_Major ability. Cognitive talent._
 
 Through the favor you hold with your patron, you may channel their power into your weapon, granting it magical properties for the next minute. Whenever you use this ability, your weapon takes on features that resemble the values of the patron you worship, and you get +2 on all of your attack rolls with that weapon.
 You may instead spend a minute in prayer to activate this ability with double its effect.
@@ -959,7 +959,7 @@ This ability becomes a heart ability instead.
 
 ### Whispers of Madness
 
-_Major ability. Quick action. Handmagic._
+_Major ability. Full action. Handmagic._
 
 As an action, you may lace otherworldly whispers into the mind of your target. They gain a level of dazed and shaken for the next minute as they try to remain focused.
 

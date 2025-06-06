@@ -71,6 +71,12 @@ export default async function HomePage() {
               >
                 Spells
               </Link>
+              <Link 
+                href="/experience-1" 
+                className="block text-primary hover:text-secondary hover:underline text-sm transition-colors"
+              >
+                Experience
+              </Link>
             </div>
           </div>
         </div>
