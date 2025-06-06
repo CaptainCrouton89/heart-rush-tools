@@ -29,7 +29,7 @@ function NavigationItem({
   onToggle 
 }: NavigationItemProps) {
   const hasChildren = node.children && node.children.length > 0;
-  const indent = level * 16;
+  const indent = level * 32; // Much larger indentation for clear hierarchy
 
   const handleItemClick = (e: React.MouseEvent) => {
     // Don't navigate if clicking the expand/collapse button
@@ -37,6 +37,7 @@ function NavigationItem({
       return;
     }
     
+    // Always allow navigation - let the Link handle it
     if (onNavigate) {
       onNavigate();
     }

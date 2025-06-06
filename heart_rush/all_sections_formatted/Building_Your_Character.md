@@ -4,9 +4,9 @@ As you make a character in Heart Rush, remember that at the center of every Hear
 
 ## Your Dream
 
-With this in mind, build a character that has a vision towards what they want to achieve. You should have a dream of what you want to do in the world, one that is complex and difficult and worthy of the caliber of legend you wish to become. Remember—you determine the direction the story takes. There’s no goal to this game besides the one you set for yourself. 
+With this in mind, build a character that has a vision towards what they want to achieve. You should have a dream of what you want to do in the world, one that is complex and difficult and worthy of the caliber of legend you wish to become. Remember—you determine the direction the story takes. There's no goal to this game besides the one you set for yourself.
 
-So speak with your GM about the world in which the game takes place, and figure out how you want to be remembered. It’s your story, and the stakes are low, so it’s okay to set your sights high.
+So speak with your GM about the world in which the game takes place, and figure out how you want to be remembered. It's your story, and the stakes are low, so it's okay to set your sights high.
 
 Once you have come up with something, write this dream down somewhere. You may want to edit or add to it later.
 
@@ -29,14 +29,14 @@ Players have four important stats—might, agility, cunning, and presence. These
   Agility is your physical dexterity, speed, and reflexes. High agility allows you to dodge falling rocks, respond to threats faster, and perform a summersault on a tightrope.
 
 - Cunning  
-  Cunning is your intellect, wisdom, and senses. High cunning allows you to recall information you’ve learned, notice the nearly imperceptible, and discern fact from fiction.
+  Cunning is your intellect, wisdom, and senses. High cunning allows you to recall information you've learned, notice the nearly imperceptible, and discern fact from fiction.
 
 - Presence  
   Presence is your charm, charisma, and social influence. High presence allows you to persuade guards to let you past, lie to them about why you did it, and then intimidate them into not telling anyone about it.
 
 ### Assigning Dice to your core stats
 
-Your prowess in each of these abilities is represented by a die. Whenever you attempt a task that requires one of these abilities, you will roll the ability’s corresponding die and add it to the result.
+Your prowess in each of these abilities is represented by a die. Whenever you attempt a task that requires one of these abilities, you will roll the ability's corresponding die and add it to the result.
 
 The first step in creating your character is determining which dice you will use for which stat. Typical humanoids use d6s and d4s for each ability, reflecting a general mediocrity at most things. When you create your character, assign a d6 to two of your abilities, and a d4 to the remaining two.
 
@@ -44,7 +44,7 @@ The first step in creating your character is determining which dice you will use
 
 By default, you have a 60 feet move speed. That means that when you take the dash action (see the Combat section), you can cover that distance. Note that your move speed is negatively affected by equipment penalties (like armor).
 
-When swimming, you have a swim speed of 15 feet. This is also negatively affected by equipment penalties: don’t swim with heavy armor on.
+When swimming, you have a swim speed of 15 feet. This is also negatively affected by equipment penalties: don't swim with heavy armor on.
 
 When climbing, your move speed is 5 feet. This is not affected by equipment penalties.
 
@@ -54,7 +54,7 @@ The health of your character is represented by a combination of your hit points,
 
 ### Hit Points
 
-Hit points represent your physical health. Damage causes your hit points to fall by a corresponding amount. As they fall, you come closer to death. When you create a character, you start at 40 hit points. If your hit points ever reach 0, you can choose to immediately go unconscious. If you don’t, you go unconscious after 10 minutes if your hit points are still at 0.
+Hit points represent your physical health. Damage causes your hit points to fall by a corresponding amount. As they fall, you come closer to death. When you create a character, you start at 40 hit points. If your hit points ever reach 0, you can choose to immediately go unconscious. If you don't, you go unconscious after 10 minutes if your hit points are still at 0.
 
 Your hit points can go negative as well. If your hit points are ever equal to the negative equivalent of your maximum hit points, you die.
 
@@ -70,7 +70,7 @@ Sometimes, there will be effects that cause your heart die to increase or decrea
 
 ### Wounds
 
-When you take damage in Heart Rush, it can mean different things depending on how much damage you take. If it’s less than 10 damage, this represents minor injuries—nothing that poses a real threat. However, if you take 10 or more damage, this represents something serious—a wound. The exact details of taking wounds and healing them will be described later in the Combat section.
+When you take damage in Heart Rush, it can mean different things depending on how much damage you take. If it's less than 10 damage, this represents minor injuries—nothing that poses a real threat. However, if you take 10 or more damage, this represents something serious—a wound. The exact details of taking wounds and healing them will be described later in the Combat section.
 
 ## Your Niche
 
@@ -90,12 +90,12 @@ Your background describes your past life and skills. Choose up to three professi
 
 #### Example
 
-Let’s say you choose “Diplomat” and “Tutor for Nobility” as your professions, and distribute 3 ranks to the first, and 1 rank to the latter. If you were making a skill check to persuade someone of something, you could add 3 to that roll due to your background as a diplomat.
+Let's say you choose “Diplomat” and “Tutor for Nobility” as your professions, and distribute 3 ranks to the first, and 1 rank to the latter. If you were making a skill check to persuade someone of something, you could add 3 to that roll due to your background as a diplomat.
 
 ### Aspects
 
 [[Example  
-Let’s say you choose “Diplomat” and “Tutor for Nobility” as your professions, and distribute 3 ranks to the first, and 1 rank to the latter. If you were making a skill check to persuade someone of something, you could add 3 to that roll due to your background as a diplomat.]]
+Let's say you choose “Diplomat” and “Tutor for Nobility” as your professions, and distribute 3 ranks to the first, and 1 rank to the latter. If you were making a skill check to persuade someone of something, you could add 3 to that roll due to your background as a diplomat.]]
 
 For every facet of your character that cannot be described with abilities and skills, they can be described with aspects. Your aspects describe the features and traits from your personality, background, and experiences that make you distinct—both positive and negative.
 
@@ -112,11 +112,11 @@ The description describes the aspect as a whole, and should be a phrase or a few
 Next, the aspect gets a rank. The rank of an aspect represents how influential that aspect is over who you are, and will determine the modifier to your rolls. The rank will be a number between one and five, though in some cases it can be increased even further.
 
 [[Example  
-Let’s say you have the aspects “Diplomat” at rank 2, and “I need revenge for my family” at rank 3. You have just met the queen and are trying to convince her that civil war is imminent. When you make the skill check to convince her of this truth, you spend 3 DP to increase your roll by 3, successfully convincing her. However, moments later you find out that the queen herself was complicit in your family’s murders. The GM invokes your aspect for revenge—you gain 2 DP, but must now exact revenge, or else be forced to pay 2 DP instead.]]
+Let's say you have the aspects “Diplomat” at rank 2, and “I need revenge for my family” at rank 3. You have just met the queen and are trying to convince her that civil war is imminent. When you make the skill check to convince her of this truth, you spend 3 DP to increase your roll by 3, successfully convincing her. However, moments later you find out that the queen herself was complicit in your family's murders. The GM invokes your aspect for revenge—you gain 2 DP, but must now exact revenge, or else be forced to pay 2 DP instead.]]
 
 ### Using your Aspect For Bonuses
 
-By spending destiny points up to or equal to an aspect’s rank, you may add that much to any skill check. In order to use this, whatever roll you are making must align with the meaning of your aspect, as approved by the GM.
+By spending destiny points up to or equal to an aspect's rank, you may add that much to any skill check. In order to use this, whatever roll you are making must align with the meaning of your aspect, as approved by the GM.
 
 For example, if you had the aspect “Leave no one behind” at rank two, and you were trying to save a friend stuck in prison, you could spend two DP and add 2 to a die roll made to break open the bars of the cell.
 
@@ -126,9 +126,9 @@ If you have multiple aspects that apply to a roll, use only the highest ranking 
 
 ### Using your Aspect For Destiny points
 
-In contrast, if an aspect would complicate a situation or indicate you were bad at something, you may choose to do whatever your aspect would suggest and gain destiny points equal to the aspect’s rank.
+In contrast, if an aspect would complicate a situation or indicate you were bad at something, you may choose to do whatever your aspect would suggest and gain destiny points equal to the aspect's rank.
 
-“Bum leg,” “Kleptomaniac,” and “Quick to draw my sword” are examples of negative aspects. If you role-play an aspect such that you invite risk, then the GM will award DP. 
+“Bum leg,” “Kleptomaniac,” and “Quick to draw my sword” are examples of negative aspects. If you role-play an aspect such that you invite risk, then the GM will award DP.
 
 For example, if a bookstore owner insults you, and you have the aspect “Quick to draw my sword” at rank three, you would gain three DP by drawing your sword and threatening the shop-owner.
 
@@ -141,20 +141,20 @@ When you create your character, create two aspects. You will gain two more from 
 When creating an aspect, it is generally a good idea to have aspects with both positive and negative sides to them. Without any negative aspects, you have no way of gaining more destiny points, and therefore cannot spend them on bonuses. Also look out for aspects that can be both positive and negative aspects. For example, “Kleptomaniac" could be used
 
 [[Burn through those DP  
-To get the most out of your character, you should be invoking your aspects frequently. DP are not meant to be a precious resource—spend them, and then make more by invoking your negative ones. When creating your character, make sure to create aspects that you’re going to enjoy using; you’ll be using them a lot.]]  
+To get the most out of your character, you should be invoking your aspects frequently. DP are not meant to be a precious resource—spend them, and then make more by invoking your negative ones. When creating your character, make sure to create aspects that you're going to enjoy using; you'll be using them a lot.]]
 
 [[Advanced Character Creation  
 Sometimes, you want an even more in-depth character creation process. If this is something that interests everyone in the group, check out the advanced character creation rules in the Advanced Character Creation section.]]
 
 ## Wounds
 
-When you take wounds, they will have a description and a rank, just like an aspect. You may use wounds as aspects as well, though you cannot gain more than 5 DP from invoking the wound, even if the rank of the wound is higher. 
+When you take wounds, they will have a description and a rank, just like an aspect. You may use wounds as aspects as well, though you cannot gain more than 5 DP from invoking the wound, even if the rank of the wound is higher.
 
 For example, if you have the rank 12 wound, "Guts spilling out,” you could gain 5 DP by taking a minus 12 penalty to nearly any athletics check, since it'd be logical that having that type of wound would make it very difficult to do almost anything physical.
 
 ## Progress
 
-There are six different ranks of combat power you can start at in Heart Rush. With each rank, you have access to more combat abilities. When you first start to play, everyone should agree which rank to begin the game at. 
+There are six different ranks of combat power you can start at in Heart Rush. With each rank, you have access to more combat abilities. When you first start to play, everyone should agree which rank to begin the game at.
 
 At rank 1, players are barely more than commoners with a desire for excitement; at rank 4, players are incredible combatants, likely known throughout their community; and at rank 6 and beyond, players are at low heroic levels; with everything else falling somewhere in between.
 
@@ -162,18 +162,18 @@ At each rank, you gain new abilities. If you are starting at a rank higher than 
 
 ## Combat Ranks, Classes, Subclasses, & Paragon Levels
 
-While you will gain XP every session, you progress in combat ranks at the GM’s discretion. In general, you should expect to graduate to the next combat rank around when you have an amount of total XP corresponding to the respective rank, as outlined in the table above. However, it is ultimately up to the GM.
+While you will gain XP every session, you progress in combat ranks at the GM's discretion. In general, you should expect to graduate to the next combat rank around when you have an amount of total XP corresponding to the respective rank, as outlined in the table above. However, it is ultimately up to the GM.
 
 ### Rank 0
 
 At this rank, you have no special abilities beyond those that you purchase with your XP.
 
 [[GM Note  
-When determining when to grant players the next combat rank, it’s generally a good idea to wait until a suitably impressive fight has been won by the party. These combat ranks are major upgrades in player combat power, so they act as a great reward for players accepting and defeating more dangerous fights.]]
+When determining when to grant players the next combat rank, it's generally a good idea to wait until a suitably impressive fight has been won by the party. These combat ranks are major upgrades in player combat power, so they act as a great reward for players accepting and defeating more dangerous fights.]]
 
 ### Rank 1
 
-When you reach rank 1, you will have to choose a class, as listed in the Classes section. Your class will determine what role you have in combat—tanking heavy blows, dealing damage, or supporting your teammates. 
+When you reach rank 1, you will have to choose a class, as listed in the Classes section. Your class will determine what role you have in combat—tanking heavy blows, dealing damage, or supporting your teammates.
 
 You are welcome to do whatever you want in combat, but your class will give you an edge in its respective role. Mark down all of the abilities for that class that are at or below rank 1.
 

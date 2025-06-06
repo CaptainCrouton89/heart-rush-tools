@@ -26,7 +26,7 @@ When playing a gaeic melody, it requires your action to play the instrument. You
 
 Handmagic uses the power of Deoric to create their effects. Deoric is the language of truth—where words spoken in it simply come true.
 
-Handmagic uses Deoric runes tattooed on the back of one’s hand, inscribed in the blood of magical creatures to power this life-cost. By articulating the tattooed hand in specific ways, one can then create those magical effects. The knowledge and necessary materials to inscribe hand runes is rare and expensive, and will cost a hefty fee, and likely require you to be in a city.
+Handmagic uses Deoric runes tattooed on the back of one's hand, inscribed in the blood of magical creatures to power this life-cost. By articulating the tattooed hand in specific ways, one can then create those magical effects. The knowledge and necessary materials to inscribe hand runes is rare and expensive, and will cost a hefty fee, and likely require you to be in a city.
 
 ## Combat Talents
 
@@ -40,7 +40,7 @@ The talents in this section are combat-related talents. This categorization is f
 - Agile  
   Passive ability. Martial talent.  
   When you choose the agility stance, you may sidestep twice instead of once.  
-  Destiny Level: Whenever you choose this stance, if you declared this stance the previous round, add 1d6 to all A/D rolls made this round. Increase the die’s size by one for each consecutive time you chose this stance.
+  Destiny Level: Whenever you choose this stance, if you declared this stance the previous round, add 1d6 to all A/D rolls made this round. Increase the die's size by one for each consecutive time you chose this stance.
 
 - Assassin  
   Passive ability. Martial talent.  
@@ -49,13 +49,13 @@ The talents in this section are combat-related talents. This categorization is f
 
 - Back stab  
   Heart ability. Instant. Martial talent.  
-  If you and another ally are opposite to each other with an enemy directly between you (you can draw a line from a single corner of your space to every corner of the ally’s space such that the line passes completely through the enemy’s space), and the enemy has used its action to enter an engagement with your ally this round, you may treat your weapon as using a d20 for your next melee attack roll against that enemy until end of the round. You must be wielding an ultralight melee weapon to gain the benefits of this ability.  
+  If you and another ally are opposite to each other with an enemy directly between you (you can draw a line from a single corner of your space to every corner of the ally's space such that the line passes completely through the enemy's space), and the enemy has used its action to enter an engagement with your ally this round, you may treat your weapon as using a d20 for your next melee attack roll against that enemy until end of the round. You must be wielding an ultralight melee weapon to gain the benefits of this ability.  
   You may also use this die if you are granted an opportunity attack because you are hidden.  
   Destiny Level: You may replace your weapon die with 2d20 instead.
 
 - Baited Attack  
   Heart ability. Instant. Martial talent.  
-  If a creature makes an attack against you and deals no damage to you, they instead deal damage equal to their roll to another creature behind you as you redirect their attack. A creature is considered behind you if at least one straight line can be drawn from a corner of the attacker’s space, through your space, and to a corner of the new victim’s space.  
+  If a creature makes an attack against you and deals no damage to you, they instead deal damage equal to their roll to another creature behind you as you redirect their attack. A creature is considered behind you if at least one straight line can be drawn from a corner of the attacker's space, through your space, and to a corner of the new victim's space.  
   Destiny Level: When you use this ability, both creatures gain 2 levels of enraged towards you.
 
 - Ballad of Björn  
@@ -71,7 +71,7 @@ The talents in this section are combat-related talents. This categorization is f
 - Battlescreech  
   Heart ability. Martial talent.  
   You emit a horrifying, earsplitting screech, terrifying and disturbing your enemies. Choose any number of creatures within 30 feet. Those creatures get D2 on their next A/D roll.  
-  Destiny Level: Those creatures also don’t gain the benefit of the next stance they choose, and gain two levels of dazed.
+  Destiny Level: Those creatures also don't gain the benefit of the next stance they choose, and gain two levels of dazed.
 
 - Battleweave  
   Passive ability. Martial talent.  
@@ -81,11 +81,11 @@ The talents in this section are combat-related talents. This categorization is f
 - Beast Bond  
   Passive ability. Handmagic. Prerequisite: Beast Companion.  
   You can magically, telepathically communicate with your companion, and over any distance. As an action, you may begin sensing through the senses of your beast companion. You cannot use your own senses again until you spend an action returning to your own body.  
-  Destiny level: As an action, you may take total control of your beast companion. While in control, you play each round as the animal instead of yourself. You may use any cognitive and martial talents you have, but the cooldowns are not separate for your animal. For example, once you've used a major ability, you cannot use it yourself or as your animal until you take a long rest. You may also cast spells you know and use your attunements as the animal. While controlling your companion, your body falls prone and is incapacitated, and you cannot sense using your body’s senses. You may return to your body as an action.
+  Destiny level: As an action, you may take total control of your beast companion. While in control, you play each round as the animal instead of yourself. You may use any cognitive and martial talents you have, but the cooldowns are not separate for your animal. For example, once you've used a major ability, you cannot use it yourself or as your animal until you take a long rest. You may also cast spells you know and use your attunements as the animal. While controlling your companion, your body falls prone and is incapacitated, and you cannot sense using your body's senses. You may return to your body as an action.
 
 - Beast Companion  
   Passive ability. Cognitive talent.  
-  Choose an animal with the GM’s approval. It has a d6/d4/d2/d2 stat block, must be of small size or smaller, has 20 hit point capacity, and a d6 heart die (you may work with your GM to adjust these values). You can communicate simple ideas with it from a distance using verbal and somatic commands. The animal obeys all your commands. When in combat, your companion is not very effective on its own. Your companion cannot use its action to enter engagements, though it can still be forced into engagements by other combatants. It can otherwise use its action normally.  
+  Choose an animal with the GM's approval. It has a d6/d4/d2/d2 stat block, must be of small size or smaller, has 20 hit point capacity, and a d6 heart die (you may work with your GM to adjust these values). You can communicate simple ideas with it from a distance using verbal and somatic commands. The animal obeys all your commands. When in combat, your companion is not very effective on its own. Your companion cannot use its action to enter engagements, though it can still be forced into engagements by other combatants. It can otherwise use its action normally.  
   You may take this talent any number of times. If your companion dies, you may choose to replace this talent with another talent instead.  
   Destiny Level: You may spend XP on your beast companion as though it were yourself. Beast companions cannot gain talents as oaths, and cannot gain cognitive talents. Your beast companion cannot gain a beast companion.  
   While adjacent to your companion, if you or your companion would be forced to make a defense roll, the other may choose to step in to make the defense roll and take the damage instead. If that creature was already being attacked from the same source, they cannot use this ability.
@@ -122,12 +122,12 @@ The talents in this section are combat-related talents. This categorization is f
 
 - Body Shield  
   Heart ability. Martial talent.  
-  The next time you are hit by a melee attack from a source that is adjacent to both you and a creature you are grappling, if the attacking creature’s stance did not directly beat your own, you may use the grappled creature as a body shield. Add the creature’s defense bonus to your own and split the damage between you, rounding up.  
-  Destiny Level: You may use this ability against ranged attacks as well, so long as the grappled creature is between you and the source (a line can be drawn from one of your corners to theirs that passes through the grappled creature’s space). When you use this ability, the grappled creature takes all of the damage and makes the defense roll instead.
+  The next time you are hit by a melee attack from a source that is adjacent to both you and a creature you are grappling, if the attacking creature's stance did not directly beat your own, you may use the grappled creature as a body shield. Add the creature's defense bonus to your own and split the damage between you, rounding up.  
+  Destiny Level: You may use this ability against ranged attacks as well, so long as the grappled creature is between you and the source (a line can be drawn from one of your corners to theirs that passes through the grappled creature's space). When you use this ability, the grappled creature takes all of the damage and makes the defense roll instead.
 
 - Boundless Fury  
   Passive ability. Martial talent.  
-  Whenever your attack deals more damage than the defending creature’s maximum heart die, you may enter an engagement with a different, adjacent creature immediately after the current engagement ends. You cannot attack a creature you have already attacked this round. After the new engagement, you gain one level of weakened for each time you used this ability in the round.  
+  Whenever your attack deals more damage than the defending creature's maximum heart die, you may enter an engagement with a different, adjacent creature immediately after the current engagement ends. You cannot attack a creature you have already attacked this round. After the new engagement, you gain one level of weakened for each time you used this ability in the round.  
   Destiny Level: Whenever you reduce a creature to 0 hit points, your next attack roll deals an additional 1d10 damage.
 
 - Brutal Criticals  
@@ -137,21 +137,22 @@ The talents in this section are combat-related talents. This categorization is f
 
 - Bunker Down  
   Heart ability. Martial talent.  
-  You bunker down, preparing for the worst. You may only use this ability if you have a shield. When you bunker down, you gain the following effects until the end of the round:  
-  - You cannot dash, enter engagements, or make attack rolls.  
-  - You must choose the defensive stance if someone enters an engagement with you.  
-  - You may treat all defense rolls you make as their maximum result.  
+  You bunker down, preparing for the worst. You may only use this ability if you have a shield. When you bunker down, you gain the following effects until the end of the round:
+
+  - You cannot dash, enter engagements, or make attack rolls.
+  - You must choose the defensive stance if someone enters an engagement with you.
+  - You may treat all defense rolls you make as their maximum result.
   - When you are pushed, you are pushed half as far as you would be otherwise.  
-  Destiny Level: You may bunker down as an instant ability, so long as you are not in an engagement in which you have already made an attack.
+    Destiny Level: You may bunker down as an instant ability, so long as you are not in an engagement in which you have already made an attack.
 
 - Burst of Speed  
   Passive ability. Martial talent.  
   You may choose to move 50 more feet this round. If you do, you gain two levels of slowed at the end of this round.  
-  Destiny Level: So long as you end your movement on the ground, you can run on walls and ceilings while using this talent. Additionally, you don’t provoke opportunity attacks from creatures you pass, so long as you do not pause or interact with the creature while within its melee range.
+  Destiny Level: So long as you end your movement on the ground, you can run on walls and ceilings while using this talent. Additionally, you don't provoke opportunity attacks from creatures you pass, so long as you do not pause or interact with the creature while within its melee range.
 
 - Careful Shot  
   Passive ability. Martial talent.  
-  If you didn’t move in the previous round and have not moved yet during this round, you may apply two levels of dazed, off-balanced, or weakened with your ranged attacks. Your range is doubled, and you ignore levels of cover less than total cover.  
+  If you didn't move in the previous round and have not moved yet during this round, you may apply two levels of dazed, off-balanced, or weakened with your ranged attacks. Your range is doubled, and you ignore levels of cover less than total cover.  
   Destiny Level: You may instead apply two levels of each condition.
 
 - Charge  
@@ -176,9 +177,9 @@ The talents in this section are combat-related talents. This categorization is f
 
 - Critical Observation  
   Major ability. Martial talent.  
-  You may spend a minute examining a creature to try to identify a weakness in a creature’s defenses. Make an observation (cunning) skill check contested by 8 plus the creature’s defense bonus. On a success, you get AD2 on all attack rolls against the creature.  
+  You may spend a minute examining a creature to try to identify a weakness in a creature's defenses. Make an observation (cunning) skill check contested by 8 plus the creature's defense bonus. On a success, you get AD2 on all attack rolls against the creature.  
   On success or failure, you cannot attempt to make another critical observation about that creature.  
-  Destiny Level: You may instead make the skill check contested by 12 plus the creature’s defense bonus. On a success, you get AD4 on all attacks against the creature instead.
+  Destiny Level: You may instead make the skill check contested by 12 plus the creature's defense bonus. On a success, you get AD4 on all attacks against the creature instead.
 
 - Cruelty  
   Passive ability. Martial talent.  
@@ -188,7 +189,7 @@ The talents in this section are combat-related talents. This categorization is f
 - Cunning  
   Passive ability. Cognitive talent.  
   When you choose the cunning stance, the target of your attack takes four levels of dazed, off-balanced, or weakened, instead of two.  
-  Destiny Level: Whenever you choose this stance, if you declared this stance the previous round, add 1d6 to all A/D rolls made this round. Increase the die’s size by one for each consecutive time you chose this stance.
+  Destiny Level: Whenever you choose this stance, if you declared this stance the previous round, add 1d6 to all A/D rolls made this round. Increase the die's size by one for each consecutive time you chose this stance.
 
 - Curseweaver  
   Weekly ability. Instant. Handmagic.  
@@ -198,8 +199,9 @@ The talents in this section are combat-related talents. This categorization is f
 - Death mark  
   Major ability. Instant. Handmagic.  
   Whenever you make an attack roll against an adjacent creature, you may choose to instead reach out a hand to mark the creature for death. The creature remains marked for the next hour. So long as the creature is marked for death, any creature may add 1d4 to its attack rolls against the marked creature.  
-  Destiny Level: When you use this ability, the effect lasts 24 hours. Then choose one:  
-  - You may still make your attack roll against the creature, with the bonus damage granted from the mark.  
+  Destiny Level: When you use this ability, the effect lasts 24 hours. Then choose one:
+
+  - You may still make your attack roll against the creature, with the bonus damage granted from the mark.
   - Add 1d8 instead of 1d4 to all attack rolls against the creature.
 
 - Debts Repaid  
@@ -221,7 +223,7 @@ The talents in this section are combat-related talents. This categorization is f
   Major ability.  
   Through the favor you hold with your patron, you may channel their power into your weapon, granting it magical properties for the next minute. Whenever you use this ability, your weapon takes on features that resemble the values of the patron you worship, and you get +2 on all of your attack rolls with that weapon.  
   You may instead spend a minute in prayer to activate this ability with double its effect.  
-  Destiny Level: You may forgo the +2 bonus that this talent provides, and instead work with your GM to develop a custom weapon ability fitting to your patron. You may take this destiny level multiple times, working with your GM each time you do so. For example, the weapon may inflict a level of burning on a hit, or heal the wielder a few hit points when it’s used.
+  Destiny Level: You may forgo the +2 bonus that this talent provides, and instead work with your GM to develop a custom weapon ability fitting to your patron. You may take this destiny level multiple times, working with your GM each time you do so. For example, the weapon may inflict a level of burning on a hit, or heal the wielder a few hit points when it's used.
 
 - Dodge and Weave  
   Passive ability. Martial talent.  
@@ -276,7 +278,7 @@ The talents in this section are combat-related talents. This categorization is f
 
 - Fling  
   Passive ability. Instant. Martial talent.  
-  When you choose the might stance and make an attack roll against a creature you are grappling, you may instead choose to fling the target. Make a might ability check contested by the creature’s might or agility challenge number. On a success, you throw the creature a number of feet equal to 5 times the difference, and the creature falls prone. You may choose to fling them directly to the ground so that all the forced movement turns into damage instead.  
+  When you choose the might stance and make an attack roll against a creature you are grappling, you may instead choose to fling the target. Make a might ability check contested by the creature's might or agility challenge number. On a success, you throw the creature a number of feet equal to 5 times the difference, and the creature falls prone. You may choose to fling them directly to the ground so that all the forced movement turns into damage instead.  
   Destiny Level: They instead fly a number of feet equal to 7 times the result of your might check, rounded down.
 
 - Focused  
@@ -337,10 +339,11 @@ The talents in this section are combat-related talents. This categorization is f
 - Inspiring  
   Passive ability. Cognitive talent.  
   Whenever an ally has a clear line of sight and hearing towards you, they cannot be enraged or frightened unless you suffer one of those conditions as well. Additionally, whenever you are in an engagement, allies in the same engagement take 1 less damage from all sources.  
-  Destiny Level: Once per round, you may call out encouragement as a priority ability. Choose a creature besides yourself that is within 30 feet that can see and hear you. It gains one of the following benefits:  
-  - Stand up from prone  
-  - Remove all levels of dazed, off-balanced, or weakened  
-  - Remove one level of dazed, off-balanced, and weakened  
+  Destiny Level: Once per round, you may call out encouragement as a priority ability. Choose a creature besides yourself that is within 30 feet that can see and hear you. It gains one of the following benefits:
+
+  - Stand up from prone
+  - Remove all levels of dazed, off-balanced, or weakened
+  - Remove one level of dazed, off-balanced, and weakened
   - Immediately take the sidestep action
 
 - Intimidating  
@@ -363,7 +366,7 @@ The talents in this section are combat-related talents. This categorization is f
   Armor, weapons, and shields do not reduce your movement speed.  
   Destiny Level: Whenever you are forced to move, you move 5 feet less. Additionally, your encumbrance score increases to 10 times your might die, and your maximum carrying capacity increases to double that. You must choose the disadvantage on athletics and A/D rolls option when you take penalties for being over-encumbered.
 
-- Kick ‘em While they’re Down  
+- Kick ‘em While they're Down  
   Passive ability. Martial talent.  
   You get A2 on attack rolls against prone targets.  
   Destiny level: You get A4 on attack rolls against prone targets.
@@ -391,20 +394,21 @@ The talents in this section are combat-related talents. This categorization is f
 - Mighty  
   Passive ability. Martial talent.  
   When you choose the might stance, apply the might-stance bonus of your weapon an additional time.  
-  Destiny Level: Whenever you choose this stance, if you declared this stance the previous round, add 1d6 to all A/D rolls made this round. Increase the die’s size by one for each consecutive time you chose this stance.
+  Destiny Level: Whenever you choose this stance, if you declared this stance the previous round, add 1d6 to all A/D rolls made this round. Increase the die's size by one for each consecutive time you chose this stance.
 
-- Night’s Embrace  
+- Night's Embrace  
   Passive ability. Handmagic.  
   While in dim light or darkness, you gain 3 hit points at the beginning of each round so long as you are conscious.  
   Destiny Level: You regain 6 hit points instead.
 
 - Nimble  
   Passive ability. Martial talent.  
-  You gain the following abilities:  
-  - Enemies do not count as impassable terrain, though you cannot end your movement in an enemy’s space.  
-  - Movement within melee range of an enemy does not provoke opportunity attacks.  
+  You gain the following abilities:
+
+  - Enemies do not count as impassable terrain, though you cannot end your movement in an enemy's space.
+  - Movement within melee range of an enemy does not provoke opportunity attacks.
   - Ignore fading levels of off-balanced imposed on you by enemies.  
-  Destiny Level: Leaving someone’s melee range by dashing does not provoke opportunity attacks.
+    Destiny Level: Leaving someone's melee range by dashing does not provoke opportunity attacks.
 
 - Overexert  
   Passive ability. Martial talent.  
@@ -459,12 +463,12 @@ The talents in this section are combat-related talents. This categorization is f
 
 - Reflect  
   Major ability. Instant. Handmagic.  
-  You bind your hit points to another creature’s. Choose a creature within 30 feet. The next time you take damage, the chosen creature takes half as much damage, rounded down.  
+  You bind your hit points to another creature's. Choose a creature within 30 feet. The next time you take damage, the chosen creature takes half as much damage, rounded down.  
   Destiny Level: The creature takes as much damage as you take, instead.
 
 - Rejuvenate  
   Major ability. Handmagic.  
-  As an object interaction, you may lay your hands on someone else, causing some of their wounds to close up, at the cost of your own health. When you use this ability, you may reduce your hit points by any amount, increasing the target’s hit points by half that amount.  
+  As an object interaction, you may lay your hands on someone else, causing some of their wounds to close up, at the cost of your own health. When you use this ability, you may reduce your hit points by any amount, increasing the target's hit points by half that amount.  
   Destiny Level: The healing is equal to the full amount spent, rather than being halved.
 
 - Savage Attacker  
@@ -514,8 +518,8 @@ The talents in this section are combat-related talents. This categorization is f
 
 - Target the Weakness  
   Heart ability. Instant. Cognitive talent.  
-  After entering an engagement, but before anyone declares stances, you may use this ability. Announce a stance, and a creature in the engagement. Once stances are revealed, any attack roll against the creature made using the announced stance ignores half of the target’s defense roll.  
-  Destiny Level: Ignore the creature’s entire defense roll instead.
+  After entering an engagement, but before anyone declares stances, you may use this ability. Announce a stance, and a creature in the engagement. Once stances are revealed, any attack roll against the creature made using the announced stance ignores half of the target's defense roll.  
+  Destiny Level: Ignore the creature's entire defense roll instead.
 
 - Taunting Blow  
   Passive ability. Martial talent.  

@@ -20,9 +20,10 @@ async function getCachedOrLoad<T>(
   key: string,
   loader: () => Promise<T>
 ): Promise<T> {
-  if (!isDevelopment() && CACHE.has(key)) {
-    return CACHE.get(key) as T;
-  }
+  // Temporarily disable cache to force reload
+  // if (!isDevelopment() && CACHE.has(key)) {
+  //   return CACHE.get(key) as T;
+  // }
 
   const data = await loader();
   CACHE.set(key, data);

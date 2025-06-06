@@ -293,13 +293,13 @@ In some cases when combat begins, one or more parties will be completely surpris
 
 Combat special rules apply in these circumstances.
 
-A creature is not surprised if they can see their opponent before the round begins, and they are unfriendly or hostile towards their opponent or don’t know their opponent.
+A creature is not surprised if they can see their opponent before the round begins, and they are unfriendly or hostile towards their opponent or don't know their opponent.
 
 If one of the parties in an encounter is completely surprised by combat, then each un-surprised creature can use their action to make an opportunity attack, and each surprised creature does not get to use abilities or move on the first round of combat.
 
 ### Attacking the Helpless
 
-Sometimes, you will make attacks against creatures that are completely unable to defend themselves. At the GM’s discretion, you may make an opportunity attack against the creature. Depending on the circumstances, the GM may also choose for the creature to immediately die instead.
+Sometimes, you will make attacks against creatures that are completely unable to defend themselves. At the GM's discretion, you may make an opportunity attack against the creature. Depending on the circumstances, the GM may also choose for the creature to immediately die instead.
 
 ### Cover
 

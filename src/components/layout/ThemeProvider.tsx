@@ -49,8 +49,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const isDark = theme.mode === 'dark' || 
       (theme.mode === 'system' && theme.systemPreference === 'dark');
     
+    console.log('Applying theme:', { theme, isDark, classList: document.documentElement.classList.toString() });
     document.documentElement.classList.toggle('dark', isDark);
     localStorage.setItem('theme', theme.mode);
+    console.log('After toggle:', { classList: document.documentElement.classList.toString() });
   }, [theme]);
 
   // Load saved theme on mount
@@ -68,7 +70,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const toggleTheme = () => {
     const currentMode = theme.mode === 'dark' || 
       (theme.mode === 'system' && theme.systemPreference === 'dark') ? 'dark' : 'light';
-    setTheme(currentMode === 'dark' ? 'light' : 'dark');
+    const newMode = currentMode === 'dark' ? 'light' : 'dark';
+    console.log('Toggle theme:', { currentMode, newMode, currentTheme: theme });
+    setTheme(newMode);
   };
 
   return (

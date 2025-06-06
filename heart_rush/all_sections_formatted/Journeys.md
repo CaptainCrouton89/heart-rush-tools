@@ -26,7 +26,7 @@ When you begin, the GM should calculate how long it will take to reach your dest
 
 #### On a vehicle
 
-- If you are on horseback, in a carriage, or traveling via some other land-vehicle, use the vehicle’s daily travel speed rather than your own.
+- If you are on horseback, in a carriage, or traveling via some other land-vehicle, use the vehicle's daily travel speed rather than your own.
 - Horses and carriages have the same movement speed as humans for the purposes of calculating daily travel speeds, but they will have greater carrying capacity and will not be penalized by your own movement penalties, such as those from armor.
 
 ### Segmenting the Journey
@@ -39,13 +39,13 @@ When segmenting trips, the GM should calculate how long each segment should take
 
 Besides survival, these are what make a journey into an adventure. Events can include things such as falling avalanches, bandits attacking, tombs being discovered, and just about anything else you can imagine creating a situation where danger or further investigation might be warranted.
 
-The GM should add between one and five events to most journeys, sticking with lower numbers on shorter journeys or longer, safer ones, and higher numbers for longer, more dangerous journeys. If there are multiple segments in the trip, it’s usually a good idea to add at least one event per segment.
+The GM should add between one and five events to most journeys, sticking with lower numbers on shorter journeys or longer, safer ones, and higher numbers for longer, more dangerous journeys. If there are multiple segments in the trip, it's usually a good idea to add at least one event per segment.
 
-[[GM Note: Check out the Journey chapter in the GM section of this book. There’s lots of advice on how to come up with interesting events and advice on when to use them.]]
+[[GM Note: Check out the Journey chapter in the GM section of this book. There's lots of advice on how to come up with interesting events and advice on when to use them.]]
 
 ### Making the Journey
 
-When you actually leave for the journey, for each segment, the GM should determine if any of the following survival challenges are necessary to the wellbeing of the players during the segment, and couldn’t be reasonably prepared for or already accounted for:
+When you actually leave for the journey, for each segment, the GM should determine if any of the following survival challenges are necessary to the wellbeing of the players during the segment, and couldn't be reasonably prepared for or already accounted for:
 
 - Keep Watch
 - Navigate
@@ -57,23 +57,23 @@ If you are bringing enough food and water for the duration of the segment, for e
 
 You or someone else from the party must make a skill check for each of these needs, using the challenge number from the table below. The same person can make multiple skill checks, but they get disadvantage on each skill check they make for every additional skill check they have to make. Conversely, anyone not making a skill check can grant advantage to exactly one skill check being made by another player.
 
-| Terrain | Keep Watch | Navigate | Collect Water | Gather Food | Find Shelter |
-|---------|--------------|----------|----------------|--------------|--------------|
-| Arctic | 7 | 10 | 5 | 12 | 8 |
-| Coast | 8 | 4 | 6 | 6 | 5 |
-| Canyons | 10 | 8 | 7 | 7 | 5 |
-| Desert | 5 | 9 | 13 | 12 | 10 |
-| Forest | 11 | 9 | 5 | 5 | 8 |
-| Grassland | 5 | 6 | 6 | 6 | 7 |
-| Hellscape | 8 | 8 | 16 | 14 | 10 |
-| Jungle | 12 | 13 | 5 | 4 | 11 |
-| Open Water | 4 | 10 | 15* | 8 | Impossible |
-| Sprawling City | 13 | 9 | 0 | 0 | 0 |
-| Swamp | 12 | 13 | 8 | 9 | 12 |
-| Tundra | 6 | 8 | 7 | 10 | 9 |
-| Underground | 12 | 14 | 4 | 12 | 8 |
+| Terrain        | Keep Watch | Navigate | Collect Water | Gather Food | Find Shelter |
+| -------------- | ---------- | -------- | ------------- | ----------- | ------------ |
+| Arctic         | 7          | 10       | 5             | 12          | 8            |
+| Coast          | 8          | 4        | 6             | 6           | 5            |
+| Canyons        | 10         | 8        | 7             | 7           | 5            |
+| Desert         | 5          | 9        | 13            | 12          | 10           |
+| Forest         | 11         | 9        | 5             | 5           | 8            |
+| Grassland      | 5          | 6        | 6             | 6           | 7            |
+| Hellscape      | 8          | 8        | 16            | 14          | 10           |
+| Jungle         | 12         | 13       | 5             | 4           | 11           |
+| Open Water     | 4          | 10       | 15\*          | 8           | Impossible   |
+| Sprawling City | 13         | 9        | 0             | 0           | 0            |
+| Swamp          | 12         | 13       | 8             | 9           | 12           |
+| Tundra         | 6          | 8        | 7             | 10          | 9            |
+| Underground    | 12         | 14       | 4             | 12          | 8            |
 
-*Note: 15* indicates a special case or higher difficulty.
+_Note: 15_ indicates a special case or higher difficulty.
 
 ### Total Success
 
@@ -91,7 +91,7 @@ If a skill check is failed, players can face consequences. Each skill check has 
 
 - **Gather Food:** Succeeding on this skill check represents successfully fishing, hunting, or foraging enough to keep everyone fed during the travel phase. On a failure, the travel phase ends and a challenge phase begins. Until you can get food, you cannot resume the travel phase. You may have to eat pack animals, consume unidentified plants, hunt more dangerous creatures, or go hungry until food becomes available again. When the challenge phase triggered by this failure ends, if the GM rules that food is still an issue for the remainder of the travel phase, re-roll this skill.
 
-[[GM Note: Even though travel phases don’t all have to be the same duration and it’s all a montage anyway, it’s still important to have a good idea how long each leg of the journey lasts. This way, if players get stuck in a challenge phase at some point and decide to tough it out till the end, you know how many days it will take. It also means you can calculate how many long rests they have between events, so they can heal an appropriate amount. Check for the travel phase.]]
+[[GM Note: Even though travel phases don't all have to be the same duration and it's all a montage anyway, it's still important to have a good idea how long each leg of the journey lasts. This way, if players get stuck in a challenge phase at some point and decide to tough it out till the end, you know how many days it will take. It also means you can calculate how many long rests they have between events, so they can heal an appropriate amount. Check for the travel phase.]]
 
 - **Collect Water:** Succeeding on this skill check represents consistently finding enough clean drinking water to keep everyone hydrated during the travel phase. On a failure, the travel phase ends and a challenge phase begins. Until you can get water, you cannot resume the travel phase. You may have to drink unclean water, journey to more dangerous water sources, or wait until water becomes available again. When the challenge phase triggered by this failure ends, if the GM rules that water is still an issue for the remainder of the travel phase, re-roll this skill check for the travel phase.
 
@@ -105,7 +105,7 @@ If you wish to stop the travel phase at any point, you may do so. Regular game-t
 
 If you lose health during an encounter or during a challenge phase, you...
 
-[[Compounding Failure: Failing once and not resolving the issue even temporarily makes it harder to succeed again, and previously unresolved failures can build up quickly, resulting in being forced to face multiple challenges simultaneously. When feasible, it’s generally best to not let this happen.]]
+[[Compounding Failure: Failing once and not resolving the issue even temporarily makes it harder to succeed again, and previously unresolved failures can build up quickly, resulting in being forced to face multiple challenges simultaneously. When feasible, it's generally best to not let this happen.]]
 
 ## Challenge Phase
 
@@ -123,7 +123,7 @@ Failing any of these skill checks results in the same consequences as normal, th
 
 If you start a day after succeeding at every required skill check the day before, you are capable of traveling, and there are no obvious threats to your immediate safety, the challenge phase ends and you resume the travel phase. The GM may continue the montage of travel.
 
-Alternatively, if the GM rules that you’ve gone enough distance to reach your destination, the journey ends.
+Alternatively, if the GM rules that you've gone enough distance to reach your destination, the journey ends.
 
 ## Event Phase
 

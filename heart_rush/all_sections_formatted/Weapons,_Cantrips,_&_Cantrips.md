@@ -57,7 +57,7 @@ You may enter any of the free spaces they left or passed through because of your
 
 Ranged weapons trade damage for being able to inflict injuries from a safer distance.  
 Light ranged weapons have a range of 30 ft, and heavy ranged weapons have a range of 60 ft.  
-You can attack targets outside of that range, but have disadvantage to the attack for every 10 feet beyond the range listed, to a maximum of double the weapon’s range.
+You can attack targets outside of that range, but have disadvantage to the attack for every 10 feet beyond the range listed, to a maximum of double the weapon's range.
 
 Ranged weapons come with drawbacks, however.  
 All ranged weapons require two hands unless specifically noted otherwise, and you cannot choose anything but the defensive stance if you move more than half of your move speed (after accounting for armor and other penalties) during a round, and cannot move more than half your move speed (after accounting for armor and other penalties) if you already took a non-defensive stance in an engagement.
@@ -69,7 +69,7 @@ All ranged weapons require two hands unless specifically noted otherwise, and yo
 Thrown weapons are a special category of weapons that combine elements of both melee and ranged combat.  
 They behave similarly to melee weapons in terms of handling but are used up as they are thrown.  
 Thrown weapons have a range of 20 feet.  
-You can attack targets outside of that range, but have disadvantage on the attack for every 5 feet beyond the range listed, to a maximum of double the weapon’s range.
+You can attack targets outside of that range, but have disadvantage on the attack for every 5 feet beyond the range listed, to a maximum of double the weapon's range.
 
 Unless otherwise stated, only ultralight weapons can be thrown.  
 Weapons cannot be thrown in water.
@@ -100,7 +100,7 @@ Whenever you wield a slashing weapon and use the agility stance, add an addition
 
 #### Piercing
 
-Piercing weapons use knowledge of your opponents’ maneuvering to inflict damage, and therefore are best used with high cunning.  
+Piercing weapons use knowledge of your opponents' maneuvering to inflict damage, and therefore are best used with high cunning.  
 Examples include rapiers and weapons that use arrows.  
 Whenever you wield a piercing weapon and use the cunning stance, add an additional weapon die to your roll.
 
@@ -111,7 +111,7 @@ Every weapon has a size, attack type, and damage type. However, weapons can also
 ### Reach
 
 Melee weapons can have this tag.  
-If you haven’t dashed this round, the range of this weapon is 10 feet instead of 5.  
+If you haven't dashed this round, the range of this weapon is 10 feet instead of 5.  
 If you attack a creature at this extended range, you cannot dash this round.
 
 ## Cantrips
@@ -193,7 +193,7 @@ Once a creature has been stunned from a time effect, it is immune until 24 hours
 
 #### Blasts
 
-Blasts are outbursts of an element centered on one’s self, generally taking the form of a rapidly expanding circle of elemental matter or energy.  
+Blasts are outbursts of an element centered on one's self, generally taking the form of a rapidly expanding circle of elemental matter or energy.  
 They behave similarly to melee weapon attacks, in that you must choose a stance, can only attack those whom your stance beats, and gain the benefits associated with each stance—though not all blasts deal damage, and not all blasts are attacks.  
 You must have both hands free to use blast cantrips.
 
@@ -286,7 +286,7 @@ There is no bonus or penalty for having no armor.
 ### Natural Armor
 
 Some creatures have natural armor.  
-Natural armor can provide any amount of bonus to one’s defense rolls, and applies no movement speed penalty.  
+Natural armor can provide any amount of bonus to one's defense rolls, and applies no movement speed penalty.  
 You cannot choose to have natural armor.
 
 ## Shields
