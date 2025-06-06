@@ -33,9 +33,9 @@ export function Breadcrumbs({ slug }: BreadcrumbsProps) {
   if (loading) {
     return (
       <div className="flex items-center space-x-2 text-sm">
-        <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-16 animate-pulse" />
-        <span className="text-gray-400">/</span>
-        <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-24 animate-pulse" />
+        <div className="h-4 bg-muted rounded w-16 animate-pulse" />
+        <span className="text-muted-foreground">/</span>
+        <div className="h-4 bg-muted rounded w-24 animate-pulse" />
       </div>
     );
   }
@@ -45,25 +45,25 @@ export function Breadcrumbs({ slug }: BreadcrumbsProps) {
   }
 
   return (
-    <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+    <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-sm text-muted-foreground">
       <Link 
         href="/" 
-        className="hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
+        className="hover:text-foreground transition-colors"
       >
         Home
       </Link>
       
       {breadcrumbs.map((crumb, index) => (
         <div key={crumb.slug} className="flex items-center space-x-2">
-          <span className="text-gray-400 dark:text-gray-500">/</span>
+          <span className="text-muted-foreground">/</span>
           {index === breadcrumbs.length - 1 ? (
-            <span className="text-gray-900 dark:text-gray-100 font-medium">
+            <span className="text-foreground font-medium">
               {crumb.title}
             </span>
           ) : (
             <Link
               href={`/${crumb.slug}`}
-              className="hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
+              className="hover:text-foreground transition-colors"
             >
               {crumb.title}
             </Link>

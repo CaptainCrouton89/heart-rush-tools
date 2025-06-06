@@ -49,10 +49,12 @@ function NavigationItem({
         href={`/${node.slug}`}
         onClick={handleItemClick}
         className={`
-          flex items-center py-2 px-2 rounded-md text-sm block
+          flex items-center py-2 px-2 rounded-md text-sm block transition-all duration-200
           ${isActive 
-            ? 'bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100' 
-            : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+            ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-sm border-l-2 border-primary' 
+            : `text-foreground hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 
+               hover:text-primary hover:border-l-2 hover:border-primary/50 hover:shadow-sm
+               ${level > 0 ? 'hover:ml-1' : ''}`
           }
         `}
         style={{ paddingLeft: indent + 8 }}
@@ -64,11 +66,15 @@ function NavigationItem({
               e.stopPropagation();
               onToggle();
             }}
-            className="mr-2 p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+            className={`mr-2 p-1 rounded transition-all duration-200 
+              ${isActive 
+                ? 'hover:bg-primary-foreground/20' 
+                : 'hover:bg-primary/20 hover:text-primary'
+              }`}
             aria-label={isOpen ? 'Collapse section' : 'Expand section'}
           >
             <svg 
-              className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-90' : ''}`}
+              className={`w-3 h-3 transition-all duration-200 ${isOpen ? 'rotate-90 text-primary' : ''}`}
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -80,12 +86,19 @@ function NavigationItem({
         
         <span
           className={`
-            flex-1 truncate
+            flex-1 truncate font-medium
             ${!hasChildren ? 'ml-5' : ''}
+            ${level === 0 ? 'font-semibold' : ''}
+            ${level > 1 ? 'text-sm opacity-90' : ''}
           `}
         >
           {node.title}
         </span>
+        
+        {/* Visual indicator for different levels */}
+        {level > 0 && (
+          <div className={`w-1 h-1 rounded-full bg-current opacity-30 ml-2`} />
+        )}
       </Link>
 
       {hasChildren && isOpen && node.children && (

@@ -17,7 +17,7 @@ export function CrossReferenceLink({ href, children, className = '' }: CrossRefe
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline ${className}`}
+        className={`inline-flex items-center gap-1 text-primary hover:text-primary/80 underline ${className}`}
       >
         {children}
         <ExternalLink size={12} className="inline" />
@@ -30,7 +30,7 @@ export function CrossReferenceLink({ href, children, className = '' }: CrossRefe
     return (
       <a
         href={href}
-        className={`text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline ${className}`}
+        className={`text-primary hover:text-primary/80 underline ${className}`}
       >
         {children}
       </a>

@@ -120,20 +120,20 @@ export function SearchInput({ onResults, onQueryChange }: SearchInputProps) {
           placeholder="Search documentation..."
           className="
             w-full pl-10 pr-10 py-2 text-sm
-            bg-gray-50 dark:bg-gray-800
-            border border-gray-300 dark:border-gray-600
+            bg-background
+            border border-border
             rounded-md
-            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-            text-gray-900 dark:text-gray-100
-            placeholder-gray-500 dark:placeholder-gray-400
+            focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
+            text-foreground
+            placeholder-muted-foreground
           "
         />
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           {isLoading ? (
-            <div className="animate-spin rounded-full h-4 w-4 border-2 border-gray-300 border-t-blue-500"></div>
+            <div className="animate-spin rounded-full h-4 w-4 border-2 border-border border-t-primary"></div>
           ) : (
             <svg 
-              className="w-4 h-4 text-gray-400 dark:text-gray-500" 
+              className="w-4 h-4 text-muted-foreground" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -159,7 +159,7 @@ export function SearchInput({ onResults, onQueryChange }: SearchInputProps) {
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
           >
             <svg 
-              className="w-4 h-4 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300" 
+              className="w-4 h-4 text-muted-foreground hover:text-foreground" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -177,7 +177,7 @@ export function SearchInput({ onResults, onQueryChange }: SearchInputProps) {
 
       {/* Search Suggestions */}
       {showSuggestions && suggestions.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-lg z-50 max-h-40 overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 mt-1 bg-card border border-border rounded-md shadow-lg z-50 max-h-40 overflow-y-auto">
           {suggestions.map((suggestion, index) => (
             <button
               key={index}
@@ -185,9 +185,9 @@ export function SearchInput({ onResults, onQueryChange }: SearchInputProps) {
               onClick={() => handleSuggestionClick(suggestion)}
               className="
                 w-full px-3 py-2 text-sm text-left
-                hover:bg-gray-100 dark:hover:bg-gray-700
-                text-gray-900 dark:text-gray-100
-                border-b last:border-b-0 border-gray-200 dark:border-gray-600
+                hover:bg-accent
+                text-foreground
+                border-b last:border-b-0 border-border
               "
             >
               {suggestion}

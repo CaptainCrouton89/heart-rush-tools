@@ -67,16 +67,19 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
       <aside 
         className={`
           fixed lg:static inset-y-0 left-0 z-50 w-80
-          bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700
+          bg-card border-r border-border
           transform transition-transform duration-200 ease-in-out
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
           flex flex-col h-screen overflow-hidden
         `}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+        <div className="flex items-center justify-between p-4 border-b border-border bg-gradient-to-r from-primary/5 to-secondary/5">
           <div className="flex items-center space-x-2">
-            <h1 className="text-xl font-bold text-gray-900 dark:text-white">
+            <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-sm">HR</span>
+            </div>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Heart Rush
             </h1>
           </div>
@@ -84,7 +87,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
             <ThemeToggle />
             <button
               onClick={onToggle}
-              className="lg:hidden p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-300 dark:hover:bg-gray-800"
+              className="lg:hidden p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
               aria-label="Close sidebar"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,7 +98,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
         </div>
 
         {/* Search */}
-        <div className="p-4 border-b border-gray-200 dark:border-gray-700 relative">
+        <div className="p-4 border-b border-border relative">
           <SearchInput 
             onResults={handleSearchResults}
             onQueryChange={handleQueryChange}
@@ -114,7 +117,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
             <div className="space-y-2">
               {/* Loading skeleton */}
               {Array.from({ length: 8 }).map((_, i) => (
-                <div key={i} className="h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                <div key={i} className="h-8 bg-muted rounded animate-pulse" />
               ))}
             </div>
           ) : (
@@ -123,10 +126,13 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
         </div>
 
         {/* Footer */}
-        <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-          <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+        <div className="p-4 border-t border-border bg-gradient-to-r from-accent/5 to-primary/5">
+          <p className="text-xs text-muted-foreground text-center">
             Heart Rush TTRPG Reference
           </p>
+          <div className="flex justify-center mt-2">
+            <div className="w-16 h-1 bg-gradient-to-r from-primary via-accent to-secondary rounded-full"></div>
+          </div>
         </div>
       </aside>
     </>

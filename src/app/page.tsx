@@ -11,13 +11,13 @@ export default async function HomePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <h1 className="text-4xl font-bold text-foreground mb-4">
           Heart Rush Digital Rulebook
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300 mb-2">
+        <p className="text-xl text-muted-foreground mb-2">
           Welcome to the official digital rulebook for Heart Rush TTRPG
         </p>
-        <p className="text-gray-500 dark:text-gray-400">
+        <p className="text-muted-foreground">
           Navigate through {navigation.length} sections of rules, lore, and gameplay guidance
         </p>
       </header>
@@ -26,9 +26,9 @@ export default async function HomePage() {
         {mainSections.map(section => (
           <div 
             key={section.slug} 
-            className="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-md transition-shadow"
+            className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-200 hover:border-primary/30"
           >
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+            <h2 className="text-xl font-semibold text-card-foreground mb-3">
               {section.title}
             </h2>
             
@@ -38,7 +38,7 @@ export default async function HomePage() {
                   <li key={child.slug}>
                     <Link 
                       href={`/${child.slug}`} 
-                      className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
+                      className="text-primary hover:text-secondary hover:underline text-sm transition-colors"
                     >
                       {child.title}
                     </Link>
@@ -49,7 +49,7 @@ export default async function HomePage() {
             
             <Link 
               href={`/${section.slug}`} 
-              className="inline-block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm font-medium"
+              className="inline-block text-muted-foreground hover:text-primary text-sm font-medium transition-colors"
             >
               Explore {section.title} →
             </Link>
@@ -59,7 +59,7 @@ export default async function HomePage() {
 
       {categories.length > 0 && (
         <section>
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-2xl font-semibold text-foreground mb-6">
             Browse by Category
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -67,7 +67,7 @@ export default async function HomePage() {
               <Link
                 key={category}
                 href={`/search?category=${encodeURIComponent(category)}`}
-                className="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="inline-block px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 {category}
               </Link>

@@ -1,18 +1,92 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cream/Off-white base colors with red undertones */
+  --background: #faf8f5;
+  --foreground: #2c1815;
+  --card: #f7f4f0;
+  --card-foreground: #2c1815;
+  --border: #e8d6d0;
+  --input: #f1ebe5;
+  --ring: #cc4125;
+
+  /* Deep red accent colors inspired by Heart Rush cover */
+  --primary: #cc4125;
+  --primary-foreground: #faf8f5;
+  --secondary: #dba51c;
+  --secondary-foreground: #2c1815;
+  --accent: #f8d256;
+  --accent-foreground: #2c1815;
+
+  /* Additional hover and interactive colors */
+  --primary-hover: #b8351f;
+  --secondary-hover: #f1b323;
+  --accent-hover: #ffd54c;
+  --destructive: #dc2626;
+  --destructive-foreground: #faf8f5;
+
+  /* Muted colors with red warmth */
+  --muted: #f1ebe5;
+  --muted-foreground: #6b4d45;
+  --popover: #faf8f5;
+  --popover-foreground: #2c1815;
 }
 
 html.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  /* Dark theme with deep red tones */
+  --background: #1a0d0b;
+  --foreground: #f7f0ed;
+  --card: #2c1715;
+  --card-foreground: #f7f0ed;
+  --border: #3d1f1b;
+  --input: #2c1715;
+  --ring: #ff4d2e;
+
+  /* Brighter red and gold accents for dark mode */
+  --primary: #ff4d2e;
+  --primary-foreground: #1a0d0b;
+  --secondary: #daa520;
+  --secondary-foreground: #1a0d0b;
+  --accent: #ffd700;
+  --accent-foreground: #1a0d0b;
+
+  /* Additional hover colors for dark mode */
+  --primary-hover: #ff6b4a;
+  --secondary-hover: #e63425;
+  --accent-hover: #ff4d2e;
+  --destructive: #ef4444;
+  --destructive-foreground: #f7f0ed;
+
+  /* Dark muted colors with red warmth */
+  --muted: #2c1715;
+  --muted-foreground: #e1cdc8;
+  --popover: #1a0d0b;
+  --popover-foreground: #f7f0ed;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-accent-hover: var(--accent-hover);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

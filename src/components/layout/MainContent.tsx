@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { ContentSection, ContentMetadata } from '../../types/content';
-import { TableOfContents } from './TableOfContents';
-import { Breadcrumbs } from './Breadcrumbs';
-import { MarkdownRenderer } from '../content/MarkdownRenderer';
-import Link from 'next/link';
+import Link from "next/link";
+import { ContentMetadata, ContentSection } from "../../types/content";
+import { MarkdownRenderer } from "../content/MarkdownRenderer";
+import { Breadcrumbs } from "./Breadcrumbs";
+import { TableOfContents } from "./TableOfContents";
 
 interface MainContentProps {
   content: ContentSection;
@@ -12,7 +12,11 @@ interface MainContentProps {
   nextContent: ContentMetadata | null;
 }
 
-export function MainContent({ content, previousContent, nextContent }: MainContentProps) {
+export function MainContent({
+  content,
+  previousContent,
+  nextContent,
+}: MainContentProps) {
   return (
     <div className="flex-1 min-w-0">
       <div className="max-w-4xl mx-auto">
@@ -24,13 +28,13 @@ export function MainContent({ content, previousContent, nextContent }: MainConte
         {/* Main article content */}
         <article className="prose prose-lg dark:prose-invert max-w-none">
           <header className="mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl font-bold text-primary mb-4">
               {content.title}
             </h1>
-            
+
             {/* Content metadata */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-6">
-              <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
+              <span className="bg-primary/10 text-primary px-2 py-1 rounded">
                 {content.category}
               </span>
               <span>{content.reading_time} min read</span>
@@ -43,7 +47,7 @@ export function MainContent({ content, previousContent, nextContent }: MainConte
                 {content.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs"
+                    className="bg-accent text-accent-foreground px-2 py-1 rounded text-xs"
                   >
                     #{tag}
                   </span>
@@ -59,27 +63,31 @@ export function MainContent({ content, previousContent, nextContent }: MainConte
         </article>
 
         {/* Navigation footer */}
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <div className="mt-12 pt-8 border-t border-border">
           <div className="flex justify-between items-center">
             {previousContent ? (
-              <Link 
+              <Link
                 href={`/${previousContent.slug}`}
-                className="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center gap-1 group"
+                className="text-primary hover:text-primary/80 hover:underline text-sm flex items-center gap-1 group"
               >
-                <span className="group-hover:translate-x-[-2px] transition-transform">←</span>
+                <span className="group-hover:translate-x-[-2px] transition-transform">
+                  ←
+                </span>
                 <span>Previous: {previousContent.title}</span>
               </Link>
             ) : (
               <div></div>
             )}
-            
+
             {nextContent ? (
-              <Link 
+              <Link
                 href={`/${nextContent.slug}`}
-                className="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center gap-1 group"
+                className="text-primary hover:text-primary/80 hover:underline text-sm flex items-center gap-1 group"
               >
                 <span>Next: {nextContent.title}</span>
-                <span className="group-hover:translate-x-[2px] transition-transform">→</span>
+                <span className="group-hover:translate-x-[2px] transition-transform">
+                  →
+                </span>
               </Link>
             ) : (
               <div></div>

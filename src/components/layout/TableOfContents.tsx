@@ -73,8 +73,8 @@ export function TableOfContents({ content }: TableOfContentsProps) {
 
   return (
     <div className="sticky top-20">
-      <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+      <div className="bg-card border border-border rounded-lg p-4">
+        <h3 className="text-sm font-semibold text-foreground mb-3">
           Table of Contents
         </h3>
         
@@ -84,10 +84,10 @@ export function TableOfContents({ content }: TableOfContentsProps) {
               key={entry.slug}
               href={entry.anchor}
               className={`
-                block text-sm transition-colors
+                block text-sm transition-colors hover:bg-accent hover:text-accent-foreground rounded-sm px-1 py-0.5
                 ${activeId === entry.slug
-                  ? 'text-blue-600 dark:text-blue-400 font-medium'
-                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                  ? 'text-primary font-medium'
+                  : 'text-muted-foreground'
                 }
               `}
               style={{ paddingLeft: (entry.level - 1) * 12 }}

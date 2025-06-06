@@ -25,7 +25,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     systemPreference: 'light'
   });
 
-  // Update system preference
+  // Load saved theme and set up system preference detection
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     
@@ -36,10 +36,19 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       }));
     };
 
-    // Set initial value
-    updateSystemPreference();
+    // Set initial system preference
+    const initialSystemPreference = mediaQuery.matches ? 'dark' : 'light';
+    
+    // Load saved theme from localStorage, defaulting to system
+    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'system';
+    const themeMode = savedTheme && ['light', 'dark', 'system'].includes(savedTheme) ? savedTheme : 'system';
+    
+    setThemeState({
+      mode: themeMode,
+      systemPreference: initialSystemPreference
+    });
 
-    // Listen for changes
+    // Listen for system preference changes
     mediaQuery.addEventListener('change', updateSystemPreference);
     return () => mediaQuery.removeEventListener('change', updateSystemPreference);
   }, []);
@@ -54,14 +63,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('theme', theme.mode);
     console.log('After toggle:', { classList: document.documentElement.classList.toString() });
   }, [theme]);
-
-  // Load saved theme on mount
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'system';
-    if (savedTheme && ['light', 'dark', 'system'].includes(savedTheme)) {
-      setThemeState(prev => ({ ...prev, mode: savedTheme }));
-    }
-  }, []);
 
   const setTheme = (mode: 'light' | 'dark' | 'system') => {
     setThemeState(prev => ({ ...prev, mode }));
