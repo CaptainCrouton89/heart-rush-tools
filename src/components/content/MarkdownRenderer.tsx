@@ -119,7 +119,34 @@ const mdxComponents = {
   em: ({ children, ...props }: ComponentProps) => (
     <em className="italic text-muted-foreground" {...props}>{children}</em>
   ),
+
+  // Custom callout box component
+  CalloutBox: ({ children, ...props }: ComponentProps) => (
+    <div className="my-6 p-4 bg-primary/5 border border-primary/20 rounded-lg" {...props}>
+      <div className="text-sm text-foreground space-y-2 [&>p:first-child>strong]:text-primary [&>p:first-child>strong]:font-semibold [&>p:first-child>strong]:text-base">
+        {children}
+      </div>
+    </div>
+  ),
 };
+
+// Function to process callout boxes in content
+function processCallouts(content: string): string {
+  // Replace [[...]] patterns with custom callout syntax
+  return content.replace(/\[\[(.*?)\]\]/gs, (match, calloutContent) => {
+    // Clean up the content and split into lines
+    const lines = calloutContent.trim().split('\n');
+    const firstLine = lines[0].trim();
+    const remainingContent = lines.slice(1).join('\n').trim();
+    
+    // Format first line as heading, rest as body content
+    const formattedContent = remainingContent 
+      ? `**${firstLine}**\n\n${remainingContent}`
+      : `**${firstLine}**`;
+    
+    return `<CalloutBox>\n\n${formattedContent}\n\n</CalloutBox>`;
+  });
+}
 
 export function MarkdownRenderer({ content }: MarkdownRendererProps) {
   const [mdxSource, setMdxSource] = useState<MDXRemoteSerializeResult | null>(null);
@@ -130,7 +157,10 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
     const processMarkdown = async () => {
       try {
         setIsLoading(true);
-        const serialized = await serialize(content, {
+        // Pre-process content to handle callout boxes
+        const processedContent = processCallouts(content);
+        
+        const serialized = await serialize(processedContent, {
           mdxOptions: {
             remarkPlugins: [],
             rehypePlugins: [],

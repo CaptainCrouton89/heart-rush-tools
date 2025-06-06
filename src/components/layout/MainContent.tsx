@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ContentMetadata, ContentSection } from "../../types/content";
 import { MarkdownRenderer } from "../content/MarkdownRenderer";
+import { ChildrenContent } from "../content/ChildrenContent";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { TableOfContents } from "./TableOfContents";
 
@@ -10,12 +11,14 @@ interface MainContentProps {
   content: ContentSection;
   previousContent: ContentMetadata | null;
   nextContent: ContentMetadata | null;
+  childContent?: ContentSection[];
 }
 
 export function MainContent({
   content,
   previousContent,
   nextContent,
+  childContent = [],
 }: MainContentProps) {
   return (
     <div className="flex-1 min-w-0">
@@ -37,8 +40,6 @@ export function MainContent({
               <span className="bg-primary/10 text-primary px-2 py-1 rounded">
                 {content.category}
               </span>
-              <span>{content.reading_time} min read</span>
-              <span>{content.word_count} words</span>
             </div>
 
             {/* Tags */}
@@ -60,6 +61,9 @@ export function MainContent({
           <div className="prose-headings:scroll-mt-20">
             <MarkdownRenderer content={content.content} />
           </div>
+          
+          {/* Child content sections */}
+          <ChildrenContent children={childContent} />
         </article>
 
         {/* Navigation footer */}

@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getContentBySlug, getAllContentMetadata, getAdjacentContent } from '../../lib/content';
+import { getContentBySlug, getAllContentMetadata, getAdjacentContent, getChildContent } from '../../lib/content';
 import { MainContent } from '../../components/layout/MainContent';
 
 // Generate static params for all content pages
@@ -44,6 +44,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   }
   
   const { previous, next } = await getAdjacentContent(slug);
+  const childContent = await getChildContent(slug);
   
-  return <MainContent content={content} previousContent={previous} nextContent={next} />;
+  return <MainContent content={content} previousContent={previous} nextContent={next} childContent={childContent} />;
 }

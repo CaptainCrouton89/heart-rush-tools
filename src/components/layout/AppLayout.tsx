@@ -23,14 +23,14 @@ export function AppLayout({ children }: AppLayoutProps) {
   };
 
   return (
-    <div className="flex min-h-screen bg-background">
+    <div className="flex h-screen bg-background">
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onToggle={toggleSidebar} />
       
       {/* Main content area */}
-      <div className="flex-1 flex flex-col lg:ml-0">
+      <div className="flex-1 flex flex-col lg:ml-0 min-w-0">
         {/* Mobile header */}
-        <header className="lg:hidden bg-card border-b border-border px-4 py-3">
+        <header className="lg:hidden bg-card border-b border-border px-4 py-3 flex-shrink-0">
           <div className="flex items-center justify-between">
             <button
               onClick={toggleSidebar}
@@ -51,7 +51,7 @@ export function AppLayout({ children }: AppLayoutProps) {
         </header>
 
         {/* Page content */}
-        <main className="flex-1 p-6">
+        <main className="flex-1 overflow-y-auto p-6">
           {children}
         </main>
       </div>
