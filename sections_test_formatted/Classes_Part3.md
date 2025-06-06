@@ -1,14 +1,12 @@
-# Heart Rush TTRPG Rules
+# Heart Rush TTRPG Rules: Classes (Part 3)
 
-## Heart Rush Ability
+**Fight Harder:**  
+Choose any number of creatures within 30 feet. For each rush point spent on this ability, choose one of the following effects to apply to each of the chosen creatures. You cannot choose the same effect an additional time until every option has been chosen.
 
-**Fight Harder**  
-Choose any number of creatures within 30 feet. For each rush point spent on this ability, choose one of the following effects to apply to each of the chosen creatures. You cannot choose the same effect an additional time until every effect has been chosen.
-
-- Increase your heart die.
-- Take an action.
-- Gain A2 on the next attack.
-- Remove all conditions affecting the creature.
+- Increase your heart die
+- Take an action
+- Gain A2 on the next attack
+- Remove all conditions affecting the creature
 
 ---
 

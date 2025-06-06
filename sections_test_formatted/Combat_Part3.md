@@ -1,10 +1,10 @@
-# Heart Rush TTRPG Rules
+# Combat (Part 3)
 
-## Combat Mechanics
+## Grappling Damage
 
 ### Might Stance
 
-When you use the **Might Stance**, you may choose to deal **1d6 damage**, plus **1d6 damage** for every size greater you are than the grappled creature.
+When you have a creature grappled and use the **Might Stance**, you may choose to deal **1d6 damage**, plus **1d6 damage** for every size greater you are than the grappled creature.
 
 ### Climb On
 

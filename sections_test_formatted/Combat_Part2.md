@@ -1,36 +1,6 @@
-# Heart Rush TTRPG Rules
+# Combat (Part 2)
 
-## Combat Mechanics
-
-### Engagements
-
-In an engagement, players choose a stance that determines their actions and interactions with other creatures. The available stances are:
-
-- **Cunning**: Attack a single creature in the engagement that did not take the cunning stance. Creatures that chose the agility stance can make their attack rolls after all cunning stance attack rolls have been made. If you choose this stance, you may take the sidestep action for free during the engagement, either before or after your attack. Creatures that attack before moving do so before those that sidestep.
-
-- **Might**: Attack a single creature in the engagement that did not take the agility stance. Creatures that chose the might stance make their attack rolls last. Additionally, when attacking a creature defending with the cunning stance, you trigger your weapon’s might stance bonus. Refer to the Weapons section for more details.
-
-- **Defensive**: You do not attack but reduce incoming damage. After subtracting your defense from an attack, halve the remaining damage, rounding up.
-
-### Resolution of Attacks
-
-After all players have revealed their stances, resolve attacks in the following order:
-
-1. **Cunning**
-2. **Agility**
-3. **Might**
-
-Each player may attack one other character that their stance beats and is within range of their weapon. All stances beat the defensive stance. If no other stance can be beaten or if the target is out of range, you cannot attack in this engagement.
-
-- **Cunning Attacks**: Players who chose the cunning stance may attack any character who chose the agility or defensive stance.
-- **Agility Attacks**: Players who chose the agility stance may attack any character who chose the might or defensive stance.
-- **Might Attacks**: Players who chose the might stance may attack any character who chose the cunning or defensive stance.
-
-Although attacks of the same stance may not literally happen simultaneously, treat them as though they did. For example, if a might attacker pushes a creature away, that creature cannot prevent its attack on another target. If an attack pushes a target out of range, that target cannot attack during subsequent turns.
-
-## Combat Mechanics
-
-### Attack Rolls
+## Attack Rolls
 
 When you attack, make an attack roll consisting of:
 
@@ -94,7 +64,7 @@ Some options require a contested skill check instead of an attack and defense ro
 
 ### Grappling
 
-Make a might ability check against an adjacent creature, contested by the creature’s might or agility ability check. If either creature is larger, it gains a level of advantage on their roll for each level of size difference. 
+Make a might ability check against an adjacent creature, contested by the creature's might or agility ability check. If either creature is larger, it gains a level of advantage on their roll for each level of size difference. 
 
 If you roll higher, the creature is grappled. You gain the condition "grappling," and the opposing creature gains the condition "grappled." At least one hand must be free to grapple another creature. If grappling with only one hand, halve your grapple ability check, rounding up. A creature can only be grappled by one creature at a time.
 

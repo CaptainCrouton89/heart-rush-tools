@@ -1,4 +1,6 @@
-# Heart Rush TTRPG Rules
+# Heart Rush TTRPG Rules: Classes (Part 2)
+
+attacks someone other than you.
 
 ## Spending HP
 
@@ -139,8 +141,9 @@ Choose a creature within 120 feet and in earshot besides yourself. The chosen cr
 #### Rallying Cry
 - **Type**: Major Ability
 - **Rank**: 4  
-You rally your companions, inspiring them to... (continue with the rest of the ability description).
+You rally your companions with an inspiring battle cry. Choose any number of allies within 30 feet. For each rush point spent on this ability, each chosen ally gains one of the following benefits:
+- Gain an additional action this round
+- Remove all levels of one condition
+- Gain hit points equal to their heart die
+- Gain advantage on their next attack roll
 
----
-
-This structured format enhances clarity and readability, making it easier for players to reference rules during gameplay.

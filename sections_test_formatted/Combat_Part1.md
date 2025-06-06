@@ -4,7 +4,7 @@ Combat in Heart Rush occurs in rounds, divided into engagements and actions. Eng
 
 ## Starting Combat
 
-When combat begins, all participants lose priority, meaning they cannot use abilities that are not **instant**. Priority is granted to one side, which then alternates until all participants have acted. 
+When combat begins, all participants lose priority, meaning they cannot use abilities that are not **instant**. Priority is granted to one side, which then alternates until all participants have acted.
 
 ### Determining Starting Priority
 
@@ -166,4 +166,28 @@ Those who choose cunning can read and avoid attacks from those who cannot match 
 
 ### Agility
 
-Those who choose agility can maneuver effectively, allowing them to evade attacks from those who cannot match their speed. Further details on agility and other stances will follow.
+Those who choose agility can maneuver effectively, allowing them to evade attacks from those who cannot match their speed. They may attack a single creature in the engagement that did not take the cunning stance. Creatures that chose the agility stance can make their attack rolls after all cunning stance attack rolls have been made. If you choose this stance, you may take the sidestep action for free during the engagement, either before or after your attack. Creatures that attack before moving do so before those that sidestep.
+
+### Might
+
+Attack a single creature in the engagement that did not take the agility stance. Creatures that chose the might stance make their attack rolls last. Additionally, when attacking a creature defending with the cunning stance, you trigger your weapon's might stance bonus. Refer to the Weapons section for more details.
+
+### Defensive
+
+You do not attack but reduce incoming damage. After subtracting your defense from an attack, halve the remaining damage, rounding up.
+
+## Resolution of Attacks
+
+After all players have revealed their stances, resolve attacks in the following order:
+
+1. **Cunning**
+2. **Agility**
+3. **Might**
+
+Each player may attack one other character that their stance beats and is within range of their weapon. All stances beat the defensive stance as well as their own. If no other stance can be beaten or if the target is out of range, you cannot attack in this engagement.
+
+- **Cunning Attacks**: Players who chose the cunning stance may attack any character who chose the cunning, agility or defensive stance.
+- **Agility Attacks**: Players who chose the agility stance may attack any character who chose the agility, might or defensive stance.
+- **Might Attacks**: Players who chose the might stance may attack any character who chose the might, cunning or defensive stance.
+
+Although attacks of the same stance may not literally happen simultaneously, treat them as though they did. For example, if a might attacker pushes a creature away, that creature cannot prevent its attack on another target. If an attack pushes a target out of range, that target cannot attack during subsequent turns.

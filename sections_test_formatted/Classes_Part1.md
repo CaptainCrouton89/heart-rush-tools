@@ -120,8 +120,4 @@ When you deal damage with a heavy melee weapon, choose one:
 
 ### Battle Spirited
 **Major Ability. Instant. Rank 4.**  
-Whenever an ally is attacked, you may make an opportunity attack against the enemy. This applies whenever an enemy could have attacked you but did not, or whenever an enemy attacks anyone other than you. 
-
----
-
-This structured format enhances clarity and readability, making it easier for players to reference during gameplay.
+Whenever an ally is attacked, you may make an opportunity attack against the enemy. This applies whenever an enemy could have attacked you but did not, or whenever an enemy
