@@ -201,9 +201,9 @@ Armor works by increasing your defense rolls, making it harder for damage to get
 
 | Armor Type  | Defense Bonus | Move Speed Penalty | Slots\* |
 | ----------- | ------------- | ------------------ | ------- |
-| **Heavy**   | +6            | -15 feet           | 30      |
-| **Medium**  | +4            | -10 feet           | 10      |
-| **Light**   | +2            | -5 feet            | 5       |
+| **Heavy**   | +6            | -15 feet           | 5       |
+| **Medium**  | +4            | -10 feet           | 2       |
+| **Light**   | +2            | -5 feet            | 1       |
 | **None**    | +0            | None               | 0       |
 | **Natural** | Variable      | None               | 0       |
 
@@ -219,7 +219,7 @@ Like armor, shields help you stay alive. You must have a free hand available to 
 
 | Shield Type | Defense Bonus | Move Speed Penalty | Slots\* | Special Properties                                          |
 | ----------- | ------------- | ------------------ | ------- | ----------------------------------------------------------- |
-| **Heavy**   | +2            | -5 feet            | 10      | Allies may treat your space as a wall for talents/abilities |
-| **Light**   | +1            | None               | 5       | None                                                        |
+| **Heavy**   | +2            | -5 feet            | 2       | Allies may treat your space as a wall for talents/abilities |
+| **Light**   | +1            | None               | 1       | None                                                        |
 
 \*Slots only used when not being worn.

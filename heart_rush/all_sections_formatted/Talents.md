@@ -617,7 +617,7 @@ _Passive ability. Martial talent._
 Armor, weapons, and shields do not reduce your movement speed.
 
 **Destiny Level:**
-Whenever you are forced to move, you move 5 feet less. Additionally, your encumbrance score increases to 10 times your might die, and your maximum carrying capacity increases to double that. You must choose the disadvantage on athletics and A/D rolls option when you take penalties for being over-encumbered.
+Whenever you are forced to move, you move 5 feet less. Additionally, your maximum slots increases to 6 plus your might die, and your maximum carrying capacity increases to double that. You must choose the disadvantage on athletics and A/D rolls option when you take penalties for being over-encumbered.
 
 ### Kick ‘em While they're Down
 
@@ -1197,7 +1197,7 @@ _Passive ability. Cognitive talent._
 You may take the Lookout action for free, once per travel and camp phase.
 
 **Destiny Level:**  
-Whenever you use the Lookout action, choose “threat” or “opportunity”. When you choose “threat,” you automatically succeed the cunning check but do not spot anything interesting. If you choose opportunity, you only have to beat the challenge number by one in order to spot something interesting.
+Whenever you use the Lookout action, choose "threat" or "opportunity". When you choose "threat," you automatically succeed the cunning check but do not spot anything interesting. If you choose opportunity, you only have to beat the challenge number by one in order to spot something interesting.
 
 ### Elemental Affinity
 
@@ -1220,7 +1220,7 @@ When you touch someone, you know with certainty for the next 24 hours when they 
 ### Explorer
 
 _Passive ability. Cognitive talent._  
-Adventuring and unexpected difficulty have taught you how to prepare for any situation. At any time, you may choose to allocate 10 slots of inventory space as “adventuring gear”. When you do so, choose one from the following list of benefits. You can only choose each benefit once, and the slots remain allocated until you reach a location where you can resupply and change out your equipment.
+Adventuring and unexpected difficulty have taught you how to prepare for any situation. At any time, you may choose to allocate 10 slots as "adventuring gear". When you do so, choose one from the following list of benefits. You can only choose each benefit once, and the slots remain allocated until you reach a location where you can resupply and change out your equipment.
 
 - You have A2 on checks to navigate. You know which direction is North.
 - Your shelter counts as indoors for purpose of calculating odds of a successful night of sleep.
@@ -1398,7 +1398,7 @@ You have A2 on all of those rolls. You gain your choice of permanent physical or
 
 _Monthly ability. Cognitive talent._  
 Whether it be heists, spying, or sabotage, you are accomplished in the ways of espionage. You may declare an object as the target of your espionage. If you spend one day gathering knowledge about the security around your target, you have advantage on all rolls related to accessing that object, and then escaping thereafter.  
-If you spend one week gathering knowledge about your target, you may make an “educated guess” about the security around your target. The GM will confirm or deny your educated guess with a simple “yes” or “no”.
+If you spend one week gathering knowledge about your target, you may make an "educated guess" about the security around your target. The GM will confirm or deny your educated guess with a simple "yes" or "no".
 
 **Destiny Level:**  
 Before you perform your act of espionage, you may choose to lay out a detailed plan. You must describe your plan to the GM. While you execute your espionage, so long as everything goes as planned, you may choose to replace any roll made during the heist with the maximum of your relevant ability die. These benefits do not extend to contingency plans, nor to tasks that were not clearly specified in the plan.
@@ -1629,7 +1629,7 @@ You may choose for them to gain three levels of frightened instead, and you may 
 ### Worldly Traveler
 
 _Monthly ability. Cognitive talent._  
-You have traveled the world and met many, many people. When you meet someone whom the GM describes as someone you've never met, you may choose to claim some connection to them. If you do, the GM will explain how you recognize them, and the nature of your connection. This connection may be as distant as “you saw them drinking in a bar in a neighboring country”, or as close as, “this woman bears a strong resemblance to the thief you killed earlier today, and you suspect she is his sister”. It is possible there is no feasible connection between you and this person. In this case, you may either regain the use of this ability, or take three destiny points. You cannot use this ability to claim connections with people more influential than yourself.
+You have traveled the world and met many, many people. When you meet someone whom the GM describes as someone you've never met, you may choose to claim some connection to them. If you do, the GM will explain how you recognize them, and the nature of your connection. This connection may be as distant as "you saw them drinking in a bar in a neighboring country", or as close as, "this woman bears a strong resemblance to the thief you killed earlier today, and you suspect she is his sister". It is possible there is no feasible connection between you and this person. In this case, you may either regain the use of this ability, or take three destiny points. You cannot use this ability to claim connections with people more influential than yourself.
 
 **Destiny Level:**  
 Rather than claim a connection to someone you meet, you may use this ability before actually running into someone. For example, while at a bar in a foreign country, you could claim that you knew a weapon enchanter who lived in this area. If the GM also believes this to be plausible, your connection becomes real (though their location and condition may have changed since the last time you talked with them). If the GM doesn't believe this to be reasonable, you may choose not to use this ability.
