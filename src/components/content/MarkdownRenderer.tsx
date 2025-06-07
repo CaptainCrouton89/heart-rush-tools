@@ -301,10 +301,10 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
   if (isLoading) {
     return (
       <div className="space-y-4 animate-pulse">
-        <div className="h-8 bg-accent rounded w-3/4" />
-        <div className="h-4 bg-accent rounded w-full" />
-        <div className="h-4 bg-accent rounded w-5/6" />
-        <div className="h-4 bg-accent rounded w-4/5" />
+        <div className="h-8 bg-muted rounded w-3/4" />
+        <div className="h-4 bg-muted rounded w-full" />
+        <div className="h-4 bg-muted rounded w-5/6" />
+        <div className="h-4 bg-muted rounded w-4/5" />
       </div>
     );
   }
