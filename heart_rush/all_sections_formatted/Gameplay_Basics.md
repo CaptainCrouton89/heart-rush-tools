@@ -44,6 +44,24 @@ If you roll additional 1s they do not cause complications.
 
 If you roll two 1s as your first roll, you fail the check, and there is a complication.
 
+### Examples of Complications
+
+**When climbing:** You reach the top, but your rope frays and won't support another person safely.
+
+**When gathering information:** You learn what you wanted, but someone notices you asking questions and becomes suspicious.
+
+**When treating wounds:** The treatment works, but you use up most of your medical supplies in the process.
+
+**When sneaking:** You get past undetected, but you accidentally leave muddy footprints that could be followed.
+
+**When persuading:** They agree to help you, but they expect a favor in return that you hadn't planned on.
+
+**When casting a spell:** The magic works as intended, but the bright flash or loud noise draws unwanted attention.
+
+### Guidelines for GMs
+
+Good complications should feel like natural consequences that move the story forward. They create new problems to solve rather than simply undoing the player's success. When in doubt, think about what secondary effects the character's actions might have on their equipment, the environment, or nearby people.
+
 ## Raising the Stakes
 
 Whenever you or another player makes a skill check, but before the dice are rolled, you may choose to raise the stakes.
