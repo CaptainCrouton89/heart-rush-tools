@@ -10,12 +10,14 @@ There are three different classes—stronghearts, battlehearts, and cleverhearts
 
 When you reach rank 1, choose one of the classes and gain the abilities listed with the Rank 1 tag. Then, upon reaching rank 2, choose one of the subclasses your class offers. Each subclass specializes its own unique play style. For example, a striker specializes in single targets, while a ravager specializes in dishing out lots of damage to everybody.
 
-## Classes and Subclasses (table)
+## Classes and Subclasses
 
-- Strongheart: Bastion, Vicehand, Wrathguard
-- Battleheart: Striker, Ravager
-- Cleverheart: Battlemind, Skirmisher
-- Spelltouched: (can be used as a subclass for any class)
+| Class        | Subclasses                                |
+| ------------ | ----------------------------------------- |
+| Strongheart  | Bastion, Vicehand, Wrathguard             |
+| Battleheart  | Striker, Ravager                          |
+| Cleverheart  | Battlemind, Skirmisher                    |
+| Spelltouched | (can be used as a subclass for any class) |
 
 ## Party Composition
 
