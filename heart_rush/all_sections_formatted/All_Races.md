@@ -1,3 +1,5 @@
+# Other Races
+
 ## Chulpe
 
 Savage, bestial humanoids that combine the worst aspects of predatory animals with a cruel intelligence, the Chulpe are among the most feared races in the known world. These monstrous beings possess powerful, muscular bodies covered in coarse fur, with elongated snouts filled with razor-sharp teeth and claws capable of rending flesh from bone. While their intelligence varies between subspecies, all Chulpe share an insatiable hunger for meat—particularly humanoid flesh—and a pack-based social structure built around dominance, violence, and the hunt. Their origins are shrouded in mystery, with some scholars believing them to be the result of ancient magical experiments, while others claim they are simply evolution's answer to creating the perfect predator.
@@ -151,8 +153,6 @@ You can see in darkness as though it was dim light to a range of 45 feet, and ca
 **Passive ability.**
 Your whiskers and keen senses alert you to both opportunity and danger. If you would make a saving throw to avoid or mitigate the effects of a trap, you have advantage on that roll. If the trap deals damage, you take half as much damage. Additionally, your whiskers tingle when treasure or traps are within 1000 feet—you don't know which, but you can estimate distance by the intensity. You can perfectly appraise the value of rare artifacts and have advantage on checks to discern the nature of magical items.
 
----
-
 ## Satyr
 
 The Satyr are creatures of primal passion and bloody revelry who have embraced their wild nature completely. With the upper bodies of humanoids and the lower bodies of goats, they reject the constraints of civilized clothing and armor, preferring to live as nature intended. Their culture revolves around ecstatic dances performed to haunting pipe music, often culminating in frenzied celebrations drenched in the blood of their prey.
@@ -181,8 +181,6 @@ When you kill a creature, you may shower yourself in its blood to enter an uncon
 
 **Major ability. Full action.**
 You play haunting melodies on your magical pipes. Choose a creature within 60 feet that can hear you. That creature must make a cunning saving throw against your presence challenge number. On a failure, they are charmed by you for the next hour and compelled to dance to your music, giving them D2 on all rolls. The charm immediately ends if you attack them, and they know they were charmed when the effect ends.
-
----
 
 ## Lyzine
 
@@ -213,8 +211,6 @@ You have a climb speed equal to your walking speed and can move across webs and 
 **Heart ability. Full action.**
 You can rapidly spin webs to control the battlefield. Choose a 20-foot square area within 30 feet. The area becomes difficult terrain, and creatures that enter or start their turn in the webbed area must make an agility saving throw against your cunning challenge number or become restrained. Creatures can break free with a successful might check against the same CN. The webs last for 10 minutes or until destroyed.
 
----
-
 ## Krell
 
 The Krell are an ancient insectoid race whose very existence revolves around their massive colonial structure and absolute devotion to their queen. These chitinous beings live in enormous underground or mountain-carved hives that can house thousands of individuals, all working in perfect harmony toward the colony's goals. Every few centuries, when the current queen lays princess eggs, the colony prepares for the violent succession that will determine their future.
@@ -243,8 +239,6 @@ You can communicate telepathically with other Krell within 1 mile through pherom
 
 **Heart ability. Instant.**
 When you are adjacent to at least one ally, you can coordinate a devastating group assault. Choose one enemy within reach of you or an adjacent ally. That enemy takes damage equal to your heart die + the number of allies adjacent to you. This ability can only be used once per engagement per target.
-
----
 
 ## Kendrel
 
@@ -275,8 +269,6 @@ You have a swim speed of 40 feet and can breathe both air and water. While under
 **Major ability. Full action.**
 Your otherworldly beauty briefly overwhelms those around you. All creatures of your choice within 30 feet that can see you must make a cunning saving throw against your presence challenge number. Those who fail are stunned until the end of their next turn as they become transfixed by your appearance. Creatures that succeed are immune to this ability for 24 hours.
 
----
-
 ## Chargon
 
 The Chargon are an enigmatic people whose eel-like heads and serpentine grace mask hearts filled with unexpected kindness. Despite their unsettling appearance—smooth, elongated skulls with large eyes and mouths full of needle-sharp teeth—they are among the most courteous and genuinely caring folk one might encounter. Their mysterious nature stems not from malice, but from a deep cultural appreciation for subtlety and the hidden currents that flow beneath surface interactions.
@@ -305,8 +297,6 @@ You can compress your body to fit through any opening large enough for a creatur
 
 **Heart ability. Instant.**
 You can sense the emotional undercurrents around you with supernatural clarity. For the next minute, you know the current emotional state of all creatures within 30 feet and can detect lies automatically. Additionally, you can choose one creature in range—they must make a presence saving throw against your cunning challenge number or have their attitude toward you improved by one step (hostile to unfriendly, unfriendly to neutral, etc.).
-
----
 
 ## Tuktuk
 
@@ -337,8 +327,6 @@ Your thick shell provides +2 natural armor defense that stacks with worn armor. 
 **Heart ability. Instant.**
 When you take damage that would cause a wound, your warrior's rage ignites. For the rest of the combat, you gain +2 to all attack rolls and your first successful attack each round deals an additional 1d6 damage. This effect ends if you go an entire round without attacking or taking damage.
 
----
-
 ## Alekroin
 
 The Alekroin are massive alligator-folk whose imposing presence and predatory mindset have made them both feared and respected throughout the frozen wastes of Shykasas. These powerfully built beings stand shorter than most humanoids but possess incredible physical strength and an unwavering belief in the fundamental truth that everything in existence falls into two categories: predator or prey. Their culture has remained unchanged for millennia, as rigid and unyielding as the ice that covers their homeland.
@@ -367,8 +355,6 @@ You can automatically identify the strongest and weakest creature in any group w
 
 **Heart ability. Instant.**
 When you successfully grapple a creature, you can attempt to perform a devastating death roll. Make an opposed might check—if you win, you deal damage equal to twice your might die and both you and the grappled creature fall prone. If you win by 5 or more, the creature takes a wound with rank equal to the difference between your rolls.
-
----
 
 ## Troenka
 
