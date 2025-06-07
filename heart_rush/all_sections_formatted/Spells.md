@@ -1,27 +1,105 @@
 # Spellcasting
 
-## Gaining Spells
+Spells are powerful elemental abilities that require mastery over the fundamental forces of nature. While anyone with elemental attunements can learn basic cantrips, true spellcasting demands deeper understanding and comes with significant restrictions. Spelltouched warriors have developed techniques to blend magic with martial combat, but even they must respect the fundamental limitations of channeling elemental forces.
 
-- Learning a spell represents mastery over some aspect of one's connection with an element, allowing the user to perform some fantastical feat. Anyone with an attunement can learn to cast a spell.
-- By spending XP, as described in the Gaining and Spending XP section, one can gain a new spell, chosen from the list of spells in the Spells section. You must have at least a basic attunement to all of the elements in the tags listed below each spell in order to learn that spell.
+## Learning Spells
 
-## Casting Spells
+Learning a spell represents mastery over some aspect of your connection with an element, allowing you to perform fantastical feats beyond simple elemental manipulation.
 
-- Casting a spell is more difficult than simple elemental manipulation performed with just an attunement, as it requires more precise control for a longer duration. Performing a powerful act of elemental control while in the thick of a fight takes skill and practice, and comes with the following restrictions:
-- Casting a spell requires your action.
-- You may cast only one spell per round.
-- Casting a spell requires at least one free hand.
-- If casting a spell, you cannot have moved more than half your movement speed (after accounting for armor and other penalties), rounded up.
-- After casting the spell, you cannot move more than half your movement speed (after accounting for armor and other penalties).
-- Casting spells is strenuous, and takes a toll on your body, and without proper preparation, can wreak havoc on your ability to channel your attunement in that way again for a while. You must wait four long rests before casting that spell again, though that time may vary as per the following rules:
-  - Subtract one long rest for each consecutive round taken before this action spent unmoving, taking no actions and using no abilities, and not communicating (in complete, meditative concentration).
-  - Subtract one long rest if you have an advanced attunement with the elemental type of the spell you are casting.
-  - Subtract two long rests if you instead have a paragon attunement with the elemental type of the spell you are casting.
-- If the total number of long rests would be reduced to zero, you must still wait at least one short rest before casting the spell again.
+**Prerequisites:**
 
-## Spellcasting Ability
+- Basic attunement to every element listed in the spell's tags
+- Sufficient XP (see Character Advancement section)
 
-- Whenever a creature has to make a saving throw against your spellcasting ability, it must make a check against the maximum of your current heart die, plus two times your paragon level.
+**Experience Cost:**
+
+- Standard characters: 6 + 2X XP (where X = spells already known)
+- Spelltouched characters: X XP (reduced cost due to specialized training)
+
+**Spell Limits:** No maximum number of spells known
+
+## Casting Requirements
+
+Every spell casting must meet these fundamental requirements:
+
+### Basic Casting Checklist
+
+□ **Action available** (uses your action, or minor ability if Spelltouched Warcaster)  
+□ **One spell per round** (unless Spelltouched with sufficient rush points)  
+□ **At least one free hand** (to channel elemental forces)  
+□ **Required attunements** (basic minimum for all elements in spell tags)  
+□ **Movement restrictions observed** (see table below)  
+□ **Spell off cooldown** (see Cooldown System)
+
+### Movement and Spellcasting
+
+| Restriction               | Rule                                                       | Applies to  |
+| ------------------------- | ---------------------------------------------------------- | ----------- |
+| **Pre-casting movement**  | Cannot cast if you moved >½ speed this round               | All casters |
+| **Post-casting movement** | Cannot move >½ speed after casting                         | All casters |
+| **Reason**                | Physical exertion and magical strain disrupt concentration | All casters |
+
+_Movement speed calculated after armor penalties and other modifiers_
+
+## Cooldown System
+
+Casting spells places tremendous strain on your connection to elemental forces. Each spell has its own individual cooldown timer.
+
+### Base Cooldown: 4 Long Rests
+
+| Modifier                            | Effect                      | Notes                              |
+| ----------------------------------- | --------------------------- | ---------------------------------- |
+| **Meditative Preparation**          | -1 long rest per prep round | Max 3 rounds reduction             |
+| **Advanced Attunement**             | -1 long rest                | Must match spell's primary element |
+| **Paragon Attunement**              | -2 long rests               | Must match spell's primary element |
+| **Rush Points** (Spelltouched only) | -1 long rest per rush point | Spent when casting                 |
+| **Minimum Wait**                    | 1 short rest                | Even if reduced to 0 long rests    |
+
+**Meditative Preparation Round:** Spend entire previous round stationary, taking no actions, using no abilities, maintaining complete silence in focused concentration.
+
+### Cooldown Examples
+
+**Standard Fire Mage casting Fire Bolt:**
+
+- Base: 4 long rests
+- With paragon fire attunement: 4 - 2 = **2 long rests**
+- With paragon fire + 2 prep rounds: 4 - 2 - 2 = **0 long rests** → 1 short rest minimum
+
+**Spelltouched Warcaster casting Fire Bolt:**
+
+- Base: 4 long rests
+- With advanced fire attunement + 3 rush points: 4 - 1 - 3 = **0 long rests** → 1 short rest minimum
+- Can cast multiple times per combat if rush points available
+
+## Standard vs. Spelltouched Casting
+
+| Aspect                 | Standard Caster            | Spelltouched (Warcaster)               |
+| ---------------------- | -------------------------- | -------------------------------------- |
+| **Action Economy**     | Uses your action           | Uses minor ability (1+ rush points)    |
+| **Spells per Round**   | One maximum                | Multiple possible with rush points     |
+| **Combat Integration** | Cannot attack same round   | Can cast + attack same round           |
+| **Cooldown Reduction** | Prep rounds + attunement   | Prep rounds + attunement + rush points |
+| **Free Spells**        | None                       | 3 spells matching your attunements     |
+| **Movement Limits**    | ½ speed restrictions apply | ½ speed restrictions apply             |
+
+## Spell Types and Effects
+
+**Spell Tags:**
+
+- **Element tags** (Fire, Earth, etc.): Required attunements
+- **Immediate**: Effect happens once when cast, then ends
+- **Ongoing**: Lasts up to 1 minute or until you end it (instant ability)
+- **Instant**: Can be cast at any time, even interrupting other actions
+
+**Spell Saves:** When creatures resist your spells, they roll against your spellcasting Challenge Number.
+
+**Spellcasting CN = Maximum of your heart die + (2 × paragon level)**
+
+_Example: d8 heart die + paragon level 2 = CN 12_
+
+---
+
+The spells that follow represent the fundamental magical techniques available to those who have mastered elemental attunements. Each spell description includes its elemental requirements, duration type, and complete mechanical effects.
 
 ## Spells
 
