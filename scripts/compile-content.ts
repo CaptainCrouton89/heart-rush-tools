@@ -210,6 +210,9 @@ function splitContent(
         content: sectionContent,
         level: currentMatch.level,
       });
+    } else {
+      // Warn about sections with no content that will be excluded
+      console.warn(`⚠️  Section excluded from navigation (no content): "${currentMatch.title}" (H${currentMatch.level})`);
     }
   }
 
@@ -270,6 +273,7 @@ async function compileContent(): Promise<void> {
 
       // Keep track of sections from current file for proper parent relationships
       const fileSections: ContentSection[] = [];
+      
       
       // Process each section
       for (let i = 0; i < sections.length; i++) {

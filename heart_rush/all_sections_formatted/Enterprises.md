@@ -79,6 +79,8 @@ Assets are freeform descriptors that help the GM set difficulty:
 
 ## Growing Your Enterprise
 
+Enterprises evolve over time through their successes and failures, gaining new capabilities while sometimes losing others.
+
 ### Gaining Assets
 
 Successful actions can result in new assets:
