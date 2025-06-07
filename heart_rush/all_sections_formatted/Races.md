@@ -1,4 +1,4 @@
-# Alaria Races Guide
+# Kin & Culture
 
 ## Human
 
