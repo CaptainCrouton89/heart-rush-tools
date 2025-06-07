@@ -227,8 +227,6 @@ Creatures range from minuscule to colossal, with significant mechanical differen
 
 #### Size Combat Effects
 
-#### Size Combat Effects
-
 **Movement Through Spaces:**
 One creature can occupy and move through the space of another creature if it is at least two sizes smaller. Those creatures count as difficult terrain. While in the same space as a non-hostile creature, you also have one level of cover.
 
