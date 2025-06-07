@@ -10,22 +10,82 @@ There are three different classes—stronghearts, battlehearts, and cleverhearts
 
 When you reach rank 1, choose one of the classes and gain the abilities listed with the Rank 1 tag. Then, upon reaching rank 2, choose one of the subclasses your class offers. Each subclass specializes its own unique play style. For example, a striker specializes in single targets, while a ravager specializes in dishing out lots of damage to everybody.
 
-## Classes and Subclasses
+## Class & Subclass Overview
 
-| Class        | Subclasses                                |
-| ------------ | ----------------------------------------- |
-| Strongheart  | Bastion, Vicehand, Wrathguard             |
-| Battleheart  | Striker, Ravager                          |
-| Cleverheart  | Battlemind, Skirmisher                    |
-| Spelltouched | (can be used as a subclass for any class) |
+This section provides a comprehensive overview of all classes and subclasses to help you choose the right combat role for your character. Each class fills a distinct role in tactical combat, with subclasses offering specialized approaches within that role.
 
-## Party Composition
+## Classes by Role
+
+| Class           | Role            | Core Philosophy                                                                   | Rank 1 Abilities                    |
+| --------------- | --------------- | --------------------------------------------------------------------------------- | ----------------------------------- |
+| **Strongheart** | Tank/Defender   | Absorb punishment while protecting allies; gain power from taking damage          | In the Thick of It, Cry of Defiance |
+| **Battleheart** | Damage Dealer   | Deal massive damage through precision and brutality; excel at eliminating threats | Brutal Attacks, Making it Count     |
+| **Cleverheart** | Support/Utility | Control the battlefield through tactics and positioning; enable allies to excel   | Above the Fray, Tactics             |
+
+## Subclass Specializations
+
+### Strongheart: Masters of Endurance
+
+Stronghearts thrive in the center of battle, using their resilience to protect allies and punish enemies who focus on them.
+
+| Subclass       | Combat Style        | Signature Ability                                                 | Rank 4 Capstone                                                      |
+| -------------- | ------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Bastion**    | Living Shield       | Guardian's Sacrifice - Step in to absorb attacks meant for allies | Eternal Fortitude - Stockpile rush points as persistent defense dice |
+| **Vicehand**   | Wrestling Dominator | Enhanced Grappling - Superior restraint and unarmed combat        | Cinch Down - Permanent chokehold with escalating effects             |
+| **Wrathguard** | Aggressive Defender | Sentinel - Unlimited opportunity attacks that don't cost actions  | Battle Spirited - Transform wounds into devastating combat bonuses   |
+
+### Battleheart: Masters of Destruction
+
+Battlehearts excel at eliminating enemies quickly and efficiently, whether through focused strikes or sweeping attacks.
+
+| Subclass    | Combat Style       | Signature Ability                                                      | Rank 4 Capstone                                                               |
+| ----------- | ------------------ | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **Striker** | Precision Assassin | Called Shot - Risk accuracy for potentially massive damage multipliers | Devastation Strike - Use all minor abilities for free in one devastating turn |
+| **Ravager** | Horde Destroyer    | Everywhere at Once - Attack multiple enemies in single engagements     | Blitz - Unlimited opportunity attacks with free movement                      |
+
+### Cleverheart: Masters of Tactics
+
+Cleverhearts shape the flow of battle through superior positioning, battlefield awareness, and supporting their allies.
+
+| Subclass       | Combat Style         | Signature Ability                                                      | Rank 4 Capstone                                                      |
+| -------------- | -------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Battlemind** | Field Commander      | Commander's Call - Temporarily grant combat talents to multiple allies | Rallying Cry - Mass battlefield buffs scaling with rush points spent |
+| **Skirmisher** | Disruptive Trickster | Improved Interference - Enhanced debuffing with positioning tricks     | Nasty Tricksies - Inflict permanent status effects on enemies        |
+
+### Universal Option: Spelltouched
+
+**Replaces any subclass** - Blend elemental magic with martial combat. Gain elemental transformation states and the ability to enhance weapons with magical effects. Can be combined with any base class for magical warriors, spellswords, or battle mages.
+
+## Party Composition Guide
 
 Heart Rush is a game where every role in the party will play a critical role in a team fight. Each class enables or takes advantage of the synergistic abilities of other classes, so a party where there is at least one of each class will almost always perform better than a party that's missing one of the core classes.
 
 Obviously, don't feel like you have to choose a class because the rest of your party wants to choose the other classes—it's just something to keep in mind.
 
-Within each subclass, there are three different types of abilities: rank 2, rank 3, and rank 4 abilities. Upon reaching each rank, gain the corresponding abilities from your subclass.
+**Core Party Roles:**
+
+- **Tank** (Strongheart): Absorbs damage and controls enemy positioning
+- **Damage** (Battleheart): Eliminates priority threats quickly
+- **Support** (Cleverheart): Enhances allies and disrupts enemies
+
+**Quick Selection Guide:**
+
+- **Protect the party?** → Strongheart Bastion
+- **Control individual enemies?** → Strongheart Vicehand
+- **Aggressive frontline fighter?** → Strongheart Wrathguard
+- **Eliminate single targets?** → Battleheart Striker
+- **Handle multiple enemies?** → Battleheart Ravager
+- **Lead and coordinate?** → Cleverheart Battlemind
+- **Disrupt and outmaneuver?** → Cleverheart Skirmisher
+- **Combine magic and combat?** → Any class + Spelltouched
+
+## Advancement Timeline
+
+- **Rank 1:** Choose your class and gain two foundational abilities
+- **Rank 2:** Choose your subclass specialization and gain 2-3 new abilities
+- **Rank 3:** Unlock additional subclass abilities that define your combat style
+- **Rank 4:** Master your subclass with powerful capstone abilities
+- **Rank 5+:** Transcend normal limits with paragon abilities (one per rank beyond 4)
 
 ## Strongheart
 

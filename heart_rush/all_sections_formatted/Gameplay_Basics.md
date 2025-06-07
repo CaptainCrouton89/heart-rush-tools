@@ -178,13 +178,41 @@ Priority is described in detail in the Combat section.
 
 However, the instant tag is an exception to that rule.
 
-Abilities that don't have the instant tag are referred to as “priority abilities”.
+Abilities that don't have the instant tag are referred to as "priority abilities".
 
 - Instant: If an ability is marked as instant, it means that the ability can be used literally any time, even when you don't have priority.
 
-While another creature is using an ability, or while you roll dice for an attack—literally any time, so long as the ability doesn't have any further explicit instructions on when it can be used.
+[[Understanding Instant Timing
+Instant abilities can be used at literally any moment during the game, even interrupting other actions as they're happening. This creates a true "interrupt system" where you can react to new information as it unfolds.
 
-If multiple creatures want to use an instant ability, whoever declared their use last goes first.
+**Any time means any time:**
+
+- While someone else is taking their action
+- After seeing the result of a dice roll (yours or someone else's)
+- In response to movement, damage, or any game event
+- Even after seeing the consequences of an action
+
+**Common examples:**
+
+- See your attack roll result → boost damage with an instant ability
+- Get hit by an attack → instantly use a defensive ability to reduce damage
+- Watch an enemy move out of range → react with an instant repositioning ability
+- Opponent reveals their stance choice → respond with an instant counter-ability
+
+**During Engagements:**
+Instant abilities can interrupt at any point during the engagement sequence:
+
+- After stances are revealed but before attacks
+- Between different stance attack resolutions (cunning → agility → might)
+- After seeing an attack roll but before damage
+- After taking damage but before the engagement ends
+
+**Multiple Instant Abilities:**
+When multiple people want to use instant abilities simultaneously, resolve them in "last-in, first-out" order:
+
+- The person who declared their instant ability **last** resolves it **first**
+- Then work backwards through who declared when
+- This continues until all instant abilities are resolved]]
 
 You must declare the way in which you are using your ability when you announce that you are using an ability.
 
