@@ -70,7 +70,7 @@ function ChildSection({ child, level }: ChildSectionProps) {
         {/* Show nested children when expanded */}
         <div 
           className={`transition-all duration-500 ease-in-out overflow-hidden ${
-            isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+            isExpanded ? 'max-h-[50000px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
           <div className="py-2 border-t border-border/20">
