@@ -611,8 +611,7 @@ Minor ability. Rank 3.
 
 - When you gain this ability, choose three spells from the spell list that match your attunement(s).
 - You know these spells. They do not count towards the total number of spells you know.
-- You may use this minor ability to cast any of your spells without using your action.
-- You can spend additional rush points to reduce the long rest wait before casting the spell again by one for every rush point spent. You must still wait a minimum of a short rest.
+- You may use this minor ability to cast any of your spells without using your action. If the spell has the instant tag, that means you may cast the spell at any time.d
 
 #### Elemental Attacks
 

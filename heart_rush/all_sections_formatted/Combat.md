@@ -1,26 +1,30 @@
 # Combat
 
-Combat occurs in rounds, broken up by abilities and engagements. Engagements are short scenes of combat between participants, and are used to abstract the actions of multiple combatants all trying to attack each other. During each round, everyone will have the chance to use whatever abilities they can and take actions, with sides alternating until no one wants to do anything more.
+Combat occurs in rounds, broken up by abilities and engagements. Engagements are short scenes of combat between participants, and are used to abstract the actions of multiple combatants all trying to attack each other. During each round, everyone will have the chance to use whatever abilities they can and take actions, in initiative order.
 
 ## Starting Combat
 
-When combat begins, determine which side acts first. If one side wasn't expecting to get attacked, the other side goes first. If both sides saw combat coming, the players should roll 1d6 to determine which side gets to act first, with a 4 or higher resulting in the players going first. The starting side will begin each subsequent round first.
+When combat begins, all participants roll for initiative to determine the order in which they act.
+
+### Rolling Initiative
+
+Each participant in combat rolls 1d20 + their Agility modifier to determine initiative order. Act in descending order from highest to lowest initiative result. In case of ties, player characters act before NPCs, and among tied participants of the same type, they can choose their order.
 
 ### Engagements are important
 
 Engagements are the core of Heart Rush combat, and they might take a bit of time to wrap your head around. There's a whole section (Engaging the Enemy) on it, but the idea is that you're entering a chaotic melee where anyone could get hurt, including yourself.
 
-## Alternating Actions
+## Initiative Order
 
-Combat flows with sides taking turns:
+Combat flows in initiative order:
 
-1. The active side chooses any character on their side to take an action or use an ability
-2. The turn passes to the other side, who chooses any character on their side to act
-3. This continues, alternating between sides
-4. If a side has nothing they want to do, they pass their turn
-5. The round ends when both sides pass consecutively
+1. Each participant acts on their turn in initiative order
+2. On your turn, you can take one action and take the dash action once for free.
+3. After everyone has acted, a new round begins with the same initiative order
+4. Initiative order remains the same throughout the entire combat
+5. If you choose not to act on your turn, you can delay your action to later in the round
 
-Note that abilities with the instant tag do not require a turn, can be used at any time, and do not cause the turn to pass to the other side.
+Note that abilities with the instant tag do not require a turn, and can be used at any time, even during someone else's turn.
 
 ## During Combat
 
@@ -42,6 +46,10 @@ Rules for engagement are complicated, and are described in detail in the Engagin
 #### Cast a Spell
 
 Full action.  
+Cast a spell you know during your turn. This does not work during engagements - spells are separate from weapon combat. Spelltouched with the _Warcaster_ ability can cast spells as minor abilities instead, which still must take place on your turn, but does not require your action.
+
+Note: This action is for full spells only. Cantrips are used within engagements like weapons.
+
 See the Spellcasting section for details and restrictions on casting spells. You cannot cast a spell if you do not know any spells.
 
 #### Sidestep
@@ -261,7 +269,27 @@ Anyone can attack someone who takes the defense stance. Make contested rolls as 
 
 ### After the Engagement
 
-After the engagement resolves, the turn passes to the side that was targeted when the engagement first started, and combat continues as usual.
+After the engagement resolves, combat continues with the next character in initiative order.
+
+## Spellcasting in Combat
+
+Magic operates on two different levels during combat, each with distinct rules and tactical applications.
+
+### Magic in Combat
+
+- **Spells**: Use the Cast a Spell action during your turn (outside engagements). Strategic magic like _Wall of Fire_, _Fireball_, or _Telekinesis_ that reshapes the battlefield. Cannot be used during engagements unless you have special abilities.
+- **Cantrips**: Replace weapon attacks within engagements. Choose cantrip OR weapon attack, not both. Follow normal stance rules for targeting and resolution.
+- **Instant Spells**: Can interrupt at any time, including during other creatures' turns, though they still require your action (unless you use _Warcaster_).
+- **Spelltouched + Warcaster**: Can cast spells without using action.
+
+### Combat Flow Example
+
+1. **Your turn**: Cast _Wall of Stone_ to control the battlefield using Cast a Spell action
+2. **Enemy turn**: They engage you with melee weapons
+3. **In engagement**: You attack with Lightning Bolt cantrip instead of your sword
+4. **Mid-engagement**: If you're Spelltouched with Warcaster, and you hadn't cast a spell yet, you could cast _Temporal Hiccup_ to disrupt enemy dice rolls, since the spell is instant
+
+This system separates strategic spellcasting (reshaping combat) from tactical magical attacks (replacing weapon strikes), with Spelltouched characters able to blend both seamlessly.
 
 ## Taking Damage
 

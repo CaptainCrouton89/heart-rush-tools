@@ -163,7 +163,7 @@ Your wizard tower is a place of arcane study and magical power, designed to enha
 
 **Level 2:** Functions as a level 2 magical workshop. You regain one additional spell use per long rest while resting in your tower.
 
-**Level 3:** All spells cast within your tower have their cooldown reduced by one long rest. You have advantage on checks to research new spells.
+**Level 3:** You have advantage on checks to research new spells.
 
 **Level 4:** Functions as a level 3 magical workshop. You may store up to 3 spell effects in your tower to be triggered later.
 
@@ -173,7 +173,7 @@ Your wizard tower is a place of arcane study and magical power, designed to enha
 
 **Level 7:** All elemental attunements function as one level higher while within your tower. Income increases to 10%.
 
-**Level 8:** Your tower becomes a nexus of magical power. You may cast any spell you know once per day without cooldown restrictions.
+**Level 8:** ...
 
 ### Workshop
 

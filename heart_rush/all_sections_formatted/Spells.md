@@ -24,12 +24,13 @@ Every spell casting must meet these fundamental requirements:
 
 ### Basic Casting Checklist
 
-□ **Action available** (uses your action, or minor ability if Spelltouched Warcaster)  
-□ **One spell per round** (unless Spelltouched with sufficient rush points)  
+□ **Action available** (uses your action if not Spelltouched Warcaster)
+□ **Your turn** (unless the spell is instant)
+□ **One spell per round** (requires intense focus)
 □ **At least one free hand** (to channel elemental forces)  
 □ **Required attunements** (basic minimum for all elements in spell tags)  
 □ **Movement restrictions observed** (see table below)  
-□ **Spell off cooldown** (see Cooldown System)
+□ **Spell off cooldown** (you can't cast the same spell multiple times per combat)
 
 ### Movement and Spellcasting
 
@@ -43,44 +44,17 @@ _Movement speed calculated after armor penalties and other modifiers_
 
 ## Cooldown System
 
-Casting spells places tremendous strain on your connection to elemental forces. Each spell has its own individual cooldown timer.
-
-### Base Cooldown: 4 Long Rests
-
-| Modifier                            | Effect                      | Notes                              |
-| ----------------------------------- | --------------------------- | ---------------------------------- |
-| **Meditative Preparation**          | -1 long rest per prep round | Max 3 rounds reduction             |
-| **Advanced Attunement**             | -1 long rest                | Must match spell's primary element |
-| **Paragon Attunement**              | -2 long rests               | Must match spell's primary element |
-| **Rush Points** (Spelltouched only) | -1 long rest per rush point | Spent when casting                 |
-| **Minimum Wait**                    | 1 short rest                | Even if reduced to 0 long rests    |
-
-**Meditative Preparation Round:** Spend entire previous round stationary, taking no actions, using no abilities, maintaining complete silence in focused concentration.
-
-### Cooldown Examples
-
-**Standard Fire Mage casting Fire Bolt:**
-
-- Base: 4 long rests
-- With paragon fire attunement: 4 - 2 = **2 long rests**
-- With paragon fire + 2 prep rounds: 4 - 2 - 2 = **0 long rests** → 1 short rest minimum
-
-**Spelltouched Warcaster casting Fire Bolt:**
-
-- Base: 4 long rests
-- With advanced fire attunement + 3 rush points: 4 - 1 - 3 = **0 long rests** → 1 short rest minimum
-- Can cast multiple times per combat if rush points available
+Casting spells places tremendous strain on your connection to elemental forces. Whenever you cast a spell, you cannot cast it again until you take a short rest.
 
 ## Standard vs. Spelltouched Casting
 
-| Aspect                 | Standard Caster            | Spelltouched (Warcaster)               |
-| ---------------------- | -------------------------- | -------------------------------------- |
-| **Action Economy**     | Uses your action           | Uses minor ability (1+ rush points)    |
-| **Spells per Round**   | One maximum                | Multiple possible with rush points     |
-| **Combat Integration** | Cannot attack same round   | Can cast + attack same round           |
-| **Cooldown Reduction** | Prep rounds + attunement   | Prep rounds + attunement + rush points |
-| **Free Spells**        | None                       | 3 spells matching your attunements     |
-| **Movement Limits**    | ½ speed restrictions apply | ½ speed restrictions apply             |
+| Aspect                 | Standard Caster            | Spelltouched (Warcaster)            |
+| ---------------------- | -------------------------- | ----------------------------------- |
+| **Action Economy**     | Uses your action           | Uses minor ability (1+ rush points) |
+| **Spells per Round**   | One maximum                | One maximum                         |
+| **Combat Integration** | Cannot attack same round   | Can cast + attack same round        |
+| **Free Spells**        | None                       | 3 spells matching your attunements  |
+| **Movement Limits**    | ½ speed restrictions apply | ½ speed restrictions apply          |
 
 ## Spell Types and Effects
 
@@ -88,7 +62,7 @@ Casting spells places tremendous strain on your connection to elemental forces. 
 
 - **Element tags** (Fire, Earth, etc.): Required attunements
 - **Immediate**: Effect happens once when cast, then ends
-- **Ongoing**: Lasts up to 1 minute or until you end it (instant ability)
+- **Ongoing**: Lasts up to 1 minute or until you end it
 - **Instant**: Can be cast at any time, even interrupting other actions
 
 **Spell Saves:** When creatures resist your spells, they roll against your spellcasting Challenge Number.
@@ -104,6 +78,8 @@ The spells that follow represent the fundamental magical techniques available to
 ## Spells
 
 Spells are listed by their name, along with two tags—their required attunements, and if they are ongoing or immediate. Most spells have only a single attunement as prerequisite for casting the spell, but some have two or more. If the spell is immediate, the spell effect occurs once when the spell is cast. If the spell is ongoing, the spell's effects continue for up to one minute, or when the spell caster chooses to end the spell as an instant ability.
+
+Also note, some spells are instant. These spells are useless to non-spelltouched classes, since spelltouched are the only ones able to cast spells
 
 ### Aura of Ignition
 
@@ -394,7 +370,7 @@ The creature you throw this object at must make an agility saving throw against 
 ### Temporal Hiccup
 
 Time. Instant.  
-With the clap of your hands, a flicker in the normal continuum of time ripples out from you. All creatures within 45 feet have DA3 on the next roll they make, or until the end of the round, whichever comes first.
+With the clap of your hands, a flicker in the normal continuum of time ripples out from you. All creatures of your choice within 45 feet have DA3 on the next roll they make, or until the end of the round, whichever comes first.
 
 ### Temporal Scramble
 
@@ -403,7 +379,7 @@ After everyone who wants to join the engagement has done so, but before stances 
 
 ### Thunder Blast
 
-Air.  
+Air. Immediate.
 You clap your hands, or snap your fingers, releasing a concussive blast of thunder, blowing creatures away from you. Creatures of your choice within 10 feet of you are blown back 10 feet directly away from you.
 
 ### Time Cube
