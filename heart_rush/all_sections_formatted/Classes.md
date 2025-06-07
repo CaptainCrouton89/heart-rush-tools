@@ -189,39 +189,23 @@ Minor ability. Instant. Rank 3.
 
 Minor ability. Instant. Rank 3.
 
-- Your blows are powerful enough to knock people off their feet.
-- When you deal damage to a creature with a heavy, melee weapon, choose one:
-  - Beat Down: The creature cannot take the sidestep action until the beginning of the next round. If the creature is no more than one size larger than you, it is knocked prone. Otherwise, it takes two levels of weakened.
-  - Smash: The creature is knocked 10 feet away from you.
+Your blows are powerful enough to knock people off their feet.
+
+When you deal damage to a creature with a heavy, melee weapon, choose one:
+
+- Beat Down: The creature cannot take the sidestep action until the beginning of the next round. If the creature is no more than one size larger than you, it is knocked prone. Otherwise, it takes two levels of weakened.
+- Smash: The creature is knocked 10 feet away from you.
 
 #### Battle Spirited
 
 Major ability. Instant. Rank 4.
 
-- Whenever an ally is attacked by an enemy, you op attack them.
-- Whenever in engagement where an enemy could have attacked you but did not.
-- Whenever enemy uses its action to start or enter engagement with anyone besides you.
-- Whenever an enemy attacks anyone other than you, attacks you make against that enemy.
+Your wounds and scars fuel your rage, transforming pain into power. When you use this ability, calculate X as the total ranks of all wounds currently affecting you divided by 10, rounded down. You may spend any number of rush points on this ability, Y.
 
-More attacks against more people: any enemy that attacks an ally gets op attacked.
+- Immediately gain X + Y hit points.
+- For the remainder of combat, add XdYs to all attack rolls you make, where Y is the nearest die size, rounded down.
 
-Spend HP? Rewarded for losing HP! Rewarded for enemy attacking someone other than you.
-
-Whenever you take a wound from an enemy's attack, bonus temporarily doubled?
-
-+X each turn from adjacent enemies to attack and defense where X is rush points spent.
-
-Your nearby allies are inspired with the same intensity as you are. You may spend any number of rush points, and set them aside.
-
-Whenever an adjacent creature is the target of an attack, you may.
-
-As you attune with the internal melody of combat, you and your allies become unstoppable. For each rush point spent on this ability, choose one of the following effects. The number of times you choose a given effect cannot be more than one more than the least-chosen effect.
-
-- You and all creatures of your choice within 10 feet of you gain the benefits of the chosen effects until the end of combat.
-- Gain 2X hit points at the start of each round.
-- +X to all defense rolls.
-- +X to all attack rolls.
-- Move speed +10X.
+This ability can only be used once per combat, and the bonuses are calculated only when the ability is used—they do not change if you gain or lose wounds during the fight.
 
 ## Battleheart
 

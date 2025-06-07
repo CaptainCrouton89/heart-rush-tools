@@ -49,6 +49,12 @@ _Heart ability. Instant. Subclass: Ravager, Striker, Wrathguard._
 
 When you deal damage with a heavy, melee, slashing weapons against a creature, if there is another creature also within melee reach, you may have that creature make a defense roll against whatever damage you dealt to the previous creature, and take the difference as damage. This continues so long as there is another creature you wish to hit within melee range, and there is damage left over.
 
+## Undying Fury
+
+_Passive ability. Subclass: Wrathguard._
+
+When you would be reduced to 0 or fewer hit points, you may immediately use your Battle Spirited ability for free (if available) before falling unconscious. If this brings you above 0 hit points, you remain conscious.
+
 ## Coordinated Efforts
 
 _Passive ability. Subclass: Battlemind._
