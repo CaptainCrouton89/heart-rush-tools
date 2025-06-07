@@ -1,363 +1,533 @@
-Advanced Character Creation
+# Advanced Character Creation
 
-WARNING: This section is still work in progress.
+**WARNING:** This section is still work in progress.
+
 For added depth to character creation and progression, there are several other steps to character creation. Everyone in the group should decide together if they would like to use these optional rules.
-Skills
+
+## Skills
+
 Skills represent talent in a specific area. When you create a character, you start with no skills. However, as you spend downtime practicing new things and overcoming difficult tasks, you begin to learn, slowly and automatically increasing your rank in the relevant skills.
+
 Like aspects, specializations are just a title and a rank that grants bonuses to related skill checks.
+
 When you create your character, you start with no skills.
+
 Gaining ranks in a skill happens via training and overcoming challenges during gameplay. To gain a rank in any skill, consult the following table.
 
-Specialization Ranks
-Rank Downtime Weeks Challenges Missions
-1 1 - -
-2 4 1 -
-3 9 2 1
-4 16 3 2
-5 25 4 3
-6 36 5 4
-7 49 6 5
+### Specialization Ranks
+
+| Rank | Downtime Weeks | Challenges | Missions |
+| ---- | -------------- | ---------- | -------- |
+| 1    | 1              | -          | -        |
+| 2    | 4              | 1          | -        |
+| 3    | 9              | 2          | 1        |
+| 4    | 16             | 3          | 2        |
+| 5    | 25             | 4          | 3        |
+| 6    | 36             | 5          | 4        |
+| 7    | 49             | 6          | 5        |
 
 The columns after the column for rank represent the requirements for gaining that rank in a skill.
-Downtime Weeks
+
+### Downtime Weeks
+
 In order to get the rank in a skill, you must spend at least that many weeks of downtime devoted to studying, training, and practicing that skill. Additional weeks do not count towards future ranks.
-Challenges
+
+### Challenges
+
 In addition to downtime spent practicing, you need to succeed at a certain number of challenges to achieve the next rank. A challenge is anything that meets the following criteria:
-It must be a skill check using your specialization.
-The CN for the roll is at least the maximum of your heart die + your rank in the skill.
-There are narrative stakes to failing the roll.
+
+- It must be a skill check using your specialization.
+- The CN for the roll is at least the maximum of your heart die + your rank in the skill.
+- There are narrative stakes to failing the roll.
+
 If all criteria are met, and the skill check is successful, you may mark down a challenge completed. Here are some examples of some skills and some corresponding challenges.
-Pickpocketing: Pickpocket a very wealthy merchant who's actively looking for pickpockets.
-Hunting: Shoot a rampaging bull in the streets before the it hurts someone.
-Chariot Racing: Beat a fellow chariot driver in a race.
+
+- **Pickpocketing:** Pickpocket a very wealthy merchant who's actively looking for pickpockets.
+- **Hunting:** Shoot a rampaging bull in the streets before the it hurts someone.
+- **Chariot Racing:** Beat a fellow chariot driver in a race.
+
 Completing extra challenges does not count towards future ranks.
-Missions
+
+### Missions
+
 Missions demonstrate an even greater mastery of a particular skill. Like challenges, there are certain criteria for a mission.
-It must represent deeper learning, mastery, or understanding of the skill, requiring its application multiple times, or a few times in critical circumstances. This should scale up as the rank in your skill increases.
-Success is uncertain, and cannot be automatically achieved with a single, high roll.
-There are narrative stakes to failing the roll.
+
+- It must represent deeper learning, mastery, or understanding of the skill, requiring its application multiple times, or a few times in critical circumstances. This should scale up as the rank in your skill increases.
+- Success is uncertain, and cannot be automatically achieved with a single, high roll.
+- There are narrative stakes to failing the roll.
+
 If all criteria are met and you succeed at what you set out to do, you may mark down the mission completed. Here are some examples of some skills and some corresponding missions.
-Playing the Lute: Perform at a prestigious venue with positive audience reaction.
-Painting: Get a painting commissioned for nobility and impress them.
-Jousting: Win the jousting tournament
+
+- **Playing the Lute:** Perform at a prestigious venue with positive audience reaction.
+- **Painting:** Get a painting commissioned for nobility and impress them.
+- **Jousting:** Win the jousting tournament
+
 Completing extra missions does not count towards future ranks. However, one mission can satisfy the requirements for multiple skills so long as those skills clearly apply.
-Skill & Background Overlap
+
+### Skill & Background Overlap
+
 If you would like to start learning a skill that you would have picked up from your background, you may request to start your rank in that skill at the rank of the background. The GM has final say.
-Using a Skill
+
+### Using a Skill
+
 Whenever you make a skill check that would reasonably use a skill you have a rank in, you may add your rank in the skill to the roll. If you have a background that also applies, you must choose to either use the bonus from the background or the bonus from the skill.
+
 If a skill only "sort of" applies, you may apply half of your bonus, rounded down.
 
-Age
+## Age
+
 When you create your character, choose an age: young, adult, or elderly. Each age comes with distinct benefits and drawbacks.
-Young
+
+### Young
+
 If you are young, you get the following adjustments.
-You start with only two ranks worth of backgrounds, rather than four.
-You start with no influence.
-Add 20 to all of your sleeping checks.
-At the start of each round, you gain 1 hit point.
-Adult
+
+- You start with only two ranks worth of backgrounds, rather than four.
+- You start with no influence.
+- Add 20 to all of your sleeping checks.
+- At the start of each round, you gain 1 hit point.
+
+### Adult
+
 If you are an adult, you get the following adjustments.
-You start with four ranks worth of backgrounds.
-You start with influence 1.
-Choose a life path from the Life Path section.
-Elderly
+
+- You start with four ranks worth of backgrounds.
+- You start with influence 1.
+- Choose a life path from the Life Path section.
+
+### Elderly
+
 If you are elderly, you get the following adjustments.
-You start with six ranks worth of backgrounds, rather than four. No background can have more than 5 points in it.
-You start with influence 2.
-Choose a life path from the Life Path section.
-Your move speed is reduced by 30 feet.
-Your maximum hit points start at 30. It costs 1 additional XP to increase them.
-Life Path
+
+- You start with six ranks worth of backgrounds, rather than four. No background can have more than 5 points in it.
+- You start with influence 2.
+- Choose a life path from the Life Path section.
+- Your move speed is reduced by 30 feet.
+- Your maximum hit points start at 30. It costs 1 additional XP to increase them.
+
+## Life Path
+
 If you are an adult or elderly, you may choose a life path. Gain the benefits from the chosen life path.
-Animal Handler
-Examples: shepherd, stablehand, falconer, beekeeper, animal trainer.
 
-You start with 25 ducat.
-Charlatan
-Examples: con artist, trickster.
-You may upgrade your presence die by one after initially assigning your dice to your abilities.
-You start with 25 ducat.
-Combat
-Examples: mercenary, gladiator, soldier, guard, knight.
+### Animal Handler
 
-You start with 25 ducat.
-Crime and Espionage
-Examples: thief, smuggler, fence, spy, saboteur.
+**Examples:** shepherd, stablehand, falconer, beekeeper, animal trainer.
 
-You start with 25 ducat.
-Hunter
-Examples: ranger, hunter, forager, trapper, fisherman.
+- You start with 25 ducat.
 
-You start with 5 ducat.
-Inventing
-Examples: alchemist, engineer, architect, tinkerer.
+### Charlatan
 
-You start with 25 ducat.
-Manual Labor
-Examples: farmer, miner, lumberjack, dockworker, construction worker.
-Generic Skills: Athletics 2.
-You may upgrade your might die by one after initially assigning your dice to your abilities.
-You start with 25 ducat.
-Medicine
-Examples: doctor, healer, herbalist, apothecary.
-Generic Skills: Medical 1
-Specific Skill: Choose your specific area of medicine. You start at rank 3.
-You start with an advanced healing kit.
-You start with 100 ducat.
-Performer
-Examples: Actor, dancer, musician
-You may upgrade your presence die by one after initially assigning your dice to your abilities.
-You start with 25 ducat.
-Politician
-Examples: diplomat, mayor, noble, rebel leader, councilor.
-Increase your influence by 2.
-You start with 250 ducat.
-Religion
-Examples: priest, monk, nun, paladin, cultist, oracle.
+**Examples:** con artist, trickster.
 
-You start with 25 ducat.
-Scholarship
-Examples: scholar, historian, librarian, scribe, researcher.
-You may upgrade your cunning die by one after initially assigning your dice to your abilities.
-You start with 25 ducat.
-Scout
-Examples: explorer, treasure hunter, guide, cartographer, messenger, adventurer.
+- You may upgrade your presence die by one after initially assigning your dice to your abilities.
+- You start with 25 ducat.
 
-You start with 25 ducat.
-Service
-Examples: servant, teacher, innkeeper.
+### Combat
 
-You start with 25 ducat.
-Skilled Craft
-Examples: blacksmith, carpenter, jeweler, tailor, potter.
+**Examples:** mercenary, gladiator, soldier, guard, knight.
 
-You start with 100 ducat.
-Trade
-Examples: merchant, banker, shopkeeper, trader, financier.
-Generic Skills: Persuasion 2
-Specific Skill: Choose your specific area of trade. You start at rank 2.
-You start with 100 ducat.
-Miscellaneous
+- You start with 25 ducat.
+
+### Crime and Espionage
+
+**Examples:** thief, smuggler, fence, spy, saboteur.
+
+- You start with 25 ducat.
+
+### Hunter
+
+**Examples:** ranger, hunter, forager, trapper, fisherman.
+
+- You start with 5 ducat.
+
+### Inventing
+
+**Examples:** alchemist, engineer, architect, tinkerer.
+
+- You start with 25 ducat.
+
+### Manual Labor
+
+**Examples:** farmer, miner, lumberjack, dockworker, construction worker.
+
+- **Generic Skills:** Athletics 2.
+- You may upgrade your might die by one after initially assigning your dice to your abilities.
+- You start with 25 ducat.
+
+### Medicine
+
+**Examples:** doctor, healer, herbalist, apothecary.
+
+- **Generic Skills:** Medical 1
+- **Specific Skill:** Choose your specific area of medicine. You start at rank 3.
+- You start with an advanced healing kit.
+- You start with 100 ducat.
+
+### Performer
+
+**Examples:** Actor, dancer, musician
+
+- You may upgrade your presence die by one after initially assigning your dice to your abilities.
+- You start with 25 ducat.
+
+### Politician
+
+**Examples:** diplomat, mayor, noble, rebel leader, councilor.
+
+- Increase your influence by 2.
+- You start with 250 ducat.
+
+### Religion
+
+**Examples:** priest, monk, nun, paladin, cultist, oracle.
+
+- You start with 25 ducat.
+
+### Scholarship
+
+**Examples:** scholar, historian, librarian, scribe, researcher.
+
+- You may upgrade your cunning die by one after initially assigning your dice to your abilities.
+- You start with 25 ducat.
+
+### Scout
+
+**Examples:** explorer, treasure hunter, guide, cartographer, messenger, adventurer.
+
+- You start with 25 ducat.
+
+### Service
+
+**Examples:** servant, teacher, innkeeper.
+
+- You start with 25 ducat.
+
+### Skilled Craft
+
+**Examples:** blacksmith, carpenter, jeweler, tailor, potter.
+
+- You start with 100 ducat.
+
+### Trade
+
+**Examples:** merchant, banker, shopkeeper, trader, financier.
+
+- **Generic Skills:** Persuasion 2
+- **Specific Skill:** Choose your specific area of trade. You start at rank 2.
+- You start with 100 ducat.
+
+## Miscellaneous
+
 Give people starting stuff that makes them create their own goals and ideals. Sure, players want to level up their character, but give them a mechanical starting goal too.
-Family Connections
+
+### Family Connections
+
 You were born into a family with influence and importance.
-Treasured Possession
+
+### Treasured Possession
+
 You have a family heirloom, or by some means have come into possession of an important relic. Why is it important to you? Is it magical? Is there more potential to unlock? Why do you have it instead of someone else?
-Mentorship
+
+### Mentorship
+
 You had an important mentor for a significant portion of your life. Are they still around? Are they still alive? Why were they important? What was the biggest thing they taught you? Write that down as an aspect at rank 3.
-Noble Lineage
+
+### Noble Lineage
+
 You belong to a noble family. Increase your influence by 1. What is the history of your family? Do you uphold their values, or rebel against them? What responsibilities and expectations come with your lineage? How do others perceive your noble status?
-Big Reputation
+
+### Big Reputation
+
 Either by your own deeds, or through the family and role you were born into, you are already well known and have a following. Increase your influence by 1. What is the nature of your reputation? Are you famous for heroism, leadership, or perhaps infamy? How do you handle the attention and expectations that come with it? Who are your most loyal supporters, and do you have any rivals?
 
-1. Unforeseen Destiny  
+#### Story Hooks
+
+1. **Unforeseen Destiny**  
    You have discovered a prophecy or ancient text that ties your fate to a significant event or character. How did you find it? What does it say about your future? Are you trying to embrace or avoid this destiny? What challenges does this bring to your life?
 
-2. A Hidden Talent  
+2. **A Hidden Talent**  
    You possess a unique skill or talent that you've only recently begun to understand. What is it? How did you discover it? Have you learned to control it, or is it still a mystery to you? What potential does it hold for your future endeavors?
 
-3. An Unlikely Alliance  
+3. **An Unlikely Alliance**  
    You've formed a bond with an enemy or rival. What brought you together, and how has this alliance changed you? What challenges do you face in maintaining this relationship? How do others in your life react to this unexpected partnership?
 
-4. Forbidden Knowledge  
+4. **Forbidden Knowledge**  
    You've come into possession of knowledge or secrets that are considered taboo or dangerous. How did you acquire this information? What are the risks involved in knowing it? Are you willing to share it, or does it put you in danger of persecution?
 
-5. Lost Legacy  
+5. **Lost Legacy**  
    You are on a quest to recover something that was lost to your family or community. What is it that you seek, and why is it significant? What challenges or obstacles stand in the way of retrieving it? What will recovering this legacy mean to you?
 
-6. Shadowy Past  
+6. **Shadowy Past**  
    You have a past that you would rather not discuss. What events led you to hide this part of yourself? Are you trying to atone for it, or do you want to forget? How does this past impact your current relationships and choices?
 
-7. The Last of a Kind  
+7. **The Last of a Kind**  
    You are the last surviving member of a unique group, species, or order. What happened to your kind? Do you feel the weight of responsibility as the last representative? How do you honor their memory, and what legacy do you hope to leave behind?
 
-8. Unexpected Patronage  
+8. **Unexpected Patronage**  
    You have someone of significant power or influence supporting you, but for reasons that are unclear. Who is this person, and why have they taken an interest in you? What advantages do they provide, and what strings are attached to their support?
 
-9. Bound by Oath  
+9. **Bound by Oath**  
    You have made a solemn vow or oath that strongly influences your decisions and actions. What prompted you to make this vow? What are its implications for your life? How does this commitment shape your relationships and goals?
 
-10. Secret Identity  
+10. **Secret Identity**  
     You maintain a hidden identity or alter ego, either for protection or for a greater purpose. What do you hide from others, and why? How do you balance your two lives? What challenges arise when your two identities intersect?
-    Starting Gear
-    Money: Determined by occupation.
-    Gear: You may pick out any ultralight weapon, and you have no armor.
 
-If you start late, gain additional ducat equal to 10 times the amount of bonus XP you get.Paths
+### Starting Gear
+
+- **Money:** Determined by occupation.
+- **Gear:** You may pick out any ultralight weapon, and you have no armor.
+
+If you start late, gain additional ducat equal to 10 times the amount of bonus XP you get.
+
+## Paths
+
 Paths represent fundamental changes
+
 Costs 20% of total accumulated XP upfront, minimum. This must be at least 10XP (you must have 50+ xp total). Upgrades cost 12, 16, 20
-Vampire
-Tier 1
-At night, while in dim light, you regain 1 hit point at the beginning of every round. At night, while in darkness, you regain 3 hit points instead.
-You gain darkvision out to 10 feet.
-Your move speed increases by 10.
-You must drink humanoid blood once every week, or else decrease your heart die. This effect cannot decrease it below a d4. Drinking blood returns it to its previous value.
-Gain the aspect "Cannot resist the taste of blood" at rank 1. You cannot remove or decrease this aspect.
-Whenever you bite a humanoid in the neck, you heal up to the maximum of your heart die.
-Tier 2
-You darkvision out to 60 feet.
-Your move speed increases by 20.
-You do not need to, and cannot eat normal food and water
-You only need to drink blood once every month to maintain your abilities.
-Whenever you enter or end the round in contact with running fresh water, you take 5 damage.
-Increase the rank of your aspect to 3.
-You regain 2 hit points from dim light and 4 from darkness instead.
-Whenever you bite a humanoid in the neck, you heal up to the maximum of your heart die. They take 10 damage.
-Tier 3
-You gain darkvision out to 180 feet.
-Your move speed increases by 30
-You regain 3 hit points from dim light and 5 from darkness instead.
-When outdoors during daylight hours, treat your heart die as one lower than it is.
-You take half as much slashing and piercing damage from from non-silvered sources.
-You require an invitation to enter any enclosed shelter of humanoids.
-You only need to drink blood once every year to maintain your abilities.
-You can transform back and forth between yourself and a bat as an action.
-Whenever you enter or end the round in contact with running fresh water, you take 10 damage.
-Increase the rank of your aspect to 5
-If you bite someone, they may become a vampire.
-Tier 4
-You gain darkvision out to 1000 feet.
-Your move speed increases by 40
-You regain 4 hit points from dim light and 6 from darkness instead.
-Take 25 damage at whenever you enter or end the round in sunlight. You have one level of blinded when in bright light.
-You take no piercing or slashing damage from non-silvered sources.
-You are immune to disease.
-You only need to drink humanoid blood once every decade to maintain your abilities.
-Whenever you enter or end the round in contact with running fresh water, you take 15 damage.
-Increase the rank of your aspect to 10.
-You do not die of old age.
-If you bite someone, you may choose if they become a vampire.
-Lycanthrope
+
+### Vampire
+
+#### Tier 1
+
+- At night, while in dim light, you regain 1 hit point at the beginning of every round. At night, while in darkness, you regain 3 hit points instead.
+- You gain darkvision out to 10 feet.
+- Your move speed increases by 10.
+- You must drink humanoid blood once every week, or else decrease your heart die. This effect cannot decrease it below a d4. Drinking blood returns it to its previous value.
+- Gain the aspect "Cannot resist the taste of blood" at rank 1. You cannot remove or decrease this aspect.
+- Whenever you bite a humanoid in the neck, you heal up to the maximum of your heart die.
+
+#### Tier 2
+
+- You darkvision out to 60 feet.
+- Your move speed increases by 20.
+- You do not need to, and cannot eat normal food and water
+- You only need to drink blood once every month to maintain your abilities.
+- Whenever you enter or end the round in contact with running fresh water, you take 5 damage.
+- Increase the rank of your aspect to 3.
+- You regain 2 hit points from dim light and 4 from darkness instead.
+- Whenever you bite a humanoid in the neck, you heal up to the maximum of your heart die. They take 10 damage.
+
+#### Tier 3
+
+- You gain darkvision out to 180 feet.
+- Your move speed increases by 30
+- You regain 3 hit points from dim light and 5 from darkness instead.
+- When outdoors during daylight hours, treat your heart die as one lower than it is.
+- You take half as much slashing and piercing damage from from non-silvered sources.
+- You require an invitation to enter any enclosed shelter of humanoids.
+- You only need to drink blood once every year to maintain your abilities.
+- You can transform back and forth between yourself and a bat as an action.
+- Whenever you enter or end the round in contact with running fresh water, you take 10 damage.
+- Increase the rank of your aspect to 5
+- If you bite someone, they may become a vampire.
+
+#### Tier 4
+
+- You gain darkvision out to 1000 feet.
+- Your move speed increases by 40
+- You regain 4 hit points from dim light and 6 from darkness instead.
+- Take 25 damage at whenever you enter or end the round in sunlight. You have one level of blinded when in bright light.
+- You take no piercing or slashing damage from non-silvered sources.
+- You are immune to disease.
+- You only need to drink humanoid blood once every decade to maintain your abilities.
+- Whenever you enter or end the round in contact with running fresh water, you take 15 damage.
+- Increase the rank of your aspect to 10.
+- You do not die of old age.
+- If you bite someone, you may choose if they become a vampire.
+
+### Lycanthrope
+
 Choose single animal. You become that animal over time. Spread by bites, or by bloodline
 
-Upgrades
-Advantage on smell, sight, or hearing, +1
-Increase a move speed by 20 or gain a climb speed of 20.
-+1 to might
-+1 to agility
-Tier 1
-Can transform into form only once per month. Only gain benefits while transformed.
-Gain a total of three ranks in upgrades. No more than two can be from the same upgrade.
-Bloodthirsty, rank 1 aspect. Cannot remove or decrease.
-You automatically transform on full moon. Bloodthirsty increases to 3 for entire day.
-Tier 2
-Gain a total of five ranks in upgrades. No more than three can be from the same upgrade.
-Can transform once per week (end for free as an action).
-Bloodthirsty rank 3. Full moon or transformed becomes rank 5.
-Tier 3
-Can transform as major ability. Can return to normal form as action.
-Gain a total of seven ranks in upgrades. No more than three can be from the same upgrade.
-Bloodthirsty rank 5. Full moon or transformed becomes 10.
-Tier 4
-Can transform as action. Can return to normal as major ability.
-Gain a total ten ranks from 4 different types of upgrades.
-Aspect 10 bloodthirsty at all times. Do not gain DP when bloodthirsty while transformed.
-Syncopath
+#### Upgrades
+
+- Advantage on smell, sight, or hearing, +1
+- Increase a move speed by 20 or gain a climb speed of 20.
+- +1 to might
+- +1 to agility
+
+#### Tier 1
+
+- Can transform into form only once per month. Only gain benefits while transformed.
+- Gain a total of three ranks in upgrades. No more than two can be from the same upgrade.
+- Bloodthirsty, rank 1 aspect. Cannot remove or decrease.
+- You automatically transform on full moon. Bloodthirsty increases to 3 for entire day.
+
+#### Tier 2
+
+- Gain a total of five ranks in upgrades. No more than three can be from the same upgrade.
+- Can transform once per week (end for free as an action).
+- Bloodthirsty rank 3. Full moon or transformed becomes rank 5.
+
+#### Tier 3
+
+- Can transform as major ability. Can return to normal form as action.
+- Gain a total of seven ranks in upgrades. No more than three can be from the same upgrade.
+- Bloodthirsty rank 5. Full moon or transformed becomes 10.
+
+#### Tier 4
+
+- Can transform as action. Can return to normal as major ability.
+- Gain a total ten ranks from 4 different types of upgrades.
+- Aspect 10 bloodthirsty at all times. Do not gain DP when bloodthirsty while transformed.
+
+### Syncopath
+
 By weakening the connection between your mind and body, you can open yourself to the psionic winds that drift across the world. The psionic winds carry on them the thoughts and emotions of all sentient creatures, and can be listened to. However, weakening the link between mind and body comes with risks--as your mind flows freely with the ideas and feelings of others, your thoughts can be heavily influenced by those around you, and your sense of self becomes vulnerable. There is no "on or off" switch--as the boundary between mind and self weakens, there is no going back.
-Tier 1
-The range of your mental powers is 15 feet, extending through walls and across physical boundaries.
-You gain the ability to roughly sense the emotional state of the sentient creatures within range. The GM will tell you the emotions being felt of creatures within range, but not which emotions belongs to which creatures.
-Whenever someone thinks about you while within range, you immediately know what they are thinking about you, as well as what their overall opinion of you is.
-If half or more of the conscious creatures in range dislike, distrust, or are in some other way associate negative emotions with you, you gain the aspect "Self loathing" at rank 1. It can apply a penalty to any type of skill check you take.
-Tier 2
-The range of your mental powers increases to 45 feet.
-Whenever an ability allows you to sense the thoughts or emotional state of creatures around you, you can determine the direction from which those thoughts and emotions came from. When continually monitoring thoughts and emotions, you can only monitor one source at a time.
-You may choose something you can see, a sound you hear, or some other experience you've had in the last 5 seconds. You can hear the thoughts and emotions of all creatures in range that are about the subject you chose.
-When you are disliked, your rank in the "Self loathing" aspect is 2.
-If half or more of the conscious creatures in range have untreated wounds or are in severe pain, you gain a level of mental vulnerability.
-Tier 3
-The range of your mental powers increases to 90 feet.
-Whenever an ability allows you to sense the thoughts or emotional state of creatures around you, you can pinpoint the exact source of those thoughts and emotions.
-Choose a topic. You can can hear the thoughts and feel the emotions of all creatures in range that are about that topic.
-When you are disliked, your rank in the "Self loathing" aspect is 3.
-If half or more of the conscious creatures in range have a mental condition such as confused, charmed, enraged, or frightened, you also gain that mental condition, at the highest rank experienced by those effected.
-Tier 4
-The range of your mental powers increases to 300 feet.
-By focusing on a single person, you can hear all of their thoughts and emotions as they occur.
-When you are disliked, your rank in the "Self loathing" aspect is 4.
-If half or more of the conscious creatures in range want to do the same thing, such as laugh at a joke, fight back against a threat, or learn a new skill, you wish to do so as well. Treat this as a rank 4 aspect.
-WIP Paths
-Physiarch
+
+#### Tier 1
+
+- The range of your mental powers is 15 feet, extending through walls and across physical boundaries.
+- You gain the ability to roughly sense the emotional state of the sentient creatures within range. The GM will tell you the emotions being felt of creatures within range, but not which emotions belongs to which creatures.
+- Whenever someone thinks about you while within range, you immediately know what they are thinking about you, as well as what their overall opinion of you is.
+- If half or more of the conscious creatures in range dislike, distrust, or are in some other way associate negative emotions with you, you gain the aspect "Self loathing" at rank 1. It can apply a penalty to any type of skill check you take.
+
+#### Tier 2
+
+- The range of your mental powers increases to 45 feet.
+- Whenever an ability allows you to sense the thoughts or emotional state of creatures around you, you can determine the direction from which those thoughts and emotions came from. When continually monitoring thoughts and emotions, you can only monitor one source at a time.
+- You may choose something you can see, a sound you hear, or some other experience you've had in the last 5 seconds. You can hear the thoughts and emotions of all creatures in range that are about the subject you chose.
+- When you are disliked, your rank in the "Self loathing" aspect is 2.
+- If half or more of the conscious creatures in range have untreated wounds or are in severe pain, you gain a level of mental vulnerability.
+
+#### Tier 3
+
+- The range of your mental powers increases to 90 feet.
+- Whenever an ability allows you to sense the thoughts or emotional state of creatures around you, you can pinpoint the exact source of those thoughts and emotions.
+- Choose a topic. You can can hear the thoughts and feel the emotions of all creatures in range that are about that topic.
+- When you are disliked, your rank in the "Self loathing" aspect is 3.
+- If half or more of the conscious creatures in range have a mental condition such as confused, charmed, enraged, or frightened, you also gain that mental condition, at the highest rank experienced by those effected.
+
+#### Tier 4
+
+- The range of your mental powers increases to 300 feet.
+- By focusing on a single person, you can hear all of their thoughts and emotions as they occur.
+- When you are disliked, your rank in the "Self loathing" aspect is 4.
+- If half or more of the conscious creatures in range want to do the same thing, such as laugh at a joke, fight back against a threat, or learn a new skill, you wish to do so as well. Treat this as a rank 4 aspect.
+
+## WIP Paths
+
+### Physiarch
+
 Rather than letting your body regulate itself, you've learned to control it with fine precision with your own mind. This grants the ability to heal faster and enhance your strength and agility via your mental focus, but at the cost of energy expenditure and mental capacity.
-Tier 1
-You require twice as many rations each day.
-Whenever you make a skill check you may use your cunning die in the place of your might or agility die. If you roll higher than the maximum of the die you replaced, instead use the maximum of the replaced die.
-Increasing your might die, agility die, or maximum hit points costs two less XP.
-Whenever you take a long rest, you may choose to alter one superficial feature of your face or body to a different, healthy, and realistic state. For example, making your nose larger, your arms hairier, or your eyes a different color. Doing this ten times will make you unrecognizable compared to your original state. You cannot accurately replicate the appearance of anyone in particular using this ability.
-Tier 2
-You require three times as many rations each day.
-Your ability to use your cunning die instead of your might or agility die extends to A/D rolls.
-When you decrease a treated wound's rank from a long rest, decrease its rank by two instead of one.
-Whenever you take a long rest, you may choose to alter any number of superficial features of your face or body to a different, healthy, and realistic state.
-Tier 3
-You require four times as many rations each day.
-While charmed, frightened, confused, or enraged, you lose all benefits from this kit.
-When you decrease a treated wound's rank from a long rest, decrease its rank by three instead.
-Whenever you take a long rest, you may choose to alter your body's appearance. You can accurately replicate the appearance of anyone who shares your race.
-Tier 4
-You require five times as many rations each day.
-While dazed you lose all benefits from this kit.
-When you decrease a wound's rank from a long rest, decrease its rank by five instead.
-Whenever you take a long rest, you may choose to fundamentally alter your body. You can accurately replicate the appearance of anyone of any race. If that race has any racial abilities due to some physical trait, you gain those racial abilities. If your race had any abilities due to physical traits, you lose those abilities. The GM has final say on which abilities are gained and lost.
-Beastheart
+
+#### Tier 1
+
+- You require twice as many rations each day.
+- Whenever you make a skill check you may use your cunning die in the place of your might or agility die. If you roll higher than the maximum of the die you replaced, instead use the maximum of the replaced die.
+- Increasing your might die, agility die, or maximum hit points costs two less XP.
+- Whenever you take a long rest, you may choose to alter one superficial feature of your face or body to a different, healthy, and realistic state. For example, making your nose larger, your arms hairier, or your eyes a different color. Doing this ten times will make you unrecognizable compared to your original state. You cannot accurately replicate the appearance of anyone in particular using this ability.
+
+#### Tier 2
+
+- You require three times as many rations each day.
+- Your ability to use your cunning die instead of your might or agility die extends to A/D rolls.
+- When you decrease a treated wound's rank from a long rest, decrease its rank by two instead of one.
+- Whenever you take a long rest, you may choose to alter any number of superficial features of your face or body to a different, healthy, and realistic state.
+
+#### Tier 3
+
+- You require four times as many rations each day.
+- While charmed, frightened, confused, or enraged, you lose all benefits from this kit.
+- When you decrease a treated wound's rank from a long rest, decrease its rank by three instead.
+- Whenever you take a long rest, you may choose to alter your body's appearance. You can accurately replicate the appearance of anyone who shares your race.
+
+#### Tier 4
+
+- You require five times as many rations each day.
+- While dazed you lose all benefits from this kit.
+- When you decrease a wound's rank from a long rest, decrease its rank by five instead.
+- Whenever you take a long rest, you may choose to fundamentally alter your body. You can accurately replicate the appearance of anyone of any race. If that race has any racial abilities due to some physical trait, you gain those racial abilities. If your race had any abilities due to physical traits, you lose those abilities. The GM has final say on which abilities are gained and lost.
+
+### Beastheart
+
 Beasthearts have spent a considerable amount of time with a single animal and have formed a deep and powerful bond with that creature. You must have the Beast Companion talent in order to take this path.
 
-need to be close to animal at all times
-Animal suffering leads to their suffering
+- need to be close to animal at all times
+- Animal suffering leads to their suffering
 
-Benefits
-Can ride animal
-Soulmage
+**Benefits:**
+
+- Can ride animal
+
+### Soulmage
+
 Enhance the potency of their own soul. Destroy themselves for power.
 
 You must have at least three oaths in order to take this path.
-Tier 1
-Oaths reduce your max HP by only 3/5ths of their base costs.
-Disciple
+
+#### Tier 1
+
+- Oaths reduce your max HP by only 3/5ths of their base costs.
+
+### Disciple
+
 Aspects cranked up, helped by god
-Choose tenets of god. Free bonus to them.
-Have to follow god's wills (lose power if you disobey tenets?)
-Pay respects
-Choose more and more handmagic talents. You can access any of them, but they cost.
-Can pray for miracle for more complicated stuff. Pay any amount you want--gm decides what to give you. (gives feeling of out of control).
-How does your god demand payments?
-Blood
-Prayer
-new followers
-Varied deoric magic
-killing
-healing
-random shit
-Guidance
-Pray for a miracle
-It just happens
+
+- Choose tenets of god. Free bonus to them.
+- Have to follow god's wills (lose power if you disobey tenets?)
+- Pay respects
+- Choose more and more handmagic talents. You can access any of them, but they cost.
+- Can pray for miracle for more complicated stuff. Pay any amount you want--gm decides what to give you. (gives feeling of out of control).
+
+#### How does your god demand payments?
+
+- Blood
+- Prayer
+- new followers
+- Varied deoric magic
+- killing
+- healing
+- random shit
+
+#### Guidance
+
+- Pray for a miracle
+- It just happens
 
 Choose 3 aspects for god. You can spend up to 3 at tier 1, and up to 10 at tier 4. They can be combat related.
+
 Gain divine favor point each day. Max at 5 times your tier.
+
 Spend a minimum of 1 to communicate with your god in your dreams. 2 for images while youre conscious. 3 for a conversation with a vague entity. 5 for a proper conversation with a shard of your god. 10 to have its attention. 20 to have its full attention.
 
 When you become a disciple of your god, you may need to create your own god within the world if your GM has not restricted which gods exist.
+
 To begin, choose the tenets and beliefs of your god. List three aspects of your god but do not give them ranks.
+
 Your relationship with your god is represented by divine favor. As you gain more of it, you have more sway with your god. As spend it, you lose it.
-Tier 1
+
+#### Tier 1
+
 Each day you must spend 15 minutes dedicated to your god. Whatever this activity this is, be it prayer, meditation, making music, or anything else, it is necessary to curry favor with your god. It cannot be a task that directly benefits you--it must primarily be for and about your god. Each day you do this, you gain two points of divine favor. Each day you don't do this, you lose two points of divine favor. You can have a maximum of ten divine favor.
+
 When you spend time dedicated to your god, if you spend that time at a church, sacred shrine, or other, religiously significant location, gain twice as many points of divine favor for that day.
+
 Choose three handmagic talents. These are minor blessings that your god can grant you as their follower. You may spend one point of divine favor to have access to any one of these talents until the next dawn. Talents chosen must be approved by the GM to ensure they fit the thematic character of the god. Each additional talent you choose to access costs one additional point of divine favor.
+
 You may spend points of divine favor on a skill check in which one of your god's aspects applies as though the aspect was your own. You may spend up to two points of divine favor each time you do this.
+
 At any time, you may spend any number of points of divine favor to ask for a miracle. It is entirely up to the GM to decide what occurs.
+
 You may spend two points of divine favor to receive simple guidance from your god in your dreams.
-Tier 2
-• Gain or lose three points of divine favor each day instead. You have a maximum of twenty divine favor.
-Add one more handmagic talent to the possible blessings your god can grant you. Choose one of the talents--it is upgraded to destiny level. It does not cost anything extra to receive this talent as a blessing.
-You may spend up to four points of divine favor per aspect.
-You may spend four points of divine favor to communicate simple thoughts back and forth with a fragment of your god's conscious.
-Tier 3
-• Gain or lose four points of divine favor each day instead. You have a maximum of thirty divine favor.
-Add one more handmagic talent to the possible blessings your god can grant you. Choose one of the talents--it is upgraded to destiny level.
-You may spend up to six points of divine favor per aspect.
-You may spend six points of divine favor to communicate in complete sentences with a fragment of your god's conscious.
-Tier 4
-• Gain or lose five points of divine favor each day instead. You have a maximum of forty divine favor.
-Add one more handmagic talent to the possible blessings your god can grant you. Choose one of the talents--it is upgraded to destiny level.
-You may spend up to eight points of divine favor per aspect.
-You may spend twenty points of divine favor to garner the full attention of your god.
+
+#### Tier 2
+
+- Gain or lose three points of divine favor each day instead. You have a maximum of twenty divine favor.
+- Add one more handmagic talent to the possible blessings your god can grant you. Choose one of the talents--it is upgraded to destiny level. It does not cost anything extra to receive this talent as a blessing.
+- You may spend up to four points of divine favor per aspect.
+- You may spend four points of divine favor to communicate simple thoughts back and forth with a fragment of your god's conscious.
+
+#### Tier 3
+
+- Gain or lose four points of divine favor each day instead. You have a maximum of thirty divine favor.
+- Add one more handmagic talent to the possible blessings your god can grant you. Choose one of the talents--it is upgraded to destiny level.
+- You may spend up to six points of divine favor per aspect.
+- You may spend six points of divine favor to communicate in complete sentences with a fragment of your god's conscious.
+
+#### Tier 4
+
+- Gain or lose five points of divine favor each day instead. You have a maximum of forty divine favor.
+- Add one more handmagic talent to the possible blessings your god can grant you. Choose one of the talents--it is upgraded to destiny level.
+- You may spend up to eight points of divine favor per aspect.
+- You may spend twenty points of divine favor to garner the full attention of your god.
