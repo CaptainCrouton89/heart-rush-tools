@@ -8,113 +8,40 @@ Also in this section are the rules for cantrips. Cantrips are very similar to we
 Every weapon has a size, attack type, and damage type, which together describe the weapon and its properties. You may choose one weapon to be your primary weapon. This weapon does not use up equipment slots.  
 You can only wield one weapon at a time. If wielding a weapon does not require being held in your hands, it does not count towards this restriction.
 
-### Size
+### Weapon Properties
 
-The size of weapon refers to how big and powerful the weapon is. Three sizes exist: heavy, light, and ultralight or improvised. It is up to the GM to determine the size of any given weapon.
+| Size       | Attack Die | Hands  | Move Penalty | Slots\* | Examples                                             | Special Requirements                          |
+| ---------- | ---------- | ------ | ------------ | ------- | ---------------------------------------------------- | --------------------------------------------- |
+| Heavy      | 1d12       | Two    | -5 feet      | 10      | Longbows, long swords, pikes, mauls, heavy crossbows | Medium+ size creatures only, cannot be hidden |
+| Light      | 1d8        | One    | None         | 5       | Crossbows, shortswords, shortbows                    | None                                          |
+| Ultralight | 1d4        | One    | None         | 2       | Knives, shurikens, claws                             | None                                          |
+| Improvised | 1d4        | Varies | None         | Varies  | Chairs, teeth, rocks                                 | Count as ultralight unless noted              |
 
-#### Heavy Weapons
+\*Slots not used if weapon is your primary weapon or part of your body.
 
-Heavy weapons require two hands, can only be wielded by creatures of size medium or larger, and cannot be easily hidden upon your body.  
-Longbows, long swords, pikes, mauls, and heavy crossbows are examples of heavy weapons.  
-Whenever you use a heavy weapon, add 1d12 to your attack rolls.  
-Your move speed decreases by 5 feet if this weapon is not part of your body.  
-Heavy weapons use 10 gear slots unless they are your primary weapon or part of your body.
+### Attack Types & Range
 
-#### Light Weapons
+| Attack Type | Range                          | Hands Required                   | Movement Restrictions                                                                                 | Might Stance Bonus                                                                                     |
+| ----------- | ------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Melee**   | 5 feet                         | Heavy: Two<br />Light/Ultra: One | None                                                                                                  | Push target 10 feet away; enter their vacated spaces without provoking opportunity attacks             |
+| **Ranged**  | Light: 30 ft<br />Heavy: 60 ft | Two (unless noted)               | Cannot choose non-defensive stance if moved >½ speed; cannot move >½ speed after non-defensive stance | Target cannot add armor defense bonus                                                                  |
+| **Thrown**  | 20 feet                        | One                              | Cannot be used in water                                                                               | Make immediate follow-up attack with another thrown weapon against different target in same engagement |
+| **Whip**    | 20 feet                        | One                              | Cannot be used in water                                                                               | Add another weapon die to attack roll                                                                  |
 
-Light weapons are, as their name suggests, light, and are easy to handle.  
-Crossbows, shortswords, and shortbows are all examples of light weapons.  
-Whenever you use a light weapon, add 1d8 to your attack rolls.  
-Light weapons use 5 gear slots unless they are your primary weapon or part of your body.
+**Range Notes:**
 
-#### Ultralight Weapons
+- Attacking beyond listed range: Disadvantage for every 10 feet over (ranged) or 5 feet over (thrown), up to double weapon's range
+- **Reach tag:** If you haven't dashed this round, melee range becomes 10 feet instead of 5
 
-Ultralight weapons are small and easy to handle.  
-Knives, shurikens, and claws count as ultralight weapons.  
-Whenever you use an ultralight weapon, add 1d4 to your attack roll.  
-Ultralight weapons use 2 gear slots unless they are your primary weapon or are part of your body.
+### Damage Types & Stance Bonuses
 
-#### Improvised Weapons
+| Damage Type     | Best Stance | Stance Bonus                                        | Examples                |
+| --------------- | ----------- | --------------------------------------------------- | ----------------------- |
+| **Bludgeoning** | Might       | Add additional weapon die when using might stance   | War hammers, clubs      |
+| **Slashing**    | Agility     | Add additional weapon die when using agility stance | Swords, scythes         |
+| **Piercing**    | Cunning     | Add additional weapon die when using cunning stance | Rapiers, arrows, spears |
 
-Chairs, your teeth, and your falling body can all be weapons in the right context.  
-Improvised weapons count as ultralight weapons unless indicated otherwise.
-
-### Attack Type
-
-Two types of weapons exist: melee and ranged. Each come with different benefits.
-
-#### Melee
-
-Melee weapons are weapons that do not involve any part of the weapon leaving your hand.  
-They are generally more powerful than ranged weapons, due to the fact that they have a lot of weight attached to them.  
-Heavy melee weapons require two hands, and light and ultralight melee weapons require only one.  
-Melee weapons have a range of 5 feet.
-
-**Might Stance Bonus:** You may push the defending creature 10 feet away from you after everyone in the engagement has made their might attack roll.  
-You may enter any of the free spaces they left or passed through because of your attack. Moving into that space does not provoke opportunity attacks.
-
-#### Ranged
-
-Ranged weapons trade damage for being able to inflict injuries from a safer distance.  
-Light ranged weapons have a range of 30 ft, and heavy ranged weapons have a range of 60 ft.  
-You can attack targets outside of that range, but have disadvantage to the attack for every 10 feet beyond the range listed, to a maximum of double the weapon's range.
-
-Ranged weapons come with drawbacks, however.  
-All ranged weapons require two hands unless specifically noted otherwise, and you cannot choose anything but the defensive stance if you move more than half of your move speed (after accounting for armor and other penalties) during a round, and cannot move more than half your move speed (after accounting for armor and other penalties) if you already took a non-defensive stance in an engagement.
-
-**Might Stance Bonus:** Creatures defending against this attack cannot add their defense bonus from armor to their defense roll.
-
-#### Thrown
-
-Thrown weapons are a special category of weapons that combine elements of both melee and ranged combat.  
-They behave similarly to melee weapons in terms of handling but are used up as they are thrown.  
-Thrown weapons have a range of 20 feet.  
-You can attack targets outside of that range, but have disadvantage on the attack for every 5 feet beyond the range listed, to a maximum of double the weapon's range.
-
-Unless otherwise stated, only ultralight weapons can be thrown.  
-Weapons cannot be thrown in water.
-
-**Might Stance Bonus:** The first time you hit with a thrown weapon attack in an engagement, you may make an immediate follow-up attack with another thrown weapon against a different valid target in the engagement.
-
-#### Whip
-
-Whips have a range of 20 feet.  
-Unless otherwise stated, only ultralight weapons can be whips.  
-Whips cannot be used in water.
-
-**Might Stance Bonus:** Add another weapon die to your attack roll.
-
-### Damage Type
-
-Different weapons deal different types of damage, each excelling when used with specific combat stances. Understanding your weapon's damage type helps you choose the most effective stance in combat.
-
-#### Bludgeoning
-
-Bludgeoning weapons use raw force to inflict damage, and therefore are best used with high might.  
-Examples include war hammers and clubs.  
-Whenever you wield a bludgeoning weapon and use the might stance, add an additional weapon die to your roll.
-
-#### Slashing
-
-Slashing weapons use accuracy and dexterity to inflict damage, and therefore are best used with high agility.  
-Examples include swords and scythes.  
-Whenever you wield a slashing weapon and use the agility stance, add an additional weapon die to your roll.
-
-#### Piercing
-
-Piercing weapons use knowledge of your opponents' maneuvering to inflict damage, and therefore are best used with high cunning.  
-Examples include rapiers and weapons that use arrows.  
-Whenever you wield a piercing weapon and use the cunning stance, add an additional weapon die to your roll.
-
-## Other Weapon Tags
-
-Every weapon has a size, attack type, and damage type. However, weapons can also have tags, making them further distinct.
-
-### Reach
-
-Melee weapons can have this tag.  
-If you haven't dashed this round, the range of this weapon is 10 feet instead of 5.  
-If you attack a creature at this extended range, you cannot dash this round.
+Understanding your weapon's damage type helps you choose the most effective stance in combat.
 
 ## Cantrips
 
@@ -260,50 +187,31 @@ Once a creature has been stunned from a time effect, it is immune until 24 hours
 
 ## Armor
 
-Armor works by increasing your defense rolls, making it harder for damage to get through.  
-Armor, as with other clothing, does not require equipment slots while being worn.
+Armor works by increasing your defense rolls, making it harder for damage to get through. Armor does not require equipment slots while being worn.
 
-### Heavy Armor
+### Armor Properties
 
-Add 6 to your defense rolls.  
-Your move speed decreases by 15 feet.  
-Heavy armor uses 30 slots unless it is being worn.
+| Armor Type  | Defense Bonus | Move Speed Penalty | Slots\* |
+| ----------- | ------------- | ------------------ | ------- |
+| **Heavy**   | +6            | -15 feet           | 30      |
+| **Medium**  | +4            | -10 feet           | 10      |
+| **Light**   | +2            | -5 feet            | 5       |
+| **None**    | +0            | None               | 0       |
+| **Natural** | Variable      | None               | 0       |
 
-### Medium Armor
+\*Slots only used when not being worn.
 
-Add 4 to your defense rolls.  
-Your move speed decreases by 10 feet.  
-Medium armor uses 10 slots unless it is being worn.
-
-### Light Armor
-
-Add 2 to your defense rolls.  
-Your move speed decreases by 5 feet.  
-Light armor uses 5 slots unless it is being worn.
-
-### No Armor
-
-There is no bonus or penalty for having no armor.
-
-### Natural Armor
-
-Some creatures have natural armor.  
-Natural armor can provide any amount of bonus to one's defense rolls, and applies no movement speed penalty.  
-You cannot choose to have natural armor.
+**Natural Armor:** Some creatures have natural armor that provides any amount of defense bonus with no movement penalty. You cannot choose to have natural armor.
 
 ## Shields
 
-Like armor, shields help you stay alive.  
-You must have a free hand available to wield a shield (e.g., wielding a light melee weapon in the other hand).
+Like armor, shields help you stay alive. You must have a free hand available to wield a shield (e.g., wielding a light melee weapon in the other hand).
 
-### Heavy Shields
+### Shield Properties
 
-Add 2 to your defense rolls.  
-Your move speed decreases by 5 feet.  
-Additionally, other allies may treat your space as a wall for the purpose of talents and abilities that refer to adjacent walls.  
-Heavy shields require 10 gear slots when not being worn.
+| Shield Type | Defense Bonus | Move Speed Penalty | Slots\* | Special Properties                                          |
+| ----------- | ------------- | ------------------ | ------- | ----------------------------------------------------------- |
+| **Heavy**   | +2            | -5 feet            | 10      | Allies may treat your space as a wall for talents/abilities |
+| **Light**   | +1            | None               | 5       | None                                                        |
 
-### Light Shields
-
-Add 1 to your defense rolls.  
-Light shields require 5 gear slots when not being worn.
+\*Slots only used when not being worn.

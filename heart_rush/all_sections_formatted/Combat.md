@@ -148,25 +148,63 @@ Once everyone who wants to and is allowed to join the engagement has done so, ev
 
 Note that if the players wish to discuss which stance to choose among themselves, the GM should choose the stance for the enemies before the players decide for their characters, to prevent any accusations of cheating by reacting to the decisions made by the players.
 
-#### Cunning
+### Stance Reference Chart
+
+| Your Stance   | Beats   | Beaten By | Can Attack                      | Special Rules                                |
+| ------------- | ------- | --------- | ------------------------------- | -------------------------------------------- |
+| **Cunning**   | Agility | Might     | Agility, Defensive, Same Stance | Attacks first; Applies conditions vs Agility |
+| **Agility**   | Might   | Cunning   | Might, Defensive, Same Stance   | Free sidestep; Attacks second                |
+| **Might**     | Cunning | Agility   | Cunning, Defensive, Same Stance | Weapon might bonus; Attacks last             |
+| **Defensive** | None    | All       | None                            | Takes half damage after defense              |
+
+**Rock-Paper-Scissors**: Cunning → Agility → Might → Cunning  
+**Same Stance**: Make contested attack rolls instead of separate attack/defense  
+**Resolution Order**: Cunning → Agility → Might
+
+### Quick Examples
+
+- **Cunning vs Agility**: Cunning attacks first, applies conditions
+- **Agility vs Might**: Agility sidesteps and attacks
+- **Might vs Cunning**: Might gets weapon bonus damage
+- **Same Stance**: Both make contested attack rolls
+- **vs Defensive**: Attack normally, they take half damage
+
+#### Cunning Stance
+
+- **Beats**: Agility stance
+- **Attacks**: Anyone who didn't choose Might stance
+- **When**: First in resolution order
+- **Bonus vs Agility**: Apply up to two levels of dazed, off-balanced, or weakened
 
 Those who chose cunning are able to easily read and avoid the attacks of anyone who can't beat them with raw strength, and get to make an attack against a single creature in the engagement that didn't take the might stance. Creatures that chose the cunning stance make their attack rolls first, in any order.
 
-Cunning directly beats agility. Whenever you use this stance to attack a creature defending with the agility stance, you may apply up to two levels of dazed, off-balanced, or weakened to that creature.
+#### Agility Stance
 
-#### Agility
+- **Beats**: Might stance
+- **Attacks**: Anyone who didn't choose Cunning stance
+- **When**: Second in resolution order
+- **Special**: Free sidestep before or after attack
 
 Those who chose agility are able to maneuver their way past those who can't read their actions, and get to make an attack against a single creature in the engagement that didn't take the cunning stance. Creatures that chose the agility stance can make their attack rolls after all of the cunning stance attack rolls have been made.
 
 Also, if you choose this stance, you may take the sidestep action for free during the engagement, right before or after you make your attack. Creatures that choose to attack before moving get to attack before creatures that sidestep and then attack. If creatures on opposite sides of a fight get to move via the agility stance, both sides should alternate who moves, starting with whichever side was originally engaged with.
 
-#### Might
+#### Might Stance
+
+- **Beats**: Cunning stance
+- **Attacks**: Anyone who didn't choose Agility stance
+- **When**: Last in resolution order
+- **Bonus vs Cunning**: Trigger weapon's might stance bonus
 
 Those who chose might are able to crush those who are not agile enough to get out of the way, and get to make an attack against a single creature in the engagement that didn't take the agility stance. Creatures that chose the might stance make their attack rolls last.
 
-Combat additionally, whenever you attack a creature defending with the cunning stance, you trigger your weapon's might stance bonus. Check out the Weapons section to learn more.
+Additionally, whenever you attack a creature defending with the cunning stance, you trigger your weapon's might stance bonus. Check out the Weapons section to learn more.
 
-#### Defensive
+#### Defensive Stance
+
+- **Attacks**: No one
+- **Defense**: Halve damage after subtracting defense roll
+- **Target**: Can be attacked by any stance
 
 Anyone who chose the defensive stance does not get to attack, but will not take as much damage. After subtracting your defense from an attack, halve the remaining damage, rounding up.
 
