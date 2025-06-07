@@ -258,14 +258,12 @@ When you deal damage to a creature with a heavy, melee weapon, choose one:
 
 #### Battle Spirited
 
-Major ability. Instant. Rank 4.
+For each rush point spent on this ability, choose one of the following effects. The number of times you choose a given effect cannot be more than one more than the least-chosen effect. You and all creatures of your choice within 10 feet of you gain the benefits of the chosen effects until the end of combat. For each ability, replace X with the number of rush points spent on this ability.
 
-Your wounds and scars fuel your rage, transforming pain into power. When you use this ability, calculate X as the total ranks of all wounds currently affecting you divided by 10, rounded down. You may spend any number of rush points on this ability, Y.
-
-- Immediately gain X + Y hit points.
-- For the remainder of combat, add XdYs to all attack rolls you make, where Y is the nearest die size, rounded down.
-
-This ability can only be used once per combat, and the bonuses are calculated only when the ability is used—they do not change if you gain or lose wounds during the fight.
+- Gain 2X hit points at the start of your turn
+- +X to all defense rolls
+- +X to all attack rolls
+- Move speed +10X
 
 ## Battleheart
 
