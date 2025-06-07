@@ -160,6 +160,15 @@ There are six different ranks of combat power you can start at in Heart Rush. Wi
 
 At rank 1, players are barely more than commoners with a desire for excitement; at rank 4, players are incredible combatants, likely known throughout their community; and at rank 6 and beyond, players are at low heroic levels; with everything else falling somewhere in between.
 
+| Combat Rank | Abilities                         | Starting XP        |
+| ----------- | --------------------------------- | ------------------ |
+| 0           | None                              | 5                  |
+| 1           | Some class abilities              | 15                 |
+| 2           | Class and subclass abilities      | 30                 |
+| 3           | More subclass abilities           | 50                 |
+| 4           | Even more subclass abilities      | 80                 |
+| 5+          | A paragon ability per rank beyond | 120 + 40 per level |
+
 At each rank, you gain new abilities. If you are starting at a rank higher than rank 1, gain all the abilities from each previous rank, and start with XP equal to the corresponding value in the row.
 
 ## Combat Ranks, Classes, Subclasses, & Paragon Levels

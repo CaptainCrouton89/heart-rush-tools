@@ -412,18 +412,17 @@ Between sessions, or during sessions so long as you are not in combat, you may s
 
 Use the following chart to find the cost of your desired new feature.
 
-| Type                        | XP Cost                     | Effect                                                                      |
-| --------------------------- | --------------------------- | --------------------------------------------------------------------------- |
-| Leveling                    |                             |                                                                             |
-| New Aspect                  | 1                           | Add a new aspect at rank 1.                                                 |
-| Increase Aspect             | X+1                         | Where X is the aspect's current level. Increase the rank of an aspect by 1. |
-| Change Aspect               | 0                           | Replace the text of your aspect with different text.                        |
-| Increase Maximum Hit Points | X/10 + 1                    | Increase your maximum hit points by 10.                                     |
-| Increase Ability Die        | X                           | Increase an ability die by 1 size, to a maximum of a d12.                   |
-| New Combat Talent           | X+3                         | Gain a new combat talent. Some talents may have prerequisites.              |
-| New Noncombat Talent        | X+3                         | Gain a new non-combat talent. Some talents may have prerequisites.          |
-| Destiny Level               | X+5                         | Gain the destiny level of a talent you have.                                |
-| New Spell                   | 6+2X (or X if spelltouched) | Gain a new spell. You must have the corresponding elemental attunements.    |
+| Type                        | XP Cost                          | Effect                                                                                                                   |
+| --------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| New Aspect                  | 1                                | Add a new aspect at rank 1.                                                                                              |
+| Increase Aspect             | X+1                              | Where X is the aspect's current level. Increase the rank of an aspect by 1.                                              |
+| Change Aspect               | 0                                | Replace the text of your aspect with different text.                                                                     |
+| Increase Maximum Hit Points | X/10 + 1                         | Where X is your current maximum hit points. Increase your maximum hit points by 10.                                      |
+| Increase Ability Die        | X                                | Where X is the size of the new die. Increase an ability die by 1 size, to a maximum of a d12.                            |
+| New Combat Talent           | X+3                              | Where X is the number of combat talents you have. Gain a new combat talent. Some talents may have prerequisites.         |
+| New Noncombat Talent        | X+3                              | Where X is the number of non-combat talents you have. Gain a new non-combat talent. Some talents may have prerequisites. |
+| Destiny Level               | X+5                              | Where X is the number of destiny levels you have. Gain the destiny level of a talent you have.                           |
+| New Spell                   | 6+2X (or just X if spelltouched) | Where X is the number of spells you have. Gain a new spell. You must have the corresponding elemental attunements.       |
 
 ### Creating and Upgrading Aspects
 
