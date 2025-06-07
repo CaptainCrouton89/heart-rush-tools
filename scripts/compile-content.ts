@@ -186,8 +186,25 @@ function splitContent(
       }
     }
     
-    // Only add sections with meaningful content
-    if (sectionContent.length > 0) {
+    // For level 1 headers (main sections), always create the section even if no immediate content
+    // This ensures main category sections exist even when they only contain subsections
+    if (currentMatch.level === 1) {
+      // If no content, create a minimal section with the filename-based description
+      if (sectionContent.length === 0) {
+        const categoryName = filename
+          .replace(/\.md$/, "")
+          .replace(/_/g, " ")
+          .replace(/,/g, " &");
+        sectionContent = `This section contains information about ${categoryName.toLowerCase()}.`;
+      }
+      
+      sections.push({
+        title: currentMatch.title,
+        content: sectionContent,
+        level: currentMatch.level,
+      });
+    } else if (sectionContent.length > 0) {
+      // For non-level-1 sections, only add if they have meaningful content
       sections.push({
         title: currentMatch.title,
         content: sectionContent,
@@ -251,6 +268,9 @@ async function compileContent(): Promise<void> {
       // Split content into sections
       const sections = splitContent(content, filename);
 
+      // Keep track of sections from current file for proper parent relationships
+      const fileSections: ContentSection[] = [];
+      
       // Process each section
       for (let i = 0; i < sections.length; i++) {
         const section = sections[i];
@@ -270,19 +290,33 @@ async function compileContent(): Promise<void> {
           order: globalOrder++,
         };
 
-        // Set parent relationship for subsections
-        if (section.level > 1 && allSections.length > 0) {
-          // Find the most recent section with exactly one level lower
-          // This creates proper hierarchy: level 2 -> level 1, level 3 -> level 2, etc.
-          for (let j = allSections.length - 1; j >= 0; j--) {
-            const candidateParent = allSections[j];
-            if (candidateParent.level === section.level - 1) {
-              contentSection.parent = candidateParent.slug;
-              break;
+        // Set parent relationship for subsections - only look within current file
+        if (section.level > 1 && fileSections.length > 0) {
+          // Find the most recent section with a lower level within current file
+          // Prefer exactly one level lower, but fall back to any lower level if needed
+          let bestParent = null;
+          
+          for (let j = fileSections.length - 1; j >= 0; j--) {
+            const candidateParent = fileSections[j];
+            if (candidateParent.level < section.level) {
+              // Prefer exact level difference (level 2 -> level 1, level 3 -> level 2)
+              if (candidateParent.level === section.level - 1) {
+                bestParent = candidateParent;
+                break;
+              }
+              // But if no exact match, use any valid parent (level 3 -> level 1 if no level 2)
+              if (!bestParent) {
+                bestParent = candidateParent;
+              }
             }
+          }
+          
+          if (bestParent) {
+            contentSection.parent = bestParent.slug;
           }
         }
 
+        fileSections.push(contentSection);
         allSections.push(contentSection);
       }
     }
