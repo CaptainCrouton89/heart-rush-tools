@@ -50,13 +50,13 @@ If you roll two 1s as your first roll, you fail the check, and there is a compli
 
 **When gathering information:** You learn what you wanted, but someone notices you asking questions and becomes suspicious.
 
-**When treating wounds:** The treatment works, but you use up most of your medical supplies in the process.
+**When foraging for food:** You find enough food for the day, but you catch the attention of a large predator.
 
 **When sneaking:** You get past undetected, but you accidentally leave muddy footprints that could be followed.
 
 **When persuading:** They agree to help you, but they expect a favor in return that you hadn't planned on.
 
-**When casting a spell:** The magic works as intended, but the bright flash or loud noise draws unwanted attention.
+**When picking a lock:** You successfully open the lock, but your tools break in the process and can't be used again.
 
 ### Guidelines for GMs
 
