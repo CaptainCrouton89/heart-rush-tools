@@ -193,56 +193,62 @@ In most cases, magical crafting components come from creatures. Successfully har
 | Hooves             | Movement enhancements          | From creatures with magical movement speed                              |
 | Tears              | Most powerful magic            | Requires creature alive and crying; taboo but extremely potent          |
 
-## Example Items
+## Example Magical Items
 
-The following examples show various magical items that can be crafted at different levels, from basic utility items to powerful high-level equipment.
+The following examples show magical items designed for Heart Rush's unique combat system, where stance selection, rush points, wounds, and conditions are critical.
 
 ### Level 1 Examples
 
-**Everburning Torch** (Smithing): This simple but useful item provides bright light in a 30-foot radius indefinitely. It requires one level 1 fire component and takes 1 day of work with 1 successful check in a level 1 workshop.
+**Stance Reader's Amulet** (Smithing): Grants +1 to all attack rolls when you attack someone that your stance beats. Requires one level 1 psychic component. Takes 1 day of work with 1 successful check.
 
-**Minor Healing Potion** (Alchemy): These basic potions restore 10 hit points when consumed. They require one level 1 corporeal component and take about 5 hours of work (1/5 day) with 1 successful check in a level 1 laboratory. Each batch produces 10 doses.
+**Minor Wound Salve** (Alchemy): When applied during a long rest, reduces the rank of one wound by 2 (in addition to returning heart die to max). Requires one level 1 corporeal component. Produces 10 doses per batch.
 
-**Glowstone** (Smithing): A fist-sized stone that glows with soft light when touched, lasting 1 hour. Requires one level 1 light component, 1 day of work, 1 successful check.
+**Quickstep Boots** (Smithing): The first sidestep each round doesn't provoke opportunity attacks. Requires one level 1 aerial component. Takes 1 day of work.
 
 ### Level 2 Examples
 
-**Frost Dagger** (Smithing): This weapon deals normal dagger damage plus slows the target by one level for 1 round on hit. Requires one level 2 cold component and one level 2 neutral component, 4 days of work with 2 successful checks.
+**Momentum Gauntlets** (Smithing): Gain 1 additional rush point at the start of each round, starting on round 3. Requires one level 2 forceful component and one level 2 neutral component. Takes 4 days with 2 successful checks.
 
-**Potion of Eagle's Sight** (Alchemy): Grants +2 to perception checks and doubles vision range for 4 hours. Requires one level 2 aerial component and one level 2 psychic component. Takes just under 1 day of work (2/5 days) with 2 successful checks. Produces 10 doses per batch.
+**Stance-Shifting Oil** (Alchemy): Apply to a weapon. For the next combat, once per round after stances are revealed but before attacks, you may change your stance. Requires one level 2 mercurial component and one level 2 psychic component. Produces 10 doses.
+
+**Burning Brand** (Smithing): Light melee weapon. On might stance hits, inflicts 2 levels of burning. On other stance hits, inflicts 1 level. Requires one level 2 fiery component and one level 2 neutral component.
 
 ### Level 3 Examples
 
-**Flaming Longsword** (Smithing): This weapon deals an extra 1d8 fire damage and inflicts one level of burning on hit. Requires one level 3 fire component and two level 3 neutral components. Takes 9 days of work with 3 successful checks.
+**Woundseeker Blade** (Smithing): Heavy melee weapon. When attacking a wounded creature, add 1d8 damage per wound. Might stance attacks can inflict wounds on 8+ damage instead of 10+. Requires one level 3 corporeal component, one level 3 psychic component, and one level 3 neutral component. Takes 9 days with 3 successful checks.
 
-**Greater Healing Potion** (Alchemy): Restores 40 hit points when consumed. Requires one level 3 corporeal component and two level 3 neutral components. Takes 2 days of work with 3 successful checks. Produces 10 doses per batch.
+**Greater Rush Elixir** (Alchemy): Immediately gain 3 rush points. For the next minute, you keep up to 2 unspent rush points between rounds. Requires one level 3 forceful component and two level 3 neutral components. Produces 10 doses.
 
-**Ring of Mind Shielding** (Smithing): Protects the wearer from all forms of mind reading and psychic intrusion. Requires one level 3 psychic component, one level 3 inert component, and one level 3 neutral component. Takes 9 days with 3 successful checks.
+**Aegis Charm** (Smithing): When you would decrease your heart die to halve damage, roll 1d6. On a 4+, don't decrease your heart die. Requires one level 3 inert component, one level 3 corporeal component, and one level 3 neutral component.
 
 ### Level 4 Examples
 
-**Cloak of Displacement** (Smithing): This cloak causes the wearer to appear to be standing beside their actual location, imposing disadvantage on all attacks against them. Requires one level 4 illusioned component, one level 4 void component, and two level 4 neutral components. Takes 16 days with 4 successful checks.
+**Engagement Master's Cloak** (Smithing): Once per round, when forced into an engagement, you may choose to not participate. Requires one level 4 void component, one level 4 mercurial component, and two level 4 neutral components. Takes 16 days with 4 successful checks.
 
-**Elixir of Temporary Transformation** (Alchemy): Allows the drinker to polymorph into a specific creature type for 24 hours. Requires one level 4 mercurial component, one level 4 corporeal component, and two level 4 neutral components. Takes 4 days with 4 successful checks. As a unique consumable, produces only 1 dose.
+**Stance Supremacy Draught** (Alchemy): For the next combat, your stance directly beats all other stances for determining who can attack (you can always attack, regardless of stance matchup). Lasts 1 hour. Requires one level 4 psychic component, one level 4 forceful component, and two level 4 neutral components. Produces 1 dose.
 
-**Lightning Javelin** (Smithing): This thrown weapon returns to the wielder's hand after each attack and deals an additional 2d6 lightning damage, with a chance to stun. Requires one level 4 electric component, one level 4 forceful component, and two level 4 neutral components. Takes 16 days with 4 successful checks.
+**Thundercrash Maul** (Smithing): Heavy bludgeoning weapon. On might stance hits, all creatures (except you) within 5 feet of the target take levels of off-balanced equal to your current rush points (max 5). Requires one level 4 electric component, one level 4 sonic component, and two level 4 neutral components.
 
 ### Level 5 Examples
 
-**Sword of Dragon Slaying** (Smithing): This legendary weapon deals +1d12 damage normally and +2d12 against dragons, while granting the wielder immunity to fire. Requires one level 5 fire component, one level 5 corporeal component, and three level 5 neutral components. Takes 25 days with 5 successful checks.
+**Wound Drinker** (Smithing): Heavy weapon. When you inflict a wound, gain hit points equal to the wound's rank and increase your heart die (even beyond d8 maximum). When you kill a creature, reduce all your wound ranks by 5. Requires one level 5 soulful component, one level 5 corporeal component, and three level 5 neutral components. Takes 25 days with 5 successful checks.
 
-**Elixir of Life** (Alchemy): This extremely rare potion can bring a creature back from death if administered within 1 hour, restoring them to full health. Requires one level 5 soulful component, one level 5 temporal component, and three level 5 neutral components. Takes 5 days with 5 successful checks. Produces only 1 dose as a unique consumable.
+**Perfect Warrior's Draught** (Alchemy): For 10 minutes: Your heart die cannot decrease below d8, you gain +10 to all A/D rolls, and you start each round with twice as many rush points. Requires one level 5 temporal component, one level 5 forceful component, and three level 5 neutral components. Produces 1 dose.
 
-**Armor of Etherealness** (Smithing): This armor allows the wearer to become ethereal for up to 10 minutes per day, moving through solid objects and becoming immune to physical attacks. Requires one level 5 planar component, one level 5 void component, one level 5 corporeal component, and two level 5 neutral components. Takes 25 days with 5 successful checks.
+**Stance Echo Armor** (Smithing): Heavy armor. Provides +8 defense instead of +6. Whenever you avoid taking damage while using the defensive stance, make an opportunity attack against one attacker using their own stance against them. Requires one level 5 psychic component, one level 5 void component, one level 5 inert component, and two level 5 neutral components.
 
 ### Level 6 Examples
 
-**Staff of the Magi** (Smithing): This staff can cast multiple powerful spells, absorb targeted spells to recharge itself, and provides +3 to all spell attacks. Requires two level 6 forceful components, one level 6 psychic component, one level 6 void component, and two level 6 neutral components. Takes 36 days with 6 successful checks.
+**Heartforge Circlet** (Smithing): Your heart die cannot be reduced below d6. When you would take a wound, roll your heart die - on a 6+, the wound's rank is reduced by half (rounded down). When you heal hitpoints, all allies within 30 feet also heal equal to half the amount, rounded down. Requires one level 6 corporeal components, one level 6 soulful component, one level 6 inert component, and three level 6 neutral components. Takes 36 days with 6 successful checks.
 
-**Philosopher's Stone Elixir** (Alchemy): Permanently increases all of the drinker's ability dice by one size. Requires one level 6 mercurial component, one level 6 soulful component, two level 6 corporeal components, and two level 6 neutral components. Takes 8 days with 6 successful checks. Produces 1 dose.
+**Essence of Unbinding** (Alchemy): Permanently gain: Opportunity attacks don't cost actions/rush points, you can make unlimited opportunity attacks per round, and creatures cannot avoid your opportunity attacks by sidestepping. Requires one level 6 soulful component, two level 6 forceful components, one level 6 temporal component, and two level 6 neutral components. Produces 1 dose.
+
+**The Wound King's Blade** (Smithing): Slashing heavy weapon. Wounds you inflict start at +5 ranks higher. When you take a wound, all enemies within 30 feet take a wound of half that rank. You are immune to death from negative HP while wielding this weapon. Requires one level 6 soulful component, one level 6 corporeal component, two level 6 void components, and two level 6 neutral components.
 
 ### Level 7 Examples
 
-**The Worldender** (Smithing): This artifact weapon can cleave through any material, ignore all resistances, and has a chance to simply erase enemies from existence. Requires one level 7 void component, one level 7 temporal component, one level 7 forceful component, and four level 7 neutral components. Takes 49 days with 7 successful checks.
+**The Stancebreaker** (Smithing): Heavy bludgeoning weapon. Choose your stance after everyone else reveals theirs. Your attacks ignore defensive stance damage reduction. Once per combat, force all participants in an engagement to use a stance of your choice. Requires one level 7 psychic component, one level 7 temporal component, one level 7 void component, and four level 7 neutral components. Takes 49 days with 7 successful checks.
 
-**Ambrosia of the Gods** (Alchemy): Grants true immortality—the drinker stops aging, becomes immune to disease and poison, and regenerates from any injury short of complete disintegration. Requires two level 7 soulful components, one level 7 temporal component, one level 7 corporeal component, and three level 7 neutral components. Takes 10 days with 7 successful checks. Produces 1 dose.
+**Godslayer's Ichor** (Alchemy): Permanently gain: +100 maximum HP, wounds you take are reduced by 10 ranks, you can survive to negative HP equal to 3x your maximum, and once per day when you would die, instead heal to full HP and remove all wounds. Requires one level 7 soulful components, one level 7 temporal component, one level 7 corporeal component, and four level 7 neutral components. Produces 1 dose.
+
+**The Final Engagement** (Smithing): Artifact armor. When you enter an engagement, creatures within 60 feet of your choice must join it, if able. Once per day, if a creature fails to beat your stance in an engagement, they die. Requires one level 7 void component, one level 7 forceful component, one level 7 psychic component, one level 7 temporal component, and three level 7 neutral components.
