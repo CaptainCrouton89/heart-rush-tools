@@ -121,13 +121,11 @@ The limitations to your control over different types of substances are listed in
 #### Movement
 
 - While in this substance, you fall at a rate of 50 feet per round, and may travel 5 feet for every 5 feet you fall, up to 30 feet of lateral movement. You take half fall damage if you fall through this substance.
-
 - You can jump up to 10 feet in the air while in this substance, and over creatures size medium and smaller.
 
 #### Advanced Attunement
 
 - While in this substance, you fall at a rate of 25 feet per round, and may travel 10 feet for every 5 feet you fall, up to 60 feet of lateral movement. You take no fall damage from falling.
-
 - You can jump up to 15 feet in the air while in this substance, and over creatures size large and smaller.
 
 #### Paragon Attunement
@@ -163,9 +161,7 @@ The limitations to your control over different types of substances are listed in
 Sometimes, you will be able to convert between different types of substances, such as with ice and water, or lava and stone. These conversions use the following rules:
 
 - Conversions happen at a rate equal to twice the creation rate of whatever substance you are turning it into, and at a range equal to the corresponding manipulation range.
-
 - For example, with an advanced attunement to a solid, you can create a 1.5-foot cube as an action. If you are instead turning a liquid into a solid, you can create a 2-foot cube of solid as an action, and you can do it at a range of 15 feet.
-
 - If you instead were converting that solid into a liquid at an advanced level, you would have the same increase in volume, but would instead be able to do it at a range of 45 feet, since that is the advanced liquid manipulation range.
 
 #### Trapping a creature
@@ -181,52 +177,40 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 #### Basic Attunement
 
 - As an action, you can ignite or put out small flames within 5 feet without touching them.
-
 - You can sense any fire within 45 feet, including how much, its general direction, and intensity.
-
 - You take half damage from the burning condition.
 
 #### Advanced Attunement
 
 - Add ash to your resonate substances as a basic, solid attunement.
-
 - Add smoke to your resonate substances as a basic, gaseous substance attunement. Smoke blinds and suffocates those who stand in it.
-
 - As an action, you can ignite or put out flammable items within 45 feet.
-
 - You can sense fire within a 300 feet, including how much, its general direction, and intensity.
-
 - You are immune to the burning condition.
 
 #### Paragon Attunement
 
 - Add lava rocks, such as pumice and obsidian to your resonate substances at basic, solid substance attunements.
-
 - Your attunements to ash and smoke become advanced.
-
 - As an action, you can ignite or put out flammable items within 120 feet.
-
 - As an action, you can manipulate all fire and smoke within 120 feet into shapes, patterns, and different colors.
 
 ### Air
 
 #### Basic Attunement
 
-- Add “neutral air” to your resonate substances as a basic gaseous attunement. Neutral air is breathable, inert, harmless, invisible, and unscented.
-
-- You may turn any gaseous substance within the range of your manipulation into “neutral air”.
-
+- Add "neutral air" to your resonate substances as a basic gaseous attunement. Neutral air is breathable, inert, harmless, invisible, and unscented.
+- You may turn any gaseous substance within the range of your manipulation into "neutral air".
 - You can breathe underwater.
 
 #### Advanced Attunement
 
-- Your attunement to “neutral air” becomes advanced.
-
-- Creatures within the range of your “neutral air” attunement creation radius can also breathe while underwater.
+- Your attunement to "neutral air" becomes advanced.
+- Creatures within the range of your "neutral air" attunement creation radius can also breathe while underwater.
 
 #### Paragon Level
 
-- Your attunement to “neutral air” becomes paragon.
+- Your attunement to "neutral air" becomes paragon.
 
 ### Water
 
@@ -269,27 +253,23 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 #### Paragon Attunement
 
 - Whenever you move, you may instead choose to teleport half the distance.
-
 - The maximum size of objects you send to the void increases to a 5-foot cube.
 
 ### Time
 
 #### Basic Attunement
 
-- Once per day, immediately after learning the result of an action you took, you may choose to go back to right before you made that action and choose not to take it. This could include things such as stepping onto a trap, making a conversational gaffe, or
-
+- Once per day, immediately after learning the result of an action you took, you may choose to go back to right before you made that action and choose not to take it. This could include things such as stepping onto a trap, making a conversational gaffe, or attacking the wrong target.
 - By touching a nonliving object for a minute, you can cause it to age a year. The object must be able to fit within a 5-foot cube.
 
 #### Advanced Attunement
 
 - When you unwind time, you may choose to instead unwind time when another creature makes an action rather than yourself. You may make an action now.
-
 - The size of the object to age increases to a 10-foot cube.
 
 #### Paragon Attunement
 
 - The size of the object to age increases to a 100-foot cube.
-
 - You may choose to use your own timeline to fix the past. The entire world reverts to whatever state it was 24 hours ago. You gain 3 levels of dazed that don't fade until you take a long rest, and your body ages by 10 years.
 
 ### Light
@@ -297,19 +277,16 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 #### Basic Attunement
 
 - You can produce bright light in a 30-foot radius, and dim light 30 feet beyond that. It dispels magical darkness. By touching an inanimate object, it gains this property. You cannot produce more than one source of light.
-
 - You may inflict three levels of blindness to creatures you are touching.
 
 #### Advanced Attunement
 
 - The bright light you can produce extends up to 60 feet, and 60 feet of dim light beyond that. You can produce up to three sources of this light.
-
 - You may cast blinding sun on yourself any number of times per day.
 
 #### Paragon Attunement
 
 - You can raise the light level to dim light in any number of locations that you can see. This overrides any magical darkness, and cannot be turned into darkness.
-
 - Whenever you cast blinding sun, you may inflict up to 5 levels of blindness.
 
 ### Darkness
@@ -317,22 +294,20 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 #### Basic Attunement
 
 - You gain darkvision out to a range of 30 feet, or increase your current darkvision by 30 feet.
-
 - As an action, you dim the light in a 30-foot radius, turning non-magical, bright light into dim light, or dim light into darkness.
 
-[[A note on Light and Dark]]
-It's hard to actually “hurt” someone with light or darkness. Many of the other elements have physical aspects or obvious connections to sources of damage, but light and dark do not. You'll notice in the spell sections that spells with the light and dark tags only deal damage when they're paired with another element.
+> **A note on Light and Dark**
+>
+> It's hard to actually "hurt" someone with light or darkness. Many of the other elements have physical aspects or obvious connections to sources of damage, but light and dark do not. You'll notice in the spell sections that spells with the light and dark tags only deal damage when they're paired with another element.
 
 #### Advanced Attunement
 
 - The range of your darkvision increases by 30 feet.
-
 - The range at which you can create darkness increases by 30 feet.
 
 #### Paragon Attunement
 
 - Other creatures with darkvision cannot see through darkness you create.
-
 - The range at which you can create darkness increases by 60 feet.
 
 ### Force
@@ -344,15 +319,12 @@ It's hard to actually “hurt” someone with light or darkness. Many of the oth
 #### Advanced Attunement
 
 - The force you can apply increases to a maximum of 20 pounds.
-
 - You may divide this force between up to three different objects.
-
 - You can manipulate fine objects that would not otherwise require a skill check to manipulate, and can apply rotational force.
 
 #### Paragon Attunement
 
 - You may divide this force between any number of different objects.
-
 - You may manipulate objects that would require a skill check to use. You cannot wield a weapon using this force.
 
 # Spellcasting
@@ -360,31 +332,20 @@ It's hard to actually “hurt” someone with light or darkness. Many of the oth
 ## Gaining Spells
 
 - Learning a spell represents mastery over some aspect of one's connection with an element, allowing the user to perform some fantastical feat. Anyone with an attunement can learn to cast a spell.
-
 - By spending XP, as described in the Gaining and Spending XP section, one can gain a new spell, chosen from the list of spells in the Spells section. You must have at least a basic attunement to all of the elements in the tags listed below each spell in order to learn that spell.
 
 ## Casting Spells
 
 - Casting a spell is more difficult than simple elemental manipulation performed with just an attunement, as it requires more precise control for a longer duration. Performing a powerful act of elemental control while in the thick of a fight takes skill and practice, and comes with the following restrictions:
-
 - Casting a spell requires your action.
-
 - You may cast only one spell per round.
-
 - Casting a spell requires at least one free hand.
-
 - If casting a spell, you cannot have moved more than half your movement speed (after accounting for armor and other penalties), rounded up.
-
 - After casting the spell, you cannot move more than half your movement speed (after accounting for armor and other penalties).
-
 - Casting spells is strenuous, and takes a toll on your body, and without proper preparation, can wreak havoc on your ability to channel your attunement in that way again for a while. You must wait four long rests before casting that spell again, though that time may vary as per the following rules:
-
   - Subtract one long rest for each consecutive round taken before this action spent unmoving, taking no actions and using no abilities, and not communicating (in complete, meditative concentration).
-
   - Subtract one long rest if you have an advanced attunement with the elemental type of the spell you are casting.
-
   - Subtract two long rests if you instead have a paragon attunement with the elemental type of the spell you are casting.
-
 - If the total number of long rests would be reduced to zero, you must still wait at least one short rest before casting the spell again.
 
 ## Spellcasting Ability

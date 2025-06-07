@@ -49,7 +49,7 @@ function ChildSection({ child, level }: ChildSectionProps) {
         
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-2"
+          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-2 cursor-pointer w-full text-left"
           aria-label={isExpanded ? "Hide subsections" : "Show subsections"}
         >
           <svg 

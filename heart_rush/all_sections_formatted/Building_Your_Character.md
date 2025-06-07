@@ -197,5 +197,4 @@ Finally, upon reaching rank 5, and for each rank thereafter, you gain a paragon 
 
 ## Advice For New Groups
 
-Advice for New Groups  
 If everyone in your group is brand new to Heart Rush, rank 0 is a good place to start. There are many rules that only kick into play once you have a class, and Heart Rush combat can take some time to wrap your head around, so it can be nice to start small.

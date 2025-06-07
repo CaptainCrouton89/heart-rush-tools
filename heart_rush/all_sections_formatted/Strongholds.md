@@ -71,9 +71,21 @@ Additionally, your house contains one attendant per level of the house. They liv
 ### Laboratory
 
 **Minimum level 2.**
-Alchemy bonus
+Your laboratory is a center for alchemical research and magical experimentation. It provides the workspace and equipment necessary for advanced magical crafting.
 
-You sell product, can cover cost of purchasing materials.
+**Level 2:** Functions as a level 3 alchemy lab (see Magical Crafting). You have advantage on alchemy checks made within.
+
+**Level 3:** Functions as a level 4 alchemy lab. Your laboratory generates 8% of its total value annually through sale of alchemical products.
+
+**Level 4:** Functions as a level 5 alchemy lab. You may create one batch of any level 1 alchemical product per week at no material cost.
+
+**Level 5:** Functions as a level 6 alchemy lab. Income increases to 12% annually. You may research new alchemical recipes (GM approval required).
+
+**Level 6:** Functions as a level 7 alchemy lab. You may create level 2 products at no material cost.
+
+**Level 7:** You may create level 3 products at no material cost. Income increases to 15% annually.
+
+**Level 8:** Your laboratory becomes legendary. You may attempt to create unique alchemical discoveries. Income increases to 20% annually.
 
 ### Library
 
@@ -126,13 +138,40 @@ Taverns attract people from all walks of life, with stories from all over the wo
 ### Temple
 
 **Minimum level 2.**
-Influence over followers of religion.
-Blessing of god
+Your temple is a sacred space dedicated to your chosen deity, serving as a center of religious power and influence.
+
+**Level 2:** Choose a deity when building. You gain one religious follower (level 2). Once per week, you may query your deity with a yes/no question.
+
+**Level 3:** You gain advantage on presence checks when interacting with followers of your deity. Gain one additional religious follower (level 2).
+
+**Level 4:** Your temple generates 5% of its total value annually through donations. You may ask your deity one open-ended question per month.
+
+**Level 5:** Gain one level 3 religious follower. Your influence increases by 1 when interacting with religious communities.
+
+**Level 6:** You may perform religious ceremonies that grant temporary benefits to participants (GM discretion). Income increases to 8%.
+
+**Level 7:** Gain one level 4 religious follower. Your religious influence extends to neighboring settlements.
+
+**Level 8:** Your temple becomes a major pilgrimage site. Income increases to 12%. You may directly commune with your deity once per month.
 
 ### Wizard Tower
 
 **Minimum level 2.**
-Deoric bonus
+Your wizard tower is a place of arcane study and magical power, designed to enhance spellcasting abilities.
+
+**Level 2:** Functions as a level 2 magical workshop. You regain one additional spell use per long rest while resting in your tower.
+
+**Level 3:** All spells cast within your tower have their cooldown reduced by one long rest. You have advantage on checks to research new spells.
+
+**Level 4:** Functions as a level 3 magical workshop. You may store up to 3 spell effects in your tower to be triggered later.
+
+**Level 5:** Your tower generates 6% of its total value annually through magical services. Spell research time is halved.
+
+**Level 6:** Functions as a level 4 magical workshop. You may teach spells to others within your tower.
+
+**Level 7:** All elemental attunements function as one level higher while within your tower. Income increases to 10%.
+
+**Level 8:** Your tower becomes a nexus of magical power. You may cast any spell you know once per day without cooldown restrictions.
 
 ### Workshop
 
@@ -143,3 +182,72 @@ For each level of your workshop, you gain a level of advantage on crafting check
 
 **Minimum level 1.**
 Training grounds can be anyplace that you can practice your preferred form of combat. You may spend a day training with a particular weapon in the training grounds. If you do, you get +1 to all rolls with that weapon. This bonus lasts until you spend time training with a different weapon instead.
+
+**Level 2:** You may train with multiple weapon types simultaneously. The bonus increases to +2.
+
+**Level 3:** Training benefits last for one week instead of until you train with a different weapon.
+
+**Level 4:** You may train others, granting them the same benefits. Up to 5 people may train simultaneously.
+
+**Level 5:** The bonus increases to +3. Training benefits extend to combat maneuvers and tactics.
+
+**Level 6:** You may hold tournaments that generate 5% of the stronghold's value annually.
+
+**Level 7:** Training benefits become permanent for weapons you've trained with at least 10 times.
+
+**Level 8:** Your training grounds become legendary. Warriors from across the realm come to train here, increasing your influence by 1.
+
+### Fortress
+
+**Minimum level 3.**
+A military stronghold designed for defense and housing armed forces.
+
+**Level 3:** Houses 50 guards (level 1 fighters). Provides total cover during sieges.
+
+**Level 4:** Houses 100 guards. You may recruit military followers more easily.
+
+**Level 5:** Houses 200 guards (mix of level 1-2 fighters). Generates 8% annually through military contracts.
+
+**Level 6:** Houses 300 guards. Your fortress can withstand major sieges.
+
+**Level 7:** Houses 500 guards including specialists. Income increases to 12%.
+
+**Level 8:** Your fortress becomes a major military power. You may field an army and influence regional conflicts.
+
+### Observatory
+
+**Minimum level 2.**
+A center for astronomical study and navigation, providing knowledge of the heavens.
+
+**Level 2:** You have advantage on navigation checks. You may predict weather patterns one week in advance.
+
+**Level 3:** You may observe distant locations within 50 miles during clear nights.
+
+**Level 4:** Observation range increases to 100 miles. You have advantage on checks to track celestial events.
+
+**Level 5:** You may predict major events by reading the stars (GM discretion, once per month).
+
+**Level 6:** Observation range increases to 200 miles. You may communicate with other observatories.
+
+**Level 7:** You may glimpse potential futures through stellar observation (once per season).
+
+**Level 8:** Your observatory becomes a center of cosmic knowledge. You may predict catastrophic events and their timing.
+
+### Arena
+
+**Minimum level 2.**
+An entertainment venue focused on combat sports and spectacles.
+
+**Level 2:** Hosts weekly fights. Generates 10% of value annually. You have advantage when recruiting fighters.
+
+**Level 3:** Can host larger events. Income increases to 15%. Attracts fighters from neighboring areas.
+
+**Level 4:** Monthly tournaments draw regional attention. Income increases to 20%.
+
+**Level 5:** Your arena becomes regionally famous. Income increases to 25%. Influences local culture.
+
+**Level 6:** Hosts championship events. Income increases to 30%. Attracts international competitors.
+
+**Level 7:** Your arena shapes regional politics through its influence. Income increases to 35%.
+
+**Level 8:** Legendary arena known across the continent. Income increases to 40%. Major political gatherings occur here.
