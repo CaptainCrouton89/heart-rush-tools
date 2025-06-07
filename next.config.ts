@@ -24,14 +24,14 @@ const nextConfig: NextConfig = {
       ];
     }
 
-    // Production caching
+    // Production caching - reduced for dynamic content
     return [
       {
         source: "/(.*)",
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=3600, s-maxage=86400",
+            value: "public, max-age=300, s-maxage=3600",
           },
         ],
       },
