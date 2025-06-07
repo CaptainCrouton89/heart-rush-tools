@@ -28,7 +28,7 @@ Note that abilities with the instant tag do not require a turn, and can be used 
 
 ## During Combat
 
-During each round of combat, you can take up to one action, and use any number of abilities (following the frequency restrictions on the abilities themselves).
+During each round of combat, you can take up to one action, and use any number of abilities (following the frequency restrictions on the abilities themselves). Unless the action is tagged as "instant", the action must be taken on your turn.
 
 ### Actions
 
@@ -46,15 +46,13 @@ Rules for engagement are complicated, and are described in detail in the Engagin
 #### Cast a Spell
 
 Full action.  
-Cast a spell you know during your turn. This does not work during engagements - spells are separate from weapon combat. Spelltouched with the _Warcaster_ ability can cast spells as minor abilities instead, which still must take place on your turn, but does not require your action.
+Cast a spell you know (note: not a cantrip—those are used in engagements).
 
-Note: This action is for full spells only. Cantrips are used within engagements like weapons.
-
-See the Spellcasting section for details and restrictions on casting spells. You cannot cast a spell if you do not know any spells.
+See the Spellcasting section for details and restrictions on casting spells.
 
 #### Sidestep
 
-Full action\*.  
+Full action.
 Rather than using an action, you may instead spend a rush point to perform this ability.
 
 When you take this action, you may move 5 feet or stand up from prone. This movement does not provoke opportunity attacks.
@@ -277,7 +275,7 @@ Magic operates on two different levels during combat, each with distinct rules a
 
 ### Magic in Combat
 
-- **Spells**: Use the Cast a Spell action during your turn (outside engagements). Strategic magic like _Wall of Fire_, _Fireball_, or _Telekinesis_ that reshapes the battlefield. Cannot be used during engagements unless you have special abilities.
+- **Spells**: Use the Cast a Spell action during your turn. Strategic magic like _Wall of Fire_, _Fireball_, or _Telekinesis_ that reshapes the battlefield. Cannot be used during engagements unless you have special abilities.
 - **Cantrips**: Replace weapon attacks within engagements. Choose cantrip OR weapon attack, not both. Follow normal stance rules for targeting and resolution.
 - **Instant Spells**: Can interrupt at any time, including during other creatures' turns, though they still require your action (unless you use _Warcaster_).
 - **Spelltouched + Warcaster**: Can cast spells without using action.
