@@ -22,8 +22,6 @@ This section provides a comprehensive overview of all classes and subclasses to 
 | **Battleheart** | Damage Dealer   | Deal massive damage through precision and brutality; excel at eliminating threats | Brutal Attacks, Making it Count     |
 | **Cleverheart** | Support/Utility | Control the battlefield through tactics and positioning; enable allies to excel   | Above the Fray, Tactics             |
 
-## Subclass Specializations
-
 ### Strongheart: Masters of Endurance
 
 Stronghearts thrive in the center of battle, using their resilience to protect allies and punish enemies who focus on them.

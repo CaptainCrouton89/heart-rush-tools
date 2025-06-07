@@ -30,7 +30,7 @@ During each round of combat, you can take up to one action, and use any number o
 
 You get one action per round. All actions are abilities, and you must use your turn to take them.
 
-Note that the Dash action, Object Interaction action, and Call Out action do not cost an action the first time you perform them each round.
+Additionally, on your turn you may move up to your speed and call out for free.
 
 #### Engage the Enemy
 
@@ -53,9 +53,7 @@ When you take this action, you may move 5 feet or stand up from prone. This move
 
 #### Dash
 
-Full action\*.  
-The first dash you take each round does not cost your action.
-
+Full action.  
 Move a number of feet up to or equal to your move speed. Unless stated otherwise, your move speed is 60 before accounting for equipment.
 
 If you move more than 5 feet within a creature's melee range or leave their melee range without taking the sidestep action, the creature may make an opportunity attack against you. Resolve the attack before leaving the creature's range and completing the movement.
@@ -74,10 +72,8 @@ You aid another creature. Choose an adjacent creature. That creature gets advant
 
 #### Call out
 
-Full action\*.  
-The first call out you make each round does not cost your action.
-
-Say (or shout out) something. Up to one, reasonable-length sentence.
+Full action.  
+Say (or shout out) something. Up to one, reasonable-length sentence. Enemies won't wait for you to deliver your monologue.
 
 ### Instant Actions
 
@@ -88,7 +84,9 @@ Below are some actions that you can take at instant speed, even while another cr
 Full action. Instant.  
 As an action, you may enter an engagement that has already been initiated between other characters but has not yet begun. Unlike other abilities, you do not need to use your turn for this ability. Instead, immediately after someone uses the Engage the Enemy action, everyone has the choice to take this.
 
-[[Hard to get, but Great Opportunity attacks are like gold. They're hard to get, but when you do, you can throw everything you've got into the roll and nail the target exactly the way you want. For this reason, enemies will do a lot to avoid getting hit with them. Use that to your advantage.]]  
+[[Hard to get, but Great
+
+Opportunity attacks are like gold. They're hard to get, but when you do, you can throw everything you've got into the roll and nail the target exactly the way you want. For this reason, enemies will do a lot to avoid getting hit with them. Use that to your advantage.]]  
 There must be a valid target in range of your weapon who is already part of the engagement in order to enter. To continue the analogy from the explanation of engaging the enemy, this is like deciding to jump into a rock-paper-scissors game going on between the people around you, and choosing to play as well.
 
 #### Trip
@@ -122,8 +120,9 @@ Rush points represent the excitement and momentum of combat, allowing you to per
 At the start of combat, you begin with 1 rush point. At the beginning of each subsequent round, you gain rush points equal to the number of rounds in which you have been active, up to the current round number.
 
 You count as **active in a round** if you did any of the following during that round:
+
 - Participated in an engagement (either initiated one or entered one)
-- Made an opportunity attack  
+- Made an opportunity attack
 - Cast a spell
 
 **Example:** You engage enemies in rounds 1, 2, and 4, but spend round 3 moving and using non-combat abilities. At the start of round 5, you have been active in 3 rounds total, so you gain 3 rush points.
@@ -143,7 +142,7 @@ The rush point system rewards aggressive, active play. Characters who consistent
 ## Minor Abilities
 
 [[Typical Rounds  
-In most rounds, you'll want to move a bit— the first dash is free—and you'll want to start or enter an engagement, since that's the main way to deal damage. Sprinkled throughout, you'll use various abilities and occasionally you'll want to do something else with your action, but moving and engaging is the gist.]]
+In most rounds, you'll want to move a bit—you can move for free on your turn—and you'll want to start or enter an engagement, since that's the main way to deal damage. Sprinkled throughout, you'll use various abilities and occasionally you'll want to do something else with your action, but moving and engaging is the gist.]]
 
 Minor abilities are special abilities unique to your class and subclass. Whenever you use a minor ability, you must spend one rush point for each time you've used the ability, including the current use. You have multiple minor abilities, so you will have to manage how many times you've used each separately. They do not require you to spend an action, but there may be limitations on when you can use them.
 
