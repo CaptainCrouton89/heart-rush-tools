@@ -1,4 +1,4 @@
-# Other Races
+# Races
 
 ## Chulpe
 
