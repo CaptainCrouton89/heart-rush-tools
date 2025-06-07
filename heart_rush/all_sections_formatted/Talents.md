@@ -617,7 +617,7 @@ _Passive ability. Martial talent._
 Armor, weapons, and shields do not reduce your movement speed.
 
 **Destiny Level:**
-Whenever you are forced to move, you move 5 feet less. Additionally, your maximum slots increases to 6 plus your might die, and your maximum carrying capacity increases to double that. You must choose the disadvantage on athletics and A/D rolls option when you take penalties for being over-encumbered.
+Whenever you are forced to move, you move 5 feet less. Additionally, your maximum slots increases to 6 plus your might die.
 
 ### Kick ‘em While they're Down
 
