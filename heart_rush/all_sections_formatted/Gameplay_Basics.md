@@ -210,39 +210,50 @@ If this movement is stopped by a creature that is not wielding a shield, the mov
 
 ### Size
 
-Creatures can be of many different sizes.
+Creatures range from minuscule to colossal, with significant mechanical differences.
 
-From smallest to largest, they are: minuscule, tiny, small, medium, large, and then L2, L3, L4, and so on.
+#### Size Categories
 
-Different sizes come with different bonuses and penalties, especially in combat.
+| Size      | Spaces Occupied | Per Space | Examples         |
+| --------- | --------------- | --------- | ---------------- |
+| Minuscule | 0               | 1,000     | Fairy, Sprite    |
+| Tiny      | 0               | 10        | Cat, Raven       |
+| Small     | 0               | 5         | Halfling, Goblin |
+| Medium    | 1               | 1         | Human, Elf       |
+| Large     | 1               | 1         | Horse, Owlbear   |
+| L2        | 4 (2×2)         | 1         | Young Dragon     |
+| L3        | 9 (3×3)         | 1         | Adult Dragon     |
+| L4+       | Level²          | 1         | Ancient Dragon   |
 
-Up to a thousand minuscule creatures can fit into a single space, ten tiny creatures can fit on one space; five small creatures can fit on one space; one medium or large creature on one space; and creatures of sizes L2 and greater take up a number of spaces equal to the square of their level.
+#### Size Combat Effects
 
-For example, an L2 creature would take up four spaces (2x2 spaces), and an L5 creature would take up twenty-five spaces (5x5 spaces).
+#### Size Combat Effects
 
-### Attacking
+**Movement Through Spaces:**
+One creature can occupy and move through the space of another creature if it is at least two sizes smaller. Those creatures count as difficult terrain. While in the same space as a non-hostile creature, you also have one level of cover.
 
-Whenever an attacking creature uses the might stance to push a defending creature of a different size, the defending creature may move more or less than the default of 10 feet.
+**Weapon Restrictions:**
 
-If the defending creature is smaller than the attacker, the defending creature moves an additional 5 feet for each level of size difference.
+- Creatures of size small or tiny cannot wield heavy weapons
+- Creatures of size tiny cannot wield heavy or light weapons
 
-If the defending creature is larger than the attacker, the defending creature moves 5 fewer feet for each level of size difference.
+**Might Stance Push Modifiers:**
+Whenever an attacking creature uses the might stance to push a defending creature of a different size, the defending creature may move more or less than the default of 10 feet:
 
-This could mean that the defending creature is not pushed at all.
+- If the defending creature is smaller than the attacker, the defending creature moves an additional 5 feet for each level of size difference
+- If the defending creature is larger than the attacker, the defending creature moves 5 fewer feet for each level of size difference
+- This could mean that the defending creature is not pushed at all
 
-### Movement and Spaces
+**Grappling Size Effects:**
+When making grappling checks: If either creature is larger, it gets a level of advantage on their roll for each level of size difference.
 
-One creature can occupy and move through the space of another creature if it is at least two sizes smaller.
+While grappling a creature, rather than pushing the creature when you use the might stance, you may choose to instead deal 1d6 damage, plus 1d6 damage for every size greater you are than the grappled creature.
 
-Those creatures count as difficult terrain.
+**Climb On Requirements:**
+Choose an adjacent creature two or more sizes larger than you. Make a might or agility ability check contested by the creature's might or agility ability check. If you roll higher, you climb onto the creature.
 
-While in the same space as a non-hostile creature, you also have one level of cover.
-
-### Weapons
-
-Creatures of size small or tiny cannot wield heavy weapons.
-
-Creatures of size tiny cannot wield heavy or light weapons.
+**Prone/Knockdown Limits:**
+Many combat abilities that knock creatures prone specify "no more than one size larger than you" - creatures significantly larger are too massive to knock down.
 
 ### Lighting
 

@@ -115,9 +115,30 @@ When you take this action, make an attack roll against the creature with the sta
 
 ## Rush Points
 
-Rush represents the excitement and tension of a fight. As a fight goes on, rush points build, and you can perform more and more powerful moves. Rush is represented with a pool of points. At the start of combat, you have one rush point. At the beginning of each subsequent round, you gain rush points equal to the number of rounds in which you were part of an engagement, made an opportunity attack, or cast a spell, up to the current number of rounds. Other abilities may increase this pool further.
+Rush points represent the excitement and momentum of combat, allowing you to perform increasingly powerful abilities as the fight intensifies. As you stay active in battle, you build up rush points that fuel your most devastating attacks and abilities.
 
-Unspent rush points are lost at the end of every round. Outside of combat, you have 0 rush points.
+### Gaining Rush Points
+
+At the start of combat, you begin with 1 rush point. At the beginning of each subsequent round, you gain rush points equal to the number of rounds in which you have been active, up to the current round number.
+
+You count as **active in a round** if you did any of the following during that round:
+- Participated in an engagement (either initiated one or entered one)
+- Made an opportunity attack  
+- Cast a spell
+
+**Example:** You engage enemies in rounds 1, 2, and 4, but spend round 3 moving and using non-combat abilities. At the start of round 5, you have been active in 3 rounds total, so you gain 3 rush points.
+
+### Using and Losing Rush Points
+
+Rush points are spent to fuel minor abilities, make opportunity attacks, and enhance major abilities. Each ability specifies how many rush points it costs to use.
+
+All unspent rush points are lost at the end of each round. This represents the ebb and flow of combat intensity - you must use your momentum or lose it.
+
+Outside of combat, you have 0 rush points and cannot spend them.
+
+### Strategic Implications
+
+The rush point system rewards aggressive, active play. Characters who consistently engage with enemies will have more resources available for powerful abilities, while those who play defensively will have fewer options but may preserve their health and positioning.
 
 ## Minor Abilities
 
