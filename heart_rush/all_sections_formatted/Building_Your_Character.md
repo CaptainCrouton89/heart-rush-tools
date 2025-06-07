@@ -96,9 +96,6 @@ Let's say you choose “Diplomat” and “Tutor for Nobility” as your profess
 
 ### Aspects
 
-[[Example  
-Let's say you choose “Diplomat” and “Tutor for Nobility” as your professions, and distribute 3 ranks to the first, and 1 rank to the latter. If you were making a skill check to persuade someone of something, you could add 3 to that roll due to your background as a diplomat.]]
-
 For every facet of your character that cannot be described with abilities and skills, they can be described with aspects. Your aspects describe the features and traits from your personality, background, and experiences that make you distinct—both positive and negative.
 
 When you first create your character, you gain three destiny points (DP). You will gain and lose DP each session as you spend them to benefit from your positive aspects and gain them by letting your negative ones shine through. If you ever start a session with fewer than three DP, you instead start with three DP. You cannot have more than 10 DP.
@@ -107,40 +104,79 @@ As you play your character, you will gather more aspects, and their impact will 
 
 #### Description
 
-The description describes the aspect as a whole, and should be a phrase or a few words to describe your character. It should be a significant personality trait, behavioral quirk, belief, ideal, self-proclaimed title, or some sort of reputation. For example, “Bullheaded,” “Record everything,” “Chronic headaches,” “Kleptomaniac,” “Fortune teller,” “Leave no one behind,” “I fear nothing,” “I can see straight into your soul” and “I want revenge for my father” can all be aspect descriptions. Do not choose generic things, like “good at most thing” or “lucky”, since they will apply to everything, or be too vague to decide if they should apply to a situation. If the GM says your aspect description is too generic, you need to choose a new one, or make it more specific.
+The description describes the aspect as a whole, and should be a phrase or a few words to describe your character. It should be a significant personality trait, behavioral quirk, belief, ideal, self-proclaimed title, or some sort of reputation.
+
+**Good aspect examples include:**
+
+- **Personality traits:** "Never met a stranger," "Perfectionist to a fault," "Speaks before thinking"
+- **Physical characteristics:** "Distinctive red hair," "Scarred hands tell stories," "Always cold"
+- **Beliefs and values:** "The truth must be preserved," "Children are the future," "Magic corrupts everything"
+- **Relationships:** "Owes the Thieves' Guild a favor," "Sworn enemy of House Blackwood"
+- **Background:** "Former city guard captain," "Temple orphan," "Traveling merchant's daughter"
+
+Do not choose generic things, like "good at most things" or "lucky", since they will apply to everything, or be too vague to decide if they should apply to a situation. If the GM says your aspect description is too generic, you need to choose a new one, or make it more specific.
 
 #### Rank
 
 Next, the aspect gets a rank. The rank of an aspect represents how influential that aspect is over who you are, and will determine the modifier to your rolls. The rank will be a number between one and five, though in some cases it can be increased even further.
 
 [[Example  
-Let's say you have the aspects “Diplomat” at rank 2, and “I need revenge for my family” at rank 3. You have just met the queen and are trying to convince her that civil war is imminent. When you make the skill check to convince her of this truth, you spend 3 DP to increase your roll by 3, successfully convincing her. However, moments later you find out that the queen herself was complicit in your family's murders. The GM invokes your aspect for revenge—you gain 2 DP, but must now exact revenge, or else be forced to pay 2 DP instead.]]
+Let's say you have the aspects "Former city guard captain" at rank 2, and "The truth must be preserved" at rank 3. You're trying to convince the town guards to let you investigate a crime scene. You spend 2 DP to add +2 to your persuasion roll, drawing on your shared professional experience. Later, when negotiating with a corrupt official who's lying about evidence, you can't resist calling out their lies due to your truth-preserving nature—you gain 3 DP, but the negotiation becomes hostile.]]
 
 ### Using your Aspect For Bonuses
 
 By spending destiny points up to or equal to an aspect's rank, you may add that much to any skill check. In order to use this, whatever roll you are making must align with the meaning of your aspect, as approved by the GM.
 
-For example, if you had the aspect “Leave no one behind” at rank two, and you were trying to save a friend stuck in prison, you could spend two DP and add 2 to a die roll made to break open the bars of the cell.
+For example, if you had the aspect "Leave no one behind" at rank two, and you were trying to save a friend stuck in prison, you could spend two DP and add 2 to a die roll made to break open the bars of the cell.
 
-Or, for example, if you had the aspect “I want revenge for my father” at rank four, you could spend four DP and add 4 to any skill check that was related to getting revenge for your father.
+Or, if you had the aspect "Never met a stranger" at rank three, you could spend 3 DP and add 3 to a persuasion check when trying to get information from tavern patrons, as your friendly nature helps you connect with people.
 
 If you have multiple aspects that apply to a roll, use only the highest ranking aspect that applies.
 
-### Using your Aspect For Destiny points
+### Using your Aspect For Destiny Points
 
 In contrast, if an aspect would complicate a situation or indicate you were bad at something, you may choose to do whatever your aspect would suggest and gain destiny points equal to the aspect's rank.
 
-“Bum leg,” “Kleptomaniac,” and “Quick to draw my sword” are examples of negative aspects. If you role-play an aspect such that you invite risk, then the GM will award DP.
+Aspects like "Scarred hands tell stories," "Kleptomaniac," and "Quick to draw my sword" can work against you in certain situations. If you role-play an aspect such that you invite risk, then the GM will award DP.
 
-For example, if a bookstore owner insults you, and you have the aspect “Quick to draw my sword” at rank three, you would gain three DP by drawing your sword and threatening the shop-owner.
+For example, if a bookstore owner insults you, and you have the aspect "Quick to draw my sword" at rank three, you would gain three DP by drawing your sword and threatening the shop-owner.
 
-Likewise, if you were chasing after a fleeing thief, rather than making a skill check to keep up with them, you could choose to fail the roll, citing your bum leg and taking DP corresponding to the rank of the aspect.
+Or, if you have "Never met a stranger" at rank 2, you might gain 2 DP by immediately approaching suspicious travelers in a friendly manner instead of being cautious, potentially walking into an ambush.
+
+Likewise, if you were trying to sneak past guards, and you have "Distinctive red hair" at rank 2, you could choose to be spotted because your hair gives you away, gaining 2 DP but complicating the situation.
 
 ### Creating your Aspects
 
 When you create your character, create two aspects. You will gain two more from your race and culture and you may gain more throughout the game. All aspects start at rank one when they are created, unless noted otherwise. No aspect can be greater than rank five.
 
-When creating an aspect, it is generally a good idea to have aspects with both positive and negative sides to them. Without any negative aspects, you have no way of gaining more destiny points, and therefore cannot spend them on bonuses. Also look out for aspects that can be both positive and negative aspects. For example, “Kleptomaniac" could be used
+When creating an aspect, it is generally a good idea to have aspects with both positive and negative sides to them. Without any negative aspects, you have no way of gaining more destiny points, and therefore cannot spend them on bonuses. Look for aspects that can be both positive and negative. For example, "Kleptomaniac" could help you pocket useful items unnoticed, but also compel you to steal at inappropriate times.
+
+#### What Makes a Good Aspect
+
+**Effective aspects are:**
+
+- **Double-edged:** Can help in some situations but cause problems in others
+- **Specific enough to be interesting:** "Chronic insomniac" rather than "sometimes tired"
+- **Personal and meaningful:** Connected to your character's story and goals
+- **Actionable:** Clear when and how they might apply
+
+**Avoid these common pitfalls:**
+
+- **Too broad:** "Good at everything" or "Lucky" apply everywhere and become generic
+- **Only positive:** "Brilliant tactician" with no downside gives you no way to earn DP
+- **Too narrow:** "Afraid of blue flowers" rarely comes up in most adventures
+- **Purely mechanical:** "Gets +2 to sword fighting" lacks narrative interest
+
+#### Interconnected Aspects
+
+Consider how your aspects might work together to tell a cohesive story:
+
+**Example character concept:** A disgraced noble seeking redemption
+
+- **Aspect 1:** "Fallen from noble grace" (social connections but also shame)
+- **Aspect 2:** "Gambling destroyed my family" (understands risk but acts compulsively)
+
+These aspects create a character whose past mistakes drive their current motivations while providing both positive and negative mechanical effects that reinforce the character's narrative.
 
 [[Burn through those DP  
 To get the most out of your character, you should be invoking your aspects frequently. DP are not meant to be a precious resource—spend them, and then make more by invoking your negative ones. When creating your character, make sure to create aspects that you're going to enjoy using; you'll be using them a lot.]]
