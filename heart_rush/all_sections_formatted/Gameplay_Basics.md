@@ -4,6 +4,8 @@ This section describes how general gameplay should proceed.
 
 ## Rolling Dice
 
+Heart Rush uses a combination of dice to determine the outcomes of uncertain actions, creating dynamic results that reflect both capability and chance.
+
 ### Skill Checks
 
 Whenever you attempt to do something that has a realistic chance of failure, the GM may ask you to roll a skill check to see if you succeed.
@@ -197,6 +199,8 @@ By default, abilities don't use your action unless they have the full action tag
 If you don't have an action left during this round, you cannot use the ability.
 
 ## Other Rules
+
+These additional rules cover various situations that can arise during gameplay.
 
 ### Forced Movement
 

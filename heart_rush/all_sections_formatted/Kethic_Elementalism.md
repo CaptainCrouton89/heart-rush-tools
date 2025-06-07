@@ -18,6 +18,8 @@ The limitations to your control over different types of substances are listed in
 
 ### Solids
 
+Solid substances like stone, metal, and crystal require direct manipulation through touch and are the most resistant to change.
+
 #### Manipulation
 
 - You can physically manipulate the shape and form of the substance with your hands as though it was clay. It is about as fast as literally shaping something out of clay.
@@ -55,6 +57,8 @@ The limitations to your control over different types of substances are listed in
 - You can create or destroy up to a 2-foot cube in your hands as an action. You may burrow at a rate of 5 feet per minute.
 
 ### Liquids
+
+Liquid substances flow and shift naturally, making them easier to manipulate at range but harder to maintain in specific shapes.
 
 #### Manipulation
 
@@ -105,6 +109,8 @@ The limitations to your control over different types of substances are listed in
 - You can create or destroy up to a 2-foot cube in your hands as an action.
 
 ### Gasses
+
+Gaseous substances are the most fluid and responsive to manipulation, but dissipate quickly without constant attention.
 
 #### Manipulation
 
@@ -174,6 +180,8 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 
 ### Fire
 
+Fire represents passion, destruction, and transformation. Those attuned to fire can control flames, heat, and the byproducts of combustion.
+
 #### Basic Attunement
 
 - As an action, you can ignite or put out small flames within 5 feet without touching them.
@@ -197,6 +205,8 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 
 ### Air
 
+Air represents freedom, breath, and movement. Those attuned to air can control winds, breathable gases, and atmospheric pressure.
+
 #### Basic Attunement
 
 - Add "neutral air" to your resonate substances as a basic gaseous attunement. Neutral air is breathable, inert, harmless, invisible, and unscented.
@@ -214,6 +224,8 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 
 ### Water
 
+Water represents adaptability, life, and change. Those attuned to water can control all forms of H2O and navigate aquatic environments with ease.
+
 #### Basic Attunement
 
 - Add water to your resonate substances as a basic liquid attunement.
@@ -227,6 +239,8 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 - Your attunement to water becomes paragon.
 
 ### Earth
+
+Earth represents stability, endurance, and foundation. Those attuned to earth can control stone, soil, and minerals from the ground.
 
 #### Basic Attunement
 
@@ -242,6 +256,8 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 
 ### Void
 
+Void represents nothingness, absence, and the space between things. Those attuned to void can manipulate emptiness itself and temporarily cease to exist.
+
 #### Basic Attunement
 
 - As an action, you may cease to exist, and disappear. When you do so, choose any length of time. After that time, you reappear in the same spot. Note that if that spot has any solid objects passing through it when you return, those objects are now passing through you—potentially killing you.
@@ -256,6 +272,8 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 - The maximum size of objects you send to the void increases to a 5-foot cube.
 
 ### Time
+
+Time represents causality, history, and temporal flow. Those attuned to time can manipulate the progression of moments and age objects.
 
 #### Basic Attunement
 
@@ -274,6 +292,8 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 
 ### Light
 
+Light represents revelation, truth, and illumination. Those attuned to light can control brightness and dispel darkness wherever they go.
+
 #### Basic Attunement
 
 - You can produce bright light in a 30-foot radius, and dim light 30 feet beyond that. It dispels magical darkness. By touching an inanimate object, it gains this property. You cannot produce more than one source of light.
@@ -290,6 +310,8 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 - Whenever you cast blinding sun, you may inflict up to 5 levels of blindness.
 
 ### Darkness
+
+Darkness represents secrets, concealment, and the unknown. Those attuned to darkness can see in the dark and extinguish light sources.
 
 #### Basic Attunement
 
@@ -311,6 +333,8 @@ There are nine different elements—fire, air, water, earth, light, dark, force,
 - The range at which you can create darkness increases by 60 feet.
 
 ### Force
+
+Force represents pure energy, telekinesis, and directed power. Those attuned to force can move objects with their mind and apply invisible pressure.
 
 #### Basic Attunement
 

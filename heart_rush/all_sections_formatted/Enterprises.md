@@ -12,6 +12,8 @@ Work with your GM to establish:
 
 ## Core Mechanics
 
+The enterprise system uses streamlined mechanics to handle large-scale endeavors without getting bogged down in complex management rules.
+
 ### Enterprise Die
 
 Every enterprise has a **d20 Enterprise Die**. This represents your overall organizational capability and influence.
@@ -56,6 +58,8 @@ Assets are freeform descriptors that help the GM set difficulty:
 - Some actions might be impossible without specific assets
 
 ## Examples in Play
+
+These examples demonstrate how the enterprise system works in actual gameplay scenarios.
 
 ### Scenario: Thieves Guild
 
@@ -102,6 +106,8 @@ Failed actions or complications can cost assets:
 As enterprises succeed, they naturally accumulate assets and attract new opportunities - and new problems.
 
 ## GM Guidelines
+
+These guidelines help GMs run enterprise scenes smoothly and create engaging large-scale conflicts.
 
 ### Setting Difficulty
 

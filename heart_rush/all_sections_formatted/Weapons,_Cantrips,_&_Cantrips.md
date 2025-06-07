@@ -86,6 +86,8 @@ Whips cannot be used in water.
 
 ### Damage Type
 
+Different weapons deal different types of damage, each excelling when used with specific combat stances. Understanding your weapon's damage type helps you choose the most effective stance in combat.
+
 #### Bludgeoning
 
 Bludgeoning weapons use raw force to inflict damage, and therefore are best used with high might.  

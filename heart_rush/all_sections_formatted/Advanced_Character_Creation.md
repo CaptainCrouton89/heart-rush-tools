@@ -287,6 +287,8 @@ Costs 20% of total accumulated XP upfront, minimum. This must be at least 10XP (
 
 ### Vampire
 
+The vampire path represents a dark transformation that grants immortal power at the cost of becoming dependent on blood. This path is typically gained through being bitten by another vampire or exposure to ancient vampiric magic.
+
 #### Tier 1
 
 - At night, while in dim light, you regain 1 hit point at the beginning of every round. At night, while in darkness, you regain 3 hit points instead.
@@ -406,6 +408,8 @@ By weakening the connection between your mind and body, you can open yourself to
 - If half or more of the conscious creatures in range want to do the same thing, such as laugh at a joke, fight back against a threat, or learn a new skill, you wish to do so as well. Treat this as a rank 4 aspect.
 
 ## WIP Paths
+
+These paths are currently in development and may change significantly before final release. They represent experimental character progression options.
 
 ### Physiarch
 

@@ -33,6 +33,8 @@ Depending on your temperature, there are different effects you suffer from.
 
 ### Effects of Temperature
 
+Temperature affects your body's ability to function properly. Here are the specific effects of each temperature tier:
+
 #### Muggy/Sweltering & Chilly
 
 These temperatures don't inflict penalties, but they make it harder to sleep. Check out the Rests & Healing section for details on sleeping checks.

@@ -31,6 +31,8 @@ During construction, and upon completion, it is assumed that your stronghold bec
 
 ## Miscellaneous Rules
 
+These additional rules govern various aspects of stronghold ownership and management.
+
 ### Upgrading your stronghold
 
 Upgrading your strong hold is as easy as paying the difference in prices between the current value of your stronghold and the new value of your stronghold.

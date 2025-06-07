@@ -74,6 +74,8 @@ When you take damage in Heart Rush, it can mean different things depending on ho
 
 ## Your Niche
 
+Your niche defines your character's specialization and unique role in the world. This encompasses your heritage, skills, experience, and personal traits that set you apart.
+
 ### Kin & Culture
 
 Everyone comes from a different background and has a different upbringing. When you create a character, choose a race from the Kin & Culture section. You gain the aspects and abilities that come from choosing that race.

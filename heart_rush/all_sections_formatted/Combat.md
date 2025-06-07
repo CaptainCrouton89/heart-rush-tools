@@ -287,6 +287,8 @@ In these cases, make a contested ability check against the creature.
 
 ## Special Circumstances
 
+Combat doesn't always begin on equal footing. Various circumstances can dramatically alter how a fight unfolds, giving advantages or disadvantages to different participants.
+
 ### Surprise
 
 In some cases when combat begins, one or more parties will be completely surprised, giving anyone who was already prepared to fight a large advantage.
