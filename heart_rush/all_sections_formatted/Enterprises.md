@@ -1,4 +1,4 @@
-# Enterprises
+# Enterprise System
 
 An **Enterprise** is any large-scale player ambition beyond individual adventuring - thieves guild, kingdom, merchant empire, religious movement, magical research institute, etc.
 

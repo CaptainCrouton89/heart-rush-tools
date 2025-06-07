@@ -33,35 +33,35 @@
 }
 
 html.dark {
-  /* Dark theme with deep red tones */
-  --background: #1a0d0b;
-  --foreground: #f7f0ed;
-  --card: #2c1715;
-  --card-foreground: #f7f0ed;
-  --border: #3d1f1b;
-  --input: #2c1715;
-  --ring: #ff4d2e;
+  /* Lighter dark backgrounds for better contrast */
+  --background: #1f1412;
+  --foreground: #f5f1ee;
+  --card: #2a1f1c;
+  --card-foreground: #f5f1ee;
+  --border: #423530;
+  --input: #2a1f1c;
+  --ring: #e85d42;
 
-  /* Brighter red and gold accents for dark mode */
-  --primary: #ff4d2e;
-  --primary-foreground: #1a0d0b;
-  --secondary: #daa520;
-  --secondary-foreground: #1a0d0b;
-  --accent: #ffd700;
-  --accent-foreground: #1a0d0b;
+  /* More muted primary colors */
+  --primary: #e85d42;
+  --primary-foreground: #ffffff;
+  --secondary: #c4951e;
+  --secondary-foreground: #ffffff;
+  --accent: #d4af37;
+  --accent-foreground: #1f1412;
 
-  /* Additional hover colors for dark mode */
-  --primary-hover: #ff6b4a;
-  --secondary-hover: #e63425;
-  --accent-hover: #ff4d2e;
-  --destructive: #ef4444;
-  --destructive-foreground: #f7f0ed;
+  /* Subtle hover states */
+  --primary-hover: #f06b4a;
+  --secondary-hover: #d4a221;
+  --accent-hover: #e8c547;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
 
-  /* Dark muted colors with red warmth */
-  --muted: #2c1715;
-  --muted-foreground: #e1cdc8;
-  --popover: #1a0d0b;
-  --popover-foreground: #f7f0ed;
+  /* Better muted colors */
+  --muted: #2a1f1c;
+  --muted-foreground: #a8958f;
+  --popover: #2a1f1c;
+  --popover-foreground: #f5f1ee;
 }
 
 @theme inline {

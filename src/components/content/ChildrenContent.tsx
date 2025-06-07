@@ -38,41 +38,42 @@ function ChildSection({ child, level }: ChildSectionProps) {
   if (hasChildren) {
     // Section with children - collapsible
     return (
-      <section className="mb-4">
-        <HeaderTag className={`${headerSize} font-semibold text-primary mb-2`}>
-          {child.title}
-        </HeaderTag>
-        
-        <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
-          <MarkdownRenderer content={child.content} />
-        </div>
-        
-        <button
+      <section className="mb-2">
+        <div 
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-2 cursor-pointer w-full text-left"
-          aria-label={isExpanded ? "Hide subsections" : "Show subsections"}
+          className="cursor-pointer py-1 px-3 rounded-md transition-colors duration-300 hover:bg-accent/10"
         >
-          <svg 
-            className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
+          <HeaderTag className={`${headerSize} font-semibold text-primary mb-2`}>
+            {child.title}
+          </HeaderTag>
           
-          <span>
-            {isExpanded ? 'Hide subsections' : 'Show subsections'}
-          </span>
-        </button>
+          <div className="prose prose-lg dark:prose-invert max-w-none mb-2">
+            <MarkdownRenderer content={child.content} />
+          </div>
+          
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <svg 
+              className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+            
+            <span>
+              {isExpanded ? 'Hide subsections' : 'Show subsections'}
+            </span>
+          </div>
+        </div>
         
         {/* Show nested children when expanded */}
         <div 
-          className={`transition-all duration-300 ease-in-out overflow-hidden ${
+          className={`transition-all duration-500 ease-in-out overflow-hidden ${
             isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="py-4 border-t border-border/20">
+          <div className="py-2 border-t border-border/20">
             <ChildrenContent sections={child.children!} level={level + 1} />
           </div>
         </div>
@@ -81,13 +82,15 @@ function ChildSection({ child, level }: ChildSectionProps) {
   } else {
     // Section without children - simple display
     return (
-      <section className="mb-4">
-        <HeaderTag className={`${headerSize} font-semibold text-primary mb-2`}>
-          {child.title}
-        </HeaderTag>
-        
-        <div className="prose prose-lg dark:prose-invert max-w-none">
-          <MarkdownRenderer content={child.content} />
+      <section className="mb-2">
+        <div className="py-1 px-3">
+          <HeaderTag className={`${headerSize} font-semibold text-primary mb-2`}>
+            {child.title}
+          </HeaderTag>
+          
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            <MarkdownRenderer content={child.content} />
+          </div>
         </div>
       </section>
     );
