@@ -35,7 +35,7 @@ export function SearchResults({
       regex.test(part) ? (
         <mark
           key={index}
-          className="bg-blue-600 text-white dark:bg-blue-400 dark:text-black rounded px-0.5"
+          className="bg-primary text-primary-foreground rounded px-0.5"
         >
           {part}
         </mark>
@@ -51,17 +51,17 @@ export function SearchResults({
   };
 
   return (
-    <div className="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-lg z-50 max-h-96 overflow-y-auto">
-      <div className="sticky top-0 bg-gray-50 dark:bg-gray-700 px-3 py-2 border-b border-gray-200 dark:border-gray-600">
+    <div className="absolute top-full left-0 right-0 mt-1 bg-background border border-border rounded-md shadow-lg z-50 max-h-96 overflow-y-auto">
+      <div className="sticky top-0 bg-muted px-3 py-2 border-b border-border">
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <span className="text-sm font-medium text-foreground">
             {results.length} result{results.length !== 1 ? "s" : ""} for "
             {query}"
           </span>
           {onClose && (
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              className="text-muted-foreground hover:text-foreground"
             >
               <svg
                 className="w-4 h-4"
@@ -83,7 +83,7 @@ export function SearchResults({
 
       {results.length === 0 ? (
         <div className="px-4 py-6 text-center">
-          <div className="text-gray-500 dark:text-gray-400">
+          <div className="text-muted-foreground">
             <svg
               className="mx-auto h-12 w-12 mb-4"
               fill="none"
@@ -104,7 +104,7 @@ export function SearchResults({
           </div>
         </div>
       ) : (
-        <div className="divide-y divide-gray-200 dark:divide-gray-600">
+        <div className="divide-y divide-border">
           {results.map((result, index) => (
             <Link
               key={`${result.slug}-${index}`}
@@ -113,28 +113,28 @@ export function SearchResults({
                 onClose?.();
                 onClearInput?.();
               }}
-              className="block px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              className="block px-4 py-3 hover:bg-muted transition-colors"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">
+                  <h3 className="text-sm font-medium text-foreground mb-1">
                     {highlightText(result.title, query)}
                   </h3>
 
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                    <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-secondary text-secondary-foreground">
                       {result.category}
                     </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                    <span className="text-xs text-muted-foreground">
                       Level {result.level}
                     </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                    <span className="text-xs text-muted-foreground">
                       {formatReadingTime(result.reading_time)} read
                     </span>
                   </div>
 
                   {result.snippet && (
-                    <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
+                    <p className="text-sm text-muted-foreground line-clamp-2">
                       {highlightText(result.snippet, query)}
                     </p>
                   )}
@@ -144,13 +144,13 @@ export function SearchResults({
                       {result.tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="inline-flex items-center px-1.5 py-0.5 rounded text-xs bg-gray-100 text-gray-700 dark:bg-gray-600 dark:text-gray-300"
+                          className="inline-flex items-center px-1.5 py-0.5 rounded text-xs bg-muted text-muted-foreground"
                         >
                           {highlightText(tag, query)}
                         </span>
                       ))}
                       {result.tags.length > 3 && (
-                        <span className="text-xs text-gray-500 dark:text-gray-400">
+                        <span className="text-xs text-muted-foreground">
                           +{result.tags.length - 3} more
                         </span>
                       )}
@@ -160,7 +160,7 @@ export function SearchResults({
 
                 <div className="flex-shrink-0 ml-2">
                   {result.score !== undefined && (
-                    <div className="text-xs text-gray-400 dark:text-gray-500">
+                    <div className="text-xs text-muted-foreground">
                       {Math.round((1 - result.score) * 100)}% match
                     </div>
                   )}
@@ -168,7 +168,7 @@ export function SearchResults({
               </div>
 
               {result.matches && result.matches.length > 0 && (
-                <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+                <div className="mt-2 text-xs text-muted-foreground">
                   Matches in: {result.matches.map((m) => m.field).join(", ")}
                 </div>
               )}
@@ -178,8 +178,8 @@ export function SearchResults({
       )}
 
       {results.length > 0 && (
-        <div className="sticky bottom-0 bg-gray-50 dark:bg-gray-700 px-3 py-2 border-t border-gray-200 dark:border-gray-600">
-          <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+        <div className="sticky bottom-0 bg-muted px-3 py-2 border-t border-border">
+          <p className="text-xs text-muted-foreground text-center">
             Press Enter to search, Escape to close
           </p>
         </div>

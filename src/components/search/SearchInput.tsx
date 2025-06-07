@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
-import { searchContent, getSearchSuggestions } from '../../lib/search';
-import { SearchResult } from '../../types/content';
+import { useEffect, useRef, useState } from "react";
+import { getSearchSuggestions, searchContent } from "../../lib/search";
+import { SearchResult } from "../../types/content";
 
 interface SearchInputProps {
   onResults?: (results: SearchResult[]) => void;
@@ -12,18 +12,24 @@ interface SearchInputProps {
   value?: string;
 }
 
-export function SearchInput({ onResults, onQueryChange, onClose, searchResults, value }: SearchInputProps) {
-  const [query, setQuery] = useState(value || '');
+export function SearchInput({
+  onResults,
+  onQueryChange,
+  onClose,
+  searchResults,
+  value,
+}: SearchInputProps) {
+  const [query, setQuery] = useState(value || "");
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const inputRef = useRef<HTMLInputElement>(null);
   const debounceRef = useRef<NodeJS.Timeout | null>(null);
 
   // Update query when value prop changes
   useEffect(() => {
-    setQuery(value || '');
+    setQuery(value || "");
   }, [value]);
 
   const performSearch = async (searchQuery: string) => {
@@ -37,7 +43,7 @@ export function SearchInput({ onResults, onQueryChange, onClose, searchResults, 
       const results = await searchContent(searchQuery, undefined, 20);
       onResults?.(results);
     } catch (error) {
-      console.error('Search failed:', error);
+      console.error("Search failed:", error);
       onResults?.([]);
     } finally {
       setIsLoading(false);
@@ -54,7 +60,7 @@ export function SearchInput({ onResults, onQueryChange, onClose, searchResults, 
       const suggestionList = await getSearchSuggestions(searchQuery, 5);
       setSuggestions(suggestionList);
     } catch (error) {
-      console.error('Failed to get suggestions:', error);
+      console.error("Failed to get suggestions:", error);
       setSuggestions([]);
     }
   };
@@ -66,7 +72,7 @@ export function SearchInput({ onResults, onQueryChange, onClose, searchResults, 
 
     debounceRef.current = setTimeout(() => {
       onQueryChange?.(query);
-      
+
       if (query.trim()) {
         performSearch(query);
         getSuggestions(query);
@@ -86,11 +92,11 @@ export function SearchInput({ onResults, onQueryChange, onClose, searchResults, 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setShowSuggestions(false);
-    
+
     // Navigate to first search result if available
     if (searchResults && searchResults.length > 0) {
       window.location.href = `/${searchResults[0].slug}`;
-      setQuery('');
+      setQuery("");
       onClose?.();
     }
   };
@@ -144,17 +150,17 @@ export function SearchInput({ onResults, onQueryChange, onClose, searchResults, 
           {isLoading ? (
             <div className="animate-spin rounded-full h-4 w-4 border-2 border-border border-t-primary"></div>
           ) : (
-            <svg 
-              className="w-4 h-4 text-muted-foreground" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-4 h-4 text-muted-foreground"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
           )}
@@ -163,24 +169,24 @@ export function SearchInput({ onResults, onQueryChange, onClose, searchResults, 
           <button
             type="button"
             onClick={() => {
-              setQuery('');
+              setQuery("");
               onResults?.([]);
               setSuggestions([]);
               setShowSuggestions(false);
             }}
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
           >
-            <svg 
-              className="w-4 h-4 text-muted-foreground hover:text-foreground" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-4 h-4 text-muted-foreground hover:text-foreground"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M6 18L18 6M6 6l12 12" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </button>
@@ -188,25 +194,27 @@ export function SearchInput({ onResults, onQueryChange, onClose, searchResults, 
       </form>
 
       {/* Search Suggestions */}
-      {showSuggestions && suggestions.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-card border border-border rounded-md shadow-lg z-50 max-h-40 overflow-y-auto">
-          {suggestions.map((suggestion, index) => (
-            <button
-              key={index}
-              type="button"
-              onClick={() => handleSuggestionClick(suggestion)}
-              className="
+      {showSuggestions &&
+        suggestions.length > 0 &&
+        (!searchResults || searchResults.length === 0) && (
+          <div className="absolute top-full left-0 right-0 mt-1 bg-card border border-border rounded-md shadow-lg z-40 max-h-40 overflow-y-auto">
+            {suggestions.map((suggestion, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => handleSuggestionClick(suggestion)}
+                className="
                 w-full px-3 py-2 text-sm text-left
                 hover:bg-accent
                 text-foreground
                 border-b last:border-b-0 border-border
               "
-            >
-              {suggestion}
-            </button>
-          ))}
-        </div>
-      )}
+              >
+                {suggestion}
+              </button>
+            ))}
+          </div>
+        )}
     </div>
   );
 }
