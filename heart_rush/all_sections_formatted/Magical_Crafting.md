@@ -239,7 +239,7 @@ The following examples show magical items designed for Heart Rush's unique comba
 
 ### Level 6 Examples
 
-**Heartforge Circlet** (Smithing): Your heart die cannot be reduced below d6. When you would take a wound, roll your heart die - on a 6+, the wound's rank is reduced by half (rounded down). When you heal hitpoints, all allies within 30 feet also heal equal to half the amount, rounded down. Requires one level 6 corporeal components, one level 6 soulful component, one level 6 inert component, and three level 6 neutral components. Takes 36 days with 6 successful checks.
+**Heartforge Circlet** (Smithing): When you would take a wound, roll your heart die - on a 6+, the wound's rank is reduced by half (rounded down). When you heal hitpoints, all allies within 30 feet also heal equal to half the amount, rounded down. Requires one level 6 corporeal components, one level 6 soulful component, one level 6 inert component, and three level 6 neutral components. Takes 36 days with 6 successful checks.
 
 **Essence of Unbinding** (Alchemy): Permanently gain: Opportunity attacks don't cost actions/rush points, you can make unlimited opportunity attacks per round, and creatures cannot avoid your opportunity attacks by sidestepping. Requires one level 6 soulful component, two level 6 forceful components, one level 6 temporal component, and two level 6 neutral components. Produces 1 dose.
 
