@@ -45,9 +45,17 @@ Understanding your weapon's damage type helps you choose the most effective stan
 
 ## Cantrips
 
-Cantrips are very similar to normal weapons. They can be melee or ranged, and heavy, light, or ultralight, and they can be cast any time you would normally make an attack with a weapon.  
+Cantrips are magical weapons that function identically to physical weapons in combat. Unlike spells (which are separate strategic abilities), cantrips are used within engagements and follow all normal weapon attack rules.
+
 However, unlike weapons, you can only use a cantrip if you have an attunement to the corresponding element.  
 Also, since elemental attacks are not always physical, they don't always deal damage, and the bonus granted by the might stance is sometimes different.
+
+**Cantrips Are NOT Spells**
+
+- Cantrips have no cooldowns, casting restrictions, or action requirements
+- They're used exactly like weapons during engagements
+- They don't count toward your "one spell per round" limit
+- Movement restrictions for spellcasting don't apply to cantrips
 
 **Concept:**  
 Cantrips and weapons are conceptually different. However, the rules for spells are similar to ranged weapons. Unlike spells, they are used during engagements in the same way as weapons.  

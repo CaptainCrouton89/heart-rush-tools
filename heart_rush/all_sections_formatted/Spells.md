@@ -2,6 +2,14 @@
 
 Spells are powerful elemental abilities that require mastery over the fundamental forces of nature. While anyone with elemental attunements can learn basic cantrips, true spellcasting demands deeper understanding and comes with significant restrictions. Spelltouched warriors have developed techniques to blend magic with martial combat, but even they must respect the fundamental limitations of channeling elemental forces.
 
+**Important: Spells vs. Cantrips**
+
+Spells and cantrips are fundamentally different magical abilities:
+- **Cantrips** are magical "weapons" used within engagements, following all normal combat rules, usable indefinitely
+- **Spells** are powerful strategic abilities that use your action outside of engagements, limited by cooldowns and restrictions
+
+Think of cantrips as your magical sword, and spells as your once-per-battle special abilities.
+
 ## Learning Spells
 
 Learning a spell represents mastery over some aspect of your connection with an element, allowing you to perform fantastical feats beyond simple elemental manipulation.
@@ -31,6 +39,8 @@ Every spell casting must meet these fundamental requirements:
 □ **Required attunements** (basic minimum for all elements in spell tags)  
 □ **Movement restrictions observed** (see table below)  
 □ **Spell off cooldown** (you can't cast the same spell multiple times per combat)
+
+**Note:** These casting requirements apply ONLY to spells, never to cantrips. Cantrips follow weapon attack rules instead.
 
 ### Movement and Spellcasting
 
@@ -74,6 +84,19 @@ _Example: d8 heart die + paragon level 2 = CN 12_
 ---
 
 The spells that follow represent the fundamental magical techniques available to those who have mastered elemental attunements. Each spell description includes its elemental requirements, duration type, and complete mechanical effects.
+
+## When to Use Spells vs. Cantrips
+
+**Use Cantrips When:**
+- You're in an engagement and need to attack
+- You want consistent, repeatable magical damage
+- You need to conserve your limited spell uses
+
+**Use Spells When:**
+- You need to control the battlefield (walls, area effects)
+- You want to affect multiple enemies outside engagement range
+- You need powerful, game-changing effects
+- You're not currently in an engagement
 
 ## Spells
 

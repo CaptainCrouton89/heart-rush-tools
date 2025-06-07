@@ -271,7 +271,9 @@ After the engagement resolves, combat continues with the next character in initi
 
 ## Spellcasting in Combat
 
-Magic operates on two different levels during combat, each with distinct rules and tactical applications.
+**Key Distinction: Two Types of Magic in Combat**
+
+Heart Rush uses magic in two completely different ways during combat. Do not confuse these:
 
 ### Magic in Combat
 
