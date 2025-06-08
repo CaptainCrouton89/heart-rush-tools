@@ -1781,83 +1781,6 @@ Oznak can be found across Central North Alaria, though individuals can be found 
 **Passive ability.**
 Choose a weapon or tool. If it is a weapon, you have advantage while wielding it. If it is a tool, you have A2 on all checks requiring the use of this tool.
 
-### Naga (Dragon blooded)
-
-Naga make up a long line of humans with dragon blood running in their veins. Every Naga is a distant descendent of Nagatayora, the almighty dragon-father and first son of Gaea. When Shara Bolasi died to Hykravones, Nagatayora flew into a rage and threw himself at the powerful titan. Such was his ferocity and intensity, Hykravones was nearly defeated. But slowly at first, and then methodically, Hykravones beat Nagatayora back, until finally grabbing ahold of each end of the colossal dragon and tearing him in two. As the fiery blood fell, and heated the lands beneath it, the people below transformed and became the Naga that still exist today.
-
-Naga are passionate and determined in all that they set their minds to, and have an incredibly rich culture of art, religious tradition, and philosophy. They also have a profound sense of pride, both for themselves, their culture, and the things they care about. If they feel that any of those things have been wronged, then they will not back down until amends have been made. Their fury is a terrible force to behold.
-
-#### Aspects
-
-- Iron determination
-- Boiling vengeance
-
-#### Aspect of the Dragon
-
-**Major ability.**
-You may channel your blood of Naga, and transform into a dragon-like form. Your head morphs into the head of a dragon and your scales surface in patches over your skin. While in this form, you gain the following traits:
-
-- You take half damage from fire.
-- You gain +1 to defense rolls from your natural, scaly armor.
-- You may belch fire, dealing 2d6 damage in a 10-foot cone. You may only use this ability once per transformation.
-- Whenever a creature deals damage to you, you gain one level of enraged towards that creature. If another creature deals damage to you, remove all other levels of enraged gained from this ability.
-- You have advantage on skill checks to intimidate others.
-
-You remain in this form until you spend your action to return to your human form.
-
-### Ulvsjael (Wolf children)
-
-The ulvsjael are human descendants of Ulvma, the wolf mother and the second child of the Gaea. When Shara Bolasi died in his duel against Hykravones, Nagatayora had descended into madness, Ulvma stayed back with the armies of Alaria and fought till the very end before being cut down and collapsing into the ground amongst the armies. When humans came and drank from her blood, the Ulvsjael were born.
-
-The Ulvsjael are a pragmatic and fiercely loyal race who believe in the natural order of life. Much of life revolves around small, nomadic units which travel as a pack. They will protect their comrades with their own lives, but they also feel no qualms about keeping those who cannot defend themselves alive. If you cannot contribute, you are culled. This harsh outlook is even more brutal towards outsiders, who are usually seen as dead weight until they have proven their worthiness to their pack. However, when the Ulvsjael themselves is the outsider—a rare appearance, due to their tendency to stick with their kind—they are frequently the hardest working, such is their desire to prove their usefulness to a new community.
-
-Ulvsjael can be found across Alaria, and are known for their formidable mercenary groups, trackers, and explorers.
-
-#### Aspects
-
-- Loyal to a fault
-- Only the strong can survive
-
-#### Aspect of the Wolf
-
-**Major ability.**
-You may channel your blood of Ulvsjael, and transform into a wolf-like form. Your head morphs into the head of a wolf and claws grow on your hands. While in this form, you gain the following traits:
-
-- You gain A2 on all skill checks for perceiving things that can be smelt or heard.
-- Your move speed increases by 40 feet.
-- Your jaws and claws count as light piercing and slashing melee weapons, respectively.
-- Whenever you are in an engagement, choose a valid target for your stance. All creatures have advantage on attack rolls against that creature.
-- You cannot hold a weapon or shield or manipulate fine objects.
-
-You remain in this form until you spend your action to return to your human form.
-
-### Sharabha (Lion hearts)
-
-Sharabha are the children of Shara Bolasi, the great lion father and third child of Gaea. When Hykravones first arrived on Alaria, Shara Bolasi was the first to step forward, alone, to make a stand against the powerful titan. In the terrible ensuing battle, Shara Bolasi was slowly beaten down, before at last, Hykravones stepped forward and ripped Shara Bolasi's heart out through his chest, before stomping it beneath his foot. Millenia later, when people had settled across Alaria once more, the humans who ate from the soil there became the first Sharabha.
-
-Sharabha are known for their warmth, compassion, and incredible honor. In Sharabha communities, a lying Sharabha is an exiled Sharabha. The leaders of Sharabha prides, as they are sometimes called, are usually the strongest, most respected member of a pride. They will make unilateral decisions for the pride until a new leader is chosen.
-
-Outside these communities, Sharabha who have willingly left do not practice many of their more traditional rituals, but maintain their fierce sense of principles and morality.
-
-#### Aspects
-
-- My honor before my life
-- Better die brave than live a coward
-
-#### Aspect of the Lion
-
-**Major ability.**
-You may channel your blood of Shara Bolasi, and transform into a lion-like form. Your head morphs into the head of a lion and claws grow on your hands. While in this form, you gain the following traits:
-
-- Your jaws count as a heavy piercing weapon. Your claws count as light slashing weapons.
-- Whenever you deal damage with your jaws to an enemy, you may choose to not let go. If you do, and if the creature is no more than one size larger than you, the creature takes a level of restrained until it spends its action and wins a might check against your might challenge number. While holding on, you cannot attack with your jaws again. Both you and the bitten creature have your move speeds reduced by half, and move together.
-- You cannot hold a weapon or shield or manipulate fine objects.
-- You are immune to the frightened condition.
-
-You remain in this form until you spend your action to return to your human form.
-
-Looking at the existing format and the information provided, here are the markdown entries for the new human subraces:
-
 ### Vyanoweir
 
 The Vyanoweir were once a mighty culture of community-oriented Deoric casters who wielded words of power to shape reality itself. Their mastery over the language of truth was unparalleled, allowing them to speak changes into existence with collective rituals that could reshape landscapes and bend the fundamental laws of nature.
@@ -2329,35 +2252,6 @@ You share an instinctive bond with your mount—it obeys your commands without r
 
 If your raptor dies, you can bond with a new utahraptor during a week-long ritual in a jungle environment, though the loss of your first mount leaves you with a permanent level of shaken that cannot be removed.
 
-## Lyndwyrmspren
-
-The Lyndwyrmspren, known as Scale Riders to outsiders, are powerful naga warriors who have built their civilization in the harsh peaks of the Lyagnadarr Mountains. These serpentine humanoids with their lower bodies of great snakes have formed an unbreakable bond with the giant lizards that inhabit their mountain homes, riding them into battle as they expand their territory with religious fervor.
-
-At the heart of their empire lies an ancient orange dragon who has commanded them to spread their dominion as far as possible. The Lyndwyrmspren have interpreted this decree as a holy crusade, claiming ownership of the entire Luquihn Desert below their mountains, though their actual patrols rarely venture far into its scorching expanse. They see themselves as crusader knights of a draconic order, destined to bring the world under their scaled banner.
-
-Their discovery of ancient tombs in the Dunes of Kalamesh has only reinforced their belief in their divine mandate. They believe that when the time comes for the final conquest, their dragon lord will descend from the mountains to lead them personally into battle.
-
-### Aspects
-
-- Conquest is our divine mandate
-- My mount and I are one
-
-### Vitals
-
-- **Size:** Large (due to serpentine lower body)
-- **Height:** 7-8 feet (when upright)
-- **Weight:** 300-400 pounds
-
-### Serpentine Form
-
-**Passive ability.**
-Your lower body is that of a powerful snake, giving you a climb speed of 30 feet and a swim speed of 30 feet. You cannot be knocked prone—instead, you coil defensively, gaining +2 defense until you move. You count as mounted for the purposes of abilities and equipment.
-
-### Lizard Rider Bond
-
-**Major ability.**
-You have a mystical bond with a giant riding lizard (use warhorse statistics but with a climb speed of 20 feet and +2 natural armor). While mounted on your bonded lizard, you and your mount act on the same initiative and can both attack during the same engagement without spending separate actions. If your mount dies, you can bond with a new lizard after spending 7 days in ritual mourning.
-
 ## Lyzine
 
 The Lyzine are fallen nobility whose pride remains unbroken despite their exile to the depths below. With the graceful torsos of elegant humanoids seamlessly joined to the powerful, chitinous bodies of giant spiders, they embody both beauty and horror. Once rulers of great surface kingdoms, they were banished to the underground realms of Mez after their arrogance and cruelty became too much for even their subjects to bear.
@@ -2554,6 +2448,74 @@ As an action, you release a cloud of spores in a 10-foot radius. Creatures of yo
 **Passive ability.**
 
 When you take a short rest in a damp or underground environment, you regain 10 hit points. You take half damage from poison and disease but double damage from fire.
+
+## Naga
+
+The Naga are the descendants of Nagatayora, the mighty dragon-father who fell in battle against the titan Hykravones. When Nagatayora's burning blood fell to earth, it transformed those it touched, imbuing them with a spark of draconic power that has been passed down through generations. All Naga carry this legacy within them, though it manifests differently among their various bloodlines.
+
+At the core of every Naga is the potential for transformation - the ability to partially assume the form of their draconic ancestor. This gift comes with both power and responsibility, as the passionate nature of dragonkind burns within their hearts. The Naga have developed rich cultures of art, philosophy, and religious tradition, all touched by their inherent pride and determination.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5.5-6.5 feet
+- **Weight:** 120-200 pounds
+- **Max Age:** 160 years
+
+### Aspects
+
+- Iron determination
+- Pride runs deeper than blood
+
+### Draconic Awakening
+
+**Major ability.**
+You may channel the blood of Nagatayora, causing your head to transform into a draconic visage while scales emerge across your skin. This transformation lasts until you spend an action to return to your human form. While transformed, you gain:
+
+- Your scales provide +1 to defense rolls
+- You have advantage on intimidation checks
+- Whenever a creature deals damage to you, gain one level of enraged toward that creature (removing previous enraged levels from this ability)
+
+### Nagakani (Scale Riders)
+
+The Nagakani, known to outsiders as Scale Riders, have built their civilization in the harsh peaks of the Lyagnadarr Mountains. These dragon-blooded warriors have formed an unbreakable bond with the giant lizards that inhabit their mountain homes, developing a culture that blends draconic pride with mounted warfare.
+
+At the heart of their empire lies an ancient orange dragon who has commanded them to spread their dominion across the world. The Nagakani have interpreted this decree as a holy crusade, establishing mountain fortresses and patrolling the borders of their ever-expanding territory. They see themselves as crusader knights of a draconic order, destined to bring the world under their scaled banner.
+
+Their discovery of ancient tombs in the nearby deserts has only reinforced their belief in their divine mandate. They believe that when the time comes for the final conquest, their dragon lord will descend from the mountains to lead them personally into glorious battle.
+
+#### Aspects
+
+- Conquest is our divine mandate
+- My mount and I fight as one
+
+#### Lizard Rider Bond
+
+**Passive ability.**
+You have formed a mystical bond with a giant riding lizard (use riding horse statistics but with a climb speed of 20 feet and +2 natural armor). Your mount shares your initiative and can attack during the same engagement without requiring a separate action. If your mount dies, you can bond with a new lizard after spending 7 days in ritual mourning and meditation.
+
+While transformed via Draconic Awakening, you may breathe fire as your mount's attack during an engagement, dealing 2d6 damage in a 10-foot cone (once per transformation).
+
+### Nagashi (Dragonheart)
+
+The Nagashi represent the most common expression of draconic heritage among the Naga peoples. Found across Alaria in great numbers, they have integrated into countless societies while maintaining their distinctive pride and passion. Their scales manifest in subtle patterns across their skin - sometimes only visible in certain light - marking them as carriers of Nagatayora's legacy.
+
+Nagashi communities are centers of art, learning, and philosophical debate. They approach every endeavor with the burning intensity of their draconic blood, whether crafting a masterpiece, engaging in scholarly pursuit, or seeking vengeance for wrongs done to their kin. This passion makes them both inspiring allies and terrifying enemies.
+
+Their transformation is perhaps the purest expression of their heritage - a direct channeling of Nagatayora's fury that served him in his final battle. The Nagashi see this ability not as a tool but as a sacred trust, a reminder of their ancestor's sacrifice and their duty to live with the same unwavering determination.
+
+#### Aspects
+
+- Boiling vengeance
+- Excellence demands total commitment
+
+#### Dragon's Fury
+
+**Passive ability.**
+Your connection to Nagatayora's final rage grants you exceptional resilience and fighting spirit. You take half damage from fire. Additionally, while transformed via Draconic Awakening:
+
+- You may breathe fire once per transformation, dealing 2d6 damage in a 10-foot cone
+- You gain a level of advantage on attack rolls agaisnt the source of your enragement, per level of enraged.
 
 ## Naruaghin
 
@@ -3140,6 +3102,77 @@ Choose an ability from this section and gain its tier 1 ability. You can gain th
 - **Tier 1:** You have the Sight, and can see glimpses into the future. Whenever you fall asleep or are unconscious, you have a vision. Before you wake up, you may ask the GM a question about an event in the future. The GM must give a vague answer (generally no more than a couple words), to the best of their ability.
 - **Tier 2:** Your futuresight is more developed. Once, at the beginning of each day, roll three dice of any size you wish. Whenever you, the GM, or anyone else rolls a die with size matching one of the dice you rolled, you may replace the result with the result from your die roll. After doing so, you cannot use that die again.
 
+## Sharabha
+
+The Sharabha are the noble descendants of Shara Bolasi, the great lion father who stood alone against the titan Hykravones in the world's darkest hour. Though he fell in that legendary battle, his courage and sacrifice transformed the very earth where his heart's blood spilled. Generations later, those who settled upon that sacred ground found themselves changed, imbued with the lion father's indomitable spirit.
+
+All Sharabha carry within them Shara Bolasi's legacy - not just his leonine strength, but his profound sense of honor, his protective instincts, and his willingness to face any odds for what is right. This inheritance manifests in their ability to partially assume their ancestor's form, but more importantly in their unshakeable moral compass and fierce loyalty to their chosen pride.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5.5-7 feet
+- **Weight:** 140-240 pounds
+- **Max Age:** 120 years
+
+### Aspects
+
+- My honor before my life
+- The pride stands together or falls together
+
+### Lion's Heart Awakening
+
+**Major ability.**
+You channel the blood of Shara Bolasi, transforming into a lion-like form. Your head becomes that of a great lion and powerful claws extend from your hands. This transformation lasts until you spend an action to return to your normal form. While transformed:
+
+- Your bite counts as a heavy piercing weapon, your claws as light slashing weapons
+- You cannot hold weapons, shields, or manipulate fine objects
+- You are immune to the frightened condition
+- Your bite can be used to initiate grapples (see subrace abilities for special grappling benefits). When you first grapple the creature with your bite, and on each subsequent turn, you may inflict 1d6 piercing damage.
+
+### Sharakari (Pride Guardians)
+
+The Sharakari embody Shara Bolasi's role as protector and leader. These Sharabha have developed their transformation to emphasize defending their pride rather than destroying enemies. In Sharakari communities, the measure of a warrior is not how many foes they've slain, but how many allies they've saved.
+
+Sharakari society revolves around the concept of the "Pride Circle" - concentric rings of loyalty starting with immediate family, extending to clan, community, and finally to all honorable beings. They train from childhood in formations designed to protect the vulnerable, and their transformation reflects this philosophy. A Sharakari who allows harm to come to those under their protection while they still draw breath is considered to have failed their most sacred duty.
+
+Their settlements are built like fortresses turned inside-out, with the strongest warriors living on the perimeter and the most vulnerable at the protected center. Every Sharakari knows their place in the defensive formation and can assume it instantly when danger threatens.
+
+#### Aspects
+
+- Shield of the innocent
+- I am strongest when others need me
+
+#### Guardian's Grip
+
+**Passive ability.**
+Your protective instincts enhance your grappling abilities when defending others. While transformed via Lion's Heart Awakening:
+
+- When you win an engagement by directly beating your opponent's stance, you may use your bite to grapple instead of your hands
+- You have advantage on grapple checks made with your bite
+- The passive damage from grappling a creature with your bite uses your might die rather than 1d6 (minimum 1d6).
+- Creatures grappled by your bite have disadvantage on attack rolls against anyone except you
+
+### Sharadin (Oathspeakers)
+
+The Sharadin have taken Shara Bolasi's final stand and transformed it into a living philosophy. They believe that words spoken with true conviction carry the same power as the lion father's roar - they can shake the earth, bind fate, and change the course of history. These Sharabha have developed elaborate oath-taking ceremonies where their transformation serves as both witness and seal to their vows.
+
+In Sharadin society, an oath sworn in lion form is absolutely unbreakable. They believe that breaking such a vow would not just dishonor them but would retroactively dishonor Shara Bolasi's sacrifice. This has led to a culture where words are chosen with extreme care and promises are rare but absolute. Sharadin often serve as judges, arbiters, and oath-witnesses for other cultures who value their supernatural inability to break their word.
+
+The most powerful Sharadin can even bind others with their oaths, creating mystical contracts that enforce themselves. They say that when a Sharadin speaks an oath, Shara Bolasi himself listens from beyond death to ensure it is kept.
+
+#### Aspects
+
+- My word is iron law
+- Truth has the power to change worlds
+
+#### Oathbound Roar
+
+**Major ability.**
+Your transformation carries the weight of Shara Bolasi's legendary defiance. While transformed via Lion's Heart Awakening, you gain the ability to unleash a terrifying roar that echoes your ancestor's final stand.
+
+Once per transformation, you may use your action to roar. All hostile creatures within 30 feet must make a cunning saving throw against your presence challenge number or gain a level of frightened. Creatures that fail by 5 or more are also knocked prone by the sheer force of your defiance.
+
 ## Skaag
 
 The Skaag, commonly known as "rat people," bear the heads of rats atop humanoid bodies. Their fur ranges from brown to black to gray, with pink tails and constantly twitching whiskers. Large ears swivel independently to track sounds, while their dark, beady eyes dart nervously even in apparent safety. Despite their unsettling appearance, most Skaag dress in typical humanoid clothing, trying desperately to fit in with societies that largely reject them.
@@ -3478,6 +3511,77 @@ Your connection to the boundary between life and death grants you power over bot
 - Animate up to 4 corpses as skeletons or zombies that obey your commands for 1 hour
 - Prevent up to 4 corpses from being animated or raised as undead permanently
 - Speak with the spirit of a dead creature, asking up to 3 questions
+
+## Ulvsjael
+
+The Ulvsjael are the descendants of those who drank from the blood of Ulvma, the great wolf mother who fell defending Alaria against the titan Hykravones. Where Nagatayora descended into rage and Shara Bolasi stood alone, Ulvma remained with the armies, fighting with pack tactics and fierce loyalty until her final breath. Her blood, seeping into the earth where warriors gathered, was consumed by those seeking her strength - and they were forever changed.
+
+All Ulvsjael carry the wolf's spirit within them, granting them the ability to partially transform and take on lupine characteristics. But more than physical traits, they inherited Ulvma's philosophy: the pack survives through unity, the weak must be culled or made strong, and loyalty once earned is absolute. This harsh pragmatism has shaped every Ulvsjael culture, though it expresses itself in different ways.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5.5-6.5 feet
+- **Weight:** 130-220 pounds
+- **Max Age:** 80 years
+
+### Aspects
+
+- The pack endures
+- Prove your worth or perish
+
+### Wolf's Blood Awakening
+
+**Major ability.**
+You may channel the blood of Ulvma, transforming into a wolf-like form. Your head morphs into that of a wolf while your hands sprout functional claws. This transformation lasts until you spend an action to return to your human form. While transformed:
+
+- You gain A2 on all skill checks involving scent or hearing
+- Your jaws and claws count as light piercing and slashing melee weapons respectively
+- You cannot wield weapons or shields, nor manipulate fine objects
+- Your movement speed increases by 20 feet
+
+### Ulvskyn (True Blood)
+
+The Ulvskyn are those Ulvsjael who have kept closest to Ulvma's original teachings, maintaining the harsh but fair philosophy of the pack. They form tight-knit communities where every member has a role and every role is vital. These are the Ulvsjael who still practice the ancient rites - the Culling of the Weak, the Howl of Unity, and the Blood Oath of the Pack.
+
+Ulvskyn communities are meritocracies in the purest sense. Age, gender, and birthright mean nothing - only contribution matters. Children are raised communally and tested constantly, with those showing weakness given chance after chance to find their strength. Only those who refuse to grow, who choose weakness over struggle, face exile. This harsh system produces incredibly capable individuals who value competence above all else.
+
+Their transformation reflects this pack mentality perfectly. When a Ulvskyn assumes their wolf form in battle, they mark prey for the pack, turning combat into a coordinated hunt where the weak are separated and brought down by unified assault.
+
+#### Aspects
+
+- Weakness dishonors the fallen
+- United we hunt, divided we starve
+
+#### Pack Hunter's Instinct
+
+**Passive ability.**
+Your dedication to pack tactics grants supernatural coordination in battle. Whenever you and an ally are adjacent to the same enemy, you both add 1d4 to attack rolls against that enemy. This bonus increases to 1d6 if three or more pack members (you and allies) surround the same target.
+
+### Ulvsein (Lone Wolf)
+
+The Ulvsein represent a paradox in Ulvsjael culture - those who honor the wolf mother by walking alone. They believe that while Ulvma fought with the pack, she died surrounded yet ultimately alone, teaching that every wolf must be capable of surviving without others. These Ulvsjael become legendary scouts, trackers, and assassins, developing an almost supernatural connection to the wilderness.
+
+Where Ulvskkyn see strength in unity, Ulvsein find it in self-reliance. They often serve as far-ranging scouts for Ulvsjael communities or work as guides and hunters for other races. Their philosophy isn't a rejection of the pack but rather a belief that the pack is strongest when each member could survive alone. They return to their communities with valuable skills and knowledge gained from solitary wandering.
+
+Their transformation enhances their already formidable tracking abilities, and their fighting style emphasizes mobility and adaptation rather than pack coordination. A Moonstrider in wolf form is a terrifying opponent - unpredictable, swift, and capable of attacking from unexpected angles.
+
+#### Aspects
+
+- The lone wolf teaches what the pack cannot
+- Every trail tells a story
+
+#### Predator's Pursuit
+
+**Passive ability.**
+Your solitary hunting has honed your tracking abilities to supernatural levels. You have advantage on all checks to track creatures, and you can identify any creature by scent if you've encountered it before. You leave no tracks unless you choose to.
+
+Additionally, while transformed via Wolf's Blood Awakening:
+
+- Your movement speed increases by an additional 20 feet (40 feet total with the base transformation)
+- You may take the dash action as a free action once per round
+- When you move at least 20 feet toward an enemy and make an attack in the same round, add 1d6 to your attack roll
+- You have advantage on initiative rolls as your predatory instincts alert you to danger
 
 ## Valkyries
 
