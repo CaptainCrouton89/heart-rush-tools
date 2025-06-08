@@ -13,15 +13,17 @@ Most Neferati dwell within the Four Kingdoms of Fire, great nations built around
 
 ### Vitals
 
-- **Type:** Race
 - **Size:** Medium
 - **Height:** 5-6.5 feet
 - **Weight:** 100-200 pounds
 - **Max Age:** 80
 
+### Ram Horns
+
+**Passive ability.**
+Your horns count as light, bludgeoning, melee weapons.
+
 ### Fire Soul
 
 **Passive ability.**
-Rather than sleep, you must spend 4 hours around fire. The fire cannot be one that you are actively producing, and must be at least the size of a small campfire. You can perform undemanding tasks while you rest. You gain a basic attunement to fire.
-
-Additionally, you are immune to damage from environmental heat (but not fire damage), and your passionate nature grants you +2 to presence checks when expressing strong emotions.
+You gain an advanced attuenement to fire. Rather than sleep, you must spend 4 hours around fire. The fire cannot be one that you are actively producing, and must be at least the size of a small campfire. You can perform undemanding tasks while you rest.

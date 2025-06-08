@@ -9,13 +9,11 @@ Kendor society revolves around elaborate courtship rituals, political maneuverin
 - **Size:** Medium
 - **Height:** 6-7.5 feet (including decorative fin crests)
 - **Weight:** 140-200 pounds
-- **Swim Speed:** 60 feet
-- **Land Speed:** 30 feet (base, before modifiers)
 
 ### Aquatic Grace
 
 **Passive ability.**
-You can breathe both air and water. While underwater, you have advantage on all agility checks and defense rolls. You can communicate telepathically with any creature within 30 feet while both you and the target are underwater. On land, you must immerse yourself in water for at least 10 minutes during each long rest or gain a level of weakened that doesn't fade until you do so.
+You can breathe both air and water, and suffer no disadvantage for skill checks or AD rolls made underwater. You can communicate telepathically with any creature within 30 feet while both you and the target are underwater. On land, you must immerse yourself in water for at least 10 minutes during each long rest or gain a level of weakened that doesn't fade until you do so.
 
 ### Kendrel (Court Kendor)
 

@@ -18,9 +18,9 @@ Yet this hospitality hides a dark truth: the Myushli reproduce through spores th
 
 ### Spore Cloud
 
-**Heart ability.**
+**Major ability.**
 
-As an action, you release a cloud of spores in a 10-foot radius. Creatures of your choice in the area must make a might saving throw against your cunning challenge number or gain two levels of confused. If a creature fails by 5 or more, they gain two levels of charmed toward you instead.
+As an action, you release a cloud of spores in a 10-foot radius. Creatures of your choice in the area must make a might saving throw against your cunning challenge number or gain two levels of confused.
 
 ### Fungal Regeneration
 

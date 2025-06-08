@@ -24,4 +24,4 @@ Many Swordsmen who leave their island homes become pirates, using their unparall
 **Major ability.**
 You can communicate telepathically with predatory sea creatures within 100 feet. Once per day, you can summon a school of predatory fish (or a single large predator if in appropriate waters) to aid you for 10 minutes. These creatures will scout, deliver messages, or fight alongside you but won't sacrifice themselves.
 
-Additionally, you can hold your breath for 30 minutes and have a swim speed of 40 feet. Your sword techniques mirror the movements of swordfish—when wielding any sword, you gain +1 to attack rolls and can attack creatures up to 10 feet away as your blade seems to extend like a swordfish's bill.
+Additionally, you can hold your breath for 30 minutes and have a swim speed of 30 feet. Your sword techniques mirror the movements of swordfish—when wielding any sword, you gain +1 to attack rolls and can attack creatures up to 10 feet away as your blade seems to extend like a swordfish's bill.

@@ -13,6 +13,7 @@ The Nyolci possess an almost supernatural ability to read people and situations,
 - **Size:** Medium
 - **Height:** 5-6 feet
 - **Weight:** 140-220 pounds
+- **Age:** 60-90
 
 ### Aspects
 
@@ -27,6 +28,4 @@ Your five head tentacles can manipulate objects with surprising precision and in
 ### Oceanic Intuition
 
 **Passive ability.**
-Your deep connection to the sea grants you uncanny insight into both natural and social currents. You automatically succeed on navigation checks while at sea or following coastlines. Additionally, you have advantage on skill checks to predict weather, read people's intentions, or sense when someone is lying to you. Once per day, you may ask the GM one yes-or-no question about the immediate future of a situation you're currently in.
-
-Looking at the example race template and the descriptions provided, I'll create these 9 races following the established format and mechanics consistent with Heart Rush's design principles.
+Your deep connection to the sea grants you uncanny insight into both natural and social currents. You automatically succeed on navigation checks while at sea or following coastlines. Additionally, you have advantage on skill checks to predict weather, read people's intentions, or sense when someone is lying to you.

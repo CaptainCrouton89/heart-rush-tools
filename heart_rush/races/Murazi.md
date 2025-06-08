@@ -20,7 +20,7 @@ The Murazi have adapted perfectly to their unique environment, with skin that sh
 ### Amphibious Desert Dweller
 
 **Passive ability.**
-You can breathe both air and water. You have a swim speed of 40 feet and do not suffer from the effects of extreme heat. You can survive on half the normal amount of water, as your body efficiently recycles moisture. You have darkvision to 60 feet in underwater environments.
+You can breathe both air and water, and suffer no disadvantage for skill checks or AD rolls made underwater. You have a swim speed of 40 feet and do not suffer from the effects of extreme heat. You have darkvision to 60 feet when underwater.
 
 ### Pearl Diver's Fortune
 

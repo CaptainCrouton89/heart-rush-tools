@@ -9,6 +9,7 @@ While often misunderstood by other races as purely savage, orcish cultures are r
 - **Size:** Medium
 - **Height:** 5.5-7 feet
 - **Weight:** 160-280 pounds
+- **Age:** 50-70 years
 
 ### Orcish Resilience
 
@@ -29,7 +30,7 @@ The Hedroscobbi's dark skin has adapted over generations to resist the corrosive
 #### Corrosive Armor Mastery
 
 **Passive ability.**
-You can wear specially crafted algae-iron armor that provides +8 defense instead of the normal +6 for heavy armor, but weighs twice as much. When a creature hits you with a melee weapon while you wear this armor, their weapon takes a -1 penalty to future attack rolls (cumulative). You are immune to acid damage.
+You start the game with a set of specially crafted algae-iron armor that provides +8 defense instead of the normal +6 for heavy armor. When a creature hits you with a melee weapon while you wear this armor, their weapon takes a -1 penalty to future attack rolls (cumulative). You are immune to acid damage.
 
 ### Glivornaxi (Gray Orc)
 
@@ -45,7 +46,7 @@ They are skilled spear-fighters, using their weapons primarily as defense agains
 #### Swamp Regeneration
 
 **Passive ability.**
-While in a swamp or marshland environment, you regain 1 hit point at the start of each round. Once per day, you may spend 10 minutes bathing in swamp water to reduce all wound ranks by 1. You ignore difficult terrain in swamps and marshes.
+While submerged in swamp water, brackish water, or in a bog, your short rests reduce the ranks of all your wounds by 1, and heal you to your maximum hit points.
 
 ### Tarni (Darkeyes)
 
@@ -61,7 +62,7 @@ These orcs have developed a unique understanding of the connection between spiri
 #### Spirit Warrior
 
 **Passive ability.**
-When you would be reduced to 0 hit points, roll your heart die. On a result of 6 or higher, you remain at 1 hit point instead. Your weapons can be enchanted to deal spirit damage that ignores armor and shield bonuses to defense.
+Rather than dying when you reach hitpoints equal to your negative maximum, you immediately go unconscious. If your hitpoints falls to four times that negative amount, you die. While in this range, so long as your body is in a livable environment (not underwater, for example), your wounds heal with long rests like normal.
 
 ### Uihonaii (Wooden Men)
 
@@ -77,7 +78,7 @@ However, they can only take root and transform in special soil, requiring them t
 #### Tree-Soul Bond
 
 **Major ability.**
-You may spend 1 hour to transform into a tree. While in tree form, you are immobile but gain +10 defense, immunity to most damage types, and can sense everything within 100 feet. You may remain in this form indefinitely but can only transform in soil from your homeland. If you die, you may choose to become a tree permanently, allowing for potential future rebirth.
+You may spend 1 hour to transform into a tree. While in tree form, you are immobile but gain +10 defense, and gain tremorsense out to 100 feet. You may use this ability again to spend an hour transforming back. If you die, you may choose to become a tree permanently, allowing for potential future rebirth.
 
 ### Shazuihni (Boar Rider)
 
@@ -93,11 +94,13 @@ These orcs live for the thrill of battle and the bond with their boar mounts. Th
 #### Boar Bond
 
 **Passive ability.**
-You have a giant boar companion with 60 hit points, d8 might and agility, and a gore attack that deals 2d8 damage. While mounted, you and your boar move as one unit, and you may use heavy weapons with one hand. If your boar dies, you may bond with a new one after 1 week.
+You start the game with a large boar mount. The boar has 1d10 might/1d6 agility/1d4 cunning, and can use its tusks as heavy, piercing melee weapons.
+
+If your boar dies, you may bond with a new one after 7 days spent in your homeland forest.
 
 ### Griebi (Lakemen)
 
-The Griebi are blueish-gray skinned orcs who can breathe underwater and rarely speak above the surface. They hunt and fish in the depths of lakes and rivers, using their terrifyingly long, needle-like teeth to catch prey underwater. Their society is ruled by a mysterious hag queen who dwells in the deepest waters.
+The Griebi are blueish-gray skinned orcs who can breathe underwater and rarely speak above the surface. They hunt and fish in the depths of lakes and rivers, using their terrifyingly rows of long, needle-like teeth to catch prey underwater. Their society is ruled by a mysterious hag queen who dwells in the deepest waters.
 
 These silent orcs are perfectly adapted for aquatic life, making them formidable opponents both above and below the water's surface.
 
@@ -109,7 +112,7 @@ These silent orcs are perfectly adapted for aquatic life, making them formidable
 #### Aquatic Predator
 
 **Passive ability.**
-You can breathe underwater and have a swim speed of 40 feet. Your bite is a natural weapon that deals 1d8 piercing damage. You have advantage on stealth checks while underwater and can see clearly in murky water. You suffer no penalties for fighting underwater.
+You can breathe underwater and have a swim speed of 30 feet. You suffer no disadvantage for skill checks or AD rolls made in water. Your bite counts as a light, piercing, melee weapon. However, when you use your bite for an opportunity attack, use a d20 as your weapon die.
 
 ### Tytheri (Blood Orc)
 

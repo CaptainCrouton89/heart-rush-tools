@@ -20,7 +20,7 @@ They do not age, do not reproduce, and sustain themselves solely on human flesh.
 
 **Passive ability.**
 
-As an action, you may take on the appearance of a female humanoid. In addition, you can breathe both water and air, suffer no penalties to combat in the water so long as you are not wielding a weapon, and you gain a swim speed equal to half of your move speed.
+As an action, you may take on the appearance of a female humanoid. In addition, you can breathe both water and air, suffer no disadvantage for skill checks or AD rolls made underwater, and you gain a swim speed equal to half of your move speed.
 
 ### Flesh Eater
 
