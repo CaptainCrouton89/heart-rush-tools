@@ -1991,13 +1991,11 @@ Kendor society revolves around elaborate courtship rituals, political maneuverin
 - **Size:** Medium
 - **Height:** 6-7.5 feet (including decorative fin crests)
 - **Weight:** 140-200 pounds
-- **Swim Speed:** 60 feet
-- **Land Speed:** 30 feet (base, before modifiers)
 
 ### Aquatic Grace
 
 **Passive ability.**
-You can breathe both air and water. While underwater, you have advantage on all agility checks and defense rolls. You can communicate telepathically with any creature within 30 feet while both you and the target are underwater. On land, you must immerse yourself in water for at least 10 minutes during each long rest or gain a level of weakened that doesn't fade until you do so.
+You can breathe both air and water, and suffer no disadvantage for skill checks or AD rolls made underwater. You can communicate telepathically with any creature within 30 feet while both you and the target are underwater. On land, you must immerse yourself in water for at least 10 minutes during each long rest or gain a level of weakened that doesn't fade until you do so.
 
 ### Kendrel (Court Kendor)
 
@@ -2406,7 +2404,7 @@ The Murazi have adapted perfectly to their unique environment, with skin that sh
 ### Amphibious Desert Dweller
 
 **Passive ability.**
-You can breathe both air and water. You have a swim speed of 40 feet and do not suffer from the effects of extreme heat. You can survive on half the normal amount of water, as your body efficiently recycles moisture. You have darkvision to 60 feet in underwater environments.
+You can breathe both air and water, and suffer no disadvantage for skill checks or AD rolls made underwater. You have a swim speed of 40 feet and do not suffer from the effects of extreme heat. You have darkvision to 60 feet when underwater.
 
 ### Pearl Diver's Fortune
 
@@ -2433,9 +2431,9 @@ Yet this hospitality hides a dark truth: the Myushli reproduce through spores th
 
 ### Spore Cloud
 
-**Heart ability.**
+**Major ability.**
 
-As an action, you release a cloud of spores in a 10-foot radius. Creatures of your choice in the area must make a might saving throw against your cunning challenge number or gain two levels of confused. If a creature fails by 5 or more, they gain two levels of charmed toward you instead.
+As an action, you release a cloud of spores in a 10-foot radius. Creatures of your choice in the area must make a might saving throw against your cunning challenge number or gain two levels of confused.
 
 ### Fungal Regeneration
 
@@ -2513,13 +2511,13 @@ Your connection to Nagatayora's final rage grants you exceptional resilience and
 
 ## Naruaghin
 
-The Naruaghin are the fierce offspring of dwarven stoicism and draconic fury. These reptilian dwarves inhabit the hill caves and ancient temples throughout the Ishnit Jungle, their gray-green scaled skin and slit noses marking them as something between mammal and reptile. Males grow thick beards despite their scales, while females sport impressive spinal ridges instead.
+The Naruaghin are the fierce offspring of dwarven stoicism and draconic fury. These reptilian dwarves inhabit the hill caves and ancient temples throughout the Ishnit Jungle, their gray-green scaled skin and slit noses marking them as something between mammal and reptile. Males grow thick, scaley beards, while females sport impressive spinal ridges instead. Each scale is hard as stone.
 
 Constantly warring among themselves and with neighboring tribes, the Naruaghin have developed a warrior culture that values strength and cunning in equal measure. They craft weapons from jungle materials—obsidian, bone, and ironwood—and decorate their temples with the skulls of enemies and great beasts alike.
 
 ### Aspects
 
-- Reptilian dwarf
+- Mind sharp as a razor's edge
 - Natural warrior
 
 ### Vitals
@@ -2533,13 +2531,13 @@ Constantly warring among themselves and with neighboring tribes, the Naruaghin h
 
 **Passive ability.**
 
-You gain the Stoneborn trait from dwarves: You gain +1 to defense rolls and treat all stone and earth as one step easier to work with (stone becomes like clay, hard clay becomes like soft clay, etc.). You can sense the general composition and structure of stone within 10 feet.
+Your stoney scaled skin provides natural armor. You have +2 to all defense rolls.
 
 ### Ferocious
 
 **Passive ability.**
 
-When you take a wound, you immediately gain 2 rush points and may make an opportunity attack against the creature that wounded you if they are within range. This opportunity attack doesn't cost a rush point or action.
+Whenever you wound another creature, gain a rush point.
 
 ## Neferati
 
@@ -2556,18 +2554,20 @@ Most Neferati dwell within the Four Kingdoms of Fire, great nations built around
 
 ### Vitals
 
-- **Type:** Race
 - **Size:** Medium
 - **Height:** 5-6.5 feet
 - **Weight:** 100-200 pounds
 - **Max Age:** 80
 
+### Ram Horns
+
+**Passive ability.**
+Your horns count as light, bludgeoning, melee weapons.
+
 ### Fire Soul
 
 **Passive ability.**
-Rather than sleep, you must spend 4 hours around fire. The fire cannot be one that you are actively producing, and must be at least the size of a small campfire. You can perform undemanding tasks while you rest. You gain a basic attunement to fire.
-
-Additionally, you are immune to damage from environmental heat (but not fire damage), and your passionate nature grants you +2 to presence checks when expressing strong emotions.
+You gain an advanced attuenement to fire. Rather than sleep, you must spend 4 hours around fire. The fire cannot be one that you are actively producing, and must be at least the size of a small campfire. You can perform undemanding tasks while you rest.
 
 ## Nyolci
 
@@ -2584,6 +2584,7 @@ The Nyolci possess an almost supernatural ability to read people and situations,
 - **Size:** Medium
 - **Height:** 5-6 feet
 - **Weight:** 140-220 pounds
+- **Age:** 60-90
 
 ### Aspects
 
@@ -2598,9 +2599,7 @@ Your five head tentacles can manipulate objects with surprising precision and in
 ### Oceanic Intuition
 
 **Passive ability.**
-Your deep connection to the sea grants you uncanny insight into both natural and social currents. You automatically succeed on navigation checks while at sea or following coastlines. Additionally, you have advantage on skill checks to predict weather, read people's intentions, or sense when someone is lying to you. Once per day, you may ask the GM one yes-or-no question about the immediate future of a situation you're currently in.
-
-Looking at the example race template and the descriptions provided, I'll create these 9 races following the established format and mechanics consistent with Heart Rush's design principles.
+Your deep connection to the sea grants you uncanny insight into both natural and social currents. You automatically succeed on navigation checks while at sea or following coastlines. Additionally, you have advantage on skill checks to predict weather, read people's intentions, or sense when someone is lying to you.
 
 ## Orc
 
@@ -2613,6 +2612,7 @@ While often misunderstood by other races as purely savage, orcish cultures are r
 - **Size:** Medium
 - **Height:** 5.5-7 feet
 - **Weight:** 160-280 pounds
+- **Age:** 50-70 years
 
 ### Orcish Resilience
 
@@ -2633,7 +2633,7 @@ The Hedroscobbi's dark skin has adapted over generations to resist the corrosive
 #### Corrosive Armor Mastery
 
 **Passive ability.**
-You can wear specially crafted algae-iron armor that provides +8 defense instead of the normal +6 for heavy armor, but weighs twice as much. When a creature hits you with a melee weapon while you wear this armor, their weapon takes a -1 penalty to future attack rolls (cumulative). You are immune to acid damage.
+You start the game with a set of specially crafted algae-iron armor that provides +8 defense instead of the normal +6 for heavy armor. When a creature hits you with a melee weapon while you wear this armor, their weapon takes a -1 penalty to future attack rolls (cumulative). You are immune to acid damage.
 
 ### Glivornaxi (Gray Orc)
 
@@ -2649,7 +2649,7 @@ They are skilled spear-fighters, using their weapons primarily as defense agains
 #### Swamp Regeneration
 
 **Passive ability.**
-While in a swamp or marshland environment, you regain 1 hit point at the start of each round. Once per day, you may spend 10 minutes bathing in swamp water to reduce all wound ranks by 1. You ignore difficult terrain in swamps and marshes.
+While submerged in swamp water, brackish water, or in a bog, your short rests reduce the ranks of all your wounds by 1, and heal you to your maximum hit points.
 
 ### Tarni (Darkeyes)
 
@@ -2665,7 +2665,7 @@ These orcs have developed a unique understanding of the connection between spiri
 #### Spirit Warrior
 
 **Passive ability.**
-When you would be reduced to 0 hit points, roll your heart die. On a result of 6 or higher, you remain at 1 hit point instead. Your weapons can be enchanted to deal spirit damage that ignores armor and shield bonuses to defense.
+Rather than dying when you reach hitpoints equal to your negative maximum, you immediately go unconscious. If your hitpoints falls to four times that negative amount, you die. While in this range, so long as your body is in a livable environment (not underwater, for example), your wounds heal with long rests like normal.
 
 ### Uihonaii (Wooden Men)
 
@@ -2681,7 +2681,7 @@ However, they can only take root and transform in special soil, requiring them t
 #### Tree-Soul Bond
 
 **Major ability.**
-You may spend 1 hour to transform into a tree. While in tree form, you are immobile but gain +10 defense, immunity to most damage types, and can sense everything within 100 feet. You may remain in this form indefinitely but can only transform in soil from your homeland. If you die, you may choose to become a tree permanently, allowing for potential future rebirth.
+You may spend 1 hour to transform into a tree. While in tree form, you are immobile but gain +10 defense, and gain tremorsense out to 100 feet. You may use this ability again to spend an hour transforming back. If you die, you may choose to become a tree permanently, allowing for potential future rebirth.
 
 ### Shazuihni (Boar Rider)
 
@@ -2697,11 +2697,13 @@ These orcs live for the thrill of battle and the bond with their boar mounts. Th
 #### Boar Bond
 
 **Passive ability.**
-You have a giant boar companion with 60 hit points, d8 might and agility, and a gore attack that deals 2d8 damage. While mounted, you and your boar move as one unit, and you may use heavy weapons with one hand. If your boar dies, you may bond with a new one after 1 week.
+You start the game with a large boar mount. The boar has 1d10 might/1d6 agility/1d4 cunning, and can use its tusks as heavy, piercing melee weapons.
+
+If your boar dies, you may bond with a new one after 7 days spent in your homeland forest.
 
 ### Griebi (Lakemen)
 
-The Griebi are blueish-gray skinned orcs who can breathe underwater and rarely speak above the surface. They hunt and fish in the depths of lakes and rivers, using their terrifyingly long, needle-like teeth to catch prey underwater. Their society is ruled by a mysterious hag queen who dwells in the deepest waters.
+The Griebi are blueish-gray skinned orcs who can breathe underwater and rarely speak above the surface. They hunt and fish in the depths of lakes and rivers, using their terrifyingly rows of long, needle-like teeth to catch prey underwater. Their society is ruled by a mysterious hag queen who dwells in the deepest waters.
 
 These silent orcs are perfectly adapted for aquatic life, making them formidable opponents both above and below the water's surface.
 
@@ -2713,7 +2715,7 @@ These silent orcs are perfectly adapted for aquatic life, making them formidable
 #### Aquatic Predator
 
 **Passive ability.**
-You can breathe underwater and have a swim speed of 40 feet. Your bite is a natural weapon that deals 1d8 piercing damage. You have advantage on stealth checks while underwater and can see clearly in murky water. You suffer no penalties for fighting underwater.
+You can breathe underwater and have a swim speed of 30 feet. You suffer no disadvantage for skill checks or AD rolls made in water. Your bite counts as a light, piercing, melee weapon. However, when you use your bite for an opportunity attack, use a d20 as your weapon die.
 
 ### Tytheri (Blood Orc)
 
@@ -2822,12 +2824,11 @@ Pixies reproduce through a mystical process involving moonlight, flower nectar, 
 - **Size:** Minuscule
 - **Height:** 6-10 inches
 - **Weight:** 1-3 pounds
-- **Wingspan:** 12-18 inches
 
-### Fae-born
+### Pixie Anatomy
 
 **Passive ability.**
-You have a fly speed of 30 feet. Additionally, you can sense the emotional state of all creatures within 15 feet, gaining advantage on Presence checks to understand their motivations. Once per day, when a creature within 30 feet makes a saving throw against being charmed or frightened, you may grant them advantage on that roll by harmonizing with the Faesong.
+You have a fly speed of 30 feet. You are size miniscule (three sizes less than medium). You cannot wield weapons.
 
 ### Zelle
 
@@ -2843,7 +2844,7 @@ Zelle society revolves around their High Priestesses, who commune directly with 
 #### Blood offering
 
 **Passive ability.**
-When a creature within 30 feet of you takes a wound, you may perform a swift ritual as a free action to gain 1d4 temporary hit points that last until your next long rest. Additionally, you have advantage on Intimidation checks against any creature that has seen you participate in violence within the last hour.
+When a creature within 30 feet of you takes a wound, you may perform a swift ritual as a free action to regain 10 hit points.
 
 ### Ianovko
 
@@ -2856,42 +2857,47 @@ Their wings appear to be made of captured starlight and shadow, constantly shift
 - Reality is negotiable
 - Riddling trickster
 
-#### Dreamweaver
+#### Faeweaver
 
 **Passive ability.**
-You can cast minor illusions at will without using an action, creating visual or auditory phenomena no larger than a 1-foot cube that last for up to 1 minute. Additionally, when you successfully deceive, confuse, or misdirect a creature through roleplaying or illusion, you gain a rush point. You can gain rush points this way even outside of combat, storing up to 3 rush points that last until used or until your next long rest.
+You can cast minor illusions at will without using an action, creating visual phenomena no larger than a 1-foot cube, or or sounds up to the volume of soft talking voice that last for up to 1 minute. You can maintain up to 3 illusons at a time, so long as they are all within eyeshot.
 
 ### Ikriel (Icehearts)
 
-Icehearts are pixies transformed by their worship of winter itself—not as a season, but as an cosmic force of entropy and hunger. Their crystalline wings generate a constant aura of frost, and their very presence leeches warmth from their surroundings. This hunger extends beyond the physical; Icehearts feed on emotional warmth, leaving their victims feeling hollow and cold inside.
+Icehearts are pixies transformed by their worship of winter itself—not as a season, but as a cosmic force of entropy and hunger. Their crystalline wings generate a constant aura of frost, and their very presence leeches warmth from their surroundings. This hunger extends beyond the physical; Icehearts feed on emotional warmth, leaving their victims feeling hollow and cold inside.
 
-Despite their predatory nature, Icehearts maintain a twisted form of civilization built on careful rationing of their feeding. They view their hunger as a sacred burden, organizing elaborate rituals to determine who may feed and when, turning survival into a form of worship.
+Icehearts are master manipulators who view other creatures as sources of sustenance. They excel at gaining trust through false vulnerability or promises of aid, only to drain their victims when defenses are lowered. To an Iceheart, every relationship is ultimately transactional—a question of when, not if, they will feed.
 
 #### Aspects
 
 - Emotionally vampiric
-- Winter's devoted child
+- Winter's hungry child
 
-#### Frostbitten soul
+#### Frostbitten Soul
 
 **Passive ability.**
-You are immune to damage from cold and the freezing environmental condition. Whenever you deal damage to a creature or a creature fails a saving throw against one of your abilities, you may inflict one level of slowed as frost spreads from your touch. Once per short rest, when you touch a willing or helpless creature, you may drain their emotional warmth to heal yourself for 2d4 hit points. The target gains one level of weakened until their next long rest as they feel emotionally drained.
 
-### Luma
+You are immune to the effects of the cold.
 
-The Luma of Nykotheryx Amberylika forest represent pixie society at its most harmonious. Each Luma bonds with a grove of ancient trees upon emergence, becoming its guardian for life. Their iridescent wings capture and refract the aurora borealis, creating spectacular light shows during their ritual flights. Under the rule of Magera, the Frost Prince, they maintain the delicate balance between the ancient dragon totems and the living forest.
+As an action, when you touch a willing or incapacitated creature with bare skin contact, you may drain their emotional warmth. The target immediately gains 5 levels of slowed, 5 levels of dazed, and 5 levels of shaken. These levels fade at a rate of one level per hour, rather than per round. You gain the benefits of a short rest.
 
-Luma culture emphasizes patience and cycles—they measure time in tree rings rather than years, and their oral histories stretch back to when the Dark Elves first walked among the silver birches. They alone among pixies remember the true names of some of the spirits bound within the dragon totems, treating this knowledge as their most sacred trust.
+### Luma (Grove Keepers)
+
+The Luma of Nykotheryx Amberylika forest represent pixie society at its most harmonious. Each Luma bonds with a grove of ancient trees upon emergence, becoming its guardian and living memory for life. Their translucent wings shimmer with captured memories, displaying faint images of past events when they concentrate. Under the rule of Magera, the Frost Prince, they maintain the delicate balance between the ancient dragon totems and the living forest.
+
+Luma culture emphasizes patience and cycles—they measure time in tree rings rather than years, and their oral histories stretch back to when the Dark Elves first walked among the silver birches. They serve as living libraries, their very being intertwined with the memories of their groves.
 
 #### Aspects
 
 - Patient as ancient trees
-- Keeper of forgotten names
+- Living memory of the forest
 
-#### Aurora wings
+#### Grove Memory
 
 **Passive ability.**
-Your iridescent wings can store and release light. You can create bright light in a 20-foot radius or dim light in a 40-foot radius as a free action. Once per day, when you would take damage from a spell or magical effect, you may use your reaction to refract it through your wings, taking half damage and redirecting the other half to a creature of your choice within 30 feet (they may make appropriate saves as normal). Additionally, you have advantage on all skill checks related to ancient history, spirits, or the identification of magical phenomena.
+You have formed a mystical bond with the ancient trees of the world. By touching any tree that is at least 50 years old and concentrating for one minute, you can access the memories stored within its rings. You may ask up to three questions about events that occurred within two miles of the tree during its lifetime. The GM will provide you with accurate historical information, though events from the distant past may be presented as symbolic visions requiring interpretation.
+
+You can use this ability once per day, but if you spend an hour in meditation with a grove of trees (rather than just one tree), you can ask an additional question and extend the range to five miles. Ancient trees (500+ years old) may hold especially detailed memories and can sometimes show you brief glimpses of magical phenomena or significant supernatural events.
 
 ## Revenant
 
@@ -2989,7 +2995,7 @@ They do not age, do not reproduce, and sustain themselves solely on human flesh.
 
 **Passive ability.**
 
-As an action, you may take on the appearance of a female humanoid. In addition, you can breathe both water and air, suffer no penalties to combat in the water so long as you are not wielding a weapon, and you gain a swim speed equal to half of your move speed.
+As an action, you may take on the appearance of a female humanoid. In addition, you can breathe both water and air, suffer no disadvantage for skill checks or AD rolls made underwater, and you gain a swim speed equal to half of your move speed.
 
 ### Flesh Eater
 
@@ -3259,7 +3265,7 @@ Many Swordsmen who leave their island homes become pirates, using their unparall
 **Major ability.**
 You can communicate telepathically with predatory sea creatures within 100 feet. Once per day, you can summon a school of predatory fish (or a single large predator if in appropriate waters) to aid you for 10 minutes. These creatures will scout, deliver messages, or fight alongside you but won't sacrifice themselves.
 
-Additionally, you can hold your breath for 30 minutes and have a swim speed of 40 feet. Your sword techniques mirror the movements of swordfish—when wielding any sword, you gain +1 to attack rolls and can attack creatures up to 10 feet away as your blade seems to extend like a swordfish's bill.
+Additionally, you can hold your breath for 30 minutes and have a swim speed of 30 feet. Your sword techniques mirror the movements of swordfish—when wielding any sword, you gain +1 to attack rolls and can attack creatures up to 10 feet away as your blade seems to extend like a swordfish's bill.
 
 ## Swuigrach
 
