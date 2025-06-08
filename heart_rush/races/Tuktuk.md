@@ -20,9 +20,9 @@ The volcanic forges of Tyvern produce some of the finest weapons and armor in th
 ### Natural Armor
 
 **Passive ability.**
-Your thick shell provides +2 natural armor defense that stacks with worn armor. When you use the defensive stance, you take one-quarter damage instead of half. You can withdraw into your shell as an action, becoming incapacitated but gaining total cover and reducing all damage to 1 point until you emerge (free action on your turn).
+Your thick shell provides +2 natural armor defense that stacks with worn armor. When you use the defensive stance, you take one-quarter damage instead of half. You can withdraw into your shell as an action, becoming incapacitated but reducing all incoming damage to 1.
 
 ### Battle Fury
 
-**Heart ability. Instant.**
-When you take damage that would cause a wound, your warrior's rage ignites. For the rest of the combat, you gain +2 to all attack rolls and your first successful attack each round deals an additional 1d6 damage. This effect ends if you go an entire round without attacking or taking damage.
+**Major ability. Instant.**
+Your wounds fuel the strength of your blows. You may use this ability to add a d6 to your next attack roll equal to the number of wounds you have.
