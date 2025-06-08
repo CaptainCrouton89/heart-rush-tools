@@ -21,8 +21,3 @@ Many Grayls have found refuge in the Walking Forest, where they can move with th
 
 **Passive ability.**
 Your body is made of living wood. You have +2 natural armor and take half damage from piercing weapons. Fire damage against you is doubled. You need only water and sunlight to survive—1 hour of direct sunlight counts as a meal. Wood harvested from your body (dealing 1d6 damage to you) functions as a level 2 magical crafting component with the "neutral" tag.
-
-### Forest's Lament
-
-**Major ability.**
-The sounds of civilization cause you physical pain, but you can weaponize this sensitivity. Once per day, you can release a mournful wail that affects all non-plant creatures within 60 feet. They must make a presence saving throw against your heart challenge number or gain 3 levels of shaken as they're overwhelmed by the profound sadness of your existence. Creatures that fail by 5 or more also gain 1 level of charmed toward you out of pity.

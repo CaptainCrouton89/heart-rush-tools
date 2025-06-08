@@ -1,39 +1,5 @@
 # Kin & Culture
 
-## Aciabo
-
-The Aciabo are goblinoid inventors who have taken a dramatically different path from their Coghead cousins. Where Cogheads integrate machinery into their bodies using aether power, the Aciabo have discovered that their own blood possesses unique properties that can fuel extraordinary devices. This discovery has led them to become cyborg inventors of a different sort, creating external mechanical augmentations powered by their life force.
-
-These goblins have grayish-purple skin marked with intricate scars where blood-tubes connect to their inventions. They view the Cogheads' reliance on aether as a weakness, preferring the reliability of blood-power despite its obvious costs. Aciabo society values innovation above all else, with status determined by the complexity and effectiveness of one's blood-powered inventions.
-
-Their workshops are disturbing places filled with the constant hum of blood pumps and the click of mechanical parts. Young Aciabo undergo ritual scarification when they create their first blood-powered device, marking their transition to full adulthood.
-
-### Aspects
-
-- My blood is the ultimate fuel
-- Innovation requires sacrifice
-
-### Vitals
-
-- **Size:** Small
-- **Height:** 3-4 feet
-- **Weight:** 60-80 pounds
-
-### Blood-Powered Innovation
-
-**Passive ability.**
-You can create and power mechanical devices with your own blood. By spending 2 hit points, you can power any mechanical device for 24 hours. Devices you create using your blood gain +2 to their effectiveness. You have advantage on all crafting checks for mechanical items and can create basic mechanical devices in half the normal time.
-
-### Sanguine Overclock
-
-**Heart ability.**
-By flooding your blood-powered devices with extra life force, you can push them beyond normal limits. Sacrifice up to 10 hit points to either:
-
-- Grant yourself and your equipment +1 to all rolls for each 5 HP spent for the next minute
-- Instantly repair a broken mechanical device
-- Power a device for a week instead of a day
-- Create a burst of mechanical speed, doubling your movement for 1 round per 2 HP spent
-
 ## Alekroin
 
 The Alekroin are massive alligator-folk whose imposing presence and predatory mindset have made them both feared and respected throughout the frozen wastes of Shykasas. These powerfully built beings stand shorter than most humanoids but possess incredible physical strength and an unwavering belief in the fundamental truth that everything in existence falls into two categories: predator or prey. Their culture has remained unchanged for millennia, as rigid and unyielding as the ice that covers their homeland.
@@ -56,12 +22,12 @@ Despite their fearsome reputation, the Alekroin possess keen intelligence and in
 ### Predator's Instinct
 
 **Passive ability.**
-You can automatically identify the strongest and weakest creature in any group within 60 feet. You have advantage on attack rolls against creatures that are wounded, frightened, or have fewer hit points than you. When you reduce a creature to 0 hit points, you regain hit points equal to your might die and gain advantage on your next attack roll.
+You can automatically identify the creature with the most and fewest hit points in any group within 60 feet. You have advantage on attack rolls against creatures that are wounded, frightened, or have fewer hit points than you.
 
 ### Death Roll
 
-**Heart ability. Instant.**
-When you successfully grapple a creature, you can attempt to perform a devastating death roll. Make an opposed might check—if you win, you deal damage equal to twice your might die and both you and the grappled creature fall prone. If you win by 5 or more, the creature takes a wound with rank equal to the difference between your rolls.
+**Passive ability.**
+While grappling a creature, you may use your action to perform a death roll. Make an opposed might check—if you win, you deal damage equal to twice your roll, and both you and the grappled creature fall prone. You have one level of advantage for each size larger you are than your target, and disadvantage for each size smaller.
 
 ## Ayblek
 
@@ -116,12 +82,25 @@ Their incredible speed allows them to literally run on water, their feet moving 
 ### Flicker Speed
 
 **Passive ability.**
-Your movement speed increases by 40 feet. You can run across liquid surfaces as if they were solid ground, but if you end your movement on liquid, you fall in. When you dash, your flickering form grants you +2 defense against opportunity attacks.
+
+Your body exists in a state of constant motion, flickering between moments. Your movement speed increases by 40 feet. You can run across liquid surfaces as if they were solid ground, and you may continue moving on liquid for up to 10 feet after you stop moving before falling in.
+
+Additionally, your flickering nature makes you difficult to pin down. You have advantage on saving throws against being restrained or grappled, and creatures have disadvantage on opportunity attacks against you.
 
 ### Emotional Parasite
 
-**Heart ability.**
-You feed on the strong emotions of others. When a creature within 30 feet experiences intense emotion (gains or loses a mental condition, takes a wound, or at GM's discretion), you may gain hit points equal to your heart die. However, when someone gives you a direct command, you must make a presence saving throw against their presence challenge number or be compelled to follow it for the next minute.
+**Passive ability.**
+You sustain yourself on the ambient emotional energy of others. Once per day, you must feed on emotions in one of the following ways:
+
+- Spend at least 1 hour within 30 feet of 5 or more people
+- Remain within 30 feet of someone experiencing emotional extremes (fear, rage, grief, or ecstasy) for at least 10 minutes
+- Make physical contact with a willing creature and share in their emotional state for 5 minutes, gaining one level of any mental condition they have (this feeds you but doesn't remove their condition)
+
+If you fail to feed for a day, you gain one level of weakened and one level of mental vulnerability. For each additional day without feeding, both conditions increase by one level. These conditions are removed one hour after feeding.
+
+**Suggestible Nature**  
+_Passive ability._  
+You must make a CN 8 presence saving throw against any direct command or strong suggestion made to you. You may spend DP up to your highest aspect rank and add that to your roll. If you fail, you feel compelled to follow the suggestion for the next minute unless it would directly harm you.
 
 ## Bogies
 
@@ -297,9 +276,7 @@ The physical presence of a Terrogone is overwhelming—their massive frames are 
 
 **Passive ability**
 
-Your massive size and strength make you a devastating opponent. You count as one size larger for the purposes of grappling, pushing, and intimidation checks. When you deal damage to a creature smaller than you with a melee attack, they must make a presence saving throw against your might challenge number or gain two levels of frightened toward you until the end of the encounter. Additionally, when using the might stance with heavy weapons, you may add your weapon die to the attack roll twice instead of once.
-
-Looking at the provided description and abilities, here's the Sylthik race following the template:
+You are size large. When you deal damage to a creature smaller than you with a melee attack, they must make a presence saving throw against your might challenge number or gain two levels of frightened toward you until the end of the encounter. Additionally, when using the might stance with heavy weapons, you may add your weapon die to the attack roll twice instead of once.
 
 ## Craven
 
@@ -323,12 +300,12 @@ Their corvid features—black feathers, sharp beaks, and glittering dark eyes—
 ### Take No Life
 
 **Passive ability.**
-You are magically prevented from directly or intentionally killing any living creature. If you cause a death through direct action or knowing inaction, you instantly die with no possibility of resurrection. However, this curse has sharpened your mind—you have advantage on all cunning checks and can perfectly remember every command you've ever been given and who gave it.
+You are magically prevented from directly or intentionally killing any living creature. If you cause a death through direct action or knowing inaction, you instantly die with no possibility of resurrection.
 
 ### Insatiable Mind
 
 **Passive ability.**
-Your brilliant corvid intellect absorbs knowledge at an extraordinary rate. For every 7 XP you gain, gain an additional 1 XP. You learn languages in one-tenth the normal time and can perfectly mimic any sound you've heard. Your mind constantly seeks ways to work within your constraints, giving you advantage on checks to find non-lethal solutions to violent problems.
+Your brilliant corvid intellect absorbs knowledge at an extraordinary rate. For every 7 XP you gain, gain an additional 1 XP.
 
 ## Deva
 
@@ -481,9 +458,9 @@ Hestrube society operates more like geological formations than traditional commu
 #### Stone Flesh
 
 **Passive ability.**
-You gain an advanced attunement to earth. You can pass through unworked stone as if it were difficult terrain, and may choose to become partially incorporeal within stone, granting you total cover from attacks that don't originate from within the stone.
+Your body can shift between flesh and living stone at will. While in stone form, you gain +2 to defense rolls against physical attacks but move at half speed. You can sustain yourself by consuming 1 pound of stone or minerals daily instead of normal food.
 
-You sustain yourself by consuming 1 pound of stone or minerals daily instead of normal food. While underground, you have advantage on stealth checks and automatically succeed at navigation checks.
+When you take the defensive stance, you can choose to become solid stone, taking one-quarter damage instead of half until the start of your next turn.
 
 ### Grendel (Chord Dwarves)
 
@@ -498,10 +475,8 @@ Their musical traditions serve not just as entertainment but as historical recor
 
 #### Chord of Kinship
 
-**Heart ability.**
-When you and at least two allies who can hear you begin singing, humming, or playing instruments together, all participants gain +2 to their next attack roll and may use each other's rush points as if they were their own until the end of the round.
-
-Additionally, you have advantage on all social skill checks when interacting with other Grendel, and disadvantage on such checks with authority figures from settled communities.
+**Major ability.**
+When you and at least two allies who can hear you begin singing, humming, or playing instruments together, all participants gain +2 to their defense rolls and cannot be charmed or frightened for the next minute, so long as everyone continues participating in the music.
 
 ### Verucan
 
@@ -517,9 +492,7 @@ Verucan society prizes passion and intensity in all things—their loves burn as
 #### Molten Heart
 
 **Passive ability.**
-You gain an advanced attunement to fire. Your body radiates heat—unarmed attacks and grappling inflict 1 level of burning on contact. When you become enraged or use abilities that increase in power based on emotions, add your current rush points to the effect.
-
-Once per combat, when you take a wound, you may immediately cast _Aura of Ignition_ without using an action or having the spell count against your daily limit.
+You gain a basic attunement to fire. Your body radiates heat—creatures that grapple you or hit you with unarmed attacks take 1d4 fire damage.
 
 ### Yorinthian (Winter Dwarves)
 
@@ -534,28 +507,26 @@ These pale, frost-touched dwarves have developed a rigid hierarchy based on thei
 
 #### Winter's Embrace
 
-**Major ability.**
-You gain a basic attunement to water. As an action, you may cast _Chilling Wind_ or _Grasp of the Ice Witch_. For the next minute, whenever you deal damage with a melee weapon, the target gains 1 level of slowed.
-
-Additionally, you are immune to cold damage and environmental cold effects, but take double damage from fire sources.
+**Passive ability.**
+You gain a basic attunement to ice. You are immune to cold damage and environmental cold effects, can see normally in blizzards and other winter weather conditions, and suffer no movement penalties from ice or snow. However, you take double damage from fire sources.
 
 ### Strømgodden (Battle Dwarves)
 
-The Strømgodden have forged a culture around sacrifice, fury, and glorious combat, developing unique armor embedded with spikes and blades that turns their very bodies into weapons. Their signature combat technique involves hurling themselves bodily at enemies, using their spiked armor to deal devastating damage through close contact. This dangerous fighting style reflects their belief that true honor comes only through risking everything in battle.
+The Strømgodden have forged a culture around sacrifice, fury, and glorious combat, developing unique armor embedded with spikes and blades that turns their very bodies into weapons. This signature spiked armor is crafted through ancient techniques passed down through generations, with each piece custom-fitted to its wearer and considered a sacred extension of their fighting spirit. Their dangerous fighting style reflects their belief that true honor comes only through risking everything in battle.
 
-These battle-scarred dwarves view each conflict as a sacred offering to the gods of war, and their society celebrates those who achieve the most spectacular and dangerous victories. Their settlements in Trømgar are built like fortresses, constantly ready for the next glorious battle.
+These battle-scarred dwarves view each conflict as a sacred offering to the gods of war, and their society celebrates those who achieve the most spectacular and dangerous victories. Their settlements in Trømgar are built like fortresses, constantly ready for the next glorious battle. The creation of spiked armor is a rite of passage, with young Strømgodden spending years learning the specialized smithing techniques required.
 
 #### Aspects
 
 - Glory through sacrifice
-- My body is my weapon
+- My armor is my weapon
 
 #### Spiked Charge
 
 **Heart ability.**
-When you dash at least 20 feet toward an enemy and enter an engagement with them, your armor becomes a weapon. Make an additional attack using your armor's defense bonus as your weapon die. Both you and the target take damage equal to the attack roll, but you may immediately make a second weapon attack with advantage.
+While wearing your specially crafted spiked armor, when you dash at least 20 feet toward an enemy, you may use your action to make an opportunity attack with your armor instead. You must choose the might stance and your armor counts as a heavy piercing melee weapon. Add your armor's defense bonus in place of a weapon die roll. However, the violent impact body-slam damages you as well—you take damage equal to the target's defense roll.
 
-While wearing medium or heavy armor, unarmed attacks and grappling deal additional damage equal to your armor's defense bonus.
+Additionally, whenever you are grappled while wearing your spiked armor, the enemy immediately takes damage equal to your armor's defense bonus, and takes the same damage again at the start of each subsequent round they maintain the grapple.
 
 ### Nydor (Dark Dwarves)
 
@@ -571,27 +542,13 @@ Their long, unkempt hair and prominent tusks give them a bestial appearance that
 #### Forge of Oppression
 
 **Passive ability.**
-You gain a basic attunement to darkness and an advanced knowledge of mechanical devices. You have advantage on crafting checks for weapons, armor, and restraints, and can create makeshift shackles or cages from available materials in half the normal time.
-
-Additionally, you can see in complete darkness as if it were bright light to a distance of 60 feet, and enemies cannot gain advantage on attack rolls against you due to concealment or darkness.
+You gain a basic attunement to darkness, and you have advantage on crafting checks for weapons, armor, and restraints.
 
 ### Velwey (Dream Dwarves)
 
 The Velwey have mastered the art of dream harvesting, using combinations of hallucinogenic substances, divine magic, and deoric rituals to extract and manipulate the dreams of sleeping minds. Their religious society in Movasi has built magnificent palaces powered by crystallized dreams, and they offer the profound service of helping individuals discover their true names through guided dream journeys.
 
-These mystical dwarves serve as both healers and judges, able to enter the dreams of others to provide therapy, extract information, or even deliver merciful death to those ready to pass into eternal dreams. Their dream weavers are revered as divine agents who free worthy souls from the burdens of waking life.
-
-#### Aspects
-
-- Dreams reveal deeper truths
-- The sleeping mind holds all secrets
-
-#### Dreamwalker
-
-**Weekly ability.**
-By spending one hour in meditation with a sleeping creature, you may enter their dreams. While in the dream, you can communicate with them, observe their memories, or plant suggestions that will influence their actions for the next 24 hours.
-
-Once per month, you may attempt to discern a creature's true name through an extended dream ritual requiring their willing participation and taking 3 days to complete.
+This race is not a playable race, so there are no associated abilities.
 
 ### Einwissel (Celestial Draugr)
 
@@ -625,9 +582,7 @@ These pale, ethereal-looking dwarves have evolved exceptional sensory abilities 
 #### Corpse-pale Adaptation
 
 **Passive ability.**
-You require no sunlight and can survive on any organic matter, including normally inedible substances like leather, paper, or corpses. You have darkvision to 120 feet and can track by scent like a bloodhound.
-
-When you consume part of a creature that died within the last week, you gain one of their memories from the last day of their life. Civilized creatures typically react with disgust to your dietary habits, imposing disadvantage on social interactions until they become accustomed to your culture.
+You require no sunlight and can survive on any organic matter, including normally inedible substances like leather, paper, or corpses. You have darkvision to 120 feet, and can always determine the direction towards any corpses within 1 mile.
 
 ### Gruynmar
 
@@ -643,9 +598,9 @@ Clan loyalty runs deeper than blood among the Gruynmar, and abandoning one's shi
 #### Gunpowder Mastery
 
 **Passive ability.**
-You can craft and use firearms, which count as heavy ranged weapons with 90-foot range that deal piercing damage. Firearms require gunpowder charges and take a full action to reload after each shot, but they ignore armor bonuses to defense and deal +1d6 damage on successful hits.
+You can craft and use firearms, which count as an ultra-heavy ranged weapons with 90-foot range that deal piercing damage. Firearms require gunpowder charges and take a full action to reload after each shot. Ultra-heavy weapons use a d20 as their weapon die.
 
-You have advantage on all checks related to naval combat, ship handling, and maritime navigation. However, you suffer disadvantage on overland navigation and survival checks until you gain significant land-based experience.
+You can craft a basic firearm in 3 days with access to a forge and 50 ducats worth of materials. You can create gunpowder charges from sulfur, charcoal, and saltpeter (5 ducats of materials yields 20 charges). In settlements, charges typically cost 1 ducat each when available.
 
 ### Fengruk (Forgewardens)
 
@@ -660,10 +615,11 @@ Fengruk philosophy teaches that just as raw metal must be heated, hammered, and 
 
 #### Master of the Forge
 
-**Passive ability.**
-You have advantage on all crafting checks and can work with magical materials that would normally require special facilities. Your smithing work takes half the normal time, and weapons or armor you create gain +1 to attack or defense bonuses respectively.
+**Passive ability.** Your deep understanding of metallurgy and transformative processes grants you the following benefits:
 
-Your thick beard provides +1 defense against fire damage and breath weapons that target your face. Once per long rest, you may spend one hour at a forge to grant a willing creature's weapon or armor a temporary magical enhancement that lasts until the next dawn.
+- When using a workshop for magical crafting, treat it as one level higher than it actually is (maximum level 7).
+- When using components with the "neutral" tag (typically metals and gems), treat them as one level higher for all crafting purposes.
+- You have advantage on all crafting skill checks.
 
 ### Cendelle (Celestial Draugr)
 
@@ -675,22 +631,7 @@ Living so deep underground, the Cendelle have developed a culture centered aroun
 
 Unlike their cousins who fear the dark or seek the sun, the Cendelle have learned to navigate between light and shadow, between the material and the celestial. They are equally comfortable in the absolute darkness of the deep earth and the alien radiance of Celesté. This duality has made them philosophical and contemplative, often speaking in riddles and seeing patterns where others see only stone.
 
-#### Aspects
-
-- Between two worlds, belonging to neither
-- The threshold must never be left unguarded
-
-#### Portal Sense
-
-**Heart ability.**
-
-Your long exposure to planar energies has attuned you to disturbances in the fabric of reality. You gain the following benefits:
-
-- You can sense the presence of any portal, gateway, or planar rift within 120 feet, even through solid stone. You know the general direction and approximate distance to such phenomena.
-- As an action, you may attune yourself to the planar energies around you for the next minute. While attuned, you can see invisible creatures and objects within 30 feet as faint, shimmering outlines, and you have advantage on saving throws against effects that would transport you to another plane against your will.
-- Once per long rest, when you or an ally within 10 feet would be affected by a teleportation effect, planar travel, or dimensional magic, you may use your reaction to either allow it to function normally or attempt to suppress it. If suppressing, the effect's originator must succeed on a saving throw against your cunning challenge number or the effect fails.
-
-When you use any part of this ability, faint celestial runes briefly appear on your skin, glowing with soft silver light.
+This is not a playable race.
 
 ## Dwelyn
 
@@ -714,13 +655,12 @@ They combine the brutal efficiency of orcs with elven precision, wielding curved
 
 **Passive ability.**
 
-When you choose the might stance with a slashing weapon, you may sidestep 5 feet before or after your attack without spending a rush point. When you choose the agility stance, add 1d4 to your attack roll.
+When you choose the might stance with a slashing weapon, you may sidestep 5 feet before or after your attack. When you choose the agility stance, add 1d4 to your attack roll.
 
-### Beaded Influence
+### War Trophies
 
 **Passive ability.**
-
-The beads in your hair mark your standing. You start with one bead. For each point of influence you gain, you may add another bead. You have advantage on intimidation checks against creatures with fewer beads than you, and advantage on persuasion checks with other Dwelyn.
+Your beads are crafted from defeated enemies. When you kill a hostile creature, you may craft a bead from their remains. Each bead grants +1 to damage rolls against creatures of the same type (maximum +2 per creature type).
 
 ## Elf
 
@@ -787,15 +727,10 @@ These elves reside north of Gorath, having returned from their cosmic journeys w
 - Cosmic wanderer
 - Time moves differently for me
 
-#### Imperial Presence
+#### Cosmic Presence
 
 **Passive ability.**
-Whenever making a presence check, if you did not roll a failure or complication, you may choose to instead use your heart challenge number as the result. You are immune to the frightened condition.
-
-#### Cosmic Mindset
-
-**Passive ability.**
-You are used to life traveling at a very slow rate. You have disadvantage on all ability checks made while under a time crunch, and advantage on all ability checks made with no time limitations.
+Your experience beyond the material plane has granted you an otherworldly perspective on time and social interaction. You are immune to the frightened condition. When making presence checks where you can take your time (no immediate pressure), you have advantage on the roll. However, when under time pressure or in urgent situations, you have disadvantage on all ability checks as your cosmic mindset struggles with mortal urgency.
 
 ### Eloweir (Sea Elf)
 
@@ -811,9 +746,9 @@ The Eloweir are renowned across Alaria for their mastery of poisons, their skill
 #### Sea Blood
 
 **Passive ability.**
-You have an advanced attunement to water, but only saltwater. You can breathe underwater and your swim speed is increased by 30 feet while in saltwater.
+You have an advanced attunement to water, but only saltwater.
 
-### Teflin (Blood Elf)
+### Teflin (Crimson Elf)
 
 The Teflin reside in Hik, their reddish skin marking them as a people touched by an ancient curse. Blood is sacred to their culture, as an old Deoric enchantment runs through their veins—a curse that traded immortality for power, but at a terrible cost.
 
@@ -827,7 +762,9 @@ The curse builds up in their blood over time, and if allowed to accumulate too m
 #### Crimson Sacrifice
 
 **Passive ability.**
-You may voluntarily reduce your current hit points by any amount as an action. For every 10 hit points you sacrifice this way, gain +1 to all attack rolls until your next long rest. These bonuses stack but are lost if you regain hit points above your pre-sacrifice total.
+The ancient Deoric curse prevents you from aging or dying from natural causes, but builds dangerous power over time. At the end of each long rest, you gain 1 Curse Point. If you ever reach 5 Curse Points, you die.
+
+When you first wake up after a long rest, you may perform ritual bloodletting to alleviate the curse's burden. Lose hit points equal to 1/10th of your maximum hit points (minimum 1), spend 1 Curse Point, and reduce the rank of all wounds you have by 2.
 
 ### Kuzagt (Bone Elf)
 
@@ -859,7 +796,7 @@ These spectral elves are cold, bitter, and wise, having spent millennia isolated
 #### Ghostly Form
 
 **Passive ability.**
-You are incorporeal and can move through solid objects, but cannot interact with physical objects without concentrating (requiring an action). You are immune to physical damage but vulnerable to magical damage. You do not need to eat, drink, or breathe.
+You are incorporeal and can move through solid objects, but cannot interact with physical objects without concentrating (requiring an action). You are immune to physical damage from non-magical sources. You do not need to eat, drink, or breathe.
 
 ### Kryaaji (Sun Elf)
 
@@ -875,23 +812,23 @@ These elves train the magnificent Wysynnbre—golden, luminant eagles that nest 
 #### Radiant Heritage
 
 **Passive ability.**
-You have a basic attunement to light. You can cause bright light to emanate from your body in a 15-foot radius and dim light 15 feet beyond that. This light dispels magical darkness and you can control it at will.
+You have a basic attunement to light. Light you magically produce cannot be dispelled, cannot be extenguished, and is impervious to magical darkness effects.
 
-### Istori (Winter Elf)
+### Istori (Glass Elf)
 
-The Istori are typically kind, benevolent, and regal elves who have traditionally secluded themselves in the northern reaches of Istora. They believed it more peaceful to remain alone than deal with the world's constant turmoil and conflicts.
+The Istori dwell in the frozen southern valleys of Istora, where they have mastered the ancient art of ice-glass forging. These elves discovered that by combining their natural magic with the perpetual ice of their homeland, they can create crystalline glass harder than steel that never melts. Their cities are marvels of translucent spires and frozen architecture that gleam like jewels in the southern light.
 
-However, their isolation has not protected them from strife, as they now find themselves locked in internal revolution. The very peace they sought to preserve has been shattered by ideological divisions within their own society.
+The revolution consuming their society stems from a fundamental disagreement about their craft: the Traditionalists believe ice-glass should only be used for art, architecture, and preservation of their culture, while the Industrialists want to weaponize and export their ice-glass technology to the world. This schism has split families and guilds, with some creating beautiful sculptures while others forge unbreakable weapons.
 
 #### Aspects
 
-- Regal but embattled
-- Seeker of lost peace
+- Master of the ice-glass forge
+- Art versus industry divides us
 
-#### Winter's Resilience
+#### Ice-Glass Transmutation
 
-**Passive ability.**
-You are immune to cold damage and ignore difficult terrain caused by ice or snow. You have advantage on saving throws against effects that would slow you or reduce your movement speed.
+**Major ability.**
+You can transmute ice into glass or glass into ice within 30 feet. The transformed material becomes as strong as mithril and retains this strength permanently. You can affect up to a 10-foot cube of material with each use. Ice-glass you create never melts from natural heat and can only be broken by magical weapons or extraordinary force. This ability works on any ice or glass, not just what you've created.
 
 ### Sivakr (Silver Elf)
 
@@ -969,7 +906,7 @@ Most distinctively, Ythari families adopt wild animals as mentors for their chil
 
 #### Gift of the Forest
 
-**Heart ability.**
+**Major ability.**
 Your connection to nature and culture of giving manifests in supernatural ways. When you give away something of personal value (worth at least 10 ducats or of significant sentimental importance), you may invoke the Gift of the Forest. Choose one:
 
 - **Silent Step**: You and up to 6 allies within 30 feet gain the ability to move without making any sound for the next hour. During this time, you automatically succeed on stealth checks related to moving quietly.
@@ -1021,7 +958,7 @@ The Xalahir view other beings as nothing more than elegant wine bottles to be sa
 **Major ability.**
 Your vampiric nature grants you tools to hunt among civilized prey. You possess an unnatural magnetism that makes others want to trust and confide in you, despite the wrongness in your sunken black eyes.
 
-- You have advantage on all Presence checks to persuade, deceive, or seduce creatures that can see and hear you
+- You have advantage on all presence checks to persuade, deceive, or seduce creatures that can see and hear you
 - Once per long rest, when you touch a humanoid, you may subtly feed on their life force. They must make a presence saving throw against your presence challenge number or become charmed by you for 10 minutes. While charmed this way, they will not notice or remember you feeding on them
 - When you successfully feed (either through this ability or by dealing damage with a bite attack), you heal hit points equal to your heart die and remove one level of any condition affecting you
 - You have darkvision out to 30 feet, allowing you to hunt in darkness
@@ -1053,13 +990,62 @@ Your body is covered in magical tendrils that grant perfect camouflage. You can 
 
 ### Spirit Herbalist
 
-**Heart ability.**
-Your deep connection to jungle spirits grants you profound knowledge of natural medicine and plant communication. You can:
+**Passive ability.**
+When taking a short rest in a jungle or forest environment, you may create a simple herbal remedy. Roll 1d6 - you or an ally regain that many hit points. This remedy must be used within 10 minutes or it loses potency.
 
-- Speak with plants within 30 feet, learning about recent events in the area
-- Identify any poison or disease by taste without being affected by it
-- Create healing poultices that act as healing potions using just jungle plants (1 hour preparation)
-- Call upon jungle spirits to guide you, gaining advantage on survival and navigation checks for 1 hour
+## Fallen Angels
+
+The Fallen Angels are celestial beings cast down from their eternal war among the stars, their wings clipped as punishment for bringing their conflict to the mortal realm. Once, the light-born Sarakiel and shadow-born Xaphkiel waged their battles in the heavens, but their violence grew so extreme that it threatened to rain destruction upon the world below. The cosmic powers that govern the planes intervened, stripping both sides of their ability to fly and banishing them to walk among the mortals they once ignored.
+
+Now these proud beings struggle to adapt to terrestrial life, their magnificent wings reduced to painful reminders of lost glory. The Sarakiel and Xaphkiel continue their ancient hatred even in exile, though they must now fight with mortal limitations. Their clipped wings still possess some power—able to slow falls and channel their respective elements—but true flight remains forever beyond their reach.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5-6.5 feet
+- **Weight:** 100-200 pounds
+- **Max Age:** 120
+
+### Clipped Wings
+
+**Passive ability.**
+You possess magnificent wings that have been mystically severed from true flight. Your wings grant you the following benefits:
+- You can glide 20 feet horizontally for every 10 feet you fall
+- You take half damage from falling
+- Your wings can produce bright light (Sarakiel) or absorb light creating darkness (Xaphkiel) in a 15-foot radius, which you can activate or suppress at will
+- The scars where your wings were clipped cause constant pain, granting you advantage on saves against being charmed (you're too bitter to be easily swayed)
+
+### Sarakiel (Light-Fallen)
+
+The Sarakiel maintain their belief in absolute purity even in exile, viewing their banishment as a temporary setback in their righteous war. Their pale skin and luminous eyes still mark them as beings of light, though the radiance is dimmed by their fall. These angels create small enclaves of "perfection" wherever they settle, excluding all they deem impure—which is essentially everyone except other Sarakiel.
+
+Their communities are austere and rigid, following thousands of rules designed to maintain their fading connection to the light. They practice constant rituals of purification, believing that sufficient devotion might one day restore their wings and allow them to return to their celestial towers. The Sarakiel view all other races with barely concealed disgust, seeing mortals as the mud they've been forced to walk upon.
+
+#### Aspects
+
+- Purity through isolation and supremacy
+- The flawed deserve only exile or death
+
+#### Light Attuned
+
+**Passive ability.**
+You have a basic attunement to light as a racial feature. Your attacks can be infused with radiant energy—once per combat, when you hit with an attack, you may blind the target for one round (they have disadvantage on attacks and can't make opportunity attacks). Additionally, you have resistance to radiant damage and advantage on saves against being blinded.
+
+### Xaphkiel (Shadow-Fallen)
+
+The Xaphkiel have embraced their fall as the ultimate expression of their philosophy—through suffering comes enlightenment. Their dark wings and obsidian eyes remain unchanged, but now they walk among the mortals they once viewed from afar. These dark angels have established hidden sanctuaries where they practice their arts of pain and endurance, viewing their exile as merely another trial to overcome.
+
+Where the Sarakiel isolate themselves out of disgust, the Xaphkiel integrate into mortal society to better understand suffering in all its forms. They work as torturers, surgeons, and confessors—any role that allows them to witness or inflict pain in pursuit of truth. Their communities are bound by shared ordeals, each member bearing scars that tell stories of their journey toward enlightenment.
+
+#### Aspects
+
+- Through suffering comes strength
+- Pain reveals all truths
+
+#### Shadow Born
+
+**Passive ability.**
+You have a basic attunement to darkness as a racial feature. When in dim light or darkness, you regenerate 2 hit points at the start of each round. Once per combat, you can wrap yourself in shadows, gaining obscurement for one round (attacks against you have disadvantage, and you have advantage on stealth checks). However, bright light causes you discomfort—you have disadvantage on perception checks in bright light.
 
 ## Ghoul
 
@@ -1198,67 +1184,62 @@ You gain a fox as a loyal mount and companion. The fox has the stats of a Beast 
 
 ### Bloodlings (Vampire Gnome)
 
-The Bloodlings are pale, translucent-skinned gnomes who dwell in the dark caves of the Chimean Blood Mountains. These vampiric gnomes have adapted to a life sustained by blood rather than traditional sustenance, developing an eerie, ghostly appearance that reflects their unnatural dietary needs.
+The Bloodlings are pale, translucent-skinned gnomes who dwell in the dark caves of the Chimean Blood Mountains. These vampiric gnomes maintain an obsessive aristocracy based on the purity of their ancestral bloodlines, with elaborate genealogies traced back thousands of years.
 
-Living in complete darkness for generations, the Bloodlings have become masters of stealth and ambush. Their society is built around blood hierarchies, where status is determined by the quality and rarity of blood one can obtain.
-
-#### Aspects
-
-- Predator of the darkness
-- Blood is life
-
-#### Sanguine Sustenance
-
-**Passive ability.**
-You do not need to eat normal food, but must consume blood equivalent to one ration per week or gain a level of weakened that does not fade until you feed. You have darkvision out to 60 feet and gain +2 to stealth checks in darkness. You take double damage from bright light sources.
-
-### Neka (Savage Gnome)
-
-The Neka are dark-skinned, feather-adorned gnomes who rule as apex predators in the Nekanzi Jungle. With filed teeth and wild hair, they live in mud and palm huts while maintaining a culture that seems primitive to outsiders but is actually highly sophisticated in its own way. They consume raw animals and have been known to eat intruders, though they maintain complex customs around peace talks and greetings.
-
-Despite their seemingly poor material culture, the Neka create fantastic tombs and have mastered fire magic for hunting and combat. They can imitate any animal sound and have no written language, passing knowledge through oral tradition.
+Bloodling society revolves around maintaining and proving the superiority of one's lineage. Every Bloodling can recite their ancestry for at least twenty generations, and social gatherings inevitably devolve into debates over whose great-great-grandmother had the purer blood. Marriages are arranged through complex negotiations that can take decades, as families attempt to preserve or elevate their bloodline's standing. The most prestigious families claim direct descent from the First Bite—the legendary moment when their ancestors first tasted blood and transformed into something more than mere gnomes.
 
 #### Aspects
 
-- Apex predator
-- Fire and fang
+- My bloodline is pure and ancient
+- Blood enhances my power
 
-#### Primal Mimic
+#### Sanguine Empowerment
 
 **Passive ability.**
-You can perfectly imitate any animal sound you have heard. You have a basic attunement to fire. You gain +2 to intimidation checks against creatures that have seen you eat raw meat, and your bite counts as an ultralight weapon.
+Your bite counts as an ultralight piercing weapon. When you successfully deall damage to a living creature with your bite, you may feed on their blood. For the next 24 hours after feeding, any handmagic talents you possess (that you do not have the destiny level for) function at their destiny level. You cannot gain this benefit again until the previous feeding's effects expire. You cannot feed on the same creature more than once in the same week to gain these benefits.
 
-### Ohblex (Gem Gnome)
+### Neka (Wild Gnomes)
 
-The Ohblex are crystalline gnomes born from the gems and jewels deep within the Gemstone Peaks. Their skin reflects the colors of precious stones, and they sustain themselves by consuming a few gems each year rather than traditional food. Masters of clockwork and the sole keepers of clockmaking secrets on Nin, they craft incredible mechanical devices and jewelry.
+The Neka are a reclusive gnome subrace who have adapted to life in the dangerous Nekanzi Jungle. Their dark skin and filed teeth mark them as descendants of those who chose survival over comfort, developing unique magical and physical adaptations to thrive where others perish. They maintain their knowledge through oral tradition and have developed a cultural mastery of fire magic for both practical and spiritual purposes.
+
+While they keep to their traditional ways and can be territorial about their jungle homes, the Neka are neither primitive nor savage - they simply have different priorities than urban gnomes, valuing survival skills and jungle wisdom over written scholarship.
+
+#### Aspects
+
+- Survivor of the jungle depths
+- Fire speaker
+
+#### Jungle Adaptation
+
+**Passive ability.**
+
+Life in the Nekanzi has given you unique abilities:
+
+- You have a basic attunement to fire
+- You can perfectly imitate any animal sound you have heard
+- Your filed teeth and claws count as ultralight weapons
+- You have advantage on survival checks in jungle environments
+
+### Ohblex (Gem Gnomes)
+
+The Ohblex are crystalline gnomes born from the gems and jewels deep within the Gemstone Peaks. Their skin reflects the colors of precious stones, and they sustain themselves by consuming a few gems each year rather than traditional food. Masters of clockwork and the sole keepers of clockmaking secrets on Alaria, they craft incredible mechanical devices and jewelry.
 
 The Ohblex live in elaborate underground mazes filled with mechanical traps, endlessly scheming against rival family houses in complex political games. They value secrecy, mystery, and complication above all else.
 
 #### Aspects
 
-- Lover of mysteries
-- Gemstone heritage
+- Schemes within schemes
+- Crystalline precision
 
-#### Clockwork Mastery
-
-**Passive ability.**
-You do not need to eat normal food, instead consuming gems worth 10 ducats per month. You have advantage on checks to create, understand, or disable mechanical devices. You know the secrets of clockmaking and can craft complex mechanical items that others cannot replicate.
-
-### Shyoka Saseidi (Beast Tender Gnome)
-
-The Shyoka Saseidi are light-skinned, curly-haired gnomes who dwell in dens beneath the great pine trees of Nykotheryx Amberylika. While their Luma neighbors tend the trees, these gnomes serve as caretakers for all forest fauna. They maintain close relationships with badgers, squirrels, rabbits, and foxes, often wearing badger pelts as marks of respect.
-
-Their society revolves around the sacred but dangerous dragon totems scattered throughout their forest, with only specially chosen priests permitted to approach these powerful artifacts.
-
-#### Aspects
-
-- Guardian of the wild
-- Reverent of ancient powers
-
-#### Forest Kinship
+#### Living Component
 
 **Passive ability.**
-You gain advantage on all skill checks involving small woodland creatures (badgers, squirrels, rabbits, foxes). You can communicate basic concepts with these animals and they will not attack you unless magically compelled. You have advantage on checks to track or navigate in forested terrain.
+
+You consume gems worth 10 ducats per month instead of food. Your unique metabolism grants you the following benefits:
+
+- When you consume a gem, you instantly know if it has magical properties, its component level, and all its tags (per the magical crafting rules)
+- You count as a portable level 1 alchemy laboratory for the purposes of refining gems and neutral components only
+- When crafting items that require neutral components, you may regurgitate consumed gems as components of up to level 2 (this takes 1 day per component)
 
 ### Techgnomes (Lost Gnome)
 
@@ -1274,7 +1255,7 @@ These surviving gnomes carry with them fragments of forgotten knowledge and brok
 #### Mechanical Remnant
 
 **Passive ability.**
-You begin play with a damaged but functional mechanical device of your choice (subject to GM approval). You have advantage on checks to understand, repair, or operate technological devices. Once per day, you can jury-rig a simple mechanical solution to a problem using scrap materials.
+You begin play with a damaged but functional mechanical device of your choice (subject to GM approval). You have A2 on all checks for juryrigging, operating, and fixing technological devices.
 
 ### Qipi (Sinkhole Gnome)
 
@@ -1289,20 +1270,6 @@ The Qipi are the smallest of all gnome heritages, dwelling in the vast sinkhole 
 
 **Passive ability.**
 You gain the Observant talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level. Additionally, you have darkvision out to 30 feet and can see normally in dim light.
-
-### Shyoka Saseidi (Fauna Keeper Gnome)
-
-The Shyoka Saseidi of Nykotheryx Amberylika have long served as the forest's animal caretakers, complementing the Luma's role as tree-tenders. These pale-skinned, curly-haired gnomes build elaborate den networks beneath the protective boughs of ancient pines, creating comfortable homes that mirror the burrows of their beloved badgers. Their society revolves around the sacred dragon totems scattered throughout the forest—powerful artifacts they both revere and fear. Only specially trained priests, marked by ceremonial badger pelts, dare approach these totems to tend the creatures dwelling in their mystical auras. The Shyoka Saseidi have formed deep bonds with the forest's smaller creatures, particularly badgers, squirrels, rabbits, and foxes, learning their languages and sharing their lives. This connection runs so deep that many Shyoka Saseidi consider their animal companions to be family members rather than pets.
-
-#### Aspects
-
-- Protective
-- Spiritually attuned
-
-#### Totem-Blessed Bond
-
-**Passive ability.**
-You gain the Beast Companion talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level. Your beast companion must be a badger, squirrel, rabbit, or fox. Additionally, you have advantage on all skill checks related to understanding or caring for forest animals.
 
 ### Whiteling (Prophet Gnome)
 
@@ -1429,23 +1396,7 @@ Despite their vengeful nature, Ruddings are remarkably skilled Deoric enchanters
 #### Blood Debt
 
 **Passive ability.**
-When a creature deals damage to you or wrongs you in a significant way, you may mark them for vengeance. You always know the general direction and distance to marked creatures within 10 miles. You have advantage on all attack rolls and skill checks made against marked creatures. You may remove this mark if they provide reparations worth at least 100 ducats in copper.
-
-### Red Devil
-
-The Red Devils are the most malevolent of all goblin subraces, small creatures with burning red eyes and hearts full of genuine evil. Like their Rudding cousins, they inhabit the Copper Hills, but where Ruddings pursue calculated vengeance, Red Devils simply revel in causing pain and suffering for its own sake.
-
-These goblins take pleasure in tormenting others and have no sense of honor or justice. They are cruel, sadistic, and utterly without mercy, making them feared throughout the region as harbingers of misfortune and malice.
-
-#### Aspects
-
-- Cruelty is its own reward
-- Evil runs in my veins
-
-#### Sadistic Glee
-
-**Passive ability.**
-Whenever you deal damage to a creature or cause a creature to gain a negative condition, you regain 1 hit point. When you reduce a creature to 0 hit points, you gain 1 rush point at the start of the next round. You have advantage on intimidation checks against creatures that have witnessed your cruelty.
+When a creature deals damage to you or you perceive them as having wronged you, you may mark them for vengeance as an action. You always know the general direction and distance to marked creatures within 10 miles. You have advantage on all attack rolls and skill checks made against marked creatures.
 
 ### Blitzling
 
@@ -1511,7 +1462,7 @@ Those Wydlings who venture south often find work as guides through mountain pass
 #### Frostbite
 
 **Passive ability.**  
-Your icy heritage grants you several adaptations. You are immune to the effects of freezing temperatures and take half damage from cold-based attacks. Your razor-sharp teeth count as ultralight piercing weapons. Additionally, when you bite a creature you are grappling or that is restrained, they take 1d6 damage and gain one level of slowed as numbing cold spreads from your icy fangs.
+Your icy heritage grants you several adaptations. You are immune to the effects of freezing temperatures and take half damage from cold-based attacks. Your razor-sharp teeth count as ultralight piercing melee weapons. Additionally, when you deal damage with your bite, the bitten creature gains 2 level of slowed as numbing cold spreads from your icy fangs.
 
 ## Grayls
 
@@ -1537,11 +1488,6 @@ Many Grayls have found refuge in the Walking Forest, where they can move with th
 **Passive ability.**
 Your body is made of living wood. You have +2 natural armor and take half damage from piercing weapons. Fire damage against you is doubled. You need only water and sunlight to survive—1 hour of direct sunlight counts as a meal. Wood harvested from your body (dealing 1d6 damage to you) functions as a level 2 magical crafting component with the "neutral" tag.
 
-### Forest's Lament
-
-**Major ability.**
-The sounds of civilization cause you physical pain, but you can weaponize this sensitivity. Once per day, you can release a mournful wail that affects all non-plant creatures within 60 feet. They must make a presence saving throw against your heart challenge number or gain 3 levels of shaken as they're overwhelmed by the profound sadness of your existence. Creatures that fail by 5 or more also gain 1 level of charmed toward you out of pity.
-
 ## Gyv
 
 The Gyv are the puppet masters of Iylovia, a race whose very presence makes others question their own thoughts. With their distinctive silver hair and grayish skin, these tall, lithe beings move through society like whispers of smoke. Born from the mingling of Zaelian elf and human bloodlines, they inherited something far more dangerous than either parent race possessed—the ability to subtly influence minds.
@@ -1564,17 +1510,17 @@ In Gyv society, direct confrontation is considered both crude and foolish. Why a
 
 **Major ability.**
 
-When you speak to someone for at least one minute, you may implant a subtle suggestion in their mind. Make a presence check contested by their cunning challenge number. On a success, they gain one level of charmed toward you and believe one reasonable lie you tell them for the next hour. They don't realize they've been influenced unless the lie is exposed.
+When you speak to someone for at least one minute, you may implant a subtle suggestion in their mind. Make a presence check contested by their cunning challenge number. On a success, they gain one permanent level of charmed toward you unless you act hostiley towards them.
 
 ### Master of Masks
 
 **Passive ability.**
 
-You have advantage on deception checks and can perfectly mimic any accent or speech pattern you've heard for at least 10 minutes. Additionally, choose either intimidation or persuasion when you create your character—you have advantage on all checks with the chosen skill.
+You have advantage on deception checks and can perfectly mimic any accent or speech pattern you've heard for at least 10 minutes. Additionally, choose either intimidation or persuasion when you create your character—you have advantage on all skill checks with the chosen skill.
 
 ## Halfling
 
-Blessed by Lady Fortune herself, all halflings are naturally just lucky. Other than their diminutive stature and uncanny fortune, they are remarkably similar to humans—sharing their adaptability, ambition, and capacity for both great kindness and terrible cruelty. What halflings lack in size, they make up for in their ability to find themselves on the right side of fate's coin toss.
+Halflings possess an uncanny ability to thrive where others merely survive. Their small stature grants them a unique perspective on the world—quite literally seeing it from a different angle than the tall folk. This has given them an almost supernatural knack for finding hidden advantages in any situation, turning disadvantages into opportunities with an ease that larger races find deeply unsettling. Each halfling culture has taken this adaptability to extremes, creating societies that flourish in conditions that would break other peoples.
 
 ### Vitals
 
@@ -1582,98 +1528,112 @@ Blessed by Lady Fortune herself, all halflings are naturally just lucky. Other t
 - **Height:** 3.5-4.5 feet
 - **Weight:** 60-90 pounds
 
-### Fortune's Favor
+### Underfoot Advantage
 
-**Major ability.**
-Lady Fortune smiles upon you. Once per day, when you or an ally within 30 feet would fail a skill check, saving throw, or attack roll, you may have them succeed instead. The result becomes the exact challenge number or defense roll required.
+**Passive ability.**
+Your unique perspective reveals opportunities others miss. Whenever you fail a skill check, you may immediately identify an alternative approach—the GM must tell you a different skill or method that could achieve a similar result with a lower challenge number (at least 2 lower). Additionally, when you take the help action, the creature you help gains advantage on their roll and adds your cunning modifier to the result. You see angles and possibilities that simply don't occur to larger folk.
 
 ### Belenstrope
 
-The Belenstrope halflings of Erasnus are renowned as the finest merchants and traders in all the realm. Their sprawling noble families control vast trade networks, with lords and ladies in every major settlement connected through a byzantine web of second cousins, third uncles, and distant relations. With their olive skin, high cheekbones, and piercing intelligent eyes, they cut striking figures in the markets and courts where they ply their trade. Their slender builds and quick minds serve them well in negotiations, where a single misplaced word can mean the difference between profit and ruin.
+The Belenstrope halflings of Erasnus have transformed commerce into high art. Their noble merchant houses don't just trade goods—they trade in influence, information, and favors with a complexity that makes even seasoned diplomats dizzy. Every Belenstrope maintains a mental ledger of who owes what to whom, tracking social debts across generations with the same precision their competitors use for gold. Their olive skin bears subtle tattoos in expensive inks that mark major trade victories, and their fingers are always stained with the particular blue-black ink used for contracts in Erasnus. They dress in calculated opulence, each silk thread and jeweled button precisely chosen to convey their exact level of wealth—never so much as to invite robbery, never so little as to seem unworthy of serious negotiation.
+
+In Belenstrope society, a merchant's route defines their identity more than their family name. Young halflings spend years as apprentice traders before earning the right to establish their own routes, and the most successful can trace their commercial lineages back through centuries of carefully maintained ledgers. Their wedding ceremonies involve the literal joining of trade routes, with couples exchanging not rings but sealed contracts establishing their combined commercial territory. They view the world as an endless series of arbitrage opportunities, and their greatest cultural heroes are those who turned worthless goods into fortunes through clever routing and timing.
 
 #### Aspects
 
-- Everything has a price, if you know how to find it
-- Family connections open all doors
+- My family's routes are written in my blood
+- There's always a better deal three towns over
 
-#### Golden Touch
+#### Merchant Prince
 
 **Passive ability.**
-You have an innate sense for value and profit. You automatically know the approximate worth of any item you handle, and you have advantage on all checks related to trade, negotiation, and detecting forgeries. Additionally, increasing your cunning die costs 2 less XP.
+You start with trade connections worth 20 miles of established routes and know the approximate market prices for all common goods. When searching for buyers or sellers, you may roll twice and take the better result for determining trader level. Your influence counts as one higher (maximum 5) when determining trader level for buyers/sellers. Additionally, you automatically know if any trader is trying to deceive you about market conditions, and you can establish new trade route segments in half the normal time.
 
 ### Fieri
 
-Deep beneath Hell Creek in Chimea, where the ground itself burns with the heat of the plane of fire, dwell the Fieri—the hellborn halflings. Cursed generations ago to live in this infernal realm, they have adapted to their burning prison with bodies that channel earth and flame. Their hatred for the surface world burns as hot as their homeland, and they kill any outsider foolish enough to descend into their domain. Red-skinned with eyes like glowing coals, the Fieri have become as merciless as the environment that shaped them.
+Deep beneath Hell Creek in Chimea, the Fieri have built a civilization from spite and molten stone. Their underground cities glow with the light of exposed magma flows, which they channel through obsidian aqueducts to heat their homes and power their forges. Every Fieri child learns to read the mood of lava like surface dwellers read weather—knowing when a flow is "angry" enough to surge, when it's "sleeping" and safe to cross, when it's "hungry" and likely to find new paths. Their priests teach that they weren't cursed to live here but chosen, selected by the fires below to become something harder and more enduring than the soft surface folk who abandoned them. They've developed a complex sign language using the glow patterns of heated metal, allowing them to communicate across the roaring noise of their volcanic home.
+
+The Fieri measure wealth not in gold but in thermal territories—regions where the heat is stable enough to be harvested but intense enough to be valuable. Their architecture defies surface logic, with buildings that would be ovens to others serving as comfortable homes, and what surface folk would consider forges functioning as their hospitals and nurseries. They've domesticated creatures that no surface dweller could imagine as livestock: salamanders the size of cattle that feed on sulfur, blind cave fish that swim in near-boiling pools, beetles with shells that must be cracked with hammers. When they must venture to the surface for raids, they carry their hatred like a furnace in their chest, knowing that every moment under the cold stars is a moment stolen from their true home.
 
 #### Aspects
 
-- The surface world abandoned us to burn
-- Rage is the only warmth that matters
+- My fury burns hotter than any forge
+- The surface world deserves only ash
 
-#### Hellborn
+#### Hatred's Forge
 
 **Passive ability.**
-You gain a basic attunement to fire. The burning condition cannot reduce you below 1 hit point, and you take half damage from all fire sources. Your unarmed attacks deal fire damage and inflict one level of burning on a hit. You cannot venture into areas colder than temperate climate without taking one level of weakened that doesn't fade until you return to warmth.
+Your burning resentment literally ignites your surroundings. Whenever you take damage from an enemy, the air around you heats up—the next attack you make causes your weapon to glow white-hot, adding 1d6 fire damage and igniting flammable objects on hit. This heat builds: each time you're damaged in a round (max 3), add another d6 to your next attack. Additionally, you're immune to the burning condition, and when in temperatures below comfortable, you can spend hit points to create heat: 5 HP creates a campfire's worth of warmth for an hour, 10 HP makes a space comfortably warm for a day. Your eyes glow brighter the more damage you've taken in a fight, making you impossible to hide but granting advantage on intimidation.
 
 ### Dengar
 
-In the fetid swamps of Phirexes, the Dengar halflings have made their peace with a life others would find unbearable. Ruled by the Gorgon Queen—whom they see as a benevolent protector rather than the tyrant she truly is—they've adapted to swamp life with remarkable optimism. Master brewers and foragers, they've turned the hostile swamp into a home, finding joy in fermented moss wine and mushroom stews. Their pragmatic cheerfulness in the face of constant danger from bog creatures and toxic fumes would be inspiring if it weren't so tragically misguided.
+In the Phirexes swamps, the Dengar have elevated toxic brewing to an art form that would terrify any surface alchemist. Their still-houses rise on stilts above the bog, each one a maze of copper tubing and bubbling vessels where they transform the swamp's poisons into something approaching medicine—or at least something that won't kill you immediately. They've catalogued over three hundred varieties of toxic mushroom, venomous moss, and caustic tree sap, discovering through generations of careful experimentation (and countless deaths) exactly which combinations produce healing rather than harm. Their children play games identifying poisons by scent alone, and coming-of-age ceremonies involve brewing your first batch of "swamp spirits"—a violently alcoholic concoction that doubles as paint stripper, wound cleanser, and breakfast drink.
+
+The Dengar's optimism stems from a cultural philosophy they call "the worse it gets, the better it was"—the idea that surviving something awful makes everything else seem wonderful by comparison. They throw festivals to celebrate disasters avoided, making special brews to commemorate "that time the bog almost ate the village" or "when the poison fog only killed half the chickens." Their master brewers wear leather aprons stained with so many toxic substances that the garments themselves become dangerous to touch, and they consider this a mark of expertise. They've developed such a nuanced understanding of intoxication and poison that they can brew liquid emotions—bottles of liquified courage, fermented fear, or distilled confusion that they trade with desperate outsiders willing to risk the swamp's dangers for their unique concoctions.
 
 #### Aspects
 
-- Every day you're not eaten is a good day
-- The Queen protects us from worse things
+- I can make medicine from anything that doesn't kill me first
+- Happiness is just the right mixture of poisons
 
-#### Swamp Resilience
+#### Swamp Alchemist
 
 **Passive ability.**
-The swamp has made you hardy. You are immune to all poisons, venoms, and diseases. You can identify edible plants and fungi automatically, and you know how to brew healing poultices from swamp materials (functions as a crude healing kit that replenishes daily). Additionally, you can hold your breath for a number of minutes equal to your might die maximum.
+Your expertise with toxic brewing grants extraordinary benefits. You can use swamp materials (or any poisonous/venomous components) as "depleted" components for alchemy regardless of their source. When crafting alchemical items, you may add an additional effect from the following list at no extra component cost: grants immunity to one specific poison for 24 hours, removes one disease, or inflicts one level of a condition of your choice when consumed. Additionally, you can identify any poison, venom, or disease by taste (safely), and you produce one random beneficial potion each week from your casual brewing (GM determines effect based on recent swamp materials encountered). Your tolerance for toxins is so complete that healing potions work at double effectiveness on you.
 
 ### Wispen
 
-The silver-skinned Wispen halflings are perhaps the strangest of their kind. Nomadic wanderers found throughout Grendenheim, they possess the unique ability to separate their souls from their shadows, animating objects with pieces of their own essence. Their encampments are unnerving places where tents walk on their own, tools work without hands, and furniture rearranges itself. To the Wispen, this is simply life—why carry your home when your home can carry itself?
+The silver-skinned Wispen halflings are living repositories of forgotten memories, their nomadic lifestyle driven by an unusual curse—or gift, depending on perspective. When a Wispen touches an object with their bare skin, they absorb faint echoes of its history, experiencing ghostly sensations of past events. A sword might whisper of its battles, a coin might carry the anxieties of its previous owners, a doorknob might remember every hand that turned it. This constant flood of psychic impressions has made them a deeply peculiar people who wear gloves obsessively and avoid touching anything unnecessarily. Their caravans are immediately recognizable by the elaborate silk wrappings covering every surface, protecting the Wispen from unwanted visions while traveling.
+
+The Wispen have learned to weaponize their burden, becoming the greatest trackers and investigators in Grendenheim. They can follow trails years old by touching trees and stones, solve murders by handling the victim's possessions, and find lost treasures by reading the memories in old maps. Their culture revolves around managing the flow of information—they've developed meditation techniques to process traumatic visions, ritual cleansings to purge unwanted memories, and methods for storing important impressions in specially prepared crystals. Young Wispen undergo a harrowing coming-of-age ritual where they must touch an ancient memory stone containing their clan's entire history, experiencing generations of life in a few overwhelming moments. Those who emerge sane are considered true adults; those who don't wander the roads muttering about centuries they never lived.
 
 #### Aspects
 
-- My shadow and I don't always agree
-- Everything is more alive than it appears
+- Every object screams its history at me
+- I know where you've been by what you've touched
 
-#### Soul Splinter
+#### Psychometric Echo
 
 **Passive ability.**
-You can detach a piece of your shadow to animate a single object no larger than a 5-foot cube. The object gains a move speed of 15 feet and can perform simple tasks. While an object is animated this way, you cast no shadow and have disadvantage on stealth checks in bright light. You can recall your shadow as an action. If the animated object is destroyed, your shadow returns after a long rest.
+Your touch reveals the hidden history of objects. By spending a minute in skin contact with an item, you experience its most emotionally significant moment from the last year. For particularly important objects, you might see further back (GM's discretion). You can also track anyone who has touched an object in the last 24 hours—you know their general direction and distance (within a mile). However, touching objects with violent or traumatic histories forces a cunning save (CN = 10 + years since the event, max 20) or take a level of mental vulnerability. You've learned to fight with this curse: when you successfully hit with a melee weapon, you may read your target's most recent memory, learning what they did in the last minute.
 
 ### Shailin
 
-Yellow-eyed and patient as stone, the Shailin halflings of Sestros await their promised destiny. Every Shailin hears the whispers of Talresses, a daemon who has woven itself into their cultural consciousness so thoroughly that they mistake its voice for divine providence. They perform their daily lives with quiet certainty that they are the chosen people, destined for a greatness that always seems just beyond the horizon. Their squat frames and distinctive golden eyes mark them as blessed—or cursed, depending on one's perspective.
+The yellow-eyed Shailin of Sestros live in a constant state of anticipatory readiness, their entire culture shaped around prophecies that always seem just about to come true. Their daemon whispers different things to each of them—fragments of possible futures, warnings about paths not taken, promises of glory that require just one more sacrifice. They build their cities with empty throne rooms for kings not yet born, maintain armies for wars not yet declared, and teach their children skills for professions that don't yet exist. Every Shailin carries a small journal where they record their personal prophecies, creating vast libraries of contradictory futures that their scholars desperately try to reconcile. The most respected members of society are those whose prophecies have almost come true—the "Nearly Blessed" who were so close to their destiny that they could taste it.
+
+The Shailin have developed elaborate rituals around decision-making, using their daemon whispers like a twisted magic 8-ball. Before any major choice, they perform "future readings" where they listen to the whispers while considering each option, trusting that Talresses will guide them correctly. That this frequently leads to disaster doesn't shake their faith—clearly, the disaster was necessary for the greater destiny still to come. Their architecture reflects this temporal confusion, with buildings constructed for purposes that might become clear someday, doors that open onto walls (for now), and staircases that lead nowhere (yet). They age strangely, sometimes looking decades older or younger than their actual years, as if their bodies can't quite agree on when they're supposed to be.
 
 #### Aspects
 
-- Our time will come, as was foretold
-- The whispers guide us to our destiny
+- My time will come, as was foretold
+- Every failure brings me closer to destiny
 
 #### Daemon Whispers
 
 **Passive ability.**
-Talresses whispers secrets to you. Once per day, you may ask a yes or no question about the immediate future (next 10 minutes) and receive a truthful answer. However, whenever you roll a 1 on any die, you hear distracting whispers and must subtract 2 from your total roll as the daemon's voice overwhelms your thoughts. You have advantage on saves against being charmed by creatures other than daemons.
+Talresses whispers secrets to you. Once per day, you may ask a yes or no question about the immediate future (next 10 minutes) and receive a truthful answer. However, whenever you roll a 1 on any d20 roll (skill checks, attack rolls, or saving throws), you hear distracting whispers and must subtract 2 from your total roll as the daemon's voice overwhelms your thoughts. Additionally, when you would gain a destiny point from invoking negative aspects, you gain one extra DP as Talresses rewards your suffering. You have advantage on saves against being charmed by creatures other than daemons.
 
 ### Windorf
 
-The seafaring Windorf halflings embody the best of halfling nature—kind, thoughtful, and possessed of a quiet courage that puts larger folk to shame. Making their homes in the coastal regions of Windor, they've taken to the sea with the same cheerful determination they bring to all endeavors. Their ships are marvels of halfling engineering, built low and sturdy to weather any storm. In the tradition of their ancient homeland, they value good food, comfortable homes, and the simple pleasure of helping a neighbor in need.
+The Windorf halflings have discovered something profound about fortune: it flows like ocean currents, and those who understand its patterns can ride its waves. Their seafaring culture is built on reading these invisible tides of probability, using complex charts that track not wind and water but likelihood and chance. Their navigators don't just plot courses through physical space but through possibility space, finding routes where favorable winds are most probable, where pirates are least likely, where the chance of profit runs highest. They've developed a elaborate system of knots and rope work that serves as both practical sailing knowledge and a form of probability mathematics—each knot representing a different statistical outcome, complex problems solved by weaving rope patterns that would make other cultures' heads spin.
+
+The Windorf have ritualized their relationship with fortune through their peculiar gambling traditions. They don't gamble for money but for luck itself, playing elaborate games where the stakes are probability points that can be saved and spent on future endeavors. A Windorf captain might bet their good weather luck against another's safe passage fortune, trading probabilities like currency. Their priests are called "Odds Makers," and they maintain great temples that are part casino, part lighthouse, part mathematical academy. These structures serve as neutral ground where luck can be formally exchanged, calculated, and even stored in special dice carved from whalebone. Their children play with loaded dice to learn how probability feels when it's tilted, developing an intuitive sense for when fortune is flowing their way or when the odds have turned against them.
 
 #### Aspects
 
-- A good deed is its own reward
-- The sea calls, but home calls louder
+- I can feel when the odds are about to turn
+- Fortune favors those who understand her patterns
 
-#### Stouthearted
+#### Fortune's Current
 
 **Passive ability.**
-Your courage is legendary among halflings. You are immune to the frightened condition and have advantage on all saves against fear effects. When an ally within 30 feet would gain the frightened condition, you may use your reaction to shout encouragement, granting them advantage on their save. Additionally, you have a swim speed of 20 feet and can hold your breath for twice as long as normal.
+You've learned to sense and manipulate probability streams. At the start of each day, roll 3d6 and keep them—these are your "fortune dice." Whenever you or an ally within 30 feet makes any roll, you may replace one die in their roll with one of your fortune dice (before or after seeing the result). Once used, that fortune die is spent. Additionally, you always know the exact odds of success for any game of chance, can sense when someone is cheating at gambling, and gain advantage on navigation checks at sea. When you roll maximum on a fortune die, immediately roll another fortune die to add to your pool.
 
 ### Whiteling
 
-When a halfling dies with unfinished business or in a state of extreme emotional turmoil, they sometimes rise as a Whiteling—a corpse vampire that haunts their former communities. These undead halflings retain their memories but lose all empathy, becoming predators that hunt those they once loved. The transformation is tied to something deep in halfling biology and culture, though scholars debate whether it's Fortune's final curse or simply the price of their legendary luck.
+When a halfling dies with unfinished business or in a state of extreme emotional turmoil, they sometimes rise as a Whiteling—a corpse vampire that haunts their former communities. These undead halflings retain their memories but lose all empathy, becoming predators that hunt those they once loved. The transformation is tied to something deep in halfling biology and culture, though scholars debate whether it's Fortune's final curse or simply the price of their legendary luck. Whitelings appear as pale, desiccated versions of their living selves, with pupilless white eyes and voices that carry an unsettling echo. They often maintain grotesque parodies of their former lives—undead merchants who trade in suffering, skeletal parents who prepare meals of ash and bone for children who fled years ago.
+
+The most disturbing aspect of Whitelings is their perfect memory combined with absent emotion. They can recite every birthday, every shared meal, every whispered secret with those they now hunt, all while describing how they plan to drain their former loved ones dry. They're drawn to halfling communities but can never enter uninvited, leading to horrible sieges where they call out to their living relatives in familiar voices, using shared memories as weapons. Some communities have developed "Whiteling watches," where families take turns guarding against their own returned dead. The condition is not contagious—Whitelings seem incapable of creating more of their kind, leading some to theorize that each represents a unique failure of the halfling spirit, a soul so corrupted by undeath that it cannot even share its curse.
 
 #### Aspects
 
@@ -1683,21 +1643,23 @@ When a halfling dies with unfinished business or in a state of extreme emotional
 #### Undead Fortune
 
 **Passive ability.**
-You are undead. You don't need to breathe, eat, drink, or sleep. You are immune to poison and disease. Healing magic harms you (take damage instead of healing), but you can spend hit dice to heal during a short rest by consuming flesh. You have disadvantage on all social rolls with living creatures who know what you are. Fortune's Favor works differently for you—when you use it, the target fails critically instead of succeeding.
+You are undead. You don't need to breathe, eat, drink, or sleep. You are immune to poison and disease. Healing magic harms you (take damage instead of healing), but you can spend hit dice to heal during a short rest by consuming flesh. You have disadvantage on all social rolls with living creatures who know what you are. Fortune works differently for you—when you use Underfoot Advantage, instead of finding alternative approaches, you identify the most harmful possible interpretation of any situation. You may force this dark reading onto others: once per day when a creature within 30 feet succeeds at a roll, you may have them fail instead as their fortune abandons them.
 
 ### Hookling
 
-In the frozen wastes of Morelous, the Hookling halflings have adapted to an environment that would kill most others. Their gray-blue skin provides natural camouflage against the ice, while their characteristic hooked noses help warm the frigid air before it reaches their lungs. Severe and humorless by necessity, they've built a culture where waste is the greatest sin and frivolity is viewed as a dangerous weakness. Every calorie counts when winter never ends, and the Hooklings have learned that survival requires absolute discipline.
+In the frozen wastes of Morelous, the Hookling halflings have transformed survival into a mathematical science. Their culture revolves around "The Count"—an obsessive tracking of every resource, every calorie, every breath of warm air. Children learn to calculate metabolic rates before they learn to read, and can determine the exact caloric value of any food by weight and texture alone. Their language has seventeen different words for types of hunger and twenty-three for varieties of cold, each representing specific caloric deficits or heat loss rates. They wear intricate bead chains that serve as portable abacuses, constantly clicking through calculations of resource expenditure versus expected return. A Hookling wedding involves the couple demonstrating their compatibility through synchronized calculation of their combined household efficiency ratings.
+
+The Hooklings have developed such precise bodily control that they can consciously regulate their metabolisms, slowing their hearts to conserve energy or speeding digestion to extract every possible nutrient. Their architecture is a marvel of thermal efficiency, with buildings designed to capture and recirculate every degree of body heat, every wisp of breath. They've turned starvation into a competitive sport, with annual fasting competitions where participants see who can maintain consciousness the longest on the least resources. Their moral system judges waste as the ultimate sin—to discard something that contains even a single calorie of energy or moment of warmth is considered murder of future selves. They eat in absolute silence to avoid wasting energy on conversation, communicate through elaborate systems of clicks and taps that require minimal jaw movement, and consider laughter a dangerous luxury that burns precious calories without return.
 
 #### Aspects
 
-- Waste nothing, want nothing
-- Laughter is a luxury we cannot afford
+- I know the caloric cost of every action
+- Survival is mathematics, and I never miscalculate
 
-#### Winter's Child
+#### Metabolic Precision
 
 **Passive ability.**
-You are immune to the effects of cold weather and take half damage from cold sources. You can survive on half the normal food and water requirements. You have advantage on survival checks in arctic environments and can naturally sense approaching blizzards 1 hour before they arrive. However, you have disadvantage on all rolls when in temperatures above comfortable, as the heat saps your strength.
+Your obsessive biological efficiency grants superhuman resource management. You need only one-quarter the normal food and water to survive, and can enter a hibernation state as an action, reducing your needs to one-tenth normal while unconscious. You always know the exact nutritional value of any substance and can digest normally inedible organic matter (leather, bark, bone) for emergency sustenance. In combat, you may "budget" your energy: at the start of each round, allocate a number between 0-3. Add that number to all rolls this round, but lose that many hit points at the end of the round. Additionally, you can precisely calculate travel times and resource needs, automatically succeeding on planning-related checks for journeys.
 
 ## Human
 
@@ -1881,8 +1843,7 @@ Among the scattered remnants are the Jae-Kai, nomadic spirit wranglers who have 
 
 #### Ancient Bloodline
 
-**Major ability.**
-The Deoric magic of your ancestors flows through your veins, though weakened by generations. Once per day, you may speak a single word in Deoric that becomes reality. Work with your GM to determine reasonable effects - you might speak "Light" to illuminate an area, "Calm" to soothe an agitated creature, or "Open" to unlock a simple door. The effect should be equivalent to a level 1-2 spell and cannot directly harm creatures or grant permanent benefits.
+Work with your GM. This culture is nearly gone.
 
 ### Husakas
 
@@ -1942,7 +1903,7 @@ The harsh life of the islands and the constant struggle against fierce storms an
 **Passive ability.**
 Your giant heritage has blessed you with incredibly dense bones and resilient flesh. Increase the damage threshold for taking wounds by 2 - where others would take a wound from 10 or more damage, you require 12 or more damage to suffer a wound.
 
-Additionally, your imposing size grants you advantage on intimidation checks against creatures smaller than you, and you count as one size larger for the purposes of carrying capacity and lifting.
+Additionally, your imposing size grants you advantage on intimidation checks against creatures smaller than you, and you count as one size larger for the purposes of carrying capacity.
 
 ### Shontobi
 
@@ -1987,8 +1948,6 @@ Their rituals and appearance make them deeply unsettling to outsiders, but the T
 **Major ability.**
 Through ancient blood magic rituals, you can divine truth from the patterns of life and death. Once per day, by examining a small amount of blood (your own or willingly given), you can learn one piece of information about the creature it came from: their current emotional state, whether they have told any lies in the past day, if they are suffering from any diseases or curses, or the general direction and distance to their current location.
 
-Additionally, you can sense the presence of undead creatures within 60 feet, as their corrupted life force creates discordant notes in the blood-song that flows through all living things.
-
 ### Nuun
 
 The Nuun are a desert people blessed with striking golden or ice-blue eyes that reflect their deep attunement to the primal elements of fire and water. Dark-skinned and dark-haired, they have built magnificent cities in the desert realm of Kura, where their mastery of trade has brought wealth and their appreciation for beauty has created architectural wonders that rival any in the known world.
@@ -2024,27 +1983,6 @@ Temptari settlements can be found in the high mountain passes and valleys where 
 
 **Passive ability.**
 You cannot be surprised. Additionally, once per round, when you or an ally within 30 feet would roll a 1 on any die, you may warn them of the impending complication. They may choose to not take that action instead, avoiding both the roll and its consequences entirely.
-
-#### Desert Born
-
-**Passive ability.**
-Choose either fire or water when you select this heritage. You gain a basic attunement to that element. Additionally, you have advantage on all presence checks related to trade, negotiation, or appraising the value of goods, and you only need to consume water once every three days instead of daily.
-
-### Gezzerin
-
-The Gezzerin have adapted to life in the shadow of giants, developing a culture built around stealth, conservation, and ritual scarification that tells the story of their survival. Each scar represents a close encounter, a lesson learned, or a giant evaded. They move through their hill country homes like ghosts, using ancient paths and hidden shelters passed down through generations. Water is sacred to the Gezzerin, and they have developed remarkable biological adaptations to preserve every drop.
-
-The Gezzerin make their homes throughout the Hills of Gezzeri, where massive giants still roam. They are known for their scouts, survivalists, and the intricate scarification that serves as both history and protection.
-
-#### Aspects
-
-- My scars tell my story
-- Giants cast long shadows, but shadows can hide many things
-
-#### Giant's Bane
-
-**Heart ability.**
-Your people have learned to disappear when giants draw near. When you take the hide action, you may include up to six other creatures within 10 feet of you in your stealth check, using your result for the entire group. Additionally, you only need to drink water once per week, and you have advantage on saving throws against being forcibly moved or knocked prone by creatures larger than you.
 
 ### Kuru
 
@@ -3133,35 +3071,6 @@ As an action, you may take on the appearance of a female humanoid. In addition, 
 
 You may turn your hands into deadly weapons as they go from hands to claws. Your hands count as a light, melee slashing weapon. You can never starve, but you gain a level of vulnerability if you do not eat humanoid flesh for a week or more. You cannot eat normal food.
 
-## Sarakiel
-
-The Sarakiel are beings of terrible beauty, angelic creatures from the plane of light whose perfection masks a xenophobic hatred that burns as bright as their luminous wings. With their pale, symmetrical features and eyes that glow with inner radiance, they appear as everything mortal races imagine angels should be—until one learns of their genocidal war against the Xaphkiel and their utter contempt for all they deem impure.
-
-These creatures dwell in magnificent towers of light that float invisible above the clouds, engaging in an eternal war among the stars. Their society is built on principles of absolute purity and rigid hierarchy, where even the slightest deviation from perfection results in exile. Children born with any defect—a crooked wing, mismatched eyes, a birthmark—have their wings clipped and are cast from the towers to fall to the earth below.
-
-The Sarakiel view themselves as the rightful inheritors of creation, superior to all other races. Their laws are absolute, their justice merciless, and their certainty unshakeable. They would rather see the world burn than allow impurity to spread.
-
-### Aspects
-
-- Purity through isolation and supremacy
-- The flawed deserve only exile or death
-
-### Vitals
-
-- **Size:** Medium
-- **Height:** 5-6.5 feet
-- **Weight:** 100-200 pounds
-
-### Clipped Wings
-
-**Passive ability.**
-You have brilliant white wings that would allow flight if not for being clipped as a sign of your imperfection. Your wings emit bright light in a 30-foot radius and dim light 30 feet beyond that, which you can suppress or resume at will. The damage from your fall was cushioned by your wings—you can glide 10 feet horizontally for every 10 feet you fall and take half falling damage.
-
-### Light Attuned
-
-**Passive ability.**
-You have a basic attunement to light as a racial feature. Additionally, your angelic nature grants you resistance to radiant damage and advantage on saves against being blinded. However, your upbringing has left you with disadvantage on all social skill checks with "impure" races (any non-Sarakiel) as your disgust is barely concealed.
-
 ## Satyr
 
 The Satyr are creatures of primal passion and bloody revelry who have embraced their wild nature completely. With the upper bodies of humanoids and the lower bodies of goats, they reject the constraints of civilized clothing and armor, preferring to live as nature intended. Their culture revolves around ecstatic dances performed to haunting pipe music, often culminating in frenzied celebrations drenched in the blood of their prey.
@@ -3671,37 +3580,6 @@ When both moons are dark (or at GM's discretion, when you choose to activate thi
 - You are immune to being charmed or frightened
 
 You can attempt a CN 15 presence save at the end of each round to end this early.
-
-## Xaphkiel
-
-The Xaphkiel are hauntingly beautiful creatures from the plane of darkness, bearing the appearance of fallen angels cast in shadow. Their midnight-dark wings spread wide with an otherworldly grace, each feather seeming to absorb light rather than reflect it. Pure black eyes—lacking any trace of white—peer from faces of dark gray skin, their features possessing an unsettling symmetry that speaks to their otherworldly origin.
-
-These dark angels harbor an eternal hatred for their counterparts, the Sarakiel, who they blame for their exile from the stars. The Xaphkiel once dwelt among the celestial bodies until the Sarakiel declared their presence was corrupting the pure starlight. Cast down to the floating sky-stones known as mosodori, they have waged millennia of brutal warfare against their enemies. The conflict has become increasingly savage over the ages—Sarakiel hunting and butchering Xaphkiel children while Xaphkiel crucify captured Sarakiel in elaborate displays of suffering.
-
-The Xaphkiel philosophy embraces pain as a path to enlightenment, believing that suffering builds character and reveals truth. This masochistic worldview permeates their culture, where endurance of hardship is the highest virtue and comfort is viewed with suspicion.
-
-### Aspects
-
-- Through suffering comes strength
-- The Sarakiel must pay for their crimes
-
-### Vitals
-
-- **Type:** Race
-- **Size:** Medium
-- **Height:** 5-6.5 feet
-- **Weight:** 100-200 pounds
-- **Max Age:** 120
-
-### Angel Wings
-
-**Passive ability.**
-You have dark, shadowy wings emanating darkness. You have a fly speed of 80 feet, and magically decrease the light level by two levels in a 30-foot radius, and decrease the light level by one in a 30-foot radius beyond that.
-
-### Shadow Born
-
-**Passive ability.**
-You gain a basic attunement to darkness. When in darkness, you regenerate 2 hit points at the start of each round. Bright light causes you discomfort—you have disadvantage on perception checks in bright light.
 
 ## Yngli
 

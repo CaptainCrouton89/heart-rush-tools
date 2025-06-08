@@ -24,10 +24,5 @@ Your body is covered in magical tendrils that grant perfect camouflage. You can 
 
 ### Spirit Herbalist
 
-**Heart ability.**
-Your deep connection to jungle spirits grants you profound knowledge of natural medicine and plant communication. You can:
-
-- Speak with plants within 30 feet, learning about recent events in the area
-- Identify any poison or disease by taste without being affected by it
-- Create healing poultices that act as healing potions using just jungle plants (1 hour preparation)
-- Call upon jungle spirits to guide you, gaining advantage on survival and navigation checks for 1 hour
+**Passive ability.**
+When taking a short rest in a jungle or forest environment, you may create a simple herbal remedy. Roll 1d6 - you or an ally regain that many hit points. This remedy must be used within 10 minutes or it loses potency.

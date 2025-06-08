@@ -20,10 +20,10 @@ In Gyv society, direct confrontation is considered both crude and foolish. Why a
 
 **Major ability.**
 
-When you speak to someone for at least one minute, you may implant a subtle suggestion in their mind. Make a presence check contested by their cunning challenge number. On a success, they gain one level of charmed toward you and believe one reasonable lie you tell them for the next hour. They don't realize they've been influenced unless the lie is exposed.
+When you speak to someone for at least one minute, you may implant a subtle suggestion in their mind. Make a presence check contested by their cunning challenge number. On a success, they gain one permanent level of charmed toward you unless you act hostiley towards them.
 
 ### Master of Masks
 
 **Passive ability.**
 
-You have advantage on deception checks and can perfectly mimic any accent or speech pattern you've heard for at least 10 minutes. Additionally, choose either intimidation or persuasion when you create your character—you have advantage on all checks with the chosen skill.
+You have advantage on deception checks and can perfectly mimic any accent or speech pattern you've heard for at least 10 minutes. Additionally, choose either intimidation or persuasion when you create your character—you have advantage on all skill checks with the chosen skill.

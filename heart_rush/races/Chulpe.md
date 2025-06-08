@@ -50,6 +50,4 @@ The physical presence of a Terrogone is overwhelming—their massive frames are 
 
 **Passive ability**
 
-Your massive size and strength make you a devastating opponent. You count as one size larger for the purposes of grappling, pushing, and intimidation checks. When you deal damage to a creature smaller than you with a melee attack, they must make a presence saving throw against your might challenge number or gain two levels of frightened toward you until the end of the encounter. Additionally, when using the might stance with heavy weapons, you may add your weapon die to the attack roll twice instead of once.
-
-Looking at the provided description and abilities, here's the Sylthik race following the template:
+You are size large. When you deal damage to a creature smaller than you with a melee attack, they must make a presence saving throw against your might challenge number or gain two levels of frightened toward you until the end of the encounter. Additionally, when using the might stance with heavy weapons, you may add your weapon die to the attack roll twice instead of once.

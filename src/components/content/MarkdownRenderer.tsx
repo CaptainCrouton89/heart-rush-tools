@@ -230,6 +230,17 @@ const mdxComponents = {
       </div>
     </div>
   ),
+
+  // Enhanced image styling
+  img: ({ src, alt, ...props }: ComponentProps & { src?: string; alt?: string }) => (
+    <img
+      src={src}
+      alt={alt || ""}
+      className="max-w-full h-auto rounded-lg border border-border shadow-sm my-4"
+      loading="lazy"
+      {...props}
+    />
+  ),
 };
 
 // Function to process callout boxes in content

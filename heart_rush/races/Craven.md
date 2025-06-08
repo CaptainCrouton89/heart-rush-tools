@@ -20,9 +20,9 @@ Their corvid features—black feathers, sharp beaks, and glittering dark eyes—
 ### Take No Life
 
 **Passive ability.**
-You are magically prevented from directly or intentionally killing any living creature. If you cause a death through direct action or knowing inaction, you instantly die with no possibility of resurrection. However, this curse has sharpened your mind—you have advantage on all cunning checks and can perfectly remember every command you've ever been given and who gave it.
+You are magically prevented from directly or intentionally killing any living creature. If you cause a death through direct action or knowing inaction, you instantly die with no possibility of resurrection.
 
 ### Insatiable Mind
 
 **Passive ability.**
-Your brilliant corvid intellect absorbs knowledge at an extraordinary rate. For every 7 XP you gain, gain an additional 1 XP. You learn languages in one-tenth the normal time and can perfectly mimic any sound you've heard. Your mind constantly seeks ways to work within your constraints, giving you advantage on checks to find non-lethal solutions to violent problems.
+Your brilliant corvid intellect absorbs knowledge at an extraordinary rate. For every 7 XP you gain, gain an additional 1 XP.

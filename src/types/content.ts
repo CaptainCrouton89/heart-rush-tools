@@ -11,6 +11,7 @@ export interface ContentSection {
   reading_time: number;
   order: number;
   children?: ContentSection[];
+  image?: string;
 }
 
 export interface NavigationNode {
@@ -88,6 +89,7 @@ export interface ContentMetadata {
   word_count: number;
   reading_time: number;
   order: number;
+  image?: string;
 }
 
 // Search configuration for Fuse.js

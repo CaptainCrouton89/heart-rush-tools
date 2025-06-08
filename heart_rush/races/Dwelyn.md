@@ -20,10 +20,9 @@ They combine the brutal efficiency of orcs with elven precision, wielding curved
 
 **Passive ability.**
 
-When you choose the might stance with a slashing weapon, you may sidestep 5 feet before or after your attack without spending a rush point. When you choose the agility stance, add 1d4 to your attack roll.
+When you choose the might stance with a slashing weapon, you may sidestep 5 feet before or after your attack. When you choose the agility stance, add 1d4 to your attack roll.
 
-### Beaded Influence
+### War Trophies
 
 **Passive ability.**
-
-The beads in your hair mark your standing. You start with one bead. For each point of influence you gain, you may add another bead. You have advantage on intimidation checks against creatures with fewer beads than you, and advantage on persuasion checks with other Dwelyn.
+Your beads are crafted from defeated enemies. When you kill a hostile creature, you may craft a bead from their remains. Each bead grants +1 to damage rolls against creatures of the same type (maximum +2 per creature type).

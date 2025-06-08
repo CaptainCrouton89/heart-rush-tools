@@ -20,9 +20,22 @@ Their incredible speed allows them to literally run on water, their feet moving 
 ### Flicker Speed
 
 **Passive ability.**
-Your movement speed increases by 40 feet. You can run across liquid surfaces as if they were solid ground, but if you end your movement on liquid, you fall in. When you dash, your flickering form grants you +2 defense against opportunity attacks.
+
+Your body exists in a state of constant motion, flickering between moments. Your movement speed increases by 40 feet. You can run across liquid surfaces as if they were solid ground, and you may continue moving on liquid for up to 10 feet after you stop moving before falling in.
+
+Additionally, your flickering nature makes you difficult to pin down. You have advantage on saving throws against being restrained or grappled, and creatures have disadvantage on opportunity attacks against you.
 
 ### Emotional Parasite
 
-**Heart ability.**
-You feed on the strong emotions of others. When a creature within 30 feet experiences intense emotion (gains or loses a mental condition, takes a wound, or at GM's discretion), you may gain hit points equal to your heart die. However, when someone gives you a direct command, you must make a presence saving throw against their presence challenge number or be compelled to follow it for the next minute.
+**Passive ability.**
+You sustain yourself on the ambient emotional energy of others. Once per day, you must feed on emotions in one of the following ways:
+
+- Spend at least 1 hour within 30 feet of 5 or more people
+- Remain within 30 feet of someone experiencing emotional extremes (fear, rage, grief, or ecstasy) for at least 10 minutes
+- Make physical contact with a willing creature and share in their emotional state for 5 minutes, gaining one level of any mental condition they have (this feeds you but doesn't remove their condition)
+
+If you fail to feed for a day, you gain one level of weakened and one level of mental vulnerability. For each additional day without feeding, both conditions increase by one level. These conditions are removed one hour after feeding.
+
+**Suggestible Nature**  
+_Passive ability._  
+You must make a CN 8 presence saving throw against any direct command or strong suggestion made to you. You may spend DP up to your highest aspect rank and add that to your roll. If you fail, you feel compelled to follow the suggestion for the next minute unless it would directly harm you.

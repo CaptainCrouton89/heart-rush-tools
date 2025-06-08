@@ -43,27 +43,43 @@ function ChildSection({ child, level }: ChildSectionProps) {
           onClick={() => setIsExpanded(!isExpanded)}
           className="cursor-pointer py-1 px-3 rounded-md transition-colors duration-300 hover:bg-accent/10"
         >
-          <HeaderTag className={`${headerSize} font-semibold text-primary mb-2`}>
-            {child.title}
-          </HeaderTag>
-          
-          <div className="prose prose-lg dark:prose-invert max-w-none mb-2">
-            <MarkdownRenderer content={child.content} />
-          </div>
-          
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <svg 
-              className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-            
-            <span>
-              {isExpanded ? 'Hide subsections' : 'Show subsections'}
-            </span>
+          <div className="flex flex-col lg:flex-row lg:items-start lg:gap-6">
+            <div className="flex-1">
+              <HeaderTag className={`${headerSize} font-semibold text-primary mb-2`}>
+                {child.title}
+              </HeaderTag>
+              
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-2">
+                <MarkdownRenderer content={child.content} />
+              </div>
+              
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+                
+                <span>
+                  {isExpanded ? 'Hide subsections' : 'Show subsections'}
+                </span>
+              </div>
+            </div>
+
+            {/* Child image */}
+            {child.image && (
+              <div className="flex-shrink-0 mb-4 lg:mb-0">
+                <img
+                  src={child.image}
+                  alt={child.title}
+                  className="w-full max-w-xs mx-auto lg:mx-0 h-auto rounded-lg border border-border shadow-md"
+                  loading="lazy"
+                />
+              </div>
+            )}
           </div>
         </div>
         
@@ -84,12 +100,28 @@ function ChildSection({ child, level }: ChildSectionProps) {
     return (
       <section className="mb-2">
         <div className="py-1 px-3">
-          <HeaderTag className={`${headerSize} font-semibold text-primary mb-2`}>
-            {child.title}
-          </HeaderTag>
-          
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <MarkdownRenderer content={child.content} />
+          <div className="flex flex-col lg:flex-row lg:items-start lg:gap-6">
+            <div className="flex-1">
+              <HeaderTag className={`${headerSize} font-semibold text-primary mb-2`}>
+                {child.title}
+              </HeaderTag>
+              
+              <div className="prose prose-lg dark:prose-invert max-w-none">
+                <MarkdownRenderer content={child.content} />
+              </div>
+            </div>
+
+            {/* Child image */}
+            {child.image && (
+              <div className="flex-shrink-0 mb-4 lg:mb-0">
+                <img
+                  src={child.image}
+                  alt={child.title}
+                  className="w-full max-w-xs mx-auto lg:mx-0 h-auto rounded-lg border border-border shadow-md"
+                  loading="lazy"
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>

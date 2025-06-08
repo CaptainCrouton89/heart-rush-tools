@@ -107,23 +107,7 @@ Despite their vengeful nature, Ruddings are remarkably skilled Deoric enchanters
 #### Blood Debt
 
 **Passive ability.**
-When a creature deals damage to you or wrongs you in a significant way, you may mark them for vengeance. You always know the general direction and distance to marked creatures within 10 miles. You have advantage on all attack rolls and skill checks made against marked creatures. You may remove this mark if they provide reparations worth at least 100 ducats in copper.
-
-### Red Devil
-
-The Red Devils are the most malevolent of all goblin subraces, small creatures with burning red eyes and hearts full of genuine evil. Like their Rudding cousins, they inhabit the Copper Hills, but where Ruddings pursue calculated vengeance, Red Devils simply revel in causing pain and suffering for its own sake.
-
-These goblins take pleasure in tormenting others and have no sense of honor or justice. They are cruel, sadistic, and utterly without mercy, making them feared throughout the region as harbingers of misfortune and malice.
-
-#### Aspects
-
-- Cruelty is its own reward
-- Evil runs in my veins
-
-#### Sadistic Glee
-
-**Passive ability.**
-Whenever you deal damage to a creature or cause a creature to gain a negative condition, you regain 1 hit point. When you reduce a creature to 0 hit points, you gain 1 rush point at the start of the next round. You have advantage on intimidation checks against creatures that have witnessed your cruelty.
+When a creature deals damage to you or you perceive them as having wronged you, you may mark them for vengeance as an action. You always know the general direction and distance to marked creatures within 10 miles. You have advantage on all attack rolls and skill checks made against marked creatures.
 
 ### Blitzling
 
@@ -189,4 +173,4 @@ Those Wydlings who venture south often find work as guides through mountain pass
 #### Frostbite
 
 **Passive ability.**  
-Your icy heritage grants you several adaptations. You are immune to the effects of freezing temperatures and take half damage from cold-based attacks. Your razor-sharp teeth count as ultralight piercing weapons. Additionally, when you bite a creature you are grappling or that is restrained, they take 1d6 damage and gain one level of slowed as numbing cold spreads from your icy fangs.
+Your icy heritage grants you several adaptations. You are immune to the effects of freezing temperatures and take half damage from cold-based attacks. Your razor-sharp teeth count as ultralight piercing melee weapons. Additionally, when you deal damage with your bite, the bitten creature gains 2 level of slowed as numbing cold spreads from your icy fangs.

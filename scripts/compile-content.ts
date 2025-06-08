@@ -15,6 +15,7 @@ interface ContentSection {
   word_count: number;
   reading_time: number;
   order: number;
+  image?: string;
 }
 
 interface NavigationItem {
@@ -29,6 +30,8 @@ interface NavigationItem {
 const WORDS_PER_MINUTE = 200;
 const SOURCE_DIR = "heart_rush/all_sections_formatted";
 const RACES_DIR = "heart_rush/races";
+const RACES_IMAGES_DIR = "heart_rush/races/images";
+const PUBLIC_IMAGES_DIR = "public/heart_rush/races/images";
 const OUTPUT_DIR = "content";
 
 function calculateReadingTime(wordCount: number): number {
@@ -126,6 +129,76 @@ function extractTags(content: string, title: string): string[] {
   });
 
   return tags.slice(0, 8); // Limit to 8 tags
+}
+
+async function copyRaceImages(): Promise<void> {
+  try {
+    // Check if source images directory exists
+    await fs.access(RACES_IMAGES_DIR);
+    
+    // Ensure public images directory exists
+    await fs.mkdir(PUBLIC_IMAGES_DIR, { recursive: true });
+    
+    // Read all files in the source images directory
+    const imageFiles = await fs.readdir(RACES_IMAGES_DIR);
+    
+    // Common image extensions
+    const imageExtensions = ['.png', '.jpg', '.jpeg', '.webp', '.svg'];
+    
+    // Copy each valid image file
+    let copiedCount = 0;
+    for (const imageFile of imageFiles) {
+      const ext = path.extname(imageFile).toLowerCase();
+      if (imageExtensions.includes(ext)) {
+        const sourcePath = path.join(RACES_IMAGES_DIR, imageFile);
+        const destPath = path.join(PUBLIC_IMAGES_DIR, imageFile);
+        
+        try {
+          await fs.copyFile(sourcePath, destPath);
+          copiedCount++;
+        } catch (error) {
+          console.warn(`Failed to copy ${imageFile}:`, error);
+        }
+      }
+    }
+    
+    if (copiedCount > 0) {
+      console.log(`✅ Copied ${copiedCount} race images to public directory`);
+    }
+  } catch (error) {
+    // Directory doesn't exist - not a problem
+    console.log("No race images directory found, skipping image copying");
+  }
+}
+
+async function findRaceImage(title: string): Promise<string | undefined> {
+  try {
+    // Check if images directory exists
+    await fs.access(RACES_IMAGES_DIR);
+    
+    // Read all files in the images directory
+    const imageFiles = await fs.readdir(RACES_IMAGES_DIR);
+    
+    // Common image extensions
+    const imageExtensions = ['.png', '.jpg', '.jpeg', '.webp', '.svg'];
+    
+    // Look for image file with matching name (case insensitive)
+    const normalizedTitle = title.toLowerCase().replace(/[^a-z0-9]/g, '');
+    
+    for (const imageFile of imageFiles) {
+      const baseName = path.basename(imageFile, path.extname(imageFile));
+      const normalizedBaseName = baseName.toLowerCase().replace(/[^a-z0-9]/g, '');
+      
+      if (normalizedBaseName === normalizedTitle && 
+          imageExtensions.includes(path.extname(imageFile).toLowerCase())) {
+        return `/heart_rush/races/images/${imageFile}`;
+      }
+    }
+  } catch (error) {
+    // Directory doesn't exist or other error - not a problem
+  }
+  
+  return undefined;
 }
 
 function splitContent(
@@ -290,6 +363,9 @@ async function compileContent(): Promise<void> {
     // First, combine race files into Kin_&_Culture.md
     await combineRaceFiles();
     
+    // Copy race images to public directory
+    await copyRaceImages();
+    
     // Ensure output directory exists
     await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
@@ -332,6 +408,12 @@ async function compileContent(): Promise<void> {
         const wordCount = countWords(section.content);
         const readingTime = calculateReadingTime(wordCount);
 
+        // Check for race image if this is from Kin & Culture category
+        let image: string | undefined;
+        if (category === "Kin & Culture") {
+          image = await findRaceImage(section.title);
+        }
+
         const contentSection: ContentSection = {
           slug: generateSlug(section.title, existingSlugs),
           title: section.title,
@@ -343,6 +425,7 @@ async function compileContent(): Promise<void> {
           word_count: wordCount,
           reading_time: readingTime,
           order: globalOrder++,
+          ...(image && { image }),
         };
 
         // Set parent relationship for subsections - only look within current file
@@ -427,6 +510,7 @@ async function compileContent(): Promise<void> {
       word_count: section.word_count,
       reading_time: section.reading_time,
       order: section.order,
+      ...(section.image && { image: section.image }),
     }));
 
     await fs.writeFile(

@@ -63,15 +63,10 @@ These elves reside north of Gorath, having returned from their cosmic journeys w
 - Cosmic wanderer
 - Time moves differently for me
 
-#### Imperial Presence
+#### Cosmic Presence
 
 **Passive ability.**
-Whenever making a presence check, if you did not roll a failure or complication, you may choose to instead use your heart challenge number as the result. You are immune to the frightened condition.
-
-#### Cosmic Mindset
-
-**Passive ability.**
-You are used to life traveling at a very slow rate. You have disadvantage on all ability checks made while under a time crunch, and advantage on all ability checks made with no time limitations.
+Your experience beyond the material plane has granted you an otherworldly perspective on time and social interaction. You are immune to the frightened condition. When making presence checks where you can take your time (no immediate pressure), you have advantage on the roll. However, when under time pressure or in urgent situations, you have disadvantage on all ability checks as your cosmic mindset struggles with mortal urgency.
 
 ### Eloweir (Sea Elf)
 
@@ -87,9 +82,9 @@ The Eloweir are renowned across Alaria for their mastery of poisons, their skill
 #### Sea Blood
 
 **Passive ability.**
-You have an advanced attunement to water, but only saltwater. You can breathe underwater and your swim speed is increased by 30 feet while in saltwater.
+You have an advanced attunement to water, but only saltwater.
 
-### Teflin (Blood Elf)
+### Teflin (Crimson Elf)
 
 The Teflin reside in Hik, their reddish skin marking them as a people touched by an ancient curse. Blood is sacred to their culture, as an old Deoric enchantment runs through their veins—a curse that traded immortality for power, but at a terrible cost.
 
@@ -103,7 +98,9 @@ The curse builds up in their blood over time, and if allowed to accumulate too m
 #### Crimson Sacrifice
 
 **Passive ability.**
-You may voluntarily reduce your current hit points by any amount as an action. For every 10 hit points you sacrifice this way, gain +1 to all attack rolls until your next long rest. These bonuses stack but are lost if you regain hit points above your pre-sacrifice total.
+The ancient Deoric curse prevents you from aging or dying from natural causes, but builds dangerous power over time. At the end of each long rest, you gain 1 Curse Point. If you ever reach 5 Curse Points, you die.
+
+When you first wake up after a long rest, you may perform ritual bloodletting to alleviate the curse's burden. Lose hit points equal to 1/10th of your maximum hit points (minimum 1), spend 1 Curse Point, and reduce the rank of all wounds you have by 2.
 
 ### Kuzagt (Bone Elf)
 
@@ -135,7 +132,7 @@ These spectral elves are cold, bitter, and wise, having spent millennia isolated
 #### Ghostly Form
 
 **Passive ability.**
-You are incorporeal and can move through solid objects, but cannot interact with physical objects without concentrating (requiring an action). You are immune to physical damage but vulnerable to magical damage. You do not need to eat, drink, or breathe.
+You are incorporeal and can move through solid objects, but cannot interact with physical objects without concentrating (requiring an action). You are immune to physical damage from non-magical sources. You do not need to eat, drink, or breathe.
 
 ### Kryaaji (Sun Elf)
 
@@ -151,23 +148,23 @@ These elves train the magnificent Wysynnbre—golden, luminant eagles that nest 
 #### Radiant Heritage
 
 **Passive ability.**
-You have a basic attunement to light. You can cause bright light to emanate from your body in a 15-foot radius and dim light 15 feet beyond that. This light dispels magical darkness and you can control it at will.
+You have a basic attunement to light. Light you magically produce cannot be dispelled, cannot be extenguished, and is impervious to magical darkness effects.
 
-### Istori (Winter Elf)
+### Istori (Glass Elf)
 
-The Istori are typically kind, benevolent, and regal elves who have traditionally secluded themselves in the northern reaches of Istora. They believed it more peaceful to remain alone than deal with the world's constant turmoil and conflicts.
+The Istori dwell in the frozen southern valleys of Istora, where they have mastered the ancient art of ice-glass forging. These elves discovered that by combining their natural magic with the perpetual ice of their homeland, they can create crystalline glass harder than steel that never melts. Their cities are marvels of translucent spires and frozen architecture that gleam like jewels in the southern light.
 
-However, their isolation has not protected them from strife, as they now find themselves locked in internal revolution. The very peace they sought to preserve has been shattered by ideological divisions within their own society.
+The revolution consuming their society stems from a fundamental disagreement about their craft: the Traditionalists believe ice-glass should only be used for art, architecture, and preservation of their culture, while the Industrialists want to weaponize and export their ice-glass technology to the world. This schism has split families and guilds, with some creating beautiful sculptures while others forge unbreakable weapons.
 
 #### Aspects
 
-- Regal but embattled
-- Seeker of lost peace
+- Master of the ice-glass forge
+- Art versus industry divides us
 
-#### Winter's Resilience
+#### Ice-Glass Transmutation
 
-**Passive ability.**
-You are immune to cold damage and ignore difficult terrain caused by ice or snow. You have advantage on saving throws against effects that would slow you or reduce your movement speed.
+**Major ability.**
+You can transmute ice into glass or glass into ice within 30 feet. The transformed material becomes as strong as mithril and retains this strength permanently. You can affect up to a 10-foot cube of material with each use. Ice-glass you create never melts from natural heat and can only be broken by magical weapons or extraordinary force. This ability works on any ice or glass, not just what you've created.
 
 ### Sivakr (Silver Elf)
 
@@ -245,7 +242,7 @@ Most distinctively, Ythari families adopt wild animals as mentors for their chil
 
 #### Gift of the Forest
 
-**Heart ability.**
+**Major ability.**
 Your connection to nature and culture of giving manifests in supernatural ways. When you give away something of personal value (worth at least 10 ducats or of significant sentimental importance), you may invoke the Gift of the Forest. Choose one:
 
 - **Silent Step**: You and up to 6 allies within 30 feet gain the ability to move without making any sound for the next hour. During this time, you automatically succeed on stealth checks related to moving quietly.
@@ -297,7 +294,7 @@ The Xalahir view other beings as nothing more than elegant wine bottles to be sa
 **Major ability.**
 Your vampiric nature grants you tools to hunt among civilized prey. You possess an unnatural magnetism that makes others want to trust and confide in you, despite the wrongness in your sunken black eyes.
 
-- You have advantage on all Presence checks to persuade, deceive, or seduce creatures that can see and hear you
+- You have advantage on all presence checks to persuade, deceive, or seduce creatures that can see and hear you
 - Once per long rest, when you touch a humanoid, you may subtly feed on their life force. They must make a presence saving throw against your presence challenge number or become charmed by you for 10 minutes. While charmed this way, they will not notice or remember you feeding on them
 - When you successfully feed (either through this ability or by dealing damage with a bite attack), you heal hit points equal to your heart die and remove one level of any condition affecting you
 - You have darkvision out to 30 feet, allowing you to hunt in darkness

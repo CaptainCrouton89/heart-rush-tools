@@ -114,9 +114,9 @@ Hestrube society operates more like geological formations than traditional commu
 #### Stone Flesh
 
 **Passive ability.**
-You gain an advanced attunement to earth. You can pass through unworked stone as if it were difficult terrain, and may choose to become partially incorporeal within stone, granting you total cover from attacks that don't originate from within the stone.
+Your body can shift between flesh and living stone at will. While in stone form, you gain +2 to defense rolls against physical attacks but move at half speed. You can sustain yourself by consuming 1 pound of stone or minerals daily instead of normal food.
 
-You sustain yourself by consuming 1 pound of stone or minerals daily instead of normal food. While underground, you have advantage on stealth checks and automatically succeed at navigation checks.
+When you take the defensive stance, you can choose to become solid stone, taking one-quarter damage instead of half until the start of your next turn.
 
 ### Grendel (Chord Dwarves)
 
@@ -131,10 +131,8 @@ Their musical traditions serve not just as entertainment but as historical recor
 
 #### Chord of Kinship
 
-**Heart ability.**
-When you and at least two allies who can hear you begin singing, humming, or playing instruments together, all participants gain +2 to their next attack roll and may use each other's rush points as if they were their own until the end of the round.
-
-Additionally, you have advantage on all social skill checks when interacting with other Grendel, and disadvantage on such checks with authority figures from settled communities.
+**Major ability.**
+When you and at least two allies who can hear you begin singing, humming, or playing instruments together, all participants gain +2 to their defense rolls and cannot be charmed or frightened for the next minute, so long as everyone continues participating in the music.
 
 ### Verucan
 
@@ -150,9 +148,7 @@ Verucan society prizes passion and intensity in all things—their loves burn as
 #### Molten Heart
 
 **Passive ability.**
-You gain an advanced attunement to fire. Your body radiates heat—unarmed attacks and grappling inflict 1 level of burning on contact. When you become enraged or use abilities that increase in power based on emotions, add your current rush points to the effect.
-
-Once per combat, when you take a wound, you may immediately cast _Aura of Ignition_ without using an action or having the spell count against your daily limit.
+You gain a basic attunement to fire. Your body radiates heat—creatures that grapple you or hit you with unarmed attacks take 1d4 fire damage.
 
 ### Yorinthian (Winter Dwarves)
 
@@ -167,28 +163,26 @@ These pale, frost-touched dwarves have developed a rigid hierarchy based on thei
 
 #### Winter's Embrace
 
-**Major ability.**
-You gain a basic attunement to water. As an action, you may cast _Chilling Wind_ or _Grasp of the Ice Witch_. For the next minute, whenever you deal damage with a melee weapon, the target gains 1 level of slowed.
-
-Additionally, you are immune to cold damage and environmental cold effects, but take double damage from fire sources.
+**Passive ability.**
+You gain a basic attunement to ice. You are immune to cold damage and environmental cold effects, can see normally in blizzards and other winter weather conditions, and suffer no movement penalties from ice or snow. However, you take double damage from fire sources.
 
 ### Strømgodden (Battle Dwarves)
 
-The Strømgodden have forged a culture around sacrifice, fury, and glorious combat, developing unique armor embedded with spikes and blades that turns their very bodies into weapons. Their signature combat technique involves hurling themselves bodily at enemies, using their spiked armor to deal devastating damage through close contact. This dangerous fighting style reflects their belief that true honor comes only through risking everything in battle.
+The Strømgodden have forged a culture around sacrifice, fury, and glorious combat, developing unique armor embedded with spikes and blades that turns their very bodies into weapons. This signature spiked armor is crafted through ancient techniques passed down through generations, with each piece custom-fitted to its wearer and considered a sacred extension of their fighting spirit. Their dangerous fighting style reflects their belief that true honor comes only through risking everything in battle.
 
-These battle-scarred dwarves view each conflict as a sacred offering to the gods of war, and their society celebrates those who achieve the most spectacular and dangerous victories. Their settlements in Trømgar are built like fortresses, constantly ready for the next glorious battle.
+These battle-scarred dwarves view each conflict as a sacred offering to the gods of war, and their society celebrates those who achieve the most spectacular and dangerous victories. Their settlements in Trømgar are built like fortresses, constantly ready for the next glorious battle. The creation of spiked armor is a rite of passage, with young Strømgodden spending years learning the specialized smithing techniques required.
 
 #### Aspects
 
 - Glory through sacrifice
-- My body is my weapon
+- My armor is my weapon
 
 #### Spiked Charge
 
 **Heart ability.**
-When you dash at least 20 feet toward an enemy and enter an engagement with them, your armor becomes a weapon. Make an additional attack using your armor's defense bonus as your weapon die. Both you and the target take damage equal to the attack roll, but you may immediately make a second weapon attack with advantage.
+While wearing your specially crafted spiked armor, when you dash at least 20 feet toward an enemy, you may use your action to make an opportunity attack with your armor instead. You must choose the might stance and your armor counts as a heavy piercing melee weapon. Add your armor's defense bonus in place of a weapon die roll. However, the violent impact body-slam damages you as well—you take damage equal to the target's defense roll.
 
-While wearing medium or heavy armor, unarmed attacks and grappling deal additional damage equal to your armor's defense bonus.
+Additionally, whenever you are grappled while wearing your spiked armor, the enemy immediately takes damage equal to your armor's defense bonus, and takes the same damage again at the start of each subsequent round they maintain the grapple.
 
 ### Nydor (Dark Dwarves)
 
@@ -204,27 +198,13 @@ Their long, unkempt hair and prominent tusks give them a bestial appearance that
 #### Forge of Oppression
 
 **Passive ability.**
-You gain a basic attunement to darkness and an advanced knowledge of mechanical devices. You have advantage on crafting checks for weapons, armor, and restraints, and can create makeshift shackles or cages from available materials in half the normal time.
-
-Additionally, you can see in complete darkness as if it were bright light to a distance of 60 feet, and enemies cannot gain advantage on attack rolls against you due to concealment or darkness.
+You gain a basic attunement to darkness, and you have advantage on crafting checks for weapons, armor, and restraints.
 
 ### Velwey (Dream Dwarves)
 
 The Velwey have mastered the art of dream harvesting, using combinations of hallucinogenic substances, divine magic, and deoric rituals to extract and manipulate the dreams of sleeping minds. Their religious society in Movasi has built magnificent palaces powered by crystallized dreams, and they offer the profound service of helping individuals discover their true names through guided dream journeys.
 
-These mystical dwarves serve as both healers and judges, able to enter the dreams of others to provide therapy, extract information, or even deliver merciful death to those ready to pass into eternal dreams. Their dream weavers are revered as divine agents who free worthy souls from the burdens of waking life.
-
-#### Aspects
-
-- Dreams reveal deeper truths
-- The sleeping mind holds all secrets
-
-#### Dreamwalker
-
-**Weekly ability.**
-By spending one hour in meditation with a sleeping creature, you may enter their dreams. While in the dream, you can communicate with them, observe their memories, or plant suggestions that will influence their actions for the next 24 hours.
-
-Once per month, you may attempt to discern a creature's true name through an extended dream ritual requiring their willing participation and taking 3 days to complete.
+This race is not a playable race, so there are no associated abilities.
 
 ### Einwissel (Celestial Draugr)
 
@@ -258,9 +238,7 @@ These pale, ethereal-looking dwarves have evolved exceptional sensory abilities 
 #### Corpse-pale Adaptation
 
 **Passive ability.**
-You require no sunlight and can survive on any organic matter, including normally inedible substances like leather, paper, or corpses. You have darkvision to 120 feet and can track by scent like a bloodhound.
-
-When you consume part of a creature that died within the last week, you gain one of their memories from the last day of their life. Civilized creatures typically react with disgust to your dietary habits, imposing disadvantage on social interactions until they become accustomed to your culture.
+You require no sunlight and can survive on any organic matter, including normally inedible substances like leather, paper, or corpses. You have darkvision to 120 feet, and can always determine the direction towards any corpses within 1 mile.
 
 ### Gruynmar
 
@@ -276,9 +254,9 @@ Clan loyalty runs deeper than blood among the Gruynmar, and abandoning one's shi
 #### Gunpowder Mastery
 
 **Passive ability.**
-You can craft and use firearms, which count as heavy ranged weapons with 90-foot range that deal piercing damage. Firearms require gunpowder charges and take a full action to reload after each shot, but they ignore armor bonuses to defense and deal +1d6 damage on successful hits.
+You can craft and use firearms, which count as an ultra-heavy ranged weapons with 90-foot range that deal piercing damage. Firearms require gunpowder charges and take a full action to reload after each shot. Ultra-heavy weapons use a d20 as their weapon die.
 
-You have advantage on all checks related to naval combat, ship handling, and maritime navigation. However, you suffer disadvantage on overland navigation and survival checks until you gain significant land-based experience.
+You can craft a basic firearm in 3 days with access to a forge and 50 ducats worth of materials. You can create gunpowder charges from sulfur, charcoal, and saltpeter (5 ducats of materials yields 20 charges). In settlements, charges typically cost 1 ducat each when available.
 
 ### Fengruk (Forgewardens)
 
@@ -293,10 +271,11 @@ Fengruk philosophy teaches that just as raw metal must be heated, hammered, and 
 
 #### Master of the Forge
 
-**Passive ability.**
-You have advantage on all crafting checks and can work with magical materials that would normally require special facilities. Your smithing work takes half the normal time, and weapons or armor you create gain +1 to attack or defense bonuses respectively.
+**Passive ability.** Your deep understanding of metallurgy and transformative processes grants you the following benefits:
 
-Your thick beard provides +1 defense against fire damage and breath weapons that target your face. Once per long rest, you may spend one hour at a forge to grant a willing creature's weapon or armor a temporary magical enhancement that lasts until the next dawn.
+- When using a workshop for magical crafting, treat it as one level higher than it actually is (maximum level 7).
+- When using components with the "neutral" tag (typically metals and gems), treat them as one level higher for all crafting purposes.
+- You have advantage on all crafting skill checks.
 
 ### Cendelle (Celestial Draugr)
 
@@ -308,19 +287,4 @@ Living so deep underground, the Cendelle have developed a culture centered aroun
 
 Unlike their cousins who fear the dark or seek the sun, the Cendelle have learned to navigate between light and shadow, between the material and the celestial. They are equally comfortable in the absolute darkness of the deep earth and the alien radiance of Celesté. This duality has made them philosophical and contemplative, often speaking in riddles and seeing patterns where others see only stone.
 
-#### Aspects
-
-- Between two worlds, belonging to neither
-- The threshold must never be left unguarded
-
-#### Portal Sense
-
-**Heart ability.**
-
-Your long exposure to planar energies has attuned you to disturbances in the fabric of reality. You gain the following benefits:
-
-- You can sense the presence of any portal, gateway, or planar rift within 120 feet, even through solid stone. You know the general direction and approximate distance to such phenomena.
-- As an action, you may attune yourself to the planar energies around you for the next minute. While attuned, you can see invisible creatures and objects within 30 feet as faint, shimmering outlines, and you have advantage on saving throws against effects that would transport you to another plane against your will.
-- Once per long rest, when you or an ally within 10 feet would be affected by a teleportation effect, planar travel, or dimensional magic, you may use your reaction to either allow it to function normally or attempt to suppress it. If suppressing, the effect's originator must succeed on a saving throw against your cunning challenge number or the effect fails.
-
-When you use any part of this ability, faint celestial runes briefly appear on your skin, glowing with soft silver light.
+This is not a playable race.

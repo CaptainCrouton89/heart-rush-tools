@@ -66,6 +66,26 @@ export function MainContent({
           <ChildrenContent sections={childContent} />
         </article>
 
+        {/* Image Gallery */}
+        {content.image && (
+          <section className="mt-12 pt-8 border-t border-border">
+            <h2 className="text-2xl font-semibold text-primary mb-6">Gallery</h2>
+            <div className="flex justify-center">
+              <div className="max-w-md">
+                <img
+                  src={content.image}
+                  alt={content.title}
+                  className="w-full h-auto rounded-lg border border-border shadow-lg"
+                  loading="lazy"
+                />
+                <p className="text-sm text-muted-foreground text-center mt-2">
+                  {content.title}
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Navigation footer */}
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex justify-between items-center">

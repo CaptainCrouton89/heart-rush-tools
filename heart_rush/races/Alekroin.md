@@ -20,9 +20,9 @@ Despite their fearsome reputation, the Alekroin possess keen intelligence and in
 ### Predator's Instinct
 
 **Passive ability.**
-You can automatically identify the strongest and weakest creature in any group within 60 feet. You have advantage on attack rolls against creatures that are wounded, frightened, or have fewer hit points than you. When you reduce a creature to 0 hit points, you regain hit points equal to your might die and gain advantage on your next attack roll.
+You can automatically identify the creature with the most and fewest hit points in any group within 60 feet. You have advantage on attack rolls against creatures that are wounded, frightened, or have fewer hit points than you.
 
 ### Death Roll
 
-**Heart ability. Instant.**
-When you successfully grapple a creature, you can attempt to perform a devastating death roll. Make an opposed might check—if you win, you deal damage equal to twice your might die and both you and the grappled creature fall prone. If you win by 5 or more, the creature takes a wound with rank equal to the difference between your rolls.
+**Passive ability.**
+While grappling a creature, you may use your action to perform a death roll. Make an opposed might check—if you win, you deal damage equal to twice your roll, and both you and the grappled creature fall prone. You have one level of advantage for each size larger you are than your target, and disadvantage for each size smaller.

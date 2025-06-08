@@ -63,67 +63,62 @@ You gain a fox as a loyal mount and companion. The fox has the stats of a Beast 
 
 ### Bloodlings (Vampire Gnome)
 
-The Bloodlings are pale, translucent-skinned gnomes who dwell in the dark caves of the Chimean Blood Mountains. These vampiric gnomes have adapted to a life sustained by blood rather than traditional sustenance, developing an eerie, ghostly appearance that reflects their unnatural dietary needs.
+The Bloodlings are pale, translucent-skinned gnomes who dwell in the dark caves of the Chimean Blood Mountains. These vampiric gnomes maintain an obsessive aristocracy based on the purity of their ancestral bloodlines, with elaborate genealogies traced back thousands of years.
 
-Living in complete darkness for generations, the Bloodlings have become masters of stealth and ambush. Their society is built around blood hierarchies, where status is determined by the quality and rarity of blood one can obtain.
-
-#### Aspects
-
-- Predator of the darkness
-- Blood is life
-
-#### Sanguine Sustenance
-
-**Passive ability.**
-You do not need to eat normal food, but must consume blood equivalent to one ration per week or gain a level of weakened that does not fade until you feed. You have darkvision out to 60 feet and gain +2 to stealth checks in darkness. You take double damage from bright light sources.
-
-### Neka (Savage Gnome)
-
-The Neka are dark-skinned, feather-adorned gnomes who rule as apex predators in the Nekanzi Jungle. With filed teeth and wild hair, they live in mud and palm huts while maintaining a culture that seems primitive to outsiders but is actually highly sophisticated in its own way. They consume raw animals and have been known to eat intruders, though they maintain complex customs around peace talks and greetings.
-
-Despite their seemingly poor material culture, the Neka create fantastic tombs and have mastered fire magic for hunting and combat. They can imitate any animal sound and have no written language, passing knowledge through oral tradition.
+Bloodling society revolves around maintaining and proving the superiority of one's lineage. Every Bloodling can recite their ancestry for at least twenty generations, and social gatherings inevitably devolve into debates over whose great-great-grandmother had the purer blood. Marriages are arranged through complex negotiations that can take decades, as families attempt to preserve or elevate their bloodline's standing. The most prestigious families claim direct descent from the First Bite—the legendary moment when their ancestors first tasted blood and transformed into something more than mere gnomes.
 
 #### Aspects
 
-- Apex predator
-- Fire and fang
+- My bloodline is pure and ancient
+- Blood enhances my power
 
-#### Primal Mimic
+#### Sanguine Empowerment
 
 **Passive ability.**
-You can perfectly imitate any animal sound you have heard. You have a basic attunement to fire. You gain +2 to intimidation checks against creatures that have seen you eat raw meat, and your bite counts as an ultralight weapon.
+Your bite counts as an ultralight piercing weapon. When you successfully deall damage to a living creature with your bite, you may feed on their blood. For the next 24 hours after feeding, any handmagic talents you possess (that you do not have the destiny level for) function at their destiny level. You cannot gain this benefit again until the previous feeding's effects expire. You cannot feed on the same creature more than once in the same week to gain these benefits.
 
-### Ohblex (Gem Gnome)
+### Neka (Wild Gnomes)
 
-The Ohblex are crystalline gnomes born from the gems and jewels deep within the Gemstone Peaks. Their skin reflects the colors of precious stones, and they sustain themselves by consuming a few gems each year rather than traditional food. Masters of clockwork and the sole keepers of clockmaking secrets on Nin, they craft incredible mechanical devices and jewelry.
+The Neka are a reclusive gnome subrace who have adapted to life in the dangerous Nekanzi Jungle. Their dark skin and filed teeth mark them as descendants of those who chose survival over comfort, developing unique magical and physical adaptations to thrive where others perish. They maintain their knowledge through oral tradition and have developed a cultural mastery of fire magic for both practical and spiritual purposes.
+
+While they keep to their traditional ways and can be territorial about their jungle homes, the Neka are neither primitive nor savage - they simply have different priorities than urban gnomes, valuing survival skills and jungle wisdom over written scholarship.
+
+#### Aspects
+
+- Survivor of the jungle depths
+- Fire speaker
+
+#### Jungle Adaptation
+
+**Passive ability.**
+
+Life in the Nekanzi has given you unique abilities:
+
+- You have a basic attunement to fire
+- You can perfectly imitate any animal sound you have heard
+- Your filed teeth and claws count as ultralight weapons
+- You have advantage on survival checks in jungle environments
+
+### Ohblex (Gem Gnomes)
+
+The Ohblex are crystalline gnomes born from the gems and jewels deep within the Gemstone Peaks. Their skin reflects the colors of precious stones, and they sustain themselves by consuming a few gems each year rather than traditional food. Masters of clockwork and the sole keepers of clockmaking secrets on Alaria, they craft incredible mechanical devices and jewelry.
 
 The Ohblex live in elaborate underground mazes filled with mechanical traps, endlessly scheming against rival family houses in complex political games. They value secrecy, mystery, and complication above all else.
 
 #### Aspects
 
-- Lover of mysteries
-- Gemstone heritage
+- Schemes within schemes
+- Crystalline precision
 
-#### Clockwork Mastery
-
-**Passive ability.**
-You do not need to eat normal food, instead consuming gems worth 10 ducats per month. You have advantage on checks to create, understand, or disable mechanical devices. You know the secrets of clockmaking and can craft complex mechanical items that others cannot replicate.
-
-### Shyoka Saseidi (Beast Tender Gnome)
-
-The Shyoka Saseidi are light-skinned, curly-haired gnomes who dwell in dens beneath the great pine trees of Nykotheryx Amberylika. While their Luma neighbors tend the trees, these gnomes serve as caretakers for all forest fauna. They maintain close relationships with badgers, squirrels, rabbits, and foxes, often wearing badger pelts as marks of respect.
-
-Their society revolves around the sacred but dangerous dragon totems scattered throughout their forest, with only specially chosen priests permitted to approach these powerful artifacts.
-
-#### Aspects
-
-- Guardian of the wild
-- Reverent of ancient powers
-
-#### Forest Kinship
+#### Living Component
 
 **Passive ability.**
-You gain advantage on all skill checks involving small woodland creatures (badgers, squirrels, rabbits, foxes). You can communicate basic concepts with these animals and they will not attack you unless magically compelled. You have advantage on checks to track or navigate in forested terrain.
+
+You consume gems worth 10 ducats per month instead of food. Your unique metabolism grants you the following benefits:
+
+- When you consume a gem, you instantly know if it has magical properties, its component level, and all its tags (per the magical crafting rules)
+- You count as a portable level 1 alchemy laboratory for the purposes of refining gems and neutral components only
+- When crafting items that require neutral components, you may regurgitate consumed gems as components of up to level 2 (this takes 1 day per component)
 
 ### Techgnomes (Lost Gnome)
 
@@ -139,7 +134,7 @@ These surviving gnomes carry with them fragments of forgotten knowledge and brok
 #### Mechanical Remnant
 
 **Passive ability.**
-You begin play with a damaged but functional mechanical device of your choice (subject to GM approval). You have advantage on checks to understand, repair, or operate technological devices. Once per day, you can jury-rig a simple mechanical solution to a problem using scrap materials.
+You begin play with a damaged but functional mechanical device of your choice (subject to GM approval). You have A2 on all checks for juryrigging, operating, and fixing technological devices.
 
 ### Qipi (Sinkhole Gnome)
 
@@ -154,20 +149,6 @@ The Qipi are the smallest of all gnome heritages, dwelling in the vast sinkhole 
 
 **Passive ability.**
 You gain the Observant talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level. Additionally, you have darkvision out to 30 feet and can see normally in dim light.
-
-### Shyoka Saseidi (Fauna Keeper Gnome)
-
-The Shyoka Saseidi of Nykotheryx Amberylika have long served as the forest's animal caretakers, complementing the Luma's role as tree-tenders. These pale-skinned, curly-haired gnomes build elaborate den networks beneath the protective boughs of ancient pines, creating comfortable homes that mirror the burrows of their beloved badgers. Their society revolves around the sacred dragon totems scattered throughout the forest—powerful artifacts they both revere and fear. Only specially trained priests, marked by ceremonial badger pelts, dare approach these totems to tend the creatures dwelling in their mystical auras. The Shyoka Saseidi have formed deep bonds with the forest's smaller creatures, particularly badgers, squirrels, rabbits, and foxes, learning their languages and sharing their lives. This connection runs so deep that many Shyoka Saseidi consider their animal companions to be family members rather than pets.
-
-#### Aspects
-
-- Protective
-- Spiritually attuned
-
-#### Totem-Blessed Bond
-
-**Passive ability.**
-You gain the Beast Companion talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level. Your beast companion must be a badger, squirrel, rabbit, or fox. Additionally, you have advantage on all skill checks related to understanding or caring for forest animals.
 
 ### Whiteling (Prophet Gnome)
 
