@@ -1007,3 +1007,344 @@ Your deep connection to jungle spirits grants you profound knowledge of natural 
 - Identify any poison or disease by taste without being affected by it
 - Create healing poultices that act as healing potions using just jungle plants (1 hour preparation)
 - Call upon jungle spirits to guide you, gaining advantage on survival and navigation checks for 1 hour
+
+## Triton
+
+Tritons are the proud aquatic warriors of the deep, dwelling in magnificent underwater cities carved from coral and stone. These theistic people worship the ocean deities with fervor, viewing themselves as the chosen guardians of the seas. More warlike than their surface cousins, tritons patrol the waters with military precision, defending their territories from threats both above and below the waves.
+
+Their society is built on martial excellence and divine devotion. Every triton learns combat from childhood, training with trident and net in elaborate underwater arenas. They view the surface world with a mixture of curiosity and disdain, believing land-dwellers to be clumsy and graceless compared to their own fluid movements in water. This pride often manifests as arrogance when dealing with other races, though their competence in aquatic combat is undeniable.
+
+### Aspects
+
+- Natural grace in water
+- Devoted to ocean deities
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 4.5-5.5 ft
+- **Weight:** 100-160 lbs
+- **Max Age:** 70
+
+### Sea Dwellers
+
+**Passive ability.**
+
+You can breathe underwater, you have a swim speed equal to your move speed, and you suffer no penalties to combat or anything else while in or under water.
+
+### Seasoul
+
+**Passive ability.**
+
+You gain basic attunement to water.
+
+## Dwelyn
+
+The Dwelyn are a fierce hybrid race born from the unlikely union of elven grace and orcish strength. These tall, lanky warriors dominate the Green Wilds and surrounding jungles, their deep green skin allowing them to blend seamlessly with the verdant canopy. Black and white hair adorns their heads, often woven with beads that signify their influence within the tribe—the more beads, the greater their standing.
+
+They combine the brutal efficiency of orcs with elven precision, wielding curved scimitars and wearing armor of fur and bone. The Dwelyn are currently locked in conflict with the East Naruaghin Tribes, a war they once dominated easily. However, as their queen's dragon mount Surrey Mahaila has grown sick, so too has the nation's power waned. The queen herself is rumored to be the last true dragonrider, making her both revered and desperately protected by her people.
+
+### Aspects
+
+- Brutal but graceful
+- Tribal warrior
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 6-7 ft
+- **Weight:** 160-220 lbs
+- **Max Age:** 150
+
+### Savage Grace
+
+**Passive ability.**
+
+When you choose the might stance with a slashing weapon, you may sidestep 5 feet before or after your attack without spending a rush point. When you choose the agility stance, add 1d4 to your attack roll.
+
+### Beaded Influence
+
+**Passive ability.**
+
+The beads in your hair mark your standing. You start with one bead. For each point of influence you gain, you may add another bead. You have advantage on intimidation checks against creatures with fewer beads than you, and advantage on persuasion checks with other Dwelyn.
+
+## Splinkreen
+
+The Splinkreen are the living legacy of an ancient wizard's experiment, their souls transplanted from mighty trees into humanoid forms. Their bark-like skin ranges from smooth birch white to rough oak brown, often sprouting small leaves or moss in places of rest. These woodland people move through forests with an eerie calm, showing little concern for their own mortality—perhaps because they remember being trees that stood for centuries.
+
+They speak in slow, deliberate tones and often seem disconnected from the urgencies that drive other races. Death holds no fear for them; they view it as simply returning to the earth that birthed them. This fatalistic outlook makes them both peaceful neighbors and unnervingly willing to sacrifice themselves for causes they deem worthy of their wooden hearts.
+
+### Aspects
+
+- Bark-like skin
+- Unconcerned with death
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5.5-7 ft
+- **Weight:** 180-280 lbs
+- **Max Age:** 300
+
+### Barkskin
+
+**Passive ability.**
+
+Your skin is rough bark. You have +2 to defense rolls against slashing and piercing attacks. Fire damage against you uses d8s instead of d6s.
+
+### Rooted Soul
+
+**Major ability.**
+
+As an action, you may root yourself to the ground. While rooted, you cannot move or be moved by any force, you regain 5 hit points at the start of each round, and you have advantage on all might-based rolls. You may uproot yourself as an action.
+
+## Myushli
+
+The Myushli are perhaps the most unsettling of the civilized races—mushroom folk whose genuine kindness masks a terrifying biological imperative. Standing roughly human height, their bodies are composed of spongy fungal matter topped with wide caps that serve as both head and hat. They speak in soft, melodious voices and genuinely care for visitors to their underground settlements, offering warm beds and hearty fungal stews.
+
+Yet this hospitality hides a dark truth: the Myushli reproduce through spores that can take control of other creatures' bodies. They see nothing wrong with this process, viewing it as a beautiful transformation rather than the horrifying possession it appears to others. Their settlements are often filled with "converts"—former travelers who now serve the collective with glassy eyes and perpetual smiles.
+
+### Aspects
+
+- Genuinely kind
+- Must spread spores
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5-6.5 ft
+- **Weight:** 80-120 lbs
+- **Max Age:** 40
+
+### Spore Cloud
+
+**Heart ability.**
+
+As an action, you release a cloud of spores in a 10-foot radius. Creatures of your choice in the area must make a might saving throw against your cunning challenge number or gain two levels of confused. If a creature fails by 5 or more, they gain two levels of charmed toward you instead.
+
+### Fungal Regeneration
+
+**Passive ability.**
+
+When you take a short rest in a damp or underground environment, you regain 10 hit points. You take half damage from poison and disease but double damage from fire.
+
+## Rusalka
+
+The Rusalka are solitary predators of swamps and marshes, appearing as beautiful women who lure travelers to watery graves. These nymph-like creatures possess an uncanny ability to peer into the hearts of their prey, transforming their appearance to match the deepest desires of those they hunt. No two Rusalka look the same, as each shapes herself to be irresistible to her chosen victim.
+
+They do not age, do not reproduce, and sustain themselves solely on human flesh. Despite their monstrous nature, Rusalka are not mindlessly cruel—they view their hunting as a natural process, no different from a spider catching flies. Some even develop a twisted fondness for certain prey, keeping them alive for weeks while slowly feeding on them.
+
+### Aspects
+
+- Alluring predator
+- Feeds on human flesh
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5-6 ft
+- **Weight:** 100-140 lbs
+- **Max Age:** None
+
+### Rusalka Magic
+
+**Passive ability.**
+
+As an action, you may take on the appearance of a female humanoid. In addition, you can breathe both water and air, suffer no penalties to combat in the water so long as you are not wielding a weapon, and you gain a swim speed equal to half of your move speed.
+
+### Flesh Eater
+
+**Passive ability.**
+
+You may turn your hands into deadly weapons as they go from hands to claws. Your hands count as a light, melee slashing weapon. You can never starve, but you gain a level of vulnerability if you do not eat humanoid flesh for a week or more. You cannot eat normal food.
+
+## Naruaghin
+
+The Naruaghin are the fierce offspring of dwarven stoicism and draconic fury. These reptilian dwarves inhabit the hill caves and ancient temples throughout the Ishnit Jungle, their gray-green scaled skin and slit noses marking them as something between mammal and reptile. Males grow thick beards despite their scales, while females sport impressive spinal ridges instead.
+
+Constantly warring among themselves and with neighboring tribes, the Naruaghin have developed a warrior culture that values strength and cunning in equal measure. They craft weapons from jungle materials—obsidian, bone, and ironwood—and decorate their temples with the skulls of enemies and great beasts alike.
+
+### Aspects
+
+- Reptilian dwarf
+- Natural warrior
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 4-5.5 ft
+- **Weight:** 80-150 lbs
+- **Max Age:** 120
+
+### Stoneborn
+
+**Passive ability.**
+
+You gain the Stoneborn trait from dwarves: You gain +1 to defense rolls and treat all stone and earth as one step easier to work with (stone becomes like clay, hard clay becomes like soft clay, etc.). You can sense the general composition and structure of stone within 10 feet.
+
+### Ferocious
+
+**Passive ability.**
+
+When you take a wound, you immediately gain 2 rush points and may make an opportunity attack against the creature that wounded you if they are within range. This opportunity attack doesn't cost a rush point or action.
+
+## Gyv
+
+The Gyv are the puppet masters of Iylovia, a race whose very presence makes others question their own thoughts. With their distinctive silver hair and grayish skin, these tall, lithe beings move through society like whispers of smoke. Born from the mingling of Zaelian elf and human bloodlines, they inherited something far more dangerous than either parent race possessed—the ability to subtly influence minds.
+
+In Gyv society, direct confrontation is considered both crude and foolish. Why argue when you can make someone believe your position was their idea all along? This has created a culture of extreme paranoia where every conversation is a chess match and trust is a luxury none can afford. Even among themselves, the Gyv deal in shadows and schemes, using intermediaries and elaborate protocols to avoid direct mental manipulation.
+
+### Aspects
+
+- Master manipulator
+- Inherently untrustworthy
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5.5-6.5 ft
+- **Weight:** 120-180 lbs
+- **Max Age:** 200
+
+### Silver Tongue
+
+**Major ability.**
+
+When you speak to someone for at least one minute, you may implant a subtle suggestion in their mind. Make a presence check contested by their cunning challenge number. On a success, they gain one level of charmed toward you and believe one reasonable lie you tell them for the next hour. They don't realize they've been influenced unless the lie is exposed.
+
+### Master of Masks
+
+**Passive ability.**
+
+You have advantage on deception checks and can perfectly mimic any accent or speech pattern you've heard for at least 10 minutes. Additionally, choose either intimidation or persuasion when you create your character—you have advantage on all checks with the chosen skill.
+
+## Yngli
+
+The Yngli are living reminders of the danger of careless words around vengeful cyclopes. These squat, one-eyed beings were once the faithful assistants in the great cyclops forges, using their inborn force attunement to accelerate hammers and move tools with mere thoughts. But when one of their number spoke too freely about their master's work, the betrayed cyclops cursed their entire race to eternal silence.
+
+Now the Yngli struggle as second-class citizens across the Western Isles and Kura. Unable to negotiate, explain, or defend themselves verbally, they are easily exploited by those who separate them from their kin. Only when united under a rare telepath of their kind can they organize effectively, forming silent unions that communicate through gesture and force manipulation.
+
+### Aspects
+
+- Forever silenced
+- Natural force wielder
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 4-5 ft
+- **Weight:** 90-140 lbs
+- **Max Age:** 50
+
+### Forceborn
+
+**Passive ability.**
+
+You gain a paragon level attunement to force.
+
+### Speechbroken
+
+**Passive ability.**
+
+Long ago, a terrible curse was placed on all yngli, preventing them from ever speaking. Although they can produce sound with their mouths with enough concentration, the sounds that come out are garbled and incoherent.
+
+## Gillykin
+
+The Gillykin are the cheerful amphibians of rivers and wetlands, their bulbous eyes and wide mouths giving them an expression of perpetual surprise. These frog-like humanoids bound through life with infectious enthusiasm, their powerful legs carrying them in great leaps that defy their small stature. Their skin ranges from bright greens to deep blues, often mottled with patterns unique to each individual.
+
+Despite their jovial nature, Gillykin face a constant challenge—their amphibian biology demands regular submersion in water. This need shapes their settlements, which cluster around rivers, lakes, and specially constructed pools. Many Gillykin who venture into dry lands carry large water skins not for drinking, but for emergency skin-wetting.
+
+### Aspects
+
+- Eternally optimistic
+- Needs water to survive
+
+### Vitals
+
+- **Size:** Small
+- **Height:** 3-4 ft
+- **Weight:** 40-80 lbs
+- **Max Age:** 70
+
+### Hoppy
+
+**Passive ability.**
+
+Rather than moving any amount of distance up to your move speed, you get two hops each turn. With each hop you may move up to half your move speed. Ignore all difficult terrain, enemies, and opportunity attacks between your starting location and ending location. Whenever you hop, you may forgo any amount of horizontal distance for half as much vertical height.
+
+### Amphibious
+
+**Passive ability.**
+
+You can breathe underwater and gain a swim speed equal to half your move speed. If you do not submerge yourself in water for 5 minutes once a week, your skin dries out and you begin to die. For each week that passes without submersion, your maximum hit points fall by 20.
+
+## Mnurvlyon
+
+The Mnurvlyon are walking contradictions—beings who inherited both the giants' towering height and the dwarves' love of enclosed spaces. Standing over fifteen feet tall with the broad, stocky build of their dwarven ancestry, they are forced to carve enormous halls in their Grey Mountain homes. These gentle giants move with surprising care, having learned through painful experience that the world was not built for their scale.
+
+Their dual heritage manifests in fascinating ways. They possess the giants' strength and the dwarves' craftiness, creating massive works of stone and metal that combine brute force with intricate detail. Yet they struggle with identity, too large for dwarven society and too fond of mountains and caves for giant clans. This has led them to form their own isolated communities high in the Grey Mountains.
+
+### Aspects
+
+- Massive but careful
+- Caught between worlds
+
+### Vitals
+
+- **Size:** Large (L3)
+- **Height:** 15-18 ft
+- **Weight:** 2000-3000 lbs
+- **Max Age:** 300
+
+### Giant's Strength
+
+**Passive ability.**
+
+Your might die is one size larger than normal (start with d8 instead of d6/d4). You can wield two heavy weapons, one in each hand, or wield massive weapons that count as ultra-heavy (1d20 attack die, requires your full movement to swing, -10 feet move penalty).
+
+### Mountain's Endurance
+
+**Major ability.**
+
+Your mixed heritage grants incredible resilience. For the next minute, you gain +10 to all defense rolls, you cannot be moved against your will, and you reduce all damage taken by 5. When this effect ends, you gain two levels of weakened.
+
+# Kendor
+
+The Kendor are an ancient aquatic people whose seahorse-like forms glide through tropical waters with otherworldly grace. Their iridescent scales shimmer with colors that shift like oil on water, and their elongated faces bear an alien beauty that captivates and unsettles in equal measure. Despite their delicate appearance, the Kendor have survived millennia through cunning, diplomacy, and the protection of their hidden coral fortresses.
+
+## Kendor Traits
+
+All Kendor share the following traits:
+
+**Aquatic Heritage**  
+You have a swim speed of 30 feet. You can breathe both air and water. However, your move speed on land is only 20 feet, and you must immerse yourself in water for at least 10 minutes every 24 hours or gain a level of weakened that doesn't fade until you do so.
+
+**Mesmerizing Beauty**  
+You gain the aspect "Otherworldly Allure" at rank 2. Your alien beauty can entrance others, making them more susceptible to your words or causing them to underestimate you.
+
+**Noble Bearing**  
+You were raised in the complex social hierarchies of Kendor society. You gain a rank 1 aspect related to courtly intrigue, such as "Trained in Courts of Coral" or "Master of Subtle Insults."
+
+## Kendor Heritages
+
+### Kendrel
+
+The Kendrel dwell in the warm, crystal-clear waters of tropical seas, where they've built magnificent cities of living coral. Their society values art, poetry, and elaborate courtship rituals above martial prowess. A Kendrel would rather die than be seen as crude or uncultured.
+
+**Soothing Presence**  
+_Passive ability._  
+Your melodious voice and graceful movements have a calming effect on others. Creatures must succeed on a presence saving throw against your presence challenge number to take hostile actions against you if you haven't taken hostile actions against them in the last minute. This effect ends if you or your allies attack them.
+
+**Courtly Grace**  
+Your aspect "Otherworldly Allure" increases to rank 3. Additionally, you have advantage on presence checks related to diplomacy, performance, or etiquette.
+
+### Cendoriln
+
+The Cendoriln inhabit the turbulent Riptear Sea, where violent currents and predators have shaped them into masters of manipulation rather than warriors. While they share their cousins' aversion to direct violence, they've learned that words can cut deeper than any blade.
+
+**Venomous Words**  
+_Heart ability._  
+When you speak to a creature that can understand you for at least one minute, you may weave subtle barbs and psychological attacks into your words. The creature must make a cunning saving throw against your presence challenge number. On a failure, they gain two levels of shaken and one level of mental vulnerability. They don't realize you've affected them magically unless they succeed by 5 or more.
+
+**Predator's Patience**  
+You gain the aspect "Waiting for the Perfect Moment" at rank 2. Additionally, when you are hidden or obscured while underwater, you have advantage on skill checks to remain undetected.
