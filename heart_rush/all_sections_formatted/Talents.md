@@ -32,6 +32,15 @@ Handmagic uses Deoric runes tattooed on the back of one's hand, inscribed in the
 
 The talents in this section are combat-related talents. This categorization is for the ease of finding talents, and has no other effect.
 
+### Action Surge
+
+_Major ability. Martial talent._
+
+You push your body and mind beyond normal limits, moving with impossible speed and precision. When you use this ability on your turn, immediately gain an additional action that must be used during this same turn. This action follows all normal rules and restrictions, and you may use other major abilities with this extra action.
+
+**Destiny Level:**
+When you use Action Surge, you also immediately gain 3 rush points. However, these rush points cannot be spent to enhance your class's major ability - they must be used for minor abilities, opportunity attacks, or sidestepping.
+
 ### Adrenaline spike
 
 _Major ability. Handmagic._
@@ -160,6 +169,19 @@ Whenever you make an attack roll, you may first choose to lose 4 hit points. If 
 
 **Destiny Level:**
 You may lose 6 hit points and add 1d12 instead.
+
+### Blood Bond
+
+_Passive ability. Handmagic._
+
+Through Deoric runes tattooed with mixed blood, you create a mystical life-link between yourself and others. To establish a bond, you and another creature with this talent must spend one minute as a handmagic practitioner inscribes connecting runes on both participants using a mixture of their blood and titan blood.
+
+Once bonded, you may freely transfer hit points between yourself and any bonded creature within 120 feet as an instant ability requiring no action. You may transfer up to 40 hit points per day in this way. Hit points transferred cannot exceed either creature's maximum.
+
+You may be bonded to a number of creatures equal to your presence die.
+
+**Destiny Level:**
+The mystical connection transcends all distance - you may transfer hit points to bonded creatures anywhere in existence. The daily limit increases to 100 hit points. Additionally, when transferring hit points, you may choose to also transfer one condition affecting you to the recipient or vice versa (with their permission).
 
 ### Bloodknight
 
@@ -1103,6 +1125,17 @@ By pointing your index finger at a person, you can project your voice into their
 **Destiny Level:**  
 You may make the words come out in any voice you've heard before, and you do not have to point. They may communicate back in the same way if you choose to allow them.
 
+### Chaos Gambler
+
+_Passive ability. Handmagic._
+
+You have inscribed runes of pure chaos upon your hands, channeling unpredictable forces through your very being. When you take this talent, choose physical or mental. You gain one level of permanent vulnerability in your chosen type (complications and failures occur on 1s and 2s for might and agility checks if physical, or cunning and presence checks if mental).
+
+In exchange, whenever you roll the maximum result on any die during a skill check of your chosen type, you may immediately roll another die of the same size and add it to your result. This can trigger once times on the same roll - each maximum rolled grants another die. Note that multiple 1s _always_ triggers total failure and a complication.
+
+**Destiny Level:**
+The chaos runes spread across your body like living tattoos. You gain an additional level of vulnerability in your chosen type (complications and failures now occur on 1s, 2s, and 3s). However, your exploding dice now trigger on the maximum result OR one below maximum (e.g., 5-6 on a d6, 11-12 on a d12) for skill checks of your chosen type.
+
 ### Coin Jingle
 
 _Major ability. Gaeic melody._  
@@ -1370,6 +1403,17 @@ Add fog to your resonate substances as a gaseous attunement. Your attunement to 
 
 **Destiny Level:**  
 The fog you create is incredibly thick, and hangs heavy in the air. It takes 1 hour to dissipate instead of 1 minute, and mutes the sounds within it, granting A3 on all stealth checks to remain quiet while navigating within the fog.
+
+### Inspiring Presence
+
+_Passive ability. Cognitive talent._
+
+Your natural leadership and encouragement elevate those around you to perform beyond their normal capabilities. When you use the help action, the creature you're helping may use your presence die instead of their heart die when making the skill check, in addition to gaining advantage.
+
+Additionally, when you help someone who is already being helped by another creature, your assistance grants them an additional level of advantage beyond the normal cap of one.
+
+**Destiny Level:**
+You can help multiple creatures with a single action. When you take the help action, choose any number of creatures within 30 feet that can see and hear you. All chosen creatures gain the benefits of your help for their next applicable roll.
 
 ### Inanimate Object
 
