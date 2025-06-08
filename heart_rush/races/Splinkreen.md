@@ -20,10 +20,10 @@ They speak in slow, deliberate tones and often seem disconnected from the urgenc
 
 **Passive ability.**
 
-Your skin is rough bark. You have +2 to defense rolls against slashing and piercing attacks. Fire damage against you uses d8s instead of d6s.
+Your skin is rough bark. You have +2 to defense rolls against bludgeoning, piercing, and slashing attacks. Fire damage against you uses d8s instead of d6s.
 
 ### Rooted Soul
 
-**Major ability.**
+**Heart ability.**
 
-As an action, you may root yourself to the ground. While rooted, you cannot move or be moved by any force, you regain 5 hit points at the start of each round, and you have advantage on all might-based rolls. You may uproot yourself as an action.
+As an action, you may root yourself to the ground. While rooted, you cannot move or be moved by any force, and you have advantage on all might-based rolls. You may uproot yourself as an action.

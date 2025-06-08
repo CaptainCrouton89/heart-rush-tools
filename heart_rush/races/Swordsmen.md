@@ -1,27 +1,36 @@
 ## Swordsmen
 
-The Swordsmen are an enigmatic seafaring people who share a mystical bond with swordfish and other oceanic predators. Their bronze skin bears faint scale patterns that shimmer in sunlight, and their eyes shift between human roundness and the predatory slits of sea hunters depending on their emotional state. Webbed fingers and toes mark them as children of both land and sea.
+The Swordsmen are a notorious seafaring people whose name strikes fear into merchant vessels across the known seas. Their bronze skin bears faint scale patterns, but it's their eyes that truly unnerve—beady and dark like a shark's, constantly calculating weakness and opportunity. These eyes can shift from appearing almost human to utterly predatory in an instant, betraying the cold ruthlessness that lurks beneath even the friendliest smile.
 
-Living primarily in the treacherous Drifting Isles, the Swordsmen navigate deadly waters that would spell doom for larger vessels. Their swift outrigger canoes dance between the shifting sandbars and hidden reefs with supernatural grace, guided by their connection to the great swordfish that swim alongside them. This same connection extends to sharks, barracuda, and other hunting fish who recognize the Swordsmen as kindred spirits.
+Born to the blade and raised on the deck, Swordsmen possess an almost supernatural ability to fight in the chaotic environment of ship-to-ship combat. They treat sword fighting not as an art but as a brutal necessity, incorporating dirty tricks and psychological warfare that would make honorable duelists blanch. Their techniques involve using the ship itself as a weapon—rigging, railings, and rolling decks all become extensions of their blade work.
 
-Many Swordsmen who leave their island homes become pirates, using their unparalleled knowledge of dangerous waters to evade pursuit. Their tribes often provide sanctuary to these seafaring rogues, as no naval force dares chase them into the labyrinthine Drifting Isles.
+The Drifting Isles that spawned them are a lawless collection of hidden ports and treacherous passages where might makes right and cunning makes rich. Young Swordsmen learn to scheme before they can properly walk, playing elaborate games of betrayal and alliance that prepare them for the cutthroat world of piracy. Even those who leave the criminal life behind carry these instincts, seeing every interaction as a negotiation and every friendship as a potential betrayal.
 
 ### Aspects
 
-- The sea's hunters are my brothers
-- No blade cuts water
+- Born to the blade and the betrayal
+- Dead eyes hide living schemes
 
 ### Vitals
 
-- **Type:** Race
 - **Size:** Medium
 - **Height:** 5.5-6.5 feet
-- **Weight:** 120-180 pounds
-- **Max Age:** 70
+- **Weight:** 140-200 pounds
+- **Age:** 50-70 years
 
-### Predator's Bond
+### Cutthroat's Edge
+
+**Heart ability.**
+
+Your blade work targets the gaps and weaknesses that armor cannot protect. When you make an attack with a sword, you may activate this ability to completely ignore the target's defense bonus from armor and shields. Your blade finds the joints, straps, and vital points with murderous precision.
+
+### Scheming Eyes
 
 **Major ability.**
-You can communicate telepathically with predatory sea creatures within 100 feet. Once per day, you can summon a school of predatory fish (or a single large predator if in appropriate waters) to aid you for 10 minutes. These creatures will scout, deliver messages, or fight alongside you but won't sacrifice themselves.
 
-Additionally, you can hold your breath for 30 minutes and have a swim speed of 30 feet. Your sword techniques mirror the movements of swordfish—when wielding any sword, you gain +1 to attack rolls and can attack creatures up to 10 feet away as your blade seems to extend like a swordfish's bill.
+You have an uncanny ability to spot opportunity and weakness. Once per day, after observing someone for at least one minute, you can ask the GM one of the following questions about them, which must be answered truthfully:
+
+- What is this person's greatest fear?
+- What would this person kill for?
+- What is this person trying to hide?
+- Who does this person answer to?

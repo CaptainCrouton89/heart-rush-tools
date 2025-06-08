@@ -17,14 +17,14 @@ They primarily dwell in the mountain monasteries of Murth, where the thin air su
 - **Size:** Small
 - **Height:** 4-5 feet
 - **Weight:** 30-50 pounds
-- **Max Age:** 50
+- **ge:** 50-70
 
 ### Airsoul
 
 **Passive ability.**
-You gain a basic attunement to air. Despite your size, you are unnaturally light. For this reason, your size is small. You take half damage from falling and can jump twice as high and far as normal.
+You gain an advanced attunement to air.
 
-### Rhean Concentration
+### Body of Air
 
-**Passive ability.**
-You have A2 on all checks to learn new skills. When you spend at least one hour studying or practicing without interruption, you gain +2 to any skill check related to that study made within the next 24 hours.
+**Passive ability**
+Despite your size, you are unnaturally light. For this reason, your size is small. You take half damage from falling and can jump twice as high and far as normal.

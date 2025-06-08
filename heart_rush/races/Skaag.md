@@ -22,7 +22,7 @@ The Skaag have only one true city of their own, but small communities can be fou
 ### Accustomed to Darkness
 
 **Passive ability.**
-You can see in darkness as though it was dim light to a range of 45 feet, and can see in dim light as though it was bright light.
+You gain darkvision out to 45 feet.
 
 ### Eye for Treasure
 
