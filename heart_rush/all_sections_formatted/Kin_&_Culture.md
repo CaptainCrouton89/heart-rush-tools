@@ -1658,7 +1658,7 @@ The most disturbing aspect of Whitelings is their perfect memory combined with a
 **Passive ability.**
 You are undead. You don't need to breathe, eat, drink, or sleep. You are immune to poison and disease. Healing magic harms you (take damage instead of healing), but you can spend hit dice to heal during a short rest by consuming flesh. You have disadvantage on all social rolls with living creatures who know what you are. Fortune works differently for you—when you use Underfoot Advantage, instead of finding alternative approaches, you identify the most harmful possible interpretation of any situation. You may force this dark reading onto others: once per day when a creature within 30 feet succeeds at a roll, you may have them fail instead as their fortune abandons them.
 
-# Hookling
+## Hookling
 
 In the frozen wastes of Morelous, the Hookling halflings have transformed survival into a mathematical science. Their culture revolves around "The Count"—an obsessive tracking of every resource, every calorie, every breath of warm air. Children learn to calculate metabolic rates before they learn to read, wearing intricate bead-chains that serve as portable abacuses, constantly clicking through calculations of resource expenditure versus expected return. They've developed seventeen different words for types of hunger and twenty-three for varieties of cold, each representing specific caloric deficits or heat loss rates.
 
@@ -1913,7 +1913,7 @@ The Guiltless have interbred with humans across the world and can appear as any 
 **Passive ability.**
 You are magically incapable of lying, stealing, or intentionally harming others. You automatically fail any attempt to deceive, pickpocket, or make attack rolls against sentient creatures. However, this absolute goodness grants you protection - you have advantage on all saving throws against hostile magic, and creatures attempting to harm you take disadvantage on their attack rolls as the universe itself seems to conspire to protect the innocent.
 
-Additionally, your complete honesty allows you to speak uncomfortable truths that others cannot. Once per day, you may ask any creature a direct question, and they must answer truthfully if they understand you (though they may choose to remain silent rather than answer).
+Additionally, your complete honesty allows you to speak uncomfortable truths that others cannot. Once per day, you may ask any creature a direct question, and they are compelled to answer truthfully if they understand you.
 
 ### Qord'ik
 
@@ -2057,41 +2057,6 @@ You can perfectly transform your physical appearance to match any humanoid you h
 
 The transformation takes one minute and lasts until you choose to change again or revert to your true form. You retain all your abilities and statistics while transformed, but gain no special knowledge or memories of the person you're mimicking.
 
-## Ikriel
-
-The Ikriel, known as Icehearts, are pixie-like beings who have adapted to the frozen wastes through their worship of winter itself. Similar in size to their Yorinthian dwarf neighbors, these tiny humanoids have skin like frosted glass and hair that resembles icicles, constantly chiming softly as they move. Where other pixies embrace nature's warmth, the Ikriel have found beauty in winter's stark brutality.
-
-Their devotion to ice and snow has transformed them physically—their blood runs cold like antifreeze, their breath forms clouds even in warm air, and their touch can freeze water. They build elaborate ice palaces that never melt, sculpting frozen art that captures light in impossible ways. The Ikriel see winter not as a season of death but as a time of preservation, when the world's true beauty is revealed in crystal clarity.
-
-Small communities of Ikriel can be found throughout the northern reaches, often allied with the Yorinthian dwarves who share their harsh philosophy. They are known for their ice magic, their ability to survive in conditions that would kill others, and their hauntingly beautiful winter festivals.
-
-### Aspects
-
-- Winter preserves all truths in ice
-- Cold beauty surpasses warm comfort
-
-### Vitals
-
-- **Size:** Tiny
-- **Height:** 1-1.5 feet
-- **Weight:** 5-10 pounds
-
-### Pixie of Frost
-
-**Passive ability.**
-Your tiny size and winter nature grant you unique advantages. You can fit through spaces as small as 6 inches, have a fly speed of 20 feet (leaving trails of frost in the air), and are immune to cold damage and environmental cold effects. Your icy touch can freeze up to 1 gallon of water instantly. You count as 5 creatures per space for movement purposes.
-
-### Winter's Embrace
-
-**Heart ability.**
-You can intensify winter's power around you. For the next minute:
-
-- The temperature drops by 40 degrees in a 30-foot radius
-- Water surfaces in the area freeze solid enough to walk on
-- All creatures you choose in the area gain resistance to fire damage
-- Creatures that hit you with melee attacks take 1d4 cold damage
-- You can create simple objects out of ice that last until they melt
-
 ## Kendor
 
 The Kendor are an ancient aquatic people whose grace and beauty are matched only by their mastery of courtly intrigue. Evolved from seahorses in the warm tropical seas, they have developed into bipedal beings who can thrive both in water and on land, though they vastly prefer their hidden underwater palaces. Their elongated, elegant forms move with hypnotic fluidity, and their iridescent scales shift color with their moods and intentions.
@@ -2125,7 +2090,7 @@ In their hidden palace-fortresses beneath tropical reefs, the Kendrel engage in 
 #### Mesmerizing Presence
 
 **Heart ability.**
-Your beauty and grace can stop conflicts before they begin. When combat would begin, you may use this ability before initiative is rolled. Make a presence check contested by the cunning challenge number of each hostile creature that can see you. Each creature that fails becomes unable to take hostile actions against you for the next minute unless you or your allies attack them first. Affected creatures may still defend themselves if attacked. This ability has no effect on creatures that are already in combat or have been in combat with you within the last hour.
+Your beauty and grace can stop conflicts before they begin. When combat would begin, you may use this ability before initiative is rolled. Each creature makes cunning saving throw against your presence challenge number. Each creature that fails becomes unable to take hostile actions against you for the next minute unless you or your allies attack them first. Affected creatures may still defend themselves if attacked. This ability has no effect on creatures that are already in combat or have been in combat with you within the last hour.
 
 ### Cendoriln (Abyss Kendor)
 
@@ -2141,7 +2106,7 @@ The Cendoriln's hidden fortresses lie in underwater caves and thermal vents, pla
 #### Abyssal Intimidation
 
 **Passive ability.**
-You can control your bioluminescent patterns to unnerve and disorient. You have advantage on intimidation checks, and when you successfully intimidate a creature, they also gain one level of dazed. Additionally, in darkness or dim light, you can shed bright light in a 10-foot radius or dim light in a 20-foot radius as a free action. When you first activate this light during an encounter, creatures of your choice within the light must make a cunning saving throw against your presence challenge number or gain two levels of shaken.
+You can control your bioluminescent patterns to unnerve and disorient. You have advantage on intimidation checks, and when you successfully intimidate a creature, they also gain one level of dazed. Additionally, in darkness or dim light, you can shed bright light in a 10-foot radius and dim light 10-feet beyond as a free action.
 
 ### Pelaendor (Wanderer Kendor)
 
@@ -2156,37 +2121,8 @@ Unlike their fortress-dwelling kin, the Pelaendor have learned that sometimes vi
 
 #### Adaptive Camouflage
 
-**Passive ability.**
-Your scales can shift color and pattern to match your surroundings. You have advantage on stealth checks, and you can blend into crowds or natural environments with ease. As a major ability, you can become nearly invisible for 10 minutes, gaining the effects of obscurement even in bright light. Additionally, you've adapted to varied environments: you suffer no movement penalties from armor while swimming, and your requirement to immerse in water is reduced to once every three days.
-
-## Kendrel
-
-The Kendrel are creatures of breathtaking beauty whose seahorse-like features embody the grace and mystery of the deep ocean. With flowing manes, elegant elongated faces, and bodies that shimmer with aquatic colors, they are considered among the most stunning beings in all of Alaria. Their culture revolves around elaborate courtship rituals, noble ceremonies, and the pursuit of aesthetic perfection in all things.
-
-These peaceful beings make their homes in hidden fortress-cities within tropical coral reefs and underwater grottos, far from the conflicts that plague the surface world. The Kendrel are natural diplomats who prefer negotiation and artistry to violence, viewing warfare as crude and beneath their refined sensibilities. Their society is built on complex hierarchies of beauty, wisdom, and social grace.
-
-Kendrel architecture seamlessly blends with natural coral formations, creating cities that appear to have grown from the ocean floor itself. They are master craftsmen who work with living coral, cultivated pearls, and other sea treasures to create works of art that can entrance even the most jaded observers.
-
-### Vitals
-
-- **Size:** Medium
-- **Height:** 5-6 feet
-- **Weight:** 100-160 pounds
-
-### Aspects
-
-- Graceful diplomat
-- Beauty incarnate
-
-### Aquatic Grace
-
-**Passive ability.**
-You have a swim speed of 40 feet and can breathe both air and water. While underwater, you move with supernatural grace, giving you advantage on all agility checks and rolls. You can communicate with natural sea creatures and have advantage on presence checks when interacting with any creature that can perceive beauty.
-
-### Stunning Presence
-
-**Major ability. Full action.**
-Your otherworldly beauty briefly overwhelms those around you. All creatures of your choice within 30 feet that can see you must make a cunning saving throw against your presence challenge number. Those who fail are stunned until the end of their next turn as they become transfixed by your appearance. Creatures that succeed are immune to this ability for 24 hours.
+**Major ability.**
+Your scales can shift color and pattern to match your surroundings, and you can blend into crowds or natural environments with ease. As an action, you can become nearly invisible automatically succeeding on a check to hide and become obscured, even in bright light. If you move or attack, you lose this effect and are visible once more.
 
 ## Koren
 
@@ -2272,8 +2208,8 @@ You can communicate telepathically with other Krell within 1 mile through pherom
 
 ### Swarm Tactics
 
-**Heart ability. Instant.**
-When you are adjacent to at least one ally, you can coordinate a devastating group assault. Choose one enemy within reach of you or an adjacent ally. That enemy takes damage equal to your heart die + the number of allies adjacent to you. This ability can only be used once per engagement per target.
+**Heart ability.**
+When you make an attack roll while adjacent to at least one ally, you may activate this ability to gain advantage on the attack and add an additional 1d4 to it for each ally adjacent to you (maximum +3d4). If this attack reduces an enemy to 0 hit points, you and all adjacent allies may immediately move up to your speed toward another enemy without provoking opportunity attacks.
 
 ## Lizardfolk
 
@@ -2301,17 +2237,17 @@ Ix'Tyrann culture values survival above all else. Weakness is not tolerated, and
 
 Their scales range from muddy brown to dark green, providing natural camouflage in their swampy homes. Battle scars are worn with pride, each one a testament to survival.
 
-### Vitals
+#### Vitals
 
 - **Height:** 5.5-6.5 feet
 - **Weight:** 140-200 pounds
 
-### Aspects
+#### Aspects
 
 - Views everything as predator or prey
 - Values strength above mercy
 
-### Savage Ferocity
+#### Savage Ferocity
 
 **Passive ability.**
 
@@ -2325,21 +2261,21 @@ Trapped in an endless war against the forces of Trømgar and Gorath, the Ix'Vasy
 
 Their distinctive black scales shimmer with an oily iridescence, and their jaws can unhinge like those of serpents, allowing them to swallow prey whole. This has given rise to terrifying tales among their enemies of entire scouts disappearing without a trace.
 
-### Vitals
+#### Vitals
 
 - **Height:** 6-7 feet
 - **Weight:** 120-180 pounds
 
-### Aspects
+#### Aspects
 
 - Patient and calculating
 - Takes pleasure in the hunt
 
-### Venomous Bite
+#### Venomous Bite
 
 **Heart ability.**
 
-Your bite delivers a potent neurotoxin that causes excruciating pain. When you make an unarmed attack against an adjacent creature, you may choose to bite instead. If your attack hits, the target takes normal damage plus 2 levels of poisoned. Additionally, at the start of each of their turns for the next minute, they take 1d4 damage from the lingering venom. A creature can only be affected by one instance of your venom at a time.
+Your bite delivers a potent neurotoxin that causes excruciating pain. Your teeth count as an ultralight, piercing melee weapon. If you bite and deal damage, the target takes normal damage plus 1 level of poisoned that lasts until they take a long rest. These levels of poisoned do not stack. A creature can only be affected by one instance of your venom at a time.
 
 ### Ix'Lorett
 
@@ -2349,45 +2285,49 @@ Ix'Lorett society centers around art, meditation, and the pursuit of inner peace
 
 Their regenerative abilities are legendary—lost limbs regrow over months, wounds that would kill other races merely inconvenience them. This has led to a unique perspective on violence and conflict; when you can regrow from almost any injury, the urgency of combat fades. Many Ix'Lorett who become adventurers do so not for glory or wealth, but to see the world's beauty and understand its deeper meanings.
 
-### Vitals
+#### Vitals
 
 - **Height:** 5-6 feet
 - **Weight:** 150-250 pounds
 
-### Aspects
+#### Aspects
 
 - Contemplative and peaceful
 - Values beauty and patience
 
-### Regenerative Vitality
+#### Regenerative Vitality
 
 **Passive ability.**
 
-Your body possesses remarkable regenerative properties. At the start of each round in combat, if you have taken any wounds, reduce the rank of one wound by 1. During a long rest, reduce the ranks of all your wounds by an additional 2 (3 total). Additionally, if you lose a limb or other body part, it regrows over the course of 2d6 months. You cannot die from bleeding out—if you would die from negative hit points, you instead stabilize at -1 hit point.
+Your body possesses remarkable regenerative properties. After your first short rest each day, reduce the rank of all wounds by 1. During a long rest, reduce the ranks of all your wounds by an additional 2 (3 total). Additionally, if you lose a limb or other body part, it regrows over the course of 2d6 months.
 
 ### Ix'Meglyakuk
 
-Deep in the Dygon Beastlands, where massive dinosaurs thunder through ancient jungles and every shadow could hide a predator, the Ix'Meglyakuk have evolved to be the ultimate survivors. These Lizardfolk have developed heightened senses and an almost supernatural ability to navigate their dangerous homeland.
+Deep in the Dygon Beastlands, where colossal dinosaurs rule ancient jungles, the Ix'Meglyakuk have forged an alliance that sets them apart from all other peoples. Through generations of careful bonding and mutual respect, they have domesticated the fierce utahraptors—predators that most would flee from in terror.
 
-Living among creatures that dwarf them in size and strength, the Ix'Meglyakuk have learned that survival requires more than combat prowess—it demands an understanding of the jungle itself. They can read the slightest changes in bird calls, feel vibrations through the earth that warn of approaching titans, and move through the densest undergrowth without disturbing a single leaf.
+These Lizardfolk and their raptor companions move as one through the dangerous jungles, the riders' keen intellect combining with their mounts' predatory instincts to create an unmatched partnership. Young Ix'Meglyakuk are paired with raptor hatchlings in sacred ceremonies, growing up together until the boundary between rider and mount becomes almost indistinguishable.
 
-Their scales shift between green and brown, providing active camouflage, and their eyes can track movement that others would miss. Ix'Meglyakuk who leave the Beastlands often become unparalleled scouts and guides, though they find the "tame" dangers of civilization almost laughably simple compared to their homeland.
+Their scales have evolved to match the mottled patterns of their raptors, and they've developed a unique throat structure that allows them to communicate through subsonic clicks and trills that only their mounts can hear. Even when separated from their bonded raptor, an Ix'Meglyakuk moves with the fluid grace learned from a lifetime of riding, making them formidable on foot as well.
 
-### Vitals
+#### Vitals
 
-- **Height:** 5.5-6.5 feet
-- **Weight:** 130-190 pounds
+- **Height:** 5.0-6.0 feet
+- **Weight:** 100-160 pounds
 
-### Aspects
+#### Aspects
 
-- Hyperaware of surroundings
-- Respects nature's power
+- Bonded for life with their raptor
+- Thinks in terms of pack tactics
 
-### Beastland Survivor
+#### Raptor Rider
 
 **Passive ability.**
 
-Your life among titanic predators has honed your survival instincts to a supernatural degree. You have advantage on all perception checks and cannot be surprised. When you take the dodge action or choose the agility stance, you may move up to 10 feet without provoking opportunity attacks—this movement represents your instinctive repositioning. Additionally, you can perfectly mimic the sounds of any beast you've heard, and you always know which direction is north.
+You begin with a bonded utahraptor mount that has been your companion since youth. Your raptor uses the following stats: Move speed 80 feet, 30 HP, d8 heart die, d8 might/d8 agility/d4 cunning/d2 presence. It can make claw attacks as light slashing weapons. Your raptor can carry you and 20 slots of equipment without movement penalties.
+
+You share an instinctive bond with your mount—it obeys your commands without requiring actions.
+
+If your raptor dies, you can bond with a new utahraptor during a week-long ritual in a jungle environment, though the loss of your first mount leaves you with a permanent level of shaken that cannot be removed.
 
 ## Lyndwyrmspren
 
@@ -2965,7 +2905,7 @@ Their wings appear to be made of captured starlight and shadow, constantly shift
 **Passive ability.**
 You can cast minor illusions at will without using an action, creating visual or auditory phenomena no larger than a 1-foot cube that last for up to 1 minute. Additionally, when you successfully deceive, confuse, or misdirect a creature through roleplaying or illusion, you gain a rush point. You can gain rush points this way even outside of combat, storing up to 3 rush points that last until used or until your next long rest.
 
-### Icehearts
+### Ikriel (Icehearts)
 
 Icehearts are pixies transformed by their worship of winter itself—not as a season, but as an cosmic force of entropy and hunger. Their crystalline wings generate a constant aura of frost, and their very presence leeches warmth from their surroundings. This hunger extends beyond the physical; Icehearts feed on emotional warmth, leaving their victims feeling hollow and cold inside.
 

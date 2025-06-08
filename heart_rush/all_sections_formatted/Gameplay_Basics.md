@@ -127,6 +127,8 @@ If you are in combat, this requires your action.
 
 Helping grants the person making the check advantage, so long as you reasonably could provide help in that situation.
 
+Being helped multiple times does not grant additional levels of advantage.
+
 If you help someone, you are both liable to suffer any consequences from any complications or failures.
 
 ## Group Rolls

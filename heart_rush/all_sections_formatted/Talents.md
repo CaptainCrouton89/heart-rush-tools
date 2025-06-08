@@ -1034,6 +1034,15 @@ So long as you can see the stars, you may ignore the navigation challenge number
 **Destiny Level:**  
 You have advantage on navigation checks. You can identify your location from a successful navigation check.
 
+### Batch Producer
+
+_Passive ability. Cognitive talent._
+
+When crafting alchemical items that normally produce multiple doses/items per batch, increase the batch size by 50% (round up). Additionally, when crafting unique consumables, you have a 25% chance to produce two instead of one.
+
+**Destiny Level:**
+Batch sizes are doubled instead. The chance for extra unique consumables increases to 50%. Additionally, when making items in batches, if you succeed on all crafting checks without any failures, one item in the batch is of exceptional quality (minor beneficial property determined by GM).
+
 ### Befuddle
 
 _Heart ability. Handmagic._  
@@ -1394,6 +1403,15 @@ If you have no applicable bonuses to a skill check and you do not have advantage
 **Destiny Level:**  
 You have A2 on all of those rolls. You gain your choice of permanent physical or permanent mental vulnerability.
 
+### Mad Inventor
+
+_Passive ability. Cognitive talent._
+
+Your unorthodox methods allow you to push beyond normal crafting limits. When inventing items, you may use components that are one level lower than normally required. However, all items crafted this way are automatically unstable (as per the unstable creation rules) with maximum starting instability points.
+
+**Destiny Level:**
+You may use components that are up to two levels lower than required. When you do this, the item is "very unstable". Very unstable items cannot be stabilized. When instability triggers, a 6 triggers a random, one-time minor benefit instead of stabilizing.
+
 ### Master of Espionage
 
 _Monthly ability. Cognitive talent._  
@@ -1418,6 +1436,15 @@ You may alter the thoughts and memories of a non-hostile creature that you touch
 
 **Destiny Level:**  
 You may instead replace one hour's worth of memories from the last day.
+
+### Merchant's Luck
+
+_Heart ability. Handmagic._
+
+Fortune favors the bold in business. When making any roll related to trading, buying, selling, or negotiating prices, you may immediately reroll all dice showing results of 3 or lower. You must keep the new results. This includes rolls for finding buyers/sellers, determining trader levels, negotiating prices, or avoiding trade-related complications.
+
+**Destiny Level:**
+This ability becomes a passive ability instead. Additionally, when you roll the maximum value on any die during a trade-related roll, you may roll that die again and add the result.
 
 ### Metallurgy
 
@@ -1520,6 +1547,15 @@ If you have aspect 4 or higher in runescribing or a similar aspect, you may now 
 
 **Destiny Level:**  
 If you have aspect 5 or higher in runescribing or a similar aspect, you may make the additional modifications to a handmagic sign to make its destiny level upgrade. You must spend a week studying and practicing before memorizing and inscribing the destiny level version of a sign.
+
+### Salvage Master
+
+_Heart ability. Cognitive talent._
+
+When you come across a broken or ruined magical item, you may spend an hour examining it to extract a single magical component. The component's level equals half the item's level (round down, minimum 1), and its tags relate to the item's original properties.
+
+**Destiny Level:**
+You extract 1d4 components instead of one, and they can be extracted at a level equal to the level of the orginal item. Additionally, if you study the broken item for a full day, you learn its original crafting recipe.
 
 ### Silver Tongue
 
@@ -1625,6 +1661,15 @@ You play a macabre and sinister tune. After playing your instrument for a minute
 
 **Destiny Level:**  
 You may choose for them to gain three levels of frightened instead, and you may choose to exempt creatures from the effects.
+
+### Workshop Mastery
+
+_Passive ability. Cognitive talent._
+
+You've learned advanced techniques that let you exceed normal workspace limitations. You may use a workshop or laboratory as if it were one level higher than it actually is. This cannot raise an ordinary workshop above level 5.
+
+**Destiny Level:**
+You can use workspaces as if they were two levels higher (still capped at level 5 for ordinary workshops). Additionally, while working in a level 4+ workspace, you get +2 on all crafting skill checks. If you own a workspace, you may spend a month customizing it to your techniques; a customized workspace grants +4 instead.
 
 ### Worldly Traveler
 

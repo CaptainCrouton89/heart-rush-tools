@@ -24,17 +24,17 @@ Ix'Tyrann culture values survival above all else. Weakness is not tolerated, and
 
 Their scales range from muddy brown to dark green, providing natural camouflage in their swampy homes. Battle scars are worn with pride, each one a testament to survival.
 
-### Vitals
+#### Vitals
 
 - **Height:** 5.5-6.5 feet
 - **Weight:** 140-200 pounds
 
-### Aspects
+#### Aspects
 
 - Views everything as predator or prey
 - Values strength above mercy
 
-### Savage Ferocity
+#### Savage Ferocity
 
 **Passive ability.**
 
@@ -48,21 +48,21 @@ Trapped in an endless war against the forces of Trømgar and Gorath, the Ix'Vasy
 
 Their distinctive black scales shimmer with an oily iridescence, and their jaws can unhinge like those of serpents, allowing them to swallow prey whole. This has given rise to terrifying tales among their enemies of entire scouts disappearing without a trace.
 
-### Vitals
+#### Vitals
 
 - **Height:** 6-7 feet
 - **Weight:** 120-180 pounds
 
-### Aspects
+#### Aspects
 
 - Patient and calculating
 - Takes pleasure in the hunt
 
-### Venomous Bite
+#### Venomous Bite
 
 **Heart ability.**
 
-Your bite delivers a potent neurotoxin that causes excruciating pain. When you make an unarmed attack against an adjacent creature, you may choose to bite instead. If your attack hits, the target takes normal damage plus 2 levels of poisoned. Additionally, at the start of each of their turns for the next minute, they take 1d4 damage from the lingering venom. A creature can only be affected by one instance of your venom at a time.
+Your bite delivers a potent neurotoxin that causes excruciating pain. Your teeth count as an ultralight, piercing melee weapon. If you bite and deal damage, the target takes normal damage plus 1 level of poisoned that lasts until they take a long rest. These levels of poisoned do not stack. A creature can only be affected by one instance of your venom at a time.
 
 ### Ix'Lorett
 
@@ -72,42 +72,46 @@ Ix'Lorett society centers around art, meditation, and the pursuit of inner peace
 
 Their regenerative abilities are legendary—lost limbs regrow over months, wounds that would kill other races merely inconvenience them. This has led to a unique perspective on violence and conflict; when you can regrow from almost any injury, the urgency of combat fades. Many Ix'Lorett who become adventurers do so not for glory or wealth, but to see the world's beauty and understand its deeper meanings.
 
-### Vitals
+#### Vitals
 
 - **Height:** 5-6 feet
 - **Weight:** 150-250 pounds
 
-### Aspects
+#### Aspects
 
 - Contemplative and peaceful
 - Values beauty and patience
 
-### Regenerative Vitality
+#### Regenerative Vitality
 
 **Passive ability.**
 
-Your body possesses remarkable regenerative properties. At the start of each round in combat, if you have taken any wounds, reduce the rank of one wound by 1. During a long rest, reduce the ranks of all your wounds by an additional 2 (3 total). Additionally, if you lose a limb or other body part, it regrows over the course of 2d6 months. You cannot die from bleeding out—if you would die from negative hit points, you instead stabilize at -1 hit point.
+Your body possesses remarkable regenerative properties. After your first short rest each day, reduce the rank of all wounds by 1. During a long rest, reduce the ranks of all your wounds by an additional 2 (3 total). Additionally, if you lose a limb or other body part, it regrows over the course of 2d6 months.
 
 ### Ix'Meglyakuk
 
-Deep in the Dygon Beastlands, where massive dinosaurs thunder through ancient jungles and every shadow could hide a predator, the Ix'Meglyakuk have evolved to be the ultimate survivors. These Lizardfolk have developed heightened senses and an almost supernatural ability to navigate their dangerous homeland.
+Deep in the Dygon Beastlands, where colossal dinosaurs rule ancient jungles, the Ix'Meglyakuk have forged an alliance that sets them apart from all other peoples. Through generations of careful bonding and mutual respect, they have domesticated the fierce utahraptors—predators that most would flee from in terror.
 
-Living among creatures that dwarf them in size and strength, the Ix'Meglyakuk have learned that survival requires more than combat prowess—it demands an understanding of the jungle itself. They can read the slightest changes in bird calls, feel vibrations through the earth that warn of approaching titans, and move through the densest undergrowth without disturbing a single leaf.
+These Lizardfolk and their raptor companions move as one through the dangerous jungles, the riders' keen intellect combining with their mounts' predatory instincts to create an unmatched partnership. Young Ix'Meglyakuk are paired with raptor hatchlings in sacred ceremonies, growing up together until the boundary between rider and mount becomes almost indistinguishable.
 
-Their scales shift between green and brown, providing active camouflage, and their eyes can track movement that others would miss. Ix'Meglyakuk who leave the Beastlands often become unparalleled scouts and guides, though they find the "tame" dangers of civilization almost laughably simple compared to their homeland.
+Their scales have evolved to match the mottled patterns of their raptors, and they've developed a unique throat structure that allows them to communicate through subsonic clicks and trills that only their mounts can hear. Even when separated from their bonded raptor, an Ix'Meglyakuk moves with the fluid grace learned from a lifetime of riding, making them formidable on foot as well.
 
-### Vitals
+#### Vitals
 
-- **Height:** 5.5-6.5 feet
-- **Weight:** 130-190 pounds
+- **Height:** 5.0-6.0 feet
+- **Weight:** 100-160 pounds
 
-### Aspects
+#### Aspects
 
-- Hyperaware of surroundings
-- Respects nature's power
+- Bonded for life with their raptor
+- Thinks in terms of pack tactics
 
-### Beastland Survivor
+#### Raptor Rider
 
 **Passive ability.**
 
-Your life among titanic predators has honed your survival instincts to a supernatural degree. You have advantage on all perception checks and cannot be surprised. When you take the dodge action or choose the agility stance, you may move up to 10 feet without provoking opportunity attacks—this movement represents your instinctive repositioning. Additionally, you can perfectly mimic the sounds of any beast you've heard, and you always know which direction is north.
+You begin with a bonded utahraptor mount that has been your companion since youth. Your raptor uses the following stats: Move speed 80 feet, 30 HP, d8 heart die, d8 might/d8 agility/d4 cunning/d2 presence. It can make claw attacks as light slashing weapons. Your raptor can carry you and 20 slots of equipment without movement penalties.
+
+You share an instinctive bond with your mount—it obeys your commands without requiring actions.
+
+If your raptor dies, you can bond with a new utahraptor during a week-long ritual in a jungle environment, though the loss of your first mount leaves you with a permanent level of shaken that cannot be removed.
