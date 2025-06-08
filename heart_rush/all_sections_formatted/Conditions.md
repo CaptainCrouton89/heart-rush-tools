@@ -235,3 +235,18 @@ On a success, you are no longer grappled.
 Levels of restrained inflicted from being grappled do not inflict disadvantage on this roll.
 
 Any damage that you or a creature grappling you takes due to forced movement is also applied to the other.
+
+### Entangled
+
+_Ongoing._
+
+You are wrapped in a net or similar restraining device. You gain 1 level of restrained.
+
+As an action, you may attempt to escape. Choose one:
+- **Cut Free:** Make a slashing attack against CN 10. Success destroys the net.
+- **Wriggle Out:** Make an agility check contested by the attacker's cunning challenge number.
+- **Tear Free:** Make a might check contested by the attacker's might challenge number + 4.
+
+Allies can use their action to cut you free (automatic success with slashing weapon).
+
+Flying creatures that become entangled immediately fall unless they can hover.

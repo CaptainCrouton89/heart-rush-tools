@@ -43,6 +43,21 @@ You can only wield one weapon at a time. If wielding a weapon does not require b
 
 Understanding your weapon's damage type helps you choose the most effective stance in combat.
 
+### Special Weapons
+
+Some weapons don't deal damage but have other tactical effects:
+
+#### Net
+
+| Property        | Value                                                                                |
+| --------------- | ------------------------------------------------------------------------------------ |
+| **Size**        | Light (1d8)                                                                          |
+| **Attack Type** | Thrown (20 feet)                                                                     |
+| **Damage Type** | Special (no damage)                                                                  |
+| **Effect**      | On hit, target gains the Entangled condition                                        |
+| **Might Bonus** | Target gains an additional level of restrained (2 total)                             |
+| **Special**     | Reusable if intact; 5 HP, defense 10; creatures >1 size larger only gain 1 level slowed |
+
 ## Cantrips
 
 Cantrips are magical weapons that function identically to physical weapons in combat. Unlike spells (which are separate strategic abilities), cantrips are used within engagements and follow all normal weapon attack rules.

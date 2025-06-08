@@ -695,6 +695,19 @@ When you choose the might stance, apply the might-stance bonus of your weapon an
 **Destiny Level:**
 Whenever you choose this stance, if you declared this stance the previous round, add 1d6 to all A/D rolls made this round. Increase the die's size by one for each consecutive time you chose this stance.
 
+### Net Master
+
+_Passive ability. Martial talent._
+
+Your expertise with nets makes them far more effective. When you successfully hit with a net:
+
+- The CN to escape increases by 2
+- Size large creatures are fully affected (not just slowed)
+- You may throw nets 30 feet instead of 20
+
+**Destiny Level:**
+Creatures entangled by your nets gain 2 levels of restrained instead of 1 (3 with might stance). You may entangle creatures up to size L2.
+
 ### Night's Embrace
 
 _Passive ability. Handmagic._

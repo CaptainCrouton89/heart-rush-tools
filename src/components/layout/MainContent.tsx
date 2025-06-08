@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ContentMetadata, ContentSection } from "../../types/content";
 import { MarkdownRenderer } from "../content/MarkdownRenderer";
 import { ChildrenContent } from "../content/ChildrenContent";
@@ -72,11 +73,12 @@ export function MainContent({
             <h2 className="text-2xl font-semibold text-primary mb-6">Gallery</h2>
             <div className="flex justify-center">
               <div className="max-w-md">
-                <img
+                <Image
                   src={content.image}
                   alt={content.title}
+                  width={400}
+                  height={300}
                   className="w-full h-auto rounded-lg border border-border shadow-lg"
-                  loading="lazy"
                 />
                 <p className="text-sm text-muted-foreground text-center mt-2">
                   {content.title}

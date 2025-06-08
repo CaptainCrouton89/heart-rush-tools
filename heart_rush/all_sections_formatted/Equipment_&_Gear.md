@@ -42,6 +42,8 @@ By using a pack animal or vehicle, you can carry substantially more gear.
 | Strong rope 50'           | Capable of holding 500 pounds.                                                                                                          | 2     | 60    |
 | Grappling hook            |                                                                                                                                         | 1     | 10    |
 | Hammer and nails          | Useful for construction and repairs.                                                                                                    | 1     | 10    |
+| Combat Gear               |                                                                                                                                         |       |       |
+| Net                       | Thrown weapon that entangles targets. See weapon rules.                                                                                | 5     | 30    |
 
 ## Weapons
 

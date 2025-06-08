@@ -17,12 +17,4 @@ Troenka settlements exist wherever ancient forests grow thick and dark—places 
 - Cruel tormentor
 - Living wood
 
-### Tree Form
-
-**Major ability. Full action.**
-You can transform into an ordinary-looking tree, becoming indistinguishable from natural vegetation. While in tree form, you are immobilized but gain the ability to sense all movement within 60 feet. You can remain in this form indefinitely and transform back as an action. Creatures must succeed on a CN 15 cunning check to identify you as anything other than a normal tree.
-
-### Woodland Superiority
-
-**Passive ability.**
-While in forest terrain, your move speed increases by 20 feet and you can move through difficult terrain without penalty. You have advantage on stealth checks in natural settings and on intimidation checks against creatures you have surprised or trapped. Your natural weapons (fists, branch-like appendages) count as light weapons and deal bludgeoning damage.
+This is not a playable race

@@ -20,10 +20,10 @@ Their society is built on martial excellence and divine devotion. Every triton l
 
 **Passive ability.**
 
-You can breathe underwater, you have a swim speed equal to your move speed, and you suffer no penalties to combat or anything else while in or under water.
+You can breathe underwater, you have a swim speed equal to your move speed, and suffer no disadvantage for skill checks or AD rolls made underwater. You gain a basic attunement to water.
 
-### Seasoul
+### Net & Trident Training
 
 **Passive ability.**
 
-You gain basic attunement to water.
+You were trained on how to use a net and trident from a young age. You gain the _Net Master_ talent as a racial ability.

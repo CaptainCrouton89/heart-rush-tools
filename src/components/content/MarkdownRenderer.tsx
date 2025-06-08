@@ -3,6 +3,7 @@
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import remarkGfm from "remark-gfm";
 import { CrossReferenceLink } from "./CrossReferenceLink";
 
@@ -233,11 +234,12 @@ const mdxComponents = {
 
   // Enhanced image styling
   img: ({ src, alt, ...props }: ComponentProps & { src?: string; alt?: string }) => (
-    <img
-      src={src}
+    <Image
+      src={src || ""}
       alt={alt || ""}
+      width={800}
+      height={400}
       className="max-w-full h-auto rounded-lg border border-border shadow-sm my-4"
-      loading="lazy"
       {...props}
     />
   ),

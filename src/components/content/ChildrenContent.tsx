@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ContentSection } from "../../types/content";
 import { MarkdownRenderer } from "./MarkdownRenderer";
 
@@ -72,11 +73,12 @@ function ChildSection({ child, level }: ChildSectionProps) {
             {/* Child image */}
             {child.image && (
               <div className="flex-shrink-0 mb-4 lg:mb-0">
-                <img
+                <Image
                   src={child.image}
                   alt={child.title}
+                  width={300}
+                  height={200}
                   className="w-full max-w-xs mx-auto lg:mx-0 h-auto rounded-lg border border-border shadow-md"
-                  loading="lazy"
                 />
               </div>
             )}
@@ -114,11 +116,12 @@ function ChildSection({ child, level }: ChildSectionProps) {
             {/* Child image */}
             {child.image && (
               <div className="flex-shrink-0 mb-4 lg:mb-0">
-                <img
+                <Image
                   src={child.image}
                   alt={child.title}
+                  width={300}
+                  height={200}
                   className="w-full max-w-xs mx-auto lg:mx-0 h-auto rounded-lg border border-border shadow-md"
-                  loading="lazy"
                 />
               </div>
             )}

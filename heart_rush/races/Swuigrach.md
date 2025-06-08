@@ -20,7 +20,7 @@ Despite their often unsavory reputations, the Swuigrach have created some of the
 ### Greed
 
 **Passive ability.**
-Your insatiable desire for wealth drives your advancement. Whenever your net worth in ducats increases by a factor of 10 (from 10 to 100, 100 to 1,000, etc.), gain 2 XP. You have advantage on all skill checks related to appraising value, detecting forgeries, or negotiating prices.
+Your insatiable desire for wealth drives your advancement. Whenever your net worth in ducats increases by a factor of 10 for the first time (from 10 to 100, 100 to 1,000, etc.), gain 2 XP.
 
 ### Nose for Trouble and Treasure
 
