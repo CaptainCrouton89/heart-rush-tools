@@ -28,6 +28,7 @@ interface NavigationItem {
 
 const WORDS_PER_MINUTE = 200;
 const SOURCE_DIR = "heart_rush/all_sections_formatted";
+const RACES_DIR = "heart_rush/races";
 const OUTPUT_DIR = "content";
 
 function calculateReadingTime(wordCount: number): number {
@@ -235,10 +236,60 @@ function splitContent(
   return sections;
 }
 
+async function combineRaceFiles(): Promise<void> {
+  console.log("Combining race files into Kin_&_Culture.md...");
+  
+  try {
+    // Check if races directory exists
+    const racesPath = RACES_DIR;
+    try {
+      await fs.access(racesPath);
+    } catch {
+      console.log("No races directory found, skipping race file combination");
+      return;
+    }
+
+    // Read all race files
+    const raceFiles = await fs.readdir(racesPath);
+    const raceMarkdownFiles = raceFiles
+      .filter((file) => file.endsWith(".md"))
+      .sort(); // Sort alphabetically for consistent ordering
+
+    if (raceMarkdownFiles.length === 0) {
+      console.log("No race files found, skipping race file combination");
+      return;
+    }
+
+    // Start with the main header
+    let combinedContent = "# Kin & Culture\n\n";
+
+    // Read and combine all race files
+    for (const filename of raceMarkdownFiles) {
+      const racePath = path.join(racesPath, filename);
+      const raceContent = await fs.readFile(racePath, "utf-8");
+      
+      // Add the race content (which already starts with ##)
+      combinedContent += raceContent.trim() + "\n\n";
+    }
+
+    // Write the combined file to the source directory
+    const outputPath = path.join(SOURCE_DIR, "Kin_&_Culture.md");
+    await fs.writeFile(outputPath, combinedContent.trim());
+    
+    console.log(`✅ Combined ${raceMarkdownFiles.length} race files into Kin_&_Culture.md`);
+  } catch (error) {
+    console.error("Error combining race files:", error);
+    throw error;
+  }
+}
+
 async function compileContent(): Promise<void> {
   console.log("Starting content compilation...");
 
   try {
+    // First, combine race files into Kin_&_Culture.md
+    await combineRaceFiles();
+    
     // Ensure output directory exists
     await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
