@@ -20,9 +20,9 @@ Despite their exile, the Lyzine have retained their sophisticated culture, compl
 ### Arachnid Heritage
 
 **Passive ability.**
-You have a climb speed equal to your walking speed and can move across webs and similar surfaces without penalty. You can produce silk strong enough to support your weight, creating 50 feet of rope as an action. Additionally, you have advantage on checks to intimidate or impress others with displays of nobility or superiority.
+You have a climb speed equal to your walking speed and can move across webs and similar surfaces without penalty.
 
 ### Web Weaver
 
-**Heart ability. Full action.**
-You can rapidly spin webs to control the battlefield. Choose a 20-foot square area within 30 feet. The area becomes difficult terrain, and creatures that enter or start their turn in the webbed area must make an agility saving throw against your cunning challenge number or become restrained. Creatures can break free with a successful might check against the same CN. The webs last for 10 minutes or until destroyed.
+**Passive ability.**
+As an action, you can creating 50 feet of silken rope, up to 1000 feet per day. The rope is strong enough to support 5000 pounds. You can also choose to create sticky rope, which can ensnare those who get caught in it. If it is touched, it requires a CN 10 might check to break free. If a creature has full or majority body contact with it (if they ran into a web of it, for example), the CN becomes 16. If a creature is fully wrapped in it, it is CN 24.
