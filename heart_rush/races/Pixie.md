@@ -9,12 +9,11 @@ Pixies reproduce through a mystical process involving moonlight, flower nectar, 
 - **Size:** Minuscule
 - **Height:** 6-10 inches
 - **Weight:** 1-3 pounds
-- **Wingspan:** 12-18 inches
 
-### Fae-born
+### Pixie Anatomy
 
 **Passive ability.**
-You have a fly speed of 30 feet. Additionally, you can sense the emotional state of all creatures within 15 feet, gaining advantage on Presence checks to understand their motivations. Once per day, when a creature within 30 feet makes a saving throw against being charmed or frightened, you may grant them advantage on that roll by harmonizing with the Faesong.
+You have a fly speed of 30 feet. You are size miniscule (three sizes less than medium). You cannot wield weapons.
 
 ### Zelle
 
@@ -30,7 +29,7 @@ Zelle society revolves around their High Priestesses, who commune directly with 
 #### Blood offering
 
 **Passive ability.**
-When a creature within 30 feet of you takes a wound, you may perform a swift ritual as a free action to gain 1d4 temporary hit points that last until your next long rest. Additionally, you have advantage on Intimidation checks against any creature that has seen you participate in violence within the last hour.
+When a creature within 30 feet of you takes a wound, you may perform a swift ritual as a free action to regain 10 hit points.
 
 ### Ianovko
 
@@ -43,39 +42,44 @@ Their wings appear to be made of captured starlight and shadow, constantly shift
 - Reality is negotiable
 - Riddling trickster
 
-#### Dreamweaver
+#### Faeweaver
 
 **Passive ability.**
-You can cast minor illusions at will without using an action, creating visual or auditory phenomena no larger than a 1-foot cube that last for up to 1 minute. Additionally, when you successfully deceive, confuse, or misdirect a creature through roleplaying or illusion, you gain a rush point. You can gain rush points this way even outside of combat, storing up to 3 rush points that last until used or until your next long rest.
+You can cast minor illusions at will without using an action, creating visual phenomena no larger than a 1-foot cube, or or sounds up to the volume of soft talking voice that last for up to 1 minute. You can maintain up to 3 illusons at a time, so long as they are all within eyeshot.
 
 ### Ikriel (Icehearts)
 
-Icehearts are pixies transformed by their worship of winter itself—not as a season, but as an cosmic force of entropy and hunger. Their crystalline wings generate a constant aura of frost, and their very presence leeches warmth from their surroundings. This hunger extends beyond the physical; Icehearts feed on emotional warmth, leaving their victims feeling hollow and cold inside.
+Icehearts are pixies transformed by their worship of winter itself—not as a season, but as a cosmic force of entropy and hunger. Their crystalline wings generate a constant aura of frost, and their very presence leeches warmth from their surroundings. This hunger extends beyond the physical; Icehearts feed on emotional warmth, leaving their victims feeling hollow and cold inside.
 
-Despite their predatory nature, Icehearts maintain a twisted form of civilization built on careful rationing of their feeding. They view their hunger as a sacred burden, organizing elaborate rituals to determine who may feed and when, turning survival into a form of worship.
+Icehearts are master manipulators who view other creatures as sources of sustenance. They excel at gaining trust through false vulnerability or promises of aid, only to drain their victims when defenses are lowered. To an Iceheart, every relationship is ultimately transactional—a question of when, not if, they will feed.
 
 #### Aspects
 
 - Emotionally vampiric
-- Winter's devoted child
+- Winter's hungry child
 
-#### Frostbitten soul
+#### Frostbitten Soul
 
 **Passive ability.**
-You are immune to damage from cold and the freezing environmental condition. Whenever you deal damage to a creature or a creature fails a saving throw against one of your abilities, you may inflict one level of slowed as frost spreads from your touch. Once per short rest, when you touch a willing or helpless creature, you may drain their emotional warmth to heal yourself for 2d4 hit points. The target gains one level of weakened until their next long rest as they feel emotionally drained.
 
-### Luma
+You are immune to the effects of the cold.
 
-The Luma of Nykotheryx Amberylika forest represent pixie society at its most harmonious. Each Luma bonds with a grove of ancient trees upon emergence, becoming its guardian for life. Their iridescent wings capture and refract the aurora borealis, creating spectacular light shows during their ritual flights. Under the rule of Magera, the Frost Prince, they maintain the delicate balance between the ancient dragon totems and the living forest.
+As an action, when you touch a willing or incapacitated creature with bare skin contact, you may drain their emotional warmth. The target immediately gains 5 levels of slowed, 5 levels of dazed, and 5 levels of shaken. These levels fade at a rate of one level per hour, rather than per round. You gain the benefits of a short rest.
 
-Luma culture emphasizes patience and cycles—they measure time in tree rings rather than years, and their oral histories stretch back to when the Dark Elves first walked among the silver birches. They alone among pixies remember the true names of some of the spirits bound within the dragon totems, treating this knowledge as their most sacred trust.
+### Luma (Grove Keepers)
+
+The Luma of Nykotheryx Amberylika forest represent pixie society at its most harmonious. Each Luma bonds with a grove of ancient trees upon emergence, becoming its guardian and living memory for life. Their translucent wings shimmer with captured memories, displaying faint images of past events when they concentrate. Under the rule of Magera, the Frost Prince, they maintain the delicate balance between the ancient dragon totems and the living forest.
+
+Luma culture emphasizes patience and cycles—they measure time in tree rings rather than years, and their oral histories stretch back to when the Dark Elves first walked among the silver birches. They serve as living libraries, their very being intertwined with the memories of their groves.
 
 #### Aspects
 
 - Patient as ancient trees
-- Keeper of forgotten names
+- Living memory of the forest
 
-#### Aurora wings
+#### Grove Memory
 
 **Passive ability.**
-Your iridescent wings can store and release light. You can create bright light in a 20-foot radius or dim light in a 40-foot radius as a free action. Once per day, when you would take damage from a spell or magical effect, you may use your reaction to refract it through your wings, taking half damage and redirecting the other half to a creature of your choice within 30 feet (they may make appropriate saves as normal). Additionally, you have advantage on all skill checks related to ancient history, spirits, or the identification of magical phenomena.
+You have formed a mystical bond with the ancient trees of the world. By touching any tree that is at least 50 years old and concentrating for one minute, you can access the memories stored within its rings. You may ask up to three questions about events that occurred within two miles of the tree during its lifetime. The GM will provide you with accurate historical information, though events from the distant past may be presented as symbolic visions requiring interpretation.
+
+You can use this ability once per day, but if you spend an hour in meditation with a grove of trees (rather than just one tree), you can ask an additional question and extend the range to five miles. Ancient trees (500+ years old) may hold especially detailed memories and can sometimes show you brief glimpses of magical phenomena or significant supernatural events.
