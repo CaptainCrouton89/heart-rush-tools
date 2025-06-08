@@ -1658,7 +1658,7 @@ The most disturbing aspect of Whitelings is their perfect memory combined with a
 **Passive ability.**
 You are undead. You don't need to breathe, eat, drink, or sleep. You are immune to poison and disease. Healing magic harms you (take damage instead of healing), but you can spend hit dice to heal during a short rest by consuming flesh. You have disadvantage on all social rolls with living creatures who know what you are. Fortune works differently for you—when you use Underfoot Advantage, instead of finding alternative approaches, you identify the most harmful possible interpretation of any situation. You may force this dark reading onto others: once per day when a creature within 30 feet succeeds at a roll, you may have them fail instead as their fortune abandons them.
 
-## Hookling
+### Hookling
 
 In the frozen wastes of Morelous, the Hookling halflings have transformed survival into a mathematical science. Their culture revolves around "The Count"—an obsessive tracking of every resource, every calorie, every breath of warm air. Children learn to calculate metabolic rates before they learn to read, wearing intricate bead-chains that serve as portable abacuses, constantly clicking through calculations of resource expenditure versus expected return. They've developed seventeen different words for types of hunger and twenty-three for varieties of cold, each representing specific caloric deficits or heat loss rates.
 
