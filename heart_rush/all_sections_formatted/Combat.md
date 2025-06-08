@@ -346,8 +346,6 @@ Unless otherwise specified, at least one hand must be free to grapple another cr
 
 A creature can only be grappled by one creature at a time, and can only grapple one creature at a time.
 
-While grappling a creature, rather than pushing the creature when you use the might stance, you may choose to instead deal 1d6 damage, plus 1d6 damage for every size greater you are than the grappled creature.
-
 ### Climb On
 
 Choose an adjacent creature two or more sizes larger than you. Make a might or agility ability check contested by the creature's might or agility ability check. If you roll higher, you climb onto the creature. So long as you are on the creature, you have the creature climber condition. Likewise, the climbed on creature has the climbed on condition.
