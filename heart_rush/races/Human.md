@@ -180,8 +180,7 @@ Among the scattered remnants are the Jae-Kai, nomadic spirit wranglers who have 
 
 #### Ancient Bloodline
 
-**Major ability.**
-The Deoric magic of your ancestors flows through your veins, though weakened by generations. Once per day, you may speak a single word in Deoric that becomes reality. Work with your GM to determine reasonable effects - you might speak "Light" to illuminate an area, "Calm" to soothe an agitated creature, or "Open" to unlock a simple door. The effect should be equivalent to a level 1-2 spell and cannot directly harm creatures or grant permanent benefits.
+Work with your GM. This culture is nearly gone.
 
 ### Husakas
 
@@ -241,7 +240,7 @@ The harsh life of the islands and the constant struggle against fierce storms an
 **Passive ability.**
 Your giant heritage has blessed you with incredibly dense bones and resilient flesh. Increase the damage threshold for taking wounds by 2 - where others would take a wound from 10 or more damage, you require 12 or more damage to suffer a wound.
 
-Additionally, your imposing size grants you advantage on intimidation checks against creatures smaller than you, and you count as one size larger for the purposes of carrying capacity and lifting.
+Additionally, your imposing size grants you advantage on intimidation checks against creatures smaller than you, and you count as one size larger for the purposes of carrying capacity.
 
 ### Shontobi
 
@@ -286,8 +285,6 @@ Their rituals and appearance make them deeply unsettling to outsiders, but the T
 **Major ability.**
 Through ancient blood magic rituals, you can divine truth from the patterns of life and death. Once per day, by examining a small amount of blood (your own or willingly given), you can learn one piece of information about the creature it came from: their current emotional state, whether they have told any lies in the past day, if they are suffering from any diseases or curses, or the general direction and distance to their current location.
 
-Additionally, you can sense the presence of undead creatures within 60 feet, as their corrupted life force creates discordant notes in the blood-song that flows through all living things.
-
 ### Nuun
 
 The Nuun are a desert people blessed with striking golden or ice-blue eyes that reflect their deep attunement to the primal elements of fire and water. Dark-skinned and dark-haired, they have built magnificent cities in the desert realm of Kura, where their mastery of trade has brought wealth and their appreciation for beauty has created architectural wonders that rival any in the known world.
@@ -323,27 +320,6 @@ Temptari settlements can be found in the high mountain passes and valleys where 
 
 **Passive ability.**
 You cannot be surprised. Additionally, once per round, when you or an ally within 30 feet would roll a 1 on any die, you may warn them of the impending complication. They may choose to not take that action instead, avoiding both the roll and its consequences entirely.
-
-#### Desert Born
-
-**Passive ability.**
-Choose either fire or water when you select this heritage. You gain a basic attunement to that element. Additionally, you have advantage on all presence checks related to trade, negotiation, or appraising the value of goods, and you only need to consume water once every three days instead of daily.
-
-### Gezzerin
-
-The Gezzerin have adapted to life in the shadow of giants, developing a culture built around stealth, conservation, and ritual scarification that tells the story of their survival. Each scar represents a close encounter, a lesson learned, or a giant evaded. They move through their hill country homes like ghosts, using ancient paths and hidden shelters passed down through generations. Water is sacred to the Gezzerin, and they have developed remarkable biological adaptations to preserve every drop.
-
-The Gezzerin make their homes throughout the Hills of Gezzeri, where massive giants still roam. They are known for their scouts, survivalists, and the intricate scarification that serves as both history and protection.
-
-#### Aspects
-
-- My scars tell my story
-- Giants cast long shadows, but shadows can hide many things
-
-#### Giant's Bane
-
-**Heart ability.**
-Your people have learned to disappear when giants draw near. When you take the hide action, you may include up to six other creatures within 10 feet of you in your stealth check, using your result for the entire group. Additionally, you only need to drink water once per week, and you have advantage on saving throws against being forcibly moved or knocked prone by creatures larger than you.
 
 ### Kuru
 

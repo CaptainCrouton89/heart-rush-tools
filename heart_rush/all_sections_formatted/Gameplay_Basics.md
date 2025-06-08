@@ -299,6 +299,9 @@ Choose an adjacent creature two or more sizes larger than you. Make a might or a
 **Prone/Knockdown Limits:**
 Many combat abilities that knock creatures prone specify "no more than one size larger than you" - creatures significantly larger are too massive to knock down.
 
+**Carying Capacity**
+By default, you can carry slots equal to 6 + half of your might die. If you are size large, it is 6 + your might die instead, and if you are small, then it is 6 + a quarter your might die, rounded down.
+
 ### Lighting
 
 There are three different states of lighting that can occur in an environment: brightly lit, dim, and dark.
