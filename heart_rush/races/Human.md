@@ -220,7 +220,7 @@ The Guiltless have interbred with humans across the world and can appear as any 
 **Passive ability.**
 You are magically incapable of lying, stealing, or intentionally harming others. You automatically fail any attempt to deceive, pickpocket, or make attack rolls against sentient creatures. However, this absolute goodness grants you protection - you have advantage on all saving throws against hostile magic, and creatures attempting to harm you take disadvantage on their attack rolls as the universe itself seems to conspire to protect the innocent.
 
-Additionally, your complete honesty allows you to speak uncomfortable truths that others cannot. Once per day, you may ask any creature a direct question, and they must answer truthfully if they understand you (though they may choose to remain silent rather than answer).
+Additionally, your complete honesty allows you to speak uncomfortable truths that others cannot. Once per day, you may ask any creature a direct question, and they are compelled to answer truthfully if they understand you.
 
 ### Qord'ik
 

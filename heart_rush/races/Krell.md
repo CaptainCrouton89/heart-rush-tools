@@ -24,5 +24,5 @@ You can communicate telepathically with other Krell within 1 mile through pherom
 
 ### Swarm Tactics
 
-**Heart ability. Instant.**
-When you are adjacent to at least one ally, you can coordinate a devastating group assault. Choose one enemy within reach of you or an adjacent ally. That enemy takes damage equal to your heart die + the number of allies adjacent to you. This ability can only be used once per engagement per target.
+**Heart ability.**
+When you make an attack roll while adjacent to at least one ally, you may activate this ability to gain advantage on the attack and add an additional 1d4 to it for each ally adjacent to you (maximum +3d4). If this attack reduces an enemy to 0 hit points, you and all adjacent allies may immediately move up to your speed toward another enemy without provoking opportunity attacks.

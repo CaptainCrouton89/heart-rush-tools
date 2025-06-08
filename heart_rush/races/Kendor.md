@@ -31,7 +31,7 @@ In their hidden palace-fortresses beneath tropical reefs, the Kendrel engage in 
 #### Mesmerizing Presence
 
 **Heart ability.**
-Your beauty and grace can stop conflicts before they begin. When combat would begin, you may use this ability before initiative is rolled. Make a presence check contested by the cunning challenge number of each hostile creature that can see you. Each creature that fails becomes unable to take hostile actions against you for the next minute unless you or your allies attack them first. Affected creatures may still defend themselves if attacked. This ability has no effect on creatures that are already in combat or have been in combat with you within the last hour.
+Your beauty and grace can stop conflicts before they begin. When combat would begin, you may use this ability before initiative is rolled. Each creature makes cunning saving throw against your presence challenge number. Each creature that fails becomes unable to take hostile actions against you for the next minute unless you or your allies attack them first. Affected creatures may still defend themselves if attacked. This ability has no effect on creatures that are already in combat or have been in combat with you within the last hour.
 
 ### Cendoriln (Abyss Kendor)
 
@@ -47,7 +47,7 @@ The Cendoriln's hidden fortresses lie in underwater caves and thermal vents, pla
 #### Abyssal Intimidation
 
 **Passive ability.**
-You can control your bioluminescent patterns to unnerve and disorient. You have advantage on intimidation checks, and when you successfully intimidate a creature, they also gain one level of dazed. Additionally, in darkness or dim light, you can shed bright light in a 10-foot radius or dim light in a 20-foot radius as a free action. When you first activate this light during an encounter, creatures of your choice within the light must make a cunning saving throw against your presence challenge number or gain two levels of shaken.
+You can control your bioluminescent patterns to unnerve and disorient. You have advantage on intimidation checks, and when you successfully intimidate a creature, they also gain one level of dazed. Additionally, in darkness or dim light, you can shed bright light in a 10-foot radius and dim light 10-feet beyond as a free action.
 
 ### Pelaendor (Wanderer Kendor)
 
@@ -62,5 +62,5 @@ Unlike their fortress-dwelling kin, the Pelaendor have learned that sometimes vi
 
 #### Adaptive Camouflage
 
-**Passive ability.**
-Your scales can shift color and pattern to match your surroundings. You have advantage on stealth checks, and you can blend into crowds or natural environments with ease. As a major ability, you can become nearly invisible for 10 minutes, gaining the effects of obscurement even in bright light. Additionally, you've adapted to varied environments: you suffer no movement penalties from armor while swimming, and your requirement to immerse in water is reduced to once every three days.
+**Major ability.**
+Your scales can shift color and pattern to match your surroundings, and you can blend into crowds or natural environments with ease. As an action, you can become nearly invisible automatically succeeding on a check to hide and become obscured, even in bright light. If you move or attack, you lose this effect and are visible once more.

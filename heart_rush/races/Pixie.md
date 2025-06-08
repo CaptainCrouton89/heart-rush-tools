@@ -48,7 +48,7 @@ Their wings appear to be made of captured starlight and shadow, constantly shift
 **Passive ability.**
 You can cast minor illusions at will without using an action, creating visual or auditory phenomena no larger than a 1-foot cube that last for up to 1 minute. Additionally, when you successfully deceive, confuse, or misdirect a creature through roleplaying or illusion, you gain a rush point. You can gain rush points this way even outside of combat, storing up to 3 rush points that last until used or until your next long rest.
 
-### Icehearts
+### Ikriel (Icehearts)
 
 Icehearts are pixies transformed by their worship of winter itself—not as a season, but as an cosmic force of entropy and hunger. Their crystalline wings generate a constant aura of frost, and their very presence leeches warmth from their surroundings. This hunger extends beyond the physical; Icehearts feed on emotional warmth, leaving their victims feeling hollow and cold inside.
 
