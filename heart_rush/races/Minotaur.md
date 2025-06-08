@@ -53,8 +53,6 @@ This sense of duty towards protection lies as deeply, if not more so, as their a
 **Passive ability.**
 You may take an additional help action each round. When you take the help action, you may instead choose a willing creature within 30 feet and move it 5 feet in any direction. This movement does not provoke opportunity attacks.
 
-Based on the existing minotaur subraces and the provided overview, here's the Rentar subrace:
-
 ### Rentar
 
 The Rentar of Chechol represent a stark contrast to their more warlike cousins. Where Danaki suppress emotion and Lorean prioritize logic, the Rentar have found peace through spiritual devotion. Their reddish-tinged skin and elegant, curved horns reflect their more contemplative nature, as they spend their days in meditation, prayer, and scholarly pursuits of divine knowledge.
@@ -71,8 +69,4 @@ What the Rentar do not realize is that their "divine guidance" has been corrupte
 #### Divine Communion
 
 **Major ability.**
-Through deep meditation and prayer, you commune with what you believe are divine forces for guidance in difficult situations. Once per day, you may spend 10 minutes in spiritual communion to ask a single yes-or-no question about a course of action you are considering. The GM must answer truthfully, though the source of this "divine" knowledge may not be what you believe it to be.
-
-Additionally, whenever you would make a saving throw against being charmed, confused, or frightened, you may choose to automatically succeed, drawing strength from your spiritual conviction.
-
-Looking at the elf format and the orc information provided, here's the base orc race and all subraces:
+Through deep meditation and prayer, you commune with what you believe are divine forces for guidance in difficult situations. Once per day, you may spend 10 minutes in spiritual communion to ask a single yes-or-no question about a course of action you are considering. The GM must answer truthfully.

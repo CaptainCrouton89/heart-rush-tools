@@ -2274,12 +2274,12 @@ Despite their exile, the Lyzine have retained their sophisticated culture, compl
 ### Arachnid Heritage
 
 **Passive ability.**
-You have a climb speed equal to your walking speed and can move across webs and similar surfaces without penalty. You can produce silk strong enough to support your weight, creating 50 feet of rope as an action. Additionally, you have advantage on checks to intimidate or impress others with displays of nobility or superiority.
+You have a climb speed equal to your walking speed and can move across webs and similar surfaces without penalty.
 
 ### Web Weaver
 
-**Heart ability. Full action.**
-You can rapidly spin webs to control the battlefield. Choose a 20-foot square area within 30 feet. The area becomes difficult terrain, and creatures that enter or start their turn in the webbed area must make an agility saving throw against your cunning challenge number or become restrained. Creatures can break free with a successful might check against the same CN. The webs last for 10 minutes or until destroyed.
+**Passive ability.**
+As an action, you can creating 50 feet of silken rope, up to 1000 feet per day. The rope is strong enough to support 5000 pounds. You can also choose to create sticky rope, which can ensnare those who get caught in it. If it is touched, it requires a CN 10 might check to break free. If a creature has full or majority body contact with it (if they ran into a web of it, for example), the CN becomes 16. If a creature is fully wrapped in it, it is CN 24.
 
 ## Minotaur
 
@@ -2336,8 +2336,6 @@ This sense of duty towards protection lies as deeply, if not more so, as their a
 **Passive ability.**
 You may take an additional help action each round. When you take the help action, you may instead choose a willing creature within 30 feet and move it 5 feet in any direction. This movement does not provoke opportunity attacks.
 
-Based on the existing minotaur subraces and the provided overview, here's the Rentar subrace:
-
 ### Rentar
 
 The Rentar of Chechol represent a stark contrast to their more warlike cousins. Where Danaki suppress emotion and Lorean prioritize logic, the Rentar have found peace through spiritual devotion. Their reddish-tinged skin and elegant, curved horns reflect their more contemplative nature, as they spend their days in meditation, prayer, and scholarly pursuits of divine knowledge.
@@ -2354,11 +2352,7 @@ What the Rentar do not realize is that their "divine guidance" has been corrupte
 #### Divine Communion
 
 **Major ability.**
-Through deep meditation and prayer, you commune with what you believe are divine forces for guidance in difficult situations. Once per day, you may spend 10 minutes in spiritual communion to ask a single yes-or-no question about a course of action you are considering. The GM must answer truthfully, though the source of this "divine" knowledge may not be what you believe it to be.
-
-Additionally, whenever you would make a saving throw against being charmed, confused, or frightened, you may choose to automatically succeed, drawing strength from your spiritual conviction.
-
-Looking at the elf format and the orc information provided, here's the base orc race and all subraces:
+Through deep meditation and prayer, you commune with what you believe are divine forces for guidance in difficult situations. Once per day, you may spend 10 minutes in spiritual communion to ask a single yes-or-no question about a course of action you are considering. The GM must answer truthfully.
 
 ## Mnurvlyon
 
@@ -2368,27 +2362,27 @@ Their dual heritage manifests in fascinating ways. They possess the giants' stre
 
 ### Aspects
 
-- Massive but careful
+- Too big for the world, too gentle for my size
 - Caught between worlds
 
 ### Vitals
 
-- **Size:** Large (L3)
-- **Height:** 15-18 ft
-- **Weight:** 2000-3000 lbs
-- **Max Age:** 300
+- **Size:** Large
+- **Height:** 7.5-10 ft
+- **Weight:** 300-500 lbs
+- **Max Age:** 200
 
-### Giant's Strength
+### Giant Blood
 
 **Passive ability.**
 
-Your might die is one size larger than normal (start with d8 instead of d6/d4). You can wield two heavy weapons, one in each hand, or wield massive weapons that count as ultra-heavy (1d20 attack die, requires your full movement to swing, -10 feet move penalty).
+You count as size large. This affects your ability to grapple, push enemies, and more. Read the size rules in the Gameplay Basics section.
 
-### Mountain's Endurance
+### Stone Sense
 
-**Major ability.**
+**Passive ability.**
 
-Your mixed heritage grants incredible resilience. For the next minute, you gain +10 to all defense rolls, you cannot be moved against your will, and you reduce all damage taken by 5. When this effect ends, you gain two levels of weakened.
+Your dwarven heritage allows you to read the mountain's moods, while your giant size gives you a unique perspective on structural engineering. You can sense the structural integrity of stone and earth within 60 feet, knowing instinctively where walls are weak, where hidden passages might exist, and whether excavation is safe for someone of your massive scale. You can also detect the general direction and distance to the nearest significant cave system or underground space within a mile.
 
 ## Murazi
 

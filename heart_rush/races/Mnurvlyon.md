@@ -6,24 +6,24 @@ Their dual heritage manifests in fascinating ways. They possess the giants' stre
 
 ### Aspects
 
-- Massive but careful
+- Too big for the world, too gentle for my size
 - Caught between worlds
 
 ### Vitals
 
-- **Size:** Large (L3)
-- **Height:** 15-18 ft
-- **Weight:** 2000-3000 lbs
-- **Max Age:** 300
+- **Size:** Large
+- **Height:** 7.5-10 ft
+- **Weight:** 300-500 lbs
+- **Max Age:** 200
 
-### Giant's Strength
+### Giant Blood
 
 **Passive ability.**
 
-Your might die is one size larger than normal (start with d8 instead of d6/d4). You can wield two heavy weapons, one in each hand, or wield massive weapons that count as ultra-heavy (1d20 attack die, requires your full movement to swing, -10 feet move penalty).
+You count as size large. This affects your ability to grapple, push enemies, and more. Read the size rules in the Gameplay Basics section.
 
-### Mountain's Endurance
+### Stone Sense
 
-**Major ability.**
+**Passive ability.**
 
-Your mixed heritage grants incredible resilience. For the next minute, you gain +10 to all defense rolls, you cannot be moved against your will, and you reduce all damage taken by 5. When this effect ends, you gain two levels of weakened.
+Your dwarven heritage allows you to read the mountain's moods, while your giant size gives you a unique perspective on structural engineering. You can sense the structural integrity of stone and earth within 60 feet, knowing instinctively where walls are weak, where hidden passages might exist, and whether excavation is safe for someone of your massive scale. You can also detect the general direction and distance to the nearest significant cave system or underground space within a mile.
