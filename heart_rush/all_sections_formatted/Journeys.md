@@ -1,177 +1,245 @@
 # Journeys
 
-## When the travel is safe and not a focus of gameplay
+Not all travel needs rules. Walking between nearby villages on safe roads requires nothing more than narration. But when the journey itself holds danger and uncertainty—crossing frozen wastelands, navigating treacherous seas, or blazing trails through monster-infested wilderness—these rules help create memorable travel experiences without bogging down play.
 
-When the travel is safe and not a focus of gameplay, such as on a well-traveled road between nearby towns, you only need to know the basics of travel speed so you can determine how long it takes (described below). In these cases, you are assumed to reach your destination in the appropriate amount of time and the game can continue at the new location.
+## When to Use Journey Rules
 
-## When travel is a major focal point
+The journey system serves three purposes: it creates risk for dangerous travel, it allows players to zoom in on interesting moments while glossing over repetitive ones, and it integrates travel challenges with the rest of the game's mechanics.
 
-However, in cases where travel is a major focal point of gameplay, the rest of this section describes the rules for travel.
+**Skip these rules entirely when:**
 
-### Travel Basics
+- Travel is safe and routine (roads between civilized areas)
+- The journey isn't important to the story
+- You want to jump straight to the destination
 
-The first step in beginning a journey is figuring out how long it will take. You can calculate this by using your daily travel speed. The GM should then segment the journey, and add events, which will be explained later in this section.
+**Use a single journey roll when:**
 
-### Travel Speed
+- Brief but risky travel (crossing a dangerous valley)
+- Time is critical but you don't want extended scenes
+- The journey is notable but not the session's focus
 
-Your travel speed is calculated based off your movement speed. The following sections describe how far you can travel in different terrain. These distances represent miles of progress towards your destination, not absolute distance traveled.
+**Use the full system when:**
 
-When you begin, the GM should calculate how long it will take to reach your destination, assuming everything goes well.
+- Multi-day expeditions through dangerous territory
+- The journey is a major story element
+- Resource management and survival matter
+- You want the travel to feel earned and significant
 
-#### On Foot
+## Journey Structure
 
-- If you are on a path on flat ground, you can cover 24 miles per day.
-- In difficult terrain, such as swamps, jungles, and mountains (as determined by the GM), this distance is halved.
-- If you are not on a path, this movement speed is also halved.
+Before beginning a journey, the GM divides it into segments. Each segment represents a significant portion of travel through relatively consistent conditions.
 
-#### On a vehicle
+### Segments
 
-- If you are on horseback, in a carriage, or traveling via some other land-vehicle, use the vehicle's daily travel speed rather than your own.
-- Horses and carriages have the same movement speed as humans for the purposes of calculating daily travel speeds, but they will have greater carrying capacity and will not be penalized by your own movement penalties, such as those from armor.
+The number of segments depends on journey length and danger:
 
-### Segmenting the Journey
+- **1 segment:** Several hours to a full day of risky travel
+- **2-3 segments:** Several days to a week
+- **4-6 segments:** Week to month-long expedition
 
-On long trips through varied terrain, the GM should segment the journey into different distinct sections, broken at each major change in terrain. For example, if the trip is through the mountains and into the forests beyond, there may be a segment of mountain travel and a segment of forest travel. Most trips do not need multiple segments.
+Segment boundaries occur at major transitions: terrain changes, resupply opportunities, or dramatic shifts in danger level. A journey from a port city to mountain ruins might have three segments: coastal roads (safe, no roll needed), foothills (1 segment), and high mountain passes (1 segment).
 
-When segmenting trips, the GM should calculate how long each segment should take based on the distance and travel speed in that segment of the journey.
+### Journey Difficulty
 
-### Events
+Each segment has a Challenge Number based on terrain and conditions:
 
-Besides survival, these are what make a journey into an adventure. Events can include things such as falling avalanches, bandits attacking, tombs being discovered, and just about anything else you can imagine creating a situation where danger or further investigation might be warranted.
+| Difficulty  | CN  | Examples                                               |
+| ----------- | --- | ------------------------------------------------------ |
+| Favorable   | 6   | Known paths, mild weather, some shelter available      |
+| Challenging | 9   | Wilderness travel, poor weather, limited resources     |
+| Harsh       | 12  | Extreme terrain, severe weather, hostile environment   |
+| Brutal      | 15  | Uncharted territory, deadly conditions, active threats |
+| Nightmarish | 18  | Supernatural dangers, impossible conditions            |
 
-The GM should add between one and five events to most journeys, sticking with lower numbers on shorter journeys or longer, safer ones, and higher numbers for longer, more dangerous journeys. If there are multiple segments in the trip, it's usually a good idea to add at least one event per segment.
+## Making Journey Rolls
 
-[[GM Note: Check out the Journey chapter in the GM section of this book. There's lots of advice on how to come up with interesting events and advice on when to use them.]]
+At the start of each segment, one character makes a journey roll. This is typically whoever is guiding the group—the best navigator, the local guide, or whoever has the most relevant expertise.
 
-### Making the Journey
+**The roll:** Heart die + relevant ability die + modifiers
 
-When you actually leave for the journey, for each segment, the GM should determine if any of the following survival challenges are necessary to the wellbeing of the players during the segment, and couldn't be reasonably prepared for or already accounted for:
+**Choosing ability die:**
 
-- Keep Watch
-- Navigate
-- Collect Water
-- Gather Food
-- Find Shelter
+- **Might:** Enduring harsh physical conditions, forced marches
+- **Agility:** Navigating treacherous terrain, climbing routes
+- **Cunning:** Complex navigation, finding safe paths, weather prediction
+- **Presence:** Maintaining group morale, negotiating passage
 
-If you are bringing enough food and water for the duration of the segment, for example, the GM should not include Gather Food or Collect Water. The tasks the GM deems as necessary will each require one or more successful skill checks in order to avoid turning into a bigger problem for you and your party.
+Other characters can help (granting advantage) if they could reasonably assist. A ranger might help navigate while a bard keeps spirits high.
 
-You or someone else from the party must make a skill check for each of these needs, using the challenge number from the table below. The same person can make multiple skill checks, but they get disadvantage on each skill check they make for every additional skill check they have to make. Conversely, anyone not making a skill check can grant advantage to exactly one skill check being made by another player.
+### Journey Roll Results
 
-| Terrain        | Keep Watch | Navigate | Collect Water | Gather Food | Find Shelter |
-| -------------- | ---------- | -------- | ------------- | ----------- | ------------ |
-| Arctic         | 7          | 10       | 5             | 12          | 8            |
-| Coast          | 8          | 4        | 6             | 6           | 5            |
-| Canyons        | 10         | 8        | 7             | 7           | 5            |
-| Desert         | 5          | 9        | 13            | 12          | 10           |
-| Forest         | 11         | 9        | 5             | 5           | 8            |
-| Grassland      | 5          | 6        | 6             | 6           | 7            |
-| Hellscape      | 8          | 8        | 16            | 14          | 10           |
-| Jungle         | 12         | 13       | 5             | 4           | 11           |
-| Open Water     | 4          | 10       | 15\*          | 8           | Impossible   |
-| Sprawling City | 13         | 9        | 0             | 0           | 0            |
-| Swamp          | 12         | 13       | 8             | 9           | 12           |
-| Tundra         | 6          | 8        | 7             | 10          | 9            |
-| Underground    | 12         | 14       | 4             | 12          | 8            |
+**Success (meet or exceed CN):** The segment passes without major incident. Describe the journey as a montage—the challenges faced, sights seen, and progress made. The party finds adequate shelter and can automatically succeed on sleeping checks for this segment if the GM is tracking such things.
 
-_Note: 15_ indicates a special case or higher difficulty.
+**Failure (below CN):** The party fails to achieve their core objective for this segment. They might become lost, make no progress, or find their route impassable. The GM selects one result from the Failure Consequences section.
 
-### Total Success
+**Complications (any die shows a 1):** Whether the roll succeeds or fails, an unexpected situation arises requiring immediate attention. Play zooms in to action mode as players deal with the complication. The GM selects from the Complications section.
 
-On succeeding at every skill check, the journey progresses to the event phase. No challenge phases are triggered.
+## Failure Consequences
 
-### Skill Check Failure
+When a journey roll fails, the party has genuinely failed at their goal for that segment. The GM chooses one:
 
-If a skill check is failed, players can face consequences. Each skill check has its own consequences for failure. If multiple skill checks are failed, the GM may choose to resolve them in whichever order they wish.
+### Lost or Stalled
 
-#### Skill check consequences
+The party's navigation fails catastrophically:
 
-- **Keep Watch:** Succeeding on this skill check represents keeping a watchful eye on your surroundings throughout the travel phase. When you successfully keep watch, when an event occurs, you and the party see any threats present before they see you. On a failure, any people or creatures from an event surprise you.
+- **Completely Lost:** The segment must be repeated—no progress made
+- **Wrong Direction:** Add an extra segment as you correct course
+- **Impassable Route:** The way forward is blocked; find another path (adding a segment) or turn back
+- **Circles in the Wilderness:** Arrive back where you started the segment
 
-- **Navigate:** Succeeding on this skill check represents consistently staying on track towards your destination. On a failure, the party fails to make progress towards the destination and the party enters an event phase. This event does not count towards the total number of events for the journey.
+### Unable to Find Safe Haven
 
-- **Gather Food:** Succeeding on this skill check represents successfully fishing, hunting, or foraging enough to keep everyone fed during the travel phase. On a failure, the travel phase ends and a challenge phase begins. Until you can get food, you cannot resume the travel phase. You may have to eat pack animals, consume unidentified plants, hunt more dangerous creatures, or go hungry until food becomes available again. When the challenge phase triggered by this failure ends, if the GM rules that food is still an issue for the remainder of the travel phase, re-roll this skill.
+The party cannot secure proper shelter or safety:
 
-[[GM Note: Even though travel phases don't all have to be the same duration and it's all a montage anyway, it's still important to have a good idea how long each leg of the journey lasts. This way, if players get stuck in a challenge phase at some point and decide to tough it out till the end, you know how many days it will take. It also means you can calculate how many long rests they have between events, so they can heal an appropriate amount. Check for the travel phase.]]
+- **No Safe Camps:** Cannot find adequate shelter—all sleeping checks this segment have disadvantage
+- **Exposed Camps:** Poor shelter in harsh conditions—everyone takes a rank 1d6 wound labeled "exposure"
+- **Forced March:** Must travel without rest—everyone gains 2 levels of weakened
 
-- **Collect Water:** Succeeding on this skill check represents consistently finding enough clean drinking water to keep everyone hydrated during the travel phase. On a failure, the travel phase ends and a challenge phase begins. Until you can get water, you cannot resume the travel phase. You may have to drink unclean water, journey to more dangerous water sources, or wait until water becomes available again. When the challenge phase triggered by this failure ends, if the GM rules that water is still an issue for the remainder of the travel phase, re-roll this skill check for the travel phase.
+### Critical Delays
 
-- **Find Shelter:** Succeeding on this skill check represents finding safe places to build shelter and get good rest away from the elements. If you have a tent, you get +4 to this roll. If you have a bedroll, you get +3. If you are not at a comfortable temperature, as per the rules in the Temperature section, you get -3 per temperature tier you are off by. On a failure, the travel phase ends. It is nightfall and you cannot find a safe place to set up camp. You may have to sleep in a more dangerous location, or skip sleep altogether. When the challenge phase triggered by this failure ends, if the GM rules shelter is still an issue for the remainder of the travel phase, re-roll this skill check.
+When time matters, the journey takes far longer than expected:
 
-### Other Interruptions
+- **Missed Opportunity:** Arrive too late for time-sensitive goals
+- **Season Change:** Weather turns against you—increase all remaining segment CNs by 3
+- **Pursued:** Whatever you're fleeing catches up
 
-If you wish to stop the travel phase at any point, you may do so. Regular game-time resumes until you and your party agree to resume the journey. As long as your general ability to travel safely has not changed, you should resume the previous travel phase, keeping its rolls and results.
+## Complications
 
-### Healing During Travel
+Complications represent unexpected challenges that arise during travel. They don't prevent progress but demand immediate attention. When a complication occurs, play zooms in to action mode—describe the situation and let players decide how to handle it.
 
-If you lose health during an encounter or during a challenge phase, you...
+### Mountain & Arctic Complications
 
-[[Compounding Failure: Failing once and not resolving the issue even temporarily makes it harder to succeed again, and previously unresolved failures can build up quickly, resulting in being forced to face multiple challenges simultaneously. When feasible, it's generally best to not let this happen.]]
+| d6  | Complication                                                            |
+| --- | ----------------------------------------------------------------------- |
+| 1   | Avalanche or ice sheet breaking—find shelter or outrun it?              |
+| 2   | Crevasse field discovered—navigate carefully or find a way around?      |
+| 3   | Whiteout conditions approaching—shelter in place or push through?       |
+| 4   | Mountain predators stalking the party—confront or evade?                |
+| 5   | Critical gear falls into ravine—risk climbing down or continue without? |
+| 6   | Ancient ruins or cave discovered—investigate or stay on schedule?       |
 
-## Challenge Phase
+### Forest & Jungle Complications
 
-When a challenge phase begins, the montage of travel is over. Challenge phases begin when you have no food, no water, or no shelter. Gameplay slows down to normal pace. You must now make decisions as you would in a normal situation—the GM describes the situation, and you have to figure out what to do.
+| d6  | Complication                                                           |
+| --- | ---------------------------------------------------------------------- |
+| 1   | Wildfire spreading toward your path—flee which direction?              |
+| 2   | Territory markers of dangerous beasts—go around or risk it?            |
+| 3   | River crossing washed out—ford, build rafts, or long detour?           |
+| 4   | Thick canopy causes navigation confusion—trust instincts or backtrack? |
+| 5   | Venomous creatures nest on the path—clear them or go around?           |
+| 6   | Ancient overgrown road discovered—follow it or stick to plan?          |
 
-If you want to continue travel as you did before, you must now make daily checks to keep watch, gather food, collect water, navigate, and find shelter. Everyone should make skill checks for these as they would for the travel phase, unless they are doing something uniquely different compared to what they would have been doing during the travel phase. For example, if you were riding a horse, ran out of food, entered a challenge phase, and then butchered your horse for food, you would not need to make a skill check to gather food for a few days.
+### Desert & Wasteland Complications
 
-### Daily Consequences
+| d6  | Complication                                                   |
+| --- | -------------------------------------------------------------- |
+| 1   | Sandstorm building on horizon—shelter or try to outrun?        |
+| 2   | Oasis occupied by hostile group—negotiate, fight, or continue? |
+| 3   | Sinkhole or unstable ground—test path or wide detour?          |
+| 4   | Mirages confusing navigation—trust the guide or change course? |
+| 5   | Water source is fouled—purify, ration, or search for another?  |
+| 6   | Ancient monument or ruins—investigate or avoid?                |
 
-Failing any of these skill checks results in the same consequences as normal, though they occur immediately, and do not trigger new challenge phases—you just remain in the existing one.
+### Ocean & River Complications
 
-[[GM Note: For advice on how to make and run interesting events, see the Travel Events section. While in the challenge phase, it is possible you will spend time going hungry or thirsty, without sleep, or too hot or cold. Each has their own consequences as outlined in the Basic Needs section.]]
+| d6  | Complication                                                     |
+| --- | ---------------------------------------------------------------- |
+| 1   | Storm building ahead—sail through or around?                     |
+| 2   | Pirates or raiders spotted—evade, parlay, or prepare for battle? |
+| 3   | Sea creature following vessel—drive it off or change course?     |
+| 4   | Damage to vessel discovered—stop for repairs or risk continuing? |
+| 5   | Mysterious fog bank ahead—navigate through or wait?              |
+| 6   | Uncharted island spotted—explore or maintain course?             |
 
-### Ending the Challenge Phase
+### Underground Complications
 
-If you start a day after succeeding at every required skill check the day before, you are capable of traveling, and there are no obvious threats to your immediate safety, the challenge phase ends and you resume the travel phase. The GM may continue the montage of travel.
+| d6  | Complication                                              |
+| --- | --------------------------------------------------------- |
+| 1   | Cave-in blocks path—dig through or find another route?    |
+| 2   | Underground river rising—climb higher or swim?            |
+| 3   | Toxic gas detected ahead—find safe path or risk exposure? |
+| 4   | Strange echoing sounds—investigate or avoid?              |
+| 5   | Bioluminescent passage discovered—follow or stick to map? |
+| 6   | Ancient worked tunnels found—explore or continue?         |
 
-Alternatively, if the GM rules that you've gone enough distance to reach your destination, the journey ends.
+## Resources and Survival
 
-## Event Phase
+The journey system integrates with Heart Rush's existing survival mechanics. How closely you track resources depends on the situation's dramatic needs.
 
-Events represent highlights and notable moments from a journey (in addition to any struggles faced during challenge phases). They can take a wide variety of forms, some good, some bad, and they should be introduced as an interruption to travel. For example, the GM might describe rounding a hill after days of travel and seeing the colossal ruins of a destroyed dwarven fortress on the mountainside. The players can now investigate the fortress in normal game-time.
+### Montage Mode (Default)
 
-Once players are finished with an event, are no longer threatened by it, and have chosen to move on, the event phase ends and the next travel phase begins.
+During successful segments with adequate supplies, don't track individual rations or daily activities. Simply narrate the journey's highlights and assume competent travelers manage their resources appropriately.
 
-## Pack Animals
+### Daily Tracking Mode
 
-If you are traveling light, you may be able to carry all of the necessary gear you need on your back. However, on longer trips, you will likely want a pack animal, especially if you want to bring all your food with you. See the Equipment & Gear section for rules on carrying capacity and a list of common equipment.
+Switch to daily tracking when:
 
-## Journey Modes
+- Supplies run low (less than 3 days of food/water per person)
+- The party has multiple wounded members needing recovery
+- A failed journey roll results in "No Safe Camps"
+- Resolving any complication
+- Extreme weather conditions threaten survival
+- Players choose to "zoom in" for any reason
 
-When traveling long distances, there are two modes of gameplay: travel mode, and action mode.
+During daily tracking:
 
-- In travel mode, time passes quickly, and the GM should describe the activities of the party like a montage. You are welcome to chime in to describe what you are doing as you travel, but this gameplay occurs at macro pace. The GM may describe the highlights of the journey, small oddities you may have noticed along the trail, but nothing that out of the ordinary.
+- Consume 1 food and 1 water ration per person per day
+- Make sleeping checks using normal rules
+- Apply temperature and exposure rules as needed
+- Track actual distance if time matters
 
-- The second mode of travel is action mode. In action mode, play returns to micro pace—you're back to deciding what you want to do, moment to moment, scene by scene.
+### Equipment Impact
 
-During a journey, most of the distance traveled will likely occur in travel mode. However, when survival becomes a challenge, or notable incidents occur, the journey will switch to action mode and you and your party will have to figure out how to deal with it. Once you have dealt with whatever came up, along with any fallout, you may return to travel mode and continue along your journey.
+Journey preparation matters. Well-equipped parties journey more safely:
 
-## GM Trip Segmentation
+- **Food/Water Rations:** Without adequate supplies, use starvation and dehydration rules from Basic Needs
+- **Tent:** Provides shelter and +20 to sleeping checks
+- **Bedroll:** Grants +20 to sleeping checks
+- **Healing Kits:** Essential for treating wounds during travel
+- **Rope, Climbing Gear:** May grant advantage on rolls in mountainous terrain
+- **Guide or Map:** May grant advantage on journey rolls
 
-The GM breaks the trip into segments of terrain. Each segment requires X successful travel checks to get through uneventfully, and is Y days of travel long. The GM should also make Z number of events to put in throughout the journey.
+[[Example Journey
+The party must reach the Storm Crown ruins before the cult completes their ritual—a journey of roughly 100 miles through increasingly dangerous terrain.
 
-- Roll each check as necessary.
-- As you reach different places along the journey, if you had been in travel mode, it triggers a re-roll.
-- All failures occur simultaneously.
-- When you fail a roll, the GM chooses which one actually causes the journey to grind to a halt. The rest of the failures just impose disadvantage on the next check to that roll.
+**GM Preparation:**
 
-Each travel segment should have a chance of...
+- Segment 1: Farmlands to forest edge (safe, no roll)
+- Segment 2: Through the Darkwood (CN 9)
+- Segment 3: Climbing the Stormpeaks (CN 12)
+- Segment 4: The ruins approach (CN 15)
 
-- Splitting the trip into segments of terrain. Each terrain segment has its own travel mode roll. The GM should sprinkle failures throughout while players are in that section. Once action mode has begun, the GM can spend those failures on failures during action mode.
-- When in action mode, the check to hunt is more interactive. Roll to find animals, roll to kill them; the animals you find are random durations of food. Others can help for advantage.
-- Collecting water failure means you have to keep traveling into the night to find some.
-- Shelter failure means you need to keep traveling, or not sleep, or find a more dangerous place to spend the night.
-- Navigation failure means you make no progress and have a chance to encounter something new. Can make one in the day.
+**Play Example:**
+Segment 1 passes in narration. For Segment 2, the ranger rolls Heart (d8) + Cunning (d8) with advantage from the druid's help. Rolling 1, 7, and 6, they keep the 13—success despite the complication.
 
-When action mode begins, have days of food equal to the surplus on the food-finding roll. Roll 1 higher, and you have one extra day of food. All canteens are full.
+The GM describes a successful if tense journey through the forest, but the 1 triggers a complication: wildfire spreading from the west. The party must choose: race through on the known path (risking the flames) or detour through giant spider territory.
 
-You can resume travel mode once more than half of the party has finished a successful long rest.
+After resolving the fire escape, Segment 3 begins. The ranger rolls poorly: 5 total against CN 12. The party becomes lost in a blizzard, adding an extra segment to the journey. Will they still arrive in time?]]
 
-Segment the trip as necessary between different terrains, if present. Many trips will have just one terrain and therefore just one segment.
+## Running Journeys
 
-Approximate length of each segment in miles and time.
+### For GMs
 
-Add X events to the trip. They can occur whenever, though at least one per terrain is a good idea.
+The journey system creates a framework for travel drama without simulation. Focus on interesting choices rather than bookkeeping.
 
-May Y rolls for each necessity for each segment, in order. If the segment requires 4 rolls, then the first roll represents the first quarter of the distance traveled.
+**Prepare segments based on story needs:** A desperate race might have many short segments with complications, while exploration might have fewer, longer segments.
 
-Whenever a roll is failed, things go wrong immediately. The GM chooses which roll causes the party to fail. The remaining ones just act as disadvantage on the rolls during the action phase.
+**Let failure drive story:** Failed journey rolls shouldn't end adventures—they create new problems. The party hired to stop a ritual might arrive too late, shifting from prevention to damage control.
+
+**Match complications to tone:** In a gritty survival game, complications might all threaten resources. In high adventure, they might offer mysterious discoveries or dramatic challenges.
+
+**Know when to zoom out:** Once a complication resolves, return to montage mode unless resources are critically low or players want to continue in detail.
+
+### For Players
+
+Journeys are opportunities for adventure, not just transitions between locations.
+
+**Prepare appropriately:** Equipment matters. A tent and bedroll can mean the difference between recovering from wounds and accumulating more.
+
+**Consider guides:** Local knowledge grants advantage and might reveal better routes.
+
+**Embrace complications:** These moments let you make meaningful choices about your journey. The ancient ruins might hold treasures—or threats.
+
+**Resource management matters:** When supplies run low, every decision becomes critical. Do you push forward or hunt for food?
+
+The journey system ensures that reaching your destination feels earned. The mountain peak is sweeter when you've survived the climb.
