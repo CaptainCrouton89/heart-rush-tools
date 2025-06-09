@@ -49,13 +49,13 @@ Each segment has a Challenge Number based on terrain and conditions:
 | Challenging | 9   | Wilderness travel, poor weather, limited resources     |
 | Harsh       | 12  | Extreme terrain, severe weather, hostile environment   |
 | Brutal      | 15  | Uncharted territory, deadly conditions, active threats |
-| Nightmarish | 18  | Supernatural dangers, impossible conditions            |
+| Nightmarish | 18+ | Supernatural dangers, impossible conditions            |
 
 ## Making Journey Rolls
 
 At the start of each segment, one character makes a journey roll. This is typically whoever is guiding the group—the best navigator, the local guide, or whoever has the most relevant expertise.
 
-**The roll:** Heart die + relevant ability die + modifiers
+**The roll:** Heart die + relevant ability die
 
 **Choosing ability die:**
 
@@ -64,7 +64,7 @@ At the start of each segment, one character makes a journey roll. This is typica
 - **Cunning:** Complex navigation, finding safe paths, weather prediction
 - **Presence:** Maintaining group morale, negotiating passage
 
-Other characters can help (granting advantage) if they could reasonably assist. A ranger might help navigate while a bard keeps spirits high.
+Other characters can help (granting advantage) if they could reasonably assist.
 
 ### Journey Roll Results
 
@@ -72,7 +72,7 @@ Other characters can help (granting advantage) if they could reasonably assist. 
 
 **Failure (below CN):** The party fails to achieve their core objective for this segment. They might become lost, make no progress, or find their route impassable. The GM selects one result from the Failure Consequences section.
 
-**Complications (any die shows a 1):** Whether the roll succeeds or fails, an unexpected situation arises requiring immediate attention. Play zooms in to action mode as players deal with the complication. The GM selects from the Complications section.
+**Complications (a die shows a 1):** Whether the roll succeeds or fails, an unexpected situation arises requiring immediate attention. Play zooms in to action mode as players deal with the complication. The GM selects from the Complications section.
 
 ## Failure Consequences
 
