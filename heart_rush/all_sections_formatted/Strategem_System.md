@@ -1,8 +1,8 @@
 # Stratagem System
 
-**A Stratagem is any complex endeavor requiring multiple coordinated actions** - from minutes-long boarding actions to years-long empire building. Stratagems can nest within each other like Russian dolls.
+**A Stratagem is any complex endeavor requiring multiple coordinated actions involving multiple agents** - from minutes-long boarding actions to years-long empire building. Stratagems can nest within each other like Russian dolls.
 
-_Note: Stratagems use a d100 roll plus your most relevant ability die (if spearheading) compared against the CN. This reflects the many variables and uncertainties of large-scale actions while still allowing personal capability to matter._
+_Note: Stratagems use a d100 roll plus your most relevant ability die compared against the CN. This reflects the many variables and uncertainties of large-scale actions._
 
 ## Core Concepts
 
