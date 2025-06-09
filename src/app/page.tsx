@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getNavigationTree } from '../lib/content';
+import { getNavigationTree } from "../lib/content";
 
 export default async function HomePage() {
   const navigation = await getNavigationTree();
@@ -14,13 +14,16 @@ export default async function HomePage() {
           Welcome to the official digital rulebook for Heart Rush TTRPG
         </p>
         <p className="text-muted-foreground">
-          Navigate through {navigation.length} sections of rules, lore, and gameplay guidance
+          Navigate through {navigation.length} sections of rules, lore, and
+          gameplay guidance
         </p>
       </header>
 
       {/* Featured Sections */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-foreground mb-6">Featured Sections</h2>
+        <h2 className="text-2xl font-semibold text-foreground mb-6">
+          Featured Sections
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Getting Started */}
           <div className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-200 hover:border-primary/30">
@@ -28,14 +31,23 @@ export default async function HomePage() {
               Getting Started
             </h3>
             <p className="text-muted-foreground mb-4">
-              Everything you need to create your first character and start playing
+              Everything you need to create your first character and start
+              playing
             </p>
-            <Link 
-              href="/building-your-character" 
-              className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
-            >
-              Start Building →
-            </Link>
+            <div className="flex flex-col items-center gap-4 mt-10">
+              <Link
+                href="/heart-rush-ttrpg-overview"
+                className="inline-block bg-secondary text-secondary-foreground px-4 py-2 rounded-full hover:bg-secondary/90 transition-colors w-full text-center"
+              >
+                Intro to Heart Rush
+              </Link>
+              <Link
+                href="/building-your-character"
+                className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-full hover:bg-primary/90 transition-colors w-full text-center"
+              >
+                Start Building →
+              </Link>
+            </div>
           </div>
 
           {/* Leveling Up */}
@@ -47,32 +59,32 @@ export default async function HomePage() {
               Advance your character through classes, talents, and experience
             </p>
             <div className="space-y-2">
-              <Link 
-                href="/classes" 
+              <Link
+                href="/classes"
                 className="block text-primary hover:text-secondary hover:underline text-sm transition-colors"
               >
                 Classes
               </Link>
-              <Link 
-                href="/talents" 
+              <Link
+                href="/talents"
                 className="block text-primary hover:text-secondary hover:underline text-sm transition-colors"
               >
                 Talents
               </Link>
-              <Link 
-                href="/paragon-abilities" 
+              <Link
+                href="/paragon-abilities"
                 className="block text-primary hover:text-secondary hover:underline text-sm transition-colors"
               >
                 Paragon Abilities
               </Link>
-              <Link 
-                href="/spells" 
+              <Link
+                href="/spells"
                 className="block text-primary hover:text-secondary hover:underline text-sm transition-colors"
               >
                 Spells
               </Link>
-              <Link 
-                href="/experience-1" 
+              <Link
+                href="/experience-1"
                 className="block text-primary hover:text-secondary hover:underline text-sm transition-colors"
               >
                 Experience
@@ -84,23 +96,25 @@ export default async function HomePage() {
 
       {/* All Sections */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-foreground mb-6">All Sections</h2>
+        <h2 className="text-2xl font-semibold text-foreground mb-6">
+          All Sections
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {navigation.map(section => (
-            <div 
-              key={section.slug} 
+          {navigation.map((section) => (
+            <div
+              key={section.slug}
               className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-200 hover:border-primary/30"
             >
               <h3 className="text-lg font-semibold text-card-foreground mb-3">
                 {section.title}
               </h3>
-              
+
               {section.children && section.children.length > 0 && (
                 <ul className="space-y-2 mb-4">
-                  {section.children.slice(0, 3).map(child => (
+                  {section.children.slice(0, 3).map((child) => (
                     <li key={child.slug}>
-                      <Link 
-                        href={`/${child.slug}`} 
+                      <Link
+                        href={`/${child.slug}`}
                         className="text-primary hover:text-secondary hover:underline text-sm transition-colors"
                       >
                         {child.title}
@@ -109,9 +123,9 @@ export default async function HomePage() {
                   ))}
                 </ul>
               )}
-              
-              <Link 
-                href={`/${section.slug}`} 
+
+              <Link
+                href={`/${section.slug}`}
                 className="inline-block text-muted-foreground hover:text-primary text-sm font-medium transition-colors"
               >
                 Explore {section.title} →

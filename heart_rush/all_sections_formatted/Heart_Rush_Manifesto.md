@@ -38,7 +38,7 @@ Healing is slow. Wounds accumulate. That negative HP buffer isn't generous. We w
 
 ## Build Whatever You Want
 
-A barbarian wizard. A ninja detective. A fire-bending assassin. The system doesn't tell you "no"—it asks you "how?" Want to be a scholarly orc grappler who solves problems through interpretive wrestling? The rules support it. Character optimization exists, but the optimal path is the one that makes you excited to play.
+A barbarian wizard. A ninja detective. A fire-bending assassin. The system doesn't tell you "no"—it asks you "how?". You choose how you want to level up—all your upgrades are modular, and the way you scale may be totally different from your companions.
 
 ## Fail Forward, But Feel the Failure
 
@@ -51,9 +51,3 @@ With stance selection, positioning, ability timing, and resource management all 
 ## This Is Not a Safe Game
 
 Heart Rush embraces danger. It's simulationist where that makes combat feel weighty and gamist where that makes combat feel tactical. You can die from infected wounds. You can be strangled unconscious. You can fall off a cliff and break your legs. The world has teeth, and it will bite.
-
-## In Conclusion
-
-Heart Rush is a game for people who want their combat to matter—mechanically and narratively. It's for players who see resource management as dramatic tension, who view tactical cooperation as the highest form of gameplay, and who believe that true heroism is earned through adversity, not granted by level.
-
-Your heart beats at the center of everything. How hard will you push it?
