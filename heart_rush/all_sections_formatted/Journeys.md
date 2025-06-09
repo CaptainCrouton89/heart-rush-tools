@@ -218,6 +218,8 @@ After resolving the fire escape, Segment 3 begins. The ranger rolls poorly: 5 to
 
 ## Running Journeys
 
+Some quick advice for GMs and players.
+
 ### For GMs
 
 The journey system creates a framework for travel drama without simulation. Focus on interesting choices rather than bookkeeping.
