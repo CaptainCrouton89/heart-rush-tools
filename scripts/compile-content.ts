@@ -29,10 +29,12 @@ interface NavigationItem {
 
 const WORDS_PER_MINUTE = 200;
 const SOURCE_DIR = "heart_rush/all_sections_formatted";
+const GM_SOURCE_DIR = "heart_rush/gm_guide";
 const RACES_DIR = "heart_rush/races";
 const RACES_IMAGES_DIR = "heart_rush/races/images";
 const PUBLIC_IMAGES_DIR = "public/heart_rush/races/images";
 const OUTPUT_DIR = "content";
+const GM_OUTPUT_DIR = "content/gm";
 
 function calculateReadingTime(wordCount: number): number {
   return Math.ceil(wordCount / WORDS_PER_MINUTE);
@@ -356,8 +358,8 @@ async function combineRaceFiles(): Promise<void> {
   }
 }
 
-async function compileContent(): Promise<void> {
-  console.log("Starting content compilation...");
+async function compilePlayerContent(): Promise<void> {
+  console.log("Starting player content compilation...");
 
   try {
     // First, combine race files into Kin_&_Culture.md
@@ -518,11 +520,177 @@ async function compileContent(): Promise<void> {
       JSON.stringify(index, null, 2)
     );
 
-    console.log("Content compilation completed successfully!");
+    console.log("Player content compilation completed successfully!");
     console.log(`- ${allSections.length} sections compiled`);
     console.log(`- Navigation tree generated`);
     console.log(`- Index file created`);
     console.log(`- Output written to ${OUTPUT_DIR}/`);
+  } catch (error) {
+    console.error("Error during player content compilation:", error);
+    process.exit(1);
+  }
+}
+
+async function compileGMContent(): Promise<void> {
+  console.log("Starting GM content compilation...");
+
+  try {
+    // Ensure GM output directory exists
+    await fs.mkdir(GM_OUTPUT_DIR, { recursive: true });
+
+    // Read all markdown files from GM source directory
+    const files = await fs.readdir(GM_SOURCE_DIR);
+    const markdownFiles = files.filter((file) => file.endsWith(".md"));
+
+    const allSections: ContentSection[] = [];
+    const existingSlugs = new Set<string>();
+    let globalOrder = 1;
+
+    for (const filename of markdownFiles) {
+      const filePath = path.join(GM_SOURCE_DIR, filename);
+      const fileContent = await fs.readFile(filePath, "utf-8");
+      const { data: frontMatter, content } = matter(fileContent);
+
+      // Extract category from frontmatter or derive from filename
+      const category = frontMatter.category || filename
+        .replace(/\.md$/, "")
+        .replace(/_/g, " ");
+
+      // Split content into sections
+      const sections = splitContent(content, filename);
+
+      // Keep track of sections from current file for proper parent relationships
+      const fileSections: ContentSection[] = [];
+      
+      // Process each section
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        const wordCount = countWords(section.content);
+        const readingTime = calculateReadingTime(wordCount);
+
+        const contentSection: ContentSection = {
+          slug: generateSlug(section.title, existingSlugs),
+          title: section.title,
+          category,
+          level: section.level,
+          content: section.content,
+          tags: extractTags(section.content, section.title),
+          cross_refs: extractCrossReferences(section.content),
+          word_count: wordCount,
+          reading_time: readingTime,
+          order: globalOrder++,
+        };
+
+        // Set parent relationship for subsections - only look within current file
+        if (section.level > 1 && fileSections.length > 0) {
+          let bestParent = null;
+          
+          for (let j = fileSections.length - 1; j >= 0; j--) {
+            const candidateParent = fileSections[j];
+            if (candidateParent.level < section.level) {
+              if (candidateParent.level === section.level - 1) {
+                bestParent = candidateParent;
+                break;
+              }
+              if (!bestParent) {
+                bestParent = candidateParent;
+              }
+            }
+          }
+          
+          if (bestParent) {
+            contentSection.parent = bestParent.slug;
+          }
+        }
+
+        fileSections.push(contentSection);
+        allSections.push(contentSection);
+      }
+    }
+
+    console.log(`Generated ${allSections.length} GM content sections`);
+
+    // Write individual section files
+    for (const section of allSections) {
+      const sectionPath = path.join(GM_OUTPUT_DIR, `${section.slug}.json`);
+      await fs.writeFile(sectionPath, JSON.stringify(section, null, 2));
+    }
+
+    // Generate navigation tree
+    const navigation: NavigationItem[] = [];
+    const navigationMap = new Map<string, NavigationItem>();
+
+    for (const section of allSections) {
+      const navItem: NavigationItem = {
+        slug: section.slug,
+        title: section.title,
+        level: section.level,
+        parent: section.parent,
+        order: section.order,
+        children: [],
+      };
+
+      navigationMap.set(section.slug, navItem);
+
+      if (section.parent && navigationMap.has(section.parent)) {
+        const parent = navigationMap.get(section.parent)!;
+        if (!parent.children) parent.children = [];
+        parent.children.push(navItem);
+      } else {
+        navigation.push(navItem);
+      }
+    }
+
+    // Write navigation file
+    await fs.writeFile(
+      path.join(GM_OUTPUT_DIR, "navigation.json"),
+      JSON.stringify(navigation, null, 2)
+    );
+
+    // Write index file with all sections metadata
+    const index = allSections.map((section) => ({
+      slug: section.slug,
+      title: section.title,
+      category: section.category,
+      level: section.level,
+      parent: section.parent,
+      tags: section.tags,
+      cross_refs: section.cross_refs,
+      word_count: section.word_count,
+      reading_time: section.reading_time,
+      order: section.order,
+    }));
+
+    await fs.writeFile(
+      path.join(GM_OUTPUT_DIR, "index.json"),
+      JSON.stringify(index, null, 2)
+    );
+
+    console.log("GM content compilation completed successfully!");
+    console.log(`- ${allSections.length} GM sections compiled`);
+    console.log(`- GM navigation tree generated`);
+    console.log(`- GM index file created`);
+    console.log(`- Output written to ${GM_OUTPUT_DIR}/`);
+  } catch (error) {
+    console.error("Error during GM content compilation:", error);
+    process.exit(1);
+  }
+}
+
+async function compileContent(): Promise<void> {
+  try {
+    // Compile both player and GM content
+    await compilePlayerContent();
+    
+    // Check if GM content directory exists before compiling
+    try {
+      await fs.access(GM_SOURCE_DIR);
+      await compileGMContent();
+    } catch {
+      console.log("No GM guide directory found, skipping GM content compilation");
+    }
+    
+    console.log("\n🎉 All content compilation completed successfully!");
   } catch (error) {
     console.error("Error during content compilation:", error);
     process.exit(1);

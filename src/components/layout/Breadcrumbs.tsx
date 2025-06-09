@@ -2,21 +2,28 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Breadcrumb } from '../../types/content';
+import { useGM } from '../../context/GMContext';
 
 interface BreadcrumbsProps {
   slug: string;
 }
 
 export function Breadcrumbs({ slug }: BreadcrumbsProps) {
+  const { isGMMode } = useGM();
+  const pathname = usePathname();
   const [breadcrumbs, setBreadcrumbs] = useState<Breadcrumb[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadBreadcrumbs = async () => {
       try {
-        // Fetch breadcrumbs from API route instead of direct import
-        const response = await fetch(`/api/breadcrumbs?slug=${slug}`);
+        // Determine if we're in GM mode based on pathname or context
+        const isCurrentlyGM = pathname.startsWith('/gm/') || isGMMode;
+        const endpoint = isCurrentlyGM ? `/api/gm/breadcrumbs/${slug}` : `/api/breadcrumbs?slug=${slug}`;
+        
+        const response = await fetch(endpoint);
         if (!response.ok) throw new Error('Failed to fetch breadcrumbs');
         const crumbs = await response.json();
         setBreadcrumbs(crumbs);
@@ -28,7 +35,7 @@ export function Breadcrumbs({ slug }: BreadcrumbsProps) {
     };
 
     loadBreadcrumbs();
-  }, [slug]);
+  }, [slug, isGMMode, pathname]);
 
   if (loading) {
     return (
@@ -43,6 +50,9 @@ export function Breadcrumbs({ slug }: BreadcrumbsProps) {
   if (breadcrumbs.length === 0) {
     return null;
   }
+
+  const isCurrentlyGM = pathname.startsWith('/gm/') || isGMMode;
+  const linkPrefix = isCurrentlyGM ? '/gm' : '';
 
   return (
     <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -62,7 +72,7 @@ export function Breadcrumbs({ slug }: BreadcrumbsProps) {
             </span>
           ) : (
             <Link
-              href={`/${crumb.slug}`}
+              href={`${linkPrefix}/${crumb.slug}`}
               className="hover:text-foreground transition-colors"
             >
               {crumb.title}

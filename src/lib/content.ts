@@ -8,6 +8,7 @@ import {
 } from '../types/content';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
+const GM_CONTENT_DIR = path.join(process.cwd(), 'content', 'gm');
 const CACHE = new Map<string, unknown>();
 
 // Helper function to check if we're in development mode
@@ -318,6 +319,154 @@ export async function searchContent(query: string, limit = 10): Promise<ContentS
     return contentResults.filter((content): content is ContentSection => content !== null);
   } catch (error) {
     console.error(`Error searching content for query "${query}":`, error);
+    return [];
+  }
+}
+
+// GM Content Functions
+
+// Get GM content by slug
+export async function getGMContentBySlug(slug: string): Promise<ContentSection | null> {
+  try {
+    const filePath = path.join(GM_CONTENT_DIR, `${slug}.json`);
+    const content = await getCachedOrLoad(`gm-content:${slug}`, async () => {
+      const fileContent = await fs.readFile(filePath, 'utf-8');
+      return JSON.parse(fileContent) as ContentSection;
+    });
+    
+    return content;
+  } catch (error) {
+    console.error(`Error loading GM content for slug ${slug}:`, error);
+    return null;
+  }
+}
+
+// Get all GM content metadata
+export async function getAllGMContentMetadata(): Promise<ContentMetadata[]> {
+  try {
+    const indexPath = path.join(GM_CONTENT_DIR, 'index.json');
+    const metadata = await getCachedOrLoad('gm-metadata:all', async () => {
+      const fileContent = await fs.readFile(indexPath, 'utf-8');
+      return JSON.parse(fileContent) as ContentMetadata[];
+    });
+    
+    return metadata.sort((a, b) => a.order - b.order);
+  } catch (error) {
+    console.error('Error loading GM content metadata:', error);
+    return [];
+  }
+}
+
+// Get GM navigation tree
+export async function getGMNavigationTree(): Promise<NavigationNode[]> {
+  try {
+    const navPath = path.join(GM_CONTENT_DIR, 'navigation.json');
+    const navigation = await getCachedOrLoad('gm-navigation:tree', async () => {
+      const fileContent = await fs.readFile(navPath, 'utf-8');
+      return JSON.parse(fileContent) as NavigationNode[];
+    });
+    
+    return navigation;
+  } catch (error) {
+    console.error('Error loading GM navigation tree:', error);
+    return [];
+  }
+}
+
+// Get GM breadcrumbs
+export async function getGMBreadcrumbs(slug: string): Promise<Breadcrumb[]> {
+  try {
+    const content = await getGMContentBySlug(slug);
+    if (!content) return [];
+
+    const breadcrumbs: Breadcrumb[] = [];
+    const allMetadata = await getAllGMContentMetadata();
+    const metadataMap = new Map(allMetadata.map(item => [item.slug, item]));
+
+    // Build breadcrumb trail by walking up parent chain
+    let current: ContentMetadata | undefined = metadataMap.get(slug);
+    while (current) {
+      breadcrumbs.unshift({
+        slug: current.slug,
+        title: current.title,
+        level: current.level
+      });
+
+      if (current.parent) {
+        current = metadataMap.get(current.parent);
+      } else {
+        break;
+      }
+    }
+
+    return breadcrumbs;
+  } catch (error) {
+    console.error(`Error getting GM breadcrumbs for ${slug}:`, error);
+    return [];
+  }
+}
+
+// Get GM adjacent content
+export async function getGMAdjacentContent(slug: string): Promise<{
+  previous: ContentMetadata | null;
+  next: ContentMetadata | null;
+}> {
+  try {
+    const allMetadata = await getAllGMContentMetadata();
+    const currentIndex = allMetadata.findIndex(item => item.slug === slug);
+
+    if (currentIndex === -1) {
+      return { previous: null, next: null };
+    }
+
+    return {
+      previous: currentIndex > 0 ? allMetadata[currentIndex - 1] : null,
+      next: currentIndex < allMetadata.length - 1 ? allMetadata[currentIndex + 1] : null
+    };
+  } catch (error) {
+    console.error(`Error getting GM adjacent content for ${slug}:`, error);
+    return { previous: null, next: null };
+  }
+}
+
+// Get GM child content
+export async function getGMChildContent(parentSlug: string): Promise<ContentSection[]> {
+  try {
+    const allMetadata = await getAllGMContentMetadata();
+    const allContent = new Map<string, ContentSection>();
+    
+    // Load all content sections first
+    const contentPromises = allMetadata.map(async (item) => {
+      const content = await getGMContentBySlug(item.slug);
+      if (content) {
+        allContent.set(item.slug, content);
+      }
+    });
+    await Promise.all(contentPromises);
+
+    // Helper function to recursively build children structure
+    const buildChildrenTree = (slug: string): ContentSection[] => {
+      const directChildren = allMetadata
+        .filter(item => item.parent === slug)
+        .sort((a, b) => a.order - b.order);
+
+      return directChildren.map(child => {
+        const content = allContent.get(child.slug);
+        if (!content) return null;
+
+        // Recursively get children of this child
+        const grandchildren = buildChildrenTree(child.slug);
+        
+        return {
+          ...content,
+          children: grandchildren.length > 0 ? grandchildren : undefined
+        } as ContentSection;
+      }).filter((content): content is ContentSection => content !== null);
+    };
+
+    return buildChildrenTree(parentSlug);
+  } catch (error) {
+    console.error(`Error loading GM child content for ${parentSlug}:`, error);
     return [];
   }
 }

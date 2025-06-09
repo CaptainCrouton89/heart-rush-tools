@@ -210,7 +210,7 @@ The party must reach the Storm Crown ruins before the cult completes their ritua
 - Segment 4: The ruins approach (CN 15)
 
 **Play Example:**
-Segment 1 passes in narration. For Segment 2, the ranger rolls Heart (d8) + Cunning (d8) with advantage from the druid's help. Rolling 1, 7, and 6, they keep the 13—success despite the complication.
+Segment 1 passes in narration. For Segment 2, the party navigator rolls Heart (d8) + Cunning (d8). Rolling 1, 6, they choose to take the complication, rerolling the 1 for a 5. They succeed with their new roll, and take a complication.
 
 The GM describes a successful if tense journey through the forest, but the 1 triggers a complication: wildfire spreading from the west. The party must choose: race through on the known path (risking the flames) or detour through giant spider territory.
 
@@ -236,7 +236,7 @@ The journey system creates a framework for travel drama without simulation. Focu
 
 Journeys are opportunities for adventure, not just transitions between locations.
 
-**Prepare appropriately:** Equipment matters. A tent and bedroll can mean the difference between recovering from wounds and accumulating more.
+**Prepare appropriately:** Equipment matters. A tent and bedroll can mean the difference between recovering from wounds waking up tired and unhealed.
 
 **Consider guides:** Local knowledge grants advantage and might reveal better routes.
 

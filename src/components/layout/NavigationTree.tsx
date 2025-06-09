@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useGM } from "../../context/GMContext";
 import { NavigationNode } from "../../types/content";
 
 interface NavigationTreeProps {
@@ -28,6 +29,7 @@ function NavigationItem({
   isOpen,
   onToggle,
 }: NavigationItemProps) {
+  const { isGMMode } = useGM();
   const hasChildren = node.children && node.children.length > 0;
   const indent = level * 32; // Much larger indentation for clear hierarchy
 
@@ -46,7 +48,7 @@ function NavigationItem({
   return (
     <div>
       <Link
-        href={`/${node.slug}`}
+        href={isGMMode ? `/gm/${node.slug}` : `/${node.slug}`}
         onClick={handleItemClick}
         className={`
           flex items-center py-2 px-2 rounded-md text-sm block transition-all duration-200
@@ -127,6 +129,7 @@ export function NavigationTree({
   level = 0,
 }: NavigationTreeProps) {
   const pathname = usePathname();
+  const { isGMMode } = useGM();
   const [openNodes, setOpenNodes] = useState<Set<string>>(new Set());
 
   const toggleNode = (slug: string) => {
@@ -144,7 +147,8 @@ export function NavigationTree({
   // Auto-open nodes in active path
   useEffect(() => {
     const isInActivePath = (node: NavigationNode): boolean => {
-      if (pathname === `/${node.slug}`) return true;
+      const expectedPath = isGMMode ? `/gm/${node.slug}` : `/${node.slug}`;
+      if (pathname === expectedPath) return true;
       if (node.children) {
         return node.children.some((child) => isInActivePath(child));
       }
@@ -168,7 +172,7 @@ export function NavigationTree({
 
     const activePath = findActivePath(nodes);
     setOpenNodes((prev) => new Set([...prev, ...activePath]));
-  }, [pathname, nodes]);
+  }, [pathname, nodes, isGMMode]);
 
   return (
     <div className="space-y-1">
@@ -178,7 +182,9 @@ export function NavigationTree({
           node={node}
           onNavigate={onNavigate}
           level={level}
-          isActive={pathname === `/${node.slug}`}
+          isActive={
+            pathname === (isGMMode ? `/gm/${node.slug}` : `/${node.slug}`)
+          }
           isOpen={openNodes.has(node.slug)}
           onToggle={() => toggleNode(node.slug)}
         />

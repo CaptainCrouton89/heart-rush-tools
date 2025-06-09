@@ -7,6 +7,7 @@ import { SearchInput } from '../search/SearchInput';
 import { SearchResults } from '../search/SearchResults';
 import { ThemeToggle } from './ThemeToggle';
 import { NavigationNode, SearchResult } from '../../types/content';
+import { useGM } from '../../context/GMContext';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -14,6 +15,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen, onToggle }: SidebarProps) {
+  const { isGMMode, setGMMode } = useGM();
   const [navigation, setNavigation] = useState<NavigationNode[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
@@ -23,20 +25,22 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   useEffect(() => {
     const loadNavigation = async () => {
       try {
-        // Fetch navigation from API route instead of direct import
-        const response = await fetch('/api/navigation');
+        // Fetch navigation from API route (GM or regular)
+        const endpoint = isGMMode ? '/api/gm/navigation' : '/api/navigation';
+        const response = await fetch(endpoint);
         if (!response.ok) throw new Error('Failed to fetch navigation');
         const nav = await response.json();
         setNavigation(nav);
       } catch (error) {
         console.error('Failed to load navigation:', error);
+        setNavigation([]); // Fallback to empty array
       } finally {
         setLoading(false);
       }
     };
 
     loadNavigation();
-  }, []);
+  }, [isGMMode]);
 
   const handleSearchResults = (results: SearchResult[]) => {
     setSearchResults(results);
@@ -132,6 +136,29 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
 
         {/* Footer */}
         <div className="p-4 border-t border-border bg-gradient-to-r from-accent/5 to-primary/5">
+          {/* GM Mode Toggle */}
+          <div className="flex items-center justify-center mb-3">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <span className="text-xs text-muted-foreground">Player</span>
+              <div className="relative">
+                <input
+                  type="checkbox"
+                  checked={isGMMode}
+                  onChange={(e) => setGMMode(e.target.checked)}
+                  className="sr-only"
+                />
+                <div className={`w-10 h-5 rounded-full transition-colors ${
+                  isGMMode ? 'bg-primary' : 'bg-muted'
+                }`}>
+                  <div className={`w-4 h-4 rounded-full bg-white transition-transform ${
+                    isGMMode ? 'translate-x-5' : 'translate-x-0.5'
+                  } translate-y-0.5`} />
+                </div>
+              </div>
+              <span className="text-xs text-muted-foreground">GM</span>
+            </label>
+          </div>
+          
           <p className="text-xs text-muted-foreground text-center">
             Heart Rush TTRPG Reference
           </p>
