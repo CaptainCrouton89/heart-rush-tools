@@ -112,7 +112,7 @@ Elderly characters have accumulated significant life experience, though their bo
 
 Consider how your character's age intersects with their profession ranks:
 
-- A young character with 3 ranks might be talented in one field or dabbling in several
+- A young character with 2 ranks might be talented in one field or dabbling in several
 - An adult with 4 ranks has had time to establish themselves professionally
 - An elderly character's 5 ranks represent a lifetime of accumulated expertise
 
