@@ -369,7 +369,7 @@ You can most easily recognize an ability because of the format it has in this bo
 _Ability tags._  
 Rules text describing what the ability lets you do.
 
-All abilities listed in this rulebook have their name, followed by tags, and then followed by their rules.
+All abilities listed in this rulebook have their name, followed by tags (in italics), and then followed by their rules.
 
 For the most part, abilities can be used whenever you want. However, some have restrictions, usually listed in their tags, or if it's very specific, in the ability rules itself.
 
@@ -402,7 +402,7 @@ However, during combat, timing matters. Every non-passive ability must have one 
 - **Quick**: If an ability is marked as quick, it means you can use the ability during any ally's turn (including your own). You cannot use it during enemy turns or during engagements.
 - **Instant**: If an ability is marked as instant, it means that the ability can be used literally any time, even when you don't have your turn. This includes interrupting other actions as they're happening and during engagements.
 
-Passive abilities are always on, so do not have a dedicated timing tag.
+Passive abilities do not have timing tags since they are always active.
 
 **Understanding Timing Tags**
 
@@ -456,16 +456,6 @@ When multiple people want to use instant abilities simultaneously, resolve them 
 - This continues until all instant abilities are resolved
 
 You must declare the way in which you are using your ability when you announce that you are using an ability.
-
-### Action Tag
-
-During each round of combat, you only have one action.
-
-By default, abilities don't use your action unless they have the full action tag.
-
-- **Full action**: If an ability is marked as full action, it means that the ability uses your action. If you don't have an action left during this round, you cannot use the ability.
-
-**Special Case:** Some abilities are marked as both "Full action" and "Instant". These abilities still use your one action per round, but can be performed at any time (not just on your turn). For example, making an opportunity attack uses your action but can be done instantly when triggered.
 
 ## Environmental Rules
 
