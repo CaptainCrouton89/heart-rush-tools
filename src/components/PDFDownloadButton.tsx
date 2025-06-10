@@ -97,8 +97,7 @@ export function PDFDownloadButton() {
       pdf.rect(cellX, currentY, colWidth, rowHeight, "S");
 
       // Draw text
-      const headerText = Array.isArray(textLines[0]) ? textLines[0].join(' ') : (textLines[0] || "");
-      pdf.text(headerText, cellX + 1, currentY + 6);
+      pdf.text(textLines[0] || "", cellX + 1, currentY + 6);
     }
 
     currentY += rowHeight;
@@ -122,8 +121,7 @@ export function PDFDownloadButton() {
           const cellX = startX + i * colWidth;
           const textLines = pdf.splitTextToSize(headers[i], colWidth - 2);
           pdf.rect(cellX, currentY, colWidth, rowHeight, "S");
-          const headerText = Array.isArray(textLines[0]) ? textLines[0].join(' ') : (textLines[0] || "");
-          pdf.text(headerText, cellX + 1, currentY + 6);
+          pdf.text(textLines[0] || "", cellX + 1, currentY + 6);
         }
 
         currentY += rowHeight;
@@ -141,8 +139,7 @@ export function PDFDownloadButton() {
         pdf.rect(cellX, currentY, colWidth, rowHeight, "S");
 
         // Draw text (only first line if too long)
-        const cellTextLine = Array.isArray(textLines[0]) ? textLines[0].join(' ') : (textLines[0] || "");
-        pdf.text(cellTextLine, cellX + 1, currentY + 6);
+        pdf.text(textLines[0] || "", cellX + 1, currentY + 6);
       }
 
       currentY += rowHeight;
@@ -228,7 +225,7 @@ export function PDFDownloadButton() {
         let cleanText = part.content
           .replace(/#{1,6}\s*(.+)/g, "$1") // Convert headers to plain text
           .replace(/\*\*(.*?)\*\*/g, "$1") // Remove bold markdown
-          .replace(/\*([^*]+)\*/g, "$1") // Remove italic markdown
+          .replace(/[*_]([^*_]+)[*_]/g, "$1") // Remove italic markdown
           .replace(/`([^`]+)`/g, "$1") // Remove inline code formatting
           .replace(/```[^`]*```/g, "[Code Block]") // Replace code blocks
           .replace(/\[(.*?)\]\([^)]*\)/g, "$1") // Convert links to text only
@@ -253,9 +250,7 @@ export function PDFDownloadButton() {
               yPosition = margin;
             }
 
-            // Ensure we're passing a string, not an array
-            const lineText = Array.isArray(textLines[i]) ? textLines[i].join(' ') : textLines[i];
-            pdf.text(lineText, xPosition, yPosition);
+            pdf.text(textLines[i], xPosition, yPosition);
             yPosition += 4;
           }
 
@@ -321,8 +316,7 @@ export function PDFDownloadButton() {
       
       // Render title lines properly
       for (let i = 0; i < titleLines.length; i++) {
-        const titleText = Array.isArray(titleLines[i]) ? titleLines[i].join(' ') : titleLines[i];
-        pdf.text(titleText, margin, yPosition + (i * 12));
+        pdf.text(titleLines[i], margin, yPosition + (i * 12));
       }
       yPosition += titleLines.length * 12 + 20;
 
@@ -356,8 +350,7 @@ export function PDFDownloadButton() {
         
         // Render category lines properly
         for (let i = 0; i < categoryLines.length; i++) {
-          const categoryText = Array.isArray(categoryLines[i]) ? categoryLines[i].join(' ') : categoryLines[i];
-          pdf.text(categoryText, margin, yPosition + (i * 8));
+          pdf.text(categoryLines[i], margin, yPosition + (i * 8));
         }
         yPosition += categoryLines.length * 8 + 10;
 
@@ -385,8 +378,7 @@ export function PDFDownloadButton() {
           
           // Render section title lines properly
           for (let i = 0; i < sectionTitleLines.length; i++) {
-            const sectionText = Array.isArray(sectionTitleLines[i]) ? sectionTitleLines[i].join(' ') : sectionTitleLines[i];
-            pdf.text(sectionText, margin + indent, yPosition + (i * (titleFontSize * 0.35)));
+            pdf.text(sectionTitleLines[i], margin + indent, yPosition + (i * (titleFontSize * 0.35)));
           }
           yPosition += sectionTitleLines.length * (titleFontSize * 0.35) + 6;
 
