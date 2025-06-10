@@ -161,15 +161,6 @@ When you dash, you may instead teleport to an unoccupied space that you can see 
 **Destiny Level:**
 So long as you are holding on to someone, they may come with you if they are willing. You can bring up to two creatures besides yourself when using this ability.
 
-### Bloodblade
-
-_Passive ability. Handmagic._
-
-Whenever you make an attack roll, you may first choose to lose 4 hit points. If you do, add 1d8 to your roll.
-
-**Destiny Level:**
-You may lose 6 hit points and add 1d12 instead.
-
 ### Blood Bond
 
 _Passive ability. Handmagic._
@@ -182,6 +173,15 @@ You may be bonded to a number of creatures equal to your presence die.
 
 **Destiny Level:**
 The mystical connection transcends all distance - you may transfer hit points to bonded creatures anywhere in existence. The daily limit increases to 100 hit points. Additionally, when transferring hit points, you may choose to also transfer one condition affecting you to the recipient or vice versa (with their permission).
+
+### Bloodblade
+
+_Passive ability. Handmagic._
+
+Whenever you make an attack roll, you may first choose to lose 4 hit points. If you do, add 1d8 to your roll.
+
+**Destiny Level:**
+You may lose 6 hit points and add 1d12 instead.
 
 ### Bloodknight
 
@@ -1013,14 +1013,6 @@ As an action, you may point at a non-living, unoccupied object or space within 3
 **Destiny Level:**  
 The sticking force increases to 200 pounds. Freeing oneself from the slime requires a CN 12 might check.
 
-### Animate Object
-
-_Heart ability. Full action. Handmagic._  
-As an action, you may point at an inanimate object within 30 feet that could fit in a 5-foot cube. The object obeys your commands to the best of its ability, and gains a move speed of 15 feet. This effect lasts for as long as you remain pointing at it. You cannot animate more than one object using this ability.
-
-**Destiny Level:**  
-You may manipulate up to three objects at once with this ability. You do not have to point at them to animate them, but they must remain within 30 feet. The objects must fit in a 10-foot cube.
-
 ### Ancient Visions
 
 _Weekly ability. Handmagic._  
@@ -1033,6 +1025,14 @@ You may touch an object to see its past. Choose one:
 **Destiny Level:**  
 In addition, you may ask the object any question about its past. The object will answer the question truthfully.
 
+### Animate Object
+
+_Heart ability. Full action. Handmagic._  
+As an action, you may point at an inanimate object within 30 feet that could fit in a 5-foot cube. The object obeys your commands to the best of its ability, and gains a move speed of 15 feet. This effect lasts for as long as you remain pointing at it. You cannot animate more than one object using this ability.
+
+**Destiny Level:**  
+You may manipulate up to three objects at once with this ability. You do not have to point at them to animate them, but they must remain within 30 feet. The objects must fit in a 10-foot cube.
+
 ### Anthropomorphize
 
 _Heart ability. Handmagic._  
@@ -1044,14 +1044,6 @@ As an action, you may lay your hand on a non-hostile animal. The following effec
 
 **Destiny Level:**  
 You may choose all three effects, and you only have to be within 40 feet of the target to use this ability.
-
-### Attraction
-
-_Heart ability. Cognitive talent. Elemental attunement: Force._  
-Choose any two inanimate objects. Those objects attract each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
-
-**Destiny Level:**  
-You may choose up to five objects, and the attractive force begins at 100 feet away. If you use this ability on the same objects every day for a month, the effect becomes permanent.
 
 ### Assembly Not Required
 
@@ -1069,6 +1061,14 @@ So long as you can see the stars, you may ignore the navigation challenge number
 **Destiny Level:**  
 You have advantage on navigation checks. You can identify your location from a successful navigation check.
 
+### Attraction
+
+_Heart ability. Cognitive talent. Elemental attunement: Force._  
+Choose any two inanimate objects. Those objects attract each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
+
+**Destiny Level:**  
+You may choose up to five objects, and the attractive force begins at 100 feet away. If you use this ability on the same objects every day for a month, the effect becomes permanent.
+
 ### Batch Producer
 
 _Passive ability. Cognitive talent._
@@ -1077,14 +1077,6 @@ When crafting alchemical items that normally produce multiple doses/items per ba
 
 **Destiny Level:**
 Batch sizes are doubled instead. The chance for extra unique consumables increases to 50%. Additionally, when making items in batches, if you succeed on all crafting checks without any failures, one item in the batch is of exceptional quality (minor beneficial property determined by GM).
-
-### Befuddle
-
-_Heart ability. Handmagic._  
-As an action, you may point at a sentient creature. That creature forms no new memories for the next ten minutes, though it is aware that you performed mind-altering magic on it.
-
-**Destiny Level:**  
-The target does not realize that you performed mind-altering magic on it.
 
 ### Beastform
 
@@ -1096,13 +1088,29 @@ You automatically revert to your natural form after one hour, or as an action an
 **Destiny Level:**  
 This becomes a passive ability. You may stay in your transformed state for any amount of time. The creature you transform into may be tiny, and may have a swim speed. The creature can have 2d8s, or a d4 and d10 for its might and agility dice.
 
-### Deoric Linguist
+### Befuddle
 
-_Passive ability. Cognitive talent._  
-You have A2 on checks to learn Deoric domains, cast Deoric spells, and interact with the Deoric language in any way.
+_Heart ability. Handmagic._  
+As an action, you may point at a sentient creature. That creature forms no new memories for the next ten minutes, though it is aware that you performed mind-altering magic on it.
 
 **Destiny Level:**  
-You may use books that include spells consisting of domains of any level that is higher than your existing rank in order to learn those domains.
+The target does not realize that you performed mind-altering magic on it.
+
+### Call of Delorn
+
+_Monthly ability. Gaeic melody._  
+You play a song, making a plea to the wilds for their help. After playing your instrument for an hour, a friendly, non-humanoid animal comes to your aid. The animal is not your servant, but will do its best to help you in any way that does not put itself in danger. You may communicate with it through your song, though the animal cannot communicate back. The animal remains in your aid for the rest of the day.
+
+**Destiny Level:**  
+You may choose for a sentient creature, including other humanoids, to answer your call instead. They feel a strong compulsion to help you for reasons they cannot identify, so long as you do not drive them away with your words or actions.
+
+### Cast Thoughts
+
+_Passive ability. Handmagic._  
+By pointing your index finger at a person, you can project your voice into their mind. They hear the words as if spoken in your voice. They know the voice is not being spoken aloud.
+
+**Destiny Level:**  
+You may make the words come out in any voice you've heard before, and you do not have to point. They may communicate back in the same way if you choose to allow them.
 
 ### Cat's Feet
 
@@ -1121,22 +1129,6 @@ You gain the following additional abilities:
 - So long as you are not restrained, you may immediately stand up if you are knocked prone as an instant, free action that doesn't trigger opportunity attacks.
 - You have A3 on agility defense rolls instead of A1.
 - You have A2 rather than A1 on skill checks to be stealthy.
-
-### Call of Delorn
-
-_Monthly ability. Gaeic melody._  
-You play a song, making a plea to the wilds for their help. After playing your instrument for an hour, a friendly, non-humanoid animal comes to your aid. The animal is not your servant, but will do its best to help you in any way that does not put itself in danger. You may communicate with it through your song, though the animal cannot communicate back. The animal remains in your aid for the rest of the day.
-
-**Destiny Level:**  
-You may choose for a sentient creature, including other humanoids, to answer your call instead. They feel a strong compulsion to help you for reasons they cannot identify, so long as you do not drive them away with your words or actions.
-
-### Cast Thoughts
-
-_Passive ability. Handmagic._  
-By pointing your index finger at a person, you can project your voice into their mind. They hear the words as if spoken in your voice. They know the voice is not being spoken aloud.
-
-**Destiny Level:**  
-You may make the words come out in any voice you've heard before, and you do not have to point. They may communicate back in the same way if you choose to allow them.
 
 ### Chaos Gambler
 
@@ -1200,6 +1192,14 @@ The effect lasts for 10 minutes.
 
 **Destiny Level:**  
 The range extends up to 120 feet, and lasts for one hour.
+
+### Deoric Linguist
+
+_Passive ability. Cognitive talent._  
+You have A2 on checks to learn Deoric domains, cast Deoric spells, and interact with the Deoric language in any way.
+
+**Destiny Level:**  
+You may use books that include spells consisting of domains of any level that is higher than your existing rank in order to learn those domains.
 
 ### Divine Consult
 
@@ -1417,6 +1417,14 @@ Add fog to your resonate substances as a gaseous attunement. Your attunement to 
 **Destiny Level:**  
 The fog you create is incredibly thick, and hangs heavy in the air. It takes 1 hour to dissipate instead of 1 minute, and mutes the sounds within it, granting A3 on all stealth checks to remain quiet while navigating within the fog.
 
+### Inanimate Object
+
+_Major ability. Full action. Handmagic._  
+As an action, you may transform into any generic object that would fit in a space somewhere between a 1 inch cube and a 10 foot cube. You remain sentient but cannot move. You can sense your surroundings in a 5 foot radius. The transformation lasts for one hour, or until you spend your action to transform back into your natural form.
+
+**Destiny Level:**  
+There is no limit to the duration you can remain transformed.
+
 ### Inspiring Presence
 
 _Passive ability. Cognitive talent._
@@ -1427,14 +1435,6 @@ Additionally, when you help someone who is already being helped by another creat
 
 **Destiny Level:**
 You can help multiple creatures with a single action. When you take the help action, choose any number of creatures within 30 feet that can see and hear you. All chosen creatures gain the benefits of your help for their next applicable roll.
-
-### Inanimate Object
-
-_Major ability. Full action. Handmagic._  
-As an action, you may transform into any generic object that would fit in a space somewhere between a 1 inch cube and a 10 foot cube. You remain sentient but cannot move. You can sense your surroundings in a 5 foot radius. The transformation lasts for one hour, or until you spend your action to transform back into your natural form.
-
-**Destiny Level:**  
-There is no limit to the duration you can remain transformed.
 
 ### Keen Eye
 
@@ -1630,6 +1630,14 @@ After playing your instrument for a minute or more, all creatures within 60 feet
 **Destiny Level:**  
 The range of your song increases to 120 feet. In addition, you may choose to exclude individuals from the collection of creatures you enthrall.
 
+### Smell Something Fishy
+
+_Heart ability. Cognitive talent._  
+When investigating the location of a mystery or crime, you may ask the GM if there are any undiscovered clues related to a question of your choice about whatever event occurred in your location. The GM must answer truthfully.
+
+**Destiny Level:**  
+When investigating a mystery or crime, or when interrogating a suspect, you may posit a hypothesis about what happened to the GM. Then, the GM rolls a d4 in secret. On a 2, 3, or 4, the GM must nod their head if you are right, and shake their head if you are wrong. On a 1, the GM must do the opposite.
+
 ### Smooth Talker
 
 _Passive ability. Cognitive talent._  
@@ -1637,14 +1645,6 @@ Whenever you speak, your words come out like smooth butter. You have A2 on prese
 
 **Destiny Level:**  
 When you gain this destiny level, choose persuasion, intimidation, or deception. Whenever you make a skill check in that category, before you roll, you may choose to instead use the maximum result of your presence die rather than rolling.
-
-### Song of Rage
-
-_Weekly ability. Gaeic melody._  
-After playing your instrument for a minute or more, you may choose a creature within 60 feet and in earshot. It feels an inexplicable dislike towards a creature of your choice. If they were close, they become neutral. If they were friendly, they become unfriendly. If they were neutral or unfriendly, they become hostile, and potentially violent. This effect lasts for the rest of the day.
-
-**Destiny Level:**  
-That creature gains three levels of enraged towards that creature until the end of the day.
 
 ### Song of Desire
 
@@ -1654,6 +1654,14 @@ After playing your instrument for a minute or more, you may choose a creature wi
 **Destiny Level:**  
 That creature gains three levels of charmed towards that creature until the end of the day.
 
+### Song of Rage
+
+_Weekly ability. Gaeic melody._  
+After playing your instrument for a minute or more, you may choose a creature within 60 feet and in earshot. It feels an inexplicable dislike towards a creature of your choice. If they were close, they become neutral. If they were friendly, they become unfriendly. If they were neutral or unfriendly, they become hostile, and potentially violent. This effect lasts for the rest of the day.
+
+**Destiny Level:**  
+That creature gains three levels of enraged towards that creature until the end of the day.
+
 ### Song of Rest
 
 _Monthly ability. Gaeic melody._  
@@ -1661,22 +1669,6 @@ After playing your instrument for an hour or more, creatures that can hear you g
 
 **Destiny Level:**  
 Those creatures gain the benefit of two long rests, instead.
-
-### The Spider
-
-_Passive ability. Cognitive talent._  
-You have a network of spies and informants at your fingertips. Once per day while within a city within the range of your influence, you may meet with your informants to learn what is going on around town. You may ask two unique questions of the GM. If you meet with them again after a day or more, your spies return with answers. The GM answers one of your questions truthfully, and either gives false information about the other, or else doesn't answer it at all. Any information that fewer than 25 people know about cannot be answered by your spy network.
-
-**Destiny Level:**  
-You may ask up to three questions, and may ask questions with answers that are known by no fewer than five people. The GM must truthfully answer two of the three questions.
-
-### Smell Something Fishy
-
-_Heart ability. Cognitive talent._  
-When investigating the location of a mystery or crime, you may ask the GM if there are any undiscovered clues related to a question of your choice about whatever event occurred in your location. The GM must answer truthfully.
-
-**Destiny Level:**  
-When investigating a mystery or crime, or when interrogating a suspect, you may posit a hypothesis about what happened to the GM. Then, the GM rolls a d4 in secret. On a 2, 3, or 4, the GM must nod their head if you are right, and shake their head if you are wrong. On a 1, the GM must do the opposite.
 
 ### Stargazer
 
@@ -1686,6 +1678,14 @@ The GM will do their best to answer your question.
 
 **Destiny Level:**  
 You may instead use this ability to ask an open-ended question with a one-word answer. Roll 1d10. On a 8, 9, or 10, the GM must answer truthfully with one word.
+
+### The Spider
+
+_Passive ability. Cognitive talent._  
+You have a network of spies and informants at your fingertips. Once per day while within a city within the range of your influence, you may meet with your informants to learn what is going on around town. You may ask two unique questions of the GM. If you meet with them again after a day or more, your spies return with answers. The GM answers one of your questions truthfully, and either gives false information about the other, or else doesn't answer it at all. Any information that fewer than 25 people know about cannot be answered by your spy network.
+
+**Destiny Level:**  
+You may ask up to three questions, and may ask questions with answers that are known by no fewer than five people. The GM must truthfully answer two of the three questions.
 
 ### Two-faced
 
