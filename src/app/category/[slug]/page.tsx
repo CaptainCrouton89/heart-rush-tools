@@ -3,9 +3,9 @@ import { getNavigationTree } from "../../../lib/content";
 import { CategorizedNavigationNode } from "../../../types/content";
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Generate category slug from name
@@ -43,8 +43,9 @@ function getMainSections(
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { slug } = await params;
   const navigation = await getNavigationTree();
-  const category = findCategoryBySlug(navigation, params.slug);
+  const category = findCategoryBySlug(navigation, slug);
 
   if (!category) {
     return (
