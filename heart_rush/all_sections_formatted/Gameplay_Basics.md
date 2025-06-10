@@ -17,12 +17,12 @@ Whenever you attempt to do something that has a realistic chance of failure, the
 #### Basic Procedure
 
 1. **Roll your dice**: Roll your heart die and one ability die (might, agility, cunning, or presence) that corresponds to the activity
-2. **Add modifiers**: Add any bonuses from skills, aspects, or other sources
+2. **Add modifiers**: Add any bonuses from professions, aspects, or other sources
 3. **Compare to CN**: If your total equals or exceeds the Challenge Number (CN), you succeed
 
-#### Adding Skill Ranks
+#### Adding Profession Ranks
 
-If you have a skill that directly applies to the check, add your full skill rank to the roll. For tangentially related applications, add half your rank (rounded down). Only one skill may apply to any given check.
+If you have a profession that directly applies to the check, add your full profession rank to the roll. For tangentially related applications, add half your rank (rounded down). Only one profession may apply to any given check.
 
 #### Using Aspects for Bonuses
 
@@ -40,16 +40,14 @@ If an aspect would complicate a situation or indicate weakness, you may choose t
 
 The GM should use the following chart to set the challenge number:
 
-| CN  | Difficulty        | Skill level | Success Chance (percent) |
-| --- | ----------------- | ----------- | ------------------------ |
-| 6   | Fairly Easy       | 79%         | 95% / 100%               |
-| 9   | Average           | 44%         | 77% / 93%                |
-| 12  | Hard              | 13%         | 44% / 74%                |
-| 15  | Very Hard         | –           | 16% / 45%                |
-| 18  | Nearly Impossible | –           | 2% / 19%                 |
-| 21  | Heroic            | –           | –                        |
-
-The percentages in the cells correspond to the chance of success for a typical human at full heart with low (d8+d6), high (d8+d8+2), and very high (d8+d10+4) skill level. Note that players can eventually reach up to d12+d20+10, and that this chart does not account for complications.
+| CN  | Difficulty        |
+| --- | ----------------- |
+| 6   | Fairly Easy       |
+| 9   | Average           |
+| 12  | Hard              |
+| 15  | Very Hard         |
+| 18  | Nearly Impossible |
+| 21  | Heroic            |
 
 ### Complications
 
@@ -111,7 +109,7 @@ When undertaking complex endeavors that involve multiple coordinated actions ove
 
 **Basic Mechanics:**
 
-- Roll d8 + ability die + skill + aspect (if applicable)
+- Roll d8 + ability die + profession + aspect (if applicable)
 - Uses a flat d8 instead of heart die (unaffected by stamina)
 - Cannot be helped or use other skill check modifiers
 - Compare against standard CNs (9/12/15/18)
@@ -174,13 +172,13 @@ When you make the roll, you would roll with 2 levels of advantage—1d8 and 3d6.
 
 Let's say you get a 3, 6, 5, and 1, respectively. The final result would be 11 (6 + 5).
 
-### Skills
+### Professions
 
-When you have training in a relevant skill:
+When you have training in a relevant profession:
 
-- **Direct application**: Add your full skill rank to the roll
-- **Tangential application**: Add half your skill rank (rounded down)
-- Only one skill may apply to any given check
+- **Direct application**: Add your full profession rank to the roll
+- **Tangential application**: Add half your profession rank (rounded down)
+- Only one profession may apply to any given check
 
 ### Aspects
 

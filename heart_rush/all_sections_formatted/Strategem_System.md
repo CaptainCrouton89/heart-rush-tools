@@ -26,11 +26,11 @@ Stratagems are Heart Rush's "zoom out" mechanic—when you need to resolve compl
 
 When you pursue a stratagem objective, roll:
 
-**d8 + ability die + skill + aspect (if applicable) vs CN**
+**d8 + ability die + profession + aspect (if applicable) vs CN**
 
-Unlike normal skill checks, stratagems use a flat d8 instead of your heart die—your stamina doesn't affect large-scale coordinated efforts. The d8 represents the baseline uncertainty in complex endeavors, while your ability die, skills, and aspects reflect your personal capability and expertise. This creates a similar range to skill checks (typically 3-20+) but with less variance from stamina.
+Unlike normal skill checks, stratagems use a flat d8 instead of your heart die—your stamina doesn't affect large-scale coordinated efforts. The d8 represents the baseline uncertainty in complex endeavors, while your ability die, profession, and aspects reflect your personal capability and expertise.
 
-**Important**: Stratagem rolls cannot be helped by others and don't use other skill check modifiers. The coordination is already baked into the stratagem itself.
+**Important**: Stratagem rolls cannot be helped by others. The coordination is already baked into the stratagem itself.
 
 ### Challenge Numbers
 
@@ -118,7 +118,7 @@ The character spearheading the effort rolls:
 
 - **d8**: Your baseline (not affected by wounds or fatigue)
 - **Ability die**: Choose the most relevant ability (might, agility, cunning, or presence)
-- **Skill**: Add your skill rank if directly applicable, half rank if tangential
+- **Profession**: Add your profession rank if directly applicable, half rank if tangential
 - **Aspect**: Spend DP to add bonus if an aspect applies (as normal)
 
 For distant management, this might be you rolling for your organization's efforts.
@@ -268,7 +268,7 @@ Stratagems aren't just dice rolls—direct intervention can swing impossible odd
 
 ### Action Sequence
 
-**Situation → Approach → Stakes (CN) → Intervention? → Roll (d8 + ability + skill + aspect) → Resolution**
+**Situation → Approach → Stakes (CN) → Intervention? → Roll (d8 + ability + profession + aspect) → Resolution**
 
 ### Accumulation Guidelines
 

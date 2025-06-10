@@ -16,7 +16,7 @@ These are the core-most stats of your character. They represent the raw capabili
 
 ### Experience
 
-When the game begins, you will start with some experience (XP). During the game and between sessions, you may spend XP to gain new skills, abilities, and more. See the Spending Experience section to learn more. After making your character, you may begin spending your XP.
+When the game begins, you will start with some experience (XP). During the game and between sessions, you may spend XP to upgrade your vitals, gain new abilities, and more. See the Spending Experience section to learn more. After making your character, you may begin spending your XP.
 
 ### Ability Dice
 
@@ -84,7 +84,7 @@ Three age categories exist—young, adult, and elderly—each with their own tra
 
 Young characters are full of potential but lack the experience of their elders. Their enthusiasm and vigor make up for what they lack in training. What qualifies as "young" varies by culture and species—for humans this might be late teens to mid-twenties, but adapt as appropriate for your character concept.
 
-- **Skill Ranks**: Start with 3 ranks to distribute among your skills (instead of the usual 4)
+- **Profession Ranks**: Start with 3 ranks to distribute among your professions (instead of the usual 4)
 - **Natural Talent**: Increase your lowest ability die by one size (after initial assignment)
 - **Starting Aspect**: Gain "Eager to Prove Myself" at rank 1
 
@@ -92,14 +92,14 @@ Young characters are full of potential but lack the experience of their elders. 
 
 Adults have found their place in the world and accumulated valuable experience from their chosen path. This represents the prime years of most characters' lives, when they've established themselves but still have their full vigor.
 
-- **Skill Ranks**: Start with the standard 4 ranks to distribute among your skills
+- **Profession Ranks**: Start with the standard 4 ranks to distribute among your professions
 - **Life Benefit**: Choose one benefit from your established background (see below)
 
 #### Elderly
 
 Elderly characters have accumulated wisdom and expertise over decades, though their bodies may not be quite what they once were. The definition of "elderly" depends on your character's background—a hard life might age someone prematurely, while a comfortable existence might see them spry into their later years.
 
-- **Skill Ranks**: Start with 5 ranks to distribute among your skills
+- **Profession Ranks**: Start with 5 ranks to distribute among your professions
 - **Physical Limitation**: Your movement speed is reduced by 10 feet
 - **Starting Aspect**: Gain "Wisdom of Years" at rank 1
 
@@ -143,62 +143,300 @@ The key is that your chosen benefit should emerge naturally from the fiction you
 
 Discuss with your GM which benefit best fits your character's established story.
 
-## Your Skills
+## Professions System
 
-Skills represent your training and experience in specific areas. When creating your character, choose up to three skills and distribute ranks between them based on your age category (3 for young, 4 for adult, 5 for elderly). These initial ranks are free and reflect your life before adventuring.
+## Core Concepts
 
-Skills can be broad professions (Diplomat, Blacksmith) or specific competencies (Lockpicking, Horseback Riding). Work with your GM to ensure appropriate scope. Your skills should reflect your character's history and experiences—a young character might have fewer ranks but could still be a skilled blacksmith if that's their background.
+**Professions as Background**: Each profession represents your character's life path and accumulated expertise. These are broad backgrounds that encompass many related skills and knowledge.
 
-**Example skill distributions:**
+**Profession Ranks**:
 
-- **Young blacksmith**: Blacksmithing 2, Metalworking 1
-- **Adult diplomat**: Diplomacy 3, Etiquette 1
-- **Elderly scholar**: Ancient History 3, Research 1, Languages 1
+- **Rank 1**: +1 (Novice)
+- **Rank 2**: +2 (Apprentice)
+- **Rank 3**: +3 (Journeyman)
+- **Rank 4**: +4 (Expert)
+- **Rank 5**: +5 (Master)
+- **Rank 6+**: +6, +7, etc. (Legendary)
 
-### Using Skills
+When making a skill check (as described in Gameplay Basics), add your profession rank to the roll if the profession applies.
 
-Add your skill rank to any check where the skill clearly applies. For tangentially related applications, add half your rank (rounded down). Only one skill may apply to any given check.
+## Usage-Based Advancement
 
-### Skill Progression
+Professions advance through **practical application** in two ways:
 
-After character creation, skills improve through practice and real-world application:
+### 1. Challenges
 
-| Rank | Downtime Weeks | Challenges | Missions |
-| ---- | -------------- | ---------- | -------- |
-| 1    | 1              | -          | -        |
-| 2    | 4              | 1          | -        |
-| 3    | 9              | 2          | 1        |
-| 4    | 16             | 3          | 2        |
-| 5    | 25             | 4          | 3        |
-| 6    | 36             | 5          | 4        |
-| 7    | 49             | 6          | 5        |
+Use your profession to overcome a difficult task:
 
-### Challenges (Clarified)
-
-A challenge must meet ALL criteria:
-
-- Uses the skill in question
-- CN ≥ (heart die max + current skill rank)
-- Meaningful narrative consequences for failure
+- Must have a CN ≥ (heart die max + current profession rank)
+  - Example: With d8 heart die and rank 2, challenges must be CN 10+
+- Must have meaningful consequences for failure
 - Cannot be immediately retried if failed
 
-Mark one challenge complete upon success.
+Mark one challenge completed when you succeed. Challenges completed during missions count toward your advancement—many missions naturally include several challenges along the way.
 
-### Missions (Clarified)
+### 2. Missions
 
-A mission must meet ALL criteria:
+Complete a significant professional undertaking that pushes your expertise:
 
-- Requires 3+ successful skill checks using the skill
-- At least one check must be CN 15 or higher
-- All checks must occur within a related narrative sequence
-- The overall goal has significant stakes (reputation, wealth, lives, etc.)
-- Failure of any check risks mission failure
+A mission is a substantial use of your profession that goes beyond routine work. Before starting, the player and GM should agree on:
 
-**Mission Examples with Mechanical Clarity:**
+- **The Goal**: What specific achievement are you trying to accomplish?
+- **Why It's a Mission**: Does this represent a significant professional milestone?
 
-- **Diplomat (Rank 3):** Negotiate a treaty between warring factions (3+ persuasion checks, including at least one CN 15+ with the hostile leader)
-- **Thief (Rank 4):** Steal from the Duke's vault (bypass guards with stealth, pick the lock CN 15+, escape without raising alarm)
-- **Ship Captain (Rank 5):** Navigate through a supernatural storm (3+ sailing checks including CN 18 to find safe passage)
+The mission succeeds when you achieve the agreed-upon goal, regardless of how you get there. You might:
+
+- Make multiple profession checks over the course of the mission
+- Make a single crucial check at a key moment
+- Accomplish it without any rolls through clever preparation
+- Use completely different professions than expected to achieve your goal
+
+Missions often include multiple challenges within them—a heist might require picking locks (challenge), forging documents (challenge), and evading guards (challenge). Each of these counts as a separate challenge for advancement purposes.
+
+The key is achieving something significant to your profession, not following a specific mechanical path.
+
+**Guidelines for Missions**:
+
+- **Scope**: Usually weeks or months of effort (but can be shorter if sufficiently significant)
+- **Significance**: Would other professionals in your field be impressed?
+- **Expertise**: Does this push what someone at your rank can achieve?
+- **Stakes**: What's at risk - reputation, resources, relationships, or lives?
+
+## Advancement Requirements
+
+| Current → Next | Rank Names              | Challenges | Mission Required | Practice Time |
+| -------------- | ----------------------- | ---------- | ---------------- | ------------- |
+| 0 → 1          | → Novice                | 2          | No               | 1 week        |
+| 1 → 2          | Novice → Apprentice     | 3          | No               | 4 weeks       |
+| 2 → 3          | Apprentice → Journeyman | 4          | Yes              | 9 weeks       |
+| 3 → 4          | Journeyman → Expert     | 5          | Yes              | 16 weeks      |
+| 4 → 5          | Expert → Master         | 6          | Yes              | 25 weeks      |
+| 5 → 6          | Master → Legendary      | 7          | Yes              | 36 weeks      |
+| 6 → 7          | Legendary →             | 8          | Yes              | 49 weeks      |
+
+**Practice Time**: Represents dedicated downtime training. You can reduce this by 1 week for each challenge completed beyond the minimum (including challenges completed during missions).
+
+## Starting Professions
+
+Choose up to three professions and distribute ranks between them based on your age category:
+
+- **Young**: 3 ranks to distribute (e.g., one profession at rank 2 and one at rank 1)
+- **Adult**: 4 ranks to distribute (e.g., one profession at rank 3 and one at rank 1)
+- **Elderly**: 5 ranks to distribute (e.g., one profession at rank 3 and two at rank 1)
+
+These initial ranks are free and reflect your life before adventuring.
+
+## Profession Application
+
+Professions apply their full bonus when directly relevant. When tangentially related, apply half bonus (rounded down).
+
+## Profession Examples
+
+### Blacksmith
+
+**Challenges**:
+
+- Repair a shattered magical blade without destroying its enchantment (CN 10, Rank 2)
+- Forge a weapon from rare star-metal in a single night (CN 11, Rank 2)
+- Identify the maker of an ancient dwarven hammer by its construction (CN 10, Rank 2)
+
+**Mission Example** (Rank 4 seeking Rank 5):
+_"The Moonsilver Masterwork"_ - Create armor from rare moonsilver that bonds with its wearer
+
+- **Goal**: Successfully forge the armor without ruining the irreplaceable materials
+- **Why It's a Mission**: Working with moonsilver is the pinnacle of the craft
+- **Possible Approaches**: Months of careful work, consulting ancient texts, finding the right conditions
+- **Success**: Completed armor that actually bonds with a wearer
+
+### Diplomat
+
+**Challenges**:
+
+- Convince hostile bandits to negotiate rather than attack (CN 10, Rank 2)
+- Navigate a foreign court's etiquette without causing offense (CN 11, Rank 2)
+- Mediate a dispute between feuding merchant families (CN 10, Rank 2)
+
+**Mission Example** (Rank 1 seeking Rank 2):
+_"The Trade Compact"_ - Negotiate your city's first trade agreement with the dwarven holds
+
+- **Goal**: Signed trade agreement benefiting both parties
+- **Why It's a Mission**: First human to successfully negotiate with these particular holds
+- **Possible Approaches**: Learn dwarven customs, find common interests, leverage personal relationships
+- **Success**: Agreement signed and trade begins flowing
+
+### Hunter
+
+**Challenges**:
+
+- Track a wounded owlbear through rocky terrain after rainfall (CN 11, Rank 3)
+- Set snares to catch enough game to feed the party for a week (CN 12, Rank 3)
+- Identify which predator killed the livestock by examining the remains (CN 11, Rank 3)
+
+**Mission Example** (Rank 1 seeking Rank 2):
+_"The Beast of Millhaven"_ - Track and eliminate the creature terrorizing the village
+
+- **Goal**: End the threat to the village permanently
+- **Why It's a Mission**: Multiple failed attempts by other hunters, reputation-making hunt
+- **Possible Approaches**: Study attack patterns, set elaborate trap, track to lair, rally villagers
+- **Success**: Creature dead or driven off permanently
+
+### Merchant
+
+**Challenges**:
+
+- Negotiate bulk prices during a supply shortage (CN 11, Rank 2)
+- Identify counterfeit coins in a large transaction (CN 10, Rank 2)
+- Establish credit with a suspicious foreign trader (CN 12, Rank 3)
+
+**Mission Example** (Rank 2 seeking Rank 3):
+_"The Silk Road Expansion"_ - Establish profitable trade route to distant eastern kingdoms
+
+- **Goal**: Return with signed contracts and first shipment of goods
+- **Why It's a Mission**: Six month journey into unknown markets
+- **Possible Approaches**: Navigate foreign customs, find reliable partners, survive the journey
+- **Success**: Profitable trade route established
+
+### Scholar
+
+**Challenges**:
+
+- Translate a coded message written in an archaic dialect (CN 11, Rank 2)
+- Identify the historical period of ruins from architectural details (CN 10, Rank 2)
+- Recall the specific weakness of a rare magical creature (CN 12, Rank 3)
+
+**Mission Example** (Rank 2 seeking Rank 3):
+_"The Lost Theorem"_ - Decipher the incomplete mathematical proofs of an ancient civilization
+
+- **Goal**: Reconstruct the complete theorem and prove it works
+- **Why It's a Mission**: Would revolutionize understanding of magical theory
+- **Possible Approaches**: Research across multiple libraries, find missing fragments, test theories
+- **Success**: Working theorem that other scholars can verify
+
+### Sea Captain
+
+**Challenges**:
+
+- Navigate by stars during a moonless, cloudy night (CN 12, Rank 3)
+- Keep crew morale high during extended rationing (CN 10, Rank 2)
+- Dock a damaged ship in rough weather (CN 13, Rank 3)
+
+**Mission Example** (Rank 3 seeking Rank 4):
+_"Through the Maelstrom"_ - Navigate your ship through the legendary Storm of Sorrows
+
+- **Goal**: Guide ship and crew safely through a supernatural storm to reach port
+- **Why It's a Mission**: The Storm of Sorrows has claimed dozens of ships; surviving it proves mastery
+- **Possible Approaches**: Chart a course using ancient maps, bind wind spirits, ride the eye of the storm, trust pure seamanship
+- **Success**: Ship and most of crew survive to reach the other side
+
+### Smuggler
+
+**Challenges**:
+
+- Hide contraband during a surprise customs inspection (CN 11, Rank 2)
+- Forge shipping manifests that pass close scrutiny (CN 10, Rank 2)
+- Navigate city sewers to avoid checkpoints (CN 12, Rank 3)
+
+**Mission Example** (Rank 3 seeking Rank 4):
+_"The Underground Railroad"_ - Establish permanent safe routes for refugees fleeing the war
+
+- **Goal**: Create a network that operates reliably without your constant involvement
+- **Why It's a Mission**: Building infrastructure that saves lives for years to come
+- **Possible Approaches**: Bribe officials, establish safe houses, recruit trustworthy operators
+- **Success**: Refugees successfully using your routes independently
+
+### Thief
+
+**Challenges**:
+
+- Pick the lock on the merchant's strongbox while guards patrol nearby (CN 9, Rank 1)
+- Lift a noble's purse in a crowded ballroom without being noticed (CN 9, Rank 1)
+- Create a convincing forgery of a shipping manifest (CN 10, Rank 1)
+
+**Mission Example** (Rank 2 seeking Rank 3):
+_"The Perfect Score"_ - Steal the Merchant Prince's ledger from his counting house
+
+- **Goal**: Obtain the ledger that proves his illegal dealings
+- **Why It's a Mission**: Most secure private building in the city, would make your reputation
+- **Possible Approaches**: Elaborate heist, seduce someone with access, forge employment papers, wait for the right opportunity
+- **Success**: Ledger obtained without being identified as the thief
+
+## Example Professions
+
+Professions represent broad life paths and careers:
+
+**Combat Professions**: Soldier, Mercenary, Duelist, Bodyguard, Knight
+
+**Craft Professions**: Blacksmith, Carpenter, Jeweler, Tailor, Alchemist
+
+**Scholarly Professions**: Scholar, Physician, Cartographer, Historian, Naturalist
+
+**Social Professions**: Diplomat, Merchant, Noble, Courtier, Priest
+
+**Criminal Professions**: Thief, Smuggler, Fence, Forger, Assassin
+
+**Wilderness Professions**: Hunter, Guide, Herbalist, Trapper, Ranger
+
+**Maritime Professions**: Sailor, Sea Captain, Navigator, Marine, Shipwright
+
+**Performance Professions**: Bard, Actor, Acrobat, Storyteller, Jester
+
+Professions should be broad enough to cover multiple related activities. A "Thief" can pick locks, move stealthily, fence goods, and forge documents. A "Merchant" can appraise goods, negotiate deals, manage logistics, and understand markets.
+
+Work with your GM to ensure your profession reflects a realistic life path from the game world.
+
+## Creating Missions
+
+Missions are defined by their goals, not their methods. When a player proposes a mission:
+
+1. **Define the Goal**: What specific, measurable achievement are you pursuing?
+2. **Confirm Significance**: Does this feel like a real professional milestone?
+3. **Play It Out**: The mission unfolds through regular gameplay
+4. **Recognize Success**: When the goal is achieved, the mission is complete
+
+**Missions and Challenges**: Remember that missions naturally generate challenges. A Sea Captain navigating through a supernatural storm might face challenges like "Navigate by dead reckoning when compasses fail" and "Keep the crew from panicking." These all count as challenges for advancement while also contributing to the mission's success.
+
+**Examples of Types of Missions**:
+
+- **Create Something Extraordinary**: "Forge armor from moonsilver that actually works"
+- **Establish Something Lasting**: "Build trade route that survives without me"
+- **Achieve the Impossible**: "Steal from the Archmage without him ever knowing"
+- **Solve a Mystery**: "Decipher the lost theorem of the ancients"
+- **Save Lives at Scale**: "Get medicine through the blockade to save the city"
+
+**What Makes a Good Mission**:
+
+- Has a clear end condition that everyone can recognize
+- Represents genuine professional achievement
+- Could be accomplished multiple ways
+- Matters to the character's story
+
+**Common Mission Pitfalls**:
+
+- Too vague: "Become a better thief" (What does success look like?)
+- Too simple: "Pick a hard lock" (That's a challenge, not a mission)
+- Too mechanical: "Make a CN 20 check" (Missions are about goals, not rolls)
+
+Remember: A clever thief who accomplishes their heist without picking a single lock has still completed their mission. The achievement matters, not the method.
+
+## Using Professions in Play
+
+**Direct Application (Full Bonus)**:
+
+- Blacksmith forging a sword
+- Thief picking a lock
+- Diplomat negotiating a treaty
+
+**Tangential Application (Half Bonus)**:
+
+- Blacksmith appraising weapon quality
+- Thief estimating a gem's value
+- Diplomat reading someone's mood
+
+**No Application**:
+
+- Blacksmith navigating at sea
+- Thief performing surgery
+- Diplomat tracking through wilderness
 
 ## Your Niche
 
