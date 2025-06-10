@@ -228,7 +228,7 @@ export function PDFDownloadButton() {
         let cleanText = part.content
           .replace(/#{1,6}\s*(.+)/g, "$1") // Convert headers to plain text
           .replace(/\*\*(.*?)\*\*/g, "$1") // Remove bold markdown
-          .replace(/\*(.*?)\*/g, "$1") // Remove italic markdown
+          .replace(/\*([^*]+)\*/g, "$1") // Remove italic markdown
           .replace(/`([^`]+)`/g, "$1") // Remove inline code formatting
           .replace(/```[^`]*```/g, "[Code Block]") // Replace code blocks
           .replace(/\[(.*?)\]\([^)]*\)/g, "$1") // Convert links to text only
