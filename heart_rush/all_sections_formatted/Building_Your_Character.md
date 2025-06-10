@@ -85,7 +85,7 @@ Three age categories exist—young, adult, and elderly—each reflecting differe
 Young characters are full of potential and recover quickly from setbacks. Their bodies heal fast and their minds eagerly absorb new skills. What qualifies as "young" varies by culture and species—for humans this might be late teens to mid-twenties, but adapt as appropriate for your character concept.
 
 - **Profession Ranks**: Start with 2 ranks to distribute among your professions
-- **Choose TWO benefit**:
+- **Choose TWO benefits**:
   - **Natural Learner**: Profession advancement requires 1 fewer challenge to complete (minimum 1)
   - **Fast Healer**: Wounds heal at twice the normal rate. A wound that would normally take 4 days to reduce by one rank instead takes 2 days
   - **Young and Foolish**: When you accept a complication or negative aspect invocation, gain 1 extra DP beyond the normal amount
