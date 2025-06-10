@@ -28,7 +28,7 @@ export async function GET(
     
     // Find the category by slug
     const category = navigation.find(item => 
-      item.type === 'category' && generateCategorySlug(item.name) === categorySlug
+      item.type === 'category' && item.name && generateCategorySlug(item.name) === categorySlug
     );
 
     if (!category) {
@@ -47,7 +47,7 @@ export async function GET(
       },
       {
         slug: categorySlug,
-        title: category.name,
+        title: category.name || 'Unknown Category',
         level: 1
       }
     ];
