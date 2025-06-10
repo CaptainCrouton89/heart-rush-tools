@@ -415,11 +415,7 @@ Remember: A clever thief who accomplishes their heist without picking a single l
 - Thief performing surgery
 - Diplomat tracking through wilderness
 
-## Your Niche
-
-Your niche defines your character's specialization and unique role in the world. This encompasses your heritage, talents, and personal traits that set you apart.
-
-### Kin & Culture
+## Kin & Culture
 
 Everyone comes from a different background and has a different upbringing. When you create a character, choose a race from the Kin & Culture section. You gain the aspects and abilities that come from choosing that race.
 
@@ -429,7 +425,7 @@ Many races have multiple heritages within that race. In that case, you gain the 
 
 Talents are specialized abilities that you know and can utilize. These act as a way of specializing your play style and differentiating you from anyone else in the world. Although you do not start with any talents, they can be purchased with XP, with which you start the game and can immediately use to buy talents.
 
-### Aspects
+## Aspects
 
 For every facet of your character that cannot be described with abilities and skills, they can be described with aspects. Your aspects describe the features and traits from your personality, background, and experiences that make you distinct—both positive and negative.
 
@@ -437,7 +433,7 @@ When you first create your character, you gain three destiny points (DP). You wi
 
 As you play your character, you will gather more aspects, and their impact will grow. Each aspect has two parts: its description, and its rank.
 
-#### Description
+### Description
 
 The description describes the aspect as a whole, and should be a phrase or a few words to describe your character. It should be a significant personality trait, behavioral quirk, belief, ideal, self-proclaimed title, or some sort of reputation.
 
@@ -451,7 +447,7 @@ The description describes the aspect as a whole, and should be a phrase or a few
 
 Do not choose generic things, like "good at most things" or "lucky", since they will apply to everything, or be too vague to decide if they should apply to a situation. If the GM says your aspect description is too generic, you need to choose a new one, or make it more specific.
 
-#### Rank
+### Rank
 
 Next, the aspect gets a rank. The rank of an aspect represents how influential that aspect is over who you are, and will determine the modifier to your rolls. The rank will be a number between one and five, though in some cases it can be increased even further.
 
@@ -516,7 +512,7 @@ These aspects create a character whose past mistakes drive their current motivat
 [[Burn through those DP  
 To get the most out of your character, you should be invoking your aspects frequently. DP are not meant to be a precious resource—spend them, and then make more by invoking your negative ones. When creating your character, make sure to create aspects that you're going to enjoy using; you'll be using them a lot.]]
 
-### Starting Gear
+## Starting Gear
 
 Begin play with whatever equipment makes sense for your character concept and background. Work with your GM to ensure your starting gear fits both the fiction of your character and the tone of the campaign. There are no restrictions based on age or background—a young noble might have fine clothes and a sword, while an elderly scholar might carry ancient tomes and exploration gear.
 
