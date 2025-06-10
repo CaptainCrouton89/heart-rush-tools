@@ -371,13 +371,9 @@ Rules text describing what the ability lets you do.
 
 All abilities listed in this rulebook have their name, followed by tags, and then followed by their rules.
 
-For the most part, abilities can be used whenever you want.
+For the most part, abilities can be used whenever you want. However, some have restrictions, usually listed in their tags, or if it's very specific, in the ability rules itself.
 
-However, some have restrictions, usually listed in their tags, or if it's very specific, in the ability rules itself.
-
-All tags in an ability are separated by periods.
-
-Each tag will contain information about when you can use the ability, or what prerequisites there are for gaining that ability.
+All tags in an ability are separated by periods. Each tag will contain information about when you can use the ability, or what prerequisites there are for gaining that ability.
 
 While many tags will be explained by whichever section they appear in, there are a few types which can show up on any type of ability. These are listed below.
 
@@ -396,21 +392,37 @@ This tag is always listed as the first tag.
 - **Weekly Ability**: You may use this ability once per week.
 - **Monthly ability**: You may use this ability once per month.
 
-### Timing Tag
+### Timing Tags
 
 Outside of combat, you can use an ability whenever you want—there are no restrictions besides the ones listed on the ability itself.
 
-However, during combat, you must have priority to use your abilities.
+However, during combat, timing matters. Every non-passive ability must have one of the following timing tags that determines when you can use it:
 
-Priority is described in detail in the Combat section.
+- **Slow**: If an ability is marked as slow, it can only be used during your own turn.
+- **Quick**: If an ability is marked as quick, it means you can use the ability during any ally's turn (including your own). You cannot use it during enemy turns or during engagements.
+- **Instant**: If an ability is marked as instant, it means that the ability can be used literally any time, even when you don't have your turn. This includes interrupting other actions as they're happening and during engagements.
 
-However, the instant tag is an exception to that rule.
+Passive abilities are always on, so do not have a dedicated timing tag.
 
-Abilities that don't have the instant tag are referred to as "priority abilities".
+**Understanding Timing Tags**
 
-- **Instant**: If an ability is marked as instant, it means that the ability can be used literally any time, even when you don't have priority.
+The three timing tags create a hierarchy of flexibility:
 
-**Understanding Instant Timing**
+**Slow Timing:**
+
+- Must be used on your own turn
+- Cannot be used during other creatures' turns
+- Cannot be used during engagements
+- Most restrictive timing
+
+**Quick Timing:**
+
+- Can be used during any ally's turn (including your own)
+- Cannot be used during enemy turns
+- Cannot be used during engagements
+- Allows tactical coordination with allies
+
+**Instant Timing:**
 
 Instant abilities can be used at literally any moment during the game, even interrupting other actions as they're happening. This creates a true "interrupt system" where you can react to new information as it unfolds.
 
@@ -451,9 +463,9 @@ During each round of combat, you only have one action.
 
 By default, abilities don't use your action unless they have the full action tag.
 
-- **Full action**: If an ability is marked as full action, it means that the ability uses your action.
+- **Full action**: If an ability is marked as full action, it means that the ability uses your action. If you don't have an action left during this round, you cannot use the ability.
 
-If you don't have an action left during this round, you cannot use the ability.
+**Special Case:** Some abilities are marked as both "Full action" and "Instant". These abilities still use your one action per round, but can be performed at any time (not just on your turn). For example, making an opportunity attack uses your action but can be done instantly when triggered.
 
 ## Environmental Rules
 
