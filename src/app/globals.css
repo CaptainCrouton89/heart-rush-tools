@@ -34,14 +34,14 @@
 
 html.dark {
   /* Red/orange-tinted dark backgrounds for better contrast */
-  --background: #151210;
+  --background: #110f0d;
   --foreground: #f0eae5;
   --card: #1c1815;
   --card-foreground: #f0eae5;
   --border: #352a25;
   --input: #1c1815;
   --ring: #e85d42;
-  
+
   /* Enhanced contrast colors with stronger red undertones */
   --content-background: #191512;
   --sidebar-background: #151210;
@@ -66,7 +66,7 @@ html.dark {
   --muted-foreground: #c4b3a6;
   --popover: #1c1815;
   --popover-foreground: #f0eae5;
-  
+
   /* Red/orange-themed interactive states */
   --sidebar-hover: rgba(232, 93, 66, 0.08);
   --sidebar-active: rgba(232, 93, 66, 0.15);
