@@ -39,7 +39,7 @@ The GM sets the CN based on circumstances, considering assets and hindrances suc
 
 **Resolution**:
 
-- **Success**: Route established; GM sets seasonal success probability
+- **Success**: Route established; GM sets seasonal CN
 - **Failure**: Route cannot be established due to discovered obstacles
 - **Complication**: Route established but begins with a hindrance
 
@@ -47,26 +47,26 @@ The GM sets the CN based on circumstances, considering assets and hindrances suc
 
 Once established, routes run automatically each season with a chance of profitable completion.
 
-### Success Probability
+### Route Difficulty
 
-After establishment, the GM sets the route's base success probability:
+After establishment, the GM sets the route's difficulty:
 
-| Conditions | Typical Success Rate |
-| ---------- | -------------------- |
-| Safe       | 85-95%               |
-| Moderate   | 65-85%               |
-| Risky      | 45-65%               |
-| Dangerous  | 25-45%               |
-| Desperate  | 5-25%                |
+| Route Conditions  | Seasonal CN |
+| ----------------- | ----------- |
+| Safe & Profitable | 6           |
+| Moderate Risk     | 9           |
+| Risky             | 12          |
+| Dangerous         | 15          |
+| Desperate         | 18          |
 
-This probability remains constant until circumstances change (new assets or hindrances emerge).
+This CN remains constant until circumstances change (new assets or hindrances emerge).
 
 ### Seasonal Trade Roll
 
 Once per season for each route:
 
-1. GM states current CN based on success probability
-2. Roll d100 + Presence or Cunning die + relevant skill
+1. GM states current CN based on route difficulty
+2. Roll d8 + Presence or Cunning die + relevant profession rank
 3. Compare to CN
 
 **Success**: Route completes, earn expected profit  
@@ -113,7 +113,7 @@ Complications create ongoing hindrances that affect future rolls. Examples:
 - "Rival saboteur in organization" - Increases CN until discovered
 - "Deteriorating road conditions" - Increases CN seasonally
 
-The GM determines how each hindrance affects the route.
+The GM determines how each hindrance affects the route (typically +3 CN per significant hindrance).
 
 ## Accompanying Routes
 
@@ -131,8 +131,8 @@ Operating many routes simultaneously creates logistical challenges:
 **Personal Management Limits**:
 
 - 1-2 routes: No difficulty
-- 3-4 routes: GM may increase CNs
-- 5+ routes: Significant CN increases
+- 3-4 routes: +3 CN to all routes
+- 5+ routes: +6 CN to all routes
 
 **Delegated Management**:
 
@@ -171,7 +171,7 @@ Players can pursue various assets to improve their routes:
 - Weather prediction capabilities
 - Alternative route knowledge
 
-Each asset's specific impact is determined by the GM based on the fiction.
+Each asset typically reduces CN by 3, while multiple related assets might eliminate entire categories of risk.
 
 ## Example: The Silk Road
 
@@ -179,11 +179,11 @@ Elena wants to establish a route trading silk between the eastern ports and the 
 
 **Establishment Attempt** (using employees):
 
-- Base stratagem CN: 50
-- Assets: Letter from Duke (helpful), experienced factor (helpful)
-- Hindrances: Competing merchant house (problematic), different languages (minor)
-- GM sets CN: 60
-- Roll: d100 (72) + Cunning d8 (5) + Merchant skill (3) = 80
+- Base stratagem CN: 12 (difficult due to competition)
+- Assets: Letter from Duke (-3), experienced factor (-3)
+- Hindrances: Competing merchant house (+3), different languages (+3)
+- Final CN: 12
+- Roll: d8 (1→5) + Cunning d8 (5) + Merchant profession (3) = 13
 - Success! But rolled 1 on d8, rerolled to 5
 - Complication: "Forced to pay guild dues" hindrance added
 
@@ -191,13 +191,13 @@ Elena wants to establish a route trading silk between the eastern ports and the 
 
 - Investment: 40 ducats in silk
 - Expected profit: 75% (30 ducats)
-- Success probability: 70% (GM sets CN 30 for seasonal rolls)
+- Route difficulty: Moderate (CN 9 base, +3 for guild scrutiny = CN 12)
 - Hindrance: Guild dues reduce profit by 10%
 
 **First Season**:
 
-- CN 30 (base) +5 (guild scrutiny from hindrance) = CN 35
-- Roll: d100 (41) + Presence d6 (3) + Merchant (3) = 47
+- CN 12 (moderate route with guild scrutiny)
+- Roll: d8 (6) + Presence d6 (3) + Merchant (3) = 12
 - Success! Profit: 27 ducats (30 minus 10% guild cut)
 
 Elena considers personally accompanying the next shipment to negotiate better guild terms and remove the hindrance.

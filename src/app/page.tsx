@@ -100,7 +100,7 @@ export default async function HomePage() {
           All Sections
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {navigation.map((section) => (
+          {navigation.filter(section => section.slug).map((section) => (
             <Link
               key={section.slug || section.name}
               href={section.type === 'category' ? `/category/${section.slug}` : `/${section.slug}`}
