@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "name": "Getting Started",
+      "sections": ["Intro", "Heart_Rush_Manifesto"]
+    },
+    {
+      "name": "Character Creation",
+      "sections": [
+        "Building_Your_Character",
+        "Advanced_Character_Creation",
+        "Kin_&_Culture",
+        "Classes",
+        "Talents",
+        "Paragon_Abilities"
+      ]
+    },
+    {
+      "name": "Playing the Game",
+      "sections": ["Gameplay_Basics", "Strategem_System"]
+    },
+    {
+      "name": "Combat",
+      "sections": [
+        "Combat",
+        "Conditions",
+        "Rests_&_Healing",
+        "Weapons,_Cantrips,_&_Cantrips",
+        "Spells"
+      ]
+    },
+    {
+      "name": "Systems",
+      "sections": [
+        "Kethic_Elementalism",
+        "Equipment_&_Gear",
+        "Journeys",
+        "Basic_Needs",
+        "Wealth_System",
+        "Trading_&_Merchants",
+        "Magical_Crafting"
+      ]
+    },
+    {
+      "name": "Advanced Rules",
+      "sections": [
+        "Chase",
+        "Mounted_Combat_&_Mounts",
+        "Strongholds",
+        "Misc._Other_Rules"
+      ]
+    }
+  ]
+}

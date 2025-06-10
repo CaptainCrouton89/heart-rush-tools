@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { 
   ContentSection, 
-  NavigationNode, 
+  CategorizedNavigationNode,
   ContentMetadata,
   Breadcrumb 
 } from '../types/content';
@@ -83,12 +83,12 @@ export async function getAllContent(): Promise<ContentSection[]> {
 }
 
 // Get navigation tree
-export async function getNavigationTree(): Promise<NavigationNode[]> {
+export async function getNavigationTree(): Promise<CategorizedNavigationNode[]> {
   try {
     const navPath = path.join(CONTENT_DIR, 'navigation.json');
     const navigation = await getCachedOrLoad('navigation:tree', async () => {
       const fileContent = await fs.readFile(navPath, 'utf-8');
-      return JSON.parse(fileContent) as NavigationNode[];
+      return JSON.parse(fileContent) as CategorizedNavigationNode[];
     });
     
     return navigation;
@@ -358,12 +358,12 @@ export async function getAllGMContentMetadata(): Promise<ContentMetadata[]> {
 }
 
 // Get GM navigation tree
-export async function getGMNavigationTree(): Promise<NavigationNode[]> {
+export async function getGMNavigationTree(): Promise<CategorizedNavigationNode[]> {
   try {
     const navPath = path.join(GM_CONTENT_DIR, 'navigation.json');
     const navigation = await getCachedOrLoad('gm-navigation:tree', async () => {
       const fileContent = await fs.readFile(navPath, 'utf-8');
-      return JSON.parse(fileContent) as NavigationNode[];
+      return JSON.parse(fileContent) as CategorizedNavigationNode[];
     });
     
     return navigation;

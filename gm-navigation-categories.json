@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "name": "Game Management",
+      "sections": ["Pacing_Guide", "Timescale"]
+    },
+    {
+      "name": "Tables",
+      "sections": ["Weather_&_Events_Tables"]
+    },
+    {
+      "name": "Uncategorized",
+      "sections": ["Monsterous_Races"]
+    }
+  ]
+}

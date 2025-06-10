@@ -4,21 +4,36 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useGM } from "../../context/GMContext";
-import { NavigationNode } from "../../types/content";
+import { NavigationNode, CategorizedNavigationNode } from "../../types/content";
 
 interface NavigationTreeProps {
-  nodes: NavigationNode[];
+  nodes: NavigationNode[] | CategorizedNavigationNode[];
   onNavigate?: () => void;
   level?: number;
 }
 
 interface NavigationItemProps {
-  node: NavigationNode;
+  node: NavigationNode | CategorizedNavigationNode;
   onNavigate?: () => void;
   level: number;
   isActive: boolean;
   isOpen: boolean;
   onToggle: () => void;
+}
+
+interface CategoryHeaderProps {
+  name: string;
+}
+
+function CategoryHeader({ name }: CategoryHeaderProps) {
+  return (
+    <div className="flex items-center py-3 mb-2">
+      <span className="text-xs font-semibold text-muted-foreground/70 uppercase tracking-wider">
+        {name}
+      </span>
+      <div className="flex-1 ml-3 h-px bg-border"></div>
+    </div>
+  );
 }
 
 function NavigationItem({
@@ -30,8 +45,30 @@ function NavigationItem({
   onToggle,
 }: NavigationItemProps) {
   const { isGMMode } = useGM();
+  
+  // Handle categorized navigation nodes
+  if ('type' in node && node.type === 'category') {
+    return (
+      <div>
+        <CategoryHeader name={node.name!} />
+        {node.children && node.children.length > 0 && (
+          <div className="ml-0 space-y-1">
+            <NavigationTree
+              nodes={node.children}
+              onNavigate={onNavigate}
+              level={0}
+            />
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // Handle regular navigation nodes
   const hasChildren = node.children && node.children.length > 0;
   const indent = level * 32; // Much larger indentation for clear hierarchy
+  const nodeSlug = 'slug' in node ? node.slug : '';
+  const nodeTitle = 'title' in node ? node.title : '';
 
   const handleItemClick = (e: React.MouseEvent) => {
     // Don't navigate if clicking the expand/collapse button
@@ -48,7 +85,7 @@ function NavigationItem({
   return (
     <div>
       <Link
-        href={isGMMode ? `/gm/${node.slug}` : `/${node.slug}`}
+        href={isGMMode ? `/gm/${nodeSlug}` : `/${nodeSlug}`}
         onClick={handleItemClick}
         className={`
           flex items-center py-2 px-2 rounded-md text-sm block transition-all duration-200
@@ -103,7 +140,7 @@ function NavigationItem({
             ${level > 1 ? "text-sm opacity-90" : ""}
           `}
         >
-          {node.title}
+          {nodeTitle}
         </span>
 
         {/* Visual indicator for different levels */}
@@ -146,8 +183,16 @@ export function NavigationTree({
 
   // Auto-open nodes in active path
   useEffect(() => {
-    const isInActivePath = (node: NavigationNode): boolean => {
-      const expectedPath = isGMMode ? `/gm/${node.slug}` : `/${node.slug}`;
+    const isInActivePath = (node: NavigationNode | CategorizedNavigationNode): boolean => {
+      if ('type' in node && node.type === 'category') {
+        if (node.children) {
+          return node.children.some((child) => isInActivePath(child));
+        }
+        return false;
+      }
+      
+      const nodeSlug = 'slug' in node ? node.slug : '';
+      const expectedPath = isGMMode ? `/gm/${nodeSlug}` : `/${nodeSlug}`;
       if (pathname === expectedPath) return true;
       if (node.children) {
         return node.children.some((child) => isInActivePath(child));
@@ -155,16 +200,23 @@ export function NavigationTree({
       return false;
     };
 
-    const findActivePath = (nodes: NavigationNode[]): string[] => {
+    const findActivePath = (nodes: (NavigationNode | CategorizedNavigationNode)[]): string[] => {
       for (const node of nodes) {
         if (isInActivePath(node)) {
-          if (
-            node.children &&
-            node.children.some((child) => isInActivePath(child))
-          ) {
-            return [node.slug, ...findActivePath(node.children)];
+          if ('type' in node && node.type === 'category') {
+            if (node.children) {
+              return findActivePath(node.children);
+            }
+          } else {
+            const nodeSlug = 'slug' in node ? node.slug : '';
+            if (
+              node.children &&
+              node.children.some((child) => isInActivePath(child))
+            ) {
+              return nodeSlug ? [nodeSlug, ...findActivePath(node.children)] : findActivePath(node.children);
+            }
+            return nodeSlug ? [nodeSlug] : [];
           }
-          return [node.slug];
         }
       }
       return [];
@@ -176,19 +228,27 @@ export function NavigationTree({
 
   return (
     <div className="space-y-1">
-      {nodes.map((node) => (
-        <NavigationItem
-          key={node.slug}
-          node={node}
-          onNavigate={onNavigate}
-          level={level}
-          isActive={
-            pathname === (isGMMode ? `/gm/${node.slug}` : `/${node.slug}`)
-          }
-          isOpen={openNodes.has(node.slug)}
-          onToggle={() => toggleNode(node.slug)}
-        />
-      ))}
+      {nodes.map((node, index) => {
+        const key = 'type' in node && node.type === 'category' 
+          ? `category-${node.name}-${index}` 
+          : ('slug' in node ? node.slug : `node-${index}`);
+        
+        const nodeSlug = 'slug' in node ? node.slug : '';
+        
+        return (
+          <NavigationItem
+            key={key}
+            node={node}
+            onNavigate={onNavigate}
+            level={level}
+            isActive={
+              Boolean(nodeSlug && pathname === (isGMMode ? `/gm/${nodeSlug}` : `/${nodeSlug}`))
+            }
+            isOpen={nodeSlug ? openNodes.has(nodeSlug) : false}
+            onToggle={() => nodeSlug && toggleNode(nodeSlug)}
+          />
+        );
+      })}
     </div>
   );
 }

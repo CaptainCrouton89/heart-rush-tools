@@ -6,7 +6,7 @@ import { NavigationTree } from './NavigationTree';
 import { SearchInput } from '../search/SearchInput';
 import { SearchResults } from '../search/SearchResults';
 import { ThemeToggle } from './ThemeToggle';
-import { NavigationNode, SearchResult } from '../../types/content';
+import { CategorizedNavigationNode, SearchResult } from '../../types/content';
 import { useGM } from '../../context/GMContext';
 
 interface SidebarProps {
@@ -16,7 +16,7 @@ interface SidebarProps {
 
 export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   const { isGMMode, setGMMode } = useGM();
-  const [navigation, setNavigation] = useState<NavigationNode[]>([]);
+  const [navigation, setNavigation] = useState<CategorizedNavigationNode[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [searchQuery, setSearchQuery] = useState('');

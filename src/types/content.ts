@@ -23,6 +23,22 @@ export interface NavigationNode {
   children?: NavigationNode[];
 }
 
+export interface NavigationCategory {
+  name: string;
+  sections: string[];
+}
+
+export interface CategorizedNavigationNode {
+  type: 'category' | 'section';
+  name?: string; // For category headers
+  slug?: string; // For sections
+  title?: string; // For sections
+  level?: number; // For sections
+  parent?: string; // For sections
+  order: number;
+  children?: CategorizedNavigationNode[];
+}
+
 export interface SearchResult {
   slug: string;
   title: string;
