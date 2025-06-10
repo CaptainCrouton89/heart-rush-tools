@@ -74,74 +74,49 @@ When you take damage in Heart Rush, it can mean different things depending on ho
 
 ## Your Age and Experience
 
-Your character's age shapes their capabilities and experience. When creating your character, choose an age category that fits your concept: young, adult, or elderly. Each age brings its own advantages and challenges.
+Your character's age shapes their capabilities and approach to life. When creating your character, choose an age category that fits your concept: young, adult, or elderly. Each age brings its own advantages and challenges.
 
 ### Age Categories
 
-Three age categories exist—young, adult, and elderly—each with their own tradeoffs.
+Three age categories exist—young, adult, and elderly—each reflecting different life stages and experiences.
 
 #### Young
 
-Young characters are full of potential but lack the experience of their elders. Their enthusiasm and vigor make up for what they lack in training. What qualifies as "young" varies by culture and species—for humans this might be late teens to mid-twenties, but adapt as appropriate for your character concept.
+Young characters are full of potential and recover quickly from setbacks. Their bodies heal fast and their minds eagerly absorb new skills. What qualifies as "young" varies by culture and species—for humans this might be late teens to mid-twenties, but adapt as appropriate for your character concept.
 
-- **Profession Ranks**: Start with 3 ranks to distribute among your professions (instead of the usual 4)
-- **Natural Talent**: Increase your lowest ability die by one size (after initial assignment)
-- **Starting Aspect**: Gain "Eager to Prove Myself" at rank 1
+- **Profession Ranks**: Start with 3 ranks to distribute among your professions
+- **Choose ONE benefit**:
+  - **Natural Learner**: Profession advancement requires 1 fewer challenge to complete (minimum 1)
+  - **Fast Healer**: Wounds heal at twice the normal rate. A wound that would normally take 4 days to reduce by one rank instead takes 2 days
+  - **Young and Foolish**: When you accept a complication or negative aspect invocation, gain 1 extra DP beyond the normal amount
 
 #### Adult
 
-Adults have found their place in the world and accumulated valuable experience from their chosen path. This represents the prime years of most characters' lives, when they've established themselves but still have their full vigor.
+Adults represent the baseline of capability—experienced enough to be competent, young enough to be vigorous. This represents the prime years of most characters' lives, when they've established themselves but still have their full physical capabilities.
 
 - **Profession Ranks**: Start with the standard 4 ranks to distribute among your professions
-- **Life Benefit**: Choose one benefit from your established background (see below)
+- **No special benefits or penalties**: Adults are the balanced default
 
 #### Elderly
 
-Elderly characters have accumulated wisdom and expertise over decades, though their bodies may not be quite what they once were. The definition of "elderly" depends on your character's background—a hard life might age someone prematurely, while a comfortable existence might see them spry into their later years.
+Elderly characters have accumulated significant life experience, though their bodies have slowed with age. The definition of "elderly" depends on your character's background—a hard life might age someone prematurely, while a comfortable existence might see them maintaining vitality into their later years.
 
 - **Profession Ranks**: Start with 5 ranks to distribute among your professions
-- **Physical Limitation**: Your movement speed is reduced by 10 feet
-- **Starting Aspect**: Gain "Wisdom of Years" at rank 1
+- **Physical Limitation**: Your movement speed is reduced by 20 feet
+- **Choose ONE benefit**:
+  - **Wisdom of Experience**: Choose one of your starting professions. When making skill checks with this profession, you may reroll any 1s on your dice (this does not trigger complications)
+  - **Deep Knowledge**: You've studied one subject extensively. Start with a rank 3 aspect related to accumulated knowledge, such as "Living Encyclopedia of Ancient History" or "Knows Every Herb in the Forest"
+  - **Frail Body, Sharp Mind**: Start with the aspect "Frail" at rank 3. This aspect can only be invoked negatively (representing physical weakness) but provides the normal DP when you do so
 
-### Life Benefits (Adults Only)
+### Choosing Your Age
 
-Adult characters have spent years establishing themselves in the world. Based on your character's background and the fiction you've established, work with your GM to choose ONE of the following benefits that best represents what your career has given you:
+Consider how your character's age intersects with their profession ranks:
 
-#### Connections
+- A young character with 3 ranks might be a prodigy in one field or dabbling in several
+- An adult with 4 ranks has had time to establish themselves professionally
+- An elderly character's 5 ranks represent a lifetime of accumulated expertise
 
-_For characters whose backgrounds involved working with people—merchants, diplomats, priests, entertainers, guards_
-
-You've built a network of contacts and earned a reputation in your field. Start with **Influence 1**, representing your ability to call upon favors and social connections.
-
-#### Resources
-
-_For characters whose backgrounds involved wealth or craft—nobles, successful artisans, merchants, treasure hunters_
-
-Your career has left you with additional wealth or valuable possessions. Start with an extra **100 ducat** beyond your normal starting funds.
-
-#### Conditioning
-
-_For characters whose backgrounds were physically demanding—soldiers, laborers, athletes, wilderness guides_
-
-Years of physical work have strengthened your body. You can carry **+2 equipment slots** beyond your normal capacity.
-
-#### Knowledge
-
-_For characters whose backgrounds were intellectual—scholars, inventors, investigators, navigators_
-
-You've developed deep expertise in your field. Choose one narrow area of expertise related to your background. When making skill checks directly related to this expertise, you may **reroll any 1s** on your dice (this does not trigger complications).
-
-### Choosing Your Benefit
-
-The key is that your chosen benefit should emerge naturally from the fiction you've established about your character. Don't pick a background to get a benefit—instead, determine what benefit makes sense given the background you've already imagined.
-
-**Example**: "I'm a former ship's navigator turned treasure hunter."
-
-- Could take **Connections** (contacts in various ports)
-- Could take **Resources** (wealth from a successful expedition)
-- Could take **Knowledge** (expertise in navigation and charts)
-
-Discuss with your GM which benefit best fits your character's established story.
+Remember that these mechanics reinforce narrative choices. A young character should feel energetic but inexperienced. An elderly character should feel wise but physically limited. Adults sit comfortably in between—competent without being exceptional in any particular way.
 
 ## Professions System
 

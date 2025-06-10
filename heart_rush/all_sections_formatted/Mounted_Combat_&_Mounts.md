@@ -102,9 +102,3 @@ While mounts don't significantly increase the distance you can cover in a day - 
 Mounts require significant resources to maintain. They consume three times the food and water of a humanoid creature their size, requiring 3 rations of food and 3 rations of water daily. Mounts must rest when you rest or begin accumulating exhaustion levels just as characters do. Wounded mounts heal through the same mechanisms as characters - taking long rests and having their wounds treated.
 
 Stabling costs vary by location and quality, typically ranging from 1 ducat per night for basic stables to 5 ducats for premium care including grooming and high-quality feed. In wilderness settings, you must account for grazing time or carry additional feed.
-
-### Social Considerations
-
-Mounts can significantly impact social interactions. Riding a fine horse or exotic mount effectively increases your influence by 1 in appropriate social settings, as such displays of wealth and power command respect. However, some locations prohibit certain mounts - dragons are rarely welcome in civilized cities, and even war horses may be barred from certain peaceful establishments.
-
-The type of mount you ride sends a message. Arriving on a simple riding horse suggests practicality, while arriving on a griffon or nightmare suggests power and possible danger. Consider your mount choice carefully when diplomacy is required.
