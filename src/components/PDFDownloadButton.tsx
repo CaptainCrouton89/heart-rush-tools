@@ -1,27 +1,33 @@
 "use client";
 
-import jsPDF from "jspdf";
-import "jspdf-autotable";
 import { useState } from "react";
 import { ContentSection } from "../types/content";
 
-// Extend jsPDF type to include autoTable
-declare module "jspdf" {
-  interface jsPDF {
-    autoTable: (options: {
-      head?: string[][];
-      body?: string[][];
-      startY?: number;
-      margin?: { left?: number };
-      styles?: { fontSize?: number; cellPadding?: number };
-      headStyles?: { fillColor?: number[]; textColor?: number[]; fontStyle?: string };
-      tableWidth?: number;
-      columnStyles?: Record<string, unknown>;
-    }) => jsPDF;
-    lastAutoTable: {
-      finalY: number;
+// Simple jsPDF interface without autoTable
+interface SimplePDF {
+  internal: {
+    pageSize: {
+      getWidth(): number;
+      getHeight(): number;
     };
-  }
+  };
+  setFontSize(size: number): void;
+  setFont(fontName: string, fontStyle: string): void;
+  splitTextToSize(text: string, maxWidth: number): string[];
+  text(text: string | string[], x: number, y: number): void;
+  addPage(): void;
+  save(filename: string): void;
+  setDrawColor(r: number, g: number, b: number): void;
+  setFillColor(r: number, g: number, b: number): void;
+  rect(
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    style?: string
+  ): void;
+  line(x1: number, y1: number, x2: number, y2: number): void;
+  getTextWidth(text: string): number;
 }
 
 interface PDFCategory {
@@ -39,9 +45,115 @@ interface PDFData {
 export function PDFDownloadButton() {
   const [isGenerating, setIsGenerating] = useState(false);
 
+  // Helper function to clean Unicode characters that cause spacing issues in jsPDF
+  const cleanUnicodeText = (text: string): string => {
+    return text
+      .replace(/→/g, "->") // Replace arrow with ASCII equivalent
+      .replace(/[""]/g, '"') // Replace smart quotes with regular quotes
+      .replace(/['']/g, "'") // Replace smart apostrophes with regular apostrophes
+      .replace(/[–—]/g, "-") // Replace em/en dashes with hyphens
+      .replace(/[…]/g, "...") // Replace ellipsis with three dots
+      .replace(/≥/g, ">=") // Replace greater than or equal
+      .replace(/≤/g, "<=") // Replace less than or equal
+      .replace(/≠/g, "!=") // Replace not equal
+      .replace(/×/g, "x") // Replace multiplication sign
+      .replace(/÷/g, "/") // Replace division sign
+      .replace(/±/g, "+/-") // Replace plus-minus
+      .replace(/°/g, " degrees"); // Replace degree symbol
+  };
+
+  const drawTable = (
+    pdf: SimplePDF,
+    headers: string[],
+    rows: string[][],
+    startX: number,
+    startY: number,
+    maxWidth: number,
+    pageHeight: number,
+    margin: number
+  ) => {
+    const colCount = headers.length;
+    const colWidth = maxWidth / colCount;
+    const rowHeight = 8;
+    let currentY = startY;
+
+    // Set table styling
+    pdf.setDrawColor(0, 0, 0);
+    pdf.setFillColor(240, 240, 240);
+    pdf.setFontSize(9);
+
+    // Draw header row
+    pdf.setFont("helvetica", "bold");
+
+    // Header background
+    pdf.rect(startX, currentY, maxWidth, rowHeight, "F");
+
+    // Header text and borders
+    for (let i = 0; i < headers.length; i++) {
+      const cellX = startX + i * colWidth;
+      const textLines = pdf.splitTextToSize(headers[i], colWidth - 2);
+
+      // Draw cell border (stroke only)
+      pdf.rect(cellX, currentY, colWidth, rowHeight, "S");
+
+      // Draw text
+      const headerText = Array.isArray(textLines[0]) ? textLines[0].join(' ') : (textLines[0] || "");
+      pdf.text(headerText, cellX + 1, currentY + 6);
+    }
+
+    currentY += rowHeight;
+
+    // Draw data rows
+    pdf.setFont("helvetica", "normal");
+    pdf.setFillColor(255, 255, 255);
+
+    for (const row of rows) {
+      // Check if we need a new page
+      if (currentY + rowHeight > pageHeight - margin) {
+        pdf.addPage();
+        currentY = margin;
+
+        // Redraw header on new page
+        pdf.setFont("helvetica", "bold");
+        pdf.setFillColor(240, 240, 240);
+        pdf.rect(startX, currentY, maxWidth, rowHeight, "F");
+
+        for (let i = 0; i < headers.length; i++) {
+          const cellX = startX + i * colWidth;
+          const textLines = pdf.splitTextToSize(headers[i], colWidth - 2);
+          pdf.rect(cellX, currentY, colWidth, rowHeight, "S");
+          const headerText = Array.isArray(textLines[0]) ? textLines[0].join(' ') : (textLines[0] || "");
+          pdf.text(headerText, cellX + 1, currentY + 6);
+        }
+
+        currentY += rowHeight;
+        pdf.setFont("helvetica", "normal");
+        pdf.setFillColor(255, 255, 255);
+      }
+
+      // Draw cells (no background fill for data rows)
+      for (let i = 0; i < Math.min(row.length, headers.length); i++) {
+        const cellX = startX + i * colWidth;
+        const cellText = row[i] || "";
+        const textLines = pdf.splitTextToSize(cellText, colWidth - 2);
+
+        // Draw cell border (stroke only, no fill)
+        pdf.rect(cellX, currentY, colWidth, rowHeight, "S");
+
+        // Draw text (only first line if too long)
+        const cellTextLine = Array.isArray(textLines[0]) ? textLines[0].join(' ') : (textLines[0] || "");
+        pdf.text(cellTextLine, cellX + 1, currentY + 6);
+      }
+
+      currentY += rowHeight;
+    }
+
+    return currentY + 6; // Add some space after table
+  };
+
   const processContentWithTables = (
     content: string,
-    pdf: jsPDF,
+    pdf: SimplePDF,
     xPosition: number,
     maxWidth: number,
     startY: number,
@@ -52,7 +164,12 @@ export function PDFDownloadButton() {
 
     // Split content by tables
     const tableRegex = /^\|(.+)\|\s*\n\|[-:\s|]+\|\s*\n((?:\|.+\|\s*\n?)*)/gm;
-    const parts = [];
+    const parts: Array<{
+      type: string;
+      content?: string;
+      headers?: string[];
+      rows?: string[][];
+    }> = [];
     let lastIndex = 0;
     let match;
 
@@ -72,7 +189,7 @@ export function PDFDownloadButton() {
       // Parse headers
       const headers = headerRow
         .split("|")
-        .map((h) => h.trim())
+        .map((h) => cleanUnicodeText(h.trim()))
         .filter((h) => h);
 
       // Parse body rows
@@ -82,7 +199,7 @@ export function PDFDownloadButton() {
         .map((row) =>
           row
             .split("|")
-            .map((cell) => cell.trim())
+            .map((cell) => cleanUnicodeText(cell.trim()))
             .filter((cell) => cell)
         )
         .filter((row) => row.length > 0);
@@ -106,9 +223,9 @@ export function PDFDownloadButton() {
 
     // Process each part
     for (const part of parts) {
-      if (part.type === "text") {
+      if (part.type === "text" && part.content) {
         // Clean and format regular text
-        const cleanText = part.content
+        let cleanText = part.content
           .replace(/#{1,6}\s*(.+)/g, "$1") // Convert headers to plain text
           .replace(/\*\*(.*?)\*\*/g, "$1") // Remove bold markdown
           .replace(/\*(.*?)\*/g, "$1") // Remove italic markdown
@@ -120,6 +237,9 @@ export function PDFDownloadButton() {
           .replace(/\n{3,}/g, "\n\n") // Reduce excessive newlines
           .replace(/^\s+|\s+$/gm, "") // Trim each line
           .trim();
+        
+        // Clean Unicode characters
+        cleanText = cleanUnicodeText(cleanText);
 
         if (cleanText) {
           pdf.setFontSize(10);
@@ -133,40 +253,33 @@ export function PDFDownloadButton() {
               yPosition = margin;
             }
 
-            pdf.text(textLines[i], xPosition, yPosition);
+            // Ensure we're passing a string, not an array
+            const lineText = Array.isArray(textLines[i]) ? textLines[i].join(' ') : textLines[i];
+            pdf.text(lineText, xPosition, yPosition);
             yPosition += 4;
           }
 
           yPosition += 6; // Space after text block
         }
-      } else if (part.type === "table") {
+      } else if (part.type === "table" && part.headers && part.rows) {
         // Check if we need a new page for the table
-        const estimatedTableHeight = (part.rows.length + 2) * 8; // Rough estimate
+        const estimatedTableHeight = (part.rows.length + 2) * 8;
         if (yPosition + estimatedTableHeight > pageHeight - margin) {
           pdf.addPage();
           yPosition = margin;
         }
 
-        // Create table with autoTable
-        pdf.autoTable({
-          head: [part.headers],
-          body: part.rows,
-          startY: yPosition,
-          margin: { left: xPosition },
-          styles: {
-            fontSize: 9,
-            cellPadding: 2,
-          },
-          headStyles: {
-            fillColor: [240, 240, 240],
-            textColor: [0, 0, 0],
-            fontStyle: "bold",
-          },
-          tableWidth: maxWidth,
-          columnStyles: {},
-        });
-
-        yPosition = pdf.lastAutoTable.finalY + 6;
+        // Draw custom table
+        yPosition = drawTable(
+          pdf,
+          part.headers,
+          part.rows,
+          xPosition,
+          yPosition,
+          maxWidth,
+          pageHeight,
+          margin
+        );
       }
     }
 
@@ -177,6 +290,9 @@ export function PDFDownloadButton() {
     setIsGenerating(true);
 
     try {
+      // Import only jsPDF - no autoTable plugin needed
+      const { default: jsPDF } = await import("jspdf");
+
       // Fetch the structured content data
       const response = await fetch("/api/pdf-download");
       const pdfData: PDFData = await response.json();
@@ -190,7 +306,7 @@ export function PDFDownloadButton() {
         orientation: "portrait",
         unit: "mm",
         format: "a4",
-      });
+      }) as SimplePDF;
 
       const pageWidth = pdf.internal.pageSize.getWidth();
       const pageHeight = pdf.internal.pageSize.getHeight();
@@ -202,7 +318,12 @@ export function PDFDownloadButton() {
       pdf.setFontSize(24);
       pdf.setFont("helvetica", "bold");
       const titleLines = pdf.splitTextToSize(pdfData.title, maxWidth);
-      pdf.text(titleLines, margin, yPosition);
+      
+      // Render title lines properly
+      for (let i = 0; i < titleLines.length; i++) {
+        const titleText = Array.isArray(titleLines[i]) ? titleLines[i].join(' ') : titleLines[i];
+        pdf.text(titleText, margin, yPosition + (i * 12));
+      }
       yPosition += titleLines.length * 12 + 20;
 
       pdf.setFontSize(12);
@@ -232,7 +353,12 @@ export function PDFDownloadButton() {
         }
 
         const categoryLines = pdf.splitTextToSize(category.name, maxWidth);
-        pdf.text(categoryLines, margin, yPosition);
+        
+        // Render category lines properly
+        for (let i = 0; i < categoryLines.length; i++) {
+          const categoryText = Array.isArray(categoryLines[i]) ? categoryLines[i].join(' ') : categoryLines[i];
+          pdf.text(categoryText, margin, yPosition + (i * 8));
+        }
         yPosition += categoryLines.length * 8 + 10;
 
         // Add sections within category
@@ -256,7 +382,12 @@ export function PDFDownloadButton() {
             section.title,
             maxWidth - indent
           );
-          pdf.text(sectionTitleLines, margin + indent, yPosition);
+          
+          // Render section title lines properly
+          for (let i = 0; i < sectionTitleLines.length; i++) {
+            const sectionText = Array.isArray(sectionTitleLines[i]) ? sectionTitleLines[i].join(' ') : sectionTitleLines[i];
+            pdf.text(sectionText, margin + indent, yPosition + (i * (titleFontSize * 0.35)));
+          }
           yPosition += sectionTitleLines.length * (titleFontSize * 0.35) + 6;
 
           // Process content to handle tables and regular text separately
