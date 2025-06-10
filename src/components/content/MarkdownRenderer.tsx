@@ -118,7 +118,7 @@ const mdxComponents = {
 
   ol: ({ children, ...props }: ComponentProps) => (
     <ol
-      className="list-decimal list-inside mb-4 text-muted-foreground space-y-1"
+      className="list-decimal list-outside mb-4 text-muted-foreground space-y-1 pl-6"
       {...props}
     >
       {children}
