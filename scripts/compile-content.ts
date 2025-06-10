@@ -446,11 +446,12 @@ function splitContent(
     // Extract content for this section
     let sectionContent = content.slice(startPos, endPos).trim();
     
-    // For parent sections, include content that appears before any child headers
-    // This ensures introductory content for classes/subclasses is captured
+    // Check if this section has children (subsections)
+    let hasChildren = false;
     if (i + 1 < matches.length) {
       const nextLevel = matches[i + 1].level;
       if (nextLevel > currentMatch.level) {
+        hasChildren = true;
         // This section has children - include all content up to the first child
         const contentBeforeChildren = content.slice(startPos, matches[i + 1].index).trim();
         sectionContent = contentBeforeChildren;
@@ -474,8 +475,8 @@ function splitContent(
         content: sectionContent,
         level: currentMatch.level,
       });
-    } else if (sectionContent.length > 0) {
-      // For non-level-1 sections, only add if they have meaningful content
+    } else if (sectionContent.length > 0 || hasChildren) {
+      // For non-level-1 sections, add if they have content OR children
       sections.push({
         title: currentMatch.title,
         content: sectionContent,

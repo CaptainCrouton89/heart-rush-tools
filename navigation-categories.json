@@ -8,7 +8,6 @@
       "name": "Character Creation",
       "sections": [
         "Building_Your_Character",
-        "Advanced_Character_Creation",
         "Kin_&_Culture",
         "Classes",
         "Talents",
@@ -47,6 +46,7 @@
         "Chase",
         "Mounted_Combat_&_Mounts",
         "Strongholds",
+        "Paths",
         "Misc._Other_Rules"
       ]
     }
