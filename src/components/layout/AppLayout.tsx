@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Sidebar } from './Sidebar';
-import { initializeSearchIndex } from '../../lib/search';
+import { useEffect, useState } from "react";
+import { initializeSearchIndex } from "../../lib/search";
+import { Sidebar } from "./Sidebar";
 
 interface AppLayoutProps {
   children: React.ReactNode;
@@ -13,8 +13,8 @@ export function AppLayout({ children }: AppLayoutProps) {
 
   useEffect(() => {
     // Initialize search index on app startup
-    initializeSearchIndex().catch(error => {
-      console.error('Failed to initialize search index:', error);
+    initializeSearchIndex().catch((error) => {
+      console.error("Failed to initialize search index:", error);
     });
   }, []);
 
@@ -23,10 +23,10 @@ export function AppLayout({ children }: AppLayoutProps) {
   };
 
   return (
-    <div className="flex h-screen bg-background">
+    <div className="flex h-screen bg-background transition-all duration-300">
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onToggle={toggleSidebar} />
-      
+
       {/* Main content area */}
       <div className="flex-1 flex flex-col lg:ml-0 min-w-0">
         {/* Mobile header */}
@@ -37,23 +37,27 @@ export function AppLayout({ children }: AppLayoutProps) {
               className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent"
               aria-label="Open sidebar"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
-            
-            <h1 className="text-lg font-semibold text-primary">
-              Heart Rush
-            </h1>
-            
+            <h1 className="text-lg font-semibold text-primary">Heart Rush</h1>
             <div className="w-10" /> {/* Spacer for centering */}
           </div>
         </header>
 
         {/* Page content */}
-        <main className="flex-1 overflow-y-auto p-6">
-          {children}
-        </main>
+        <main className="flex-1 overflow-y-auto p-6">{children}</main>
       </div>
     </div>
   );

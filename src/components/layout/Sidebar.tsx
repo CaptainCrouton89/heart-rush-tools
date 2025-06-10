@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { NavigationTree } from './NavigationTree';
-import { SearchInput } from '../search/SearchInput';
-import { SearchResults } from '../search/SearchResults';
-import { ThemeToggle } from './ThemeToggle';
-import { CategorizedNavigationNode, SearchResult } from '../../types/content';
-import { useGM } from '../../context/GMContext';
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useGM } from "../../context/GMContext";
+import { CategorizedNavigationNode, SearchResult } from "../../types/content";
+import { SearchInput } from "../search/SearchInput";
+import { SearchResults } from "../search/SearchResults";
+import { NavigationTree } from "./NavigationTree";
+import { ThemeToggle } from "./ThemeToggle";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -19,20 +19,20 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   const [navigation, setNavigation] = useState<CategorizedNavigationNode[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [showSearchResults, setShowSearchResults] = useState(false);
 
   useEffect(() => {
     const loadNavigation = async () => {
       try {
         // Fetch navigation from API route (GM or regular)
-        const endpoint = isGMMode ? '/api/gm/navigation' : '/api/navigation';
+        const endpoint = isGMMode ? "/api/gm/navigation" : "/api/navigation";
         const response = await fetch(endpoint);
-        if (!response.ok) throw new Error('Failed to fetch navigation');
+        if (!response.ok) throw new Error("Failed to fetch navigation");
         const nav = await response.json();
         setNavigation(nav);
       } catch (error) {
-        console.error('Failed to load navigation:', error);
+        console.error("Failed to load navigation:", error);
         setNavigation([]); // Fallback to empty array
       } finally {
         setLoading(false);
@@ -55,34 +55,39 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   const handleCloseSearch = () => {
     setShowSearchResults(false);
     setSearchResults([]);
-    setSearchQuery('');
+    setSearchQuery("");
   };
 
   return (
     <>
       {/* Mobile overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-40 bg-black bg-opacity-50 lg:hidden"
           onClick={onToggle}
         />
       )}
-      
+
       {/* Sidebar */}
-      <aside 
+      <aside
         className={`
           fixed lg:static inset-y-0 left-0 z-50 w-80
           bg-card border-r border-border
           transform transition-transform duration-200 ease-in-out
-          ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-          flex flex-col h-screen overflow-hidden
+          ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
+          flex flex-col h-screen overflow-hidden transition-colors
         `}
       >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-border bg-gradient-to-r from-primary/5 to-secondary/5">
-          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+          <Link
+            href="/"
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+          >
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">HR</span>
+              <span className="text-primary-foreground font-bold text-sm">
+                HR
+              </span>
             </div>
             <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Heart Rush
@@ -95,8 +100,18 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
               className="lg:hidden p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
               aria-label="Close sidebar"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
@@ -104,7 +119,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
 
         {/* Search */}
         <div className="p-4 border-b border-border relative">
-          <SearchInput 
+          <SearchInput
             onResults={handleSearchResults}
             onQueryChange={handleQueryChange}
             onClose={handleCloseSearch}
@@ -147,18 +162,22 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
                   onChange={(e) => setGMMode(e.target.checked)}
                   className="sr-only"
                 />
-                <div className={`w-10 h-5 rounded-full transition-colors ${
-                  isGMMode ? 'bg-primary' : 'bg-muted'
-                }`}>
-                  <div className={`w-4 h-4 rounded-full bg-white transition-transform ${
-                    isGMMode ? 'translate-x-5' : 'translate-x-0.5'
-                  } translate-y-0.5`} />
+                <div
+                  className={`w-10 h-5 rounded-full transition-colors ${
+                    isGMMode ? "bg-primary" : "bg-muted"
+                  }`}
+                >
+                  <div
+                    className={`w-4 h-4 rounded-full bg-white transition-transform ${
+                      isGMMode ? "translate-x-5" : "translate-x-0.5"
+                    } translate-y-0.5`}
+                  />
                 </div>
               </div>
               <span className="text-xs text-muted-foreground">GM</span>
             </label>
           </div>
-          
+
           <p className="text-xs text-muted-foreground text-center">
             Heart Rush TTRPG Reference
           </p>

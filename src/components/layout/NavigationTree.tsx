@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useGM } from "../../context/GMContext";
-import { NavigationNode, CategorizedNavigationNode } from "../../types/content";
+import { CategorizedNavigationNode, NavigationNode } from "../../types/content";
 
 interface NavigationTreeProps {
   nodes: NavigationNode[] | CategorizedNavigationNode[];
@@ -45,9 +45,9 @@ function NavigationItem({
   onToggle,
 }: NavigationItemProps) {
   const { isGMMode } = useGM();
-  
+
   // Handle categorized navigation nodes
-  if ('type' in node && node.type === 'category') {
+  if ("type" in node && node.type === "category") {
     return (
       <div>
         <CategoryHeader name={node.name!} />
@@ -67,8 +67,8 @@ function NavigationItem({
   // Handle regular navigation nodes
   const hasChildren = node.children && node.children.length > 0;
   const indent = level * 32; // Much larger indentation for clear hierarchy
-  const nodeSlug = 'slug' in node ? node.slug : '';
-  const nodeTitle = 'title' in node ? node.title : '';
+  const nodeSlug = "slug" in node ? node.slug : "";
+  const nodeTitle = "title" in node ? node.title : "";
 
   const handleItemClick = (e: React.MouseEvent) => {
     // Don't navigate if clicking the expand/collapse button
@@ -91,7 +91,7 @@ function NavigationItem({
           flex items-center py-2 px-2 rounded-md text-sm block transition-all duration-200
           ${
             isActive
-              ? "bg-gradient-to-r from-primary/25 to-secondary/15 text-primary shadow-sm border-l-2 border-primary"
+              ? "bg-gradient-to-r from-primary/25 to-accent/20 text-primary shadow-sm border-l-2 border-primary"
               : `text-foreground hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 
                hover:text-primary hover:border-l-2 hover:border-primary/50 hover:shadow-sm
                ${level > 0 ? "hover:ml-1" : ""}`
@@ -183,15 +183,17 @@ export function NavigationTree({
 
   // Auto-open nodes in active path
   useEffect(() => {
-    const isInActivePath = (node: NavigationNode | CategorizedNavigationNode): boolean => {
-      if ('type' in node && node.type === 'category') {
+    const isInActivePath = (
+      node: NavigationNode | CategorizedNavigationNode
+    ): boolean => {
+      if ("type" in node && node.type === "category") {
         if (node.children) {
           return node.children.some((child) => isInActivePath(child));
         }
         return false;
       }
-      
-      const nodeSlug = 'slug' in node ? node.slug : '';
+
+      const nodeSlug = "slug" in node ? node.slug : "";
       const expectedPath = isGMMode ? `/gm/${nodeSlug}` : `/${nodeSlug}`;
       if (pathname === expectedPath) return true;
       if (node.children) {
@@ -200,20 +202,24 @@ export function NavigationTree({
       return false;
     };
 
-    const findActivePath = (nodes: (NavigationNode | CategorizedNavigationNode)[]): string[] => {
+    const findActivePath = (
+      nodes: (NavigationNode | CategorizedNavigationNode)[]
+    ): string[] => {
       for (const node of nodes) {
         if (isInActivePath(node)) {
-          if ('type' in node && node.type === 'category') {
+          if ("type" in node && node.type === "category") {
             if (node.children) {
               return findActivePath(node.children);
             }
           } else {
-            const nodeSlug = 'slug' in node ? node.slug : '';
+            const nodeSlug = "slug" in node ? node.slug : "";
             if (
               node.children &&
               node.children.some((child) => isInActivePath(child))
             ) {
-              return nodeSlug ? [nodeSlug, ...findActivePath(node.children)] : findActivePath(node.children);
+              return nodeSlug
+                ? [nodeSlug, ...findActivePath(node.children)]
+                : findActivePath(node.children);
             }
             return nodeSlug ? [nodeSlug] : [];
           }
@@ -229,21 +235,25 @@ export function NavigationTree({
   return (
     <div className="space-y-1">
       {nodes.map((node, index) => {
-        const key = 'type' in node && node.type === 'category' 
-          ? `category-${node.name}-${index}` 
-          : ('slug' in node ? node.slug : `node-${index}`);
-        
-        const nodeSlug = 'slug' in node ? node.slug : '';
-        
+        const key =
+          "type" in node && node.type === "category"
+            ? `category-${node.name}-${index}`
+            : "slug" in node
+            ? node.slug
+            : `node-${index}`;
+
+        const nodeSlug = "slug" in node ? node.slug : "";
+
         return (
           <NavigationItem
             key={key}
             node={node}
             onNavigate={onNavigate}
             level={level}
-            isActive={
-              Boolean(nodeSlug && pathname === (isGMMode ? `/gm/${nodeSlug}` : `/${nodeSlug}`))
-            }
+            isActive={Boolean(
+              nodeSlug &&
+                pathname === (isGMMode ? `/gm/${nodeSlug}` : `/${nodeSlug}`)
+            )}
             isOpen={nodeSlug ? openNodes.has(nodeSlug) : false}
             onToggle={() => nodeSlug && toggleNode(nodeSlug)}
           />

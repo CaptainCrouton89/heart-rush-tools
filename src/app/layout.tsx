@@ -1,27 +1,28 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import { AppLayout } from "../components/layout/AppLayout";
 import { ThemeProvider } from "../components/layout/ThemeProvider";
 import { GMProvider } from "../context/GMContext";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: 'swap',
+  display: "swap",
   preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: 'swap',
+  display: "swap",
   preload: true,
 });
 
 export const metadata: Metadata = {
   title: "Heart Rush TTRPG Reference",
-  description: "Complete reference guide for the Heart Rush tabletop RPG system",
+  description:
+    "Complete reference guide for the Heart Rush tabletop RPG system",
 };
 
 export default function RootLayout({
@@ -62,9 +63,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <GMProvider>
-            <AppLayout>
-              {children}
-            </AppLayout>
+            <AppLayout>{children}</AppLayout>
           </GMProvider>
         </ThemeProvider>
       </body>
