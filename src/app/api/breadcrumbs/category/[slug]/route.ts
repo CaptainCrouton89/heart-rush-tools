@@ -12,10 +12,10 @@ function generateCategorySlug(name: string): string {
 
 export async function GET(
   request: Request,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const categorySlug = params.slug;
+    const { slug: categorySlug } = await params;
     
     if (!categorySlug) {
       return NextResponse.json(
