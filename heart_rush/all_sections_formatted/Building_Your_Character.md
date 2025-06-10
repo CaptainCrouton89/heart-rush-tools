@@ -197,11 +197,11 @@ The key is achieving something significant to your profession, not following a s
 
 Choose up to three professions and distribute ranks between them based on your age category:
 
-- **Young**: 3 ranks to distribute (e.g., one profession at rank 2 and one at rank 1)
+- **Young**: 2 ranks to distribute (e.g., one profession at rank 2)
 - **Adult**: 4 ranks to distribute (e.g., one profession at rank 3 and one at rank 1)
 - **Elderly**: 5 ranks to distribute (e.g., one profession at rank 3 and two at rank 1)
 
-These initial ranks are free and reflect your life before adventuring.
+These initial ranks are free and reflect your life before adventuring. You cannot distribute more than 3 ranks to a single profession.
 
 ### Profession Application
 
