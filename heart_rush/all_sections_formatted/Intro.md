@@ -1,52 +1,70 @@
-# Heart Rush TTRPG Overview
+# A Brief Intro
 
-Heart Rush is a crunchy, fantasy TTRPG ruleset. And it does combat really well.
+Heart Rush is a crunchy fantasy TTRPG that does one thing exceptionally well: dangerous, tactical combat that actually moves fast. But here's the kicker—it scales seamlessly from gritty street fights to conquering kingdoms.
 
-## Comparison to Average Fantasy TTRPG
+## What Makes Heart Rush Different
 
-Here's how Heart Rush compares to the average fantasy TTRPG:
+Let's cut to the chase. Here's what you're getting:
 
-- Crunchy. There aren't tons of tables, and the math isn't too bad, but this is far from “rules-lite”.
-- It's grittier and more simulationist. Healing is slow, and fighting is dangerous. You probably won't die, but it'll feel like you're going to.
-- Each round of combat is unique. The core mechanics of combat discourage being predictable. This is a cornerstone of the Heart Rush rules.
-- Fast, tactical combat. Seriously. You've got lots of important decisions to make each round, and it doesn't slow down the game since everyone's making decisions in parallel.
-- Highly cooperative. Each class is designed to be played with the other classes, and will be best at allowing the other classes to shine. Everyone feels special.
-- You'll feel heroic eventually, but not for a while. And when you do, it's mainly because you've done really difficult things, not because you have heroic abilities.
-- Constant leveling. You don't have to wait for the level up—spend XP on a variety of stuff at different costs to improve your character.
-- Wild character design. A barbarian wizard, ninja detective, or fire-bender assassin are all totally viable builds.
-- Extremely flexible trait system. Plain English descriptions of your character result in mechanical bonuses and concrete hooks that drive the story forward.
-- Hyper-flexible elemental magic. For example, you can be an air-bender and do all the things you should be able to do as an air-bender. And it's not tied to any class, so you can tack that onto whatever type of build you want.
-- Fail-forward mechanics. The story won't always grind to a halt on failures.
+**Combat That Terrifies (In the Best Way)**
 
-## Why Should I Run This as a GM?
+- **Gritty and simulationist.** Healing is slow, wounds matter, and every fight feels consequential.
+- **You probably won't die—but it'll feel like you will.** The system creates genuine fear without constant character death.
+- **Each round is unique.** The mechanics actively promote varying tactics—no spamming the same combo.
+- **Fast, tactical combat.** Everyone decides simultaneously, so complex fights flow while demanding crucial decisions.
+- **Highly cooperative.** Classes aren't balanced—they're designed to make each other shine through devastating combos.
 
-Heart Rush is probably not going to feel that different to run compared to most crunchy fantasy TTRPGs. However, it does try to balance the crunch with more narrative-forward elements. The two I want to highlight are the aspect system, and the skill check complications.
+**Crunchy Without the Crunch**
 
-### Aspect System
+- **Crunchy, not rules-lite.** There's mechanical depth here, but without drowning in tables or brutal math.
+- **Fail-forward mechanics.** Failed rolls create complications, not dead ends—the story keeps moving.
+- **Fiction-forward design.** If you can imagine it, there's probably a way to do it within the system.
 
-With aspects, players will describe their character in plain English. The mechanics will incentivize them to have both positive and negative descriptions, and then to actually RP them out in play.
+**Scale Without the Spreadsheets**
 
-As the GM, you don't have to keep track of your players and their flaws and reward them when they're good; they'll let you know exactly when, and they will go out of their way to complicate the story in a way appropriate to their character, because doing so is the only way they can use the positive sides of their aspects.
+- **Zoom in for tactics, zoom out for strategy.** One flexible system handles everything from bar brawls to kingdom management.
+- **Start desperate, end legendary.** Begin counting copper as struggling mercenaries, end as rulers shaping nations.
+- **You'll feel heroic eventually—but you'll earn it.** Power comes from surviving impossible odds, not from class features.
 
-The system is self-balancing, and places the vast majority of the work on the players themselves. The end result is players helping you tell a more interesting story.
+**Character Building Without Limits**
 
-### Skill Check Complications
+- **Wild character design.** Barbarian wizard? Ninja detective? Fire-bending assassin? All completely viable.
+- **Constant leveling.** Spend XP whenever you want on whatever you want—no waiting for arbitrary milestones.
+- **Extremely flexible trait system.** Plain English descriptions become actual mechanics—"terrible gambler" isn't just flavor.
+- **Hyper-flexible elemental magic.** Air-benders can do all the air-bender things, and it's not tied to any class.
 
-Complications are a mechanic that come into play when players are making skill checks. When they roll, they sometimes have the chance to replace a bad roll with a better roll that has negative, unrelated side effects.
+## For GMs: Why Run This?
 
-Those negative, unrelated side effects are up to you to decide, but in my experience they're quite easy to come up with. When the players have voluntarily chosen to take a complication, it's a golden ticket for you to make the situation worse in the most narratively satisfying way, without players feeling like it's unfair.
+Heart Rush respects your time and sanity:
 
-## Why Should I Play as a Player?
+**Combat That Forgives**: The system's inherent danger creates tension even when players have advantages. Mess up the encounter balance? Still feels epic.
 
-This game is for people who like combat and mechanics and getting into the weeds of character design and optimization. Heart Rush has other stuff going on too, but if you actively don't like those things, you'll be missing out on a lot of what Heart Rush has to offer.
+**One System, Infinite Uses**: Criminal empires, naval battles, dungeon delves—you've got mechanics that scale to any ambition without hunting through supplements.
 
-As a quick list, you will like Heart Rush if:
+**Players Do the Heavy Lifting**:
 
-- You like making a smart tactical play, but hate having to wait five minutes every round to do so.
-- You like spending hours theory crafting strange character concepts that actually work.
-- You like coordinating with your allies and dunking on enemies through the power of synergy.
-- You like roleplaying flaws in your character, but want to get mechanically rewarded for it in gameplay.
-- You want to mix and match fantasy character tropes to make your own, creative archetypes.
-- You like grittier settings with crunch.
+- **Aspects**: Players write their character flaws, then actively seek ways to trigger them for benefits
+- **Complications**: Failed skill checks become opportunities for creative disasters
 
-Heart Rush isn't the perfect solution for every desire in a TTRPG. But it's a damn good one for some of them.
+Bottom line: The mechanics help players help you tell better stories.
+
+## For Players: Is This Your Game?
+
+You'll love Heart Rush if you:
+
+- Want tactical combat that respects your time
+- Like systems that grow with your character's ambitions
+- Enjoy theory-crafting builds that actually work in play
+- Prefer your fantasy with teeth and consequences
+
+You'll hate it if you:
+
+- Want to feel like superheroes from session one
+- Prefer purely narrative or rules-lite systems
+- Need consistent crunch levels for everything
+- Don't enjoy tactical decision-making
+
+[[The Real Reason You Might Love Heart Rush
+Like with many people, my first TTRPG was D&D. I loved the idea—fantasy, epic combat, conquer the world, get loot, grow powerful. Unfortunately, as I gained experience with the system (and others), I realized that the image that D&D is frequently sold on is not well represented in its actual mechanics. D&D is _sorta good_ at a lot of things, but their emphasis on making it approachable to new players, supporting every single fantasy trope ever, and (dare I say) occasionally lazy game design means that it suffers in other areas.
+
+That's when I began working on Heart Rush. It's 6 years old, seen thousands of hours of playtesting, and it does tactical, sandboxy, generic fantasy _extremely well_. It's the game that I always wished D&D had been, but isn't. A dangerously hot take, but I'll say it: Heart Rush is awesome.]]
