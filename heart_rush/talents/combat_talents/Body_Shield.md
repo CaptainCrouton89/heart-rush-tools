@@ -1,6 +1,6 @@
 ## Body Shield
 
-_Heart ability. Martial talent._
+_Heart ability. Instant. Martial talent._
 
 The next time you are hit by a melee attack from a source that is adjacent to both you and a creature you are grappling, if the attacking creature's stance did not directly beat your own, you may use the grappled creature as a body shield. Add the creature's defense bonus to your own and split the damage between you, rounding up.
 

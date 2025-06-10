@@ -1,6 +1,6 @@
 ## Predator
 
-_Major ability. Handmagic._
+_Major ability. Quick. Handmagic._
 
 As an action, you may snap your fingers to teleport to a creature you have dealt damage to in the last minute.
 

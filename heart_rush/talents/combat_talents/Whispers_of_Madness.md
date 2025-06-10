@@ -1,6 +1,6 @@
 ## Whispers of Madness
 
-_Major ability. Full action. Handmagic._
+_Major ability. Quick. Full action. Handmagic._
 
 As an action, you may lace otherworldly whispers into the mind of your target. They gain a level of dazed and shaken for the next minute as they try to remain focused.
 

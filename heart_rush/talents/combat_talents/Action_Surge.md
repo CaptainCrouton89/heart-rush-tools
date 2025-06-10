@@ -1,6 +1,6 @@
 ## Action Surge
 
-_Major ability. Martial talent._
+_Major ability. Quick. Martial talent._
 
 You push your body and mind beyond normal limits, moving with impossible speed and precision. When you use this ability on your turn, immediately gain an additional action that must be used during this same turn. This action follows all normal rules and restrictions, and you may use other major abilities with this extra action.
 

@@ -1,6 +1,6 @@
 ## Double Shot
 
-_Major ability. Martial talent._
+_Major ability. Quick. Martial talent._
 
 You may enter a second engagement with a ranged weapon this round.
 

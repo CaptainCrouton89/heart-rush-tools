@@ -1,6 +1,6 @@
 ## Adrenaline spike
 
-_Major ability. Handmagic._
+_Major ability. Quick. Handmagic._
 
 Increase the size of an ability die for a single roll. You can't increase the size of the die beyond a d12.
 

@@ -1,6 +1,6 @@
 ## Divine Weapon
 
-_Major ability. Cognitive talent._
+_Major ability. Quick. Cognitive talent._
 
 Through the favor you hold with your patron, you may channel their power into your weapon, granting it magical properties for the next minute. Whenever you use this ability, your weapon takes on features that resemble the values of the patron you worship, and you get +2 on all of your attack rolls with that weapon.
 You may instead spend a minute in prayer to activate this ability with double its effect.
