@@ -35,12 +35,20 @@ interface NavigationCategory {
 interface CategorizedNavigationItem {
   type: 'category' | 'section';
   name?: string; // For category headers
-  slug?: string; // For sections
+  slug?: string; // For sections and categories
   title?: string; // For sections
   level?: number; // For sections
   parent?: string; // For sections
   order: number;
   children?: CategorizedNavigationItem[];
+}
+
+// Generate category slug from name
+function generateCategorySlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-");
 }
 
 const WORDS_PER_MINUTE = 200;
@@ -241,6 +249,7 @@ function createCategorizedNavigation(
     const categoryItem: CategorizedNavigationItem = {
       type: 'category',
       name: category.name,
+      slug: generateCategorySlug(category.name),
       order: i,
       children: []
     };

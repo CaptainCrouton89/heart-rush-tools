@@ -42,7 +42,7 @@ export default async function HomePage() {
                 Intro to Heart Rush
               </Link>
               <Link
-                href="/building-your-character"
+                href="/category/character-creation"
                 className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-full hover:bg-primary/90 transition-colors w-full text-center"
               >
                 Start Building →
@@ -101,36 +101,31 @@ export default async function HomePage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {navigation.map((section) => (
-            <div
-              key={section.slug}
-              className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-200 hover:border-primary/30"
+            <Link
+              key={section.slug || section.name}
+              href={section.type === 'category' ? `/category/${section.slug}` : `/${section.slug}`}
+              className="block bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-200 hover:border-primary/30"
             >
               <h3 className="text-lg font-semibold text-card-foreground mb-3">
-                {section.title}
+                {section.title || section.name}
               </h3>
 
               {section.children && section.children.length > 0 && (
                 <ul className="space-y-2 mb-4">
                   {section.children.slice(0, 3).map((child) => (
                     <li key={child.slug}>
-                      <Link
-                        href={`/${child.slug}`}
-                        className="text-primary hover:text-secondary hover:underline text-sm transition-colors"
-                      >
+                      <span className="text-primary text-sm transition-colors">
                         {child.title}
-                      </Link>
+                      </span>
                     </li>
                   ))}
                 </ul>
               )}
 
-              <Link
-                href={`/${section.slug}`}
-                className="inline-block text-muted-foreground hover:text-primary text-sm font-medium transition-colors"
-              >
-                Explore {section.title} →
-              </Link>
-            </div>
+              <span className="inline-block text-muted-foreground text-sm font-medium transition-colors">
+                Explore {section.title || section.name} →
+              </span>
+            </Link>
           ))}
         </div>
       </section>

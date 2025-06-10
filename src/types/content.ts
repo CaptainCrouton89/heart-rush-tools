@@ -31,7 +31,7 @@ export interface NavigationCategory {
 export interface CategorizedNavigationNode {
   type: 'category' | 'section';
   name?: string; // For category headers
-  slug?: string; // For sections
+  slug: string; // For sections and categories
   title?: string; // For sections
   level?: number; // For sections
   parent?: string; // For sections

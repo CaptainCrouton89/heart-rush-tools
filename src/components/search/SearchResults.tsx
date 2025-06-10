@@ -40,7 +40,7 @@ export function SearchResults({
           {part}
         </mark>
       ) : (
-        part
+        <span key={index}>{part}</span>
       )
     );
   };
