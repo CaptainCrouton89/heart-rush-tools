@@ -63,12 +63,11 @@ async function generateImage(prompt: string, filename: string): Promise<void> {
           ...(OPENAI_PROJECT_ID && { "OpenAI-Project": OPENAI_PROJECT_ID })
         },
         body: JSON.stringify({
-          model: "gpt-image-1",
+          model: "dall-e-3",
           prompt: prompt,
           n: 1,
           size: "1024x1024",
-          output_format: "png",
-          quality: "high"
+          quality: "hd"
         }),
       }
     );
