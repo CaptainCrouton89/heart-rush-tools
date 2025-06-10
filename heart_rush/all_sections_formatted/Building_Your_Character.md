@@ -84,6 +84,9 @@ When you take damage in Heart Rush, it can mean different things depending on ho
 
 ## Your Age and Experience
 
+[[Note
+These rules are optional. They add a little further granularity to character creation for groups that enjoy high degrees of customization. If you are new to Heart Rush, feel free to ignore these rules.]]
+
 Your character's age shapes their capabilities and approach to life. When creating your character, choose an age category that fits your concept: young, adult, or elderly. Each age brings its own advantages and challenges.
 
 ### Age Categories
@@ -431,7 +434,7 @@ Talents are specialized abilities that you know and can utilize. These act as a 
 
 ## Aspects
 
-For every facet of your character that cannot be described with abilities and skills, they can be described with aspects. Your aspects describe the features and traits from your personality, background, and experiences that make you distinct—both positive and negative.
+For every facet of your character that cannot be described with abilities and skills, they can be described with aspects. Your aspects describe the features and traits from your personality, relationships, and experiences that make you distinct—both positive and negative.
 
 When you first create your character, you gain three destiny points (DP). You will gain and lose DP each session as you spend them to benefit from your positive aspects and gain them by letting your negative ones shine through. If you ever start a session with fewer than three DP, you instead start with three DP. You cannot have more than 10 DP.
 
@@ -439,15 +442,15 @@ As you play your character, you will gather more aspects, and their impact will 
 
 ### Description
 
-The description describes the aspect as a whole, and should be a phrase or a few words to describe your character. It should be a significant personality trait, behavioral quirk, belief, ideal, self-proclaimed title, or some sort of reputation.
+The description describes the aspect as a whole, and should be a phrase or a few words to describe your character. It should be a significant personality trait, behavioral quirk, belief, ideal, physical characteristic, reputation, or relationship—but not your profession or background, which are represented separately.
 
 **Good aspect examples include:**
 
 - **Personality traits:** "Never met a stranger," "Perfectionist to a fault," "Speaks before thinking"
 - **Physical characteristics:** "Distinctive red hair," "Scarred hands tell stories," "Always cold"
 - **Beliefs and values:** "The truth must be preserved," "Children are the future," "Magic corrupts everything"
-- **Relationships:** "Owes the Thieves' Guild a favor," "Sworn enemy of House Blackwood"
-- **Background:** "Former city guard captain," "Temple orphan," "Traveling merchant's daughter"
+- **Relationships:** "Owes the Thieves' Guild a favor," "Sworn enemy of House Blackwood," "My sister's keeper"
+- **Reputations:** "Known for keeping promises," "The one who got away," "Cursed by the old gods"
 
 Do not choose generic things, like "good at most things" or "lucky", since they will apply to everything, or be too vague to decide if they should apply to a situation. If the GM says your aspect description is too generic, you need to choose a new one, or make it more specific.
 
@@ -456,7 +459,7 @@ Do not choose generic things, like "good at most things" or "lucky", since they 
 Next, the aspect gets a rank. The rank of an aspect represents how influential that aspect is over who you are, and will determine the modifier to your rolls. The rank will be a number between one and five, though in some cases it can be increased even further.
 
 [[Example  
-Let's say you have the aspects "Former city guard captain" at rank 2, and "The truth must be preserved" at rank 3. You're trying to convince the town guards to let you investigate a crime scene. You spend 2 DP to add +2 to your persuasion roll, drawing on your shared professional experience. Later, when negotiating with a corrupt official who's lying about evidence, you can't resist calling out their lies due to your truth-preserving nature—you gain 3 DP, but the negotiation becomes hostile.]]
+Let's say you have the aspects "Known for keeping promises" at rank 2, and "The truth must be preserved" at rank 3. You're trying to convince someone to trust you with sensitive information. You spend 2 DP to add +2 to your persuasion roll, as your reputation for reliability helps. Later, when negotiating with a corrupt official who's lying about evidence, you can't resist calling out their lies due to your truth-preserving nature—you gain 3 DP, but the negotiation becomes hostile.]]
 
 ### Using your Aspect For Bonuses
 
@@ -501,6 +504,7 @@ When creating an aspect, it is generally a good idea to have aspects with both p
 - **Only positive:** "Brilliant tactician" with no downside gives you no way to earn DP
 - **Too narrow:** "Afraid of blue flowers" rarely comes up in most adventures
 - **Purely mechanical:** "Gets +2 to sword fighting" lacks narrative interest
+- **Professional skills:** Your profession already covers your professional abilities
 
 #### Interconnected Aspects
 
