@@ -33,22 +33,26 @@
 }
 
 html.dark {
-  /* Lighter dark backgrounds for better contrast */
-  --background: #1f1412;
-  --foreground: #f5f1ee;
-  --card: #2a1f1c;
-  --card-foreground: #f5f1ee;
-  --border: #423530;
-  --input: #2a1f1c;
+  /* Red/orange-tinted dark backgrounds for better contrast */
+  --background: #151210;
+  --foreground: #f0eae5;
+  --card: #1c1815;
+  --card-foreground: #f0eae5;
+  --border: #352a25;
+  --input: #1c1815;
   --ring: #e85d42;
+  
+  /* Enhanced contrast colors with stronger red undertones */
+  --content-background: #191512;
+  --sidebar-background: #151210;
 
   /* More muted primary colors */
   --primary: #e85d42;
   --primary-foreground: #ffffff;
-  --secondary: #c4951e;
+  --secondary: #cc7a33;
   --secondary-foreground: #ffffff;
-  --accent: #d4af37;
-  --accent-foreground: #1f1412;
+  --accent: #e8845a;
+  --accent-foreground: #1a1513;
 
   /* Subtle hover states */
   --primary-hover: #f06b4a;
@@ -57,11 +61,17 @@ html.dark {
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
 
-  /* Better muted colors */
-  --muted: #2a1f1c;
-  --muted-foreground: #a8958f;
-  --popover: #2a1f1c;
-  --popover-foreground: #f5f1ee;
+  /* Red-tinted muted colors with improved readability */
+  --muted: #1c1815;
+  --muted-foreground: #c4b3a6;
+  --popover: #1c1815;
+  --popover-foreground: #f0eae5;
+  
+  /* Red/orange-themed interactive states */
+  --sidebar-hover: rgba(232, 93, 66, 0.08);
+  --sidebar-active: rgba(232, 93, 66, 0.15);
+  --code-background: rgba(232, 93, 66, 0.06);
+  --emphasis-color: #f4a373;
 }
 
 @theme inline {
@@ -87,6 +97,12 @@ html.dark {
   --color-muted-foreground: var(--muted-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+  --color-content-background: var(--content-background);
+  --color-sidebar-background: var(--sidebar-background);
+  --color-sidebar-hover: var(--sidebar-hover);
+  --color-sidebar-active: var(--sidebar-active);
+  --color-code-background: var(--code-background);
+  --color-emphasis-color: var(--emphasis-color);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
