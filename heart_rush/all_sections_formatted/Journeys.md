@@ -55,7 +55,7 @@ Each segment has a Challenge Number based on terrain and conditions:
 
 At the start of each segment, one character makes a journey roll. This is typically whoever is guiding the group—the best navigator, the local guide, or whoever has the most relevant expertise.
 
-**The roll:** Heart die + relevant ability die
+**The roll:** Heart die + relevant ability die + relevant skill + aspects
 
 **Choosing ability die:**
 

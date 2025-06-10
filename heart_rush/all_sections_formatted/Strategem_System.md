@@ -26,16 +26,20 @@ Stratagems are Heart Rush's "zoom out" mechanic—when you need to resolve compl
 
 When you pursue a stratagem objective, roll:
 
-**d100 + ability die + skill modifier (if applicable) vs CN**
+**d8 + ability die + skill + aspect (if applicable) vs CN**
 
-The d100 reflects the many variables and uncertainties inherent in complex, coordinated efforts. Your ability die represents your personal capability, while skills provide expertise in relevant areas.
+Unlike normal skill checks, stratagems use a flat d8 instead of your heart die—your stamina doesn't affect large-scale coordinated efforts. The d8 represents the baseline uncertainty in complex endeavors, while your ability die, skills, and aspects reflect your personal capability and expertise. This creates a similar range to skill checks (typically 3-20+) but with less variance from stamina.
+
+**Important**: Stratagem rolls cannot be helped by others and don't use other skill check modifiers. The coordination is already baked into the stratagem itself.
 
 ### Challenge Numbers
 
-- **Easy (CN 30)**: Favorable circumstances, minimal opposition
-- **Moderate (CN 50)**: Typical difficulty, competent opposition
-- **Hard (CN 70)**: Significant challenges, strong opposition
-- **Extreme (CN 90)**: Near-impossible odds, overwhelming opposition
+- **Fairly Easy (CN 6)**: Overwhelming advantages, token opposition
+- **Average (CN 9)**: Favorable circumstances, typical challenges
+- **Hard (CN 12)**: Significant obstacles, competent opposition
+- **Very Hard (CN 15)**: Strong opposition, major disadvantages
+- **Nearly Impossible (CN 18)**: Overwhelming odds, elite opposition
+- **Heroic (CN 21)**: Legendary difficulty, near-miraculous success required
 
 **Stakes are always transparent**—the GM announces the CN before you roll, allowing informed decisions about whether to intervene or accept the odds.
 
@@ -88,29 +92,36 @@ The GM:
 - Evaluates your assets (what makes you stronger than typical)
 - Evaluates your hindrances (what makes you weaker than typical)
 - Considers the opposition's current state
-- Sets and announces the final CN
+- Sets and announces the final CN (6/9/12/15/18/21)
 
 **4. Intervention (Optional)**
 Before rolling, you may take direct action to influence the stratagem. Your intervention can dramatically shift the odds—for better or worse.
 
 _Helpful interventions might:_
 
-- Assassinate enemy leadership (−40 CN)
-- Sabotage critical infrastructure (−20 CN)
-- Rally demoralized troops (−10 CN)
-- Secure insider information (gain asset)
+- Assassinate enemy leadership (−6 to −9 CN)
+- Sabotage critical infrastructure (−3 to −6 CN)
+- Rally demoralized troops (−3 CN)
+- Secure insider information (gain asset, −3 CN)
 
 _Harmful interventions might:_
 
-- Botch assassination attempt (+20 CN, gain "High Alert" hindrance)
-- Get captured while scouting (lose "Element of Surprise" asset)
-- Insult their culture during negotiations (+30 CN)
-- Reveal your plans accidentally (enemy gains asset)
+- Botch assassination attempt (+6 CN, gain "High Alert" hindrance)
+- Get captured while scouting (lose "Element of Surprise" asset, +3 CN)
+- Insult their culture during negotiations (+6 to +9 CN)
+- Reveal your plans accidentally (enemy gains asset, +3 CN)
 
-Interventions must make narrative sense and often trigger zoomed-in scenes.
+Interventions must make narrative sense and often trigger zoomed-in scenes. Major interventions can shift difficulty by one or two full difficulty steps (6-12 points on the CN scale), while minor ones typically adjust by 3 points (half a difficulty step).
 
 **5. Roll**
-The character spearheading the effort rolls. For distant management, this might be you rolling for your organization's efforts.
+The character spearheading the effort rolls:
+
+- **d8**: Your baseline (not affected by wounds or fatigue)
+- **Ability die**: Choose the most relevant ability (might, agility, cunning, or presence)
+- **Skill**: Add your skill rank if directly applicable, half rank if tangential
+- **Aspect**: Spend DP to add bonus if an aspect applies (as normal)
+
+For distant management, this might be you rolling for your organization's efforts.
 
 **6. Resolution**
 
@@ -175,6 +186,8 @@ Your disadvantages:
 3. Your hindrances impede you (increase CN)
 4. Opposition's state is considered separately
 5. Final CN is announced before rolling
+
+_Example_: Besieging a fortress might normally be CN 12 (Hard). Your "Veteran siege engineers" (−3) and "Superior artillery" (−3) reduce it to CN 6. But "Low on supplies" (+3) brings it to CN 9 (Average).
 
 ## Nested Stratagems
 
@@ -241,7 +254,7 @@ Stratagems let you handle the boring parts quickly while zooming in for drama:
 
 ### Player Agency Matters
 
-Stratagems aren't just dice rolls—direct intervention can swing impossible odds to your favor. That CN 90 siege becomes CN 50 if you seduce the enemy general. Players shape their fate.
+Stratagems aren't just dice rolls—direct intervention can swing impossible odds to your favor. That CN 21 siege could become CN 12 if you seduce the enemy general. Players shape their fate.
 
 ## Quick Reference
 
@@ -255,7 +268,7 @@ Stratagems aren't just dice rolls—direct intervention can swing impossible odd
 
 ### Action Sequence
 
-**Situation → Approach → Stakes (CN) → Intervention? → Roll → Resolution**
+**Situation → Approach → Stakes (CN) → Intervention? → Roll (d8 + ability + skill + aspect) → Resolution**
 
 ### Accumulation Guidelines
 
@@ -267,9 +280,11 @@ Stratagems aren't just dice rolls—direct intervention can swing impossible odd
 
 ### Standard CNs
 
-- **Easy**: 30
-- **Moderate**: 50
-- **Hard**: 70
-- **Extreme**: 90
+- **Fairly Easy**: 6
+- **Average**: 9
+- **Hard**: 12
+- **Very Hard**: 15
+- **Nearly Impossible**: 18
+- **Heroic**: 21
 
 Remember: Stratagems handle the tedious parts so you can focus on the fun. When in doubt, zoom out with a stratagem and zoom in for the exciting moments.

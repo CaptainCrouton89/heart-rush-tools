@@ -245,10 +245,12 @@ Use whichever ability is most relevant for the roll, or if no ability die fitsâ€
 
 Stratagem CNs use the same scale as skill checks, with difficulty based on assets and hindrances:
 
-- **CN 9**: Easy - Significant advantages or weak opposition
-- **CN 12**: Moderate - Balanced forces or standard difficulty
-- **CN 15**: Hard - Strong opposition or significant obstacles
-- **CN 18**: Extreme - Overwhelming odds or near-impossible circumstances
+- **CN 6**: Easy - Significant advantages or weak opposition
+- **CN 9**: Moderate - Balanced forces or standard difficulty
+- **CN 12**: Hard - Strong opposition or significant obstacles
+- **CN 15**: Very Hard - Overwhelming odds or near-impossible circumstances
+- **CN 18**: Nearly Impossible
+- **CN 21**: Heroic
 
 The GM evaluates your assets (advantages) against your hindrances (disadvantages) to set the final CN.
 
