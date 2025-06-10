@@ -10,6 +10,12 @@ So speak with your GM about the world in which the game takes place, and figure 
 
 Once you have come up with something, write this dream down somewhere. You may want to edit or add to it later.
 
+## Kin & Culture
+
+Everyone comes from a different background and has a different upbringing. When you create a character, choose a race from the Kin & Culture section. You gain the aspects and abilities that come from choosing that race (aspects and abilities will be explained later—for now, just pick a race that sounds cool).
+
+Many races have multiple heritages or subraces within that race. In that case, you gain the aspects and abilities of the race, as well as those of a chosen heritage. For example, the race Dwarf has a base ability, but then you may choose the subrace "Aureum" which includes two aspects and another ability.
+
 ## Your Vitals
 
 These are the core-most stats of your character. They represent the raw capabilities and limits of your mind and body.
@@ -22,17 +28,21 @@ When the game begins, you will start with some experience (XP). During the game 
 
 Players have four important stats—might, agility, cunning, and presence. These traits define your physical and mental abilities, and are used to determine the outcomes of nearly any difficult task you attempt to do.
 
-- **Might**  
-  Might is your strength, endurance, and fortitude. High might allows you to push through locked doors, lift heavy gates, resist poison, and run for miles without rest.
+#### Might
 
-- **Agility**  
-  Agility is your physical dexterity, speed, and reflexes. High agility allows you to dodge falling rocks, respond to threats faster, and perform a summersault on a tightrope.
+Might is your strength, endurance, and fortitude. High might allows you to push through locked doors, lift heavy gates, resist poison, and run for miles without rest.
 
-- **Cunning**  
-  Cunning is your intellect, wisdom, and senses. High cunning allows you to recall information you've learned, notice the nearly imperceptible, and discern fact from fiction.
+#### Agility
 
-- **Presence**  
-  Presence is your charm, charisma, and social influence. High presence allows you to persuade guards to let you past, lie to them about why you did it, and then intimidate them into not telling anyone about it.
+Agility is your physical dexterity, speed, and reflexes. High agility allows you to dodge falling rocks, respond to threats faster, and perform a summersault on a tightrope.
+
+#### Cunning
+
+Cunning is your intellect, wisdom, and senses. High cunning allows you to recall information you've learned, notice the nearly imperceptible, and discern fact from fiction.
+
+#### Presence
+
+Presence is your charm, charisma, and social influence. High presence allows you to persuade guards to let you past, lie to them about why you did it, and then intimidate them into not telling anyone about it.
 
 ### Assigning Dice to your core stats
 
@@ -415,13 +425,7 @@ Remember: A clever thief who accomplishes their heist without picking a single l
 - Thief performing surgery
 - Diplomat tracking through wilderness
 
-## Kin & Culture
-
-Everyone comes from a different background and has a different upbringing. When you create a character, choose a race from the Kin & Culture section. You gain the aspects and abilities that come from choosing that race.
-
-Many races have multiple heritages within that race. In that case, you gain the aspects and abilities of the race, as well as those of a chosen heritage.
-
-### Talents
+## Talents
 
 Talents are specialized abilities that you know and can utilize. These act as a way of specializing your play style and differentiating you from anyone else in the world. Although you do not start with any talents, they can be purchased with XP, with which you start the game and can immediately use to buy talents.
 
