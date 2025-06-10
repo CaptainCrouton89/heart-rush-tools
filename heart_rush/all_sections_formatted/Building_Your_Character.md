@@ -94,14 +94,14 @@ Young characters are full of potential and recover quickly from setbacks. Their 
 
 Adults represent the baseline of capability—experienced enough to be competent, young enough to be vigorous. This represents the prime years of most characters' lives, when they've established themselves but still have their full physical capabilities.
 
-- **Profession Ranks**: Start with the standard 4 ranks to distribute among your professions
+- **Profession Ranks**: Start with the standard 4 ranks to distribute among your professions. You cannot distribute more than 3 ranks to a single profession.
 - **No special benefits or penalties**: Adults are the balanced default
 
 #### Elderly
 
 Elderly characters have accumulated significant life experience, though their bodies have slowed with age. The definition of "elderly" depends on your character's background—a hard life might age someone prematurely, while a comfortable existence might see them maintaining vitality into their later years.
 
-- **Profession Ranks**: Start with 5 ranks to distribute among your professions
+- **Profession Ranks**: Start with 4 ranks to distribute among your professions. You cannot distribute more than 3 ranks to a single profession.
 - **Physical Limitation**: Your movement speed is reduced by 20 feet
 - **Choose ONE benefit**:
   - **Wisdom of Experience**: Choose one of your starting professions. When making skill checks with this profession, you may reroll any 1s on your dice (this does not trigger complications)
@@ -112,7 +112,7 @@ Elderly characters have accumulated significant life experience, though their bo
 
 Consider how your character's age intersects with their profession ranks:
 
-- A young character with 3 ranks might be a prodigy in one field or dabbling in several
+- A young character with 3 ranks might be talented in one field or dabbling in several
 - An adult with 4 ranks has had time to establish themselves professionally
 - An elderly character's 5 ranks represent a lifetime of accumulated expertise
 
