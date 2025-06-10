@@ -1,8 +1,12 @@
 # Gameplay Basics
 
-This section describes how general gameplay should proceed.
+This section describes how general gameplay proceeds in Heart Rush.
 
-## Rolling Dice
+## Core Dice Mechanics
+
+Heart Rush resolves uncertain actions through dice rolls that combine your natural talent, current stamina, and training. Understanding these fundamental mechanics is essential for play.
+
+### Rolling Dice
 
 Heart Rush uses a combination of dice to determine the outcomes of uncertain actions, creating dynamic results that reflect both capability and chance.
 
@@ -10,12 +14,27 @@ Heart Rush uses a combination of dice to determine the outcomes of uncertain act
 
 Whenever you attempt to do something that has a realistic chance of failure, the GM may ask you to roll a skill check to see if you succeed.
 
-Whenever you roll a skill check, there are two dice you need to roll—your heart die, and one of your ability dice. The ability die should correspond to the activity you are doing. For example, if you are lifting something heavy, you should use your might die.
+#### Basic Procedure
 
-After rolling the dice, calculate the sum, and then add any modifiers you may gain from your aspects or other bonuses. If the sum of the dice is equal to or higher than the GM's predetermined challenge number (CN), then you succeed.
+1. **Roll your dice**: Roll your heart die and one ability die (might, agility, cunning, or presence) that corresponds to the activity
+2. **Add modifiers**: Add any bonuses from skills, aspects, or other sources
+3. **Compare to CN**: If your total equals or exceeds the Challenge Number (CN), you succeed
 
-Example:
-You are trying to climb around the edge of the king's tower without falling to your death. You have to make a skill check and roll a 1 and a 5. You really don't want to fall, so you accept a complication and re-roll the 1, getting a 4 instead. The 9 is apparently high enough and you succeed at climbing around the tower, but the GM announces that in a near fall, you accidentally knock a stone down, alerting the guards below.
+#### Adding Skill Ranks
+
+If you have a skill that directly applies to the check, add your full skill rank to the roll. For tangentially related applications, add half your rank (rounded down). Only one skill may apply to any given check.
+
+#### Using Aspects for Bonuses
+
+By spending destiny points (DP) up to an aspect's rank, you may add that amount to any skill check where the aspect applies. The aspect must align with the meaning of your roll, as approved by the GM.
+
+**Example**: With "Former city guard captain" at rank 2, you could spend 2 DP to add +2 when persuading town guards, drawing on your shared professional experience.
+
+#### Gaining DP from Negative Aspects
+
+If an aspect would complicate a situation or indicate weakness, you may choose to let it hinder you and gain DP equal to the aspect's rank. This represents your character acting according to their nature, even when disadvantageous.
+
+**Example**: With "Quick to draw my sword" at rank 3, you might gain 3 DP by threatening a shopkeeper who insults you, creating complications but staying true to your character.
 
 ### Difficulties
 
@@ -32,7 +51,7 @@ The GM should use the following chart to set the challenge number:
 
 The percentages in the cells correspond to the chance of success for a typical human at full heart with low (d8+d6), high (d8+d8+2), and very high (d8+d10+4) skill level. Note that players can eventually reach up to d12+d20+10, and that this chart does not account for complications.
 
-## Complications
+### Complications
 
 As your heart leads you through your life and story, there may be times that it stutters. When it does, you may fail at whatever you are doing, or something else may go wrong. This is represented by rolling a 1 on a skill check.
 
@@ -44,7 +63,7 @@ If you roll additional 1s they do not cause complications.
 
 If you roll two 1s as your first roll, you fail the check, and there is a complication.
 
-### Examples of Complications
+#### Examples of Complications
 
 **When climbing:** You reach the top, but your rope frays and won't support another person safely.
 
@@ -58,80 +77,61 @@ If you roll two 1s as your first roll, you fail the check, and there is a compli
 
 **When picking a lock:** You successfully open the lock, but your tools break in the process and can't be used again.
 
-### Guidelines for GMs
+#### Guidelines for GMs
 
 Good complications should feel like natural consequences that move the story forward. They create new problems to solve rather than simply undoing the player's success. When in doubt, think about what secondary effects the character's actions might have on their equipment, the environment, or nearby people.
 
-## Raising the Stakes
+## Types of Rolls
 
-Whenever you or another player makes a skill check, but before the dice are rolled, you may choose to raise the stakes.
+Heart Rush uses different types of rolls for different situations. Each serves a specific purpose and has unique mechanics that distinguish it from the others.
 
-When you raise the stakes, you increase the effectiveness of a success, and the increase how disastrous the complication or failure is on a fail.
+### Skill Checks
 
-You may do this once per session, on any roll that any player makes.
+Used whenever you attempt something with a realistic chance of failure. See Core Dice Mechanics above for full details.
 
-## Saving Throws
+### Saving Throws
 
-Whenever you have to roll to avoid or mitigate the effects of someone else's action, such as dodging a falling boulder, or withstanding a powerful venom, make a saving throw.
+Whenever you have to roll to avoid or mitigate the effects of someone else's action, such as dodging a falling boulder or withstanding a powerful venom, make a saving throw.
 
 Saving throws are identical to skill checks, except they do not provoke complications. Instead, rolling equal to or over the challenge number implies you avoid the negative effect, and rolling under implies suffering the negative effect.
 
 When the effect was created by another creature, they are usually made against that creature's ability challenge number. If it was an effect from the environment, the CN will be determined by the GM.
 
-## Ability Challenge Number
+### Attack & Defense Rolls
 
-When another creature is avoiding an effect that you have caused, the GM may have them roll a saving throw.
-
-The CN for this roll is equal to the maximum of your most applicable ability die, plus two times your paragon level (which starts at zero).
-
-This number is generically called your ability challenge number, though more specifically, you would have might, agility, cunning, presence, and even heart challenge numbers.
-
-Use whichever ability is most relevant for the roll, or if no ability die fits—such as the case with magical effects—use your heart challenge number—the maximum of your heart die instead.
-
-## Attack & Defense Rolls
-
-Attack and defense rolls, or A/D rolls, are made whenever your roll to deal or negate damage in an engagement or opportunity attack.
+Attack and defense rolls, or A/D rolls, are made whenever you roll to deal or negate damage in an engagement or opportunity attack.
 
 Roll the relevant ability die, your heart die, and add any necessary modifiers.
 
-A/D rolls are explained in greater detail in the Combat chapter.
+A/D rolls are explained in greater detail in the Combat section.
 
-## Advantage & Disadvantage
+### Stratagem Rolls
 
-Advantage and disadvantage give you bonuses or penalties to a roll.
+When undertaking complex endeavors that involve multiple coordinated actions over time—from minutes-long chases to years-long empire building—you use stratagem rolls. This is a summary of the basic mechanics.
 
-For each instance of advantage you have on a roll, roll an additional instance of the lowest of the dice, and then remove the lowest result when calculating the total.
+**Basic Mechanics:**
 
-When rolling with disadvantage, instead roll an additional instance of the highest of the dice, and then remove the highest result from the dice you rolled.
+- Roll d8 + ability die + skill + aspect (if applicable)
+- Uses a flat d8 instead of heart die (unaffected by stamina)
+- Cannot be helped or use other skill check modifiers
+- Compare against standard CNs (9/12/15/18)
 
-Advantage and disadvantage cancel out, and multiple instances of either one can stack.
+**When to Use:**
 
-Multiple levels of advantage or disadvantage are referred to as Ax or Dx, where 'x' indicates the number of instances.
+- Naval battles or chases
+- Sieges or large-scale warfare
+- Trade wars or economic campaigns
+- Political intrigue spanning weeks
+- Any multi-part endeavor with meaningful opposition
 
-When determining the outcome with advantage or disadvantage, treat the final result as if only the dice that were kept were rolled.
+**Quick Overview:**
 
-For instance, if you have an ability that activates when a specific number is rolled, disregard the results from the extra dice gained through advantage or disadvantage, and consider only the results of the retained dice.
+- **Positional objectives**: One success changes the situation (e.g., "reach cannon range")
+- **Accumulation objectives**: Multiple successes needed (e.g., "sink their ship" requires 3 successes)
 
-## Helping
+Complete stratagem rules are detailed later in this section and expanded fully in the Stratagem System section.
 
-Example:
-You are trying to lift a heavy portcullis. Due to various elements at play, you have three sources of advantage, and one source of disadvantage. Your might die is a d6, and your heart die is a d8.
-
-When you make the roll, you would roll with 2 levels of advantage—1d8 and 3d6.
-
-Lets say you get an 3, 6, 5, and 1, respectively. The final result would be 11 (6 + 5).
-
-When someone wishes to assist another person with a skill check, they can choose to help.
-
-If you are in combat, this requires your action.
-
-Helping grants the person making the check advantage, so long as you reasonably could provide help in that situation.
-
-Being helped multiple times does not grant additional levels of advantage.
-
-If you help someone, you are both liable to suffer any consequences from any complications or failures.
-
-## Group Rolls
+### Group Rolls
 
 Sometimes, everyone in a group will need to make the same check, or will want to help on the same check.
 
@@ -147,6 +147,214 @@ It is assumed that everyone else will succeed, but if this person fails, everyon
 
 However, if it is a task where people work together, such as when everyone works together to convince someone of the truth, then only the person best at the task has to roll, and they may roll with advantage.
 
+## Modifying Rolls
+
+Various factors can influence your dice rolls, representing circumstances, assistance, training, and personal traits that make success more or less likely.
+
+### Advantage & Disadvantage
+
+Advantage and disadvantage give you bonuses or penalties to a roll.
+
+For each instance of advantage you have on a roll, roll an additional instance of the lowest of the dice, and then remove the lowest result when calculating the total.
+
+When rolling with disadvantage, instead roll an additional instance of the highest of the dice, and then remove the highest result from the dice you rolled.
+
+Advantage and disadvantage cancel out, and multiple instances of either one can stack.
+
+Multiple levels of advantage or disadvantage are referred to as Ax or Dx, where 'x' indicates the number of instances.
+
+When determining the outcome with advantage or disadvantage, treat the final result as if only the dice that were kept were rolled.
+
+For instance, if you have an ability that activates when a specific number is rolled, disregard the results from the extra dice gained through advantage or disadvantage, and consider only the results of the retained dice.
+
+**Example:**
+You are trying to lift a heavy portcullis. Due to various elements at play, you have three sources of advantage, and one source of disadvantage. Your might die is a d6, and your heart die is a d8.
+
+When you make the roll, you would roll with 2 levels of advantage—1d8 and 3d6.
+
+Let's say you get a 3, 6, 5, and 1, respectively. The final result would be 11 (6 + 5).
+
+### Skills
+
+When you have training in a relevant skill:
+
+- **Direct application**: Add your full skill rank to the roll
+- **Tangential application**: Add half your skill rank (rounded down)
+- Only one skill may apply to any given check
+
+### Aspects
+
+Aspects can modify rolls in two ways:
+
+**Positive invocation**: Spend DP up to the aspect's rank to add that amount to your roll
+
+- The aspect must clearly apply to the situation
+- Requires GM approval
+- Use only the highest-ranking applicable aspect
+
+**Negative invocation**: Accept a penalty or complication to gain DP equal to the aspect's rank
+
+- You must roleplay the aspect causing problems
+- Creates narrative complications
+- Can gain up to 5 DP per scene from negative invocations
+
+### Helping
+
+When someone wishes to assist another person with a skill check, they can choose to help.
+
+If you are in combat, this requires your action.
+
+Helping grants the person making the check advantage, so long as you reasonably could provide help in that situation.
+
+Being helped multiple times does not grant additional levels of advantage.
+
+If you help someone, you are both liable to suffer any consequences from any complications or failures.
+
+### Raising the Stakes
+
+Whenever you or another player makes a skill check, but before the dice are rolled, you may choose to raise the stakes.
+
+When you raise the stakes, you increase the effectiveness of a success, and increase how disastrous the complication or failure is on a fail.
+
+You may do this once per session, on any roll that any player makes.
+
+## Determining Challenge Numbers
+
+### Standard Difficulties
+
+Use the difficulty table in Core Dice Mechanics for most skill checks and saving throws:
+
+- **CN 6**: Fairly Easy
+- **CN 9**: Average
+- **CN 12**: Hard
+- **CN 15**: Very Hard
+- **CN 18**: Nearly Impossible
+- **CN 21**: Heroic
+
+### Ability Challenge Number
+
+When another creature is avoiding an effect that you have caused, the GM may have them roll a saving throw.
+
+The CN for this roll is equal to the maximum of your most applicable ability die, plus two times your paragon level (which starts at zero).
+
+This number is generically called your ability challenge number, though more specifically, you would have might, agility, cunning, presence, and even heart challenge numbers.
+
+Use whichever ability is most relevant for the roll, or if no ability die fits—such as the case with magical effects—use your heart challenge number—the maximum of your heart die instead.
+
+### Stratagem CNs
+
+Stratagem CNs use the same scale as skill checks, with difficulty based on assets and hindrances:
+
+- **CN 9**: Easy - Significant advantages or weak opposition
+- **CN 12**: Moderate - Balanced forces or standard difficulty
+- **CN 15**: Hard - Strong opposition or significant obstacles
+- **CN 18**: Extreme - Overwhelming odds or near-impossible circumstances
+
+The GM evaluates your assets (advantages) against your hindrances (disadvantages) to set the final CN.
+
+## Stratagems in Detail
+
+Stratagems handle complex endeavors requiring multiple coordinated actions over time. They scale from tactical encounters to grand campaigns. This section provides an overview of the core concepts—see the Stratagem System section for complete rules, examples, and guidance.
+
+### When Stratagems Apply
+
+Use stratagems for:
+
+- **Naval encounters**: Chases, battles, boarding actions
+- **Sieges**: Surrounding fortresses, starving defenders, breaching walls
+- **Large battles**: Army movements, flanking maneuvers, routing enemies
+- **Economic warfare**: Trade monopolies, market manipulation, guild conflicts
+- **Political campaigns**: Building influence, converting populations, diplomatic missions
+- **Any complex multi-part endeavor** with meaningful opposition
+
+**Key Differences from Skill Checks:**
+
+- Use a flat d8 (unaffected by fatigue/wounds)
+- Cannot be helped by others
+- Represent coordinated group efforts over time
+- Success often creates lasting assets or changes
+
+### Running Stratagems
+
+Each stratagem follows this action cycle:
+
+1. **Define the Stratagem**
+
+   - Objective (positional or accumulation)
+   - Opposition and pace
+   - Parent stratagem (if nested)
+
+2. **The Action Cycle**
+
+   - **Situation**: Current circumstances
+   - **Approach**: How you're attempting the objective
+   - **Stakes**: GM sets CN based on assets/hindrances
+   - **Intervention**: Direct actions can modify CN dramatically
+   - **Roll**: d8 + ability die + skill + aspect (if applicable) vs CN
+   - **Resolution**: Success, failure, or complications
+
+3. **Resolution**
+   - **Success**: Progress toward or achieve objective
+   - **Failure**: Setbacks, new hindrances, or altered situation
+   - **Complications** (1 on any die): Zoom in to handle immediate crisis
+
+### Positional vs Accumulation Objectives
+
+**Positional Objectives** (one success to achieve):
+
+- "Close to boarding range"
+- "Breach the outer wall"
+- "Establish trade route"
+- Success fundamentally changes the tactical situation
+
+**Accumulation Objectives** (multiple successes needed):
+
+- "Sink their ship" (3 successes)
+- "Rout their army" (5 successes)
+- "Convert the population" (7 successes)
+- Progress persists even through failures
+- Each success brings you closer to the goal
+
+### Nesting Stratagems
+
+Stratagems naturally nest within each other:
+
+**Example**: "Become Pirate King" (grand stratagem)
+
+- Requires "Build Fearsome Reputation" (strategic stratagem)
+- Which requires "Capture Merchant Galleon" (tactical stratagem)
+- Which requires "Naval Battle" (immediate stratagem)
+
+Each completed child stratagem typically creates assets for its parent.
+
+### Direct Intervention
+
+Players can take direct actions to influence stratagem CNs:
+
+**Helpful interventions** (reduce CN):
+
+- Kill enemy captain: -6 to ship battle CN
+- Sabotage water supply: -3 to siege CN
+- Seduce enemy general: -6 to battle CN
+
+**Harmful complications** (increase CN):
+
+- Botched assassination: +3 CN, "High alert" hindrance
+- Insulting diplomacy: +3 CN, "Diplomatic incident"
+- Captured while scouting: Lose "Element of surprise" asset
+
+### Transitioning Between Systems
+
+**Complications**: When you roll a 1 during a stratagem, zoom in to regular gameplay to handle the immediate crisis.
+
+**Scale appropriately**:
+
+- Personal combat: Use normal combat rules
+- Fleet battles: Use stratagems for overall battle, zoom to combat for boarding
+- Trade wars: Use stratagems for market control, zoom to roleplay for negotiations
+
+For complete stratagem rules including detailed examples, GM guidance, and advanced concepts, see the Stratagem System section.
+
 ## Using Abilities
 
 When creating your character, you will inevitably gain a lot of abilities.
@@ -157,8 +365,8 @@ Examples include class abilities, racial abilities, talents, and paragon levels,
 
 You can most easily recognize an ability because of the format it has in this book:
 
-Ability Name  
-Ability tags.  
+**Ability Name**  
+_Ability tags._  
 Rules text describing what the ability lets you do.
 
 All abilities listed in this rulebook have their name, followed by tags, and then followed by their rules.
@@ -177,16 +385,16 @@ While many tags will be explained by whichever section they appear in, there are
 
 The frequency of an ability determines how often it can be used.
 
-An ability can be either, passive, minor, heart, major, weekly, or monthly.
+An ability can be either passive, minor, heart, major, weekly, or monthly.
 
 This tag is always listed as the first tag.
 
-- Passive ability: There are no restrictions on how many times you can use this ability. If the ability is a passive ability, it is assumed to always be active.
-- Minor Ability: You may use this ability by spending a rush point for each time you have used this ability including this one during the current encounter. You may not use it outside of an encounter.
-- Heart Ability: You may use this ability once per long rest. If you take a wound, you may use the ability again.
-- Major ability: You may use this ability once per long rest.
-- Weekly Ability: You may use this ability once per week.
-- Monthly ability: You may use this ability once per month.
+- **Passive ability**: There are no restrictions on how many times you can use this ability. If the ability is a passive ability, it is assumed to always be active.
+- **Minor Ability**: You may use this ability by spending a rush point for each time you have used this ability including this one during the current encounter. You may not use it outside of an encounter.
+- **Heart Ability**: You may use this ability once per long rest. If you take a wound, you may use the ability again.
+- **Major ability**: You may use this ability once per long rest.
+- **Weekly Ability**: You may use this ability once per week.
+- **Monthly ability**: You may use this ability once per month.
 
 ### Timing Tag
 
@@ -200,9 +408,10 @@ However, the instant tag is an exception to that rule.
 
 Abilities that don't have the instant tag are referred to as "priority abilities".
 
-- Instant: If an ability is marked as instant, it means that the ability can be used literally any time, even when you don't have priority.
+- **Instant**: If an ability is marked as instant, it means that the ability can be used literally any time, even when you don't have priority.
 
-[[Understanding Instant Timing
+**Understanding Instant Timing**
+
 Instant abilities can be used at literally any moment during the game, even interrupting other actions as they're happening. This creates a true "interrupt system" where you can react to new information as it unfolds.
 
 **Any time means any time:**
@@ -232,7 +441,7 @@ When multiple people want to use instant abilities simultaneously, resolve them 
 
 - The person who declared their instant ability **last** resolves it **first**
 - Then work backwards through who declared when
-- This continues until all instant abilities are resolved]]
+- This continues until all instant abilities are resolved
 
 You must declare the way in which you are using your ability when you announce that you are using an ability.
 
@@ -242,19 +451,83 @@ During each round of combat, you only have one action.
 
 By default, abilities don't use your action unless they have the full action tag.
 
-- Full action: If an ability is marked as full action, it means that the ability uses your action.
+- **Full action**: If an ability is marked as full action, it means that the ability uses your action.
 
 If you don't have an action left during this round, you cannot use the ability.
 
-## Other Rules
+## Environmental Rules
 
 These additional rules cover various situations that can arise during gameplay.
 
-### Forced Movement
+The world presents many challenges beyond hostile creatures. These rules help adjudicate how characters interact with their environment.
 
-If you are ever pushed or forced to move, and this movement is interrupted by a wall, another creature that is within two sizes of your own, or a heavy shield being wielded by an enemy, you immediately stop moving and take 1d6 damage for every 5 feet remaining in your movement.
+### Terrain
 
-If this movement is stopped by a creature that is not wielding a shield, the movement is still stopped, and the total damage is split evenly between the two creatures, rounded up for the creature being forced to move.
+As you adventure, you will encounter numerous environments that all pose their own unique challenges.
+
+#### Difficult Terrain
+
+Difficult terrain is any terrain that is inherently hard to move through, such as water, mud, or heavy foliage.
+
+While in difficult terrain, after accounting for other movement penalties, your remaining movement speed is halved.
+
+#### Water
+
+Doing anything while in or under water comes with severe limitations.
+
+While shallow water counts only as difficult terrain, deeper water requires that you move at your swim speed.
+
+Unless you explicitly have a swim speed, your base swim speed is 15 feet.
+
+If you can still stand, you have disadvantage on all A/D rolls and skill checks requiring movement.
+
+If you cannot stand, or if you are underwater, you have D5 on all of those rolls instead.
+
+Ranged weapons travel half their distance when fired underwater.
+
+#### Vertical Surfaces
+
+When climbing, you may be required to make a might check to determine if you can climb at all.
+
+On a success, you can climb at your climb speed, which unless otherwise explicitly stated, is 5 feet.
+
+### Lighting
+
+There are three different states of lighting that can occur in an environment: brightly lit, dim, and dark.
+
+Daylight, the immediate area around a lantern, and intense fire all produce bright light.
+
+There are no penalties to vision or combat while in a brightly lit area.
+
+Dim light can be found in alleyways, twilight, and in all the spaces between bright light and darkness.
+
+Perception and observation skill checks are made with disadvantage for creatures that require light to see.
+
+Darkness is anywhere there is no light.
+
+Unless you have darkvision, you cannot see anything.
+
+### Darkvision
+
+Some creatures have darkvision.
+
+A creature with darkvision can see in dim light as though it were bright light, and can see in darkness as though it were dim light.
+
+### Hiding
+
+If the environment provides suitable places to hide and the GM deems it reasonable, you may choose to hide.
+
+This requires more than a single action, and cannot be performed during combat.
+
+When you attempt to hide, make a stealth skill check.
+
+On a success you are hidden, and count as unseen for the purposes of attacking.
+
+While hidden, you may use your action to make an opportunity attack against a creature you are hidden from.
+
+You may still be obscured after you attack, but you do not count as hidden and you cannot make opportunity attacks.
+
+All hidden creatures that wish to make opportunity attacks may use their action to attack before combat begins.
 
 ### Size
 
@@ -301,90 +574,28 @@ Choose an adjacent creature two or more sizes larger than you. Make a might or a
 **Prone/Knockdown Limits:**
 Many combat abilities that knock creatures prone specify "no more than one size larger than you" - creatures significantly larger are too massive to knock down.
 
-**Carying Capacity**
+**Carrying Capacity**
 By default, you can carry slots equal to 6 + half of your might die. If you are size large, it is 6 + your might die instead, and if you are small, then it is 6 + a quarter your might die, rounded down.
 
-### Lighting
+### Forced Movement
 
-There are three different states of lighting that can occur in an environment: brightly lit, dim, and dark.
+If you are ever pushed or forced to move, and this movement is interrupted by a wall, another creature that is within two sizes of your own, or a heavy shield being wielded by an enemy, you immediately stop moving and take 1d6 damage for every 5 feet remaining in your movement.
 
-Daylight, the immediate area around a lantern, and intense fire all produce bright light.
+If this movement is stopped by a creature that is not wielding a shield, the movement is still stopped, and the total damage is split evenly between the two creatures, rounded up for the creature being forced to move.
 
-There are no penalties to vision or combat while in a brightly lit area.
+## Damage & Consequences
 
-Dim light can be found in alleyways, twilight, and in all the spaces between bright light and darkness.
+There are several sources of damage besides combat.
 
-Perception and observation skill checks are made with disadvantage for creatures that require light to see.
+Characters face many dangers in their adventures. Understanding how damage works and its various sources helps you navigate these threats.
 
-Darkness is anywhere there is no light.
-
-Unless you have darkvision, you cannot see anything.
-
-### Darkvision
-
-Some creatures have darkvision.
-
-A creature with darkvision can see in dim light as though it were bright light, and can see in darkness as though it were dim light.
-
-### Hiding
-
-If the environment provides suitable places to hide and the GM deems it reasonable, you may choose to hide.
-
-This requires more than a single action, and cannot be performed during combat.
-
-When you attempt to hide, make a stealth skill check.
-
-On a success you are hidden, and count as unseen for the purposes of attacking.
-
-While hidden, you may use your action to make an opportunity attack against a creature you are hidden from.
-
-You may still be obscured after you attack, but you do not count as hidden and you cannot make opportunity attacks.
-
-All hidden creatures that wish to make opportunity attacks may use their action to attack before combat begins.
-
-### Terrain
-
-As you adventure, you will encounter numerous environments that all pose their own unique challenges.
-
-#### Difficult Terrain
-
-Difficult terrain is any terrain that is inherently hard to move through, such as water, mud, or heavy foliage.
-
-While in difficult terrain, after accounting for other movement penalties, your remaining movement speed is halved.
-
-#### Water
-
-Doing anything while in or under water comes with severe limitations.
-
-While shallow water counts only as difficult terrain, deeper water requires that you move at your swim speed.
-
-Unless you explicitly have a swim speed, your base swim speed is 15 feet.
-
-If you can still stand, you have disadvantage on all A/D rolls and skill checks requiring movement.
-
-If you cannot stand, or if you are underwater, you have D5 on all of those rolls instead.
-
-Ranged weapons travel half their distance when fired underwater.
-
-#### Vertical Surfaces
-
-When climbing, you may be required to make a might check to determine if you can climb at all.
-
-On a success, you can climb at your climb speed, which unless otherwise explicitly stated, is 5 feet.
-
-### Sources of Damage
-
-There are several other sources of damage besides combat.
-
-Some of the more common ones are listed below.
-
-#### Combat
+### Combat
 
 Combat is one of the most common ways to lose health.
 
 Check out the Combat section to learn more.
 
-#### Hazards & Traps
+### Hazards & Traps
 
 There will be times when you have to avoid damage from the environment.
 
@@ -394,13 +605,13 @@ In these cases, you should make a saving throw, detailed in the Saving Throws se
 
 On a failure, you will take damage.
 
-#### Falling
+### Falling
 
 When falling from 5 feet or more, roll an agility saving throw against the height fallen.
 
 If you roll less than the distance fallen, you take the difference as damage.
 
-#### Suffocation and Strangulation
+### Suffocation and Strangulation
 
 There are different effects on one's body depending if you are holding your breath, or getting strangled or suffocated by something else.
 
@@ -414,7 +625,7 @@ After you run out of breath, you take the suffocating condition.
 
 If you are strangled, unable to breathe, or were suddenly prevented from breathing, then you begin suffocating immediately.
 
-#### Poisons
+### Poisons
 
 While exploring Alaria, you may come across various poisons.
 
@@ -436,15 +647,17 @@ The length that the poison remains potent on the weapon will vary from poison to
 
 Damage from poison happens after the weapon attack—it is not rolled with the attack dice.
 
-## Experience
+## Experience & Advancement
 
 Over the course of many games, you will gain more and more XP.
 
 With this XP, you can purchase new, interesting features for your character.
 
+Characters grow and develop through experience points (XP), which represent lessons learned, skills honed, and power gained through adventuring.
+
 ### Gaining Experience
 
-GM Note:  
+**GM Note:**
 Granting XP equal to players' combat rank is a decent rule of thumb to keep players upgrading their character every few sessions.
 
 If you want slightly more aggressive growth, increasing this by one, or even two can be okay.
@@ -475,34 +688,9 @@ Use the following chart to find the cost of your desired new feature.
 | Destiny Level               | X+5                              | Where X is the number of destiny levels you have. Gain the destiny level of a talent you have.                           |
 | New Spell                   | 6+2X (or just X if spelltouched) | Where X is the number of spells you have. Gain a new spell. You must have the corresponding elemental attunements.       |
 
-### Creating and Upgrading Aspects
+### Quick Reference
 
-- Creating a new aspect means writing down another word or phrase describing your character. The aspect starts at rank one.
-- Increase Aspect: Increase the rank of one of your aspects by one. Aspects cannot have a rank greater than five.
-- Change Aspect: You may replace your aspect with a new one, keeping the same rank, but changing the description.
-
-### Increasing Maximum Hit Points
-
-- Increase your maximum hit points by 10.
-
-### Increasing Ability Die
-
-- Increase an ability die by one size. Ability die sizes increase in the order d4 > d6 > d8 > d10 > d12 > d20.
-- Each increase costs XP equal to the size of the new die (e.g., from d8 to d10 costs 10 XP).
-- You cannot increase your heart die in this way.
-
-### Gaining New Talents and Spells
-
-- Choose and mark a new talent from the combat or non-combat talent list.
-- If it is a cognitive or martial talent, you immediately gain it.
-- Otherwise, see the Talent section for prerequisites.
-- For spells, choose from the spell list with at least one element listed as a tag.
-- You learn the spell if you have at least basic attunement to all listed elements.
-- Spells are cheaper if you are spelltouched.
-
-### Increasing Heart Die
-
-- As you gain XP, your maximum heart die automatically increases at certain thresholds:
-  - 200 XP: Increase to d10.
-  - 500 XP: Increase to d12.
-  - 1000 XP: Increase to d20.
+- **Aspects**: Start at rank 1, max rank 5
+- **Hit Points**: Increase by 10 each purchase
+- **Ability Dice**: d4 → d6 → d8 → d10 → d12 → d20
+- **Heart Die**: Increases automatically at 200/500/1000 XP thresholds

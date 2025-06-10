@@ -4,6 +4,8 @@ Heart Rush operates at two distinct timescales of play, each serving different n
 
 ## The Two Scales
 
+Heart Rush flows between intimate, second-by-second tension and sweeping narrative arcs, allowing you to focus the camera lens exactly where the story needs it most.
+
 ### Micro-Scale: Moment-to-Moment
 
 Micro-scale covers immediate, detailed actions where every choice matters. Use this scale when:
@@ -25,6 +27,8 @@ Macro-scale abstracts longer periods into single rolls or narrative descriptions
 - **Downtime activities**: Crafting, training, research between adventures
 
 ## Choosing the Right Scale
+
+The key is recognizing when the details matter versus when they slow down the game. Let the fiction and your players' engagement guide your choice—if they're leaning forward and asking specific questions, stay micro; if they're checking phones or seem restless with minutiae, zoom out to macro.
 
 ### When to Use Micro-Scale
 
@@ -50,8 +54,8 @@ Shift to macro-scale when:
 
 Smoothly transition by:
 
-- **Zooming Out**: "As the battle ends, tell me how you spend the next few days recovering..."
-- **Zooming In**: "Three days into your research, you discover something disturbing. Let's play out this moment..."
+- **Zooming Out**: "The battle has ended, and you've made it back to camp. What do you guys do for the next few days...?"
+- **Zooming In**: "Three days into your research, you discover something disturbing..."
 - **Player Choice**: "Do you want to roleplay the negotiation or summarize your approach?"
 
 ## Macro-Scale Resolution
@@ -86,6 +90,8 @@ Inform players of the CN before they roll.
 One player makes a skill check using the most relevant ability. Others may help if it makes narrative sense, granting advantage as normal.
 
 ### 4. Interpret Results
+
+**Success** means achieving your stated goal. **Failure** doesn't mean nothing happens—it means the situation changes in ways that keep the story moving forward.
 
 #### Full Success (Roll ≥ CN + 3)
 
@@ -167,6 +173,8 @@ For complex macro-scale undertakings requiring multiple rolls:
 4. Three failures before achieving enough successes means overall failure
 
 ## Best Practices
+
+When managing timescale transitions, keep these principles in mind:
 
 ### Maintain Narrative Flow
 

@@ -51,7 +51,7 @@ When characters deal damage or cause problems, they receive proportional consequ
 **Inflict Harm**  
 Follow through on established threats. If you've shown the goblin archers taking aim, some arrows find their marks. Keep harm proportional to the threat level.
 
-## Hard Moves
+### Hard Moves
 
 When the situation demands serious consequences—typically after failed rolls, ignored warnings, or when soft moves haven't created sufficient urgency—escalate to hard moves.
 

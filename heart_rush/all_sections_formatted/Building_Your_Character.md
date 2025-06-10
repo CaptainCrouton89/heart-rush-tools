@@ -22,16 +22,16 @@ When the game begins, you will start with some experience (XP). During the game 
 
 Players have four important stats—might, agility, cunning, and presence. These traits define your physical and mental abilities, and are used to determine the outcomes of nearly any difficult task you attempt to do.
 
-- Might  
+- **Might**  
   Might is your strength, endurance, and fortitude. High might allows you to push through locked doors, lift heavy gates, resist poison, and run for miles without rest.
 
-- Agility  
+- **Agility**  
   Agility is your physical dexterity, speed, and reflexes. High agility allows you to dodge falling rocks, respond to threats faster, and perform a summersault on a tightrope.
 
-- Cunning  
+- **Cunning**  
   Cunning is your intellect, wisdom, and senses. High cunning allows you to recall information you've learned, notice the nearly imperceptible, and discern fact from fiction.
 
-- Presence  
+- **Presence**  
   Presence is your charm, charisma, and social influence. High presence allows you to persuade guards to let you past, lie to them about why you did it, and then intimidate them into not telling anyone about it.
 
 ### Assigning Dice to your core stats
@@ -40,7 +40,7 @@ Your prowess in each of these abilities is represented by a die. Whenever you at
 
 The first step in creating your character is determining which dice you will use for which stat. Typical humanoids use d6s and d4s for each ability, reflecting a general mediocrity at most things. When you create your character, assign a d6 to two of your abilities, and a d4 to the remaining two.
 
-## Movement
+### Movement
 
 By default, you have a 60 feet move speed. That means that when you take the dash action (see the Combat section), you can cover that distance. Note that your move speed is negatively affected by equipment penalties (like armor).
 
@@ -48,11 +48,11 @@ When swimming, you have a swim speed of 15 feet. This is also negatively affecte
 
 When climbing, your move speed is 5 feet. This is not affected by equipment penalties.
 
-## Health
+### Health
 
 The health of your character is represented by a combination of your hit points, heart die, and wounds. In combat, you will lose hit points and take wounds. As you exert yourself, your heart die will fall, making it harder to avoid losing hit points and taking more wounds. Eventually, if you take too many wounds, you may bleed out and die. Each of these systems will be explained further in the following sections.
 
-### Hit Points
+#### Hit Points
 
 Hit points represent your physical health. Damage causes your hit points to fall by a corresponding amount. As they fall, you come closer to death. When you create a character, you start at 40 hit points. If your hit points ever reach 0, you can choose to immediately go unconscious. If you don't, you go unconscious after 10 minutes if your hit points are still at 0.
 
@@ -60,7 +60,7 @@ Your hit points can go negative as well. If your hit points are ever equal to th
 
 When you take a long rest, your hit points return to their maximum.
 
-### Heart Die
+#### Heart Die
 
 Your heart die represents your stamina. It manifests itself when you roll dice to perform challenging actions. With very few exceptions, this die will be part of every roll you make. When you create a character, it starts at a maximum of a d8.
 
@@ -68,13 +68,141 @@ Other creatures can have larger or smaller heart dice. A rat, for example, will 
 
 Sometimes, there will be effects that cause your heart die to increase or decrease. This means replacing your heart die with a die of a larger or smaller size. For example, decreasing your heart die from a d8 would mean replacing it with a d6.
 
-### Wounds
+#### Wounds
 
 When you take damage in Heart Rush, it can mean different things depending on how much damage you take. If it's less than 10 damage, this represents minor injuries—nothing that poses a real threat. However, if you take 10 or more damage, this represents something serious—a wound. The exact details of taking wounds and healing them will be described later in the Combat section.
 
+## Your Age and Experience
+
+Your character's age shapes their capabilities and experience. When creating your character, choose an age category that fits your concept: young, adult, or elderly. Each age brings its own advantages and challenges.
+
+### Age Categories
+
+Three age categories exist—young, adult, and elderly—each with their own tradeoffs.
+
+#### Young
+
+Young characters are full of potential but lack the experience of their elders. Their enthusiasm and vigor make up for what they lack in training. What qualifies as "young" varies by culture and species—for humans this might be late teens to mid-twenties, but adapt as appropriate for your character concept.
+
+- **Skill Ranks**: Start with 3 ranks to distribute among your skills (instead of the usual 4)
+- **Natural Talent**: Increase your lowest ability die by one size (after initial assignment)
+- **Starting Aspect**: Gain "Eager to Prove Myself" at rank 1
+
+#### Adult
+
+Adults have found their place in the world and accumulated valuable experience from their chosen path. This represents the prime years of most characters' lives, when they've established themselves but still have their full vigor.
+
+- **Skill Ranks**: Start with the standard 4 ranks to distribute among your skills
+- **Life Benefit**: Choose one benefit from your established background (see below)
+
+#### Elderly
+
+Elderly characters have accumulated wisdom and expertise over decades, though their bodies may not be quite what they once were. The definition of "elderly" depends on your character's background—a hard life might age someone prematurely, while a comfortable existence might see them spry into their later years.
+
+- **Skill Ranks**: Start with 5 ranks to distribute among your skills
+- **Physical Limitation**: Your movement speed is reduced by 10 feet
+- **Starting Aspect**: Gain "Wisdom of Years" at rank 1
+
+### Life Benefits (Adults Only)
+
+Adult characters have spent years establishing themselves in the world. Based on your character's background and the fiction you've established, work with your GM to choose ONE of the following benefits that best represents what your career has given you:
+
+#### Connections
+
+_For characters whose backgrounds involved working with people—merchants, diplomats, priests, entertainers, guards_
+
+You've built a network of contacts and earned a reputation in your field. Start with **Influence 1**, representing your ability to call upon favors and social connections.
+
+#### Resources
+
+_For characters whose backgrounds involved wealth or craft—nobles, successful artisans, merchants, treasure hunters_
+
+Your career has left you with additional wealth or valuable possessions. Start with an extra **100 ducat** beyond your normal starting funds.
+
+#### Conditioning
+
+_For characters whose backgrounds were physically demanding—soldiers, laborers, athletes, wilderness guides_
+
+Years of physical work have strengthened your body. You can carry **+2 equipment slots** beyond your normal capacity.
+
+#### Knowledge
+
+_For characters whose backgrounds were intellectual—scholars, inventors, investigators, navigators_
+
+You've developed deep expertise in your field. Choose one narrow area of expertise related to your background. When making skill checks directly related to this expertise, you may **reroll any 1s** on your dice (this does not trigger complications).
+
+### Choosing Your Benefit
+
+The key is that your chosen benefit should emerge naturally from the fiction you've established about your character. Don't pick a background to get a benefit—instead, determine what benefit makes sense given the background you've already imagined.
+
+**Example**: "I'm a former ship's navigator turned treasure hunter."
+
+- Could take **Connections** (contacts in various ports)
+- Could take **Resources** (wealth from a successful expedition)
+- Could take **Knowledge** (expertise in navigation and charts)
+
+Discuss with your GM which benefit best fits your character's established story.
+
+## Your Skills
+
+Skills represent your training and experience in specific areas. When creating your character, choose up to three skills and distribute ranks between them based on your age category (3 for young, 4 for adult, 5 for elderly). These initial ranks are free and reflect your life before adventuring.
+
+Skills can be broad professions (Diplomat, Blacksmith) or specific competencies (Lockpicking, Horseback Riding). Work with your GM to ensure appropriate scope. Your skills should reflect your character's history and experiences—a young character might have fewer ranks but could still be a skilled blacksmith if that's their background.
+
+**Example skill distributions:**
+
+- **Young blacksmith**: Blacksmithing 2, Metalworking 1
+- **Adult diplomat**: Diplomacy 3, Etiquette 1
+- **Elderly scholar**: Ancient History 3, Research 1, Languages 1
+
+### Using Skills
+
+Add your skill rank to any check where the skill clearly applies. For tangentially related applications, add half your rank (rounded down). Only one skill may apply to any given check.
+
+### Skill Progression
+
+After character creation, skills improve through practice and real-world application:
+
+| Rank | Downtime Weeks | Challenges | Missions |
+| ---- | -------------- | ---------- | -------- |
+| 1    | 1              | -          | -        |
+| 2    | 4              | 1          | -        |
+| 3    | 9              | 2          | 1        |
+| 4    | 16             | 3          | 2        |
+| 5    | 25             | 4          | 3        |
+| 6    | 36             | 5          | 4        |
+| 7    | 49             | 6          | 5        |
+
+### Challenges (Clarified)
+
+A challenge must meet ALL criteria:
+
+- Uses the skill in question
+- CN ≥ (heart die max + current skill rank)
+- Meaningful narrative consequences for failure
+- Cannot be immediately retried if failed
+
+Mark one challenge complete upon success.
+
+### Missions (Clarified)
+
+A mission must meet ALL criteria:
+
+- Requires 3+ successful skill checks using the skill
+- At least one check must be CN 15 or higher
+- All checks must occur within a related narrative sequence
+- The overall goal has significant stakes (reputation, wealth, lives, etc.)
+- Failure of any check risks mission failure
+
+**Mission Examples with Mechanical Clarity:**
+
+- **Diplomat (Rank 3):** Negotiate a treaty between warring factions (3+ persuasion checks, including at least one CN 15+ with the hostile leader)
+- **Thief (Rank 4):** Steal from the Duke's vault (bypass guards with stealth, pick the lock CN 15+, escape without raising alarm)
+- **Ship Captain (Rank 5):** Navigate through a supernatural storm (3+ sailing checks including CN 18 to find safe passage)
+
 ## Your Niche
 
-Your niche defines your character's specialization and unique role in the world. This encompasses your heritage, skills, experience, and personal traits that set you apart.
+Your niche defines your character's specialization and unique role in the world. This encompasses your heritage, talents, and personal traits that set you apart.
 
 ### Kin & Culture
 
@@ -85,14 +213,6 @@ Many races have multiple heritages within that race. In that case, you gain the 
 ### Talents
 
 Talents are specialized abilities that you know and can utilize. These act as a way of specializing your play style and differentiating you from anyone else in the world. Although you do not start with any talents, they can be purchased with XP, with which you start the game and can immediately use to buy talents.
-
-### Background
-
-Your background describes your past life and skills. Choose up to three professions and distribute 4 ranks between them. They can all be in one, or they can be spread between them. Whenever you make a skill check that one or more of your professions would apply to, add your rank in the relevant professions to that roll.
-
-#### Example
-
-Let's say you choose “Diplomat” and “Tutor for Nobility” as your professions, and distribute 3 ranks to the first, and 1 rank to the latter. If you were making a skill check to persuade someone of something, you could add 3 to that roll due to your background as a diplomat.
 
 ### Aspects
 
@@ -147,7 +267,7 @@ Likewise, if you were trying to sneak past guards, and you have "Distinctive red
 
 ### Creating your Aspects
 
-When you create your character, create two aspects. You will gain two more from your race and culture and you may gain more throughout the game. All aspects start at rank one when they are created, unless noted otherwise. No aspect can be greater than rank five.
+When you create your character, create two aspects. You will gain at least one more from your age category (Young characters get "Eager to Prove Myself," Elderly get "Wisdom of Years"), and two more from your race and culture. You may gain more throughout the game. All aspects start at rank one when they are created, unless noted otherwise. No aspect can be greater than rank five.
 
 When creating an aspect, it is generally a good idea to have aspects with both positive and negative sides to them. Without any negative aspects, you have no way of gaining more destiny points, and therefore cannot spend them on bonuses. Look for aspects that can be both positive and negative. For example, "Kleptomaniac" could help you pocket useful items unnoticed, but also compel you to steal at inappropriate times.
 
@@ -181,14 +301,15 @@ These aspects create a character whose past mistakes drive their current motivat
 [[Burn through those DP  
 To get the most out of your character, you should be invoking your aspects frequently. DP are not meant to be a precious resource—spend them, and then make more by invoking your negative ones. When creating your character, make sure to create aspects that you're going to enjoy using; you'll be using them a lot.]]
 
-[[Advanced Character Creation  
-Sometimes, you want an even more in-depth character creation process. If this is something that interests everyone in the group, check out the advanced character creation rules in the Advanced Character Creation section.]]
+### Starting Gear
+
+Begin play with whatever equipment makes sense for your character concept and background. Work with your GM to ensure your starting gear fits both the fiction of your character and the tone of the campaign. There are no restrictions based on age or background—a young noble might have fine clothes and a sword, while an elderly scholar might carry ancient tomes and exploration gear.
 
 ## Wounds
 
 When you take wounds, they will have a description and a rank, just like an aspect. You may use wounds as aspects as well, though you cannot gain more than 5 DP from invoking the wound, even if the rank of the wound is higher.
 
-For example, if you have the rank 12 wound, "Guts spilling out,” you could gain 5 DP by taking a minus 12 penalty to nearly any athletics check, since it'd be logical that having that type of wound would make it very difficult to do almost anything physical.
+For example, if you have the rank 12 wound, "Guts spilling out," you could gain 5 DP by taking a minus 12 penalty to nearly any athletics check, since it'd be logical that having that type of wound would make it very difficult to do almost anything physical.
 
 ## Progress
 
@@ -207,38 +328,38 @@ At rank 1, players are barely more than commoners with a desire for excitement; 
 
 At each rank, you gain new abilities. If you are starting at a rank higher than rank 1, gain all the abilities from each previous rank, and start with XP equal to the corresponding value in the row.
 
-## Combat Ranks, Classes, Subclasses, & Paragon Levels
+### Combat Ranks, Classes, Subclasses, & Paragon Levels
 
 While you will gain XP every session, you progress in combat ranks at the GM's discretion. In general, you should expect to graduate to the next combat rank around when you have an amount of total XP corresponding to the respective rank, as outlined in the table above. However, it is ultimately up to the GM.
 
-### Rank 0
+#### Rank 0
 
 At this rank, you have no special abilities beyond those that you purchase with your XP.
 
 [[GM Note  
 When determining when to grant players the next combat rank, it's generally a good idea to wait until a suitably impressive fight has been won by the party. These combat ranks are major upgrades in player combat power, so they act as a great reward for players accepting and defeating more dangerous fights.]]
 
-### Rank 1
+#### Rank 1
 
 When you reach rank 1, you will have to choose a class, as listed in the Classes section. Your class will determine what role you have in combat—tanking heavy blows, dealing damage, or supporting your teammates.
 
 You are welcome to do whatever you want in combat, but your class will give you an edge in its respective role. Mark down all of the abilities for that class that are at or below rank 1.
 
-### Rank 2
+#### Rank 2
 
 Upon reaching rank 2, you will have to choose a subclass. Each class has a few subclasses, which are specializations of your class. You must choose one of them. Mark down all of the abilities for your class and subclass that are at or below rank 2.
 
 Additionally, at this stage you must decide if you wish to become spelltouched. Spelltouched are a universal subclass specializing in using elements to deal damage. You can read more about them in the Spelltouched section.
 
-### Rank 3
+#### Rank 3
 
 When you reach rank 3, you unlock more abilities in your subclass. Mark down all of the abilities for your subclass that are at or below rank 3.
 
-### Rank 4
+#### Rank 4
 
 At rank 4, you unlock the last abilities from your subclass. Mark down all of the abilities for your subclass that are at or below rank 4.
 
-### Rank 5 and above
+#### Rank 5 and above
 
 Finally, upon reaching rank 5, and for each rank thereafter, you gain a paragon level. When you gain a paragon level, you may choose and gain an ability from the Paragon Abilities section. These abilities represent heroic level capstones to various combat archetypes.
 

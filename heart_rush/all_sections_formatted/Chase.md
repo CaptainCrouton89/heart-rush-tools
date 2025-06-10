@@ -127,6 +127,8 @@ The chase continues with the thief trying to reach the docks (target number 12) 
 
 ## Special Circumstances
 
+Some chases include unusual factors.
+
 ### Multiple Participants
 
 When more than two parties are involved in a chase:
