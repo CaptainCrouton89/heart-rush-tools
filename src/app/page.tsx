@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getNavigationTree } from "../lib/content";
+import { PDFDownloadButton } from "../components/PDFDownloadButton";
 
 export default async function HomePage() {
   const navigation = await getNavigationTree();
@@ -13,10 +14,13 @@ export default async function HomePage() {
         <p className="text-xl text-muted-foreground mb-2">
           Welcome to the official digital rulebook for Heart Rush TTRPG
         </p>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground mb-6">
           Navigate through {navigation.length} sections of rules, lore, and
           gameplay guidance
         </p>
+        <div className="flex justify-center">
+          <PDFDownloadButton />
+        </div>
       </header>
 
       {/* Featured Sections */}
