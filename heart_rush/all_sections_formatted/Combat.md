@@ -304,7 +304,9 @@ If you take 10 or more damage, this represents serious bodily harm. In addition 
 
 Wounds reduce your maximum hit points. Whenever you gain hit points, you cannot increase your hit points beyond your normal maximum minus the sum of the ranks of all your wounds. So if you normally have a 40 hit point maximum, but you have 23 ranks worth of wounds, you can't heal past 17 hit points.
 
-Outside of combat, wounds are like aspects, which you can read about in the Aspects section (page 10). Since they have a description and a rank, you or the GM can invoke them for a penalty on a roll equal to the rank of the wound, in exchange for DP equal to the rank of the wound, up to 5.
+Wounds also have non-combat effects—they count as aspects in addition to their max-hp reducing effect. Like aspects, they have a description and a rank. You may use wounds as aspects as well, though you cannot gain more than 5 DP from invoking the wound, even if the rank of the wound is higher.
+
+For example, if you have the rank 12 wound, "Guts spilling out," you could gain 5 DP by taking a minus 12 penalty to nearly any athletics check, since it'd be logical that having that type of wound would make it very difficult to do almost anything physical.
 
 ### Treating wounds
 

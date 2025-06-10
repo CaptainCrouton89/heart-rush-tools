@@ -520,12 +520,6 @@ To get the most out of your character, you should be invoking your aspects frequ
 
 Begin play with whatever equipment makes sense for your character concept and background. Work with your GM to ensure your starting gear fits both the fiction of your character and the tone of the campaign. There are no restrictions based on age or background—a young noble might have fine clothes and a sword, while an elderly scholar might carry ancient tomes and exploration gear.
 
-## Wounds
-
-When you take wounds, they will have a description and a rank, just like an aspect. You may use wounds as aspects as well, though you cannot gain more than 5 DP from invoking the wound, even if the rank of the wound is higher.
-
-For example, if you have the rank 12 wound, "Guts spilling out," you could gain 5 DP by taking a minus 12 penalty to nearly any athletics check, since it'd be logical that having that type of wound would make it very difficult to do almost anything physical.
-
 ## Progress
 
 There are six different ranks of combat power you can start at in Heart Rush. With each rank, you have access to more combat abilities. When you first start to play, everyone should agree which rank to begin the game at.
