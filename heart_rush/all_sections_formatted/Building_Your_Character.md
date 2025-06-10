@@ -84,8 +84,8 @@ Three age categories exist—young, adult, and elderly—each reflecting differe
 
 Young characters are full of potential and recover quickly from setbacks. Their bodies heal fast and their minds eagerly absorb new skills. What qualifies as "young" varies by culture and species—for humans this might be late teens to mid-twenties, but adapt as appropriate for your character concept.
 
-- **Profession Ranks**: Start with 3 ranks to distribute among your professions
-- **Choose ONE benefit**:
+- **Profession Ranks**: Start with 2 ranks to distribute among your professions
+- **Choose TWO benefit**:
   - **Natural Learner**: Profession advancement requires 1 fewer challenge to complete (minimum 1)
   - **Fast Healer**: Wounds heal at twice the normal rate. A wound that would normally take 4 days to reduce by one rank instead takes 2 days
   - **Young and Foolish**: When you accept a complication or negative aspect invocation, gain 1 extra DP beyond the normal amount
@@ -118,9 +118,11 @@ Consider how your character's age intersects with their profession ranks:
 
 Remember that these mechanics reinforce narrative choices. A young character should feel energetic but inexperienced. An elderly character should feel wise but physically limited. Adults sit comfortably in between—competent without being exceptional in any particular way.
 
-## Professions System
+## Profession
 
-## Core Concepts
+Your character's professional background defines their expertise and capabilities. Professions represent broad life paths—like Blacksmith, Diplomat, or Sea Captain—that encompass related skills and knowledge. They advance through practical use: completing challenging tasks and undertaking significant missions that push your expertise to new levels. This usage-based system ensures your character grows through meaningful accomplishments rather than abstract point spending.
+
+### Core Concepts
 
 **Professions as Background**: Each profession represents your character's life path and accumulated expertise. These are broad backgrounds that encompass many related skills and knowledge.
 
@@ -135,11 +137,11 @@ Remember that these mechanics reinforce narrative choices. A young character sho
 
 When making a skill check (as described in Gameplay Basics), add your profession rank to the roll if the profession applies.
 
-## Usage-Based Advancement
+### Usage-Based Advancement
 
 Professions advance through **practical application** in two ways:
 
-### 1. Challenges
+#### 1. Challenges
 
 Use your profession to overcome a difficult task:
 
@@ -150,7 +152,7 @@ Use your profession to overcome a difficult task:
 
 Mark one challenge completed when you succeed. Challenges completed during missions count toward your advancement—many missions naturally include several challenges along the way.
 
-### 2. Missions
+#### 2. Missions
 
 Complete a significant professional undertaking that pushes your expertise:
 
@@ -177,7 +179,7 @@ The key is achieving something significant to your profession, not following a s
 - **Expertise**: Does this push what someone at your rank can achieve?
 - **Stakes**: What's at risk - reputation, resources, relationships, or lives?
 
-## Advancement Requirements
+### Advancement Requirements
 
 | Current → Next | Rank Names              | Challenges | Mission Required | Practice Time |
 | -------------- | ----------------------- | ---------- | ---------------- | ------------- |
@@ -191,7 +193,7 @@ The key is achieving something significant to your profession, not following a s
 
 **Practice Time**: Represents dedicated downtime training. You can reduce this by 1 week for each challenge completed beyond the minimum (including challenges completed during missions).
 
-## Starting Professions
+### Starting Professions
 
 Choose up to three professions and distribute ranks between them based on your age category:
 
@@ -201,13 +203,13 @@ Choose up to three professions and distribute ranks between them based on your a
 
 These initial ranks are free and reflect your life before adventuring.
 
-## Profession Application
+### Profession Application
 
 Professions apply their full bonus when directly relevant. When tangentially related, apply half bonus (rounded down).
 
-## Profession Examples
+### Profession Examples
 
-### Blacksmith
+#### Blacksmith
 
 **Challenges**:
 
@@ -223,7 +225,7 @@ _"The Moonsilver Masterwork"_ - Create armor from rare moonsilver that bonds wit
 - **Possible Approaches**: Months of careful work, consulting ancient texts, finding the right conditions
 - **Success**: Completed armor that actually bonds with a wearer
 
-### Diplomat
+#### Diplomat
 
 **Challenges**:
 
@@ -239,7 +241,7 @@ _"The Trade Compact"_ - Negotiate your city's first trade agreement with the dwa
 - **Possible Approaches**: Learn dwarven customs, find common interests, leverage personal relationships
 - **Success**: Agreement signed and trade begins flowing
 
-### Hunter
+#### Hunter
 
 **Challenges**:
 
@@ -255,7 +257,7 @@ _"The Beast of Millhaven"_ - Track and eliminate the creature terrorizing the vi
 - **Possible Approaches**: Study attack patterns, set elaborate trap, track to lair, rally villagers
 - **Success**: Creature dead or driven off permanently
 
-### Merchant
+#### Merchant
 
 **Challenges**:
 
@@ -271,7 +273,7 @@ _"The Silk Road Expansion"_ - Establish profitable trade route to distant easter
 - **Possible Approaches**: Navigate foreign customs, find reliable partners, survive the journey
 - **Success**: Profitable trade route established
 
-### Scholar
+#### Scholar
 
 **Challenges**:
 
@@ -287,7 +289,7 @@ _"The Lost Theorem"_ - Decipher the incomplete mathematical proofs of an ancient
 - **Possible Approaches**: Research across multiple libraries, find missing fragments, test theories
 - **Success**: Working theorem that other scholars can verify
 
-### Sea Captain
+#### Sea Captain
 
 **Challenges**:
 
@@ -303,7 +305,7 @@ _"Through the Maelstrom"_ - Navigate your ship through the legendary Storm of So
 - **Possible Approaches**: Chart a course using ancient maps, bind wind spirits, ride the eye of the storm, trust pure seamanship
 - **Success**: Ship and most of crew survive to reach the other side
 
-### Smuggler
+#### Smuggler
 
 **Challenges**:
 
@@ -319,7 +321,7 @@ _"The Underground Railroad"_ - Establish permanent safe routes for refugees flee
 - **Possible Approaches**: Bribe officials, establish safe houses, recruit trustworthy operators
 - **Success**: Refugees successfully using your routes independently
 
-### Thief
+#### Thief
 
 **Challenges**:
 
@@ -335,7 +337,7 @@ _"The Perfect Score"_ - Steal the Merchant Prince's ledger from his counting hou
 - **Possible Approaches**: Elaborate heist, seduce someone with access, forge employment papers, wait for the right opportunity
 - **Success**: Ledger obtained without being identified as the thief
 
-## Example Professions
+### Example Professions
 
 Professions represent broad life paths and careers:
 
@@ -359,7 +361,7 @@ Professions should be broad enough to cover multiple related activities. A "Thie
 
 Work with your GM to ensure your profession reflects a realistic life path from the game world.
 
-## Creating Missions
+### Creating Missions
 
 Missions are defined by their goals, not their methods. When a player proposes a mission:
 
@@ -393,7 +395,7 @@ Missions are defined by their goals, not their methods. When a player proposes a
 
 Remember: A clever thief who accomplishes their heist without picking a single lock has still completed their mission. The achievement matters, not the method.
 
-## Using Professions in Play
+### Using Professions in Play
 
 **Direct Application (Full Bonus)**:
 
