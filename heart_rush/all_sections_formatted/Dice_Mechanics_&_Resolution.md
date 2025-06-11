@@ -2,36 +2,46 @@
 
 ## Overview
 
-Heart Rush uses dice to resolve uncertain actions, combining your natural talent, current stamina, and training to create dynamic outcomes. This chapter covers all the fundamental mechanics you'll need to play.
+Every hero faces moments of uncertainty—the leap across a chasm, the desperate plea to a hostile king, the crucial strike against a deadly foe. These pivotal moments are resolved through dice, where your character's natural talent, current condition, and hard-won experience all contribute to the outcome. This chapter provides everything you need to understand how dice shape your story.
+
+At its core, you'll roll just two dice and add them together. But the circumstances of your action—your training, your allies' support, even your character's personality—can dramatically shift the odds. Whether you're a player learning the basics or a GM mastering every nuance, these mechanics will become second nature through play.
 
 ## Core Dice System
 
 ### The Basic Roll
 
-In Heart Rush, you resolve uncertain actions by rolling two dice:
+At the heart of every uncertain action lies a simple formula: combine your current stamina with your natural ability to determine success. Both your condition and your talents matter in every roll.
 
-- **Your Heart Die**: Represents your stamina and vitality
-- **An Ability Die**: Represents your natural talent (Might, Agility, Cunning, or Presence)
+**The fundamental mechanic:**
 
-The sum of these dice, plus any modifiers, determines your success.
+- **Your Heart Die**: Represents your stamina and vitality—as you tire or take wounds, this die shrinks
+- **An Ability Die**: Represents your natural talent in one of four areas (Might, Agility, Cunning, or Presence)
+
+The sum of these dice, plus any modifiers from your training and circumstances, determines whether you succeed or fail. This creates a dynamic where even skilled characters must manage their resources carefully, while less talented heroes can still triumph when fresh and determined.
 
 ### When to Roll
 
-The GM calls for a dice roll whenever you attempt something that:
+Not every action requires dice. Rolls are reserved for moments that matter—when failure would be interesting, success isn't guaranteed, and the outcome will shape the story. The GM calls for rolls only when these conditions align.
+
+**Roll dice when the action:**
 
 - Has a realistic chance of failure
 - Would have interesting consequences for failure
 - Cannot be resolved through roleplay alone
 
+A master thief doesn't roll to pick a simple lock in their workshop. But that same lock during a midnight heist, with guards approaching? That's when dice hit the table.
+
 ## Types of Rolls
 
-Heart Rush uses four distinct types of rolls, each serving a specific purpose:
+Four distinct types of rolls serve specific situations. While they share the core mechanic of rolling dice against a target number, each type has unique features that make it perfect for its purpose. Understanding when to use each type is key to smooth gameplay.
 
 ### 1. Skill Checks
 
-**When to Use**: Attempting any action with a chance of failure.
+Skill checks are your bread and butter—the rolls you'll make most often when attempting anything with a chance of failure. From scaling castle walls to deciphering ancient texts, from haggling with merchants to tracking beasts through snow, skill checks handle any task where your character's abilities are tested against the challenges of the world.
 
-The GM sets a target number called the Challenge Number (CN) based on the difficulty of the task. You need to meet or exceed this number to succeed. Common CNs range from 6 (Fairly Easy) to 21 (Heroic) - see the Challenge Numbers section for the full table.
+**When to Use**: Attempting any action with a chance of failure where you're actively trying to accomplish something.
+
+The GM sets a target number called the Challenge Number (CN) based on the difficulty of the task. You need to meet or exceed this number to succeed. Common CNs range from 6 (Fairly Easy) to 21 (Heroic)—see the Challenge Numbers section for the full table.
 
 **Basic Procedure**:
 
@@ -49,12 +59,14 @@ The GM sets a target number called the Challenge Number (CN) based on the diffic
 
 #### The Complication Rule
 
+Sometimes the dice betray you at the worst possible moment—but you have a choice about how to handle catastrophic rolls. When fate turns against you, you can accept failure gracefully or push through at a cost. This rule creates dramatic moments where success comes with unexpected consequences.
+
 When you roll a 1 on any die during a skill check, you must choose:
 
 - **Option A**: Automatically fail the check
 - **Option B**: Re-roll that die and accept a complication
 
-A complication doesn't affect your success—it creates an additional problem related to your action.
+A complication doesn't affect your success—it creates an additional problem related to your action. You might pick the lock, but your tools break. You might convince the guard, but now he wants a favor. Success with strings attached.
 
 **Special Cases**:
 
@@ -71,6 +83,8 @@ A complication doesn't affect your success—it creates an additional problem re
 - **Foraging**: You find food, but attract a dangerous predator
 
 ### 2. Saving Throws
+
+Where skill checks represent your active attempts to accomplish goals, saving throws represent your reactive attempts to avoid disaster. When danger comes for you—whether a sorcerer's curse, a collapsing ceiling, or a hidden pit trap—saving throws determine if you can twist away at the last second. They use the same basic mechanics as skill checks but with crucial differences that reflect their defensive nature.
 
 **When to Use**: Avoiding or mitigating effects imposed by others or the environment.
 
@@ -93,6 +107,8 @@ A complication doesn't affect your success—it creates an additional problem re
 
 ### 3. Attack & Defense Rolls (A/D Rolls)
 
+Combat brings its own specialized rolls that handle the deadly dance of weapons and magic. Attack and Defense rolls share the core mechanics but add layers specific to battle—weapon skills, combat talents, and the chaotic flow of melee. These rolls form the backbone of the fast and lethal combat system.
+
 **When to Use**: Dealing or negating damage in combat.
 
 **Mechanics**:
@@ -101,6 +117,8 @@ A complication doesn't affect your success—it creates an additional problem re
 - Detailed rules in the Combat section
 
 ### 4. Stratagem Rolls
+
+Sometimes your ambitions extend beyond what any single action can accomplish. When you're commanding fleets, building merchant empires, or pursuing grand schemes that unfold over weeks or months, stratagem rolls let you resolve these complex endeavors without getting bogged down in details. They represent a "zoom out" mechanic that keeps epic-scale actions manageable.
 
 **When to Use**: Complex endeavors involving multiple coordinated actions over time—from naval battles to political campaigns.
 
@@ -116,13 +134,13 @@ _See the Stratagem System section for complete rules._
 
 ## Modifying Rolls
 
-The dice tell only part of the story. Your training, circumstances, personality traits, and the help of allies all influence your chances of success. This section covers the various ways your rolls can be modified to reflect these factors.
+Raw dice tell only part of the story. In Heart Rush, your circumstances, training, personality, and allies all influence your chances of success. This section details the various modifiers that transform a simple dice roll into a reflection of your character's full capabilities and current situation. Understanding these modifiers is key to maximizing your effectiveness and creating memorable moments at the table.
 
 ### Advantage & Disadvantage
 
-Sometimes circumstances make a task notably easier or harder than normal. Maybe you have the perfect tool for the job, or perhaps you're trying to pick a lock in complete darkness. Advantage and disadvantage represent these situational modifiers by giving you extra dice to roll, then letting you keep the best (or worst) results.
+The circumstances of your action can dramatically shift the odds. When you have the high ground, the perfect tool, or the element of surprise, you gain advantage—extra dice that improve your chances. When you're wounded, distracted, or working with inferior equipment, disadvantage makes success less likely. This system creates swingy, cinematic results where preparation and positioning truly matter.
 
-These mechanics create swingy, dramatic results that can turn desperate situations into triumphant successes—or seemingly simple tasks into comedic failures. The GM awards advantage or disadvantage based on the fiction of the scene.
+These mechanics create swingy, dramatic results that can turn desperate situations into triumphant successes—or seemingly simple tasks into comedic failures. The GM awards advantage or disadvantage based on the fiction of the scene, making the narrative circumstances mechanically meaningful.
 
 **Advantage Mechanics**:
 
@@ -151,9 +169,9 @@ _Lifting a heavy portcullis with 3 advantages and 1 disadvantage_
 
 ### Profession Bonuses
 
-Your professional training represents years of study, practice, and experience in a particular field. Whether you're a seasoned sailor who knows every knot and current, or a scholar who has memorized ancient texts, your profession provides concrete mechanical benefits when your expertise applies.
+Years of training and experience provide concrete mechanical benefits. Your profession represents deep expertise that can be applied in both obvious and creative ways. A career soldier knows more than just swordplay; they understand logistics, fortifications, and military hierarchy. Players who think creatively about their professional knowledge will find many opportunities to apply it.
 
-Professions in Heart Rush aren't just flavor—they're a core part of your character's competence. The system recognizes that professional knowledge can be applied both directly (a blacksmith forging a sword) and indirectly (that same blacksmith recognizing the quality of metal in a piece of armor).
+Professional knowledge can be applied both directly (a blacksmith forging a sword) and indirectly (that same blacksmith recognizing the quality of metal in a piece of armor).
 
 **Direct Application**: Add full profession rank
 
@@ -175,11 +193,13 @@ Professions in Heart Rush aren't just flavor—they're a core part of your chara
 
 ### Using Aspects
 
-Aspects are the defining traits, beliefs, relationships, and experiences that make your character unique. They might be personality traits like "Never Leave a Friend Behind," past experiences like "Veteran of the Goblin Wars," or reputations like "The Honest Thief of Portside." Each aspect has a rank (1-5) representing how central it is to your character.
+Your character is more than a collection of numbers—they're a person with beliefs, flaws, relationships, and history. Aspects capture these defining elements and make them mechanically relevant through the Destiny Point economy. This creates a game where being true to your character is rewarded, whether that nature helps or hinders you. The same stubborn pride that helps you resist interrogation might sabotage your attempts at diplomacy.
 
-What makes aspects special is their double-edged nature. The same trait that helps you in one situation might hinder you in another—and Heart Rush rewards you for playing both sides. By spending or gaining Destiny Points (DP), aspects become a currency of narrative influence, letting you succeed when your character's nature aids them or earn resources when it causes problems.
+What makes aspects special is their double-edged nature. The same trait that helps you in one situation might hinder you in another—and you're rewarded for playing both sides. By spending or gaining Destiny Points (DP), aspects become a currency of narrative influence, letting you succeed when your character's nature aids them or earn resources when it causes problems.
 
 #### Positive Invocation (Spending DP)
+
+When your character's nature aligns perfectly with the task at hand, you can spend Destiny Points to channel that aspect into mechanical success. This represents those moments when who you are makes all the difference.
 
 - Spend Destiny Points up to the aspect's rank
 - Add that amount to your roll
@@ -193,6 +213,8 @@ What makes aspects special is their double-edged nature. The same trait that hel
 - Draw on shared professional experience
 
 #### Negative Invocation (Gaining DP)
+
+The most interesting characters have flaws, compulsions, and troublesome traits. When these aspects would logically cause problems, you can lean into the complication to earn Destiny Points. This encourages players to create drama and stay true to their character even when it's disadvantageous.
 
 - Choose to let an aspect hinder you when it applies
 - Gain DP equal to aspect's rank by either:
@@ -214,7 +236,7 @@ If an aspect would complicate a situation or indicate weakness, you may choose t
 
 ### Helping
 
-Heart Rush recognizes that heroes rarely work alone. When someone attempts a challenging task, their allies can lend aid—whether that's steadying a ladder, distracting a guard, or offering words of encouragement. The helping mechanic makes teamwork meaningful without bogging down play with multiple rolls.
+Adventures are rarely solo affairs. When challenges arise, heroes naturally work together—one picking the lock while another watches for guards, one distracting the merchant while another picks their pocket. The helping rules make cooperation mechanically powerful while ensuring that teamwork carries shared risks. This encourages the kind of collaborative problem-solving that makes tabletop gaming special.
 
 Helping always grants advantage (one of the strongest bonuses in the game), but helpers share the risks. This creates interesting tactical decisions—is it worth risking multiple characters on a single roll?
 
@@ -234,11 +256,11 @@ Helping always grants advantage (one of the strongest bonuses in the game), but 
 
 #### Group Skill Checks
 
-Sometimes multiple characters attempt the same task together. The system handles these situations differently based on whether the group succeeds only if everyone succeeds, or whether they can work together cooperatively.
+When the entire party faces the same challenge together, these situations can be resolved without repetitive rolling while maintaining appropriate difficulty. There are two distinct situations: tasks where one failure ruins everything, and tasks where the group can support each other. This keeps the game moving while preserving the tension of group challenges.
 
 ##### Weakest Link Tasks
 
-When the group is only as strong as its weakest member (e.g., sneaking past guards as a group), failure by one means failure by all.
+Some challenges are only as strong as their weakest link. When sneaking past guards, the stealthiest rogue can't compensate for the clanking paladin. When crossing a narrow beam, one person's fall alerts everyone. These situations require a different approach than individual rolls.
 
 **Procedure**:
 
@@ -254,7 +276,7 @@ When the group is only as strong as its weakest member (e.g., sneaking past guar
 
 ##### Collaborative Tasks
 
-When characters can meaningfully combine their efforts (e.g., persuading a judge, lifting a heavy gate), the strongest member leads while others support.
+Other challenges benefit from combined efforts. When persuading a council, different speakers can cover for each other's weaknesses. When lifting a portcullis, multiple strong backs make the difference. These tasks let the group's strength shine through.
 
 **Procedure**:
 
@@ -270,11 +292,13 @@ When characters can meaningfully combine their efforts (e.g., persuading a judge
 
 ## Challenge Numbers
 
-Challenge Numbers (CNs) are the target numbers you need to meet or exceed to succeed at tasks. They're the GM's primary tool for communicating difficulty and setting the stakes for any given roll. A CN of 6 might represent climbing a ladder in a hurry, while a CN of 18 could be leaping across a chasm in full armor during a thunderstorm.
+The beating heart of the difficulty system, Challenge Numbers (CNs) create a consistent framework for the GM to communicate how hard any task will be. From the trivial to the legendary, this unified scale helps everyone at the table understand the stakes before dice hit the table. Whether you're attempting a simple skill check or commanding armies in a stratagem, the same intuitive scale applies.
 
 Understanding the CN scale helps both players and GMs calibrate expectations. Players can gauge whether an action is within their capabilities, while GMs can consistently set appropriate difficulties across different situations. The system uses the same scale for everything from skill checks to stratagems, creating a unified difficulty framework.
 
 ### Standard Difficulties
+
+This table serves as your primary reference for setting and understanding difficulty. Each tier represents a significant jump in challenge, helping GMs quickly assign appropriate CNs and letting players understand their chances before committing to an action.
 
 | CN  | Difficulty        | When to Use                      |
 | --- | ----------------- | -------------------------------- |
@@ -287,9 +311,7 @@ Understanding the CN scale helps both players and GMs calibrate expectations. Pl
 
 ### Ability Challenge Numbers
 
-When you create effects that others must resist—whether grappling an enemy, dazzling them with your presence, or weaving magic—your natural capabilities set the difficulty. Ability Challenge Numbers represent how hard it is for others to overcome your inherent talents and developed power.
-
-This system scales with character advancement through paragon levels, ensuring that as heroes grow in power, their abilities become increasingly difficult to resist. It also means that different characters excel at different types of effects based on their strongest abilities.
+Not all challenges come from the environment—sometimes you're the one creating effects that others must resist. When you grapple a foe, dazzle a crowd with your presence, or weave magical effects, your natural abilities determine how hard you are to resist. These numbers scale with your growth as a hero through paragon levels, ensuring that your innate talents remain relevant throughout your adventures. Different characters excel at different types of effects based on their strongest abilities.
 
 **Calculation**: Maximum of relevant ability die + (2 × paragon level)
 
@@ -307,6 +329,8 @@ This system scales with character advancement through paragon levels, ensuring t
 - Enemies must meet or beat 14 to resist their grapples
 
 ### Stratagem CNs
+
+Large-scale endeavors use the same difficulty scale but with additional considerations. Your forces' advantages and disadvantages modify the base CN—preparation and circumstances matter as much as raw ability.
 
 Use the same scale as skill checks, modified by:
 
