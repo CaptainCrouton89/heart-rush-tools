@@ -6,4 +6,4 @@ When you first gain this talent, choose a spell you know. You may decrease your 
 You may take this talent any number of times, choosing a different spell each time.
 
 **Destiny Level:**
-When you use this ability, you may cast the spell as a priority ability this round without using your action.
+When you use this ability, you may cast the spell as a quick ability this round without using your action.

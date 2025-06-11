@@ -444,7 +444,7 @@ When you first gain this talent, choose a spell you know. You may decrease your 
 You may take this talent any number of times, choosing a different spell each time.
 
 **Destiny Level:**
-When you use this ability, you may cast the spell as a priority ability this round without using your action.
+When you use this ability, you may cast the spell as a quick ability this round without using your action.
 
 ### Exert
 
@@ -598,7 +598,7 @@ _Passive ability. Cognitive talent._
 Whenever an ally has a clear line of sight and hearing towards you, they cannot be enraged or frightened unless you suffer one of those conditions as well. Additionally, whenever you are in an engagement, allies in the same engagement take 1 less damage from all sources.
 
 **Destiny Level:**
-Once per round, you may call out encouragement as a priority ability. Choose a creature besides yourself that is within 30 feet that can see and hear you. It gains one of the following benefits:
+Once per round, you may call out encouragement as a quick ability. Choose a creature besides yourself that is within 30 feet that can see and hear you. It gains one of the following benefits:
 
 - Stand up from prone
 - Remove all levels of dazed, off-balanced, or weakened
@@ -1328,7 +1328,7 @@ The size limit on the object increases to a 5-foot cube.
 ### Gravity
 
 _Heart ability. Quick. Full action. Cognitive talent. Elemental attunement: Force._
-As a priority ability, you may use your action to change the direction of gravity for yourself. You may dispel this effect at any time as a priority ability.
+You may use your action to change the direction of gravity for yourself. You may dispel this effect at any time as a quick ability.
 
 **Destiny Level:**  
 You may change the direction of gravity for up to six willing creatures.

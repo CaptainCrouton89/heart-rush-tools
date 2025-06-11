@@ -31,7 +31,7 @@ As a whole, they value education, money, and preserving their cultural and relig
 #### Alert
 
 **Passive ability.**
-You have advantage on all cunning checks to determine if someone has bad intentions, and may choose to have first priority in combat.
+You have advantage on all cunning checks to determine if someone has bad intentions. When combat begins, you may use treat your initiative roll as its maximum value.
 
 In addition, you gain the perceptive talent as a racial ability (it does not count towards the number of talents you have).
 
