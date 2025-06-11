@@ -16,7 +16,11 @@
     },
     {
       "name": "Playing the Game",
-      "sections": ["Gameplay_Basics", "Strategem_System"]
+      "sections": [
+        "Dice_Mechanics_&_Resolution",
+        "Gameplay_Basics",
+        "Strategem_System"
+      ]
     },
     {
       "name": "Combat",
