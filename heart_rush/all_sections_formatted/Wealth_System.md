@@ -1,266 +1,215 @@
-# Wealth System
+# How To Play
 
-As your fortune grows in Heart Rush, so does your perspective on money. What once seemed like careful budgeting becomes loose change rattling in your purse. This system naturally reduces bookkeeping as characters accumulate wealth, letting you focus on adventure rather than accounting.
+Heart Rush is a collaborative storytelling game where you and your friends create epic adventures together. One player takes the role of Game Master (GM), guiding the world and its inhabitants, while the other players portray heroes navigating that world. This section explains how gameplay flows and what to expect at the table.
 
-## Currency
+## The Flow of Play
 
-The world uses five tiers of currency, each worth ten times the previous:
+Every game of Heart Rush unfolds through natural conversation and shared imagination. There's no board to constrain you, no predetermined path to follow—just a world of possibilities shaped by your choices and the roll of dice. Understanding this flow helps you engage confidently with the game's rhythm.
 
-| Currency   | Value (in iron) | Common Uses                                           |
-| ---------- | --------------- | ----------------------------------------------------- |
-| Iron piece | 1               | Street food, candles, simple supplies                 |
-| Obol       | 10              | Day's wages, basic equipment, cheap lodging           |
-| Lire       | 100             | Weapons, comfortable accommodations, skilled services |
-| Ducat      | 1,000           | Warhorses, masterwork items, property                 |
-| Crown      | 10,000          | Ships, castles, armies                                |
+### The Conversation
 
-### Quick Conversion
+At its core, Heart Rush is a conversation. The GM describes situations, you describe your character's actions, and together you discover what happens next. This back-and-forth creates the story.
 
-- 10 iron = 1 obol
-- 10 obol = 1 lire
-- 10 lire = 1 ducat
-- 10 ducats = 1 crown
+**The Basic Loop**:
 
-## The Wealth Threshold
+1. GM describes the situation
+2. Players ask questions and declare actions
+3. If the outcome is uncertain, dice determine results
+4. GM narrates consequences
+5. The cycle continues
 
-**Core Rule: Once you possess any amount of a currency, you stop tracking purchases made in currencies two or more tiers below it.**
+Most of your time will be spent in this conversational flow, with dice appearing only when actions have meaningful risk and consequence.
 
-This means:
+## Scales of Play
 
-- Have any **lire**? Stop tracking iron purchases
-- Have any **ducat**? Stop tracking iron and obol purchases
-- Have any **crown**? Stop tracking iron, obol, and lire purchases
+One of Heart Rush's strengths is its ability to shift focus like a camera lens—zooming in for intense personal moments, pulling back to montage through traveling sequences, or taking a bird's eye view of grand strategic endeavors. The game naturally flows between these different scales based on what's most interesting in the moment.
 
-You always track purchases in your highest currency and the one directly below it.
+### Zoomed In: Moment to Moment
 
-### Examples
+**Default mode of play**. You experience the world through your character's eyes, making decisions as events unfold in real time.
 
-[[**Example**
+- **Exploration**: Investigating ancient ruins room by room
+- **Social Encounters**: Negotiating with the merchant guild representative
+- **Combat**: Trading blows with bandits on a narrow bridge
+- **Problem Solving**: Figuring out how to cross a raging river
 
-Jasper has 47 iron and 3 obol:
+When zoomed in, every choice matters. You decide exactly what your character says, where they move, what they examine. Time moves naturally—a five-minute conversation takes about five minutes to play out.
 
-- Tracks all iron and obol purchases
-- Buying 2-iron meal? Now has 45 iron and 3 obol]]
+### Montage: Compressed Time
 
-[[**Example**
+**For routine or extended activities**. When the journey matters more than each individual step, play shifts to montage mode.
 
-Mira has 2 ducats and 15 lire:
+- **Travel**: "After three days following the river, you reach the forest's edge..."
+- **Downtime**: "You spend the week crafting potions and gathering rumors..."
+- **Recovery**: "Over the next few days, your wounds heal as you rest at the inn..."
 
-- Ignores all iron and obol purchases
-- Tracks only lire and ducat expenses
-- Staying at a 2-lire inn? Now has 13 lire
-- Buying a torch (1 iron)? Doesn't track it]]
+During montages, you still make meaningful choices ("Do we take the mountain pass or the longer valley route?"), but mundane details fade into the background. See the **Journeys** section for structured travel rules.
 
-[[**Example**
+### Stratagems: Grand Endeavors
 
-Lord Blackwood has 5 crowns, 23 ducats:
+**For complex, coordinated efforts**. When you pursue goals requiring organization, planning, or management from afar, the game uses stratagems.
 
-- Ignores all iron, obol, and lire purchases
-- Tracks only ducat and crown expenses
-- Hiring mercenaries for 3 crowns? Now has 2 crowns]]
+- **Leading Organizations**: Your trading company establishes new routes
+- **Military Campaigns**: Commanding your mercenary company in a siege
+- **Political Maneuvering**: Building influence in the royal court
+- **Long-term Projects**: Researching ancient magic over months
 
-## Converting Currency
+Stratagems let you pursue grand ambitions without getting bogged down in logistics. Each roll represents days, weeks, or even months of effort. See the **Stratagem System** section for complete rules.
 
-Convert smaller denominations to larger ones whenever convenient:
+## Structure of Sessions
 
-- When you accumulate 100+ of any currency, consider converting
-- Always round down when converting up
-- Track only what matters for your wealth level
+While every gaming group develops its own rhythm, most Heart Rush sessions follow recognizable patterns. Understanding these patterns helps you navigate the game's flow and make the most of your time at the table. Sessions typically last 2-4 hours, though some groups prefer longer or shorter games.
 
-[[**Example**
+### Beginning a Session
 
-A merchant with 347 iron pieces would typically convert to 34 obol (plus 7 iron). But if they already have any lire, they'd ignore the iron entirely and just track 34 obol.]]
+Sessions typically start by reestablishing the situation. The GM might:
 
-## Starting Wealth
+- Recap recent events
+- Describe your current surroundings
+- Present immediate opportunities or challenges
+- Ask what you want to pursue
 
-Work with your GM to determine starting wealth based on your character concept:
+**Your agency matters**. While the GM presents the world, you decide your goals and how to pursue them. There's no predetermined story—only situations and your responses to them.
 
-| Background  | Typical Starting Wealth |
-| ----------- | ----------------------- |
-| Destitute   | 10-50 iron              |
-| Common      | 5-20 obol               |
-| Comfortable | 5-20 lire               |
-| Prosperous  | 5-20 ducats             |
-| Noble       | 2-10 crowns             |
+### During Play
 
-## Typical Prices
+**Follow Your Interests**: Heart Rush thrives on player initiative. See something intriguing? Investigate it. Have a personal goal? Pursue it. The GM will integrate your choices into the unfolding narrative.
 
-Typical price tables are listed below. They don't reflect prices everywhere, just approximations—it is ultimately up to the GM.
+**Embrace Uncertainty**: When you attempt something risky or challenging, dice determine the outcome. Success brings triumph, but failure creates new complications and opportunities. Both drive the story forward.
 
-### Daily Expenses
+**Share the Spotlight**: In group play, ensure everyone gets chances to contribute. Support each other's moments while pursuing your own goals.
 
-| Item/Service           | Cost     |
-| ---------------------- | -------- |
-| Mug of ale             | 1 iron   |
-| Loaf of bread          | 1 iron   |
-| Simple meal            | 2-3 iron |
-| Hearty meal            | 5 iron   |
-| Fine dining            | 2 lire   |
-| Bottle of common wine  | 2 obol   |
-| Bottle of fine wine    | 5 lire   |
-| Trail rations (1 day)  | 1 obol   |
-| Common room (1 night)  | 2 obol   |
-| Private room (1 night) | 2 lire   |
-| Fine accommodations    | 1 ducat  |
-| Bath at inn            | 3 iron   |
-| Stabling (1 night)     | 5 iron   |
+### Scene Transitions
 
-### Equipment
+The GM controls pacing by cutting between scenes:
 
-| Item               | Cost      |
-| ------------------ | --------- |
-| Candle             | 1 iron    |
-| Torch              | 1 iron    |
-| Lantern            | 7 obol    |
-| Oil (1 flask)      | 1 obol    |
-| Rope (50 ft)       | 5 obol    |
-| Grappling hook     | 1 lire    |
-| Iron spikes (10)   | 3 obol    |
-| Pole (10 ft)       | 2 obol    |
-| Crowbar            | 2 lire    |
-| Lock, simple       | 2 lire    |
-| Lock, complex      | 10 lire   |
-| Manacles           | 2 lire    |
-| Mirror, steel      | 5 lire    |
-| Spyglass           | 100 lire  |
-| Backpack           | 2 obol    |
-| Bedroll            | 1 obol    |
-| Tent, 2-person     | 2 lire    |
-| Waterskin          | 2 obol    |
-| Whetstone          | 2 iron    |
-| Fishing gear       | 1 lire    |
-| Climber's kit      | 8 lire    |
-| Healer's kit       | 5 lire    |
-| Disguise kit       | 15 lire   |
-| Thieves' tools     | 10 lire   |
-| Musical instrument | 5-30 lire |
-| Ink & quill        | 8 obol    |
-| Parchment (sheet)  | 2 obol    |
-| Map, local area    | 5 lire    |
-| Map, regional      | 25 lire   |
-| Book, common       | 5 lire    |
-| Book, rare         | 50+ lire  |
-| Signet ring        | 5 lire    |
-| Sealing wax        | 5 iron    |
+- **Hard Cuts**: "Three days later, you arrive at the fortress..."
+- **Soft Transitions**: "As evening falls, where do you make camp?"
+- **Cliffhangers**: "As the door swings open, we'll find out what's behind it next session..."
 
-### Weapons & Armor
+These transitions keep the story moving, skipping unnecessary downtime while preserving meaningful choices.
 
-| Item              | Cost     |
-| ----------------- | -------- |
-| Club              | 1 obol   |
-| Dagger            | 2 obol   |
-| Simple weapon     | 5 obol   |
-| Martial weapon    | 3 lire   |
-| Exotic weapon     | 10 lire  |
-| Ammunition (20)   | 1 obol   |
-| Light armor       | 5 lire   |
-| Medium armor      | 15 lire  |
-| Heavy armor       | 30 lire  |
-| Shield            | 1 lire   |
-| Masterwork weapon | 2 ducats |
-| Masterwork armor  | 3 ducats |
+## Making Decisions
 
-### Clothing
+Your choices drive the story in Heart Rush. Every decision—from how you approach a guard to which path you take through the mountains—shapes the narrative. The game provides structured ways to resolve these choices when their outcomes are uncertain, ensuring that both careful planning and bold improvisation have their place.
 
-| Item               | Cost      |
-| ------------------ | --------- |
-| Peasant clothes    | 3 obol    |
-| Traveler's outfit  | 1 lire    |
-| Merchant's clothes | 5 lire    |
-| Noble's outfit     | 30 lire   |
-| Royal attire       | 10 ducats |
-| Winter cloak       | 5 obol    |
-| Boots              | 3 obol    |
-| Fine boots         | 3 lire    |
+### When You Act
 
-### Services
+Describe your intentions clearly. The GM needs to understand:
 
-| Service                     | Cost        |
-| --------------------------- | ----------- |
-| Unskilled labor (1 day)     | 1 obol      |
-| Skilled artisan (1 day)     | 1 lire      |
-| Sage consultation           | 5 lire      |
-| Healer's services           | 1-10 lire   |
-| Scribe (per page)           | 1 obol      |
-| Messenger (local)           | 2 obol      |
-| Messenger (distant)         | 1 lire      |
-| Guide (1 day)               | 2 lire      |
-| Mercenary (1 day)           | 1 lire      |
-| Bribe, minor official       | 1-5 lire    |
-| Bribe, major official       | 1-10 ducats |
-| Master craftsman commission | 1+ ducats   |
-| Assassin                    | 50+ ducats  |
+- What you're trying to accomplish
+- How you're attempting it
+- What resources or abilities you're using
 
-### Transportation
+**Good**: "I want to convince the guard we're merchants. I'll show him our forged trade documents and mention the Baron's recent decree about encouraging commerce."
 
-| Item/Service                 | Cost        |
-| ---------------------------- | ----------- |
-| Ferry crossing               | 1 obol      |
-| Coach ride (between towns)   | 3 lire      |
-| Ship passage (per 100 miles) | 1 lire      |
-| Riding horse                 | 50 lire     |
-| Draft horse                  | 20 lire     |
-| Warhorse                     | 5 ducats    |
-| Exotic mount                 | 20+ ducats  |
-| Cart                         | 10 lire     |
-| Wagon                        | 35 lire     |
-| Carriage                     | 100 lire    |
-| Small boat                   | 50 lire     |
-| Sailing ship                 | 10,000 lire |
+**Less Helpful**: "I lie to the guard."
 
-### Property
+### When Dice Appear
 
-| Item            | Cost        |
-| --------------- | ----------- |
-| Small cottage   | 50 ducats   |
-| Town house      | 80 ducats   |
-| Large manor     | 300 ducats  |
-| Urban mansion   | 600 ducats  |
-| Rural estate    | 15 crowns   |
-| Fortified tower | 100 crowns  |
-| Small keep      | 300 crowns  |
-| Castle          | 500+ crowns |
+The GM calls for dice rolls when:
 
-### Magical Items & Services
+- Success and failure are both possible
+- The outcome is uncertain
+- The consequences matter
 
-| Item/Service            | Cost        |
-| ----------------------- | ----------- |
-| Healing potion          | 10 obol     |
-| Antidote                | 5 obol      |
-| Holy water              | 5 lire      |
-| Identify spell          | 10 lire     |
-| Remove curse            | 50 lire     |
-| Minor enchantment       | 25 ducats   |
-| Moderate enchantment    | 100 ducats  |
-| Major artifact          | 250+ crowns |
-| Spell component, common | 1-10 obol   |
-| Spell component, rare   | 5-50 lire   |
-| Spell component, exotic | 1+ ducats   |
+If your action would obviously succeed or fail, no roll is needed. Dice create tension and surprise, not arbitrary obstacles.
 
-## Group Finances
+### Types of Challenges
 
-Adventuring parties can handle wealth in two ways:
+**Skill Checks**: Attempting uncertain actions (see **Dice Mechanics**)
 
-**Individual Tracking**: Each character manages their own money and purchases. Use each character's personal wealth threshold.
+- Climbing the castle wall
+- Deciphering ancient text
+- Tracking through wilderness
 
-**Party Fund**: Pool resources into shared wealth. Use the wealth threshold based on the party's combined highest currency.
+**Saving Throws**: Avoiding imposed effects (see **Dice Mechanics**)
 
-[[**Example**
+- Dodging falling rocks
+- Resisting poison
+- Maintaining balance on a ship deck
 
-If the party fund contains 3 ducats, the group ignores all iron and obol expenses, regardless of individual member wealth.]]
+**Combat**: When violence erupts (see **Combat**)
 
-## Treasure and Rewards
+- Defending against bandits
+- Hunting dangerous beasts
+- Dueling a rival
 
-When finding treasure or receiving payment:
+**Stratagems**: Managing complex endeavors (see **Stratagem System**)
 
-- Loot lists specific amounts and denominations
-- Convert to appropriate currencies based on total value
-- Distribute according to party agreement
+- Establishing trade routes
+- Conducting siege warfare
+- Building political influence
 
-[[**Example**
+## Character Growth
 
-Finding a chest with 2,450 iron pieces:
+Heroes in Heart Rush don't remain static—they learn, adapt, and grow more capable through their adventures. This growth happens both mechanically (through experience points and new abilities) and narratively (through relationships, reputation, and story developments). The game tracks both forms of advancement, ensuring your character evolves in meaningful ways.
 
-- Could be tracked as 245 obol
-- Or as 24 lire and 5 obol
-- Or simply as 24 lire (if you already have ducats)]]
+### Experience Through Play
+
+Your character grows by facing challenges and pursuing goals. The GM awards Experience Points (XP) based on your group's preferred style:
+
+- **Milestone-Based**: XP for reaching story goals
+- **Session-Based**: XP for consistent play
+- **Challenge-Based**: XP for overcoming obstacles
+- **Hybrid Approaches**: Combining multiple methods
+
+### Spending Experience
+
+Between sessions (or during quiet moments), spend XP to develop your character:
+
+- **New Capabilities**: Gain talents, spells, or aspects
+- **Improved Abilities**: Increase skills and attributes
+- **Enhanced Vitality**: Boost hit points and stamina
+
+See **Experience & Advancement** for costs and options.
+
+### Narrative Development
+
+Beyond mechanical advancement, your character evolves through play:
+
+- Relationships form and change
+- Reputations spread
+- Goals shift based on experiences
+- New aspects emerge from memorable moments
+
+## The Cooperative Experience
+
+Heart Rush isn't a game you win or lose—it's an experience you share. Everyone at the table works together to create compelling stories, even when your characters might be at odds. This cooperative spirit extends beyond just "getting along"; it's about actively building on each other's contributions to create something greater than any individual could imagine alone.
+
+### Player Contributions
+
+You're not just controlling a character—you're helping create a world:
+
+- **Ask Questions**: "What does the temple smell like?" "Does the merchant seem nervous?"
+- **Add Details**: "My character nervously adjusts their sword belt"
+- **Build Connections**: Reference other characters' backgrounds and goals
+- **Embrace Consequences**: Let failures create interesting new directions
+
+### Working with the GM
+
+The GM isn't your adversary—they're your partner in creating memorable stories:
+
+- They present challenges to make your successes meaningful
+- They build on your ideas and interests
+- They maintain world consistency while embracing surprises
+- They share narrative control through your choices
+
+### Table Dynamics
+
+**Respectful Play**: Everyone should feel comfortable and included. Discuss boundaries before play begins and respect them throughout.
+
+**Shared Narrative**: While the GM guides the world, everyone contributes to the story. Your descriptions, questions, and reactions shape the narrative as much as any dice roll.
+
+**Flexible Focus**: Sometimes you're the protagonist, sometimes you're supporting cast. Both roles matter for creating engaging stories.
+
+## Getting Started
+
+Your first session might feel overwhelming with new rules and possibilities. That's normal! Focus on:
+
+1. **Describing Your Character's Actions**: What would they do in this situation?
+2. **Asking Questions**: When uncertain, ask the GM for clarification
+3. **Rolling When Asked**: The GM will tell you when and what to roll
+4. **Learning Through Play**: Rules become intuitive with practice
+
+Remember: you can't "play wrong" if you're engaged and contributing to everyone's enjoyment. Heart Rush is about collaborative adventure—embrace the journey and see where it leads.
