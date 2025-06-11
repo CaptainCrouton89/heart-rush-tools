@@ -1,10 +1,10 @@
 # Dice Mechanics and Resolution System
 
+## Overview
+
 Heart Rush uses dice to resolve uncertain actions, combining your natural talent, current stamina, and training to create dynamic outcomes. This chapter covers all the fundamental mechanics you'll need to play.
 
 ## Core Dice System
-
-Heart Rush uses a simple two-die system where you roll your Heart Die (representing stamina) plus an Ability Die (representing natural talent) to resolve uncertain actions. Success is determined by meeting or exceeding a Challenge Number set by the GM, with modifiers from your training and circumstances affecting the outcome.
 
 ### The Basic Roll
 
@@ -114,42 +114,6 @@ A complication doesn't affect your success—it creates an additional problem re
 
 _See the Stratagem System section for complete rules._
 
-## Group Skill Checks
-
-Sometimes multiple characters attempt the same task together. The system handles these situations differently based on whether the group succeeds only if everyone succeeds, or whether they can work together cooperatively.
-
-### Weakest Link Tasks
-
-When the group is only as strong as its weakest member (e.g., sneaking past guards as a group), failure by one means failure by all.
-
-**Procedure**:
-
-- Identify the character worst at the task
-- That character rolls with advantage
-- Success means everyone succeeds; failure affects everyone
-
-**Example**: _Four adventurers sneaking past guards_
-
-- The heavily armored knight (worst at stealth) rolls
-- They get advantage from the group's help
-- One roll determines everyone's fate
-
-### Collaborative Tasks
-
-When characters can meaningfully combine their efforts (e.g., persuading a judge, lifting a heavy gate), the strongest member leads while others support.
-
-**Procedure**:
-
-- The character best at the task rolls
-- They roll with advantage
-- Success benefits from everyone's contribution
-
-**Example**: _Party persuading a merchant guild_
-
-- The smooth-talking bard (best at persuasion) rolls
-- They get advantage from the group's support
-- Success represents the combined effort
-
 ## Modifying Rolls
 
 The dice tell only part of the story. Your training, circumstances, personality traits, and the help of allies all influence your chances of success. This section covers the various ways your rolls can be modified to reflect these factors.
@@ -187,7 +151,9 @@ _Lifting a heavy portcullis with 3 advantages and 1 disadvantage_
 
 ### Profession Bonuses
 
-Your training provides bonuses when relevant:
+Your professional training represents years of study, practice, and experience in a particular field. Whether you're a seasoned sailor who knows every knot and current, or a scholar who has memorized ancient texts, your profession provides concrete mechanical benefits when your expertise applies.
+
+Professions in Heart Rush aren't just flavor—they're a core part of your character's competence. The system recognizes that professional knowledge can be applied both directly (a blacksmith forging a sword) and indirectly (that same blacksmith recognizing the quality of metal in a piece of armor).
 
 **Direct Application**: Add full profession rank
 
@@ -209,7 +175,9 @@ Your training provides bonuses when relevant:
 
 ### Using Aspects
 
-Aspects are character traits that can help or hinder you.
+Aspects are the defining traits, beliefs, relationships, and experiences that make your character unique. They might be personality traits like "Never Leave a Friend Behind," past experiences like "Veteran of the Goblin Wars," or reputations like "The Honest Thief of Portside." Each aspect has a rank (1-5) representing how central it is to your character.
+
+What makes aspects special is their double-edged nature. The same trait that helps you in one situation might hinder you in another—and Heart Rush rewards you for playing both sides. By spending or gaining Destiny Points (DP), aspects become a currency of narrative influence, letting you succeed when your character's nature aids them or earn resources when it causes problems.
 
 #### Positive Invocation (Spending DP)
 
@@ -238,6 +206,12 @@ Aspects are character traits that can help or hinder you.
 - Option 1: Take -3 penalty when trying to negotiate peacefully, gain 3 DP
 - Option 2: Threaten the shopkeeper with violence (creating complications), gain 3 DP
 
+#### Gaining DP from Negative Aspects
+
+If an aspect would complicate a situation or indicate weakness, you may choose to let it hinder you and gain DP equal to the aspect's rank. You can do this by either taking the rank as a penalty to your roll or accepting a narrative complication. This represents your character acting according to their nature, even when disadvantageous.
+
+**Example**: With "Quick to draw my sword" at rank 3, you might take a -3 penalty when trying to negotiate peacefully, or you might threaten a shopkeeper who insults you (creating complications). Either way, you gain 3 DP for staying true to your character.
+
 ### Helping
 
 Heart Rush recognizes that heroes rarely work alone. When someone attempts a challenging task, their allies can lend aid—whether that's steadying a ladder, distracting a guard, or offering words of encouragement. The helping mechanic makes teamwork meaningful without bogging down play with multiple rolls.
@@ -257,6 +231,42 @@ Helping always grants advantage (one of the strongest bonuses in the game), but 
 - You hold the torch steady and watch for guards
 - Your friend gets advantage on their roll
 - If they fail or get a complication, you're both affected
+
+#### Group Skill Checks
+
+Sometimes multiple characters attempt the same task together. The system handles these situations differently based on whether the group succeeds only if everyone succeeds, or whether they can work together cooperatively.
+
+##### Weakest Link Tasks
+
+When the group is only as strong as its weakest member (e.g., sneaking past guards as a group), failure by one means failure by all.
+
+**Procedure**:
+
+- Identify the character worst at the task
+- That character rolls with advantage
+- Success means everyone succeeds; failure affects everyone
+
+**Example**: _Four adventurers sneaking past guards_
+
+- The heavily armored knight (worst at stealth) rolls
+- They get advantage from the group's help
+- One roll determines everyone's fate
+
+##### Collaborative Tasks
+
+When characters can meaningfully combine their efforts (e.g., persuading a judge, lifting a heavy gate), the strongest member leads while others support.
+
+**Procedure**:
+
+- The character best at the task rolls
+- They roll with advantage
+- Success benefits from everyone's contribution
+
+**Example**: _Party persuading a merchant guild_
+
+- The smooth-talking bard (best at persuasion) rolls
+- They get advantage from the group's support
+- Success represents the combined effort
 
 ### Raising the Stakes
 
@@ -325,3 +335,5 @@ Use the same scale as skill checks, modified by:
 - **Hindrances**: Disadvantages that increase Challenge Number
 
 The GM weighs assets against hindrances to set final Challenge Number.
+
+_For complete stratagem rules, examples, and guidance, see the Stratagem System section._
