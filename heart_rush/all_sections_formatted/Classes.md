@@ -361,9 +361,7 @@ Passive ability. Rank 2.
 
 Minor ability. Instant. Rank 3.
 
-Your reflexes are faster than anyone else's on the battlefield. During this round, you keep priority after using abilities.
-
-If you choose not to use an ability while you have priority in this way, priority is still passed to the other side as usual.
+Your reflexes are faster than anyone else's on the battlefield. You can choose to go first in initiative, and you may use your quick abilities between enemy turns, rather than only on your or an ally's turn.
 
 #### Bloodthirsty
 
@@ -510,7 +508,7 @@ Choose one:
 - Shenanigans: The next time you perform a stunt, you have +3 on the contested ability check.
 - Switcheroo: The next time you sidestep, you may sidestep into an adjacent and willing creature's space. Switch places with that creature. The creature must be no more than one size bigger or smaller than you.
 - Taunt: After stances are chosen but before stances are revealed, you may choose a creature and call out their stance. After stances are revealed, if you guessed correctly, that creature gains a level of enraged towards you.
-- Quick Reflexes: You start this round with priority.
+- Quick Reflexes: You go first this round, ignoring initiative order.
 
 #### Elusive
 
@@ -582,7 +580,7 @@ Passive ability. Rank 2.
 - You are imbued with the fortitude of the earth, and gain the following abilities:
   - Subtract 1 from all damage dealt to you.
   - Your move speed decreases by 20 feet.
-  - Once per round, as a priority ability, you may cause a 10-foot tall spire of stone to rise in an unoccupied space within 10 feet of you. The spire has 10 hp and 10 defense and counts as impassable terrain.
+  - Once per round, as a quick ability, you may cause a 10-foot tall spire of stone to rise in an unoccupied space within 10 feet of you. The spire has 10 hp and 10 defense and counts as impassable terrain.
 
 #### Water: Tempest
 
