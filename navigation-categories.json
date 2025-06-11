@@ -17,9 +17,13 @@
     {
       "name": "Playing the Game",
       "sections": [
+        "How_To_Play",
         "Dice_Mechanics_&_Resolution",
-        "Gameplay_Basics",
-        "Strategem_System"
+        "Abilities",
+        "Strategem_System",
+        "Damage_&_Consequences",
+        "Other_Factors",
+        "Experience_&_Advancement"
       ]
     },
     {
