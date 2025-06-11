@@ -4,6 +4,8 @@ Heart Rush is a collaborative storytelling game where you and your friends creat
 
 ## The Flow of Play
 
+Every game of Heart Rush unfolds through natural conversation and shared imagination. There's no board to constrain you, no predetermined path to follow—just a world of possibilities shaped by your choices and the roll of dice. Understanding this flow helps you engage confidently with the game's rhythm.
+
 ### The Conversation
 
 At its core, Heart Rush is a conversation. The GM describes situations, you describe your character's actions, and together you discover what happens next. This back-and-forth creates the story.
@@ -20,7 +22,7 @@ Most of your time will be spent in this conversational flow, with dice appearing
 
 ## Scales of Play
 
-Heart Rush seamlessly shifts between different scales of action, letting you focus on what matters most in each moment.
+One of Heart Rush's strengths is its ability to shift focus like a camera lens—zooming in for intense personal moments, pulling back to montage through traveling sequences, or taking a bird's eye view of grand strategic endeavors. The game naturally flows between these different scales based on what's most interesting in the moment.
 
 ### Zoomed In: Moment to Moment
 
@@ -56,6 +58,8 @@ Stratagems let you pursue grand ambitions without getting bogged down in logisti
 
 ## Structure of Sessions
 
+While every gaming group develops its own rhythm, most Heart Rush sessions follow recognizable patterns. Understanding these patterns helps you navigate the game's flow and make the most of your time at the table. Sessions typically last 2-4 hours, though some groups prefer longer or shorter games.
+
 ### Beginning a Session
 
 Sessions typically start by reestablishing the situation. The GM might:
@@ -86,6 +90,8 @@ The GM controls pacing by cutting between scenes:
 These transitions keep the story moving, skipping unnecessary downtime while preserving meaningful choices.
 
 ## Making Decisions
+
+Your choices drive the story in Heart Rush. Every decision—from how you approach a guard to which path you take through the mountains—shapes the narrative. The game provides structured ways to resolve these choices when their outcomes are uncertain, ensuring that both careful planning and bold improvisation have their place.
 
 ### When You Act
 
@@ -137,6 +143,8 @@ If your action would obviously succeed or fail, no roll is needed. Dice create t
 
 ## Character Growth
 
+Heroes in Heart Rush don't remain static—they learn, adapt, and grow more capable through their adventures. This growth happens both mechanically (through experience points and new abilities) and narratively (through relationships, reputation, and story developments). The game tracks both forms of advancement, ensuring your character evolves in meaningful ways.
+
 ### Experience Through Play
 
 Your character grows by facing challenges and pursuing goals. The GM awards Experience Points (XP) based on your group's preferred style:
@@ -166,6 +174,8 @@ Beyond mechanical advancement, your character evolves through play:
 - New aspects emerge from memorable moments
 
 ## The Cooperative Experience
+
+Heart Rush isn't a game you win or lose—it's an experience you share. Everyone at the table works together to create compelling stories, even when your characters might be at odds. This cooperative spirit extends beyond just "getting along"; it's about actively building on each other's contributions to create something greater than any individual could imagine alone.
 
 ### Player Contributions
 
