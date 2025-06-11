@@ -118,19 +118,18 @@ When you take this action, make an attack roll against the creature with the sta
 
 ## Rush Points
 
-Rush points represent the excitement and momentum of combat, allowing you to perform increasingly powerful abilities as the fight intensifies. As you stay active in battle, you build up rush points that fuel your most devastating attacks and abilities.
+Rush points represent the excitement and momentum of combat, allowing you to perform increasingly powerful abilities as the fight intensifies. As combat progresses, you automatically build up rush points that fuel your most devastating attacks and abilities.
 
 ### Gaining Rush Points
 
-At the start of combat, you begin with 1 rush point. At the beginning of each subsequent round, you gain rush points equal to the number of rounds in which you have been active, up to the current round number.
+Rush points accumulate automatically based on how long combat has lasted:
 
-You count as **active in a round** if you did any of the following during that round:
+- **Round 1:** You have 1 rush point
+- **Round 2:** You have 2 rush points
+- **Round 3:** You have 3 rush points
+- **And so on...**
 
-- Participated in an engagement (either initiated one or entered one)
-- Made an opportunity attack
-- Cast a spell
-
-**Example:** You engage enemies in rounds 1, 2, and 4, but spend round 3 moving and using non-combat abilities. At the start of round 5, you have been active in 3 rounds total, so you gain 3 rush points.
+At the start of each round, your rush points automatically refresh to match the current round number. There's nothing to track - just look at what round it is.
 
 ### Using and Losing Rush Points
 
@@ -142,7 +141,7 @@ Outside of combat, you have 0 rush points and cannot spend them.
 
 ### Strategic Implications
 
-The rush point system rewards aggressive, active play. Characters who consistently engage with enemies will have more resources available for powerful abilities, while those who play defensively will have fewer options but may preserve their health and positioning.
+The automatic rush point system means combat naturally escalates in intensity. Your minor abilities will scale in cost, but your class major ability will be more explosive, the longer you wait.
 
 ## Minor Abilities
 
@@ -183,7 +182,7 @@ Note that if the players wish to discuss which stance to choose among themselves
 | **Defensive** | None    | All       | None                            | Takes half damage after defense              |
 
 **Rock-Paper-Scissors**: Cunning → Agility → Might → Cunning  
-**Same Stance**: Make contested attack rolls instead of separate attack/defense  
+**Same Stance**: Make contested attack rolls instead of separate attack/defense rollsif attacking each other. If one of them doesn't want to use their attack to strike back, they make a defense roll instead
 **Resolution Order**: Cunning → Agility → Might
 
 ### Quick Examples
