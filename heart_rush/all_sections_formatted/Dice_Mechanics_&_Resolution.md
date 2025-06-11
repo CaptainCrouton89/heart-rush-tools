@@ -268,27 +268,6 @@ When characters can meaningfully combine their efforts (e.g., persuading a judge
 - They get advantage from the group's support
 - Success represents the combined effort
 
-### Raising the Stakes
-
-Sometimes a roll represents a pivotal moment in the story—a turning point where everything hangs in the balance. The raising the stakes mechanic lets players highlight these crucial moments, transforming ordinary rolls into dramatic crescendos that everyone at the table will remember.
-
-This is a meta-mechanic that any player can invoke, not just for their own rolls but for any roll happening at the table. It represents those cinematic moments where time seems to slow down and everyone holds their breath. Use it sparingly—its power comes from its rarity.
-
-**When**: Once per session, before any player rolls dice
-
-**Effect**:
-
-- Success becomes more effective/impressive
-- Failure/complications become more disastrous
-- Applies to any roll by any player
-
-**Example**: _Raising stakes on a diplomacy check_
-
-- Normal success: Noble agrees to help
-- Raised success: Noble pledges full military support
-- Normal failure: Noble refuses
-- Raised failure: Noble is insulted and becomes an enemy
-
 ## Challenge Numbers
 
 Challenge Numbers (CNs) are the target numbers you need to meet or exceed to succeed at tasks. They're the GM's primary tool for communicating difficulty and setting the stakes for any given roll. A CN of 6 might represent climbing a ladder in a hurry, while a CN of 18 could be leaping across a chasm in full armor during a thunderstorm.
