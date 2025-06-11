@@ -151,6 +151,29 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
 
         {/* Footer */}
         <div className="p-4 border-t border-border bg-gradient-to-r from-accent/5 to-primary/5">
+          {/* Quick Navigation */}
+          <div className="mb-4">
+            <div className="text-xs font-medium text-muted-foreground mb-2 text-center">Quick Access</div>
+            <div className="grid grid-cols-2 gap-2">
+              <Link
+                href="/maps"
+                className="flex items-center justify-center gap-2 px-3 py-2 text-xs bg-background/50 hover:bg-background border border-border/50 hover:border-primary/50 rounded-md transition-all duration-200 hover:shadow-sm"
+                onClick={onToggle}
+              >
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 4m0 13V4m-6 3l6-3" />
+                </svg>
+                Maps
+              </Link>
+              <div className="flex items-center justify-center px-3 py-2 text-xs bg-muted/30 border border-border/30 rounded-md text-muted-foreground cursor-not-allowed">
+                <svg className="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+                </svg>
+                Tools
+              </div>
+            </div>
+          </div>
+
           {/* GM Mode Toggle */}
           <div className="flex items-center justify-center mb-3">
             <label className="flex items-center gap-2 cursor-pointer">

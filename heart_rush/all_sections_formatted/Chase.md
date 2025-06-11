@@ -133,7 +133,7 @@ Some chases include unusual factors.
 
 When more than two parties are involved in a chase:
 
-1. All participants roll initiative (1d20 + agility modifier) at the start
+1. All participants roll initiative (agility skill check) at the start
 2. Act in initiative order rather than simple alternation
 3. Track each participant's position separately
 4. Groups can split up, with members taking different routes

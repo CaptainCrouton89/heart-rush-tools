@@ -8,7 +8,7 @@ When combat begins, all participants roll for initiative to determine the order 
 
 ### Rolling Initiative
 
-Each participant in combat rolls 1d20 + their Agility modifier to determine initiative order. Act in descending order from highest to lowest initiative result. In case of ties, player characters act before NPCs, and among tied participants of the same type, they can choose their order.
+Each participant in combat makes an agility skill check to determine initiative order. Act in descending order from highest to lowest initiative result. In case of ties, player characters act before NPCs, and among tied participants of the same type, they can choose their order.
 
 ### Engagements are important
 
