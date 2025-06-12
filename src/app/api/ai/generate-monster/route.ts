@@ -260,22 +260,26 @@ The minimum damage needed to inflict a wound. Use "/" if the creature cannot be 
 - **Conditions**: Apply ongoing conditions
 
 ### All Conditions
-- Dazed
-- Weakened
-- Off-Balanced
+
+#### Leveled Conditions (can have multiple levels of the same condition)
+- Dazed 
+- Weakened 
+- Off-Balanced 
+- Poisoned 
+- Blinded 
+- Slowed 
+- Confused 
+- Frightened 
+- Enraged 
+- Burning
+
+#### Status Conditions
 - Restrained
 - Stunned
 - Incapacitated
-- Poisoned
-- Blinded
 - Suffocating
-- Slowed
 - Crippled
-- Confused
-- Frightened
-- Enraged
 - Prone
-- Burning
 - Grappled
 
 ## Monster Examples by Complexity
