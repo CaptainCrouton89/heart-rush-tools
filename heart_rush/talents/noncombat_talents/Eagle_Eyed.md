@@ -1,6 +1,6 @@
 ## Eagle Eyed
-
 _Passive ability. Cognitive talent._  
+
 You may take the Lookout action for free, once per travel and camp phase.
 
 **Destiny Level:**  

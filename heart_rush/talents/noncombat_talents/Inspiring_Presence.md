@@ -1,6 +1,6 @@
 ## Inspiring Presence
-
 _Passive ability. Cognitive talent._
+
 
 Your natural leadership and encouragement elevate those around you to perform beyond their normal capabilities. When you use the help action, the creature you're helping may use your presence die instead of their heart die when making the skill check, in addition to gaining advantage.
 

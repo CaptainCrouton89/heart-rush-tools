@@ -33,7 +33,7 @@ interface NavigationCategory {
 }
 
 interface CategorizedNavigationItem {
-  type: 'category' | 'section';
+  type: "category" | "section";
   name?: string; // For category headers
   slug?: string; // For sections and categories
   title?: string; // For sections
@@ -60,6 +60,7 @@ const PUBLIC_IMAGES_DIR = "public/heart_rush/races/images";
 const TALENTS_DIR = "heart_rush/talents";
 const COMBAT_TALENTS_DIR = "heart_rush/talents/combat_talents";
 const NONCOMBAT_TALENTS_DIR = "heart_rush/talents/noncombat_talents";
+const SPELLS_DIR = "heart_rush/talents/spells";
 const OUTPUT_DIR = "content";
 const GM_OUTPUT_DIR = "content/gm";
 const CATEGORIES_CONFIG_PATH = "navigation-categories.json";
@@ -162,19 +163,23 @@ function extractTags(content: string, title: string): string[] {
   return tags.slice(0, 8); // Limit to 8 tags
 }
 
-async function loadNavigationCategories(configPath: string = CATEGORIES_CONFIG_PATH): Promise<NavigationCategory[]> {
+async function loadNavigationCategories(
+  configPath: string = CATEGORIES_CONFIG_PATH
+): Promise<NavigationCategory[]> {
   try {
-    const categoriesContent = await fs.readFile(configPath, 'utf-8');
+    const categoriesContent = await fs.readFile(configPath, "utf-8");
     const config = JSON.parse(categoriesContent);
     return config.categories || [];
   } catch (error) {
-    console.warn(`No navigation categories configuration found at ${configPath}, using default alphabetical ordering`);
+    console.warn(
+      `No navigation categories configuration found at ${configPath}, using default alphabetical ordering`
+    );
     return [];
   }
 }
 
 function createCategorizedNavigation(
-  sections: ContentSection[], 
+  sections: ContentSection[],
   categories: NavigationCategory[]
 ): CategorizedNavigationItem[] {
   if (categories.length === 0) {
@@ -203,37 +208,37 @@ function createCategorizedNavigation(
       }
     }
 
-    return navigation.map(item => ({
-      type: 'section' as const,
+    return navigation.map((item) => ({
+      type: "section" as const,
       slug: item.slug,
       title: item.title,
       level: item.level,
       parent: item.parent,
       order: item.order,
-      children: item.children?.map(child => ({
-        type: 'section' as const,
+      children: item.children?.map((child) => ({
+        type: "section" as const,
         slug: child.slug,
         title: child.title,
         level: child.level,
         parent: child.parent,
         order: child.order,
-        children: child.children?.map(grandchild => ({
-          type: 'section' as const,
+        children: child.children?.map((grandchild) => ({
+          type: "section" as const,
           slug: grandchild.slug,
           title: grandchild.title,
           level: grandchild.level,
           parent: grandchild.parent,
           order: grandchild.order,
-          children: []
-        }))
-      }))
+          children: [],
+        })),
+      })),
     }));
   }
 
   // Create categorized navigation
   const categorizedNav: CategorizedNavigationItem[] = [];
   const sectionMap = new Map<string, ContentSection[]>();
-  
+
   // Group sections by their base filename (category)
   for (const section of sections) {
     const key = section.category;
@@ -247,23 +252,25 @@ function createCategorizedNavigation(
   for (let i = 0; i < categories.length; i++) {
     const category = categories[i];
     const categoryItem: CategorizedNavigationItem = {
-      type: 'category',
+      type: "category",
       name: category.name,
       slug: generateCategorySlug(category.name),
       order: i,
-      children: []
+      children: [],
     };
 
     // Add sections for this category in the specified order
     for (const sectionKey of category.sections) {
-      const sectionsForKey = sectionMap.get(sectionKey.replace(/_/g, ' ').replace(/,/g, ' &'));
+      const sectionsForKey = sectionMap.get(
+        sectionKey.replace(/_/g, " ").replace(/,/g, " &")
+      );
       if (sectionsForKey) {
         // Create navigation tree for this section group
         const navigationMap = new Map<string, CategorizedNavigationItem>();
-        
+
         for (const section of sectionsForKey) {
           const navItem: CategorizedNavigationItem = {
-            type: 'section',
+            type: "section",
             slug: section.slug,
             title: section.title,
             level: section.level,
@@ -292,26 +299,28 @@ function createCategorizedNavigation(
 
   // Add any uncategorized sections
   const categorizedSectionKeys = new Set(
-    categories.flatMap(cat => cat.sections.map(s => s.replace(/_/g, ' ').replace(/,/g, ' &')))
+    categories.flatMap((cat) =>
+      cat.sections.map((s) => s.replace(/_/g, " ").replace(/,/g, " &"))
+    )
   );
-  
+
   const uncategorizedSections = sections.filter(
-    section => !categorizedSectionKeys.has(section.category)
+    (section) => !categorizedSectionKeys.has(section.category)
   );
 
   if (uncategorizedSections.length > 0) {
     const uncategorizedItem: CategorizedNavigationItem = {
-      type: 'category',
-      name: 'Other',
+      type: "category",
+      name: "Other",
       order: 999,
-      children: []
+      children: [],
     };
 
     const navigationMap = new Map<string, CategorizedNavigationItem>();
-    
+
     for (const section of uncategorizedSections) {
       const navItem: CategorizedNavigationItem = {
-        type: 'section',
+        type: "section",
         slug: section.slug,
         title: section.title,
         level: section.level,
@@ -341,16 +350,16 @@ async function copyRaceImages(): Promise<void> {
   try {
     // Check if source images directory exists
     await fs.access(RACES_IMAGES_DIR);
-    
+
     // Ensure public images directory exists
     await fs.mkdir(PUBLIC_IMAGES_DIR, { recursive: true });
-    
+
     // Read all files in the source images directory
     const imageFiles = await fs.readdir(RACES_IMAGES_DIR);
-    
+
     // Common image extensions
-    const imageExtensions = ['.png', '.jpg', '.jpeg', '.webp', '.svg'];
-    
+    const imageExtensions = [".png", ".jpg", ".jpeg", ".webp", ".svg"];
+
     // Copy each valid image file
     let copiedCount = 0;
     for (const imageFile of imageFiles) {
@@ -358,7 +367,7 @@ async function copyRaceImages(): Promise<void> {
       if (imageExtensions.includes(ext)) {
         const sourcePath = path.join(RACES_IMAGES_DIR, imageFile);
         const destPath = path.join(PUBLIC_IMAGES_DIR, imageFile);
-        
+
         try {
           await fs.copyFile(sourcePath, destPath);
           copiedCount++;
@@ -367,7 +376,7 @@ async function copyRaceImages(): Promise<void> {
         }
       }
     }
-    
+
     if (copiedCount > 0) {
       console.log(`✅ Copied ${copiedCount} race images to public directory`);
     }
@@ -381,29 +390,33 @@ async function findRaceImage(title: string): Promise<string | undefined> {
   try {
     // Check if images directory exists
     await fs.access(RACES_IMAGES_DIR);
-    
+
     // Read all files in the images directory
     const imageFiles = await fs.readdir(RACES_IMAGES_DIR);
-    
+
     // Common image extensions
-    const imageExtensions = ['.png', '.jpg', '.jpeg', '.webp', '.svg'];
-    
+    const imageExtensions = [".png", ".jpg", ".jpeg", ".webp", ".svg"];
+
     // Look for image file with matching name (case insensitive)
-    const normalizedTitle = title.toLowerCase().replace(/[^a-z0-9]/g, '');
-    
+    const normalizedTitle = title.toLowerCase().replace(/[^a-z0-9]/g, "");
+
     for (const imageFile of imageFiles) {
       const baseName = path.basename(imageFile, path.extname(imageFile));
-      const normalizedBaseName = baseName.toLowerCase().replace(/[^a-z0-9]/g, '');
-      
-      if (normalizedBaseName === normalizedTitle && 
-          imageExtensions.includes(path.extname(imageFile).toLowerCase())) {
+      const normalizedBaseName = baseName
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "");
+
+      if (
+        normalizedBaseName === normalizedTitle &&
+        imageExtensions.includes(path.extname(imageFile).toLowerCase())
+      ) {
         return `/heart_rush/races/images/${imageFile}`;
       }
     }
   } catch (error) {
     // Directory doesn't exist or other error - not a problem
   }
-  
+
   return undefined;
 }
 
@@ -416,7 +429,7 @@ function splitContent(
   // Split on headers (H1, H2, H3, H4, H5, H6)
   const headerRegex = /^(#{1,6})\s+(.+)$/gm;
   const matches: Array<{ index: number; level: number; title: string }> = [];
-  
+
   let match;
   while ((match = headerRegex.exec(content)) !== null) {
     matches.push({
@@ -444,17 +457,17 @@ function splitContent(
   for (let i = 0; i < matches.length; i++) {
     const currentMatch = matches[i];
     const nextMatch = matches[i + 1];
-    
+
     // Calculate start position (after the header line)
-    const headerEnd = content.indexOf('\n', currentMatch.index);
+    const headerEnd = content.indexOf("\n", currentMatch.index);
     const startPos = headerEnd === -1 ? currentMatch.index : headerEnd + 1;
-    
+
     // Calculate end position
     const endPos = nextMatch ? nextMatch.index : content.length;
-    
+
     // Extract content for this section
     let sectionContent = content.slice(startPos, endPos).trim();
-    
+
     // Check if this section has children (subsections)
     let hasChildren = false;
     if (i + 1 < matches.length) {
@@ -462,11 +475,13 @@ function splitContent(
       if (nextLevel > currentMatch.level) {
         hasChildren = true;
         // This section has children - include all content up to the first child
-        const contentBeforeChildren = content.slice(startPos, matches[i + 1].index).trim();
+        const contentBeforeChildren = content
+          .slice(startPos, matches[i + 1].index)
+          .trim();
         sectionContent = contentBeforeChildren;
       }
     }
-    
+
     // For level 1 headers (main sections), always create the section even if no immediate content
     // This ensures main category sections exist even when they only contain subsections
     if (currentMatch.level === 1) {
@@ -478,7 +493,7 @@ function splitContent(
           .replace(/,/g, " &");
         sectionContent = `This section contains information about ${categoryName.toLowerCase()}.`;
       }
-      
+
       sections.push({
         title: currentMatch.title,
         content: sectionContent,
@@ -493,7 +508,9 @@ function splitContent(
       });
     } else {
       // Warn about sections with no content that will be excluded
-      console.warn(`⚠️  Section excluded from navigation (no content): "${currentMatch.title}" (H${currentMatch.level})`);
+      console.warn(
+        `⚠️  Section excluded from navigation (no content): "${currentMatch.title}" (H${currentMatch.level})`
+      );
     }
   }
 
@@ -518,7 +535,7 @@ function splitContent(
 
 async function combineRaceFiles(): Promise<void> {
   console.log("Combining race files into Kin_&_Culture.md...");
-  
+
   try {
     // Check if races directory exists
     const racesPath = RACES_DIR;
@@ -547,7 +564,7 @@ async function combineRaceFiles(): Promise<void> {
     for (const filename of raceMarkdownFiles) {
       const racePath = path.join(racesPath, filename);
       const raceContent = await fs.readFile(racePath, "utf-8");
-      
+
       // Add the race content (which already starts with ##)
       combinedContent += raceContent.trim() + "\n\n";
     }
@@ -555,8 +572,10 @@ async function combineRaceFiles(): Promise<void> {
     // Write the combined file to the source directory
     const outputPath = path.join(SOURCE_DIR, "Kin_&_Culture.md");
     await fs.writeFile(outputPath, combinedContent.trim());
-    
-    console.log(`✅ Combined ${raceMarkdownFiles.length} race files into Kin_&_Culture.md`);
+
+    console.log(
+      `✅ Combined ${raceMarkdownFiles.length} race files into Kin_&_Culture.md`
+    );
   } catch (error) {
     console.error("Error combining race files:", error);
     throw error;
@@ -565,14 +584,16 @@ async function combineRaceFiles(): Promise<void> {
 
 async function combineTalentFiles(): Promise<void> {
   console.log("Combining talent files into Talents.md...");
-  
+
   try {
     // Check if talents directory exists
     const talentsPath = TALENTS_DIR;
     try {
       await fs.access(talentsPath);
     } catch {
-      console.log("No talents directory found, skipping talent file combination");
+      console.log(
+        "No talents directory found, skipping talent file combination"
+      );
       return;
     }
 
@@ -607,6 +628,10 @@ Handmagic uses the power of Deoric to create their effects. Deoric is the langua
 
 Handmagic uses Deoric runes tattooed on the back of one's hand, inscribed in the blood of magical creatures to power this life-cost. By articulating the tattooed hand in specific ways, one can then create those magical effects. The knowledge and necessary materials to inscribe hand runes is rare and expensive, and will cost a hefty fee, and likely require you to be in a city.
 
+### Spells
+
+Spells are powerful invocations of elemental power. Each spell will have one or more elemental tags, indicating the element it is associated with, and the attunement(s) required to pick up the spell. Spells are listed in their own section of the talent list.
+
 ## Combat Talents
 
 The talents in this section are combat-related talents. This categorization is for the ease of finding talents, and has no other effect.
@@ -625,12 +650,14 @@ The talents in this section are combat-related talents. This categorization is f
         for (const filename of combatMarkdownFiles) {
           const talentPath = path.join(COMBAT_TALENTS_DIR, filename);
           const talentContent = await fs.readFile(talentPath, "utf-8");
-          
+
           // Convert ## headers to ### headers for individual talents
           const adjustedContent = talentContent.replace(/^## /gm, "### ");
           combinedContent += adjustedContent.trim() + "\n\n";
         }
-        console.log(`✅ Combined ${combatMarkdownFiles.length} combat talent files`);
+        console.log(
+          `✅ Combined ${combatMarkdownFiles.length} combat talent files`
+        );
       }
     } catch {
       console.log("No combat talents directory found, skipping combat talents");
@@ -655,22 +682,55 @@ The talents in this section are noncombat-related talents. This categorization i
         for (const filename of noncombatMarkdownFiles) {
           const talentPath = path.join(NONCOMBAT_TALENTS_DIR, filename);
           const talentContent = await fs.readFile(talentPath, "utf-8");
-          
+
           // Convert ## headers to ### headers for individual talents
           const adjustedContent = talentContent.replace(/^## /gm, "### ");
           combinedContent += adjustedContent.trim() + "\n\n";
         }
-        console.log(`✅ Combined ${noncombatMarkdownFiles.length} noncombat talent files`);
+        console.log(
+          `✅ Combined ${noncombatMarkdownFiles.length} noncombat talent files`
+        );
       }
     } catch {
-      console.log("No noncombat talents directory found, skipping noncombat talents");
+      console.log(
+        "No noncombat talents directory found, skipping noncombat talents"
+      );
+    }
+
+    combinedContent += `## Spells
+
+The talents in this section are spell talents. This categorization is for the ease of finding talents, and has no other effect.
+
+`;
+
+    // Combine spells
+
+    try {
+      await fs.access(SPELLS_DIR);
+      const spellsFiles = await fs.readdir(SPELLS_DIR);
+      const spellsMarkdownFiles = spellsFiles
+        .filter((file) => file.endsWith(".md"))
+        .sort(); // Sort alphabetically for consistent ordering
+
+      if (spellsMarkdownFiles.length > 0) {
+        for (const filename of spellsMarkdownFiles) {
+          const spellPath = path.join(SPELLS_DIR, filename);
+          const spellContent = await fs.readFile(spellPath, "utf-8");
+          combinedContent += spellContent.trim() + "\n\n";
+        }
+        console.log(`✅ Combined ${spellsMarkdownFiles.length} spell files`);
+      }
+    } catch {
+      console.log("No spells directory found, skipping spell file combination");
     }
 
     // Write the combined file to the source directory
     const outputPath = path.join(SOURCE_DIR, "Talents.md");
     await fs.writeFile(outputPath, combinedContent.trim());
-    
-    console.log(`✅ Combined talent files into Talents.md`);
+
+    console.log(
+      `✅ Combined talent files into Talents.md and spells into Spells.md`
+    );
   } catch (error) {
     console.error("Error combining talent files:", error);
     throw error;
@@ -683,13 +743,13 @@ async function compilePlayerContent(): Promise<void> {
   try {
     // First, combine race files into Kin_&_Culture.md
     await combineRaceFiles();
-    
+
     // Combine talent files into Talents.md
     await combineTalentFiles();
-    
+
     // Copy race images to public directory
     await copyRaceImages();
-    
+
     // Ensure output directory exists
     await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
@@ -724,8 +784,7 @@ async function compilePlayerContent(): Promise<void> {
 
       // Keep track of sections from current file for proper parent relationships
       const fileSections: ContentSection[] = [];
-      
-      
+
       // Process each section
       for (let i = 0; i < sections.length; i++) {
         const section = sections[i];
@@ -757,7 +816,7 @@ async function compilePlayerContent(): Promise<void> {
           // Find the most recent section with a lower level within current file
           // Prefer exactly one level lower, but fall back to any lower level if needed
           let bestParent = null;
-          
+
           for (let j = fileSections.length - 1; j >= 0; j--) {
             const candidateParent = fileSections[j];
             if (candidateParent.level < section.level) {
@@ -772,7 +831,7 @@ async function compilePlayerContent(): Promise<void> {
               }
             }
           }
-          
+
           if (bestParent) {
             contentSection.parent = bestParent.slug;
           }
@@ -793,7 +852,10 @@ async function compilePlayerContent(): Promise<void> {
 
     // Load navigation categories and generate categorized navigation
     const categories = await loadNavigationCategories();
-    const categorizedNavigation = createCategorizedNavigation(allSections, categories);
+    const categorizedNavigation = createCategorizedNavigation(
+      allSections,
+      categories
+    );
 
     // Write categorized navigation file
     await fs.writeFile(
@@ -853,16 +915,16 @@ async function compileGMContent(): Promise<void> {
       const { data: frontMatter, content } = matter(fileContent);
 
       // Extract category from frontmatter or derive from filename
-      const category = frontMatter.category || filename
-        .replace(/\.md$/, "")
-        .replace(/_/g, " ");
+      const category =
+        frontMatter.category ||
+        filename.replace(/\.md$/, "").replace(/_/g, " ");
 
       // Split content into sections
       const sections = splitContent(content, filename);
 
       // Keep track of sections from current file for proper parent relationships
       const fileSections: ContentSection[] = [];
-      
+
       // Process each section
       for (let i = 0; i < sections.length; i++) {
         const section = sections[i];
@@ -885,7 +947,7 @@ async function compileGMContent(): Promise<void> {
         // Set parent relationship for subsections - only look within current file
         if (section.level > 1 && fileSections.length > 0) {
           let bestParent = null;
-          
+
           for (let j = fileSections.length - 1; j >= 0; j--) {
             const candidateParent = fileSections[j];
             if (candidateParent.level < section.level) {
@@ -898,7 +960,7 @@ async function compileGMContent(): Promise<void> {
               }
             }
           }
-          
+
           if (bestParent) {
             contentSection.parent = bestParent.slug;
           }
@@ -918,8 +980,13 @@ async function compileGMContent(): Promise<void> {
     }
 
     // Load GM navigation categories and generate categorized navigation
-    const gmCategories = await loadNavigationCategories(GM_CATEGORIES_CONFIG_PATH);
-    const categorizedNavigation = createCategorizedNavigation(allSections, gmCategories);
+    const gmCategories = await loadNavigationCategories(
+      GM_CATEGORIES_CONFIG_PATH
+    );
+    const categorizedNavigation = createCategorizedNavigation(
+      allSections,
+      gmCategories
+    );
 
     // Write categorized navigation file
     await fs.writeFile(
@@ -961,15 +1028,17 @@ async function compileContent(): Promise<void> {
   try {
     // Compile both player and GM content
     await compilePlayerContent();
-    
+
     // Check if GM content directory exists before compiling
     try {
       await fs.access(GM_SOURCE_DIR);
       await compileGMContent();
     } catch {
-      console.log("No GM guide directory found, skipping GM content compilation");
+      console.log(
+        "No GM guide directory found, skipping GM content compilation"
+      );
     }
-    
+
     console.log("\n🎉 All content compilation completed successfully!");
   } catch (error) {
     console.error("Error during content compilation:", error);

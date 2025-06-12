@@ -1,6 +1,6 @@
 ## Assembly Not Required
-
 _Passive ability. Handmagic._  
+
 Any of your body parts may be detached and reattached to their original positions at will, without damaging them. You may control all of your body parts at will.
 
 **Destiny Level:**  

@@ -1,6 +1,6 @@
 ## Voice Actor
-
 _Passive ability. Cognitive talent._  
+
 You gain the following abilities:
 
 - You can imitate voices nearly perfectly.

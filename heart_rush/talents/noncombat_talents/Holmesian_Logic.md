@@ -1,6 +1,6 @@
 ## Holmesian Logic
-
 _Passive ability. Cognitive talent._  
+
 Whenever you spend 10 minutes examining a creature, object, or location, you can produce a random fact about the thing, pertinent to a topic of your choice. You cannot identify anything more using this talent until a significant amount of new information presents itself. You do not forget the knowledge contained in any information you read or hear.
 
 **Destiny Level:**  

@@ -1,6 +1,6 @@
 ## Batch Producer
-
 _Passive ability. Cognitive talent._
+
 
 When crafting alchemical items that normally produce multiple doses/items per batch, increase the batch size by 50% (round up). Additionally, when crafting unique consumables, you have a 25% chance to produce two instead of one.
 

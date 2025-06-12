@@ -1,6 +1,6 @@
 ## Impenetrable Fog
-
 _Passive ability. Cognitive Talent. Elemental attunement: Water & Air._  
+
 Add fog to your resonate substances as a gaseous attunement. Your attunement to fog is equal to the lower of levels between your attunements to water and air. Fog cannot be seen through.
 
 **Destiny Level:**  

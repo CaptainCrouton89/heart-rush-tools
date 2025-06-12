@@ -1,6 +1,6 @@
 ## Observant
-
 _Passive ability. Cognitive talent._  
+
 You have A4 on cunning checks to notice things.  
 In addition, so long as you can see someone's lips and understand the language they are speaking, you know what they are saying, even if you can't hear them.
 

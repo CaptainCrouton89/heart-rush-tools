@@ -1,6 +1,6 @@
 ## Hate
-
 _Passive ability. Cognitive talent._  
+
 You feel a deep loathing towards a certain type of creature or individual. You have A2 on all checks to find and learn more information about this type of creature or individual, and you have advantage on attack rolls against them if they are an individual.  
 If the creature is an individual, you may exchange this talent for any other talent when you kill the individual.  
 You may take this talent any number of times, though you must choose a different target each time.

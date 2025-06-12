@@ -1,6 +1,6 @@
 ## Gravity
-
 _Heart ability. Full action. Cognitive talent. Elemental attunement: Force._
+
 You may use your action to change the direction of gravity for yourself. You may dispel this effect at any time as a quick ability.
 
 **Destiny Level:**  

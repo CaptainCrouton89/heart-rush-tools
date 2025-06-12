@@ -1,6 +1,6 @@
 ## Workshop Mastery
-
 _Passive ability. Cognitive talent._
+
 
 You've learned advanced techniques that let you exceed normal workspace limitations. You may use a workshop or laboratory as if it were one level higher than it actually is. This cannot raise an ordinary workshop above level 5.
 

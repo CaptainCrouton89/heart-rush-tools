@@ -1,6 +1,6 @@
 ## Deoric Linguist
-
 _Passive ability. Cognitive talent._  
+
 You have A2 on checks to learn Deoric domains, cast Deoric spells, and interact with the Deoric language in any way.
 
 **Destiny Level:**  

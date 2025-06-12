@@ -1,6 +1,6 @@
 ## Druid's Voice
-
 _Passive ability. Handmagic._  
+
 You can communicate with plants, so long as you are touching them. Plants recognize you as an ally, and will generally be willing to help in any way they can.
 
 **Destiny Level:**  

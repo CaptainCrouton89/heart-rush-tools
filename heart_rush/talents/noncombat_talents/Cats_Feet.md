@@ -1,6 +1,6 @@
 ## Cat's Feet
-
 _Passive ability. Martial talent._  
+
 You gain the following abilities:
 
 - When rolling agility to avoid fall damage, you automatically roll the maximum.

@@ -1,6 +1,6 @@
 ## Explorer
-
 _Passive ability. Cognitive talent._  
+
 Adventuring and unexpected difficulty have taught you how to prepare for any situation. At any time, you may choose to allocate 10 slots as "adventuring gear". When you do so, choose one from the following list of benefits. You can only choose each benefit once, and the slots remain allocated until you reach a location where you can resupply and change out your equipment.
 
 - You have A2 on checks to navigate. You know which direction is North.

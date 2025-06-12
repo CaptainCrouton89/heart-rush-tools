@@ -1,6 +1,6 @@
 ## Druid's Step
-
 _Passive ability. Handmagic._  
+
 So long as you are walking on unaltered, natural terrain, you may ignore difficult terrain, you cannot be tracked if you do not wish to be, and your move speed increases by 20 feet.
 
 **Destiny Level:**  

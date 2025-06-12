@@ -1,6 +1,6 @@
 ## Cold Read
-
 _Major ability. Cognitive talent._
+
 You can suss out information from someone even without them knowing. If you spend 10 minutes talking with someone, you may ask the GM one thing about them that they aren't trying to hide from the following list:
 
 - Profession

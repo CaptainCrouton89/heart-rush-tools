@@ -1,6 +1,6 @@
 ## Chaos Gambler
-
 _Passive ability. Handmagic._
+
 
 You have inscribed runes of pure chaos upon your hands, channeling unpredictable forces through your very being. When you take this talent, choose physical or mental. You gain one level of permanent vulnerability in your chosen type (complications and failures occur on 1s and 2s for might and agility checks if physical, or cunning and presence checks if mental).
 

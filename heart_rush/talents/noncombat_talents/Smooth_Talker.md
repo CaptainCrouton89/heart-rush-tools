@@ -1,6 +1,6 @@
 ## Smooth Talker
-
 _Passive ability. Cognitive talent._  
+
 Whenever you speak, your words come out like smooth butter. You have A2 on presence skill checks to persuade, intimidate, and deceive.
 
 **Destiny Level:**  

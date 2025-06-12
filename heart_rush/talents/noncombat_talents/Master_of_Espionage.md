@@ -1,6 +1,6 @@
 ## Master of Espionage
-
 _Monthly ability. Cognitive talent._
+
 Whether it be heists, spying, or sabotage, you are accomplished in the ways of espionage. You may declare an object as the target of your espionage. If you spend one day gathering knowledge about the security around your target, you have advantage on all rolls related to accessing that object, and then escaping thereafter.  
 If you spend one week gathering knowledge about your target, you may make an "educated guess" about the security around your target. The GM will confirm or deny your educated guess with a simple "yes" or "no".
 

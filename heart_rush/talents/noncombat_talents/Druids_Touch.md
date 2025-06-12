@@ -1,6 +1,6 @@
 ## Druid's Touch
-
 _Passive ability. Handmagic._  
+
 As an action, by touching a plant, you can cause it to grow as much as it would in one year over the span of one minute. You may direct its growth, so long as growing in such a way would not kill the plant.  
 You can cause a plant you are touching to slowly change its shape as you command, so long as its new shape would not hurt the plant.
 
