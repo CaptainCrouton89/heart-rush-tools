@@ -468,8 +468,8 @@ Your voice cuts through the chaos of battle, inspiring your allies to push beyon
 - Choose any number of creatures within 30 feet.
 - For each rush point spent on this ability, choose one of the following effects to apply to each of the chosen creatures:
   - Increase your heart die.
-  - Take an action.
-  - Gain +2 on the next attack.
+  - Gain an additional action this round.
+  - Gain A2 on the next attack.
   - Remove all conditions affecting the creature.
 
 You cannot choose the same effect more than once until all effects have been chosen.
