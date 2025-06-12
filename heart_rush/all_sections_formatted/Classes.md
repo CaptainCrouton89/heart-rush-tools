@@ -97,14 +97,6 @@ _Passive ability. Rank 1._
 
 You excel when in the center of battle. For each enemy adjacent to you, you get +1 to your attack and defense rolls.
 
-Whenever you take damage, gain a rush point.
-
-Damage converts to damage you can attack back with.
-
-Counter attacks.
-
-HP as a spendable resource (wrath guard).
-
 ### Cry of Defiance
 
 _Minor ability. Instant. Rank 1._
