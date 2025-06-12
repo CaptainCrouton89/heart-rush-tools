@@ -49,13 +49,13 @@ Some weapons don't deal damage but have other tactical effects:
 
 #### Net
 
-| Property        | Value                                                                                |
-| --------------- | ------------------------------------------------------------------------------------ |
-| **Size**        | Light (1d8)                                                                          |
-| **Attack Type** | Thrown (20 feet)                                                                     |
-| **Damage Type** | Special (no damage)                                                                  |
-| **Effect**      | On hit, target gains the Entangled condition                                        |
-| **Might Bonus** | Target gains an additional level of restrained (2 total)                             |
+| Property        | Value                                                                                   |
+| --------------- | --------------------------------------------------------------------------------------- |
+| **Size**        | Light (1d8)                                                                             |
+| **Attack Type** | Thrown (20 feet)                                                                        |
+| **Damage Type** | Special (no damage)                                                                     |
+| **Effect**      | On hit, target gains the Entangled condition                                            |
+| **Might Bonus** | Target gains an additional level of restrained (2 total)                                |
 | **Special**     | Reusable if intact; 5 HP, defense 10; creatures >1 size larger only gain 1 level slowed |
 
 ## Cantrips

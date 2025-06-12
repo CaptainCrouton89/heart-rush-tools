@@ -33,9 +33,13 @@
         "Combat",
         "Conditions",
         "Rests_&_Healing",
-        "Weapons,_Cantrips,_&_Cantrips",
+        "Weapons,_Cantrips,_&_Armor",
         "Other_Factors"
       ]
+    },
+    {
+      "name": "Magic",
+      "sections": ["Cantrips", "Spells", "Magical_Crafting"]
     },
     {
       "name": "Systems",
