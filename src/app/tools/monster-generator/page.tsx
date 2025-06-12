@@ -104,6 +104,7 @@ export default function MonsterGeneratorPage() {
   const [loading, setLoading] = useState(false);
   const [monster, setMonster] = useState<MonsterStatBlock | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
 
   const generateMonster = async () => {
     if (!concept.trim()) {
@@ -304,7 +305,8 @@ export default function MonsterGeneratorPage() {
   const copyToClipboard = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
-      // You could add a toast notification here
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error("Failed to copy to clipboard:", err);
     }
@@ -418,10 +420,10 @@ export default function MonsterGeneratorPage() {
                   <h2 id="output-heading" className="text-xl font-semibold">Generated Monster</h2>
                   <button
                     onClick={() => copyToClipboard(generateMarkdown(monster))}
-                    className="px-3 py-1 text-sm bg-muted hover:bg-muted/80 rounded-md transition-colors"
+                    className="px-3 py-1 text-sm bg-muted hover:bg-muted/80 rounded-md transition-colors cursor-pointer"
                     aria-label="Copy monster stat block as markdown text"
                   >
-                    Copy Markdown
+                    {copied ? "Copied!" : "Copy Markdown"}
                   </button>
                 </header>
                 <div className="space-y-4 text-sm">
