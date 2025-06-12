@@ -12,7 +12,8 @@
         "Classes",
         "Talents",
         "Paragon_Abilities",
-        "Experience_&_Advancement"
+        "Experience_&_Advancement",
+        "Spells"
       ]
     },
     {
@@ -32,8 +33,7 @@
         "Combat",
         "Conditions",
         "Rests_&_Healing",
-        "Weapons,_Cantrips,_&_Cantrips",
-        "Spells"
+        "Weapons,_Cantrips,_&_Cantrips"
       ]
     },
     {
