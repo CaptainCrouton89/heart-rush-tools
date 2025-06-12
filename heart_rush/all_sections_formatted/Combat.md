@@ -1,178 +1,140 @@
 # Combat
 
-Combat occurs in rounds, broken up by abilities and engagements. Engagements are short scenes of combat between participants, and are used to abstract the actions of multiple combatants all trying to attack each other. During each round, everyone will have the chance to use whatever abilities they can and take actions, in initiative order.
+When violence erupts in Heart Rush, everything happens at once—warriors clash, spells fly, and combatants scramble for position in a chaotic melee. To help you navigate this chaos, the game splits each round into two phases: maneuvering for advantage and the inevitable clash of battle. In reality, these occur simultaneously over just a few seconds, but separating them lets you make tactical decisions while capturing the frenetic energy of real combat.
+
+## Understanding Combat Flow
+
+Combat unfolds in rounds, with each round representing a brief but intense exchange where everyone acts nearly simultaneously. During each round, you'll experience:
+
+1. **The Action Phase** - You maneuver, cast spells, and position yourself while enemies do the same
+2. **The Engagement** - Everyone comes together in an explosive exchange of attacks
+
+This structure means you're never waiting for your turn. You act when it makes sense, interrupting and reacting dynamically. Think of it like a movie fight scene—people don't politely take turns hitting each other.
 
 ## Starting Combat
 
-When combat begins, all participants roll for initiative to determine the order in which they act.
+When violence erupts, combat begins immediately. There's no initiative to roll, no order to establish. You simply declare what you want to do and start doing it. The game uses a simple system to resolve conflicts when timing matters, but otherwise, everything flows naturally from the situation.
 
-### Rolling Initiative
+## The Action Phase
 
-Each participant in combat makes an agility skill check to determine initiative order. Act in descending order from highest to lowest initiative result. In case of ties, player characters act before NPCs, and among tied participants of the same type, they can choose their order.
+During the action phase, any combatant can declare and execute actions at any time. This creates the fluid, cinematic experience of a real fight where combatants react to each other dynamically. You might dash across the battlefield while an enemy archer draws their bow, or cast a spell as a warrior charges toward you.
 
-### Engagements are important
+**You get one action per round**, plus free movement up to your speed and the ability to speak. The key is choosing your moment—once you've used your action, you're committed until the next round.
 
-Engagements are the core of Heart Rush combat, and they might take a bit of time to wrap your head around. There's a whole section (Engaging the Enemy) on it, but the idea is that you're entering a chaotic melee where anyone could get hurt, including yourself.
+### When Timing Matters
 
-## Initiative Order
+Sometimes multiple combatants want to act at the exact same moment—two archers racing to shoot first, or warriors trying to reach the same strategic position. When timing matters, here's how you resolve it:
 
-Combat flows in initiative order:
+**1. Compare Agility Die Size**
+The combatant with the larger agility die acts first:
 
-1. Each participant acts on their turn in initiative order
-2. On your turn, you can take one action and take the dash action once for free.
-3. After everyone has acted, a new round begins with the same initiative order
-4. Initiative order remains the same throughout the entire combat
-5. If you choose not to act on your turn, you can delay your action to later in the round
+- d12 → d10 → d8 → d6 → d4
 
-Note that abilities with the instant tag do not require a turn, and can be used at any time, even during someone else's turn.
+**2. Players Win Ties**
+When combatants have the same die size, player characters act before NPCs
 
-## During Combat
+**3. Contested Rolls for Player Conflicts**
+If players disagree on timing, make contested agility skill checks
 
-During each round of combat, you can take up to one action and use any number of abilities (following the frequency restrictions on the abilities themselves). The timing tag on each ability determines when you can use it:
+This system means naturally agile combatants tend to act faster, but anyone can seize the initiative when opportunity strikes.
 
-- **Slow** abilities can only be used on your turn
-- **Quick** abilities can be used during any ally's turn (including yours)
-- **Instant** abilities can be used at any time, even interrupting other actions
+### Actions You Can Take
 
-Additionally, on your turn you may move up to your speed and call out for free.
+**Dash**  
+Move a number of feet up to or equal to your move speed. Unless stated otherwise, your move speed is 60 before accounting for equipment.
 
-### Combat Abilities
-
-All characters have access to these basic combat abilities. Each ability shows whether it uses your action.
-
-#### Slow Abilities
-
-These abilities can only be used on your turn.
-
-**Engage the Enemy**  
-_Slow._  
-Uses your action. You may engage with the enemy. This does not guarantee that you'll injure them, or even hit them in the first place. In fact, they might hit you instead.
-
-Rules for engagement are complicated, and are described in detail in the Engaging the Enemy section below. As a simple analogy, using your action to engage the enemy can be described as initiating a rock-paper-scissors game of combat with the enemy, with the victor having the chance to injure the loser.
+If you move more than 5 feet within a creature's melee range or leave their melee range without sidestepping, the creature may make an opportunity attack against you.
 
 **Cast a Spell**  
-_Slow._  
-Uses your action. Cast a spell you know (note: not a cantrip—those are used in engagements).
+Cast a spell you know. Note that cantrips work differently—they're used during the engagement instead of weapon attacks.
 
 See the Spellcasting section for details and restrictions on casting spells.
 
-#### Quick Abilities
-
-These abilities can be used during any ally's turn (including your own), but not during enemy turns or engagements.
-
-**Dash**  
-_Slow._  
-Uses your action. Move a number of feet up to or equal to your move speed. Unless stated otherwise, your move speed is 60 before accounting for equipment.
-
-If you move more than 5 feet within a creature's melee range or leave their melee range without taking the sidestep action, the creature may make an opportunity attack against you. Resolve the attack before leaving the creature's range and completing the movement.
-
 **Sidestep**  
-_Quick._  
 Uses your action, or you may instead spend a rush point to perform this ability.
 
-When you use this ability, you may move 5 feet or stand up from prone. This movement does not provoke opportunity attacks.
+Move 5 feet or stand up from prone. This movement doesn't provoke opportunity attacks—you're moving carefully and defensively.
 
 **Object Interaction**  
-_Quick._  
-Uses your action. The first object interaction you take each round does not cost your action.
+The first object interaction each round is free. Additional interactions use your action.
 
-Any sort of simple interaction with an object counts as an interaction action. Stowing a weapon or shield, or drawing a new one each count as an object interaction. Stowing a weapon and retrieving a new one are two separate object interactions.
+Simple interactions count: drawing or stowing a weapon, opening a door, picking up an item. Complex actions like picking a lock would be a full action.
 
 **Help**  
-_Quick._  
-Uses your action. You aid another creature. Choose an adjacent creature. That creature gets advantage on its next A/D roll, skill check, or saving throw.
-
-#### Instant Abilities
-
-These abilities can be used at any time, even during enemy turns or engagements.
-
-**Enter an Engagement**  
-_Instant._  
-Uses your action. You may enter an engagement that has already been initiated between other characters but has not yet begun. Immediately after someone uses the Engage the Enemy action, everyone has the choice to use this ability.
-
-There must be a valid target in range of your weapon who is already part of the engagement in order to enter. To continue the analogy from the explanation of engaging the enemy, this is like deciding to jump into a rock-paper-scissors game going on between the people around you, and choosing to play as well.
+Aid an adjacent creature. They get advantage on their next ability check, saving throw, or attack/defense roll. You're providing cover, creating distractions, or lending a hand.
 
 **Trip**  
-_Instant._  
-Uses your action. Whenever a creature with a level of off-balanced moves (willingly or forced) through a space that is adjacent to you, if that creature is no more than one size larger than you, you may trip the creature, immediately knocking it prone in that space.
+When a creature with off-balanced moves through a space adjacent to you, you may trip them if they're no more than one size larger. They immediately fall prone in that space.
 
-**Opportunity Attack**  
-_Instant._  
-Uses your action, or you may instead spend a rush point to perform this ability.
+**Actions From Abilities**
+Some abilities state that you can use them by spending an action. If they do, they have to happen during this phase, and they use your action.
 
-[[Hard to get, but Great
+**Other Actions**  
+Attempt other actions with GM approval—breaking down doors, intimidating enemies, or creative solutions to problems. If it takes focus and effort, it probably uses your action.
 
-Opportunity attacks are like gold. They're hard to get, but when you do, you can throw everything you've got into the roll and nail the target exactly the way you want. For this reason, enemies will do a lot to avoid getting hit with them. Use that to your advantage.]]
+### Opportunity Attacks
 
-Opportunity attacks represent moments when an enemy has presented an easily exploited weakness. They let you make an attack against them without first winning an engagement.
+Opportunity attacks represent those perfect moments when an enemy drops their guard. They let you strike outside the normal flow of combat, delivering devastating blows when enemies make mistakes.
 
-You can only take this action if one or more of the following conditions is met:
+**Uses your action**, or spend a rush point if you've already acted. When you make an opportunity attack, nobody can go before you. It's an immediate reaction to the activity at hand, so nobody quicker than you can interrupt.
 
-- The enemy willingly leaves your melee reach without using the sidestep ability.
-- The enemy willingly moves more than 5 feet within your melee reach without using the sidestep ability.
-- The enemy stands up without using the sidestep action.
-- You are hidden.
-- The target of your action is surprised.
+You can only make opportunity attacks when:
 
-When you take this action, make an attack roll against the creature with the stance of your choice.
+- An enemy leaves your melee reach without sidestepping
+- An enemy moves more than 5 feet within your reach without sidestepping
+- An enemy stands up without sidestepping
+- You are hidden from your target
+- Your target is surprised
 
-## Rush Points
+When you make an opportunity attack, roll with the stance of your choice—this is your chance to hit exactly how you want.
 
-Rush points represent the excitement and momentum of combat, allowing you to perform increasingly powerful abilities as the fight intensifies. As combat progresses, you automatically build up rush points that fuel your most devastating attacks and abilities.
+[[Why Opportunity Attacks Matter
 
-### Gaining Rush Points
+Opportunity attacks are combat gold. When you get one, you can unleash your best attack without risking a counter. Enemies know this and will burn resources to avoid giving you these openings. Use that fear tactically—sometimes the threat is more valuable than the attack itself.]]
 
-Rush points accumulate automatically based on how long combat has lasted:
+## The Engagement
 
-- **Round 1:** You have 1 rush point
-- **Round 2:** You have 2 rush points
-- **Round 3:** You have 3 rush points
-- **And so on...**
+After everyone has acted (or chosen not to), all combatants come together in the engagement. This mandatory clash represents the moment when careful maneuvering gives way to violent collision. Swords meet, spells discharge at point-blank range, and everyone fights for survival.
 
-At the start of each round, your rush points automatically refresh to match the current round number. There's nothing to track - just look at what round it is.
+**The engagement is inevitable**. It doesn't cost an action and you can't opt out. If you're in the fight, you're in the engagement. This is the climactic moment of each round—the explosion of violence that follows all that careful positioning.
 
-### Using and Losing Rush Points
+### How Engagements Work
 
-Rush points are spent to fuel minor abilities, make opportunity attacks, and enhance major abilities. Each ability specifies how many rush points it costs to use.
+When the engagement begins:
 
-All unspent rush points are lost at the end of each round. This represents the ebb and flow of combat intensity - you must use your momentum or lose it.
+1. **Everyone Participates** - All conscious combatants are automatically included
+2. **Choose Your Stance** - Secretly select might, agility, cunning, or defensive
+3. **Reveal Together** - Everyone shows their choice simultaneously
+4. **Resolve Attacks** - Based on stance matchups, combatants strike each other
 
-Outside of combat, you have 0 rush points and cannot spend them.
+The entire process represents a few seconds of furious combat where everyone acts nearly simultaneously, but the game breaks it down so you can make meaningful tactical choices.
 
-### Strategic Implications
+### Understanding Stances
 
-The automatic rush point system means combat naturally escalates in intensity. Your minor abilities will scale in cost, but your class major ability will be more explosive, the longer you wait.
+Your stance represents your fighting approach in this crucial moment. Each stance beats certain others in a deadly dance of combat psychology:
 
-## Minor Abilities
+- **Cunning beats Agility** - You read their movements and exploit openings
+- **Agility beats Might** - You flow around powerful attacks to strike back
+- **Might beats Cunning** - You power through tricks with overwhelming force
+- **Defensive** - You sacrifice offense for survival
 
-[[Typical Rounds  
-In most rounds, you'll want to move a bit—you can move for free on your turn—and you'll want to start or enter an engagement, since that's the main way to deal damage. Sprinkled throughout, you'll use various abilities and occasionally you'll want to do something else with your action, but moving and engaging is the gist.]]
+### Choosing Your Stance
 
-Minor abilities are special abilities unique to your class and subclass. Whenever you use a minor ability, you must spend one rush point for each time you've used the ability, including the current use. You have multiple minor abilities, so you will have to manage how many times you've used each separately. They do not require you to spend an action, but there may be limitations on when you can use them.
+Every combatant secretly chooses their stance: might, agility, cunning, or defensive. Players can discuss strategy, but the GM must lock in enemy choices first to prevent reactive cheating. Once everyone has chosen, reveal all stances simultaneously.
 
-## Major Abilities
+This simultaneous reveal creates the tension of real combat—you must predict your opponents' moves while they try to predict yours.
 
-Major abilities are like ultimate moves your character has. Unlike minor abilities, major abilities can only be used once per day. Major abilities gained from your class have additional, optional rush point costs, meaning that your major abilities will get stronger and stronger the longer the fight lasts. They do not require you to spend an action, but there may be limitations on when you can use them.
+**Important Stance Selection Clarifications:**
 
-## Special Use Cases
+- **GM Locks In First** - If players want to discuss stance choices, the GM must choose and lock in all enemy stances before players finalize their decisions. This prevents any appearance of the GM reacting to player choices.
 
-Rush points can also be spent to make opportunity attacks or to sidestep.
+- **Secret Selection Methods** - Use whatever method works for your table: closed fists with fingers for numbers (1=might, 2=agility, 3=cunning, 4=defensive), cards face down, or simply writing on paper. The key is simultaneous reveal.
 
-## Engaging the Enemy
+- **No Changing After Reveal** - Once stances are revealed, they're locked in. No take-backs, no "I meant to say..." Everyone lives with their choices.
 
-An engagement with the enemy may be a short flurry of crossing blows, or it may be part of a larger melee with dozens of combatants.
+- **Communication During Selection** - Players can freely discuss strategy during selection ("I'll go might to handle the orc"), but remember enemies might be listening. Clever GMs might have intelligent enemies react to overheard plans in future rounds.
 
-In either case, when you first decide to engage the enemy—taking the Engage the Enemy action—choose an enemy you could theoretically hit with the weapon you are currently wielding. You and this enemy are now part of the engagement. The enemy does not have a choice in entering this engagement, and participating in this engagement does not cost them their action.
-
-Once an engagement has begun, other creatures get a chance to join. Other creatures within weapon range of anyone in the engagement may decide to enter the engagement as well. If they wish to do so, they can spend their action to join the engagement. This is the Enter an Engagement action.
-
-### Choosing Stances
-
-Once everyone who wants to and is allowed to join the engagement has done so, every combatant within the engagement must secretly choose their stance: might, agility, cunning, or the defensive stance. Once everyone has chosen, everyone must reveal their choice. Attacks proceed in a manner similar to rock paper scissors, as outlined in the sections below.
-
-Note that if the players wish to discuss which stance to choose among themselves, the GM should choose the stance for the enemies before the players decide for their characters, to prevent any accusations of cheating by reacting to the decisions made by the players.
-
-### Stance Reference Chart
+### Stance Resolution Reference
 
 | Your Stance   | Beats   | Beaten By | Can Attack                      | Special Rules                                |
 | ------------- | ------- | --------- | ------------------------------- | -------------------------------------------- |
@@ -181,91 +143,87 @@ Note that if the players wish to discuss which stance to choose among themselves
 | **Might**     | Cunning | Agility   | Cunning, Defensive, Same Stance | Weapon might bonus; Attacks last             |
 | **Defensive** | None    | All       | None                            | Takes half damage after defense              |
 
-**Rock-Paper-Scissors**: Cunning → Agility → Might → Cunning  
-**Same Stance**: Make contested attack rolls instead of separate attack/defense rollsif attacking each other. If one of them doesn't want to use their attack to strike back, they make a defense roll instead
 **Resolution Order**: Cunning → Agility → Might
 
-### Quick Examples
+### Cunning Stance
 
-- **Cunning vs Agility**: Cunning attacks first, applies conditions
-- **Agility vs Might**: Agility sidesteps and attacks
-- **Might vs Cunning**: Might gets weapon bonus damage
-- **Same Stance**: Both make contested attack rolls
-- **vs Defensive**: Attack normally, they take half damage
+Those who chose cunning read and exploit their opponents' movements with precision. You attack first in the resolution order, getting to strike before your victims can react.
 
-#### Cunning Stance
+**You can attack**: Anyone who chose agility, defensive, or cunning stance
 
-- **Beats**: Agility stance
-- **Attacks**: Anyone who didn't choose Might stance
-- **When**: First in resolution order
-- **Bonus vs Agility**: Apply up to two levels of dazed, off-balanced, or weakened
+**Special vs Agility**: When attacking someone in agility stance, apply up to two levels of dazed, off-balanced, or weakened to your target. You've completely read their movements and left them reeling.
 
-Those who chose cunning are able to easily read and avoid the attacks of anyone who can't beat them with raw strength, and get to make an attack against a single creature in the engagement that didn't take the might stance. Creatures that chose the cunning stance make their attack rolls first, in any order.
+### Agility Stance
 
-#### Agility Stance
+Those who chose agility dance through combat with fluid grace. You attack after cunning resolves but before might, weaving between heavy blows.
 
-- **Beats**: Might stance
-- **Attacks**: Anyone who didn't choose Cunning stance
-- **When**: Second in resolution order
-- **Special**: Free sidestep before or after attack
+**You can attack**: Anyone who chose might, defensive, or agility stance
 
-Those who chose agility are able to maneuver their way past those who can't read their actions, and get to make an attack against a single creature in the engagement that didn't take the cunning stance. Creatures that chose the agility stance can make their attack rolls after all of the cunning stance attack rolls have been made.
+**Free Movement**: Take a free sidestep (5 feet, no opportunity attacks) right before or after your attack. If multiple combatants get this movement and the order matters, use the action phase order rules.
 
-Also, if you choose this stance, you may take the sidestep action for free during the engagement, right before or after you make your attack. Creatures that choose to attack before moving get to attack before creatures that sidestep and then attack. If creatures on opposite sides of a fight get to move via the agility stance, both sides should alternate who moves, starting with whichever side was originally engaged with.
+### Might Stance
 
-#### Might Stance
+Those who chose might bring overwhelming force to bear. You attack last but hit hardest, crushing those who can't dodge your assault.
 
-- **Beats**: Cunning stance
-- **Attacks**: Anyone who didn't choose Agility stance
-- **When**: Last in resolution order
-- **Bonus vs Cunning**: Trigger weapon's might stance bonus
+**You can attack**: Anyone who chose cunning, defensive, or might stance
 
-Those who chose might are able to crush those who are not agile enough to get out of the way, and get to make an attack against a single creature in the engagement that didn't take the agility stance. Creatures that chose the might stance make their attack rolls last.
+**Weapon Bonus**: When attacking someone in cunning stance, trigger your weapon's might stance bonus. Raw power defeats clever tricks.
 
-Additionally, whenever you attack a creature defending with the cunning stance, you trigger your weapon's might stance bonus. Check out the Weapons section to learn more.
+### Defensive Stance
 
-#### Defensive Stance
+The defensive stance sacrifices all offense for survival. You cannot attack, but you're much harder to hurt.
 
-- **Attacks**: No one
-- **Defense**: Halve damage after subtracting defense roll
-- **Target**: Can be attacked by any stance
+**Damage Reduction**: After subtracting your defense from an incoming attack, halve the remaining damage (round up). This makes you incredibly resilient against focused fire.
 
-Anyone who chose the defensive stance does not get to attack, but will not take as much damage. After subtracting your defense from an attack, halve the remaining damage, rounding up.
+**Everyone Can Target You**: All stances can attack defensive stance, but your damage reduction makes you a less appealing target.
 
-### Resolution
+### Resolution Process
 
-After everyone has revealed their stance, it is time for attacks. Everyone may attack one other character that their stance beats, and is within range of their weapon. All stances beat defensive stance. If no one else took a stance that they could beat, or they aren't in range of your weapon, you cannot attack in this engagement.
+Attacks resolve in strict order to maintain fairness and clarity:
 
-Attacks should happen in order of:
+1. **Cunning attacks** (in any order among cunning attackers)
+2. **Agility attacks** (in any order among agility attackers)
+3. **Might attacks** (in any order among might attackers)
 
-- Cunning
-- Agility
-- Might
+Within each stance group, attacks effectively happen simultaneously. If two might attackers kill each other, both attacks still resolve. If cunning pushes someone away, they still get their attack if they already declared a valid target.
 
-Starting with cunning, anyone who chose the cunning stance may choose to attack each other or anyone who chose the agility or defensive stance. Proceed in order.
+**Range and Positioning**: You can only attack targets within your weapon's range. Getting pushed or moved before your stance resolves might leave you unable to attack anyone.
 
-Although attacks of the same stance may not literally happen simultaneously, treat them as though they did. For example, if you push a creature away with a melee weapon using the might stance, it cannot prevent them from attacking a creature that they were previously in range of hitting with the might stance. Likewise, if the attack would kill them, they still get to hit another creature first.
+**Same Stance Attacks**: When attacking someone with the same stance, make contested attack rolls (both roll attacks, higher wins, loser takes the difference in damage).
 
-Note that if an attack pushes a target before the target's stance goes, such as if a cunning attacker pushed someone who had chosen agility, the target might not be in range of anyone any more, and would be unable to attack or be attacked during the subsequent turns for the remaining stances.
+### Making Attack Rolls
 
-#### Attacking
+When you attack, roll:
 
-If you get to attack someone, you make an attack roll consisting of your heart die + ability die for the [[Example  
-You initiate a fight, and dash towards the undead orc in front of you. The turn passes to the enemies. The orc's undead wolf dashes, coming adjacent to you as well. The turn passes back to you and your allies. Your ally decides she wants to shoot the first orc with an arrow, announcing she's entering an engagement. Since an engagement has started, other creatures can join before it resolves.  
-You decide to join the engagement, since you can attack the orc too. The undead hound joins the engagement as well. The orc is already in the engagement, so it doesn't have to use its action to join.  
-The engagement begins. You coordinate with your archer ally—you'll choose might, she'll choose agility. You announce you're ready, and stances are revealed. The orc chose might, and the hound chose cunning. Time to resolve attacks.  
-Cunning happens first. Although cunning beats agility, the hound is not adjacent to your archer friend, so the hound does nothing.  
-Agility comes next. Your ally chose agility, which beats the might stance of the orc. Your ally, seeing she's got the upper hand, decides to use her Execute ability, meaning her attack will deal a lot more damage. She makes an attack roll against the orc, and the orc makes a defense roll. The orc decides it's more damage than he's interested in, and decides to reduce his heart die to halve the damage. He remains alive.  
-After agility comes might. You and the orc both chose might. Since you chose might, you can attack either the orc (since you tied stances), or the hound (might beats cunning). You decide to attack the orc since the orc is a greater threat and you want him dead. However, the orc decided to attack you as well, since you were its only target. You each make contested attack rolls, with the loser taking the difference in damage. Unfortunately you roll a bit lower, so you end up taking a few points of damage.  
-The engagement ends, since everyone who can attack has done so. The other side now gets to act. At this point, nobody except for the orc has an action left, since the orc didn't have to use an action to join the engagement (they were forced to join). The orc might enter an engagement again with you, in which case nobody else would have actions left to join, or they might not. Combat continues with sides alternating. stance you chose + weapon die. Then, the defending creature makes a defense roll using their heart die + ability die corresponding to the stance you chose + armor bonuses.]]  
-After both sides roll, the defender then takes damage equal to the result of the attack roll minus the defense roll. If this would be negative, the defender instead takes no damage. See the next section to determine how damage is dealt with.
+- **Heart die** (your current stamina and fighting spirit)
+- **Ability die** (for the stance you chose)
+- **Weapon die** (your weapon's damage potential)
 
-Note that if you are attacking someone who is attacking you back with the same stance, make contested attack rolls rather than two separate attack and defense rolls.  
-Anyone can attack someone who takes the defense stance. Make contested rolls as normal, but the resulting damage is halved.
+The defender rolls:
 
-### After the Engagement
+- **Heart die**
+- **Ability die** (matching your attack stance)
+- **Armor bonus** (if applicable)
 
-After the engagement resolves, combat continues with the next character in initiative order.
+Damage dealt = Attack roll - Defense roll (minimum 0)
+
+### Combat Example
+
+_You initiate a fight, dashing toward the undead orc before you. The orc's undead wolf companion dashes forward, ending adjacent to you as well. Your archer ally declares she's shooting the orc, starting an engagement._
+
+_Since an engagement has begun, only instant abilities can be used now. You join the engagement (free, since you're in combat). The wolf joins too. The orc is automatically included._
+
+_The GM secretly chooses stances: orc picks might, wolf picks cunning. You and your ally coordinate—you'll take might to match the orc's likely choice, she'll use agility to avoid getting caught in melee. Stances are revealed simultaneously._
+
+_Resolution begins:_
+
+**Cunning Phase**: The wolf chose cunning but isn't adjacent to your agility-stance archer, so it can't attack her. It could attack you (cunning beats itself), but saves its energy.
+
+**Agility Phase**: Your archer's agility beats the orc's might. Sensing advantage, she triggers her Execute ability for bonus damage. She rolls high, the orc rolls poorly on defense. The orc burns stamina, reducing his heart die to halve the incoming damage. He survives, barely.
+
+**Might Phase**: You and the orc both chose might. You could attack either the orc (same stance) or the wolf (might beats cunning). You target the orc—finish what your ally started. The orc attacks you back. You make contested attack rolls. The orc rolls slightly higher, dealing you the difference in damage.
+
+_The engagement ends. The orc still has an action (didn't need one to join the engagement), while everyone else has spent theirs. The round continues with new possibilities._
 
 ## Spellcasting in Combat
 
