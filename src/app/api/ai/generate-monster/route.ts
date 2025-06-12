@@ -1,64 +1,96 @@
 import { openai } from "@ai-sdk/openai";
-import { generateObject } from "ai";
+import { generateObject, generateText } from "ai";
 import { z } from "zod";
 
-const monsterSchema = z.object({
-  name: z.string().describe("The name of the monster"),
-  subtitle: z.string().optional().describe("Optional subtitle or title"),
-  size: z
-    .enum(["S", "M", "L", "L2", "L3", "L4", "L5"])
-    .describe("Size: S (Small), M (Medium), L (Large), L2 (2x Large), etc."),
-  abilities: z
-    .object({
-      might: z.enum(["4", "6", "8", "10", "12", "20"]).describe("Might die size"),
-      agility: z.enum(["4", "6", "8", "10", "12", "20"]).describe("Agility die size"),
-      cunning: z.enum(["4", "6", "8", "10", "12", "20"]).describe("Cunning die size"),
-      presence: z.enum(["4", "6", "8", "10", "12", "20"]).describe("Presence die size"),
-    })
-    .describe("Heart Rush ability scores as die sizes"),
-  heartDie: z
-    .enum(["d4", "d6", "d8", "d10", "d12", "d20"])
-    .describe("Heart Die representing stamina/fighting spirit"),
-  defenseBonus: z.number().min(0).describe("Defense bonus (+X)"),
-  attackBonus: z.number().min(0).describe("Attack bonus (+X)"),
-  hitPoints: z.number().min(1).describe("Total hit points"),
-  woundThreshold: z.number().min(1).describe("Damage needed to inflict a wound"),
-  specialAbilities: z
-    .array(z.string())
-    .describe("List of special abilities, each as a concise string"),
-  advantages: z
-    .array(z.string())
-    .optional()
-    .describe("Special advantages like 'Adv A', 'Adv D', 'A2', etc."),
-  disadvantages: z
-    .array(z.string())
-    .optional()
-    .describe("Special disadvantages like 'D1', 'D3', 'D5', etc."),
-  isComplex: z.boolean().describe("Whether this is a complex/boss monster"),
-  solution: z.string().optional().describe("Strategic hint for players (complex monsters)"),
-  complications: z.string().optional().describe("Environmental effects (complex monsters)"),
-  mechanic: z.string().optional().describe("Unique combat mechanics (complex monsters)"),
-  components: z
-    .array(
-      z.object({
-        name: z.string().describe("Component name"),
-        size: z.enum(["S", "M", "L", "L2", "L3", "L4", "L5"]),
-        abilities: z.object({
-          might: z.enum(["4", "6", "8", "10", "12", "20"]),
-          agility: z.enum(["4", "6", "8", "10", "12", "20"]),
-          cunning: z.enum(["4", "6", "8", "10", "12", "20"]),
-          presence: z.enum(["4", "6", "8", "10", "12", "20"]),
-        }),
-        heartDie: z.enum(["d4", "d6", "d8", "d10", "d12", "d20"]),
-        defenseBonus: z.number().min(0),
-        attackBonus: z.number().min(0),
-        hitPoints: z.number().min(1),
-        woundThreshold: z.number().min(1),
-        specialAbilities: z.array(z.string()),
-      })
-    )
-    .optional()
-    .describe("Multiple components for complex monsters"),
+const dieSchema = z.enum(["d4", "d6", "d8", "d10", "d12", "d20"]);
+
+const conditionalBonusSchema = z.object({
+  condition: z.string(),
+  bonus: z.number().int()
+});
+
+const saveSchema = z.object({
+  type: z.enum(["MC", "AC", "CC", "PC"]),
+  dc: z.number().int().min(1)
+});
+
+const specialAbilitySchema = z.object({
+  name: z.string(),
+  description: z.string().optional(),
+  type: z.enum(["passive", "triggered", "action", "reaction", "aura"]).optional(),
+  trigger: z.string().optional(),
+  uses: z.string().optional(),
+  range: z.string().optional(),
+  save: saveSchema.optional(),
+  effect: z.string().optional(),
+  damage: z.string().optional(),
+  conditions: z.array(z.object({
+    name: z.string(),
+    levels: z.number().int().min(1).optional(),
+    duration: z.string().optional()
+  })).optional()
+});
+
+const attackDefenseSchema = z.union([
+  z.number().int(),
+  z.object({
+    base: z.number().int().optional(),
+    byDamageType: z.object({
+      slashingPiercing: z.number().int().optional(),
+      bludgeoning: z.number().int().optional(),
+      other: z.record(z.number().int()).optional()
+    }).optional(),
+    conditional: z.array(conditionalBonusSchema).optional()
+  })
+]);
+
+const baseMonsterSchema = z.object({
+  name: z.string().describe("The monster's name"),
+  subtitle: z.string().optional().describe("Optional subtitle or description"),
+  size: z.string().regex(/^(S|M|L[0-9]*)$/).describe("Size category: S, M, L, L2, L3, etc."),
+  abilities: z.object({
+    might: dieSchema,
+    agility: dieSchema,
+    cunning: dieSchema,
+    presence: dieSchema
+  }).describe("The four ability dice"),
+  heartDie: dieSchema.describe("The creature's heart die (stamina/fighting spirit)"),
+  hp: z.number().int().min(1).describe("Hit points"),
+  woundThreshold: z.number().int().min(1).nullable().describe("Minimum damage to inflict a wound (null for unwoundable)"),
+  attack: attackDefenseSchema.describe("Attack bonus"),
+  defense: attackDefenseSchema.describe("Defense bonus"),
+  specialAbilities: z.array(z.union([
+    z.string(),
+    specialAbilitySchema
+  ])).describe("Special abilities"),
+  movement: z.object({
+    cannotBePushed: z.boolean().optional(),
+    speed: z.number().int().optional(),
+    special: z.array(z.string()).optional()
+  }).optional().describe("Movement capabilities"),
+  mechanics: z.object({
+    engagementsPerRound: z.number().int().min(1).optional(),
+    phases: z.array(z.object({
+      trigger: z.string(),
+      changes: z.array(z.string())
+    })).optional(),
+    auras: z.array(z.object({
+      name: z.string(),
+      range: z.string(),
+      effect: z.string(),
+      save: saveSchema.optional()
+    })).optional()
+  }).optional().describe("Special combat mechanics"),
+  notes: z.string().optional().describe("Additional GM notes or tactics")
+});
+
+const componentSchema = baseMonsterSchema.extend({
+  quantity: z.number().int().min(1).optional().describe("How many of this component exist"),
+  shared: z.boolean().optional().describe("Whether damage is shared across all instances")
+});
+
+const monsterSchema = baseMonsterSchema.extend({
+  components: z.array(componentSchema).optional().describe("For multi-part monsters like The Skittering Horror")
 });
 
 export async function POST(request: Request) {
@@ -75,93 +107,181 @@ export async function POST(request: Request) {
     const { object } = await generateObject({
       model: openai("gpt-4.1"),
       schema: monsterSchema,
-      prompt: `Create a detailed Heart Rush monster stat block based on this concept: "${concept}"
+      system: `You are an expert at creating monsters for the Heart Rush TTRPG system. Generate balanced, interesting monster statblocks that follow the game's design principles.
 
-Heart Rush uses a unique tactical stat system. Follow this comprehensive template and guidelines:
+# Heart Rush Monster Creation Guidelines
 
-## Basic Format Template
+## Core Statblock Format
 
-#### [Monster Name]
-*[Subtitle/Title if applicable]*
-**Size**: [S/M/L/L2/L3/etc]
-[Might]/[Agility]/[Cunning]/[Presence] **HD** [d4-d20] **D** +[#] **A** +[#] **HP** [#] w [#]
-- [Ability 1]
-- [Ability 2]
-- [etc.]
+### Basic Template
+**Name**: [Monster Name]
+*[Optional Subtitle]*
+**Size**: [S/M/L/L2/L3/etc.]
+[Might]/[Agility]/[Cunning]/[Presence] **HD** [d4-d20] **HP** [Number] **w** [Threshold or /]
+**A** +[Bonus] **D** +[Bonus]
+- [Special Ability 1]
+- [Special Ability 2]
 
-## Field Explanations
+### Size Categories
+- **S** - Small (halflings, goblins, small animals)
+- **M** - Medium (humans, most humanoids)
+- **L** - Large (ogres, horses)
+- **L2** - Huge (giants, young dragons)
+- **L3+** - Gargantuan (ancient dragons, titans)
+- Sizes can go up to L8 or higher for truly massive creatures
 
-**Size Categories:**
-- S (Small), M (Medium), L (Large), L2 (2x Large), L3 (3x Large), etc.
-- Larger numbers indicate increasingly massive creatures
+### Ability Scores (Might/Agility/Cunning/Presence)
+- Each ability uses a die from d4 to d20
+- **d4** - Terrible (weakest possible)
+- **d6** - Poor
+- **d8** - Average
+- **d10** - Good
+- **d12** - Excellent
+- **d20** - Legendary (strongest possible)
 
-**Ability Scores** (in order: Might/Agility/Cunning/Presence):
-- Listed as die sizes: 4, 6, 8, 10, 12, 20
-- HD (Heart Die): d4 through d20 - represents stamina/fighting spirit
-- D (Defense Bonus): +X added to defense rolls
-- A (Attack Bonus): +X added to attack rolls
-- HP (Hit Points): Total health
-- w (Wound Threshold): Damage needed to inflict a wound
+### Heart Die (HD)
+Represents the creature's stamina and fighting spirit. Ranges from d4 to d20.
+- **d4-d6** - Fragile creatures
+- **d8-d10** - Standard combatants
+- **d12-d20** - Elite or boss monsters
 
-## Special Notations
+### Hit Points (HP)
+The creature's total health pool. Generally scales with size and threat level.
 
-**Advantages/Disadvantages:**
-- Adv A = Advantage on Attack
-- Adv D = Advantage on Defense
-- A2 = Double advantage on attack
-- D1/D3/D5 = 1/3/5 levels of disadvantage
+### Wound Threshold (w)
+The minimum damage needed to inflict a wound. Use "/" if the creature cannot be wounded.
+- Small creatures: 5-10
+- Medium creatures: 10-15
+- Large creatures: 15-20
+- Boss monsters: 20+
 
-**Ability Checks (like saving throws):**
-- MC = Might Check (MC9 means might check vs difficulty 9)
-- AC = Agility Check
-- CC = Cunning Check
-- PC = Presence Check
+### Attack and Defense Bonuses
+- **A** (Attack): Flat bonus added to attack rolls
+- **D** (Defense): Flat bonus added to defense rolls
+- Can specify different bonuses vs damage types: **D** +8(s/p) +4(b) means +8 vs slashing/piercing, +4 vs bludgeoning
 
-**Damage Types (when relevant):**
-- s = slashing, p = piercing, b = bludgeoning
+## Special Abilities Guidelines
 
-## Complex Monster Template
+### Common Ability Types
+- **Conditional Advantages**: "Adv A when [condition]" or "Adv D when [condition]"
+- **A2/D2**: Double advantage on attacks/defense
+- **Status Effects**: Apply conditions like poisoned, dazed, off-balanced, weakened, stunned, blinded, frightened
+- **Triggered Abilities**: "On stance beat, [effect]" or "When [trigger], [effect]"
+- **Saving Throws**: MC/AC/CC/PC with DCs typically 8-12, with 15+ for devastating effects
+- **Usage Limitations**: "1/engagement", "1/round", "recharge 5-6"
 
-For boss monsters with multiple parts:
+### Environmental Effects
+- **Difficult Terrain**: "All ground within [distance] is difficult terrain"
+- **Magical Difficult Terrain**: Enhanced version that's harder to navigate
+- **Area Damage**: "All creatures within [distance] take [damage] per round"
+- **Conditions**: Apply ongoing effects like slowed, blinded, prone
 
-### [Boss Name]
-*[Epic Title]*
-**[Type]**, [Description]
-**Solution**: [Strategic hint for players]
-**Complications**: [Environmental effects or special rules]
-**Mechanic**: [Unique combat mechanics]
+## Monster Examples by Complexity
 
-#### Stats
-##### Components
-###### [Component Name]
-[Use basic format for each component]
+### Simple Monsters
+**Giant Rats**
+**Size**: M
+4/6/4/4 **HD** 6 **HP** 20 **w** 5
+**A** +4 **D** +2
+- Adv A when near an ally
 
-## Ability Writing Patterns
+**Wind-Touched Wraiths**
+**Size**: M
+4/4/4/4 **HD** 6 **HP** 20 **w** 10
+**A** +2 **D** +0
+- On stance beat, PC9 or gain one level of Yearning
 
-1. **Conditional Bonuses**: "Adv A when flanking", "A2 vs prone targets"
-2. **On-Hit Effects**: "Poisonedx1 when wounding", "Blind 1 on crit"
-3. **Defensive Abilities**: "Trade places with ally to avoid damage"
-4. **Limited Use**: "1/engagement, [ability] ([effect], MC 12)"
-5. **Auras/Areas**: "Difficult terrain w/in 15ft", "1d4 dmg w/in 10ft"
-6. **Movement Restrictions**: "Cannot be Pushed", "Grit: gain lethargy if don't move 10ft"
-7. **Ability Check Triggers**: "CC 15 or Slowed", "AC 9 or restrained"
+### Elite Monsters
+**Queen Rat**
+**Size**: L
+6/8/6/6 **HD** 8 **HP** 50 **w** 12
+**A** +6 **D** +5
+- Adv A/D when near an ally
+- Poisonedx1 when wounding
+- Trade places with an ally to avoid damage
+- 1/engagement, plague (1d4 dmg w/in 10ft, MC 9, poisoned x1)
 
-## Complexity Examples
+**Sand Serpents**
+**Size**: L2
+4/8/8/4 **HD** 6 **HP** 40 **w** 10
+**A** +4 **D** +2
+- A2 on restrained or prone targets
+- Quicksand - AC 9 or restrained. Action to get out
 
-**Simple** (Giant Rats): Basic stats, 1-2 simple abilities
-**Moderate** (Queen Rat): Enhanced stats, 3-4 abilities with triggers
-**Complex** (Sand Serpents): Solution notes, environmental abilities  
-**Boss** (Skittering Horror): Multiple components, environmental hazards, phase mechanics
+### Boss Monsters
+**The Starving**
+**Size**: M
+10/10/10/12 **HD** 10 **HP** 100 **w** 10
+**A** +8 **D** +8
+- Engage 2x a round
+- ALL STANCE BEAT ATTACKS DEAL MAX HP DAMAGE
+- On stance beat MC8: Success increases The Hunger Sickness by 1, Failure: Infected with The Gorge
+
+## Multi-Part Monsters
+
+Multi-part monsters consist of multiple components that work together. Each component has its own stats but contributes to the overall encounter.
+
+### Design Principles for Multi-Part Monsters
+1. **Different Roles**: Each component should serve a distinct tactical purpose
+2. **Interdependence**: Components should interact meaningfully
+3. **Progression**: Destroying components should change the encounter dynamics
+4. **Clear Targets**: Players should understand what they can attack
+
+### Multi-Part Example: The Skittering Horror
+*Heart of Inertia*
+A towering, spider-like creature with countless skeletal legs. Players must destroy its legs to bring down the carapace.
+
+**Components:**
+1. **Legs** (x12) - Mobile attackers that create difficult terrain
+2. **Carapace** - Main body that becomes vulnerable when enough legs are destroyed  
+3. **Heart of Inertia** - Core that's only exposed when carapace is destroyed
+
+**Legs**
+**Size**: L. Cannot be Pushed.
+10/10/6/6 **HD** 6 **HP** 30 **w** /
+**A** +4 **D** +8(s/p) +4(b)
+- Tremors - all ground w/in 10 ft is difficult terrain
+- When moving through space or making a/d roll, AC10 fall prone
+- Shudder - When 6-7 legs destroyed, carapace wobbles violently
+
+**Carapace**
+**Size**: L8. Cannot be Pushed.
+10/10/10/6 **HD** 10 **HP** 60 **w** 15
+**A** 0; Cannot make attacks, always chooses Defense
+**D** +6; +2 for each remaining group of legs
+- Unless downed (8 legs destroyed) the Carapace is 60ft off the ground
+- Sandstorm - creatures w/in 15 ft take 1d6 piercing/round, slowed, blind 1
+- Sinkhole - creatures w/in 30ft MC10 or pulled 10ft toward center
+- Grit - If player doesn't move 10+ feet or ends prone, gain lethargy level
+
+**Heart of Inertia**
+**HP** 20 **w** /
+**A** 0; Cannot make attacks, always chooses Defense
+**D** +2
+- Only exposed when Carapace at 0HP
+- Heals 1d8 to Carapace each round
+- All creatures w/in 30ft PC12 or stunned 1/round
+- Vitality Drain - creatures starting turn w/in 10ft take 1d8 MAX HP damage
 
 ## Scaling Guidelines
+- **Minions**: 10-20 HP, w5-8, simple abilities
+- **Standard**: 25-40 HP, w8-12, 1-2 abilities  
+- **Elite**: 40-60 HP, w12-15, 2-3 abilities
+- **Boss**: 60+ HP, w15+, 3+ abilities, unique mechanics
+- **Multi-Part**: Each component follows above guidelines based on its role
 
-**Minions**: 4-6 abilities, HD d4-d6, HP 10-30, bonuses +0 to +4
-**Elites**: 6-10 abilities, HD d6-d10, HP 30-60, bonuses +4 to +8
-**Bosses**: 8-20 abilities, HD d8-d20, HP 40-100+, bonuses +6 to +15
+## Design Principles
+1. Match abilities to the creature's concept and role
+2. Balance action economy for bosses with multiple engagements or area effects
+3. Use thematic abilities that enhance narrative
+4. Consider environmental effects and tactical positioning
+5. Ensure abilities have clear triggers and effects
+6. For multi-part monsters, create meaningful interactions between components
 
-**Wound Thresholds**: Small w 3-8, Medium w 5-12, Large w 10-20, Boss w 15+ or w /
+Create monsters that are tactically interesting and thematically coherent.`,
+      prompt: `Generate a complete Heart Rush monster statblock for: ${concept}
 
-Create a tactically engaging monster with clear counterplay that matches "${concept}".`,
+Consider the creature's role in combat, its thematic abilities, and how it would challenge players tactically. Include 1-3 special abilities that match the concept and provide interesting gameplay decisions.`,
     });
 
     return Response.json({ object });
