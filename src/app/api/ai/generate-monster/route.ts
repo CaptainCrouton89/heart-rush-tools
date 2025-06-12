@@ -6,91 +6,135 @@ const dieSchema = z.enum(["d4", "d6", "d8", "d10", "d12", "d20"]);
 
 const conditionalBonusSchema = z.object({
   condition: z.string(),
-  bonus: z.number().int()
+  bonus: z.number().int(),
 });
 
 const saveSchema = z.object({
   type: z.enum(["MC", "AC", "CC", "PC"]),
-  dc: z.number().int().min(1)
+  dc: z.number().int().min(1),
 });
 
 const specialAbilitySchema = z.object({
   name: z.string(),
   description: z.string().optional(),
-  type: z.enum(["passive", "triggered", "action", "reaction", "aura"]).optional(),
+  type: z
+    .enum(["passive", "triggered", "action", "reaction", "aura"])
+    .optional(),
   trigger: z.string().optional(),
   uses: z.string().optional(),
   range: z.string().optional(),
   save: saveSchema.optional(),
   effect: z.string().optional(),
   damage: z.string().optional(),
-  conditions: z.array(z.object({
-    name: z.string(),
-    levels: z.number().int().min(1).optional(),
-    duration: z.string().optional()
-  })).optional()
+  conditions: z
+    .array(
+      z.object({
+        name: z.string(),
+        levels: z.number().int().min(1).optional(),
+        duration: z.string().optional(),
+      })
+    )
+    .optional(),
 });
 
 const attackDefenseSchema = z.union([
   z.number().int(),
   z.object({
     base: z.number().int().optional(),
-    byDamageType: z.object({
-      slashingPiercing: z.number().int().optional(),
-      bludgeoning: z.number().int().optional(),
-      other: z.record(z.number().int()).optional()
-    }).optional(),
-    conditional: z.array(conditionalBonusSchema).optional()
-  })
+    byDamageType: z
+      .object({
+        slashingPiercing: z.number().int().optional(),
+        bludgeoning: z.number().int().optional(),
+        other: z.record(z.number().int()).optional(),
+      })
+      .optional(),
+    conditional: z.array(conditionalBonusSchema).optional(),
+  }),
 ]);
 
 const baseMonsterSchema = z.object({
   name: z.string().describe("The monster's name"),
   subtitle: z.string().optional().describe("Optional subtitle or description"),
-  size: z.string().regex(/^(S|M|L[0-9]*)$/).describe("Size category: S, M, L, L2, L3, etc."),
-  abilities: z.object({
-    might: dieSchema,
-    agility: dieSchema,
-    cunning: dieSchema,
-    presence: dieSchema
-  }).describe("The four ability dice"),
-  heartDie: dieSchema.describe("The creature's heart die (stamina/fighting spirit)"),
+  size: z
+    .string()
+    .regex(/^(S|M|L[0-9]*)$/)
+    .describe("Size category: S, M, L, L2, L3, etc."),
+  abilities: z
+    .object({
+      might: dieSchema,
+      agility: dieSchema,
+      cunning: dieSchema,
+      presence: dieSchema,
+    })
+    .describe("The four ability dice"),
+  heartDie: dieSchema.describe(
+    "The creature's heart die (stamina/fighting spirit)"
+  ),
   hp: z.number().int().min(1).describe("Hit points"),
-  woundThreshold: z.number().int().min(1).nullable().describe("Minimum damage to inflict a wound (null for unwoundable)"),
+  woundThreshold: z
+    .number()
+    .int()
+    .min(1)
+    .nullable()
+    .describe("Minimum damage to inflict a wound (null for unwoundable)"),
   attack: attackDefenseSchema.describe("Attack bonus"),
   defense: attackDefenseSchema.describe("Defense bonus"),
-  specialAbilities: z.array(z.union([
-    z.string(),
-    specialAbilitySchema
-  ])).describe("Special abilities"),
-  movement: z.object({
-    cannotBePushed: z.boolean().optional(),
-    speed: z.number().int().optional(),
-    special: z.array(z.string()).optional()
-  }).optional().describe("Movement capabilities"),
-  mechanics: z.object({
-    engagementsPerRound: z.number().int().min(1).optional(),
-    phases: z.array(z.object({
-      trigger: z.string(),
-      changes: z.array(z.string())
-    })).optional(),
-    auras: z.array(z.object({
-      name: z.string(),
-      range: z.string(),
-      effect: z.string(),
-      save: saveSchema.optional()
-    })).optional()
-  }).optional().describe("Special combat mechanics"),
-  notes: z.string().optional().describe("Additional GM notes or tactics")
+  specialAbilities: z
+    .array(z.union([z.string(), specialAbilitySchema]))
+    .describe("Special abilities"),
+  movement: z
+    .object({
+      cannotBePushed: z.boolean().optional(),
+      speed: z.number().int().optional(),
+      special: z.array(z.string()).optional(),
+    })
+    .optional()
+    .describe("Movement capabilities"),
+  mechanics: z
+    .object({
+      engagementsPerRound: z.number().int().min(1).optional(),
+      phases: z
+        .array(
+          z.object({
+            trigger: z.string(),
+            changes: z.array(z.string()),
+          })
+        )
+        .optional(),
+      auras: z
+        .array(
+          z.object({
+            name: z.string(),
+            range: z.string(),
+            effect: z.string(),
+            save: saveSchema.optional(),
+          })
+        )
+        .optional(),
+    })
+    .optional()
+    .describe("Special combat mechanics"),
+  notes: z.string().optional().describe("Additional GM notes or tactics"),
 });
 
 const componentSchema = baseMonsterSchema.extend({
-  quantity: z.number().int().min(1).optional().describe("How many of this component exist"),
-  shared: z.boolean().optional().describe("Whether damage is shared across all instances")
+  quantity: z
+    .number()
+    .int()
+    .min(1)
+    .optional()
+    .describe("How many of this component exist"),
+  shared: z
+    .boolean()
+    .optional()
+    .describe("Whether damage is shared across all instances"),
 });
 
 const monsterSchema = baseMonsterSchema.extend({
-  components: z.array(componentSchema).optional().describe("For multi-part monsters like The Skittering Horror")
+  components: z
+    .array(componentSchema)
+    .optional()
+    .describe("For multi-part monsters like The Skittering Horror"),
 });
 
 export async function POST(request: Request) {
@@ -104,6 +148,92 @@ export async function POST(request: Request) {
       );
     }
 
+    // Step 1: Use 4.1-nano to flesh out the concept
+    const { text: enhancedConcept } = await generateText({
+      model: openai("gpt-4.1-mini"),
+      system: `You are an expert at expanding and enriching monster concepts for the Heart Rush TTRPG system. Your job is to take a basic monster concept and flesh it out with more details while preserving the original core idea.
+
+# Heart Rush Monster Creation Guidelines
+
+## Core Statblock Format
+
+### Basic Template
+**Name**: [Monster Name]
+*[Optional Subtitle]*
+**Size**: [S/M/L/L2/L3/etc.]
+[Might]/[Agility]/[Cunning]/[Presence] **HD** [d4-d20] **HP** [Number] **w** [Threshold or /]
+**A** +[Bonus] **D** +[Bonus]
+- [Special Ability 1]
+- [Special Ability 2]
+
+### Size Categories
+- **S** - Small (halflings, goblins, small animals)
+- **M** - Medium (humans, most humanoids)
+- **L** - Large (ogres, horses)
+- **L2** - Huge (giants, young dragons)
+- **L3+** - Gargantuan (ancient dragons, titans)
+- Sizes can go up to L8 or higher for truly massive creatures
+
+### Ability Scores (Might/Agility/Cunning/Presence)
+- Each ability uses a die from d4 to d20
+- **d4** - Terrible (weakest possible)
+- **d6** - Poor
+- **d8** - Average
+- **d10** - Good
+- **d12** - Excellent
+- **d20** - Legendary (strongest possible)
+
+### Heart Die (HD)
+Represents the creature's stamina and fighting spirit. Ranges from d4 to d20.
+- **d4-d6** - Fragile creatures
+- **d8-d10** - Standard combatants
+- **d12-d20** - Elite or boss monsters
+
+### Hit Points (HP)
+The creature's total health pool. Generally scales with size and threat level.
+
+### Wound Threshold (w)
+The minimum damage needed to inflict a wound. Use "/" if the creature cannot be wounded.
+- Small creatures: 5-10
+- Medium creatures: 10-15
+- Large creatures: 15-20
+- Boss monsters: 20+
+
+### Attack and Defense Bonuses
+- **A** (Attack): Flat bonus added to attack rolls
+- **D** (Defense): Flat bonus added to defense rolls
+- Can specify different bonuses vs damage types: **D** +8(s/p) +4(b) means +8 vs slashing/piercing, +4 vs bludgeoning
+
+## Special Abilities Guidelines
+
+### Common Ability Types
+- **Conditional Advantages**: "Adv A when [condition]" or "Adv D when [condition]"
+- **A2/D2**: Double advantage on attacks/defense
+- **Status Effects**: Apply conditions like poisoned, dazed, off-balanced, weakened, stunned, blinded, frightened
+- **Triggered Abilities**: "On stance beat, [effect]" or "When [trigger], [effect]"
+- **Saving Throws**: MC/AC/CC/PC with DCs typically 8-12, with 15+ for devastating effects
+- **Usage Limitations**: "1/engagement", "1/round", "recharge 5-6"
+
+### Environmental Effects
+- **Difficult Terrain**: "All ground within [distance] is difficult terrain"
+- **Magical Difficult Terrain**: Enhanced version that's harder to navigate
+- **Area Damage**: "All creatures within [distance] take [damage] per round"
+- **Conditions**: Apply ongoing effects like slowed, blinded, prone
+
+DO NOT change the core concept - only add details, context, and tactical considerations that would help create a more interesting and balanced monster statblock.`,
+      prompt: `Take this monster concept and expand it with more tactical and thematic details while keeping the original idea intact: ${concept}
+
+Provide more context about:
+- What role this creature fills in combat
+- Key thematic elements that should translate to abilities
+- Suggested tactical challenges it should present to players
+- Environmental considerations or signature moves
+- Rough power level (minion, standard, elite, boss, multi-part)
+
+Keep the response focused and under 200 words.`,
+    });
+
+    // Step 2: Use the enhanced concept to generate the full monster with 4.1
     const { object } = await generateObject({
       model: openai("gpt-4.1"),
       schema: monsterSchema,
@@ -279,9 +409,11 @@ A towering, spider-like creature with countless skeletal legs. Players must dest
 6. For multi-part monsters, create meaningful interactions between components
 
 Create monsters that are tactically interesting and thematically coherent.`,
-      prompt: `Generate a complete Heart Rush monster statblock for: ${concept}
+      prompt: `Generate a complete Heart Rush monster statblock based on this enhanced concept:
 
-Consider the creature's role in combat, its thematic abilities, and how it would challenge players tactically. Include 1-3 special abilities that match the concept and provide interesting gameplay decisions.`,
+${enhancedConcept}
+
+Create a balanced, tactically interesting monster that matches the expanded concept. Include appropriate special abilities that reflect the thematic elements and tactical role described.`,
     });
 
     return Response.json({ object });
