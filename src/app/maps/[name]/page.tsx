@@ -15,7 +15,7 @@ const getImageDimensions = (quality: 'low' | 'medium' | 'high') => {
   switch (quality) {
     case 'low': return { width: 2000, height: 2000 };
     case 'medium': return { width: 8000, height: 8000 };
-    case 'high': return { width: 20000, height: 20000 };
+    case 'high': return { width: 20480, height: 20480 };
   }
 };
 
@@ -185,7 +185,7 @@ export default function MapPage() {
             <p>• Scroll to pan around the map</p>
             <p>• Use zoom controls to resize</p>
             <p>• Drag to pan when zoomed in</p>
-            <p className="mt-2 text-xs">Map: 20,000 × 20,000 pixels</p>
+            <p className="mt-2 text-xs">Map: 20,480 × 20,480 pixels</p>
           </div>
         </div>
       </div>
