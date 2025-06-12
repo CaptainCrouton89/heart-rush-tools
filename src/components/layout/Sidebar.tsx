@@ -165,12 +165,16 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
                 </svg>
                 Maps
               </Link>
-              <div className="flex items-center justify-center px-3 py-2 text-xs bg-muted/30 border border-border/30 rounded-md text-muted-foreground cursor-not-allowed">
-                <svg className="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <Link
+                href="/tools"
+                className="flex items-center justify-center gap-2 px-3 py-2 text-xs bg-background/50 hover:bg-background border border-border/50 hover:border-primary/50 rounded-md transition-all duration-200 hover:shadow-sm"
+                onClick={onToggle}
+              >
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
                 </svg>
                 Tools
-              </div>
+              </Link>
             </div>
           </div>
 
