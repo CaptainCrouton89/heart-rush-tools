@@ -24,7 +24,7 @@ On a failure, you will take damage.
 
 When falling from 5 feet or more, roll an agility saving throw against the height fallen.
 
-If you roll less than the distance fallen, you take the difference as damage.
+If you roll less than the distance fallen, you take the difference as damage, and fall prone.
 
 ### Suffocation and Strangulation
 

@@ -44,7 +44,7 @@ There are no penalties to vision or combat while in a brightly lit area.
 
 Dim light can be found in alleyways, twilight, and in all the spaces between bright light and darkness.
 
-Perception and observation skill checks are made with disadvantage for creatures that require light to see.
+Perception and observation skill checks are made with disadvantage for creatures that require light to see. Additionally, attacks against creatures in dim light have disadvantage, and defense rolls against obscured creatures have disadvantage.
 
 Darkness is anywhere there is no light.
 

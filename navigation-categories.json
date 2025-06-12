@@ -11,7 +11,8 @@
         "Kin_&_Culture",
         "Classes",
         "Talents",
-        "Paragon_Abilities"
+        "Paragon_Abilities",
+        "Experience_&_Advancement"
       ]
     },
     {
@@ -22,8 +23,7 @@
         "Abilities",
         "Strategem_System",
         "Damage_&_Consequences",
-        "Other_Factors",
-        "Experience_&_Advancement"
+        "Other_Factors"
       ]
     },
     {
