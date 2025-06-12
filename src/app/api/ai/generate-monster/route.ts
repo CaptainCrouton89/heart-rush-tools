@@ -85,7 +85,7 @@ const baseMonsterSchema = z.object({
   movement: z
     .object({
       cannotBePushed: z.boolean().optional(),
-      speed: z.number().int().optional(),
+      speed: z.number().int().optional().describe("Movement speed, default 60"),
       special: z.array(z.string()).optional(),
     })
     .optional()
@@ -150,26 +150,37 @@ export async function POST(request: Request) {
       );
     }
 
-    // Step 1: Use 4.1-mini to flesh out the concept simply
+    // Step 1: Use 4.1-nano to determine monster level and complexity
     const { text: enhancedConcept } = await generateText({
-      model: openai("gpt-4.1-mini"),
-      system: `You create simple, concise monster descriptions. Keep responses very brief and match the complexity of the input.
+      model: openai("gpt-4.1-nano"),
+      system: `You analyze monster concepts and determine their level and complexity. Respond with the format:
 
-CRITICAL: For simple 1-2 word inputs, explicitly state they are "simple" and avoid elaboration.
+LEVEL: [level]
+ABILITIES: [number]
+DESCRIPTION: [brief description]
+
+Monster levels:
+- "basic creature" - Simple animals, weak undead, common minions
+- "standard" - Typical enemies, most humanoid warriors
+- "elite" - Veteran fighters, dangerous beasts, skilled spellcasters  
+- "mini-boss" - Named enemies, champions, powerful creatures
+- "boss" - Major threats, legendary creatures, dungeon bosses
+- "legendary" - World-ending threats, ancient dragons, gods
+
+Ability count guidelines:
+- basic creature: 0-1 abilities
+- standard: 1-2 abilities
+- elite: 2-3 abilities
+- mini-boss: 3-4 abilities
+- boss: 4-6 abilities
+- legendary: 6+ abilities
 
 Examples:
-- Input: "goblin monk" → "A simple goblin monk, with a single, unflashy ability"
-- Input: "rat" → "A simple rat, basic creature, no abilities"
-- Input: "orc" → "A simple orc warrior, straightforward fighter, 0-1 abilities"
-- Input: "skeleton" → "A simple animated skeleton, basic undead, 0-1 abilities"
-- Input: "wolf" → "A simple wolf, pack hunter, 1-2 abilities"
-- Input: "goblin monk boss" → "A goblin monk, master of advanced martial arts. Boss power level, a few abilities"
-- Input: "ancient dragon" → "An ancient dragon, legendary creature with devastating breath and magic, 4-5 abilities"
-- Input: "fire elemental lord" → "A fire elemental lord, elite creature commanding flames and heat, 3-4 abilities"
-
-For simple inputs (1-2 words): Always use "simple" and keep under 10 words.
-For complex inputs: Elaborate appropriately but stay under 20 words.`,
-      prompt: `Create a simple description for: ${concept}`,
+- Input: "goblin" → LEVEL: basic creature, ABILITIES: 1, DESCRIPTION: A simple goblin warrior with basic pack tactics
+- Input: "orc chieftain" → LEVEL: elite, ABILITIES: 3, DESCRIPTION: An orc chieftain, veteran warrior with command abilities
+- Input: "ancient dragon" → LEVEL: boss, ABILITIES: 5, DESCRIPTION: An ancient dragon with devastating breath, magic, and legendary presence
+- Input: "rat" → LEVEL: basic creature, ABILITIES: 0, DESCRIPTION: A simple rat, basic animal with no special abilities`,
+      prompt: `Analyze this monster concept: ${concept}`,
     });
 
     console.log(enhancedConcept);
@@ -353,7 +364,8 @@ A towering, spider-like creature with countless skeletal legs. Players must dest
 Create monsters that are tactically interesting and thematically coherent.`,
       prompt: `Generate a complete Heart Rush monster statblock based on this enhanced concept:
 
-${enhancedConcept}
+Concept: ${concept}
+Further Clarification: ${enhancedConcept}
 
 Create a monster that matches the complexity of the concept. Include appropriate special abilities that reflect the thematic elements and tactical role described, if any.`,
     });
