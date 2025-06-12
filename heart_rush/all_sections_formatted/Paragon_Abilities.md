@@ -23,7 +23,7 @@ You gain twice as many rush points at the start of each round of combat.
 
 _Passive ability. Subclass: Battlemind, Ravager, Skirmisher._
 
-You may enter one additional engagement each round as a free action.
+You may make an additional attack against a valid target during each engagement.
 
 ## Bard of Gaea
 
@@ -35,7 +35,7 @@ You have learned to weave Gaeic melodies over each other, intertwining them. You
 
 _Passive ability. Subclass: Any. Talent: Beast Companion._
 
-Your companion can take the help action once each round for free, and can enter engagements. If your companion can already enter engagements, you may work with your GM to create a custom ability for your companion. You may take this ability any number of times.
+Your companion can take the help action once each round for free, and can attack during engagements. If your companion can already enter engagements, you may work with your GM to create a custom ability for your companion. You may take this ability any number of times.
 
 ## Bulwark Infinitum
 
@@ -125,7 +125,7 @@ Whenever you make a defense roll, roll an additional instance of your heart die.
 
 _Passive ability. Subclass: Ravager._
 
-You may force up to five creatures into an engagement when you use your Everywhere at Once passive ability.
+At the end of an engagement, if there are adjacent creatures that did not attack you, and you haven't attacked them yet this round, you may make an attack roll against each of them using your stance for the engagement.
 
 ## Hottest Flames
 
