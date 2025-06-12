@@ -218,17 +218,17 @@ export default function MapPage() {
             <div className="flex items-center gap-2">
               <span className={`text-xs px-2 py-1 rounded-full flex items-center gap-1 ${
                 cachedImages[currentQuality] 
-                  ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                  ? 'bg-accent text-accent-foreground'
                   : 'bg-muted text-muted-foreground'
               }`}>
                 {cachedImages[currentQuality] && (
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
                 )}
                 Quality: {currentQuality.toUpperCase()}
               </span>
               {isLoadingNewQuality && (
-                <span className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full flex items-center gap-1">
-                  <div className="w-3 h-3 border border-primary border-t-transparent rounded-full animate-spin"></div>
+                <span className="text-xs px-2 py-1 bg-secondary/20 text-secondary-foreground rounded-full flex items-center gap-1">
+                  <div className="w-3 h-3 border border-secondary border-t-transparent rounded-full animate-spin"></div>
                   Loading...
                 </span>
               )}
@@ -241,7 +241,7 @@ export default function MapPage() {
           <div className="flex items-center gap-2">
             <button
               onClick={handleZoomOut}
-              className="px-3 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+              className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={zoom <= 0.05}
             >
               Zoom Out
@@ -251,14 +251,14 @@ export default function MapPage() {
             </span>
             <button
               onClick={handleZoomIn}
-              className="px-3 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+              className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={zoom >= 2}
             >
               Zoom In
             </button>
             <button
               onClick={handleResetZoom}
-              className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors"
+              className="px-3 py-2 bg-muted text-muted-foreground rounded-md hover:bg-secondary hover:text-secondary-foreground transition-colors"
             >
               Reset
             </button>
@@ -402,17 +402,17 @@ export default function MapPage() {
             <div className="flex items-center gap-2 mt-1">
               <span className={`text-xs px-2 py-1 rounded-full flex items-center gap-1 ${
                 cachedImages[currentQuality] 
-                  ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                  ? 'bg-accent text-accent-foreground'
                   : 'bg-muted text-muted-foreground'
               }`}>
                 {cachedImages[currentQuality] && (
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
                 )}
                 Quality: {currentQuality.toUpperCase()}
               </span>
               {isLoadingNewQuality && (
-                <span className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full flex items-center gap-1">
-                  <div className="w-3 h-3 border border-primary border-t-transparent rounded-full animate-spin"></div>
+                <span className="text-xs px-2 py-1 bg-secondary/20 text-secondary-foreground rounded-full flex items-center gap-1">
+                  <div className="w-3 h-3 border border-secondary border-t-transparent rounded-full animate-spin"></div>
                   Loading...
                 </span>
               )}
@@ -425,13 +425,13 @@ export default function MapPage() {
           <div className="flex items-center gap-2">
             <button
               onClick={toggleFullscreen}
-              className="px-3 py-2 bg-accent text-accent-foreground rounded-md hover:bg-accent/90 transition-colors"
+              className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors"
             >
               Fullscreen
             </button>
             <button
               onClick={handleZoomOut}
-              className="px-3 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+              className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={zoom <= 0.05}
             >
               Zoom Out
@@ -441,14 +441,14 @@ export default function MapPage() {
             </span>
             <button
               onClick={handleZoomIn}
-              className="px-3 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+              className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={zoom >= 2}
             >
               Zoom In
             </button>
             <button
               onClick={handleResetZoom}
-              className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors"
+              className="px-3 py-2 bg-muted text-muted-foreground rounded-md hover:bg-secondary hover:text-secondary-foreground transition-colors"
             >
               Reset
             </button>

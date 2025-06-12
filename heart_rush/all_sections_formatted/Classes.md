@@ -518,7 +518,7 @@ Choose one:
 - Shenanigans: The next time you perform a stunt, you have +3 on the contested ability check.
 - Switcheroo: The next time you sidestep, you may sidestep into an adjacent and willing creature's space. Switch places with that creature. The creature must be no more than one size bigger or smaller than you.
 - Taunt: After stances are chosen but before stances are revealed, you may choose a creature and call out their stance. After stances are revealed, if you guessed correctly, that creature gains a level of enraged towards you.
-- Quick Reflexes: You go first this round, ignoring initiative order.
+- Quick Reflexes: Other creatures cannot interupt actions and abilities you take this round. Treat your agility die as a d20 for the purposes of determining order of activities in the action phase.
 
 #### Elusive
 
