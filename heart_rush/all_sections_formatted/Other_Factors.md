@@ -1,20 +1,20 @@
-## Environmental Rules
+# Environmental Rules
 
 These additional rules cover various situations that can arise during gameplay.
 
 The world presents many challenges beyond hostile creatures. These rules help adjudicate how characters interact with their environment.
 
-### Terrain
+## Terrain
 
 As you adventure, you will encounter numerous environments that all pose their own unique challenges.
 
-#### Difficult Terrain
+### Difficult Terrain
 
 Difficult terrain is any terrain that is inherently hard to move through, such as water, mud, or heavy foliage.
 
 While in difficult terrain, after accounting for other movement penalties, your remaining movement speed is halved.
 
-#### Water
+### Water
 
 Doing anything while in or under water comes with severe limitations.
 
@@ -28,13 +28,13 @@ If you cannot stand, or if you are underwater, you have D5 on all of those rolls
 
 Ranged weapons travel half their distance when fired underwater.
 
-#### Vertical Surfaces
+### Vertical Surfaces
 
 When climbing, you may be required to make a might check to determine if you can climb at all.
 
 On a success, you can climb at your climb speed, which unless otherwise explicitly stated, is 5 feet.
 
-### Lighting
+## Lighting
 
 There are three different states of lighting that can occur in an environment: brightly lit, dim, and dark.
 
@@ -50,13 +50,13 @@ Darkness is anywhere there is no light.
 
 Unless you have darkvision, you cannot see anything.
 
-### Darkvision
+## Darkvision
 
 Some creatures have darkvision.
 
 A creature with darkvision can see in dim light as though it were bright light, and can see in darkness as though it were dim light.
 
-### Hiding
+## Hiding
 
 If the environment provides suitable places to hide and the GM deems it reasonable, you may choose to hide.
 
@@ -72,11 +72,11 @@ You may still be obscured after you attack, but you do not count as hidden and y
 
 All hidden creatures that wish to make opportunity attacks may use their action to attack before combat begins.
 
-### Size
+## Size
 
 Creatures range from minuscule to colossal, with significant mechanical differences.
 
-#### Size Categories
+### Size Categories
 
 | Size      | Spaces Occupied | Per Space | Examples         |
 | --------- | --------------- | --------- | ---------------- |
@@ -89,7 +89,7 @@ Creatures range from minuscule to colossal, with significant mechanical differen
 | L3        | 9 (3×3)         | 1         | Adult Dragon     |
 | L4+       | Level²          | 1         | Ancient Dragon   |
 
-#### Size Combat Effects
+### Size Combat Effects
 
 **Movement Through Spaces:**
 One creature can occupy and move through the space of another creature if it is at least two sizes smaller. Those creatures count as difficult terrain. While in the same space as a non-hostile creature, you also have one level of cover.

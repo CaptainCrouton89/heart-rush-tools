@@ -3177,7 +3177,7 @@ Once per transformation, you may use your action to roar. All hostile creatures 
 
 The Skaag, commonly known as "rat people," bear the heads of rats atop humanoid bodies. Their fur ranges from brown to black to gray, with pink tails and constantly twitching whiskers. Large ears swivel independently to track sounds, while their dark, beady eyes dart nervously even in apparent safety. Despite their unsettling appearance, most Skaag dress in typical humanoid clothing, trying desperately to fit in with societies that largely reject them.
 
-Vilified across Alaria as disease carriers and child-eaters, the Skaag suffer from a reputation that few deserve. While the infamous Rat King Glathkus the Cruel did indeed devour his offspring for power, most Skaag families are tight-knit groups who face the world's prejudice together. They've learned to be resourceful, quick, and cunning—traits necessary for survival when most of "civilized" society would rather see you dead.
+Vilified across Alaria as disease carriers and child-eaters, the Skaag suffer from a reputation that few deserve. While the infamous Rat King Glathkus the Cruel did indeed devour his offspring for power, most Skaag families are tight-knit groups who face the world's prejudice together. They've learned to be resourceful, and cunning—traits necessary for survival when most of "civilized" society would rather see you dead.
 
 The Skaag have only one true city of their own, but small communities can be found in the underbellies of major cities across the continents. Living literally underground in many cases, they've become masters of making homes in places others have abandoned or forgotten.
 
