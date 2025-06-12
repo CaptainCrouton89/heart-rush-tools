@@ -38,6 +38,12 @@ If players disagree on timing, make contested agility skill checks
 
 This system means naturally agile combatants tend to act faster, but anyone can seize the initiative when opportunity strikes.
 
+### Chaining Abilities
+
+Unless otherwise stated, you cannot chain multiple abilities, movement, and actions together without other combatants having the opportunity to react. If you want to dash toward an enemy and then cast a spell to wall them off, they can declare their own action to move away after your dash but before your spell.
+
+In practice, you can declare multiple intentions, but be prepared for interruptions. Other players and enemies can and will interject their own actions between yours, creating the dynamic flow of simultaneous combat. Until everyone who wants to respond to that first action or ability has done so, you cannot proceed with your second.
+
 ### Actions You Can Take
 
 **Dash**  
