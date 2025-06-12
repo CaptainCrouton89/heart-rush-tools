@@ -39,33 +39,25 @@ This tag is always listed as the first tag.
 
 Outside of combat, you can use an ability whenever you want—there are no restrictions besides the ones listed on the ability itself.
 
-However, during combat, timing matters. Every non-passive ability must have one of the following timing tags that determines when you can use it:
+However, during combat, timing matters. Non-passive abilities either have the instant tag or they don't:
 
-- **Slow**: If an ability is marked as slow, it can only be used during your own turn.
-- **Quick**: If an ability is marked as quick, it means you can use the ability during any ally's turn (including your own). You cannot use it during enemy turns or during engagements.
-- **Instant**: If an ability is marked as instant, it means that the ability can be used literally any time, even when you don't have your turn. This includes interrupting other actions as they're happening and during engagements.
+- **Instant**: If an ability is marked as instant, it can be used literally any time, even interrupting other actions as they're happening and during engagements.
+- **No timing tag**: If an ability has no timing tag, it can only be used during the action phase of combat. It cannot be used during engagements. The ability itself will specify if it requires your action, costs rush points, or has other requirements.
 
 Passive abilities do not have timing tags since they are always active.
 
-**Understanding Timing Tags**
+**Understanding Timing**
 
-The three timing tags create a hierarchy of flexibility:
+The presence or absence of the instant tag creates a clear distinction:
 
-**Slow Timing:**
+**Standard Abilities (no timing tag):**
 
-- Must be used on your own turn
-- Cannot be used during other creatures' turns
+- Can only be used during the action phase
 - Cannot be used during engagements
-- Most restrictive timing
+- The ability text will specify what it costs (your action, rush points, etc.)
+- Most abilities fall into this category
 
-**Quick Timing:**
-
-- Can be used during any ally's turn (including your own)
-- Cannot be used during enemy turns
-- Cannot be used during engagements
-- Allows tactical coordination with allies
-
-**Instant Timing:**
+**Instant Abilities:**
 
 Instant abilities can be used at literally any moment during the game, even interrupting other actions as they're happening. This creates a true "interrupt system" where you can react to new information as it unfolds.
 
