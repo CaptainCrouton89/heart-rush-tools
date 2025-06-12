@@ -229,7 +229,7 @@ Represents the creature's stamina and fighting spirit. Ranges from d4 to d20.
 - **d12-d20** - Elite or boss monsters
 
 ### Hit Points (HP)
-The creature's total health pool. Generally scales with size and threat level.
+The creature's total health pool. Can range from 20 (weak creatures) to 1000 (ancient dragons). Humans typically have 40-200 HP.
 
 ### Wound Threshold (w)
 The minimum damage needed to inflict a wound. Use "/" if the creature cannot be wounded.
