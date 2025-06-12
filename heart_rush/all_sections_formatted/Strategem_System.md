@@ -1,290 +1,269 @@
 # Stratagem System
 
-Stratagems are Heart Rush's "zoom out" mechanic—when you need to resolve complex endeavors without playing through every tedious detail. Whether commanding fleets in battle, managing trade empires from afar, or pursuing grand ambitions over years, stratagems handle coordinated actions that would bog down play if resolved moment by moment.
+When your ambitions extend beyond what you can personally accomplish—commanding fleets, building trade empires, or orchestrating months-long campaigns—the stratagem system lets you resolve these grand endeavors without getting bogged down in tedious details. This "zoom out" mechanic preserves meaningful choices and dramatic moments while skipping the boring parts.
 
-## When to Use Stratagems
+## Understanding Stratagems
 
-**Use stratagems to:**
+Stratagems handle any complex undertaking that requires coordination between multiple people or extends beyond your direct control. They transform what would be dozens of repetitive skill checks into dynamic scenes where your decisions truly matter.
 
-- Resolve complex endeavors requiring coordination between multiple people
-- Handle activities you're managing from a distance ("my employees establish trade routes while I adventure")
-- Abstract time-consuming tasks that would be tedious to roleplay
-- Manage large-scale conflicts without individual combat
-- Skip the boring parts while preserving meaningful choices
+**You'll use stratagems when:**
 
-**Don't use stratagems for:**
+- Leading organizations or groups in coordinated efforts
+- Managing endeavors from a distance while adventuring elsewhere
+- Resolving large-scale conflicts without individual combat
+- Pursuing goals that span weeks, months, or years
+- Handling any multi-person effort too complex for simple skill checks
 
-- Personal combat (use combat rules instead)
-- Direct roleplay conversations
-- Simple, single-action tasks
-- Situations where players want to handle each step personally
-- Any task a single person can complete alone without coordination
+**Keep using normal rules for:**
 
-## Core Mechanics
+- Personal combat encounters
+- Direct conversations and negotiations
+- Tasks you can complete alone
+- Situations where you want to play through each moment
+- Any scene where individual actions matter
 
-### The Stratagem Roll
+## The Stratagem Roll
 
-When you pursue a stratagem objective, roll:
+When pursuing a stratagem objective, you make a special roll that represents your leadership, planning, and the collective efforts of everyone involved:
 
-**d8 + ability die + profession + aspect (if applicable) vs CN**
+**d8 + ability die + profession + aspect (if applicable) vs Challenge Number**
 
-Unlike normal skill checks, stratagems use a flat d8 instead of your heart die—your stamina doesn't affect large-scale coordinated efforts. The d8 represents the baseline uncertainty in complex endeavors, while your ability die, profession, and aspects reflect your personal capability and expertise.
+This differs from normal skill checks in crucial ways. The d8 represents baseline uncertainty in complex endeavors—your personal stamina doesn't affect large-scale coordination. Your ability die, profession, and aspects still matter, reflecting how your expertise shapes the overall effort.
 
-**Important**: Stratagem rolls cannot be helped by others. The coordination is already baked into the stratagem itself.
+**No one can help with stratagem rolls**—the coordination is already baked into the mechanic itself.
 
-### Challenge Numbers
+### Setting the Stakes
 
-- **Fairly Easy (CN 6)**: Overwhelming advantages, token opposition
-- **Average (CN 9)**: Favorable circumstances, typical challenges
-- **Hard (CN 12)**: Significant obstacles, competent opposition
-- **Very Hard (CN 15)**: Strong opposition, major disadvantages
-- **Nearly Impossible (CN 18)**: Overwhelming odds, elite opposition
-- **Heroic (CN 21)**: Legendary difficulty, near-miraculous success required
+Before any stratagem roll, the GM transparently sets the Challenge Number based on your circumstances:
 
-**Stakes are always transparent**—the GM announces the CN before you roll, allowing informed decisions about whether to intervene or accept the odds.
+| Difficulty        | CN  | Typical Situation                               |
+| ----------------- | --- | ----------------------------------------------- |
+| Fairly Easy       | 6   | Overwhelming advantages, token opposition       |
+| Average           | 9   | Favorable circumstances, competent opposition   |
+| Hard              | 12  | Significant obstacles, skilled adversaries      |
+| Very Hard         | 15  | Major disadvantages, elite opposition           |
+| Nearly Impossible | 18  | Overwhelming odds against you                   |
+| Heroic            | 21  | Legendary difficulty, miraculous success needed |
 
-### Two Types of Objectives
+The GM always announces the CN before you roll, letting you decide whether to accept those odds or intervene to shift them.
 
-**Positional Objectives**
-One success fundamentally changes the situation:
+## Two Types of Objectives
 
-- "Reach cannon range"
-- "Breach the castle walls"
-- "Establish trade monopoly"
-- "Gain the king's favor"
+Every stratagem pursues either a positional or accumulation objective, which determines how success and failure work:
 
-**Accumulation Objectives**
-Multiple successes required to achieve your goal:
+### Positional Objectives
 
-- "Sink their flagship" (3 successes)
-- "Convert the population" (5 successes)
-- "Build legendary reputation" (10 successes)
+One successful roll achieves your goal and fundamentally changes the situation:
 
-Each success brings you closer; failures may add obstacles but don't erase progress unless the fiction demands it (e.g., "they repaired the damage").
+- "Reach cannon range before they escape"
+- "Breach the castle's outer walls"
+- "Establish exclusive trade rights"
+- "Win the duke's political support"
+
+Success transforms the scenario. Failure might create complications but doesn't prevent future attempts unless circumstances change.
+
+### Accumulation Objectives
+
+Multiple successes build toward your goal:
+
+- "Sink their flagship" (requires 3 successes)
+- "Convert the province to your faith" (requires 5 successes)
+- "Build legendary reputation" (requires 10 successes)
+
+Each success brings you closer. **Progress persists**—those two successes toward sinking the ship remain even if your third attempt fails. Only specific fictional circumstances ("they reached port for repairs") would reduce accumulated successes.
 
 ## Running a Stratagem
 
-### Step 1: Define the Stratagem
+### Setting Up
 
-Before rolling, establish:
+Before the first roll, establish these key elements with your GM:
 
-- **Objective**: What specific goal are you pursuing?
-- **Type**: Positional or Accumulation? If Accumulation, how many successes?
-- **Opposition**: Who or what resists your efforts?
-- **Pace**: How much time does each action represent?
-- **Parent Stratagem**: What larger goal does this serve? (if any)
-- **Personal Involvement**: Are you directly involved or managing from afar?
+**1. The Objective**: What specific goal are you pursuing? Be precise—"defeat the pirates" is too vague, but "capture their fortress island" works perfectly.
 
-### Step 2: The Action Cycle
+**2. Success Requirements**: Is this positional (one success) or accumulation (multiple successes)? For accumulation objectives, lighter goals need 2-3 successes, moderate ones 4-5, and epic undertakings 10+.
 
-Each action within a stratagem follows these steps:
+**3. Time Scale**: How much fictional time does each stratagem action represent? Naval battles might be 10-minute increments, while trade expansion could be monthly efforts.
 
-**1. Situation**
-Describe current circumstances based on previous actions and existing assets/hindrances.
+**4. Your Involvement**: Are you personally leading the charge or managing from afar? This affects both your intervention options and the narrative framing.
 
-**2. Approach**
-How are you attempting to achieve the objective this time? Different approaches may affect difficulty or create different outcomes.
+### The Action Cycle
 
-**3. Stakes**
-The GM:
+Each stratagem action follows this sequence:
 
-- Considers what would be typical difficulty
-- Evaluates your assets (what makes you stronger than typical)
-- Evaluates your hindrances (what makes you weaker than typical)
-- Considers the opposition's current state
-- Sets and announces the final CN (6/9/12/15/18/21)
+**1. Current Situation**
+The GM describes circumstances based on previous results, existing advantages, and the opposition's state. This grounds each roll in the evolving fiction.
 
-**4. Intervention (Optional)**
-Before rolling, you may take direct action to influence the stratagem. Your intervention can dramatically shift the odds—for better or worse.
+**2. Your Approach**
+How are you attempting the objective this time? Different approaches create different outcomes even with identical rolls. Attacking a fortress through deception plays differently than direct assault.
 
-_Helpful interventions might:_
+**3. Intervention Opportunity**
+This is where stratagems truly shine. Before rolling, you can zoom back in to personally influence events. These interventions create the memorable moments that make stratagems exciting rather than procedural.
 
-- Assassinate enemy leadership (−6 to −9 CN)
-- Sabotage critical infrastructure (−3 to −6 CN)
-- Rally demoralized troops (−3 CN)
-- Secure insider information (gain asset, −3 CN)
+**4. Stakes & Roll**
+The GM sets the Challenge Number based on all factors, you roll your dice, and together you narrate the results.
 
-_Harmful interventions might:_
+## Direct Intervention
 
-- Botch assassination attempt (+6 CN, gain "High Alert" hindrance)
-- Get captured while scouting (lose "Element of Surprise" asset, +3 CN)
-- Insult their culture during negotiations (+6 to +9 CN)
-- Reveal your plans accidentally (enemy gains asset, +3 CN)
+The most exciting part of any stratagem is when you stop managing from afar and get your hands dirty. Interventions let you dramatically shift the odds through personal action, creating memorable scenes that affect the larger conflict.
 
-Interventions must make narrative sense and often trigger zoomed-in scenes. Major interventions can shift difficulty by one or two full difficulty steps (6-12 points on the CN scale), while minor ones typically adjust by 3 points (half a difficulty step).
+### How Intervention Works
 
-**5. Roll**
-The character spearheading the effort rolls:
+Before any stratagem roll, you can declare an intervention. This immediately zooms the action back in—you're no longer managing the battle but infiltrating the enemy camp, sabotaging their supplies, or rallying your demoralized troops. These scenes play out using normal Heart Rush rules (skill checks, combat, roleplay) with their outcomes directly affecting the stratagem's Challenge Number.
 
-- **d8**: Your baseline (not affected by wounds or fatigue)
-- **Ability die**: Choose the most relevant ability (might, agility, cunning, or presence)
-- **Profession**: Add your profession rank if directly applicable, half rank if tangential
-- **Aspect**: Spend DP to add bonus if an aspect applies (as normal)
+**Minor interventions** (adjust CN by ±3):
 
-For distant management, this might be you rolling for your organization's efforts.
+- Rally demoralized troops with an inspiring speech
+- Sabotage non-critical enemy supplies
+- Spread disinformation through the ranks
+- Secure useful but not game-changing intelligence
 
-**6. Resolution**
+**Major interventions** (adjust CN by ±6):
 
-_Success:_
+- Assassinate enemy leadership
+- Destroy critical infrastructure
+- Turn a key enemy to your side
+- Discover and exploit a massive weakness
 
-- **Positional**: Objective achieved, situation fundamentally changes
-- **Accumulation**: Add one success toward your total
+**Dramatic interventions** (adjust CN by ±9 or more):
 
-_Failure:_
+- Single-handedly storm their command post
+- Convince their entire force to defect
+- Unleash ancient magic that changes everything
+- Perform a deed so legendary it demoralizes all opposition
 
-- May create new hindrances
-- May strengthen opposition
-- Doesn't erase existing progress (unless fictionally appropriate)
-- May force abandonment of the stratagem
+### Intervention Risks
 
-_Complications (1 on any die):_
+Interventions aren't free success buttons—they're dramatic gambles. Failed interventions often make situations worse:
 
-- Determine success/failure first
-- Then zoom in to handle the immediate crisis
-- Complications create urgent situations demanding attention
+- **Botched assassination**: Enemy goes on high alert (+6 CN, gain "Heightened Security" hindrance)
+- **Captured while scouting**: Lose "Element of Surprise" asset, enemy gains "Prisoner Leverage" (+3 CN)
+- **Failed inspiration**: Your troops see your desperation (gain "Shaken Faith" hindrance)
+- **Diplomatic insult**: Offend potential allies (+9 CN, may abandon stratagem entirely)
 
-### Step 3: Completion
+The best interventions emerge naturally from play. When the dice make a crucial roll difficult, creative intervention can snatch victory from defeat—or plunge you deeper into disaster.
 
-**Success**
+### Intervention Example
 
-- Positional objectives transform the situation
-- Accumulation objectives conclude when you reach the target
-- Usually creates assets for parent stratagems
-- Opposition may cease to exist
+_Your revolutionary army besieges the tyrant's fortress (CN 15 - Very Hard). Before rolling, you declare an intervention:_
 
-**Abandonment**
-Either side can abandon a stratagem when costs exceed benefits. Abandonment often creates hindrances ("Damaged Reputation," "Wasted Resources," "Demoralized Forces").
+**You**: "I'm going to sneak into the fortress through the old siege tunnels and open the gates from within."
+
+**GM**: "Excellent! Let's zoom in. You're crawling through ancient stonework, your torch flickering..."
+
+_[Full scene plays out with skill checks, encounters with guards, discovering the gate mechanism is damaged, improvising a solution, a desperate fight, and finally throwing open the gates as dawn breaks]_
+
+**GM**: "Your soldiers pour through the open gates! The intervention reduces the stratagem CN from 15 to 9. Now roll for the overall battle..."
 
 ## Assets & Hindrances
 
-Assets and hindrances modify your stratagem rolls by affecting the CN. They represent what makes YOUR forces or situation exceptional compared to typical circumstances.
+Assets and hindrances represent what makes your forces or situation exceptional compared to typical circumstances. They modify stratagem difficulty by adjusting the Challenge Number.
 
-### Assets (Reduce CN)
+### Assets (Reduce Your CN)
 
-Your advantages:
+Your advantages that make success more likely:
 
-- "Veteran Crew" — Your people are exceptionally skilled
-- "Superior Intelligence" — You know enemy plans
-- "Divine Blessing" — Supernatural aid supports you
-- "Fresh Supplies" — Your forces are well-provisioned
-- "Local Support" — The population aids your efforts
+- **Elite Forces**: "Veteran Mercenaries" or "Handpicked Crew"
+- **Information**: "Enemy Plans Revealed" or "Perfect Maps"
+- **Resources**: "Unlimited Funding" or "Master-Crafted Weapons"
+- **Position**: "Defensive Advantage" or "Element of Surprise"
+- **Support**: "Local Population Aids Us" or "Divine Blessing"
 
-### Hindrances (Increase CN)
+### Hindrances (Increase Your CN)
 
-Your disadvantages:
+Your disadvantages that impede success:
 
-- "Damaged Fleet" — Your equipment is compromised
-- "Low Morale" — Your people lack fighting spirit
-- "Saboteur in Ranks" — Internal threats weaken you
-- "Operating Blind" — You lack crucial information
-- "Hostile Territory" — The environment works against you
+- **Weakened Forces**: "Demoralized Troops" or "Sick Crew"
+- **Lack of Information**: "Operating Blind" or "False Intelligence"
+- **Resource Problems**: "Low Supplies" or "Damaged Equipment"
+- **Poor Position**: "Exposed Flanks" or "Fighting Uphill"
+- **Internal Issues**: "Saboteur in Ranks" or "Divided Leadership"
 
-### How They Work
+### How They Apply
 
-1. GM establishes base difficulty for a typical force
-2. Your assets make you more capable (reduce CN)
-3. Your hindrances impede you (increase CN)
-4. Opposition's state is considered separately
-5. Final CN is announced before rolling
+The GM starts with base difficulty for a typical force in this situation, then adjusts based on your specific advantages and disadvantages. The opposition's strength is already factored into the base difficulty—your assets and hindrances represent what makes YOU exceptional.
 
-_Example_: Besieging a fortress might normally be CN 12 (Hard). Your "Veteran siege engineers" (−3) and "Superior artillery" (−3) reduce it to CN 6. But "Low on supplies" (+3) brings it to CN 9 (Average).
+**Example**: _Besieging a fortress is normally Hard (CN 12). Your "Veteran Siege Engineers" (-3) and "Superior Artillery" (-3) would reduce it to CN 6, but "Running Low on Supplies" (+3) brings the final CN to 9._
 
 ## Nested Stratagems
 
-Stratagems naturally nest within each other like Russian dolls. Grand ambitions require strategic campaigns, which require tactical operations, which may require immediate actions.
+Grand ambitions naturally break down into smaller goals. While you don't need complex stratagem trees for everything, understanding how objectives can nest helps you pursue epic goals through manageable steps.
 
-### Example: Becoming the Pirate King
+### Natural Progression
 
-**Grand Stratagem**: Become Pirate King
+Consider a pirate pursuing ultimate infamy:
 
-- _Type_: Accumulation (10 "Legendary Deeds")
-- _Pace_: Each action represents ~6 months
-- _Personal_: You're directly involved in building your legend
+**The Grand Dream**: "Become the Pirate King" might require 10 legendary deeds—an accumulation stratagem where each deed takes months to accomplish.
 
-**Strategic Stratagem**: Capture the Merchant Prince's Galleon
+**A Single Deed**: "Capture the Merchant Prince's Treasure Galleon" becomes its own positional stratagem. Success counts as one legendary deed toward your grand ambition.
 
-- _Type_: Positional (counts as 1 Legendary Deed)
-- _Pace_: Days of hunting and preparation
-- _Parent_: Become Pirate King
+**The Immediate Challenge**: Actually catching and defeating the galleon might involve several smaller stratagems or zoom straight into ship combat.
 
-**Tactical Stratagem**: Win the Naval Battle
-
-- _Type_: First Positional ("Close to range"), then Accumulation ("Cripple and board" — 3 successes)
-- _Pace_: Each action represents ~10 minutes
-- _Parent_: Capture the Galleon
-
-**Immediate Actions**: The Opening Chase
-
-- _Type_: Accumulation (3 "Distance" before they get 3 "Escape")
-- _Pace_: Each action represents ~2 minutes
-- _Parent_: Win the Naval Battle
-
-Success at lower levels creates assets for higher levels. Failure creates hindrances that cascade upward.
+The key is letting the fiction guide you. If something feels too big for a single stratagem, break it down. If you're getting bogged down in nested objectives, zoom back out.
 
 ## Managing From Afar
 
-Stratagems excel at handling endeavors you're not personally overseeing. When you delegate to employees, allies, or organizations:
+Stratagems excel when you're not personally present. While adventuring in distant lands, your trading company still pursues profits, your revolutionary cells still spread propaganda, and your pirate fleet still raids shipping lanes.
 
-- You still roll (representing your leadership and planning)
-- Time scales up dramatically (one roll might cover weeks or months)
-- Your intervention options are limited to what you could realistically influence
-- Assets often represent the quality of your subordinates
-- Hindrances might include communication delays or trustworthiness issues
+### How Distance Management Works
 
-_Example_: While you adventure in the northern wastes, your trading company attempts to establish new routes. You roll once for their month-long efforts, with your Cunning die representing your business acumen and prior instructions.
+- **You still roll**: Your dice represent leadership quality and advance planning
+- **Time scales up**: One roll might cover weeks or months of activity
+- **Limited intervention**: You can only interfere through messages, agents, or magic
+- **Communication matters**: "Trusted Lieutenants" is a valuable asset; "Unreliable Messengers" is a crippling hindrance
 
-## Key Principles
+**Example**: _While you explore ancient ruins, your merchant guild attempts to corner the silk market. You roll once for their month-long efforts, with your Cunning die representing the brilliant strategy you established before leaving._
 
-### Fiction First
+## Play Example: The Siege of Thornwall
 
-Let the narrative determine mechanics. If one cannonball could sink a ship, it might be positional. If you need to wear down their hull, it's accumulation. The story shapes the stratagem.
+_The rebel alliance needs to capture Thornwall Fortress to control the mountain passes. Sarah plays Commander Blackwood, leading the siege._
 
-### Progress Persists
+**GM**: "Thornwall is a positional objective—one success breaks their defenses. The fortress is strong and well-supplied. Base difficulty would be Hard, CN 12. What advantages do you bring?"
 
-Successes toward accumulation objectives don't vanish on failure. Those two successes toward "Sink their ship" remain even if your third attempt fails. Only specific fictional circumstances ("they reached port for repairs") would reduce accumulated successes.
+**Sarah**: "We have 'Mountain Guides' who know secret paths, and I secured 'Siege Weapons' from the duke."
 
-### Zoom Appropriately
+**GM**: "Each asset reduces difficulty by 3. But you also have the hindrance 'Winter Approaching'—your soldiers suffer in the cold. That increases difficulty by 3. Final Challenge Number is 9."
 
-Stratagems let you handle the boring parts quickly while zooming in for drama:
+**Sarah**: "Before we roll, I want to intervene. My character leads a commando team through the secret paths to sabotage their water supply."
 
-- Use combat rules for personal fights
-- Use stratagems for fleet battles
-- Zoom to combat when boarding begins
-- Always zoom in for complications
+**GM**: "Perfect! Let's play that out..."
 
-### Player Agency Matters
+_[They zoom in for 15 minutes of tense infiltration, including skill checks, a brief combat with guards, and Sarah's character poisoning the fortress's main well while barely escaping]_
 
-Stratagems aren't just dice rolls—direct intervention can swing impossible odds to your favor. That CN 21 siege could become CN 12 if you seduce the enemy general. Players shape their fate.
+**GM**: "Success! Their 'Poisoned Water Supply' reduces the CN by 6. You're now rolling against CN 3—this siege is almost guaranteed to succeed. The question is how the story unfolds..."
+
+**Sarah**: "Here's my roll for the siege itself: d8 gets a 5, plus my Might d10 gets 8, plus my 'Veteran Commander' profession at rank 3. Total of 16 versus CN 3!"
+
+**GM**: "The poisoned water throws the defenders into chaos. As your forces attack at dawn, the gates open—desperate soldiers would rather surrender than die of thirst. Thornwall is yours! This success becomes the asset 'Controlled Mountain Passes' for your larger campaign stratagem..."
 
 ## Quick Reference
 
-### Starting a Stratagem
+### When to Stratagem
 
-1. Define objective and type
-2. Identify parent stratagem (if any)
-3. Set pace and opposition
-4. Determine success requirements
-5. Establish personal involvement level
+- Multiple people must coordinate
+- You're managing from a distance
+- Extended time periods (days to years)
+- The details would be boring to play through
 
-### Action Sequence
+### Basic Sequence
 
-**Situation → Approach → Stakes (CN) → Intervention? → Roll (d8 + ability + profession + aspect) → Resolution**
+1. **Declare** objective and approach
+2. **GM sets** Challenge Number transparently
+3. **Intervene** if desired (zoom in for dramatic scenes)
+4. **Roll** d8 + ability + profession + aspect
+5. **Narrate** results and consequences
 
-### Accumulation Guidelines
+### Success Guidelines
 
-- **Light**: 2–3 successes
-- **Moderate**: 4–5 successes
-- **Heavy**: 6–7 successes
-- **Epic**: 10+ successes
-- **Versus**: Successes = target's capacity
+- **Positional**: One success achieves the goal
+- **Light Accumulation**: 2-3 successes
+- **Moderate Accumulation**: 4-5 successes
+- **Major Accumulation**: 6-7 successes
+- **Epic Accumulation**: 10+ successes
 
-### Standard CNs
+### Intervention Impact
 
-- **Fairly Easy**: 6
-- **Average**: 9
-- **Hard**: 12
-- **Very Hard**: 15
-- **Nearly Impossible**: 18
-- **Heroic**: 21
+- **Minor** (±3 CN): Small advantages or setbacks
+- **Major** (±6 CN): Significant tide-turners
+- **Dramatic** (±9+ CN): Legendary moments
 
-Remember: Stratagems handle the tedious parts so you can focus on the fun. When in doubt, zoom out with a stratagem and zoom in for the exciting moments.
+Remember: Stratagems exist to skip the tedious parts while preserving the exciting ones. When something would be fun to play through, zoom in and play it. When you need to resolve complex coordinated efforts, zoom out with a stratagem. The goal is always to get to the next interesting decision or dramatic moment.
