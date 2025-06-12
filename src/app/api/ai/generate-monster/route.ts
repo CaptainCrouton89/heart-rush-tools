@@ -303,7 +303,7 @@ The minimum damage needed to inflict a wound. Use "/" if the creature cannot be 
 6/8/6/6 **HD** 8 **HP** 50 **w** 12
 **A** +6 **D** +5
 - Adv A/D when near an ally
-- Poisonedx1 when wounding
+- Poisonedx2 when wounding
 - Trade places with an ally to avoid damage
 - 1/engagement, plague (1d4 dmg w/in 10ft, MC 9, poisoned x1)
 
