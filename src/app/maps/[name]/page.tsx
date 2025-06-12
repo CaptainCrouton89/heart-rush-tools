@@ -34,6 +34,7 @@ export default function MapPage() {
   const [scrollPos, setScrollPos] = useState({ x: 0, y: 0 });
   const [cachedImages, setCachedImages] = useState<Record<string, boolean>>({});
   const [imageLoadingStates, setImageLoadingStates] = useState<Record<string, boolean>>({});
+  const [showInfoBox, setShowInfoBox] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleZoomIn = useCallback(() => {
@@ -89,6 +90,20 @@ export default function MapPage() {
     setZoom(prev => Math.min(Math.max(prev * delta, 0.05), 2));
   }, []);
 
+  // Load info box visibility from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem('maps-info-box-hidden');
+    if (saved === 'true') {
+      setShowInfoBox(false);
+    }
+  }, []);
+
+  // Handle closing info box
+  const closeInfoBox = useCallback(() => {
+    setShowInfoBox(false);
+    localStorage.setItem('maps-info-box-hidden', 'true');
+  }, []);
+
   // Handle keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -96,12 +111,14 @@ export default function MapPage() {
         setIsFullscreen(false);
       } else if (e.key === 'f' || e.key === 'F') {
         setIsFullscreen(!isFullscreen);
+      } else if (e.key === '?' || e.key === 'h' || e.key === 'H') {
+        setShowInfoBox(!showInfoBox);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isFullscreen]);
+  }, [isFullscreen, showInfoBox]);
 
   // Preload images for faster switching
   useEffect(() => {
@@ -245,6 +262,19 @@ export default function MapPage() {
             >
               Reset
             </button>
+            <button
+              onClick={() => setShowInfoBox(!showInfoBox)}
+              className={`px-3 py-2 rounded-md transition-colors ${
+                showInfoBox 
+                  ? 'bg-accent text-accent-foreground' 
+                  : 'bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground'
+              }`}
+              title="Toggle help (H)"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </button>
           </div>
         </div>
         
@@ -326,14 +356,28 @@ export default function MapPage() {
         </div>
         
         {/* Fullscreen Help */}
-        <div className="absolute top-20 right-4 bg-background/90 backdrop-blur-sm rounded-lg p-3 text-sm text-muted-foreground max-w-xs">
-          <p className="font-medium mb-1">Controls:</p>
-          <p>• Click and drag to pan</p>
-          <p>• Mouse wheel to zoom in/out</p>
-          <p>• Press F or Escape to exit fullscreen</p>
-          <p className="mt-2 text-xs">Map: 20,480 × 20,480 pixels</p>
-          <p className="mt-1 text-xs opacity-75">Images cached for instant switching</p>
-        </div>
+        {showInfoBox && (
+          <div className="absolute top-20 right-4 bg-background/90 backdrop-blur-sm rounded-lg p-3 text-sm text-muted-foreground max-w-xs shadow-lg border border-border">
+            <div className="flex items-start justify-between mb-2">
+              <p className="font-medium">Controls:</p>
+              <button
+                onClick={closeInfoBox}
+                className="text-muted-foreground hover:text-foreground transition-colors p-0.5 rounded-sm hover:bg-accent"
+                aria-label="Close help box"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <p>• Click and drag to pan</p>
+            <p>• Mouse wheel to zoom in/out</p>
+            <p>• Press F or Escape to exit fullscreen</p>
+            <p>• Press H or ? to toggle this help</p>
+            <p className="mt-2 text-xs">Map: 20,480 × 20,480 pixels</p>
+            <p className="mt-1 text-xs opacity-75">Images cached for instant switching</p>
+          </div>
+        )}
       </div>
     );
   }
@@ -407,6 +451,19 @@ export default function MapPage() {
               className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors"
             >
               Reset
+            </button>
+            <button
+              onClick={() => setShowInfoBox(!showInfoBox)}
+              className={`px-3 py-2 rounded-md transition-colors ${
+                showInfoBox 
+                  ? 'bg-accent text-accent-foreground' 
+                  : 'bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground'
+              }`}
+              title="Toggle help (H)"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </button>
           </div>
         </div>
@@ -487,14 +544,28 @@ export default function MapPage() {
             )}
           </div>
           
-          <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm rounded-lg p-3 text-sm text-muted-foreground max-w-xs">
-            <p className="font-medium mb-1">Navigation:</p>
-            <p>• Click and drag to pan around the map</p>
-            <p>• Mouse wheel to zoom in/out</p>
-            <p>• Press F for fullscreen mode</p>
-            <p className="mt-2 text-xs">Map: 20,480 × 20,480 pixels</p>
-            <p className="mt-1 text-xs opacity-75">Images preloaded and cached</p>
-          </div>
+          {showInfoBox && (
+            <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm rounded-lg p-3 text-sm text-muted-foreground max-w-xs shadow-lg border border-border">
+              <div className="flex items-start justify-between mb-2">
+                <p className="font-medium">Navigation:</p>
+                <button
+                  onClick={closeInfoBox}
+                  className="text-muted-foreground hover:text-foreground transition-colors p-0.5 rounded-sm hover:bg-accent"
+                  aria-label="Close help box"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <p>• Click and drag to pan around the map</p>
+              <p>• Mouse wheel to zoom in/out</p>
+              <p>• Press F for fullscreen mode</p>
+              <p>• Press H or ? to toggle this help</p>
+              <p className="mt-2 text-xs">Map: 20,480 × 20,480 pixels</p>
+              <p className="mt-1 text-xs opacity-75">Images preloaded and cached</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
