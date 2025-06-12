@@ -10,19 +10,19 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     // Disable caching in development for easier styling changes
-    if (process.env.NODE_ENV === "development") {
-      return [
-        {
-          source: "/(.*)",
-          headers: [
-            {
-              key: "Cache-Control",
-              value: "no-cache, no-store, must-revalidate",
-            },
-          ],
-        },
-      ];
-    }
+    // if (process.env.NODE_ENV === "development") {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "no-cache, no-store, must-revalidate",
+          },
+        ],
+      },
+    ];
+    // }
 
     // Production caching - reduced for dynamic content
     return [
