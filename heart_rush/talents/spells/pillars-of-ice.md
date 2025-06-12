@@ -2,6 +2,7 @@
 
 _Major ability. Water._
 
-You raise an open, grasping hand to the air, raising huge icicles forth from the ground, each radiating a chilling aura. Choose three spaces within 45 feet. In each space, a 10-foot pillar of ice rises there. Each pillar can take 15 damage before being destroyed, and has a flat 10 defense.
+You raise an open, grasping hand to the air, raising huge pillars of ice from the ground. Choose three spaces within 45 feet. In each space, a 10-foot column of ice rises there. A creature of size large or smaller rises with it; larger creatures are pushed aside in a direction of their choice. Each pillar can take 15 damage before being destroyed, and has a flat 10 defense.
 
-Creatures of your choice within 5 feet of a pillar take one level of slowed when they enter the spell's area for the first time on a turn or start the round there. The icicles melt when the spell ends.
+**Destiny Level:**
+Each pillar can be up to 10 feet in diameter. Creatures L2 or smaller rise with the pillar.

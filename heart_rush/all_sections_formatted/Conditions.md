@@ -243,6 +243,7 @@ _Ongoing._
 You are wrapped in a net or similar restraining device. You gain 1 level of restrained.
 
 As an action, you may attempt to escape. Choose one:
+
 - **Cut Free:** Make a slashing attack against CN 10. Success destroys the net.
 - **Wriggle Out:** Make an agility check contested by the attacker's cunning challenge number.
 - **Tear Free:** Make a might check contested by the attacker's might challenge number + 4.
