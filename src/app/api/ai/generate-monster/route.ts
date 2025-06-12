@@ -248,7 +248,7 @@ The minimum damage needed to inflict a wound. Use "/" if the creature cannot be 
 ### Common Ability Types
 - **Conditional Advantages**: "Adv A when [condition]" or "Adv D when [condition]"
 - **A2/D2**: Double advantage on attacks/defense
-- **Status Effects**: Apply conditions like poisoned, dazed, off-balanced, weakened, stunned, blinded, frightened
+- **Status Effects**: Apply conditions
 - **Triggered Abilities**: "On stance beat, [effect]" or "When [trigger], [effect]"
 - **Saving Throws**: MC/AC/CC/PC with DCs typically 8-12, with 15+ for devastating effects
 - **Usage Limitations**: "1/engagement", "1/round", "recharge 5-6"
@@ -257,7 +257,26 @@ The minimum damage needed to inflict a wound. Use "/" if the creature cannot be 
 - **Difficult Terrain**: "All ground within [distance] is difficult terrain"
 - **Magical Difficult Terrain**: Enhanced version that's harder to navigate
 - **Area Damage**: "All creatures within [distance] take [damage] per round"
-- **Conditions**: Apply ongoing effects like slowed, blinded, prone
+- **Conditions**: Apply ongoing conditions
+
+### All Conditions
+- Dazed
+- Weakened
+- Off-Balanced
+- Restrained
+- Stunned
+- Incapacitated
+- Poisoned
+- Blinded
+- Suffocating
+- Slowed
+- Crippled
+- Confused
+- Frightened
+- Enraged
+- Prone
+- Burning
+- Grappled
 
 ## Monster Examples by Complexity
 
