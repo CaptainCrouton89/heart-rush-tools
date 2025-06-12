@@ -1,6 +1,6 @@
 ## Beckon
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 
 Choose a creature you can see within 30 feet. It teleports to a free space in which it can stand that is adjacent to you.
 

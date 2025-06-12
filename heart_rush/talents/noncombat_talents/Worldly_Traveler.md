@@ -1,6 +1,6 @@
 ## Worldly Traveler
 
-_Monthly ability. Quick. Cognitive talent._
+_Monthly ability. Cognitive talent._
 You have traveled the world and met many, many people. When you meet someone whom the GM describes as someone you've never met, you may choose to claim some connection to them. If you do, the GM will explain how you recognize them, and the nature of your connection. This connection may be as distant as "you saw them drinking in a bar in a neighboring country", or as close as, "this woman bears a strong resemblance to the thief you killed earlier today, and you suspect she is his sister". It is possible there is no feasible connection between you and this person. In this case, you may either regain the use of this ability, or take three destiny points. You cannot use this ability to claim connections with people more influential than yourself.
 
 **Destiny Level:**  

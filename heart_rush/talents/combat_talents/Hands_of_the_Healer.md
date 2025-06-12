@@ -1,6 +1,6 @@
 ## Hands of the Healer
 
-_Weekly ability. Quick. Handmagic._
+_Weekly ability. Handmagic._
 
 You may spend one minute with your hands on another creature with a wound, automatically treating that wound and reducing its rank by 5.
 

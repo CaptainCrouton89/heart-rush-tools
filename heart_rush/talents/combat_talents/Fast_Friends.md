@@ -1,6 +1,6 @@
 ## Fast Friends
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 
 Choose two creatures besides yourself. They have D2 on attack rolls against each other for the next 10 minutes.
 

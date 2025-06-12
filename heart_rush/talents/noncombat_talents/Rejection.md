@@ -1,6 +1,6 @@
 ## Rejection
 
-_Heart ability. Quick. Cognitive talent. Elemental attunement: Force._
+_Heart ability. Cognitive talent. Elemental attunement: Force._
 Choose any two objects. Those objects repulse each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
 
 **Destiny Level:**  

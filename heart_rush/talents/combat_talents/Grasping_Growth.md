@@ -1,6 +1,6 @@
 ## Grasping Growth
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 
 You cause plants to grow up from the ground, clutching at the legs of those above. Choose a point within 45 feet. Creatures of your choice within 5 feet of that point gain two levels of restrained. They may break free by succeeding in a might check contested by your heart challenge number.
 

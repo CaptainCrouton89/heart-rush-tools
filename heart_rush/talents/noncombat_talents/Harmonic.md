@@ -1,6 +1,6 @@
 ## Harmonic
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 You may redistribute hit points among any number of willing creatures adjacent to you, including yourself.
 
 **Destiny Level:**  

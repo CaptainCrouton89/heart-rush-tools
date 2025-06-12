@@ -34,7 +34,7 @@ The talents in this section are combat-related talents. This categorization is f
 
 ### Action Surge
 
-_Major ability. Quick. Martial talent._
+_Major ability. Martial talent._
 
 You push your body and mind beyond normal limits, moving with impossible speed and precision. When you use this ability on your turn, immediately gain an additional action that must be used during this same turn. This action follows all normal rules and restrictions, and you may use other major abilities with this extra action.
 
@@ -43,7 +43,7 @@ When you use Action Surge, you also immediately gain 3 rush points. However, the
 
 ### Adrenaline spike
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 
 Increase the size of an ability die for a single roll. You can't increase the size of the die beyond a d12.
 
@@ -89,7 +89,7 @@ When you use this ability, both creatures gain 2 levels of enraged towards you.
 
 ### Ballad of Björn
 
-_Weekly ability. Quick. Gaeic melody._
+_Weekly ability. Gaeic melody._
 
 After playing your instrument for a minute or more, you may choose any number of creatures besides yourself within 60 feet and in earshot. They lose all levels of frightened and charmed if they had any, and are immune to both conditions for the next 24 hours. In addition, they gain the benefits of a short rest, and gain one additional rush point the next time they gain rush points today.
 
@@ -107,7 +107,7 @@ Whenever you start the round with two or more enemies adjacent to you, you gain 
 
 ### Battlescreech
 
-_Heart ability. Quick. Martial talent._
+_Heart ability. Martial talent._
 
 You emit a horrifying, earsplitting screech, terrifying and disturbing your enemies. Choose any number of creatures within 30 feet. Those creatures get D2 on their next A/D roll.
 
@@ -145,7 +145,7 @@ While adjacent to your companion, if you or your companion would be forced to ma
 
 ### Beckon
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 
 Choose a creature you can see within 30 feet. It teleports to a free space in which it can stand that is adjacent to you.
 
@@ -203,7 +203,7 @@ If that creature is already dazed, off-balanced, or weakened, you have advantage
 
 ### Bloodoath
 
-_Weekly ability. Quick. Handmagic._
+_Weekly ability. Handmagic._
 
 As an action, you swear vengeance against a creature that you believe has wronged you. You can only have a bloodoath against one creature at a time. While you have sworn vengeance against a creature you always know where the creature is, and whenever you engage with or make an opportunity attack against the creature you gain a rush point at the beginning of the next round.
 
@@ -239,7 +239,7 @@ This ability becomes a passive ability instead.
 
 ### Bunker Down
 
-_Heart ability. Quick. Martial talent._
+_Heart ability. Martial talent._
 
 You bunker down, preparing for the worst. You may only use this ability if you have a shield. When you bunker down, you gain the following effects until the end of the round:
 
@@ -307,7 +307,7 @@ Add or subtract 2d6 instead.
 
 ### Critical Observation
 
-_Major ability. Quick. Martial talent._
+_Major ability. Martial talent._
 
 You may spend a minute examining a creature to try to identify a weakness in a creature's defenses. Make an observation (cunning) skill check contested by 8 plus the creature's defense bonus. On a success, you get AD2 on all attack rolls against the creature.
 On success or failure, you cannot attempt to make another critical observation about that creature.
@@ -383,7 +383,7 @@ Add 2d8 to the roll instead.
 
 ### Divine Weapon
 
-_Major ability. Quick. Cognitive talent._
+_Major ability. Cognitive talent._
 
 Through the favor you hold with your patron, you may channel their power into your weapon, granting it magical properties for the next minute. Whenever you use this ability, your weapon takes on features that resemble the values of the patron you worship, and you get +2 on all of your attack rolls with that weapon.
 You may instead spend a minute in prayer to activate this ability with double its effect.
@@ -402,9 +402,9 @@ You gain +5 for each sidestep instead.
 
 ### Double Shot
 
-_Major ability. Quick. Martial talent._
+_Major ability. Martial talent._
 
-You may enter a second engagement with a ranged weapon this round.
+When you use a ranged weapon to attack an enemy during an engagement, you may also make another attack against another valid target in the engagement.
 
 **Destiny Level:**
 You may enter a third engagement with a ranged weapon this round.
@@ -429,7 +429,7 @@ You have learned how to use one weapon to attack while using the other to defend
 
 ### Duelist
 
-_Major ability. Quick. Martial talent._
+_Major ability. Martial talent._
 
 You may declare someone the target of a duel. For the next minute, you get A2 on all A/D rolls against the target. You have D3 on all defense rolls made against attacks from anyone other than your target.
 
@@ -457,7 +457,7 @@ You may add 4d6 instead. If you do, decrease your heart die twice instead.
 
 ### Fast Friends
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 
 Choose two creatures besides yourself. They have D2 on attack rolls against each other for the next 10 minutes.
 
@@ -502,7 +502,7 @@ You may keep up to five, instead.
 
 ### Frenzy
 
-_Major ability. Quick. Cognitive talent._
+_Major ability. Cognitive talent._
 
 For the next minute, treat this talent as an additional minor ability, with its own separate cost. Whenever you use this as a minor ability, choose one of your minor abilities and perform that effect. At the end of the minute, you gain a level of weakened, off-balanced, and dazed for each time you used this as a minor ability. These levels do not fade until you take a long rest.
 
@@ -529,7 +529,7 @@ You have A2 on attack rolls instead, and may add 1d6 to your attack roll.
 
 ### Grasping Growth
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 
 You cause plants to grow up from the ground, clutching at the legs of those above. Choose a point within 45 feet. Creatures of your choice within 5 feet of that point gain two levels of restrained. They may break free by succeeding in a might check contested by your heart challenge number.
 
@@ -538,7 +538,7 @@ You may increase the radius by 25 feet, increase the levels of restrained by one
 
 ### Hands of the Healer
 
-_Weekly ability. Quick. Handmagic._
+_Weekly ability. Handmagic._
 
 You may spend one minute with your hands on another creature with a wound, automatically treating that wound and reducing its rank by 5.
 
@@ -677,15 +677,6 @@ So long as you are unarmed, creatures grappled by you take two levels of restrai
 **Destiny Level:**
 Creatures gain three levels of restrained while grappled instead of two. You gain A2 on rolls to grapple and break free of grapples instead.
 
-### Methodical Attacker
-
-_Passive ability. Cognitive talent._
-
-Add 1d4 to any attack roll made against a creature that has already been in a finished engagement in that round.
-
-**Destiny Level:**
-Your attacks deal an additional 1d8 damage instead.
-
 ### Mighty
 
 _Passive ability. Martial talent._
@@ -769,7 +760,7 @@ You have developed the weapon technique to deliver poison more efficiently. When
 
 ### Predator
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 
 As an action, you may snap your fingers to teleport to a creature you have dealt damage to in the last minute.
 
@@ -832,7 +823,7 @@ The creature takes as much damage as you take, instead.
 
 ### Rejuvenate
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 
 As an object interaction, you may lay your hands on someone else, causing some of their wounds to close up, at the cost of your own health. When you use this ability, you may reduce your hit points by any amount, increasing the target's hit points by half that amount.
 
@@ -865,15 +856,6 @@ You have learned how to attack with your shield and use it as a proper weapon it
 
 **Destiny Level:**
 You may choose to hunker behind your shield, to increase your defenses. When you take the defensive stance, you take one fourth as much damage, rather than half.
-
-### Shifty
-
-_Passive ability. Martial talent._
-
-If you use your action to initiate or enter an engagement, once everyone has entered the engagement who wishes to, you may choose to sidestep before stances have been declared. You may do this once per round.
-
-**Destiny Level:**
-If you would sidestep such that you cannot be attacked by anyone in the engagement, you regain your action.
 
 ### Slippery
 
@@ -967,7 +949,7 @@ Your unarmed attacks count as heavy weapons.
 
 ### Vampiric Mark
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 
 Choose a creature. For the next ten minutes, whenever it takes a wound, regain 3 hit points.
 
@@ -994,7 +976,7 @@ This ability becomes a heart ability instead.
 
 ### Whispers of Madness
 
-_Major ability. Quick. Full action. Handmagic._
+_Major ability. Full action. Handmagic._
 
 As an action, you may lace otherworldly whispers into the mind of your target. They gain a level of dazed and shaken for the next minute as they try to remain focused.
 
@@ -1007,7 +989,7 @@ The talents in this section are noncombat-related talents. This categorization i
 
 ### Adherence
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 As an action, you may point at a non-living, unoccupied object or space within 30 feet. Up to a 5-foot cube worth of volume of that object becomes covered in an extremely sticky slime, with sticking power equal to 100 pounds. If a creature steps on the object, they must use their action to step free of it, and the space counts as difficult terrain.
 
 **Destiny Level:**  
@@ -1015,7 +997,7 @@ The sticking force increases to 200 pounds. Freeing oneself from the slime requi
 
 ### Ancient Visions
 
-_Weekly ability. Quick. Handmagic._
+_Weekly ability. Handmagic._
 You may touch an object to see its past. Choose one:
 
 - Origin: You see how the object was created.
@@ -1027,7 +1009,7 @@ In addition, you may ask the object any question about its past. The object will
 
 ### Animate Object
 
-_Heart ability. Quick. Full action. Handmagic._
+_Heart ability. Full action. Handmagic._
 As an action, you may point at an inanimate object within 30 feet that could fit in a 5-foot cube. The object obeys your commands to the best of its ability, and gains a move speed of 15 feet. This effect lasts for as long as you remain pointing at it. You cannot animate more than one object using this ability.
 
 **Destiny Level:**  
@@ -1035,7 +1017,7 @@ You may manipulate up to three objects at once with this ability. You do not hav
 
 ### Anthropomorphize
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 As an action, you may lay your hand on a non-hostile animal. The following effects last for one hour. Choose two:
 
 - It grows to human size and human appearance
@@ -1063,7 +1045,7 @@ You have advantage on navigation checks. You can identify your location from a s
 
 ### Attraction
 
-_Heart ability. Quick. Cognitive talent. Elemental attunement: Force._
+_Heart ability. Cognitive talent. Elemental attunement: Force._
 Choose any two inanimate objects. Those objects attract each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
 
 **Destiny Level:**  
@@ -1080,7 +1062,7 @@ Batch sizes are doubled instead. The chance for extra unique consumables increas
 
 ### Beastform
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 When you pick this talent, work with your GM to pick a common and mundane creature that you can transform into. As an action, you may transform into this creature. You maintain your mental stats, though take on the physical stats and abilities of the chosen creature.  
 The creature cannot have a fly speed or a swim speed, and should use either a d4 and d8, or two d6s for its might and agility ability dice. It must be either a small or medium creature. It has the same maximum hit points and heart die as you do.  
 You automatically revert to your natural form after one hour, or as an action any time before then.
@@ -1090,7 +1072,7 @@ This becomes a passive ability. You may stay in your transformed state for any a
 
 ### Befuddle
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 As an action, you may point at a sentient creature. That creature forms no new memories for the next ten minutes, though it is aware that you performed mind-altering magic on it.
 
 **Destiny Level:**  
@@ -1098,7 +1080,7 @@ The target does not realize that you performed mind-altering magic on it.
 
 ### Call of Delorn
 
-_Monthly ability. Quick. Gaeic melody._
+_Monthly ability. Gaeic melody._
 You play a song, making a plea to the wilds for their help. After playing your instrument for an hour, a friendly, non-humanoid animal comes to your aid. The animal is not your servant, but will do its best to help you in any way that does not put itself in danger. You may communicate with it through your song, though the animal cannot communicate back. The animal remains in your aid for the rest of the day.
 
 **Destiny Level:**  
@@ -1143,7 +1125,7 @@ The chaos runes spread across your body like living tattoos. You gain an additio
 
 ### Coin Jingle
 
-_Major ability. Quick. Gaeic melody._
+_Major ability. Gaeic melody._
 After playing your instrument for a minute or more, you may choose any number of creatures within 60 feet and in earshot. Each of those creatures is overcome with overwhelming desire to possess an object of your choice. The effect lasts for one day.
 
 **Destiny Level:**  
@@ -1151,7 +1133,7 @@ The effect is permanent.
 
 ### Cold Read
 
-_Major ability. Quick. Cognitive talent._
+_Major ability. Cognitive talent._
 You can suss out information from someone even without them knowing. If you spend 10 minutes talking with someone, you may ask the GM one thing about them that they aren't trying to hide from the following list:
 
 - Profession
@@ -1182,7 +1164,7 @@ You have A4 on all attempts to perform any sort of sleight of hand.
 
 ### Deafen
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 Choose one:
 
 - Creatures of your choice within 30 feet lose the ability to hear.
@@ -1203,7 +1185,7 @@ You may use books that include spells consisting of domains of any level that is
 
 ### Divine Consult
 
-_Monthly ability. Quick. Cognitive talent._
+_Monthly ability. Cognitive talent._
 You are capable of limited communication with the daemon you worship. After spending one minute in prayer, you may ask one yes or no question of the daemon. The GM must either answer it truthfully, or you may put 1 XP into the experience bowl. You cannot use this ability more than once per session, and you cannot ask the same question again, regardless of if the GM answered it.
 
 **Destiny Level:**  
@@ -1266,7 +1248,7 @@ Choose an element you are attuned to. You do not have to wait more than a single
 
 ### Everything has a price
 
-_Weekly ability. Quick. Handmagic._
+_Weekly ability. Handmagic._
 If you touch someone, you may force them to be willing to sell any item to you. They will not necessarily be willing to sell it for a price that you desire, but if they would not have otherwise been willing to sell the item, they are now.
 
 **Destiny Level:**  
@@ -1287,7 +1269,7 @@ Additionally, you have finely tuned your sense for where there may be more to di
 
 ### Faceless Servant
 
-_Major ability. Quick. Full action. Handmagic._
+_Major ability. Full action. Handmagic._
 As an action, you summon forth a faceless, humanoid servant in peasant's clothes. Their face is a smooth surface with only eyes to see and ears to hear. They will obey polite, safe commands until they disappear in one hour. They use a d4 for all ability dice, a d6 heart die, and immediately disappear if they take any damage or negative effects. The servant requires no food, water, or sleep, but can only obey simple commands, and must remain within 100 feet of you at all times.
 
 **Destiny Level:**  
@@ -1311,7 +1293,7 @@ You gather four times as much food instead.
 
 ### Ghost carriage
 
-_Weekly ability. Quick. Full action. Handmagic._
+_Weekly ability. Full action. Handmagic._
 As an action, you summon a ghostly horse and carriage, capable of carrying up to 6 humanoids and 1000 pounds of luggage. Horse and carriage remain for one day, unless dismissed as an action. When dismissed, anything in the carriage drops to the ground.
 
 **Destiny Level:**  
@@ -1327,7 +1309,7 @@ The size limit on the object increases to a 5-foot cube.
 
 ### Gravity
 
-_Heart ability. Quick. Full action. Cognitive talent. Elemental attunement: Force._
+_Heart ability. Full action. Cognitive talent. Elemental attunement: Force._
 You may use your action to change the direction of gravity for yourself. You may dispel this effect at any time as a quick ability.
 
 **Destiny Level:**  
@@ -1335,7 +1317,7 @@ You may change the direction of gravity for up to six willing creatures.
 
 ### Grip of the Kraken
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 While holding a single, inanimate object of homogenous material in your hand, you can choose to make it immovable. It remains transfixed in space in relation to the nearest ground beneath it until you let go of it.
 
 **Destiny Level:**  
@@ -1351,7 +1333,7 @@ You may mark up to three objects at a time, and the source of your senses can or
 
 ### Harmonic
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 You may redistribute hit points among any number of willing creatures adjacent to you, including yourself.
 
 **Destiny Level:**  
@@ -1385,7 +1367,7 @@ When you hunt, you may choose which animal you are hunting for, so long as that 
 
 ### Hymn of Peace
 
-_Monthly ability. Quick. Full action. Gaeic melody._
+_Monthly ability. Full action. Gaeic melody._
 As an action, you may begin playing this song. So long as you are playing this song, no creature within 120 feet and in earshot can intentionally harm another creature. You may continue playing up to one hour. When you stop playing, the effect takes 1 minute to wear off.
 
 **Destiny Level:**  
@@ -1393,7 +1375,7 @@ If creatures affected by this spell were not already attacking each other, then 
 
 ### Hypnotic Tune
 
-_Weekly ability. Quick. Full action. Gaeic melody._
+_Weekly ability. Full action. Gaeic melody._
 As an action, you may begin playing this song. So long as you are playing this song, creatures within 120 feet and in earshot cannot move or take actions, so long as they are not being attacked, and are not in obvious danger. You may continue playing for up to one hour. When you stop playing, the effect takes 1 minute to wear off.
 
 **Destiny Level:**  
@@ -1419,7 +1401,7 @@ The fog you create is incredibly thick, and hangs heavy in the air. It takes 1 h
 
 ### Inanimate Object
 
-_Major ability. Quick. Full action. Handmagic._
+_Major ability. Full action. Handmagic._
 As an action, you may transform into any generic object that would fit in a space somewhere between a 1 inch cube and a 10 foot cube. You remain sentient but cannot move. You can sense your surroundings in a 5 foot radius. The transformation lasts for one hour, or until you spend your action to transform back into your natural form.
 
 **Destiny Level:**  
@@ -1438,7 +1420,7 @@ You can help multiple creatures with a single action. When you take the help act
 
 ### Keen Eye
 
-_Monthly ability. Quick. Cognitive talent._
+_Monthly ability. Cognitive talent._
 When you make a perception check, you may declare one thing that is unusual but nearly unnoticeable about the current scene. It must be an addition to the scene, not a change to what's already happening. The GM may then declare one additional thing, modifying your stated fact.
 
 **Destiny Level:**  
@@ -1446,7 +1428,7 @@ You may add one detail to whatever thing you notice.
 
 ### Let it Go
 
-_Major ability. Quick. Cognitive talent. Elemental attunement: Void._
+_Major ability. Cognitive talent. Elemental attunement: Void._
 As an action, you may touch an inanimate object that could fit inside a 30-foot cube. The object permanently disappears. There must be no sentient creatures contained inside the object.
 
 **Destiny Level:**  
@@ -1471,7 +1453,7 @@ You may use components that are up to two levels lower than required. When you d
 
 ### Master of Espionage
 
-_Monthly ability. Quick. Cognitive talent._
+_Monthly ability. Cognitive talent._
 Whether it be heists, spying, or sabotage, you are accomplished in the ways of espionage. You may declare an object as the target of your espionage. If you spend one day gathering knowledge about the security around your target, you have advantage on all rolls related to accessing that object, and then escaping thereafter.  
 If you spend one week gathering knowledge about your target, you may make an "educated guess" about the security around your target. The GM will confirm or deny your educated guess with a simple "yes" or "no".
 
@@ -1488,7 +1470,7 @@ You have A3 instead.
 
 ### Memories Fading
 
-_Weekly ability. Quick. Handmagic._
+_Weekly ability. Handmagic._
 You may alter the thoughts and memories of a non-hostile creature that you touch. You may replace up to one minute's worth of memories made by that creature from the last ten minutes with whatever memories you wish. You gain 3 levels of dazed until you take a long rest. They are unaware of any magic occurring.
 
 **Destiny Level:**  
@@ -1496,7 +1478,7 @@ You may instead replace one hour's worth of memories from the last day.
 
 ### Merchant's Luck
 
-_Heart ability. Quick. Handmagic._
+_Heart ability. Handmagic._
 
 Fortune favors the bold in business. When making any roll related to trading, buying, selling, or negotiating prices, you may immediately reroll all dice showing results of 3 or lower. You must keep the new results. This includes rolls for finding buyers/sellers, determining trader levels, negotiating prices, or avoiding trade-related complications.
 
@@ -1532,7 +1514,7 @@ As an action, you can summon forth wild animals in a mile radius. If you have ch
 
 ### Necromancy
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 You can raise the dead. By sacrificing a creature, you can reanimate another creature of the same type. The ritual takes one hour, and at the end you have a creature with stats identical to the dead creature, with the same might die, d2 cunning, agility, and presence dice, half of the hit point maximum, and no ability to communicate. It loses any special combat abilities it had, and obeys any orders you give it to the best of its ability. You can have no more than one undead creature under your control.
 
 **Destiny Level:**  
@@ -1550,7 +1532,7 @@ In addition, if you spend your action watching a creature fight for three rounds
 
 ### Oracle
 
-_Monthly ability. Quick. Full action. Handmagic._
+_Monthly ability. Full action. Handmagic._
 As an action, you may choose a creature other than yourself. That creature's next roll is replaced with the maximum result on each of the dice, and a complication occurs. At any time, the GM may replace any one of your next rolls with the minimum possible result. It cannot be rerolled or replaced. The GM may not do so again until you use this ability again.
 
 **Destiny Level:**  
@@ -1575,7 +1557,7 @@ You know your poisons. You immediately know if any food or drink you eat contain
 
 ### Rapid Growth
 
-_Major ability. Quick. Full action. Handmagic._
+_Major ability. Full action. Handmagic._
 As an action, you may place your hand on a non-living object that fits in a space somewhere between a 10-foot cube and a 2-inch cube. The object grows to fill a 10-foot cube, or shrinks to fit a 2-inch cube, though it will not grow if it is enclosed. The transformation lasts for one hour, or until dismissed as an action.
 
 **Destiny Level:**  
@@ -1583,7 +1565,7 @@ The transformation lasts indefinitely, though you may not use this ability on mo
 
 ### Rejection
 
-_Heart ability. Quick. Cognitive talent. Elemental attunement: Force._
+_Heart ability. Cognitive talent. Elemental attunement: Force._
 Choose any two objects. Those objects repulse each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
 
 **Destiny Level:**  
@@ -1607,7 +1589,7 @@ If you have aspect 5 or higher in runescribing or a similar aspect, you may make
 
 ### Salvage Master
 
-_Heart ability. Quick. Cognitive talent._
+_Heart ability. Cognitive talent._
 
 When you come across a broken or ruined magical item, you may spend an hour examining it to extract a single magical component. The component's level equals half the item's level (round down, minimum 1), and its tags relate to the item's original properties.
 
@@ -1616,7 +1598,7 @@ You extract 1d4 components instead of one, and they can be extracted at a level 
 
 ### Silver Tongue
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 As an action, you may charm a person you are talking to. They gain 2 ranks of charmed towards you for the next hour, after which they know they were magically charmed by you. They lose all ranks of charmed if you take a hostile action towards them.
 
 **Destiny Level:**  
@@ -1624,7 +1606,7 @@ The effect lasts twelve hours rather than one. The person does not realize they 
 
 ### Siren's Song
 
-_Weekly ability. Quick. Gaeic melody._
+_Weekly ability. Gaeic melody._
 After playing your instrument for a minute or more, all creatures within 60 feet and in earshot are enthralled with your performance, and struggle to pull their gaze away. So long as you play and they are not in obvious danger, they will approach you up to 10 feet, and will not pull their gaze from you. They have D3 on checks to notice their surroundings.
 
 **Destiny Level:**  
@@ -1632,7 +1614,7 @@ The range of your song increases to 120 feet. In addition, you may choose to exc
 
 ### Smell Something Fishy
 
-_Heart ability. Quick. Cognitive talent._
+_Heart ability. Cognitive talent._
 When investigating the location of a mystery or crime, you may ask the GM if there are any undiscovered clues related to a question of your choice about whatever event occurred in your location. The GM must answer truthfully.
 
 **Destiny Level:**  
@@ -1648,7 +1630,7 @@ When you gain this destiny level, choose persuasion, intimidation, or deception.
 
 ### Song of Desire
 
-_Weekly ability. Quick. Gaeic melody._
+_Weekly ability. Gaeic melody._
 After playing your instrument for a minute or more, you may choose a creature within 60 feet and in earshot. It feels an inexplicable amiability towards a creature of your choice. They cannot willingly attack that creature unless that creature acts with hostility towards it. If they were hostile, they become neutral. If they were unfriendly, they become friendly. If they were neutral, they become close. This effect lasts for the rest of the day.
 
 **Destiny Level:**  
@@ -1656,7 +1638,7 @@ That creature gains three levels of charmed towards that creature until the end 
 
 ### Song of Rage
 
-_Weekly ability. Quick. Gaeic melody._
+_Weekly ability. Gaeic melody._
 After playing your instrument for a minute or more, you may choose a creature within 60 feet and in earshot. It feels an inexplicable dislike towards a creature of your choice. If they were close, they become neutral. If they were friendly, they become unfriendly. If they were neutral or unfriendly, they become hostile, and potentially violent. This effect lasts for the rest of the day.
 
 **Destiny Level:**  
@@ -1664,7 +1646,7 @@ That creature gains three levels of enraged towards that creature until the end 
 
 ### Song of Rest
 
-_Monthly ability. Quick. Gaeic melody._
+_Monthly ability. Gaeic melody._
 After playing your instrument for an hour or more, creatures that can hear you gain the benefits of a successful long rest.
 
 **Destiny Level:**  
@@ -1672,7 +1654,7 @@ Those creatures gain the benefit of two long rests, instead.
 
 ### Stargazer
 
-_Weekly ability. Quick. Full action. Handmagic._
+_Weekly ability. Full action. Handmagic._
 As an action, if you can see the stars, you may use this ability. You may ask one yes or no question about the past or present.  
 The GM will do their best to answer your question.
 
@@ -1713,7 +1695,7 @@ You gain the following additional abilities:
 
 ### Waltz of the Weissenkauer
 
-_Weekly ability. Quick. Gaeic melody._
+_Weekly ability. Gaeic melody._
 You play a macabre and sinister tune. After playing your instrument for a minute or more, all creatures within 60 feet and in earshot gain one level of frightened towards you for the rest of the day.
 
 **Destiny Level:**  
@@ -1730,7 +1712,7 @@ You can use workspaces as if they were two levels higher (still capped at level 
 
 ### Worldly Traveler
 
-_Monthly ability. Quick. Cognitive talent._
+_Monthly ability. Cognitive talent._
 You have traveled the world and met many, many people. When you meet someone whom the GM describes as someone you've never met, you may choose to claim some connection to them. If you do, the GM will explain how you recognize them, and the nature of your connection. This connection may be as distant as "you saw them drinking in a bar in a neighboring country", or as close as, "this woman bears a strong resemblance to the thief you killed earlier today, and you suspect she is his sister". It is possible there is no feasible connection between you and this person. In this case, you may either regain the use of this ability, or take three destiny points. You cannot use this ability to claim connections with people more influential than yourself.
 
 **Destiny Level:**  

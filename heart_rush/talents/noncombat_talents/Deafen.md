@@ -1,6 +1,6 @@
 ## Deafen
 
-_Major ability. Quick. Handmagic._
+_Major ability. Handmagic._
 Choose one:
 
 - Creatures of your choice within 30 feet lose the ability to hear.
