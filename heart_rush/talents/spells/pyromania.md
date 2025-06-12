@@ -1,5 +1,6 @@
 ### Pyromania
-_Fire. Ongoing._
+
+_Major ability. Fire. Ongoing._
 
 You raise your open hands into the air, flickering your fingers, causing flames to erupt around you. Choose an adjacent space that contains flammable materials. It bursts into flame.
 

@@ -628,9 +628,9 @@ Handmagic uses the power of Deoric to create their effects. Deoric is the langua
 
 Handmagic uses Deoric runes tattooed on the back of one's hand, inscribed in the blood of magical creatures to power this life-cost. By articulating the tattooed hand in specific ways, one can then create those magical effects. The knowledge and necessary materials to inscribe hand runes is rare and expensive, and will cost a hefty fee, and likely require you to be in a city.
 
-### Spells
+### Elemental Talents
 
-Spells are powerful invocations of elemental power. Each spell will have one or more elemental tags, indicating the element it is associated with, and the attunement(s) required to pick up the spell. Spells are listed in their own section of the talent list.
+Elemental talents include passive elemental effects and powerful invocations of elemental power. Each talent will have one or more elemental tags, indicating the element it is associated with, and the attunement(s) required to pick up the talent. Elemental talents are listed in their own section of the talent list. Gaining an elemental talent represents long periods of study, practice, and meditation.
 
 ## Combat Talents
 
@@ -697,9 +697,11 @@ The talents in this section are noncombat-related talents. This categorization i
       );
     }
 
-    combinedContent += `## Spells
+    combinedContent += `## Elemental Talents
 
-The talents in this section are spell talents. This categorization is for the ease of finding talents, and has no other effect.
+The talents in this section are elemental talents. Each talent will have one or more elemental tags, indicating the element it is associated with, and the attunement(s) required to pick up the talent.
+
+These talents also may include the tag "ongoing", indicating that the effect lasts for 1 minute. Players may choose to end the effect early as a free ability during the action phase.
 
 `;
 

@@ -1,4 +1,5 @@
 ### Illuminant Harmony
-_Light and Dark. Ongoing._
+
+_Major ability. Light and Dark. Ongoing._
 
 You bring your thumb and forefinger in a closed circle overhead, bending the planes of light and dark apart. Choose up to two spaces. These spaces become brightly lit. Attacks against creatures in these spaces have advantage. Choose up to two more spaces. These spaces become cast in shadow, obscuring those within.

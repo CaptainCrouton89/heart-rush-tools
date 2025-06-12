@@ -1,5 +1,6 @@
 ### Wall of Stone
-_Earth. Ongoing._
+
+_Major ability. Earth._
 
 By drawing a line with your finger, you cause stone walls to shoot up from the ground where you point. Choose a point within 45 feet and draw a straight line up to 20 feet in length starting from that point. A wall of rock grows up there, 10 feet high.
 

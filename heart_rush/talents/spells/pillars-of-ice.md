@@ -1,5 +1,6 @@
 ### Pillars of Ice
-_Water. Ongoing._
+
+_Major ability. Water._
 
 You raise an open, grasping hand to the air, raising huge icicles forth from the ground, each radiating a chilling aura. Choose three spaces within 45 feet. In each space, a 10-foot pillar of ice rises there. Each pillar can take 15 damage before being destroyed, and has a flat 10 defense.
 

@@ -1,7 +1,6 @@
-## Hotter Flames
+### Hotter Flames
 
-_Passive ability. Cognitive talent._
-Elemental attunement: Fire.
+_Passive ability. Fire._
 
 You may choose for any fire within 120 feet to use a d8 to deal damage, rather than a d6. You may continue to take this talent again to increase the die size by one until it has reached a d12.
 

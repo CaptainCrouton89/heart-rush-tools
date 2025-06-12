@@ -28,9 +28,9 @@ Handmagic uses the power of Deoric to create their effects. Deoric is the langua
 
 Handmagic uses Deoric runes tattooed on the back of one's hand, inscribed in the blood of magical creatures to power this life-cost. By articulating the tattooed hand in specific ways, one can then create those magical effects. The knowledge and necessary materials to inscribe hand runes is rare and expensive, and will cost a hefty fee, and likely require you to be in a city.
 
-### Spells
+### Elemental Talents
 
-Spells are powerful invocations of elemental power. Each spell will have one or more elemental tags, indicating the element it is associated with, and the attunement(s) required to pick up the spell. Spells are listed in their own section of the talent list.
+Elemental talents include passive elemental effects and powerful invocations of elemental power. Each talent will have one or more elemental tags, indicating the element it is associated with, and the attunement(s) required to pick up the talent. Elemental talents are listed in their own section of the talent list. Gaining an elemental talent represents long periods of study, practice, and meditation.
 
 ## Combat Talents
 
@@ -147,24 +147,6 @@ You may take this talent any number of times. If your companion dies, you may ch
 **Destiny Level:**
 You may spend XP on your beast companion as though it were yourself. Beast companions cannot gain talents as oaths, and cannot gain cognitive talents. Your beast companion cannot gain a beast companion.
 While adjacent to your companion, if you or your companion would be forced to make a defense roll, the other may choose to step in to make the defense roll and take the damage instead. If that creature was already being attacked from the same source, they cannot use this ability.
-
-### Beckon
-
-_Heart ability. Handmagic._
-
-Choose a creature you can see within 30 feet. It teleports to a free space in which it can stand that is adjacent to you.
-
-**Destiny Level:**
-The range extends to 90 feet instead.
-
-### Blink Step
-
-_Heart ability. Instant. Handmagic._
-
-When you dash, you may instead teleport to an unoccupied space that you can see within 90 feet.
-
-**Destiny Level:**
-So long as you are holding on to someone, they may come with you if they are willing. You can bring up to two creatures besides yourself when using this ability.
 
 ### Blood Bond
 
@@ -441,16 +423,6 @@ You may declare someone the target of a duel. For the next minute, you get A2 on
 **Destiny Level:**
 Your bonus to A/D increases to A4, and your penalty to defense rolls increases to D6.
 
-### Elemental Overdrive
-
-_Passive ability. Cognitive talent._
-
-When you first gain this talent, choose a spell you know. You may decrease your heart die to immediately regain the use of that spell. If the spell is ongoing, casting the spell again ends the original effect.
-You may take this talent any number of times, choosing a different spell each time.
-
-**Destiny Level:**
-When you use this ability, you may cast the spell as a quick ability this round without using your action.
-
 ### Exert
 
 _Passive ability. Martial talent._
@@ -576,16 +548,6 @@ You may forgo any number of levels of advantage on an attack roll to instead get
 
 **Destiny Level:**
 If you have advantage on an attack roll, you gain an additional two levels of advantage.
-
-### Hotter Flames
-
-_Passive ability. Cognitive talent._
-Elemental attunement: Fire.
-
-You may choose for any fire within 120 feet to use a d8 to deal damage, rather than a d6. You may continue to take this talent again to increase the die size by one until it has reached a d12.
-
-**Destiny Level:**
-By focusing your channeling of heat, you can even melt non-flammable materials. If your damage die is a d8, you can melt non-magical metals at a rate of 1 cubic foot per 10 minutes. If your damage die is a d10, you may also melt non-magical stone at the same rate. If your damage die is a d12, you may melt the same amount of material in only a minute.
 
 ### Hulking
 
@@ -1723,219 +1685,289 @@ You have traveled the world and met many, many people. When you meet someone who
 **Destiny Level:**  
 Rather than claim a connection to someone you meet, you may use this ability before actually running into someone. For example, while at a bar in a foreign country, you could claim that you knew a weapon enchanter who lived in this area. If the GM also believes this to be plausible, your connection becomes real (though their location and condition may have changed since the last time you talked with them). If the GM doesn't believe this to be reasonable, you may choose not to use this ability.
 
-## Spells
+## Elemental Talents
 
-The talents in this section are spell talents. This categorization is for the ease of finding talents, and has no other effect.
+The talents in this section are elemental talents. Each talent will have one or more elemental tags, indicating the element it is associated with, and the attunement(s) required to pick up the talent.
+
+These talents also may include the tag "ongoing", indicating that the effect lasts for 1 minute. Players may choose to end the effect early as a free ability during the action phase.
 
 ### Aura of Ignition
-_Instant. Fire. Ongoing._
+
+_Major ability. Fire. Ongoing._
 
 You snap your fingers, agitating the air around you into a hyper-flammable state, allowing you to easily ignite moments of already high-energy, such as the impact of a blade. Whenever a creature within 10 feet takes damage, you may have them take a level of burning if they don't already have any levels of burning.
 
+### Beckon
+
+_Heart ability. Void._
+
+Choose a creature you can see within 30 feet. It teleports to a free space in which it can stand that is adjacent to you.
+
+**Destiny Level:**
+The range extends to 90 feet instead.
+
 ### Billowing Smoke
-_Fire. Ongoing._
+
+_Major ability. Fire. Ongoing._
 
 You cause thick, billowing smoke to erupt from a nearby space. Choose a point within 45 feet. All space within 5 feet of that point is obscured. Additionally, creatures of your choice within the smoke gain the suffocating condition.
 
 ### Blast of Fire
-_Fire and Force._
+
+_Major ability. Fire and Force._
 
 You point your finger, sending forth a bolt of force and flame and blasting someone back. Choose a creature within 45 feet. That creature is knocked back 10 feet and then falls prone, taking two levels of burning. They may make an agility saving throw against your spellcasting CN. On a success, they are not knocked prone, and take only one level of burning.
 
 ### Blinding Sun
-_Light. Ongoing._
+
+_Major ability. Light. Ongoing._
 
 You rub a sphere of pure, brilliant light into your fingers before casting it into the air. Choose a point within 45 feet. Creatures of your choice within a 5-foot radius of that point take three levels of blindness whenever they enter or start the round in that space, no more than once per round. For every 5 feet further you are from the point, creatures gain one level fewer of blindness.
 
+### Blink Step
+
+_Heart ability. Instant. Void._
+
+When you dash, you may instead teleport to an unoccupied space that you can see within 90 feet.
+
+**Destiny Level:**
+So long as you are holding on to someone, they may come with you if they are willing. You can bring up to two creatures besides yourself when using this ability.
+
 ### Burning Brilliance
-_Fire and Light. Ongoing._
+
+_Major ability. Fire and Light. Ongoing._
 
 You rub your fingers together, heating nearby areas of light. All spaces within 45 feet in bright light ignite into white, brilliant flames. So long as those spaces remain in bright light, the flame remains. The flames emit no light. Whenever a creature enters or begins the round in one of these spaces, you may choose for it to take one level of burning.
 
 ### Cardinal Direction
-_Void and Force. Ongoing._
+
+_Major ability. Void and Force. Ongoing._
 
 You align your fingers with the complex grid of the void, applying its strict physical laws to the world around you. Creatures of your choice within 45 feet of you can only move back and forth in one direction each round (no diagonals).
 
 ### Chilling Wind
-_Air._
+
+_Major ability. Air._
 
 You beckon with your fingers, calling forth the north wind, sending a bone-chilling breeze passing by. Creatures of your choice within 45 feet of you immediately take a level of crippled. If the temperature is already below freezing, those creatures also take one level of restrained until the end of the round instead.
 
 ### Cloak of Shadows
-_Dark. Ongoing._
+
+_Major ability. Dark. Ongoing._
 
 You drag wisps of shadows over your form, obscuring yourself and actions. You count as obscured until the end of your next engagement or until the spell ends, whichever comes first.
 
 ### Cloud of Poison
-_Water. Ongoing._
+
+_Major ability. Water. Ongoing._
 
 You raise your finger to the air, spewing forth billowing dark clouds of poison. All spaces within 10 feet of you are layered in a heavy cloud of poison. Creatures of your choice count as obscured and take a level of poisoned whenever they enter or start the round in those spaces, no more than once per round. Creatures cannot take more than one level of poisoned with this effect. The cloud does not move with you.
 
 ### Cold Snap
-_Water._
+
+_Major ability. Water._
 
 Snapping the fingers of your hand makes a loud crack that causes all non-magical liquid within 45 feet to freeze solid. Creatures of your choice within 45 feet gain one level of restrained until the end of the round. If they are wet or standing in water, they instead gain 2 levels of restrained.
 
 ### Collapse in Shadows
-_Dark and Force._
+
+_Major ability. Dark and Force._
 
 You clap your fingers to your palm, dragging everyone's bodies to their shadows. Creatures of your choice within 10 feet fall prone. If they are in bright light, they gain two levels of restrained. If they are in dim light, they gain one level of restrained instead.
 
 ### Crippling Aura
-_Force. Ongoing._
+
+_Major ability. Force. Ongoing._
 
 You emit an aura that saps those around you of their strength, greatly weakening them. Creatures of your choice within 10 feet of you take three levels of weakened whenever they enter or start the round in that space, no more than once per round.
 
 ### Deluge
-_Water and Force._
+
+_Heart ability. Water and Force._
 
 You wave your hand in a curling motion, sending a river of water rushing by, sweeping people away. Choose a 20-foot by 40-foot section of the map. Everyone creature of size L3 or smaller in that area is swept to one of the 20-foot sides of the rectangle, and lands prone. The water puts out any fire in that area.
 
 ### Earthen Shackles
-_Earth and Force. Ongoing._
+
+_Major ability. Earth and Force. Ongoing._
 
 You grasp your hand into an upturned fist, causing the ground to reach up and anchor those above it. Creatures of your choice within 10 feet of you take a level of crippled whenever they enter or start the round in that space, no more than once per round.
 
 ### Earthen Umbra
-_Earth and Dark. Ongoing._
+
+_Major ability. Earth and Dark. Ongoing._
 
 You splay your fingers and raise your hand, pulling shadows from the ground beneath you. Two feet of pure shadow rise up from the ground and away from all walls in a 45 foot radius around you. While prone or adjacent to a wall affected by this spell, creatures are obscured.
 
 ### Eclipse
-_Dark._
+
+_Major ability. Dark._
 
 You turn your cupped hand in the air, briefly causing a shadow to pass before the sun. The sun provides no light to any space in a 90 foot radius until the spell ends or you choose to end the effect during a subsequent action phase. This has no effect on other sources of light.
 
 ### Erosion
-_Force and Time._
+
+_Major ability. Force and Time._
 
 You rub your fingers together, grinding time against force, accelerating the natural desiccation and erosion of a nearby object. Choose an inanimate object no greater than a 10-foot cube. If it is softer than wood, it erodes away immediately. If it is softer than stone, it erodes away in the next minute. If it is as hard as stone or harder, it crumbles over the course of the next hour.
 
 ### Ether Chains
-_Force. Ongoing._
+
+_Major ability. Force. Ongoing._
 
 You link your thumb and forefinger, causing visible, ethereal chains to form between two creatures' souls, linking them together. Choose two creatures within 45 feet of you and within 10 feet of each other. At the end of each round, if the two creatures are not within 10 feet of each other, they each take two levels of dazed, off-balanced, and weakened, and 1d6 damage.
 
 ### Face of the Moon
-_Force. Ongoing._
+
+_Major ability. Force. Ongoing._
 
 Your hand aligns with the tides of force all around you. At the start of each each round, you may choose high tide or low tide. If you choose high tide, all creatures within 25 feet of you are pulled 10 feet towards you. If you choose low tide, all creatures within 25 feet are pushed 10 feet away, but not beyond the affected area.
 
 ### Fire Fist
-_Fire. Ongoing._
+
+_Major ability. Fire. Ongoing._
 
 Your hands erupt into brilliant flame. Whenever you hit an enemy with an unarmed melee attack, they take one level of burning.
 
 ### Fire Storm
-_Air and Fire. Ongoing._
+
+_Major ability. Air and Fire. Ongoing._
 
 You twist your open hand in the air before snapping your fingers together, bringing together a whirling storm of fire around you. Whenever a creature enters or starts the round in that space, you may choose for them to take one level of burning, or 2 damage for each level of burning they already have, no more than once per round.
 
 ### Flame Dance
-_Fire. Ongoing._
+
+_Major ability. Fire. Ongoing._
 
 Through intricate motions while walking, you weave fire into every footstep. Whenever you leave a space, it is ignited with fire until the spell ends. Creatures of your choice take two levels of burning whenever they enter or start the round in that space, no more than once per round.
 
 ### Fog Bank
-_Water. Ongoing._
+
+_Major ability. Water. Ongoing._
 
 You open your fist, releasing moisture into the air, sending billowing clouds of fog into the area around you. Choose eight spaces. A wall of fog grows up there. Creatures within the fog bank are obscured from everyone, and people on opposite sides are obscured from each other. While within the fog, everything is obscured to you.
 
 ### Force Strike
-_Force. Ongoing._
+
+_Heart ability. Force. Ongoing._
 
 You motion with your fingers in the direction of the movement of your weapon, accelerating it with force. Your next attack with a weapon pushes the target 15 feet away from you.
 
 ### Gale
-_Air. Ongoing._
+
+_Major ability. Air. Ongoing._
 
 You push your palm in the air before you, causing a powerful wind to pick up. Choose a direction. Creatures of your choice within 90 feet of you are affected. At the beginning of each round, each affected is pushed 10 feet in the direction you chose. The range of all projectile weapons fired primarily downwind is doubled, and halved when fired primarily upwind.
 
 ### Grasp of the Ice Witch
-_Water. Ongoing._
+
+_Major ability. Water. Ongoing._
 
 Your hands freeze over, turning blue with cold and dripping with ice. Whenever you hit an enemy with an unarmed melee attack, they gain a level of restrained until the end of the round and cannot make more than one attack roll this round.
 
 ### Hand of Lorus
-_Dark. Ongoing._
+
+_Major ability. Dark. Ongoing._
 
 By clenching your hand into a fist, you can engulf your surroundings in shadows. The space in a 45-foot radius around you becomes dark if the space was previously dim, and dim if it was previously bright. Nonmagical light cannot penetrate through this darkness. See the Other Factors section for details on the effects of dim light.
 
 ### Heat Stroke
-_Fire. Ongoing._
+
+_Major ability. Fire. Ongoing._
 
 You open your fist into the open air, releasing intense heat into the surrounding area. Creatures of your choice within 10 feet of you gain two levels of dazed and two levels of weakened when they enter the spell's area or start the round there, no more than once per round.
 
+### Hotter Flames
+
+_Passive ability. Fire._
+
+You may choose for any fire within 120 feet to use a d8 to deal damage, rather than a d6. You may continue to take this talent again to increase the die size by one until it has reached a d12.
+
+**Destiny Level:**
+By focusing your channeling of heat, you can even melt non-flammable materials. If your damage die is a d8, you can melt non-magical metals at a rate of 1 cubic foot per 10 minutes. If your damage die is a d10, you may also melt non-magical stone at the same rate. If your damage die is a d12, you may melt the same amount of material in only a minute.
+
 ### Illuminant Harmony
-_Light and Dark. Ongoing._
+
+_Major ability. Light and Dark. Ongoing._
 
 You bring your thumb and forefinger in a closed circle overhead, bending the planes of light and dark apart. Choose up to two spaces. These spaces become brightly lit. Attacks against creatures in these spaces have advantage. Choose up to two more spaces. These spaces become cast in shadow, obscuring those within.
 
 ### Illusory Double
-_Water and Air. Ongoing._
+
+_Major ability. Water and Air. Ongoing._
 
 You create a shimmering, misty duplicate of yourself, slightly offset from your position, disguising your true location. You have A2 on your defense rolls.  
 At any time while maintaining your illusory double, you may remove it to double your defense roll.
 
 ### Incendiary Vortex
-_Fire and Void. Ongoing._
+
+_Major ability. Fire and Void. Ongoing._
 
 You twist your splayed hand in front of you, knitting together and embroiling the planes of fire and void. At the start of each round, creatures of your choice within 10 feet of you take two levels of burning and are pulled 5 feet towards you, if possible.
 
 ### Leaden Fists
-_Earth. Ongoing._
+
+_Major ability. Earth. Ongoing._
 
 You draw earth up and around your fists, turning them into weighted clubs of stone. Your fists become light, bludgeoning weapons. Whenever you deal damage to an enemy with your fists, if they are no more than one size greater than you, you may choose for them to be pushed 5 feet back.
 
 ### Lightning Ward
-_Light and Air. Ongoing._
+
+_Major ability. Light and Air. Ongoing._
 
 You snap your fingers, agitating the air into a crackling cloud of energy, electrifying and energizing those inside. Creatures of your choice within 10 feet of you take 1d6 damage when they enter or start the round in that space, no more than once per round.  
 If a player takes damage from this effect, they gain a rush point. If this would cause them to exceed their maximum, they may immediately spend their points. Creatures standing in water take three times as much damage from this spell.
 
 ### Liquify
-_Earth. Ongoing._
+
+_Major ability. Earth. Ongoing._
 
 You flutter your hand such that it resonates at the exact frequency to turn the surrounding rock into an unstable slew of loose stone. The ground within 10 feet of you immediately becomes difficult terrain, and creatures of your choice that enter or start the round in that space begin sinking into the ground and gain one level of restrained.  
 Creatures stuck in the ground may take the dash action to remove all levels of the restrained condition from themselves.
 
 ### Magma Rain
-_Earth and Fire._
+
+_Major ability. Earth and Fire._
 
 You pull your hand down into a fist, causing magma to begin falling from the sky. Choose a point within 90 feet. There must be a large area of open sky above the point. Magma appears in the sky and begins falling towards that point.  
 At the end of the next round, the hail of magma reaches the ground. Everyone within a 15-foot radius of the point takes 6d8 damage and a level of burning.
 
 ### Oil Slick
-_Water and Earth. Ongoing._
+
+_Major ability. Water and Earth. Ongoing._
 
 You cause a pool of slippery oil to expand over an area, making it impossible to safely walk on. Choose a point within 45 feet. All space within 15 feet of that point is slippery, and any creature that moves more than five feet through the space or makes an A/D roll in that space must make an agility saving throw contested by your spellcasting ability.  
 If the creature fails, it falls prone. If it was making an A/D roll, treat the result of their roll as a zero.
 
 ### One With the Shadows
-_Dark. Ongoing._
+
+_Major ability. Dark. Ongoing._
 
 You close your hand into a fist, drawing the darkness around you. If you are in dim light or darkness, you turn invisible. If you enter bright light, cast a spell, or attack, you become visible once more.
 
 ### Pillars of Ice
-_Water. Ongoing._
+
+_Major ability. Water._
 
 You raise an open, grasping hand to the air, raising huge icicles forth from the ground, each radiating a chilling aura. Choose three spaces within 45 feet. In each space, a 10-foot pillar of ice rises there. Each pillar can take 15 damage before being destroyed, and has a flat 10 defense.
 
 Creatures of your choice within 5 feet of a pillar take one level of slowed when they enter the spell's area for the first time on a turn or start the round there. The icicles melt when the spell ends.
 
 ### Pummeling Shadows
-_Force and Dark. Ongoing._
+
+_Major ability. Force and Dark. Ongoing._
 
 You raise your clenching fist up, binding the shadows to fists of force. Whenever a creature within 10 feet enters or begins the round in dim light or darkness, you may choose for it to take 1d8 damage, no more than once per round.
 
 ### Punishing Glare
-_Force and Light. Ongoing._
+
+_Major ability. Force and Light. Ongoing._
 
 You bring your clenching fist down, binding the light into fists of force. Whenever a creature within 10 feet enters or begins the round in bright light, you may choose for it to take 1d8 damage, no more than once per round.
 
 ### Pyromania
-_Fire. Ongoing._
+
+_Major ability. Fire. Ongoing._
 
 You raise your open hands into the air, flickering your fingers, causing flames to erupt around you. Choose an adjacent space that contains flammable materials. It bursts into flame.
 
@@ -1944,135 +1976,160 @@ Fire within 90 feet of you spreads unnaturally fast. At the end of each round, i
 You may stop the unnaturally fast spread of the fire as an instant ability, but the fire does not cease to exist. The fire can still be put out by normal means.
 
 ### Ravine
-_Earth. Ongoing._
+
+_Major ability. Earth._
 
 You bring your hand in a chopping motion towards the ground, causing it to split open in a deep ravine. Choose four connected, spaces on the ground within 45 feet. A 15-foot deep hole opens in those spaces. Creatures in those spaces must make agility saving throws to avoid fall damage and landing prone.
 
 ### Refraction
-_Light. Ongoing._
+
+_Major ability. Light. Ongoing._
 
 You lace wisps of light over you and any number of adjacent creatures, veiling them in a shimmering glow. Chosen creatures gain three levels of cover so long as they remain within 90 feet of you.
 
 ### Rewind
-_Time._
+
+_Major ability. Time._
 
 Choose any number of creatures within 45 feet. For each leveled condition affecting each of those creatures, double the number of levels of that condition affecting that creature.
 
 ### Sandstorm
-_Earth and Air. Ongoing._
+
+_Major ability. Earth and Air. Ongoing._
 
 You twist your hand into a fist, causing a brutal sandstorm to whirl around you. Creatures of your choice within 10 feet of you take 1d6 damage whenever they enter or start the round in that space, no more than once per round.  
 Additionally, the storm provides one level of cover from ranged attacks.
 
 ### Scatter
-_Void._
+
+_Major ability. Void._
 
 You temporarily overlay the void over reality, if only briefly. Choose any number of creatures within 45 feet of you. You may teleport each creature 10 feet in a direction of your choice to another unoccupied space.
 
 ### Searing Shadows
-_Fire and Dark. Ongoing._
+
+_Major ability. Fire and Dark. Ongoing._
 
 You rub your fingers together, heating nearby areas of darkness. All spaces within 45 feet in dim light or darkness ignite into pulsing, dark flames.  
 So long as those spaces remain in dim light or in darkness, the flame remains. Whenever a creature enters or begins the round in one of these spaces, it takes one level of burning, and then one additional level of burning if the space was in darkness, no more than once per round.
 
 ### Shadowy Double
-_Dark. Ongoing._
+
+_Heart ability. Dark. Ongoing._
 
 You drag darkness from around you to your form. If you are in dim light, you may create shadowy duplicates of yourself. The next two times you are attacked, you instead take no damage, as they attack a shadowy double. The duplicates disappear if you exit dim light.
 
 ### Shield of Air
-_Force and Air. Instant._
+
+_Major ability. Force and Air. Instant._
 
 You raise your hand in the air, causing the air to harden, right before a weapon lands. Roll your heart die and double it, and add it to a creature's defense roll, before they take damage.
 
 ### Stasis Sphere
-_Void. Ongoing._
+
+_Major ability. Void. Ongoing._
 
 You pull in the void, cocooning the space around you. All incoming and outgoing sources of damage (e.g. attack rolls) have their initial damage reduced by half, before accounting for defense rolls. Round up the remaining damage.
 
 ### Static Cloud
-_Air. Ongoing._
+
+_Major ability. Air. Ongoing._
 
 You snap your fingers, charging the air around you, creating a cloud of highly static energy suspended in the air. Whenever a creature within 10 feet of you takes damage, you may have that creature take three levels of dazed as electricity crackles through them.
 
 ### Steam Fissure
-_Fire and Water. Ongoing._
+
+_FMajor ability. ire and Water. Ongoing._
 
 You open your hand towards the sky, forcing fissures open in the ground around you, producing geysers of scalding steam from the depths beneath you. Choose four spaces within 45 feet. Creatures take 1d10 damage whenever they enter or start the round in that space, no more than once per round.
 
 ### Stone Skinned
-_Earth. Ongoing._
+
+_Major ability. Earth. Ongoing._
 
 You turn your skin to stone. You have +6 on defense rolls against slashing and piercing attacks, and your move speed decreases by 20 feet.
 
 ### Sunbeams
-_Light. Ongoing._
+
+_Major ability. Light. Ongoing._
 
 You drag a pointed finger from the sky to your target, sending beams of sunlight down from the heavens, blinding and burning those caught within. Choose a point within 45 feet. A pillar of light beams down, and bright light illuminates everything in a 5-foot radius around that point. Whenever a creature enters or starts the round in one of these spaces, you may choose for them to take 2 levels of blinded and 1d6 damage.
 
 ### Telekinesis
-_Force. Ongoing._
+
+_Major ability. Force. Ongoing._
 
 During engagements, you may use nearby objects as heavy, ranged, bludgeoning weapons, by hurling them at your opponents. Objects must be between 5 and 20 pounds, within 45 feet, and cannot be attached to anything else that would prevent it from moving (likely, valid options include loose rocks, chairs, etc). You have advantage on these attack rolls.
 
 ### Temporal Hiccup
-_Time. Instant._
+
+_Major ability. Time. Instant._
 
 With the clap of your hands, a flicker in the normal continuum of time ripples out from you. All creatures of your choice within 45 feet have D3 on the next roll they make, or until the end of the round, whichever comes first.
 
 ### Temporal Scramble
-_Time. Instant._
+
+_Major ability. Time. Instant._
 
 After everyone who wants to join the engagement has done so, but before stances are chosen, you may use this ability. Each creature in the engagement should roll a d100. In order from lowest to highest result, each creature should announce their stance. Creatures of your choice may roll the d100 with advantage (roll twice and take the higher result).
 
 ### Thunder Blast
-_Air._
+
+_Major ability. Air._
 
 You clap your hands, or snap your fingers, releasing a concussive blast of thunder, blowing creatures away from you. Creatures of your choice within 10 feet of you are blown back 10 feet directly away from you.
 
 ### Time Cube
-_Time. Instant._
+
+_Major ability. Time. Instant._
 
 By twisting the threads of your own timeline between the fingers of your hand, you bind it into a cube within which you can act. This round, you can take three additional actions.
 
 ### Time Twister
-_Time._
+
+_Major ability. Time._
 
 By yanking loose the threads of time, you revert time to an earlier state. Creatures of your choice within 45 feet of you are teleported to wherever they started this round. Creatures of your choice who have not moved yet this round may immediately move a distance up to their move speed.
 
 ### Tremor Stomp
-_Earth._
+
+_Major ability. Earth._
 
 You stomp the ground, causing it to shutter and quake. Creatures of your choice within 10 feet immediately take 3 levels of off-balanced and fall prone. If you are underground, those creatures take 5 levels instead.
 
 ### Twister
-_Air. Ongoing._
+
+_Major ability. Air. Ongoing._
 
 By spinning your finger in the air, you stir the air into a twister. A coiling tornado touches down, throwing people aside as it travels across the ground. Choose a 10-foot square within 45 feet. All area there is affected.  
 Projectiles are thrown aside if they pass through, and anyone who enters is thrown 10 feet in a direction of your choice and lands prone, taking 1d6 damage.  
 At the beginning of each round, you may choose to move the twister 15 feet in a direction of your choice.
 
 ### Undying Flame
-_Fire and Time. Ongoing._
+
+_Major ability. Fire and Time. Ongoing._
 
 Choose a creature within 45 feet. It takes one level of burning. Levels of burning do not fade from this creature.
 
 ### Wall of Fire
-_Fire. Ongoing._
+
+_Major ability. Fire. Ongoing._
 
 By drawing a line with your finger, you cause immense flames to grow up where you point. Choose a point within 45 feet and draw a straight line up 20 feet in length starting from that point. A wall of fire grows up there.
 
 Anyone who passes through the fire takes 3 levels of burning. The fire does not spread, and disappears when the spell ends.
 
 ### Wall of Stone
-_Earth. Ongoing._
+
+_Major ability. Earth._
 
 By drawing a line with your finger, you cause stone walls to shoot up from the ground where you point. Choose a point within 45 feet and draw a straight line up to 20 feet in length starting from that point. A wall of rock grows up there, 10 feet high.
 
 Each wall segment can take 30 damage before disintegrating, and has 15 defense (treat is as rolling a 15 on defense rolls when attacked).
 
 ### Warpspace
-_Void. Ongoing._
+
+_Major ability. Void. Ongoing._
 
 By dragging at the seams separating the void from the material world, you allow some of it to spill over. Certain spaces become areas of warped space. Choose six unoccupied spaces within 45 feet. Each space ceases to exist.  
 It costs no movement speed to cross that space, and all spaces adjacent to a warped space are considered adjacent to all other spaces adjacent to that and any other contiguous warped spaces.
