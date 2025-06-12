@@ -93,7 +93,7 @@ Three types of stronghearts exist—bastions, wrathguards, and vicehands.
 
 ### In the Thick of It
 
-Passive ability. Rank 1.
+_Passive ability. Rank 1._
 
 You excel when in the center of battle. For each enemy adjacent to you, you get +1 to your attack and defense rolls.
 
@@ -107,7 +107,7 @@ HP as a spendable resource (wrath guard).
 
 ### Cry of Defiance
 
-Minor ability. Instant. Rank 1.
+_Minor ability. Instant. Rank 1._
 
 You shout out, have a moment of inner peace, or by some other means recenter yourself in the moment. Choose one:
 
@@ -129,7 +129,7 @@ Bastions are living fortresses, impenetrable and unmovable on the battlefield. T
 
 #### Guardian's Sacrifice
 
-Passive ability. Rank 2.
+_Passive ability. Rank 2._
 
 You have the ability to step in when those nearby are in a vulnerable position. If a creature adjacent to you is about to be harmed or attacked, and the attack, defense, or damage rolls haven't been been made yet, you can choose to intervene and place yourself between them and the source of harm.
 
@@ -141,7 +141,7 @@ You can only save one creature during a round, but you can shield them from mult
 
 #### Violent Defense
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
 
 You hunker down, presenting a bristling wall of defense. Until the end of the round, you may add your weapon die to your defense rolls.
 
@@ -149,7 +149,7 @@ If you would make a defense roll and get a result greater than their attack roll
 
 #### Hulking Blows
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
 
 Your blows are slow, but absolutely devastating. After revealing stances, if you are wielding a heavy melee weapon, you may declare your attack to be a hulking blow.
 
@@ -158,7 +158,7 @@ Your blows are slow, but absolutely devastating. After revealing stances, if you
 
 #### Eternal Fortitude
 
-Major ability. Instant. Rank 4.
+_Major ability. Instant. Rank 4._
 
 While others may fall, you fight on—nothing can bring you to your knees. You may spend any number of rush points.
 
@@ -179,7 +179,9 @@ Vicehands gain the following abilities.
 
 #### Grappler
 
-Passive. Rank 2.
+_Passive ability. Rank 2._
+
+You are a master of restraining and controlling opponents in close combat.
 
 - You do not have to directly beat a creature's stance to attempt to grapple them.
 - You can grapple as though you are one size larger than you are.
@@ -188,7 +190,7 @@ Passive. Rank 2.
 
 #### Fists, Knees, and Elbows
 
-Minor ability. Rank 3.
+_Minor ability. Rank 3._
 
 Until the end of the round, when you make an unarmed attack roll against a creature you are grappling, add your might die to the roll.
 
@@ -196,7 +198,7 @@ Grappling the creature does not impose disadvantage on your attack rolls against
 
 #### I don't think so
 
-Minor ability. Rank 3.
+_Minor ability. Rank 3._
 
 Make a grappling ability check against a creature you are already grappling. On a success, choose one:
 
@@ -207,7 +209,7 @@ Make a grappling ability check against a creature you are already grappling. On 
 
 #### Cinch Down
 
-Major ability. Speed. Rank 4.
+_Major ability. Rank 4._
 
 You may only use this ability if you are grappling a creature. You gain the following benefits so long as you remain grappling the creature. X is equal to the number of rush points you spend on this ability.
 
@@ -231,23 +233,26 @@ Wrathguards gain the following abilities.
 
 #### Sentinel
 
-Passive ability. Rank 2.
+_Passive ability. Rank 2._
 
-- You are always ready. Sidestepping does not let enemies avoid your opportunity attacks.
+You are a vigilant guardian, ready to strike at any enemy who dares move past you. You are always ready.
+
+- Sidestepping does not let enemies avoid your opportunity attacks.
 - Opportunity attacks do not require an action or rush points.
 
 #### I Didn't Feel A Thing
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
 
-- You are naturally tougher than nearly anyone you know.
+You shrug off attacks that would fell lesser warriors, your resolve unshakeable.
+
 - You take half as much damage from the next source of incoming damage, rounded down.
 - If the source would cause you to move, you move 10 feet less.
 - If the source would cause you to gain leveled conditions, you gain those condition at one level less.
 
 #### Crippling Blows
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
 
 Your blows are powerful enough to knock people off their feet.
 
@@ -257,6 +262,8 @@ When you deal damage to a creature with a heavy, melee weapon, choose one:
 - Smash: The creature is knocked 10 feet away from you.
 
 #### Battle Spirited
+
+_Major ability. Rank 4._
 
 For each rush point spent on this ability, choose one of the following effects. The number of times you choose a given effect cannot be more than one more than the least-chosen effect. You and all creatures of your choice within 10 feet of you gain the benefits of the chosen effects until the end of combat. For each ability, replace X with the number of rush points spent on this ability.
 
@@ -273,13 +280,13 @@ Two types of battlehearts exist—strikers and ravagers.
 
 ### Brutal Attacks
 
-Passive ability. Rank 1.
+_Passive ability. Rank 1._
 
 Your attacks are vicious and true. Whenever you roll the maximum result on one of the dice in an attack roll, or damage from a spell you cast, you may add another die of the same size and roll it, adding it to the result. This can trigger multiple times.
 
 ### Making it count
 
-Minor ability. Instant. Rank 1.
+_Minor ability. Instant. Rank 1._
 
 You may apply the effects of your stance twice during the current engagement.
 
@@ -299,33 +306,29 @@ Strikers gain the following abilities.
 
 #### Called Shot
 
-Passive ability. Rank 2.
+_Passive ability. Rank 2._
 
-- You exchange some defensive ability for overwhelming offensive prowess.
-- You have disadvantage on defense rolls, but you may make called shots.
-- By aiming for a very specific location on your target, you maximize your potential damage, at the risk of dealing less damage if you miss.
-- If you have advantage on an attack roll, you may declare the attack to be a called shot.
-- If you do, announce a target number for your attack roll. Keep this number in mind for later.
-- Then, determine the multiplier. Your multiplier starts at one, though you may remove levels of advantage on your attack roll to increase it.
-- To increase the multiplier by one, you must sacrifice a number of levels of advantage equal to the current level of the multiplier.
-- To increase it further, repeat the process.
-- Finally, make your attack roll. If any of the dice you rolled are equal to or higher than your target number, multiply your target number by the multiplier and add that to your attack roll.
+You exchange some defensive ability for overwhelming offensive prowess. You have disadvantage on defense rolls, but you may make called shots.
+By aiming for a very specific location on your target, you maximize your potential damage, at the risk of dealing less damage if you miss. If you have advantage on an attack roll, you may declare the attack to be a called shot.
+If you do, announce a target number for you attack roll. Keep this number in mind for later.
+Then, it’s time to determine the multiplier. Your multiplier starts at one, though you may remove levels of advantage on your attack roll to increase it. To increase the multiplier by one, you must sacrifice a number of levels of advantage equal to the current level of the multiplier. So to increase the multiplier to two, you would have to spend one level of advantage. To then increase it to three, you would spend two levels of advantage, and so on.
+Finally, make your attack roll. If any of the dice you rolled are equal to or higher than your target number, multiply your target number by the multiplier and add that to your attack roll.
 
 #### Power Strike
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
 
-Before you announce your stance in an engagement, you may declare the attack to be a power strike.
+Before you announce your stance in an engagement, you may declare the attack to be a power strike. If you do, all dice used in the attack roll trigger your Brutal Attacks ability if they land on a result greater than half the size of the die. For example, you would reroll and add another 1d10 to the result if you rolled a 6-10 on a d10 in your attack roll.
 
 #### Execute
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
 
 Whenever you deal damage to a creature, you may choose for it to be an execution instead. If this damage would reduce the creature to zero or fewer hit points, the creature immediately dies.
 
 #### Devastation Strike
 
-Major ability. Instant. Rank 4.
+_Major ability. Instant. Rank 4._
 
 You deliver a massive blow, potentially finishing off your enemy.
 
@@ -349,31 +352,32 @@ Ravagers gain the following abilities.
 
 #### Everywhere at Once
 
-Passive ability. Rank 2.
+_Passive ability. Rank 2._
 
-- You are capable of combatting multiple enemies at once.
-- Whenever you enter an engagement, you may force two enemies to engage rather than just one.
-- When you do so, you may make a melee attack against any number of valid targets in the engagement rather than only one.
+You are capable of combatting multiple enemies at once.
+
+- In an engagement, you make a melee attack against any number of valid targets in the engagement rather than only one.
 - If you do not make any melee attacks, you may instead make a ranged attack against any number of valid targets in the engagement who are adjacent to each other.
 - Additionally, object interactions to stow or draw shields or weapons are always free, and instant.
 
 #### Lightning Reflexes
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
 
-Your reflexes are faster than anyone else's on the battlefield. You can choose to go first in initiative, and you may use your quick abilities between enemy turns, rather than only on your or an ally's turn.
+Your reflexes are faster than anyone else's on the battlefield. Treat your agility die as a d20 when determining who can go first when multiple people want to take actions. Nobody can interrupt you if you want to use multiple abilities in a row.
 
 #### Bloodthirsty
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
 
-- You can launch from one foe to the next with grace.
-- When you deal enough damage to cause a creature to go unconscious or die this round, you regain an action at the end of the engagement (to a maximum of one).
+You can launch from one foe to the next with grace.
+
 - When you attack a creature that has not been attacked yet this round, you get +3 on the attack roll.
+- When you deal enough damage to cause a creature to go unconscious or die this round, you gain an additional action you may take during the next action phase.
 
 #### Blitz
 
-Major ability. Rank 4.
+_Major ability. Rank 4._
 
 The rhythm of your movements synchronizes perfectly with the fight.
 
@@ -388,7 +392,7 @@ Two types of cleverhearts exist—battleminds and skirmishers.
 
 ### Above the Fray
 
-Passive ability. Rank 1.
+_Passive ability. Rank 1._
 
 Although not necessarily the best at dishing out the damage in a fight, cleverhearts excel at everything else.
 
@@ -396,7 +400,7 @@ Once per round, you may make an object interaction, sidestep, help, or trip acti
 
 ### Tactics
 
-Minor ability. Instant. Rank 1.
+_Minor ability. Instant. Rank 1._
 
 You can spot out the weak points in your enemies' defenses and direct your allies towards them.
 
@@ -426,17 +430,19 @@ Battleminds gain the following abilities.
 
 #### Versatile Training
 
-Passive ability. Rank 2.
+**Passive ability. Rank 2.**
 
-- You have more versatility in combat.
+You have more versatility in combat.
+
 - Gain 1 XP for each combat talent and 2 XP for each combat destiny level you have taken so far.
 - Future combat talents cost 1 fewer XP, and their destiny levels cost 2 fewer XP.
 
 #### Commander's Call
 
-Minor ability. Instant. Rank 3.
+**Minor ability. Instant. Rank 3.**
 
-- You provide tactical aid to a teammate.
+You provide tactical aid to a teammate.
+
 - Choose any combination of up to four creatures and combat talents you know.
 - The chosen creatures must be within 120 feet and in earshot.
 - Until the end of this round, the chosen creatures gain the benefits of the basic level of the chosen talents.
@@ -444,19 +450,21 @@ Minor ability. Instant. Rank 3.
 
 #### Call to Action
 
-Minor ability. Rank 3.
+**Minor ability. Instant. Rank 3.**
 
-- You issue a command, calling your allies to action.
+You issue a command, calling your allies to action.
+
 - For each option in the following list, choose a creature within 120 feet and in earshot besides yourself:
-  - The chosen creature may enter a second engagement this round.
+  - The chosen creature may attack up to two valid targets in the next engagement.
   - The chosen creature immediately gains 5 hit points.
   - The chosen creature immediately sidesteps.
 
 #### Rallying Cry
 
-Major ability. Rank 4.
+_Major ability. Rank 4._
 
-- You rally your companions, inspiring them to fight harder.
+Your voice cuts through the chaos of battle, inspiring your allies to push beyond their limits.
+
 - Choose any number of creatures within 30 feet.
 - For each rush point spent on this ability, choose one of the following effects to apply to each of the chosen creatures:
   - Increase your heart die.
@@ -486,7 +494,9 @@ Skirmishers gain the following abilities.
 
 #### Improved Interference
 
-Passive ability. Rank 2.
+_Passive ability. Rank 2._
+
+You excel at disrupting enemies through clever positioning and dirty tactics.
 
 - Choosing the same stance as another creature does not prevent you from using a non-attacking offensive action against them.
 - Additionally, whenever you choose to hinder a creature, choose from the following list instead:
@@ -499,7 +509,7 @@ Passive ability. Rank 2.
 
 #### Bag of Tricks
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
 
 Choose one:
 
@@ -512,7 +522,9 @@ Choose one:
 
 #### Elusive
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
+
+You react to danger with fluid grace, slipping away from harm at the last moment.
 
 - Immediately after taking damage during an engagement, you may take the sidestep action as a free, instant ability.
 - This may cause you to no longer be a valid target for some attackers.
@@ -520,7 +532,9 @@ Minor ability. Instant. Rank 3.
 
 #### Nasty Tricksies
 
-Major ability. Rank 4.
+_Major ability. Rank 4._
+
+Your arsenal of dirty tricks can inflict lasting wounds and permanent disabilities on your enemies.
 
 - When you hinder a creature, you may instead choose one of the following options. X is equal to the number of rush points spent on this ability:
   - The creature is stunned for X/2 rounds, rounded down.
@@ -556,7 +570,9 @@ Spelltouched gain the following abilities.
 
 #### Elemental State
 
-Passive ability. Rank 2.
+_Passive ability. Rank 2._
+
+You can transform your body to embody the essence of your chosen element.
 
 - You must have an attunement to fire, earth, water, or air in order to gain the benefits of this class.
 - You know how to incorporate your knowledge of the elements into your fighting.
@@ -603,7 +619,9 @@ Passive ability. Rank 2.
 
 #### Warcaster
 
-Minor ability. Rank 3.
+_Minor ability. Rank 3._
+
+You can weave spells seamlessly into your combat techniques.
 
 - When you gain this ability, choose three spells from the spell list that match your attunement(s).
 - You know these spells. They do not count towards the total number of spells you know.
@@ -611,9 +629,10 @@ Minor ability. Rank 3.
 
 #### Elemental Attacks
 
-Minor ability. Instant. Rank 3.
+_Minor ability. Instant. Rank 3._
 
-- Your imbue your attacks with the power of the elements.
+You channel elemental forces through your weapons to inflict additional effects.
+
 - Choose an element from the list that you are attuned to. Your next attack roll against a creature triggers the listed effect:
   - Fire: The target takes a level of burning.
   - Air: The target takes three levels of off-balanced.
@@ -622,7 +641,9 @@ Minor ability. Instant. Rank 3.
 
 #### Elemental Convergence
 
-Major ability. Rank 4.
+_Major ability. Rank 4._
+
+You unleash the full fury of your elemental nature, reshaping the battlefield itself.
 
 - You become a conduit for the element you are most attuned to, channeling its power through your body into the world around you.
 - Choose one element with which you are attuned. You gain the following major ability that corresponds to that element.
