@@ -150,96 +150,36 @@ export async function POST(request: Request) {
       );
     }
 
-    // Step 1: Use 4.1-nano to flesh out the concept
+    // Step 1: Use 4.1-mini to flesh out the concept simply
     const { text: enhancedConcept } = await generateText({
       model: openai("gpt-4.1-mini"),
-      system: `You are an expert at expanding and enriching monster concepts for the Heart Rush TTRPG system. Your job is to take a basic monster concept and flesh it out with more details while preserving the original core idea.
+      system: `You create simple, concise monster descriptions. Keep responses very brief and match the complexity of the input.
 
-# Heart Rush Monster Creation Guidelines
+CRITICAL: For simple 1-2 word inputs, explicitly state they are "simple" and avoid elaboration.
 
-## Core Statblock Format
+Examples:
+- Input: "goblin monk" → "A simple goblin monk, with a single, unflashy ability"
+- Input: "rat" → "A simple rat, basic creature, no abilities"
+- Input: "orc" → "A simple orc warrior, straightforward fighter, 0-1 abilities"
+- Input: "skeleton" → "A simple animated skeleton, basic undead, 0-1 abilities"
+- Input: "wolf" → "A simple wolf, pack hunter, 1-2 abilities"
+- Input: "goblin monk boss" → "A goblin monk, master of advanced martial arts. Boss power level, a few abilities"
+- Input: "ancient dragon" → "An ancient dragon, legendary creature with devastating breath and magic, 4-5 abilities"
+- Input: "fire elemental lord" → "A fire elemental lord, elite creature commanding flames and heat, 3-4 abilities"
 
-### Basic Template
-**Name**: [Monster Name]
-*[Optional Subtitle]*
-**Size**: [S/M/L/L2/L3/etc.]
-[Might]/[Agility]/[Cunning]/[Presence] **HD** [d4-d20] **HP** [Number] **w** [Threshold or /]
-**A** +[Bonus] **D** +[Bonus]
-- [Special Ability 1]
-- [Special Ability 2]
-
-### Size Categories
-- **S** - Small (halflings, goblins, small animals)
-- **M** - Medium (humans, most humanoids)
-- **L** - Large (ogres, horses)
-- **L2** - Huge (giants, young dragons)
-- **L3+** - Gargantuan (ancient dragons, titans)
-- Sizes can go up to L8 or higher for truly massive creatures
-
-### Ability Scores (Might/Agility/Cunning/Presence)
-- Each ability uses a die from d4 to d20
-- **d4** - Terrible (weakest possible)
-- **d6** - Poor
-- **d8** - Average
-- **d10** - Good
-- **d12** - Excellent
-- **d20** - Legendary (strongest possible)
-
-### Heart Die (HD)
-Represents the creature's stamina and fighting spirit. Ranges from d4 to d20.
-- **d4-d6** - Fragile creatures
-- **d8-d10** - Standard combatants
-- **d12-d20** - Elite or boss monsters
-
-### Hit Points (HP)
-The creature's total health pool. Generally scales with size and threat level.
-
-### Wound Threshold (w)
-The minimum damage needed to inflict a wound. Use "/" if the creature cannot be wounded.
-- Small creatures: 5-10
-- Medium creatures: 10-15
-- Large creatures: 15-20
-- Boss monsters: 20+
-
-### Attack and Defense Bonuses
-- **A** (Attack): Flat bonus added to attack rolls
-- **D** (Defense): Flat bonus added to defense rolls
-- Can specify different bonuses vs damage types: **D** +8(s/p) +4(b) means +8 vs slashing/piercing, +4 vs bludgeoning
-
-## Special Abilities Guidelines
-
-### Common Ability Types
-- **Conditional Advantages**: "Adv A when [condition]" or "Adv D when [condition]"
-- **A2/D2**: Double advantage on attacks/defense
-- **Status Effects**: Apply conditions like poisoned, dazed, off-balanced, weakened, stunned, blinded, frightened
-- **Triggered Abilities**: "On stance beat, [effect]" or "When [trigger], [effect]"
-- **Saving Throws**: MC/AC/CC/PC with DCs typically 8-12, with 15+ for devastating effects
-- **Usage Limitations**: "1/engagement", "1/round", "recharge 5-6"
-
-### Environmental Effects
-- **Difficult Terrain**: "All ground within [distance] is difficult terrain"
-- **Magical Difficult Terrain**: Enhanced version that's harder to navigate
-- **Area Damage**: "All creatures within [distance] take [damage] per round"
-- **Conditions**: Apply ongoing effects like slowed, blinded, prone
-
-DO NOT change the core concept - only add details, context, and tactical considerations that would help create a more interesting and balanced monster statblock.`,
-      prompt: `Take this monster concept and expand it with more tactical and thematic details while keeping the original idea intact: ${concept}
-
-Provide more context about:
-- What role this creature fills in combat
-- Key thematic elements that should translate to abilities
-- Suggested tactical challenges it should present to players
-- Environmental considerations or signature moves
-- Rough power level (minion, standard, elite, boss, multi-part)
-
-Keep the response focused and under 200 words.`,
+For simple inputs (1-2 words): Always use "simple" and keep under 10 words.
+For complex inputs: Elaborate appropriately but stay under 20 words.`,
+      prompt: `Create a simple description for: ${concept}`,
     });
+
+    console.log(enhancedConcept);
+    // throw new Error("test");
 
     // Step 2: Use the enhanced concept to generate the full monster with 4.1
     const { object } = await generateObject({
       model: openai("gpt-4.1"),
       schema: monsterSchema,
-      system: `You are an expert at creating monsters for the Heart Rush TTRPG system. Generate balanced, interesting monster statblocks that follow the game's design principles.
+      system: `You are an expert at creating monsters for the Heart Rush TTRPG system. Generate balanced, interesting monster statblocks that follow the game's design principles, and match the complexity of the input.
 
 # Heart Rush Monster Creation Guidelines
 
@@ -415,7 +355,7 @@ Create monsters that are tactically interesting and thematically coherent.`,
 
 ${enhancedConcept}
 
-Create a balanced, tactically interesting monster that matches the expanded concept. Include appropriate special abilities that reflect the thematic elements and tactical role described.`,
+Create a monster that matches the complexity of the concept. Include appropriate special abilities that reflect the thematic elements and tactical role described, if any.`,
     });
 
     return Response.json({ object });
