@@ -229,7 +229,7 @@ Represents the creature's stamina and fighting spirit. Ranges from d4 to d20.
 - **d12-d20** - Elite or boss monsters
 
 ### Hit Points (HP)
-The creature's total health pool. Can range from 20 (weak creatures) to 1000 (ancient dragons). Humans typically have 40-200 HP.
+The creature's total health pool. Can range from 20 (weak creatures) to 1000 (ancient dragons). Humanoids have minimum 40 HP, and up to 200.
 
 ### Wound Threshold (w)
 The minimum damage needed to inflict a wound. Use "/" if the creature cannot be wounded.
@@ -362,10 +362,10 @@ A towering, spider-like creature with countless skeletal legs. Players must dest
 6. For multi-part monsters, create meaningful interactions between components
 
 Create monsters that are tactically interesting and thematically coherent.`,
-      prompt: `Generate a complete Heart Rush monster statblock based on this enhanced concept:
+      prompt: `Generate a complete Heart Rush monster statblock based on this concept:
 
 Concept: ${concept}
-Further Clarification: ${enhancedConcept}
+${enhancedConcept}
 
 Create a monster that matches the complexity of the concept. Include appropriate special abilities that reflect the thematic elements and tactical role described, if any.`,
     });
