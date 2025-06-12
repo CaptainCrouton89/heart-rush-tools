@@ -298,16 +298,17 @@ Light represents revelation, truth, and illumination. Those attuned to light can
 
 - You can produce bright light in a 30-foot radius, and dim light 30 feet beyond that. It dispels magical darkness. By touching an inanimate object, it gains this property. You cannot produce more than one source of light.
 - You may inflict three levels of blindness to creatures you are touching.
+- You are immune to blindness caused by bright light.
 
 #### Advanced Attunement
 
 - The bright light you can produce extends up to 60 feet, and 60 feet of dim light beyond that. You can produce up to three sources of this light.
-- You may cast blinding sun on yourself any number of times per day.
+- You may use the _blinding sun_ talent on yourself any number of times per day.
 
 #### Paragon Attunement
 
 - You can raise the light level to dim light in any number of locations that you can see. This overrides any magical darkness, and cannot be turned into darkness.
-- Whenever you cast blinding sun, you may inflict up to 5 levels of blindness.
+- Whenever you use _blinding sun_, you may inflict up to 5 levels of blindness.
 
 ### Darkness
 

@@ -156,9 +156,7 @@ You move at your climb speed (5 feet unless stated differently). You have advant
 
 _Leveled. Fading._
 
-When you take levels of burning, immediately take Xd6 burning damage, where X is the number of levels of burning you received.
-
-While you have levels of burning, at the end of each round, take 1d6 damage for each level of burning affecting you.
+While you have levels of burning, at the end of each round, take 1d6 damage for each level of burning effecting you.
 
 As an action, you or another creature can attempt to put out the fire, and remove half of the levels affecting you, rounded up. If you would be drenched or submerged in a nonflammable liquid, immediately remove all levels of burning.
 
