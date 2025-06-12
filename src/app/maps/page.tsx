@@ -35,8 +35,8 @@ export default function MapsPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-background">
-        <div className="container mx-auto p-6">
-          <h1 className="text-4xl font-bold mb-8 text-foreground">Maps</h1>
+        <div className="container mx-auto px-4 py-8 max-w-6xl">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-8">Maps</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="bg-card rounded-lg border border-border overflow-hidden animate-pulse">
@@ -55,9 +55,9 @@ export default function MapsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto p-6">
+      <div className="container mx-auto px-4 py-8 max-w-6xl">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4 text-foreground">Maps</h1>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">Maps</h1>
           <p className="text-muted-foreground text-lg">
             Explore the world of Heart Rush with high-resolution interactive maps
           </p>
@@ -77,7 +77,7 @@ export default function MapsPage() {
               <Link
                 key={map.name}
                 href={`/maps/${map.name}`}
-                className="group bg-card rounded-lg border border-border overflow-hidden hover:border-primary/50 transition-all duration-200 hover:shadow-lg"
+                className="group bg-card rounded-lg border border-border overflow-hidden hover:border-primary/50 transition-all duration-200 hover:shadow-lg hover:shadow-primary/5"
               >
                 <div className="relative w-full h-48 bg-muted overflow-hidden">
                   {map.exists ? (

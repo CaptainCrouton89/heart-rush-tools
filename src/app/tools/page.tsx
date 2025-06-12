@@ -59,7 +59,7 @@ export default function ToolsPage() {
                     {tool.description}
                   </p>
                   <div className="mt-3 flex items-center justify-between">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent/20 text-accent-foreground">
                       {tool.status === "available"
                         ? "Available"
                         : "Coming Soon"}

@@ -4,149 +4,104 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Heart Rush Digital Rulebook is a Next.js 15+ web application that transforms large TTRPG rulebook markdown files into a searchable, wiki-style interface. The application features a content compilation system that processes source markdown files from `heart_rush/` into smaller, navigable JSON sections.
+Heart Rush Digital Rulebook - A Next.js 15 web application that serves as a searchable, wiki-style digital rulebook for the Heart Rush TTRPG. The app transforms large source markdown files into navigable web content with fuzzy search, cross-references, and both player and GM content.
 
 ## Development Commands
 
-```bash
-# Development
-pnpm dev                    # Start dev server with content compilation on port 3909
-pnpm compile-content        # Process markdown files into JSON sections
-pnpm content:watch          # Watch heart_rush/ for changes and recompile
+- `pnpm run dev` - Start development server (includes content compilation and runs on port 3909)
+- `pnpm run build` - Production build (compiles content first, then builds Next.js)
+- `pnpm run lint` - Run ESLint
+- `pnpm run compile-content` - Compile markdown files from heart_rush/ into content/ JSON files
+- `pnpm run content:watch` - Watch source markdown files and recompile on changes
 
-# Build & Deploy
-pnpm build                  # Compile content then build for production
-pnpm start                  # Start production server
-pnpm lint                   # Run ESLint
+## Content Architecture
 
-# Content Management
-tsx scripts/compile-content.ts  # Direct compilation script execution
-```
+The app uses a custom content compilation system that transforms source markdown files into structured JSON:
 
-## Architecture Overview
+### Source Content Structure
 
-### Content Pipeline
+- `heart_rush/all_sections_formatted/` - Main rulebook sections (markdown files)
+- `heart_rush/races/` - Individual race files
+- `heart_rush/talents/` - Combat and non-combat talent files
+- `heart_rush/gm_guide/` - GM-specific content
 
-1. **Source Files**: `heart_rush/all_sections_formatted/` contains markdown files with frontmatter
-2. **Compilation**: `scripts/compile-content.ts` processes markdown into JSON sections
-3. **Output**: `content/` directory contains individual section files, navigation tree, and search index
-4. **Runtime**: Next.js App Router serves content with client-side search via Fuse.js
+### Compiled Content Structure
+
+- `content/` - Generated JSON files for player content (gitignored)
+- `content/gm/` - Generated JSON files for GM content
+- Content is split by headers into individual sections with metadata
+
+### Key Compilation Script
+
+`scripts/compile-content.ts` is the core content processor that:
+
+- Combines race files into a single Kin\_&_Culture.md
+- Combines talent files into a single Talents.md
+- Processes markdown files and splits them by headers
+- Generates slugs, metadata, cross-references, and navigation trees
+- Outputs structured JSON for the Next.js app to consume
+
+## Architecture
+
+### Tech Stack
+
+- Next.js 15 with App Router
+- TypeScript (strict mode)
+- Tailwind CSS
+- Fuse.js for search
+- Gray-matter for markdown processing
 
 ### Key Directories
 
-- `src/app/` - Next.js App Router pages and API routes
-- `src/components/` - React components organized by function (layout, content, search, ui)
-- `src/lib/` - Utility functions for content loading and processing
+- `src/app/` - Next.js app router pages and API routes
+- `src/components/` - React components (layout, content, search, ui)
+- `src/lib/` - Utilities (content loading, search, talent/race processing)
 - `src/types/` - TypeScript type definitions
-- `content/` - Generated JSON files (gitignored, created by compilation)
 - `scripts/` - Content processing and utility scripts
 
-### Data Flow
+### Route Structure
 
-Content follows this pattern: Source MD → Compilation → JSON Storage → Runtime Loading → Component Rendering
-
-## Content System
-
-### Source File Format
-
-Source files in `heart_rush/all_sections_formatted/` use frontmatter and are automatically processed into smaller sections based on headers (H1-H3).
-
-### Generated Content Structure
-
-- Each section becomes a JSON file in `content/` with metadata (slug, title, category, tags, cross-references, reading time)
-- Navigation tree built automatically based on header hierarchy
-- Cross-references extracted from content for internal linking
-- Search index generated for Fuse.js
+- `/[slug]` - Individual content pages
+- `/category/[slug]` - Category overview pages
+- `/gm/[slug]` - GM-specific content pages
+- `/search` - Search results page
+- `/tools/monster-generator` - AI-powered monster generation tool
+- `/maps/` - Interactive map pages
 
 ### Content Loading
 
-Use functions from `src/lib/content.ts`:
+Content is loaded server-side from the compiled JSON files. The `src/lib/content.ts` file contains utilities for:
 
-- `getContentBySlug()` - Load individual sections
-- `getAllContentMetadata()` - Get lightweight metadata for listings
-- `getNavigationTree()` - Get hierarchical navigation structure
-- `getBreadcrumbs()` - Get breadcrumb trail for current page
+- Loading individual content sections
+- Building navigation trees
+- Generating breadcrumbs
+- Cross-reference resolution
 
-## Component Architecture
+### Search System
 
-### Layout Components
+Uses Fuse.js for client-side fuzzy search across all content with weighted scoring (titles, headers, content, tags).
 
-- `AppLayout` - Root layout with sidebar and main content area
-- `Sidebar` - Navigation tree with collapsible sections
-- `MainContent` - Content rendering area with table of contents
-- `ThemeProvider` - Dark/light theme context with system preference detection
+## Features
 
-### Content Components
+### Core Platform Features
+- **Content Compilation System** ([CONTENT_COMPILATION_SYSTEM.md](./CONTENT_COMPILATION_SYSTEM.md)) - Transforms source markdown into optimized JSON content
+- **Search System** ([SEARCH_SYSTEM.md](./SEARCH_SYSTEM.md)) - Client-side fuzzy search with tag filtering and real-time results
+- **Navigation System** ([NAVIGATION_SYSTEM.md](./NAVIGATION_SYSTEM.md)) - Hierarchical navigation with breadcrumbs and table of contents
+- **Content Rendering** ([CONTENT_RENDERING.md](./CONTENT_RENDERING.md)) - Markdown rendering with cross-references and interactive elements
+- **Theme System** ([THEME_SYSTEM.md](./THEME_SYSTEM.md)) - Dark/light mode with system preference detection
 
-- `MarkdownRenderer` - Renders JSON content with cross-reference linking
-- `CrossReferenceLink` - Handles internal links between sections
-- `Breadcrumbs` - Shows navigation path
-- `TableOfContents` - Auto-generated from content headers
+### GM Tools & Features
+- **GM Mode** ([GM_MODE.md](./GM_MODE.md)) - Separate GM content hierarchy and context management
+- **AI Monster Generator** ([AI_MONSTER_GENERATOR.md](./AI_MONSTER_GENERATOR.md)) - OpenAI-powered monster stat block generation
+- **PDF Export** ([PDF_EXPORT.md](./PDF_EXPORT.md)) - Complete rulebook PDF generation with table formatting
 
-### Search Components
+### Interactive Features
+- **Maps System** ([MAPS_SYSTEM.md](./MAPS_SYSTEM.md)) - High-resolution interactive map viewing with zoom/pan
 
-- `SearchInput` - Debounced search with keyboard shortcuts (Cmd/Ctrl+K)
-- Search uses Fuse.js for fuzzy matching with weighted results
+## Development Notes
 
-## TypeScript Standards
-
-### Key Types
-
-- `ContentSection` - Full content with metadata
-- `ContentMetadata` - Lightweight version for listings
-- `NavigationNode` - Hierarchical navigation structure
-- `SearchResult` - Search results with scoring and highlights
-
-### Development Rules
-
-- Keep scripts organized among subfolders within the /scripts folder
-- Don't use the "any" type
-- Strict TypeScript mode enabled
-- All components must be properly typed
-- Do not test by running the application—it is already running
-- Use interfaces from `src/types/content.ts`
-
-## Routing Structure
-
-```
-/                           # Homepage with content overview
-/[slug]                     # Individual content pages (flat routing)
-/api/navigation             # Navigation tree API
-/api/breadcrumbs/[slug]     # Breadcrumb data API
-```
-
-Note: Uses flat routing with single `[slug]` parameter. All content is accessible at root level regardless of hierarchy.
-
-## Search Implementation
-
-Search is client-side using Fuse.js with:
-
-- Weighted scoring (title: 3x, content: 2x, tags: 1x)
-- Fuzzy matching with configurable threshold
-- Real-time filtering by category and tags
-- Debounced input (300ms) for performance
-- Results include highlighted matches and snippets
-
-## Performance Considerations
-
-- Content caching in production via Map-based cache in `content.ts`
-- Static generation for all routes at build time
-- Lightweight metadata loading for listings and navigation
-- Progressive loading of full content only when needed
-- Search index pre-generated at build time
-
-## Content Development Workflow
-
-1. Edit source files in `heart_rush/all_sections_formatted/`
-2. Run `pnpm content:watch` during development for auto-recompilation
-3. Source files are automatically split into sections based on headers
-4. Cross-references and tags extracted automatically
-5. Navigation tree and search index regenerated on each compilation
-
-## Important Patterns
-
-- All content operations are async and handle errors gracefully
-- Use caching functions from `content.ts` to avoid repeated file reads
-- Follow existing component patterns for consistency
-- Cross-references use slug-based linking for internal navigation
-- Theme state persists across sessions via localStorage
+- Content must be compiled before running dev/build (handled automatically by npm scripts)
+- TypeScript strict mode enabled
+- Port 3909 used for development to avoid conflicts
+- Images stored in `public/heart_rush/` and served statically
+- No caching in development mode for easier iteration

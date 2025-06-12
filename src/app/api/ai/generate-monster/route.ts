@@ -70,7 +70,7 @@ const baseMonsterSchema = z.object({
   heartDie: dieSchema.describe(
     "The creature's heart die (stamina/fighting spirit)"
   ),
-  hp: z.number().int().min(1).describe("Hit points"),
+  hp: z.number().int().min(20).describe("Hit points - 40 is 'average'"),
   woundThreshold: z
     .number()
     .int()
@@ -153,10 +153,12 @@ export async function POST(request: Request) {
     // Step 1: Use 4.1-nano to determine monster level and complexity
     const { text: enhancedConcept } = await generateText({
       model: openai("gpt-4.1-nano"),
+      temperature: 0.3,
       system: `You analyze monster concepts and determine their level and complexity. Respond with the format:
 
 LEVEL: [level]
 ABILITIES: [number]
+HEALTH: [hp estimate]
 DESCRIPTION: [brief description]
 
 Monster levels:
@@ -175,11 +177,19 @@ Ability count guidelines:
 - boss: 4-6 abilities
 - legendary: 6+ abilities
 
+Health estimate guidelines (based on physical realism + monster power):
+- basic creature: 15-80 HP (rats ~15, dogs ~20, goblins ~40)
+- standard: 40-150 HP (orc warriors ~60, wolves ~35, trained humans ~60, bears ~150)
+- elite: 100-200 HP (goblin chiefs ~100, veteran knights ~80, bears ~200)
+- mini-boss: 150-300 HP (ogre chiefs ~150, wyverns ~250)
+- boss: 200-400 HP (dragons ~400, giants ~600, gorgons ~300)
+- legendary: 400+ HP (ancient dragons ~800, titans ~1000)
+
 Examples:
-- Input: "goblin" → LEVEL: basic creature, ABILITIES: 1, DESCRIPTION: A simple goblin warrior with basic pack tactics
-- Input: "orc chieftain" → LEVEL: elite, ABILITIES: 3, DESCRIPTION: An orc chieftain, veteran warrior with command abilities
-- Input: "ancient dragon" → LEVEL: boss, ABILITIES: 5, DESCRIPTION: An ancient dragon with devastating breath, magic, and legendary presence
-- Input: "rat" → LEVEL: basic creature, ABILITIES: 0, DESCRIPTION: A simple rat, basic animal with no special abilities`,
+- Input: "goblin" → LEVEL: basic creature, ABILITIES: 1, HEALTH: 30, DESCRIPTION: A simple goblin warrior with basic pack tactics
+- Input: "orc chieftain" → LEVEL: elite, ABILITIES: 3, HEALTH: 100, DESCRIPTION: An orc chieftain, veteran warrior with command abilities
+- Input: "ancient dragon" → LEVEL: boss, ABILITIES: 5, HEALTH: 800, DESCRIPTION: An ancient dragon with devastating breath, magic, and legendary presence
+- Input: "rat" → LEVEL: basic creature, ABILITIES: 0, HEALTH: 15, DESCRIPTION: A simple rat, basic animal with no special abilities`,
       prompt: `Analyze this monster concept: ${concept}`,
     });
 
@@ -190,6 +200,7 @@ Examples:
     const { object } = await generateObject({
       model: openai("gpt-4.1"),
       schema: monsterSchema,
+      temperature: 0.5,
       system: `You are an expert at creating monsters for the Heart Rush TTRPG system. Generate balanced, interesting monster statblocks that follow the game's design principles, and match the complexity of the input.
 
 # Heart Rush Monster Creation Guidelines
