@@ -1,4 +1,4 @@
-### Cryomancy
+## Cryomancy
 
 _Passive ability. Water._
 

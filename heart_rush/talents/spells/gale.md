@@ -1,4 +1,4 @@
-### Gale
+## Gale
 
 _Major ability. Air. Ongoing._
 

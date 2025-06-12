@@ -1,4 +1,4 @@
-### Heat Stroke
+## Heat Stroke
 
 _Major ability. Fire. Ongoing._
 

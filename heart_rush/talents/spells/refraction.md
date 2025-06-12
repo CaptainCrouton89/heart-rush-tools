@@ -1,4 +1,4 @@
-### Refraction
+## Refraction
 
 _Major ability. Light. Ongoing._
 

@@ -1,4 +1,4 @@
-### Leaden Fists
+## Leaden Fists
 
 _Major ability. Earth. Ongoing._
 

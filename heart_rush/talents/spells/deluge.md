@@ -1,4 +1,4 @@
-### Deluge
+## Deluge
 
 _Heart ability. Water and Force._
 

@@ -591,7 +591,7 @@ You can transform your body to embody the essence of your chosen element.
 
 #### Earth: Heart of Stone
 
-- As an instant free action, you may enter or exit the Heart of Stone state.
+- As an instant ability, you may enter or exit the Heart of Stone state.
 - While in this state, your footsteps shudder with the weight of 1000 pounds, your skin turns cold and gray like stone, and your movements slow.
 - You are imbued with the fortitude of the earth, and gain the following abilities:
   - Subtract 1 from all damage dealt to you.

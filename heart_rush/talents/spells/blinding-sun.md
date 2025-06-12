@@ -1,4 +1,4 @@
-### Blinding Sun
+## Blinding Sun
 
 _Major ability. Light. Ongoing._
 

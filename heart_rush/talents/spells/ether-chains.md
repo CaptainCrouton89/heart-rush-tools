@@ -1,4 +1,4 @@
-### Ether Chains
+## Ether Chains
 
 _Major ability. Force. Ongoing._
 

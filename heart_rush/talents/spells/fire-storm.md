@@ -1,4 +1,4 @@
-### Fire Storm
+## Fire Storm
 
 _Major ability. Air and Fire. Ongoing._
 

@@ -1,4 +1,4 @@
-### Time Cube
+## Time Cube
 
 _Major ability. Time. Instant._
 

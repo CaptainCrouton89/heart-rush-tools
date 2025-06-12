@@ -1,4 +1,4 @@
-### Hand of Lorus
+## Hand of Lorus
 
 _Major ability. Dark. Ongoing._
 

@@ -1,4 +1,4 @@
-### Flame Dance
+## Flame Dance
 
 _Major ability. Fire. Ongoing._
 

@@ -1,4 +1,4 @@
-### Wall of Stone
+## Wall of Stone
 
 _Major ability. Earth._
 

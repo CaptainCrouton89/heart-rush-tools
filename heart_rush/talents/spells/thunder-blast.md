@@ -1,4 +1,4 @@
-### Thunder Blast
+## Thunder Blast
 
 _Major ability. Air._
 

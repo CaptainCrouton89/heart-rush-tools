@@ -1,4 +1,4 @@
-### Time Twister
+## Time Twister
 
 _Major ability. Time._
 

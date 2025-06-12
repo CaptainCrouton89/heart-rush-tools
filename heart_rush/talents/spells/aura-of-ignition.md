@@ -1,4 +1,4 @@
-### Aura of Ignition
+## Aura of Ignition
 
 _Weekly ability. Fire. Ongoing._
 

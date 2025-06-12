@@ -1,4 +1,4 @@
-### Pyromania
+## Pyromania
 
 _Major ability. Fire. Ongoing._
 

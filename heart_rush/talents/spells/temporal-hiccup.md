@@ -1,4 +1,4 @@
-### Temporal Hiccup
+## Temporal Hiccup
 
 _Major ability. Time. Instant._
 

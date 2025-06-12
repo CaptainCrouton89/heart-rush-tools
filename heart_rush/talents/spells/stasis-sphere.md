@@ -1,4 +1,4 @@
-### Stasis Sphere
+## Stasis Sphere
 
 _Major ability. Void. Ongoing._
 

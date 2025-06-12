@@ -1,4 +1,4 @@
-### Punishing Glare
+## Punishing Glare
 
 _Major ability. Force and Light. Ongoing._
 

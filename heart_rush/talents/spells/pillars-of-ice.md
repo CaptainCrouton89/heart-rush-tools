@@ -1,4 +1,4 @@
-### Pillars of Ice
+## Pillars of Ice
 
 _Major ability. Ice._
 

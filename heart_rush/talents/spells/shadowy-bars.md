@@ -1,4 +1,4 @@
-### Shadowy Bars
+## Shadowy Bars
 
 _Major ability. Earth and Dark. Ongoing._
 

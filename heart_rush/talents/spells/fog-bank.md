@@ -1,4 +1,4 @@
-### Fog Bank
+## Fog Bank
 
 _Major ability. Water. Ongoing._
 

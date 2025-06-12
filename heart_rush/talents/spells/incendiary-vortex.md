@@ -1,4 +1,4 @@
-### Incendiary Vortex
+## Incendiary Vortex
 
 _Major ability. Fire and Void._
 

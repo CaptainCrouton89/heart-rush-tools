@@ -1,4 +1,4 @@
-### Magma Rain
+## Magma Rain
 
 _Major ability. Earth and Fire._
 

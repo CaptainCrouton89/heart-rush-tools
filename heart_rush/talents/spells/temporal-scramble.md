@@ -1,4 +1,4 @@
-### Temporal Scramble
+## Temporal Scramble
 
 _Major ability. Time. Instant._
 

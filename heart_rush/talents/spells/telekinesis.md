@@ -1,4 +1,4 @@
-### Telekinesis
+## Telekinesis
 
 _Passive ability. Force. Ongoing._
 

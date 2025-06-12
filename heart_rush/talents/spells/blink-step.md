@@ -1,4 +1,4 @@
-### Blink Step
+## Blink Step
 
 _Heart ability. Instant. Void._
 

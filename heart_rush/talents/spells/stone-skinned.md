@@ -1,4 +1,4 @@
-### Stone Skinned
+## Stone Skinned
 
 _Passive ability. Earth._
 

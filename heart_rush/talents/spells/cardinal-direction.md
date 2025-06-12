@@ -1,4 +1,4 @@
-### Cardinal Direction
+## Cardinal Direction
 
 _Major ability. Void and Force. Ongoing._
 

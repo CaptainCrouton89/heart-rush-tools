@@ -1,4 +1,4 @@
-### Force Strike
+## Force Strike
 
 _Heart ability. Force. Ongoing._
 

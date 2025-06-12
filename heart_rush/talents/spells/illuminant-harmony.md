@@ -1,4 +1,4 @@
-### Illuminant Harmony
+## Illuminant Harmony
 
 _Major ability. Light and Dark. Ongoing._
 

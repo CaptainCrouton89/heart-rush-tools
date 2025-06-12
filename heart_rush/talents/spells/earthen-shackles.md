@@ -1,4 +1,4 @@
-### Earthen Shackles
+## Earthen Shackles
 
 _Heart ability. Earth and Force._
 

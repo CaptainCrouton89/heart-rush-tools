@@ -1,4 +1,4 @@
-### Shadowy Double
+## Shadowy Double
 
 _Heart ability. Dark. Ongoing._
 

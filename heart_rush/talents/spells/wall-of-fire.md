@@ -1,4 +1,4 @@
-### Wall of Fire
+## Wall of Fire
 
 _Major ability. Fire. Ongoing._
 

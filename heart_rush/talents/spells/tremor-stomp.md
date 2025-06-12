@@ -1,4 +1,4 @@
-### Tremor Stomp
+## Tremor Stomp
 
 _Major ability. Earth._
 

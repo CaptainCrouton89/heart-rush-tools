@@ -1,4 +1,4 @@
-### Fire Fist
+## Fire Fist
 
 _Major ability. Fire. Ongoing._
 

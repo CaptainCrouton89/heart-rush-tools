@@ -1,4 +1,4 @@
-### Lightning Aura
+## Lightning Aura
 
 _Major ability. Light and Air. Ongoing._
 

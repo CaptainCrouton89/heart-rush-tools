@@ -1,4 +1,4 @@
-### Billowing Smoke
+## Billowing Smoke
 
 _Major ability. Fire. Ongoing._
 

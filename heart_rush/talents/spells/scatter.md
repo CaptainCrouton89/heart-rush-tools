@@ -1,4 +1,4 @@
-### Scatter
+## Scatter
 
 _Weekly ability. Void._
 

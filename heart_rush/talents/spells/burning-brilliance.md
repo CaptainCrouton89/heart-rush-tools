@@ -1,4 +1,4 @@
-### Burning Brilliance
+## Burning Brilliance
 
 _Major ability. Fire and Light. Ongoing._
 

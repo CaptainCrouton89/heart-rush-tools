@@ -1,4 +1,4 @@
-### Collapse in Shadows
+## Collapse in Shadows
 
 _Heart ability. Dark and Force._
 

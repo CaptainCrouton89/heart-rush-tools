@@ -1,4 +1,4 @@
-### Hotter Flames
+## Hotter Flames
 
 _Passive ability. Fire._
 

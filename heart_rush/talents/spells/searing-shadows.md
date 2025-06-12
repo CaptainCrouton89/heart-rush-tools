@@ -1,4 +1,4 @@
-### Searing Shadows
+## Searing Shadows
 
 _Major ability. Fire and Dark. Ongoing._
 
