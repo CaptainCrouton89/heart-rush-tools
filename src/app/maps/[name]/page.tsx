@@ -33,7 +33,7 @@ export default function MapPage() {
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [scrollPos, setScrollPos] = useState({ x: 0, y: 0 });
   const [cachedImages, setCachedImages] = useState<Record<string, boolean>>({});
-  const [preloadedImages, setPreloadedImages] = useState<Record<string, HTMLImageElement>>({});
+  const [imageLoadingStates, setImageLoadingStates] = useState<Record<string, boolean>>({});
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleZoomIn = useCallback(() => {
@@ -103,47 +103,59 @@ export default function MapPage() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isFullscreen]);
 
-  // Preload images for faster switching with priority system
+  // Preload images for faster switching
   useEffect(() => {
     const qualities: ('low' | 'medium' | 'high')[] = ['low', 'medium', 'high'];
     
-    // Prioritize current quality, then others
-    const prioritizedQualities = [currentQuality, ...qualities.filter(q => q !== currentQuality)];
-    
-    prioritizedQualities.forEach((quality, index) => {
+    qualities.forEach((quality) => {
       const imagePath = `/heart_rush/maps/images/${mapName}_${quality}.jpg`;
       
-      if (!preloadedImages[quality]) {
-        // Add a small delay for non-current qualities to not block the main image
-        const delay = index === 0 ? 0 : index * 100;
+      if (!cachedImages[quality] && !imageLoadingStates[quality]) {
+        setImageLoadingStates(prev => ({ ...prev, [quality]: true }));
         
+        // Use Next.js image preloading for better integration
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = imagePath;
+        
+        link.onload = () => {
+          setCachedImages(prev => ({ ...prev, [quality]: true }));
+          setImageLoadingStates(prev => ({ ...prev, [quality]: false }));
+        };
+        
+        link.onerror = () => {
+          console.warn(`Failed to preload ${quality} quality image:`, imagePath);
+          setImageLoadingStates(prev => ({ ...prev, [quality]: false }));
+        };
+        
+        document.head.appendChild(link);
+        
+        // Cleanup function to remove the link after some time
         setTimeout(() => {
-          const img = new Image();
-          img.src = imagePath;
-          img.onload = () => {
-            setCachedImages(prev => ({ ...prev, [quality]: true }));
-            setPreloadedImages(prev => ({ ...prev, [quality]: img }));
-          };
-          img.onerror = () => {
-            console.warn(`Failed to preload ${quality} quality image:`, imagePath);
-          };
-        }, delay);
+          if (document.head.contains(link)) {
+            document.head.removeChild(link);
+          }
+        }, 5000);
       }
     });
-  }, [mapName, currentQuality, preloadedImages]);
+  }, [mapName, cachedImages, imageLoadingStates]);
 
   // Effect to handle quality switching based on zoom level
   useEffect(() => {
     const requiredQuality = getImageQuality(zoom);
     
     if (requiredQuality !== currentQuality) {
-      // Only show loading state if the image isn't cached
-      if (!cachedImages[requiredQuality]) {
-        setIsLoadingNewQuality(true);
-      }
-      setCurrentQuality(requiredQuality);
+      // Start transition
+      setIsLoadingNewQuality(true);
+      setImageLoaded(false);
+      
+      // Small delay to ensure smooth transition
+      setTimeout(() => {
+        setCurrentQuality(requiredQuality);
+      }, 50);
     }
-  }, [zoom, currentQuality, cachedImages]);
+  }, [zoom, currentQuality]);
 
   const handleImageLoad = useCallback(() => {
     setImageLoaded(true);
@@ -157,17 +169,14 @@ export default function MapPage() {
     setIsLoadingNewQuality(false);
   }, []);
 
-  // Reset image loaded state when quality changes
+  // Handle immediate quality switching for cached images
   useEffect(() => {
-    if (cachedImages[currentQuality]) {
-      // Image is cached, no need to show loading
+    if (cachedImages[currentQuality] && isLoadingNewQuality) {
+      // Image is cached, immediately show it
       setImageLoaded(true);
       setIsLoadingNewQuality(false);
-    } else {
-      // Image not cached, will need to load
-      setImageLoaded(false);
     }
-  }, [currentQuality, cachedImages]);
+  }, [currentQuality, cachedImages, isLoadingNewQuality]);
 
   const mapImagePath = `/heart_rush/maps/images/${mapName}_${currentQuality}.jpg`;
   const displayName = mapName.charAt(0).toUpperCase() + mapName.slice(1);
@@ -207,7 +216,7 @@ export default function MapPage() {
                 </span>
               )}
               <span className="text-xs text-muted-foreground">
-                Cached: {Object.values(cachedImages).filter(Boolean).length}/3
+                Loading: {Object.values(cachedImages).filter(Boolean).length}/3
               </span>
             </div>
           </div>
@@ -286,18 +295,21 @@ export default function MapPage() {
               alt={`${currentQuality.toUpperCase()} resolution map of ${displayName}`}
               width={imageDimensions.width}
               height={imageDimensions.height}
-              priority={currentQuality === 'low'}
+              priority={true}
               quality={currentQuality === 'high' ? 100 : 85}
               onLoad={handleImageLoad}
               onError={handleImageError}
-              className={`transition-opacity duration-300 ${imageLoaded && !isLoadingNewQuality ? 'opacity-100' : 'opacity-70'} pointer-events-none select-none`}
+              className={`transition-opacity duration-200 ease-out ${imageLoaded && !isLoadingNewQuality ? 'opacity-100' : 'opacity-0'} pointer-events-none select-none`}
               style={{
                 maxWidth: 'none',
                 width: '100%',
                 height: '100%',
-                imageRendering: currentQuality === 'low' ? 'auto' : 'crisp-edges'
+                imageRendering: currentQuality === 'low' ? 'auto' : 'crisp-edges',
+                objectFit: 'contain'
               }}
               draggable={false}
+              loading="eager"
+              unoptimized={false}
             />
             
             {isLoadingNewQuality && (
@@ -361,7 +373,7 @@ export default function MapPage() {
                 </span>
               )}
               <span className="text-xs text-muted-foreground">
-                Cached: {Object.values(cachedImages).filter(Boolean).length}/3
+                Loading: {Object.values(cachedImages).filter(Boolean).length}/3
               </span>
             </div>
           </div>
@@ -445,18 +457,21 @@ export default function MapPage() {
               alt={`${currentQuality.toUpperCase()} resolution map of ${displayName}`}
               width={imageDimensions.width}
               height={imageDimensions.height}
-              priority={currentQuality === 'low'}
+              priority={true}
               quality={currentQuality === 'high' ? 100 : 85}
               onLoad={handleImageLoad}
               onError={handleImageError}
-              className={`transition-opacity duration-300 ${imageLoaded && !isLoadingNewQuality ? 'opacity-100' : 'opacity-70'} pointer-events-none select-none`}
+              className={`transition-opacity duration-200 ease-out ${imageLoaded && !isLoadingNewQuality ? 'opacity-100' : 'opacity-0'} pointer-events-none select-none`}
               style={{
                 maxWidth: 'none',
                 width: '100%',
                 height: '100%',
-                imageRendering: currentQuality === 'low' ? 'auto' : 'crisp-edges'
+                imageRendering: currentQuality === 'low' ? 'auto' : 'crisp-edges',
+                objectFit: 'contain'
               }}
               draggable={false}
+              loading="eager"
+              unoptimized={false}
             />
             
             {/* Loading overlay for quality transitions */}
