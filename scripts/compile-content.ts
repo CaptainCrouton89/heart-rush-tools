@@ -718,7 +718,10 @@ These talents also may include the tag "ongoing", indicating that the effect las
         for (const filename of spellsMarkdownFiles) {
           const spellPath = path.join(SPELLS_DIR, filename);
           const spellContent = await fs.readFile(spellPath, "utf-8");
-          combinedContent += spellContent.trim() + "\n\n";
+
+          // Convert ## headers to ### headers for individual talents
+          const adjustedContent = spellContent.replace(/^## /gm, "### ");
+          combinedContent += adjustedContent.trim() + "\n\n";
         }
         console.log(`✅ Combined ${spellsMarkdownFiles.length} spell files`);
       }
