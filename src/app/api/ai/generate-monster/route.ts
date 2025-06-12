@@ -137,6 +137,8 @@ const monsterSchema = baseMonsterSchema.extend({
     .describe("For multi-part monsters like The Skittering Horror"),
 });
 
+export const maxDuration = 60;
+
 export async function POST(request: Request) {
   try {
     const { concept } = await request.json();
