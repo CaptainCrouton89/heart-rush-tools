@@ -32,6 +32,8 @@ export default function MapPage() {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [scrollPos, setScrollPos] = useState({ x: 0, y: 0 });
+  const [cachedImages, setCachedImages] = useState<Record<string, boolean>>({});
+  const [preloadedImages, setPreloadedImages] = useState<Record<string, HTMLImageElement>>({});
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleZoomIn = useCallback(() => {
@@ -101,25 +103,71 @@ export default function MapPage() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isFullscreen]);
 
+  // Preload images for faster switching with priority system
+  useEffect(() => {
+    const qualities: ('low' | 'medium' | 'high')[] = ['low', 'medium', 'high'];
+    
+    // Prioritize current quality, then others
+    const prioritizedQualities = [currentQuality, ...qualities.filter(q => q !== currentQuality)];
+    
+    prioritizedQualities.forEach((quality, index) => {
+      const imagePath = `/heart_rush/maps/images/${mapName}_${quality}.jpg`;
+      
+      if (!preloadedImages[quality]) {
+        // Add a small delay for non-current qualities to not block the main image
+        const delay = index === 0 ? 0 : index * 100;
+        
+        setTimeout(() => {
+          const img = new Image();
+          img.src = imagePath;
+          img.onload = () => {
+            setCachedImages(prev => ({ ...prev, [quality]: true }));
+            setPreloadedImages(prev => ({ ...prev, [quality]: img }));
+          };
+          img.onerror = () => {
+            console.warn(`Failed to preload ${quality} quality image:`, imagePath);
+          };
+        }, delay);
+      }
+    });
+  }, [mapName, currentQuality, preloadedImages]);
+
   // Effect to handle quality switching based on zoom level
   useEffect(() => {
     const requiredQuality = getImageQuality(zoom);
     
     if (requiredQuality !== currentQuality) {
-      setIsLoadingNewQuality(true);
+      // Only show loading state if the image isn't cached
+      if (!cachedImages[requiredQuality]) {
+        setIsLoadingNewQuality(true);
+      }
       setCurrentQuality(requiredQuality);
     }
-  }, [zoom, currentQuality]);
+  }, [zoom, currentQuality, cachedImages]);
 
   const handleImageLoad = useCallback(() => {
     setImageLoaded(true);
     setIsLoadingNewQuality(false);
-  }, []);
+    // Mark this quality as cached
+    setCachedImages(prev => ({ ...prev, [currentQuality]: true }));
+  }, [currentQuality]);
 
   const handleImageError = useCallback(() => {
     setImageError(true);
     setIsLoadingNewQuality(false);
   }, []);
+
+  // Reset image loaded state when quality changes
+  useEffect(() => {
+    if (cachedImages[currentQuality]) {
+      // Image is cached, no need to show loading
+      setImageLoaded(true);
+      setIsLoadingNewQuality(false);
+    } else {
+      // Image not cached, will need to load
+      setImageLoaded(false);
+    }
+  }, [currentQuality, cachedImages]);
 
   const mapImagePath = `/heart_rush/maps/images/${mapName}_${currentQuality}.jpg`;
   const displayName = mapName.charAt(0).toUpperCase() + mapName.slice(1);
@@ -142,7 +190,14 @@ export default function MapPage() {
             </button>
             <h1 className="text-2xl font-bold text-foreground">Map of {displayName}</h1>
             <div className="flex items-center gap-2">
-              <span className="text-xs px-2 py-1 bg-muted rounded-full text-muted-foreground">
+              <span className={`text-xs px-2 py-1 rounded-full flex items-center gap-1 ${
+                cachedImages[currentQuality] 
+                  ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                  : 'bg-muted text-muted-foreground'
+              }`}>
+                {cachedImages[currentQuality] && (
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                )}
                 Quality: {currentQuality.toUpperCase()}
               </span>
               {isLoadingNewQuality && (
@@ -151,6 +206,9 @@ export default function MapPage() {
                   Loading...
                 </span>
               )}
+              <span className="text-xs text-muted-foreground">
+                Cached: {Object.values(cachedImages).filter(Boolean).length}/3
+              </span>
             </div>
           </div>
           
@@ -262,6 +320,7 @@ export default function MapPage() {
           <p>• Mouse wheel to zoom in/out</p>
           <p>• Press F or Escape to exit fullscreen</p>
           <p className="mt-2 text-xs">Map: 20,480 × 20,480 pixels</p>
+          <p className="mt-1 text-xs opacity-75">Images cached for instant switching</p>
         </div>
       </div>
     );
@@ -285,7 +344,14 @@ export default function MapPage() {
             </div>
             <h1 className="text-3xl font-bold text-foreground">Map of {displayName}</h1>
             <div className="flex items-center gap-2 mt-1">
-              <span className="text-xs px-2 py-1 bg-muted rounded-full text-muted-foreground">
+              <span className={`text-xs px-2 py-1 rounded-full flex items-center gap-1 ${
+                cachedImages[currentQuality] 
+                  ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                  : 'bg-muted text-muted-foreground'
+              }`}>
+                {cachedImages[currentQuality] && (
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                )}
                 Quality: {currentQuality.toUpperCase()}
               </span>
               {isLoadingNewQuality && (
@@ -294,6 +360,9 @@ export default function MapPage() {
                   Loading...
                 </span>
               )}
+              <span className="text-xs text-muted-foreground">
+                Cached: {Object.values(cachedImages).filter(Boolean).length}/3
+              </span>
             </div>
           </div>
           
@@ -409,6 +478,7 @@ export default function MapPage() {
             <p>• Mouse wheel to zoom in/out</p>
             <p>• Press F for fullscreen mode</p>
             <p className="mt-2 text-xs">Map: 20,480 × 20,480 pixels</p>
+            <p className="mt-1 text-xs opacity-75">Images preloaded and cached</p>
           </div>
         </div>
       </div>
