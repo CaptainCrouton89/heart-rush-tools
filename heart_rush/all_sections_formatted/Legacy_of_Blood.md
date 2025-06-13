@@ -6,6 +6,23 @@ When you perform legendary feats in battle—moments that make allies gasp and e
 
 The GM awards bloodmarks for combat achievements that go beyond simple victory. Think cinematic moments: defeating a superior foe against impossible odds, protecting allies through heroic sacrifice, or turning the tide of battle through sheer audacity. These aren't participation trophies—they're recognition of the moments when you transcend normal combat into something memorable.
 
+[[When to Award Bloodmarks
+
+Award bloodmarks to players after you feel they have achieved a major, story milestone in combat. Their first bloodmark may be just for defending a caravan from goblin thieves—what matters is that the moment felt significant to the story and the player rose to meet it.
+
+As players progress, raise the bar. Their second bloodmark might come from holding a bridge against overwhelming odds while townsfolk escape. By their third, they should be performing feats that define campaign arcs—slaying the dragon that's terrorized the region, or defeating their rival in single combat before the entire royal court.
+
+Look for moments where:
+
+- The player's actions fundamentally changed the story's direction
+- They achieved victory despite genuine risk of character death
+- Their combat choices created a scene everyone at the table will remember
+- They used the combat system in clever ways that surprised even you
+
+Space bloodmarks to maintain their significance—roughly one every 4-6 sessions feels right for most campaigns. If a player does something truly spectacular, don't hold back just because they earned one recently. Conversely, don't feel pressured to award them on schedule if no worthy moments have occurred.
+
+Remember: bloodmarks represent the evolution from "person who fights" to "warrior of growing legend." Each one should feel earned through memorable action, not simply accumulated through time.]]
+
 ## Bloodmark Progression
 
 Your combat legacy grows with each bloodmark you earn:
