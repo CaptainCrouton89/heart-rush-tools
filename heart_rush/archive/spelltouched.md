@@ -99,3 +99,27 @@ You unleash the full fury of your elemental nature, reshaping the battlefield it
 - For the next minute, you can jump up to 40 feet in the air.
 - Additionally, for each rush point you spent on this ability, you may push any creature within 45 feet 5 feet in any direction at the start of each round.
 - You may choose for them to also gain a level of off-balanced.
+
+### Spirit of Kiev
+
+_Passive ability. Subclass: Spelltouched: Fire._
+
+Your Elemental State ability gains the following additional traits:. Fire ripples up your body. Anyone who begins the round within 10 feet of you takes a level of burning. Levels of burning do not fade from creatures of your choice while they are within 45 feet of you. Levels of burning that you apply can stack up to ten times rather than five.
+
+### Spirit of Ghet
+
+_Passive ability. Subclass: Spelltouched: Earth._
+
+Your Elemental State ability gains the following additional traits:. Your size increases by one. Whenever you are forced to move, you are moved one fourth as far, rounded down. Your skin hardens. You get +6 on all defense rolls. When you deal damage with a melee attack, the defending creature is knocked prone if it is large or smaller.
+
+### Spirit of Seris
+
+_Passive ability. Subclass: Spelltouched: Water._
+
+Your Elemental State ability gains the following additional traits:. Your body takes on an aqueous form, making you far more difficult to hit. You have advantage on defense rolls. Prone creatures within 45 feet can't make attack rolls, as they are smothered in waves.
+
+### Spirit of Aurus
+
+_Passive ability. Subclass: Spelltouched: Air._
+
+Your Elemental State ability gains the following additional traits:. The movement speed of creatures of your choice within 45 feet is reduced by 30.
