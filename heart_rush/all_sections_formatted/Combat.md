@@ -393,6 +393,8 @@ Work with your GM to determine appropriate ability checks and effects. The best 
 
 ## Special Circumstances
 
+Combat rarely unfolds in perfect conditions. Enemies ambush from shadows, battles rage across treacherous terrain, and clever combatants exploit every environmental advantage. Rules for surprising enemies, attacking the helpless, and cover are described here.
+
 ### Surprise
 
 Ambushes and sudden betrayals create devastating first-strike advantages. **When combat erupts unexpectedly, surprised creatures lose their entire first turn** while prepared combatants unleash opportunity attacks.
