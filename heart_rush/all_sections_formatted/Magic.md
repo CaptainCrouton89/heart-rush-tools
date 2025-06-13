@@ -20,10 +20,12 @@ Your journey into elemental magic begins with a single choice: **which element c
 
 ## What Attunement Gives You
 
-Once attuned to an element, you immediately gain two types of magical abilities:
+Once attuned to an element, you immediately gain three types of magical abilities:
+
+**Resonate Substances** - Direct control over the physical manifestations of your element. Water attuned can manipulate liquids, earth attuned shape stone and soil, air attuned control gases. You can sense, manipulate, create, and destroy these substances within range—turning you into a living extension of your element. The specific substances and your control over them (manipulation range, creation rates, sensing distance) depend on your attunement level.
 
 **Cantrips** - Elemental attacks that function like magical weapons during combat. Unlike traditional spells, cantrips have no cooldowns or restrictions—you can use them as freely as swinging a sword. Each element offers both bolt attacks (ranged projectiles) and blast attacks (area effects centered on you).
 
 **Elemental Talents** - Powerful magical effects you can learn, from ongoing environmental changes to instant reality-warping abilities. These function like specialized spells tied to your element, each requiring the appropriate attunement level to access.
 
-Your specific elemental benefits—like a fire attuned's resistance to burning or an earth attuned's ability to shape stone—are detailed in the Elements section of Kethic Elementalism. As your understanding deepens from basic to advanced to paragon attunement, your control over your chosen element grows exponentially.
+Your specific elemental benefits—like a fire attuned's resistance to burning or an earth attuned's ability to shape stone with their bare hands—are detailed in the Elements section of Kethic Elementalism. As your understanding deepens from basic to advanced to paragon attunement, your control over your chosen element grows exponentially.
