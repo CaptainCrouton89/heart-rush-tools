@@ -24,5 +24,5 @@ You do not age and are immune to disease and poison. You need only one-tenth the
 
 ### Chromatic Flux
 
-**Heart ability.**
+**Major ability.**
 Your emotional state causes your skin to shift through brilliant colors, creating hypnotic patterns. As an action, you can intensify this effect, forcing all creatures within 30 feet who can see you to make a cunning saving throw against your presence challenge number or gain 1 level of charmed toward you. Additionally, you can create bright light in a 20-foot radius or dim light in a 40-foot radius at will by glowing.

@@ -28,7 +28,7 @@ In their hidden palace-fortresses beneath tropical reefs, the Kendrel engage in 
 
 #### Mesmerizing Presence
 
-**Heart ability.**
+**Major ability.**
 Your beauty and grace can stop conflicts before they begin. When combat would begin, you may use this ability before initiative is rolled. Each creature makes cunning saving throw against your presence challenge number. Each creature that fails becomes unable to take hostile actions against you for the next minute unless you or your allies attack them first. Affected creatures may still defend themselves if attacked. This ability has no effect on creatures that are already in combat or have been in combat with you within the last hour.
 
 ### Cendoriln (Abyss Kendor)

@@ -1,6 +1,6 @@
 ## Bunker Down
 
-_Heart ability. Martial talent._
+_Minor ability. Martial talent._
 
 You bunker down, preparing for the worst. You may only use this ability if you have a shield. When you bunker down, you gain the following effects until the end of the round:
 

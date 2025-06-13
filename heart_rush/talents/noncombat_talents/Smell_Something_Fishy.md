@@ -1,5 +1,6 @@
 ## Smell Something Fishy
-_Heart ability. Cognitive talent._
+
+_Major ability. Cognitive talent._
 
 When investigating the location of a mystery or crime, you may ask the GM if there are any undiscovered clues related to a question of your choice about whatever event occurred in your location. The GM must answer truthfully.
 

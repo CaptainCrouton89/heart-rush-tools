@@ -30,7 +30,6 @@ This tag is always listed as the first tag.
 
 - **Passive ability**: There are no restrictions on how many times you can use this ability. If the ability is a passive ability, it is assumed to always be active.
 - **Minor Ability**: You may use this ability by spending a rush point for each time you have used this ability including this one during the current encounter. You may not use it outside of an encounter.
-- **Heart Ability**: You may use this ability once per long rest. If you take a wound, you may use the ability again.
 - **Major ability**: You may use this ability once per long rest.
 - **Weekly Ability**: You may use this ability once per week.
 - **Monthly ability**: You may use this ability once per month.

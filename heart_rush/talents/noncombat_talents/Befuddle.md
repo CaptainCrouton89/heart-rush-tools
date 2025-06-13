@@ -1,5 +1,6 @@
 ## Befuddle
-_Heart ability. Handmagic._
+
+_Major ability. Handmagic._
 
 As an action, you may point at a sentient creature. That creature forms no new memories for the next ten minutes, though it is aware that you performed mind-altering magic on it.
 

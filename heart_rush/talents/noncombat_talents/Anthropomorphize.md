@@ -1,5 +1,6 @@
 ## Anthropomorphize
-_Heart ability. Handmagic._
+
+_Major ability. Handmagic._
 
 As an action, you may lay your hand on a non-hostile animal. The following effects last for one hour. Choose two:
 

@@ -1,5 +1,6 @@
 ## Harmonic
-_Heart ability. Handmagic._
+
+_Minor ability. Handmagic._
 
 You may redistribute hit points among any number of willing creatures adjacent to you, including yourself.
 

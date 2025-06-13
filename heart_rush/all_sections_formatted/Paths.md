@@ -133,7 +133,7 @@ As you progress, you gain ranks in beast upgrades. No single upgrade can have mo
 
 **Benefits:**
 
-- Heart ability: Transform into beast form for up to 1 hour (only once per month)
+- Monhtly ability: Transform into beast form for up to 1 hour
 - While transformed, gain 3 total ranks distributed among beast upgrades (max 2 in any single upgrade)
 - Your clothes and equipment meld into your form when you transform
 

@@ -437,7 +437,7 @@ When you use your major ability, add twice as many dice to your defense pool.
 
 ### Cleave
 
-_Heart ability. Instant. Subclass: Ravager, Striker, Wrathguard._
+_Minor ability. Instant. Subclass: Ravager, Striker, Wrathguard._
 
 When you deal damage with a heavy, melee, slashing weapons against a creature, if there is another creature also within melee reach, you may have that creature make a defense roll against whatever damage you dealt to the previous creature, and take the difference as damage. This continues so long as there is another creature you wish to hit within melee range, and there is damage left over.
 
@@ -575,7 +575,7 @@ Whenever you use your major ability, you may choose two options per rush point i
 
 ### Piercing Shot
 
-_Heart ability. Instant. Subclass: Striker._
+_Minor ability. Instant. Subclass: Striker._
 
 When you deal damage with a heavy, ranged, piercing weapon, draw a line from any corner of your space to anywhere in the square with the creature you damaged. If this line continued and would pass through another creature's space, you may have that creature make a defense roll against whatever damage you dealt to the previous creature, and take the difference as damage. This continues down the line until a creature takes no damage, you have exceeded the range of your weapon, or at any point you wish to stop before then.
 

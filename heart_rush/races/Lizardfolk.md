@@ -60,7 +60,7 @@ Their distinctive black scales shimmer with an oily iridescence, and their jaws 
 
 #### Venomous Bite
 
-**Heart ability.**
+**Passive ability.**
 
 Your bite delivers a potent neurotoxin that causes excruciating pain. Your teeth count as an ultralight, piercing melee weapon. If you bite and deal damage, the target takes normal damage plus 1 level of poisoned that lasts until they take a long rest. These levels of poisoned do not stack. A creature can only be affected by one instance of your venom at a time.
 

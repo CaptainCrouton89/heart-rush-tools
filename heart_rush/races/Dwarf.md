@@ -179,7 +179,7 @@ These battle-scarred dwarves view each conflict as a sacred offering to the gods
 
 #### Spiked Charge
 
-**Heart ability.**
+**Minor ability.**
 While wearing your specially crafted spiked armor, when you dash at least 20 feet toward an enemy, you may use your action to make an opportunity attack with your armor instead. You must choose the might stance and your armor counts as a heavy piercing melee weapon. Add your armor's defense bonus in place of a weapon die roll. However, the violent impact body-slam damages you as well—you take damage equal to the target's defense roll.
 
 Additionally, whenever you are grappled while wearing your spiked armor, the enemy immediately takes damage equal to your armor's defense bonus, and takes the same damage again at the start of each subsequent round they maintain the grapple.

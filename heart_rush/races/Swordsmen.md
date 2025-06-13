@@ -20,7 +20,7 @@ The Drifting Isles that spawned them are a lawless collection of hidden ports an
 
 ### Cutthroat's Edge
 
-**Heart ability.**
+**Minor ability.**
 
 Your blade work targets the gaps and weaknesses that armor cannot protect. When you make an attack with a sword, you may activate this ability to completely ignore the target's defense bonus from armor and shields. Your blade finds the joints, straps, and vital points with murderous precision.
 

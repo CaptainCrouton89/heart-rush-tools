@@ -60,14 +60,14 @@ async function generateImage(prompt: string, filename: string): Promise<void> {
           "Content-Type": "application/json",
           Authorization: `Bearer ${OPENAI_API_KEY}`,
           ...(OPENAI_ORG_ID && { "OpenAI-Organization": OPENAI_ORG_ID }),
-          ...(OPENAI_PROJECT_ID && { "OpenAI-Project": OPENAI_PROJECT_ID })
+          ...(OPENAI_PROJECT_ID && { "OpenAI-Project": OPENAI_PROJECT_ID }),
         },
         body: JSON.stringify({
           model: "dall-e-3",
           prompt: prompt,
           n: 1,
           size: "1024x1024",
-          quality: "hd"
+          quality: "hd",
         }),
       }
     );
@@ -188,7 +188,6 @@ function parseRaceFile(filePath: string): RaceData | null {
           const hasAbilityMarkers =
             desc.includes("**Passive ability.**") ||
             desc.includes("**Major ability.**") ||
-            desc.includes("**Heart ability.**") ||
             desc.includes("You gain") ||
             desc.includes("You have advantage") ||
             desc.includes("You can") ||
@@ -294,7 +293,7 @@ async function createImagePrompt(
         "Content-Type": "application/json",
         Authorization: `Bearer ${OPENAI_API_KEY}`,
         ...(OPENAI_ORG_ID && { "OpenAI-Organization": OPENAI_ORG_ID }),
-        ...(OPENAI_PROJECT_ID && { "OpenAI-Project": OPENAI_PROJECT_ID })
+        ...(OPENAI_PROJECT_ID && { "OpenAI-Project": OPENAI_PROJECT_ID }),
       },
       body: JSON.stringify({
         model: "gpt-4.1-nano",

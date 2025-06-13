@@ -1,6 +1,6 @@
 ## Blink Step
 
-_Heart ability. Instant. Void._
+_Minor ability. Instant. Void._
 
 When you dash, you may instead teleport to an unoccupied space that you can see within 90 feet.
 

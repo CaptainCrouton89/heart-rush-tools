@@ -24,6 +24,6 @@ Your skin is rough bark. You have +2 to defense rolls against bludgeoning, pierc
 
 ### Rooted Soul
 
-**Heart ability.**
+**Minor ability.**
 
 As an action, you may root yourself to the ground. While rooted, you cannot move or be moved by any force, and you have advantage on all might-based rolls. You may uproot yourself as an action.

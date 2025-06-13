@@ -24,5 +24,5 @@ You can breathe both air and water, and suffer no disadvantage for skill checks 
 
 ### Pearl Diver's Fortune
 
-**Heart ability.**
+**Passive ability.**
 Your expertise in finding valuable pearls extends to sensing all forms of hidden treasure. You can sense the presence of valuable objects (worth 50+ ducats) within 30 feet, even through solid barriers. Once per day, when you spend at least 10 minutes searching an area, you automatically find something valuable (GM determines what, but it should be level-appropriate).

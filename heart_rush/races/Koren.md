@@ -47,7 +47,7 @@ They form loose packs and hunting bands, valuing cunning and strength over propr
 
 #### Savage Grace
 
-**Heart ability.**
+**Major ability.**
 You can unleash your feral nature in combat. When you do, your claws count as light melee weapons that deal slashing damage. For the next minute:
 
 - Your move speed increases by 20 feet

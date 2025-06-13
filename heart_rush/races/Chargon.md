@@ -24,5 +24,5 @@ You can compress your body to fit through any opening large enough for a creatur
 
 ### Emotional Currents
 
-**Heart ability. Instant.**
+**Major ability. Instant.**
 You can sense the emotional undercurrents around you with supernatural clarity. For the next minute, you know the current emotional state of all creatures within 30 feet and can detect lies automatically. Additionally, you can choose one creature in range—they must make a presence saving throw against your cunning challenge number or have their attitude toward you improved by one step (hostile to unfriendly, unfriendly to neutral, etc.).
