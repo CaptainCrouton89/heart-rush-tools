@@ -164,7 +164,7 @@ Every combatant secretly chooses their stance for this engagement. The simultane
 - **No Changes After Reveal** - Once shown, stances are locked. Everyone lives with their choices.
 - **Strategic Discussion** - Players can coordinate openly ("I'll take might to handle the orc"), but remember—intelligent enemies might be listening and adapting in future rounds.
 
-## Stance Resolution Guide
+### Stance Resolution Guide
 
 Each stance creates specific advantages and vulnerabilities:
 
