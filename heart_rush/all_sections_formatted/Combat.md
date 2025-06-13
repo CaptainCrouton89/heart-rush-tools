@@ -198,13 +198,13 @@ You abandon offense entirely, focusing everything on survival. While you cannot 
 
 Attacks resolve in strict phases to maintain clarity:
 
-#### Resolution Phases
-
 1. **Cunning attacks** resolve (any order among cunning attackers)
 2. **Agility attacks** resolve (any order among agility attackers)
 3. **Might attacks** resolve (any order among might attackers)
 
-Within each phase, attacks effectively occur simultaneously. If two might-stance fighters kill each other, both attacks complete. Getting pushed away during an earlier phase might leave you out of range when your turn arrives.
+Within each phase, attacks effectively occur simultaneously. If two might-stance fighters kill each other, both attacks complete. If an effect is created during a phase, treat it as being created at the very end of the phase—it does not impact other attack and defense rolls made in the same phase, since all of these rolls are treated as being made simultaneously.
+
+However, side-effects of stances absolutely _do_ impact later phases. If you are pushed away during an earlier phase, might be out of range when your turn arrives, and no longer able to attack.
 
 #### Same Stance Combat
 
