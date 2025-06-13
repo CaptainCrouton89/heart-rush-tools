@@ -45,6 +45,8 @@ Before any stratagem roll, the GM transparently sets the Challenge Number based 
 | Nearly Impossible | 18  | Overwhelming odds against you                   |
 | Heroic            | 21  | Legendary difficulty, miraculous success needed |
 
+_The GM should feel welcome to set tasks that are far above these numbers as well—maybe it's something that is simply impossible without player's intervening to reduce teh CN to a more achievable result._
+
 The GM always announces the CN before you roll, letting you decide whether to accept those odds or intervene to shift them.
 
 ## Two Types of Objectives

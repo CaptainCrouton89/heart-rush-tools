@@ -261,7 +261,7 @@ The minimum damage needed to inflict a wound. Use "/" if the creature cannot be 
 - **A2/D2**: Double advantage on attacks/defense
 - **Status Effects**: Apply conditions
 - **Triggered Abilities**: "On stance beat, [effect]" or "When [trigger], [effect]"
-- **Saving Throws**: MC/AC/CC/PC with DCs typically 8-12, with 15+ for devastating effects
+- **Saving Throws**: MC/AC/CC/PC (might, agility, cunning, presence) with DCs typically 8-12, with 15+ for devastating effects
 - **Usage Limitations**: "1/engagement", "1/round", "recharge 5-6"
 
 ### Environmental Effects
@@ -331,7 +331,6 @@ The minimum damage needed to inflict a wound. Use "/" if the creature cannot be 
 10/10/10/12 **HD** 10 **HP** 100 **w** 10
 **A** +8 **D** +8
 - Engage 2x a round
-- ALL STANCE BEAT ATTACKS DEAL MAX HP DAMAGE
 - On stance beat MC8: Success increases The Hunger Sickness by 1, Failure: Infected with The Gorge
 
 ## Multi-Part Monsters
@@ -378,7 +377,7 @@ A towering, spider-like creature with countless skeletal legs. Players must dest
 - Only exposed when Carapace at 0HP
 - Heals 1d8 to Carapace each round
 - All creatures w/in 30ft PC12 or stunned 1/round
-- Vitality Drain - creatures starting turn w/in 10ft take 1d8 MAX HP damage
+- Vitality Drain - creatures starting turn w/in 10ft take 1d8 damage
 
 ## Scaling Guidelines
 - **Minions**: 10-20 HP, w5-8, simple abilities
