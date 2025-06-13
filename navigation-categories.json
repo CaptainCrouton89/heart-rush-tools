@@ -37,7 +37,13 @@
     },
     {
       "name": "Magic",
-      "sections": ["Cantrips", "Spells", "Magical_Crafting"]
+      "sections": [
+        "Magic",
+        "Kethic_Elementalism",
+        "Cantrips",
+        "Spells",
+        "Magical_Crafting"
+      ]
     },
     {
       "name": "Systems",
