@@ -1,4 +1,5 @@
 ## Ancient Visions
+
 _Weekly ability. Handmagic._
 
 You may touch an object to see its past. Choose one:
