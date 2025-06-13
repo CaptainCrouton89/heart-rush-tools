@@ -73,12 +73,12 @@ Declare your intentions freely, but expect interruptions. Other combatants will 
 ### Actions You Can Take
 
 **Dash**  
-Sprint up to your full movement speed (60 feet base, before equipment).
+Sprint up to your full movement speed (60 feet base, before equipment). **Your first dash is free** (it doesn't require your action).
 
 Moving more than 5 feet within an enemy's reach or leaving their threat range without sidestepping invites opportunity attacks—you're prioritizing speed over defense.
 
 **Sidestep**  
-**Uses your action**, or spend a rush point instead.
+Uses your action, **or spend a rush point instead**.
 
 Carefully move 5 feet or rise from prone without dropping your guard. This defensive movement never provokes opportunity attacks.
 
