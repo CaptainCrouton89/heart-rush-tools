@@ -1,5 +1,3 @@
-import React from "react";
-
 export function TipsSection() {
   return (
     <aside
@@ -9,39 +7,17 @@ export function TipsSection() {
       <h3 id="tips-heading" className="text-lg font-semibold mb-3">
         Tips for Better Results
       </h3>
-      <ul className="space-y-2 text-sm text-muted-foreground" role="list">
-        <li className="flex items-start space-x-2">
-          <span className="text-primary mt-1" aria-hidden="true">
-            •
-          </span>
-          <span>Be specific about the monster's abilities and behavior</span>
+      <ul
+        className="space-y-2 text-sm text-muted-foreground list-disc list-inside marker:text-primary"
+        role="list"
+      >
+        <li>Be specific about the monster's abilities and behavior</li>
+        <li>
+          Mention the intended challenge level (minion, standard, elite, boss)
         </li>
-        <li className="flex items-start space-x-2">
-          <span className="text-primary mt-1" aria-hidden="true">
-            •
-          </span>
-          <span>
-            Mention the intended challenge level (minion, standard, elite, boss)
-          </span>
-        </li>
-        <li className="flex items-start space-x-2">
-          <span className="text-primary mt-1" aria-hidden="true">
-            •
-          </span>
-          <span>Include unique traits that make it tactically interesting</span>
-        </li>
-        <li className="flex items-start space-x-2">
-          <span className="text-primary mt-1" aria-hidden="true">
-            •
-          </span>
-          <span>For complex monsters, describe component relationships</span>
-        </li>
-        <li className="flex items-start space-x-2">
-          <span className="text-primary mt-1" aria-hidden="true">
-            •
-          </span>
-          <span>Consider its role in your story or encounter</span>
-        </li>
+        <li>Include unique traits that make it tactically interesting</li>
+        <li>For complex monsters, describe component relationships</li>
+        <li>Consider its role in your story or encounter</li>
       </ul>
     </aside>
   );
