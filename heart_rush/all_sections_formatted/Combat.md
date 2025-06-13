@@ -294,7 +294,7 @@ You can recover hit points and reduce wounds by taking rests. Read more in the R
 
 If you're in a nasty fight, combatants tend to try to attack the people who are still fighting back. If you go unconscious, people usually won't view you as a threat, so you're a lot less likely to be attacked (and potentially die). Things trying to eat you generally don't abide by this, so in some cases this is definitely not recommended…
 
-## Other Options in Engagements
+## Attack Alternatives
 
 When combat gets personal, sometimes raw damage isn't your goal. Maybe you need to restrain that fleeing assassin, scale a dragon's back to reach its vulnerable spot, or blind an ogre with a handful of dirt. These tactical maneuvers transform fights from simple damage races into dynamic encounters where positioning, timing, and creativity determine victory.
 
