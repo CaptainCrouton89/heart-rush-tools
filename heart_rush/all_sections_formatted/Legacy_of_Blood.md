@@ -32,14 +32,14 @@ Your combat legacy grows with each bloodmark you earn:
 | **1st Bloodmark** | 1 Passive Ability                   | Your fighting style begins to evolve beyond survival instincts         |
 | **2nd Bloodmark** | 1 Passive Ability + 1 Minor Ability | Combat becomes second nature; specialized techniques emerge            |
 | **3rd Bloodmark** | 2 Minor Abilities                   | You master advanced maneuvers that chain into devastating combinations |
-| **4th Bloodmark** | 1 Major Ability                     | You reach minor hero status with a signature combat technique          |
+| **4th Bloodmark** | 1 Heart Ability                     | You reach minor hero status with a signature combat technique          |
 | **5th Bloodmark** | 1 Paragon Ability                   | Your combat mastery achieves legendary status among warriors           |
 
 **Passive Abilities** enhance your combat presence constantly—reflexes that border on precognition, strikes that carry supernatural weight, or defensive instincts that turn near-misses into advantages. Choose from the Passive Abilities list below.
 
 **Minor Abilities** grant specialized techniques you can activate for dramatic effect—explosive counterattacks, battlefield mobility that defies expectations, or strikes that shatter enemy defenses. Select from the Minor Abilities list below.
 
-**Major Abilities** represent signature combat techniques—the moves that define your fighting style. At fourth bloodmark, you've reached the level of a seasoned adventurer with abilities that can single-handedly turn battles. Choose from the Major Abilities list below.
+**Heart Abilities** represent signature combat techniques—the moves that define your fighting style. At fourth bloodmark, you've reached the level of a seasoned adventurer with abilities that can single-handedly turn battles. Choose from the Heart Abilities list below.
 
 **Paragon Abilities** mark true combat mastery—techniques so extraordinary they become the stuff of legend. These reality-bending powers separate legendary heroes from even veteran warriors. Select from the Paragon Abilities list below when you achieve your fifth bloodmark.
 
