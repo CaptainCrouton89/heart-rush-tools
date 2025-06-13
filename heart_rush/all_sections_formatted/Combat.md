@@ -153,8 +153,6 @@ This isn't arbitrary—it reflects real combat dynamics. Speed defeats power by 
 
 ### Choosing Your Stance
 
-#### The Selection Process
-
 Every combatant secretly chooses their stance for this engagement. The simultaneous reveal creates genuine tension—you must predict opponents' moves while they predict yours.
 
 **Core Selection Rules:**
@@ -163,8 +161,6 @@ Every combatant secretly chooses their stance for this engagement. The simultane
 - **Simultaneous Reveal** - Use any method: closed fists (1=might, 2=agility, 3=cunning, 4=defensive), face-down cards, or written notes. The key is revealing together.
 - **No Changes After Reveal** - Once shown, stances are locked. Everyone lives with their choices.
 - **Strategic Discussion** - Players can coordinate openly ("I'll take might to handle the orc"), but remember—intelligent enemies might be listening and adapting in future rounds.
-
-### Stance Breakdowns
 
 #### Cunning Stance
 
