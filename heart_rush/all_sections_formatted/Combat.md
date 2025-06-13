@@ -164,19 +164,6 @@ Every combatant secretly chooses their stance for this engagement. The simultane
 - **No Changes After Reveal** - Once shown, stances are locked. Everyone lives with their choices.
 - **Strategic Discussion** - Players can coordinate openly ("I'll take might to handle the orc"), but remember—intelligent enemies might be listening and adapting in future rounds.
 
-### Stance Resolution Guide
-
-Each stance creates specific advantages and vulnerabilities:
-
-| Your Stance   | Beats   | Beaten By | Can Attack                      | Special Benefits                              |
-| ------------- | ------- | --------- | ------------------------------- | --------------------------------------------- |
-| **Cunning**   | Agility | Might     | Agility, Defensive, Same Stance | Attacks first; Inflicts conditions vs Agility |
-| **Agility**   | Might   | Cunning   | Might, Defensive, Same Stance   | Free sidestep; Attacks second                 |
-| **Might**     | Cunning | Agility   | Cunning, Defensive, Same Stance | Weapon might bonus; Attacks last              |
-| **Defensive** | None    | All       | None                            | Takes half damage after defense               |
-
-**Attack Resolution Order**: Cunning → Agility → Might
-
 ### Stance Breakdowns
 
 #### Cunning Stance
@@ -283,7 +270,7 @@ Regardless, whatever damage you do take gets subtracted from your hit points. If
 
 If you take 10 or more damage, this represents serious bodily harm. In addition to reducing your hit points, mark a wound. The GM will give you a plain English description of the wound. For example, a wound could be "a nasty gash in your arm," or "a fractured leg," or "your guts are spilling out". Write this down. Next to it, write the rank of the wound. The rank is equal to the amount of damage you took. Read more about wounds in the next section.
 
-## Wounds
+### Wounds
 
 Wounds reduce your maximum hit points. Whenever you gain hit points, you cannot increase your hit points beyond your normal maximum minus the sum of the ranks of all your wounds. So if you normally have a 40 hit point maximum, but you have 23 ranks worth of wounds, you can't heal past 17 hit points.
 
@@ -291,14 +278,14 @@ Wounds also have non-combat effects—they count as aspects in addition to their
 
 For example, if you have the rank 12 wound, "Guts spilling out," you could gain 5 DP by taking a minus 12 penalty to nearly any athletics check, since it'd be logical that having that type of wound would make it very difficult to do almost anything physical.
 
-### Treating wounds
+#### Treating wounds
 
 Whenever you take a wound, you'll want to get it treated. Treating a wound will mitigate a large amount of the harm. To treat a wound, make a medicine skill check and reduce the rank of all untreated wounds affecting the wounded creature by the rolled amount. If this would reduce a wound's rank below zero, remove the wound completely.
 
 If you are treating your own wounds, you have disadvantage.  
 You can treat any number of wounds at once, but once a wound has been treated it cannot be treated again. Once treated, these wounds will naturally heal over time when you take long rests. See the Rests & Healing section for more details.
 
-## Zero Hit points
+### Zero Hit points
 
 When your hit points reach zero, you are in bad condition. If you wish, you may choose to go unconscious. If you do not, you fall unconscious anyway after 10 minutes. If you take damage while at or below zero, continue to mark that damage and any wounds—you can go into the negative.
 
@@ -307,7 +294,7 @@ If your hit points ever reach an amount equal to or less than the negative of yo
 Once you are unconscious, you remain unconscious so long as your hit points are zero or fewer.  
 You can recover hit points and reduce wounds by taking rests. Read more in the Rests & Healing section.
 
-### Why would I go unconscious??
+#### Why would I go unconscious??
 
 If you're in a nasty fight, combatants tend to try to attack the people who are still fighting back. If you go unconscious, people usually won't view you as a threat, so you're a lot less likely to be attacked (and potentially die). Things trying to eat you generally don't abide by this, so in some cases this is definitely not recommended…
 
@@ -319,7 +306,7 @@ When combat gets personal, sometimes raw damage isn't your goal. Maybe you need 
 
 **To perform any offensive action beyond a standard attack, you must first win an engagement by directly beating your opponent's stance.** Ties won't cut it—you need a clear tactical advantage. Once you've outmaneuvered them, you can forgo your damage roll to execute one of these specialized techniques.
 
-**Timing matters:** These maneuvers resolve _after_ all attack rolls for the round, creating dramatic moments where the battlefield shifts just as blades finish falling.
+**Timing matters:** These maneuvers resolve _after_ all attack and defense rolls have been made for their corresponding stance.
 
 #### Core Maneuver Rules
 
@@ -392,7 +379,7 @@ _The orc champion raises his massive blade for a killing blow on your fallen com
 
 - **Action:** Sand in the eyes (Blind effect)
 - **Result:** Orc gains 1 level of blinded
-- **Impact:** His next attack suffers disadvantage, likely missing your friend
+- **Impact:** His next attack suffers disadvantage, likely rolling low on his attack
 - **Next turn:** Your ally scrambles to safety while the orc clears his vision]]
 
 ### Stunt
@@ -408,9 +395,9 @@ When standard tactics won't suffice, creativity becomes your greatest weapon. St
 
 Work with your GM to determine appropriate ability checks and effects. The best stunts create memorable moments that players recount for years.
 
-### Special Circumstances
+## Special Circumstances
 
-#### Surprise
+### Surprise
 
 Ambushes and sudden betrayals create devastating first-strike advantages. **When combat erupts unexpectedly, surprised creatures lose their entire first turn** while prepared combatants unleash opportunity attacks.
 
@@ -420,11 +407,11 @@ Ambushes and sudden betrayals create devastating first-strike advantages. **When
 - You're already hostile or wary of them
 - You don't know them (stranger danger keeps you alert)
 
-#### Attacking the Helpless
+### Attacking the Helpless
 
 Sometimes opponents can't defend themselves—unconscious, paralyzed, or completely unaware. The GM determines whether you get an **opportunity attack** or if the target simply dies. Context matters: executing a sleeping guard differs vastly from coup de grâce on a paralyzed dragon.
 
-#### Cover
+### Cover
 
 Smart positioning behind obstacles transforms deadly firefights into tactical chess matches. **Each obstructed line between attacker and defender imposes one level of disadvantage on ranged attacks.**
 
