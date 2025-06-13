@@ -621,7 +621,7 @@ _Passive ability. Class: Bastion._
 
 The threshold of negative hit points necessary to kill you is doubled. So if you previously could survive until -60 hit points, you can now survive until -120. Whenever you take a wound, gain an additional three rush points.
 
-## Strategic Supremacy
+### Strategic Supremacy
 
 _Major ability. Instant. Subclass: Battlemind._
 
