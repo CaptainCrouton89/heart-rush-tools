@@ -261,7 +261,6 @@ _Your archer uses Eagle Eye and marks the orc with Hunter's Mark. She saves her 
 _With all actions resolved, the engagement begins automatically._
 
 _The GM locks in enemy stances: orc picks might, wolf selects cunning. You and your ally coordinate—you'll use agility (boosted by Blade Dance) while she takes agility as well to counter the orc's likely might stance. Stances reveal._
-]]
 
 **Cunning Phase**: The wolf's cunning beats your agility. It bites and triggers Hamstring, inflicting off-balanced. You activate Defensive Roll (an instant ability) to reduce incoming damage.
 
@@ -272,6 +271,7 @@ You sidestep free, then unleash stored Momentum Strike against the orc. The orc'
 **Might Phase**: The orc's might stance leaves him with no valid targets—both of you are in agility, which might cannot attack. His stored Crushing Blow goes unused this engagement.
 
 _Engagement ends. New round begins—everyone regains their action and can activate abilities freely once more._
+]]
 
 ## Taking Damage
 
