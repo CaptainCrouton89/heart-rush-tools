@@ -1,47 +1,82 @@
 # Experience & Advancement
 
-Over the course of many games, you will gain more and more XP.
+Your character's journey doesn't end with creation—through experience points (XP), you'll unlock new abilities, strengthen existing talents, and shape your hero's growth to match your evolving playstyle. Each point of XP represents hard-won lessons, mastered techniques, and the raw power gained from facing danger head-on.
 
-With this XP, you can purchase new, interesting features for your character.
+## How Experience Works
 
-Characters grow and develop through experience points (XP), which represent lessons learned, skills honed, and power gained through adventuring.
+Experience points fuel your character's advancement between adventures. Unlike rigid level systems, Heart Rush lets you choose exactly how your character develops—whether that's becoming tougher, more skilled, or unlocking entirely new capabilities.
 
 ### Gaining Experience
 
-**GM Note:**
-Granting XP equal to players' combat rank is a decent rule of thumb to keep players upgrading their character every few sessions.
+Your GM awards XP based on the campaign's focus and pacing. Common triggers include:
 
-If you want slightly more aggressive growth, increasing this by one, or even two can be okay.
+- **Pursuing Goals**: Achieving personal or party objectives
+- **Story Milestones**: Completing major narrative arcs
+- **Combat Victory**: Overcoming dangerous encounters
+- **Session Length**: Consistent play rewards steady progress
 
-It is up to the GM to deliver XP to players.
+**GM Guidance**: Award XP equal to the party's average combat rank as a baseline—this keeps characters advancing every few sessions. For faster progression, increase this by one or two points. Always communicate your XP triggers to players so they understand what drives advancement.
 
-They can decide what they want to award XP for, depending on the type of game they want to run.
+### When to Spend Experience
 
-Common triggers for rewarding XP are pursuing goals, reaching milestones in a story arc, winning combats, or just length of session.
+You can purchase upgrades:
 
-Whatever the metric for determining XP, the GM should communicate this to the players.
+- Between sessions
+- During downtime in a session
+- Any time you're not actively in combat
 
-### Spending Experience
+Choose upgrades that reflect your character's recent experiences or prepare them for upcoming challenges.
 
-Between sessions, or during sessions so long as you are not in combat, you may spend XP to access new features.
+## Advancement Options
 
-Use the following chart to find the cost of your desired new feature.
+Each upgrade type serves a different purpose in shaping your character:
 
-| Type                        | XP Cost  | Effect                                                                                                                                                                                                 |
-| --------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| New Aspect                  | 1        | Add a new aspect at rank 1.                                                                                                                                                                            |
-| Increase Aspect             | X+1      | Where X is the aspect's current level. Increase the rank of an aspect by 1.                                                                                                                            |
-| Change Aspect               | 0        | Replace the text of your aspect with different text.                                                                                                                                                   |
-| Increase Maximum Hit Points | X/10 + 1 | Where X is your current maximum hit points. Increase your maximum hit points by 10.                                                                                                                    |
-| Increase Ability Die        | X        | Where X is the size of the new die. Increase an ability die by 1 size, to a maximum of a d12.                                                                                                          |
-| New Combat Talent           | X+3      | Where X is the number of combat talents you have. Gain a new combat talent. Some talents may have prerequisites.                                                                                       |
-| New Noncombat Talent        | X+3      | Where X is the number of non-combat talents you have. Gain a new non-combat talent. Some talents may have prerequisites.                                                                               |
-| New Elemental Talent        | 2X+3     | Where X is the the number of combat talents you have. Gain a new combat talent. These talents have elemental attunement prerequisites. Also note that Spelltouched only must spend X+3, rather than 2X |
-| Destiny Level               | X+5      | Where X is the number of destiny levels you have. Gain the destiny level of a talent you have.                                                                                                         |
+| Type                     | XP Cost                            | What It Does                                      |
+| ------------------------ | ---------------------------------- | ------------------------------------------------- |
+| **New Aspect**           | 1                                  | Add a completely new aspect at rank 1             |
+| **Increase Aspect**      | Current Rank + 1                   | Boost an existing aspect by one rank (max rank 5) |
+| **Change Aspect**        | 0                                  | Rewrite an aspect to reflect character growth     |
+| **Increase Hit Points**  | (Current HP ÷ 10) + 1              | Gain 10 maximum hit points                        |
+| **Increase Ability Die** | New die size                       | Upgrade d4→d6→d8→d10→d12                          |
+| **New Combat Talent**    | Current Combat Talents + 3         | Learn a new combat technique                      |
+| **New Noncombat Talent** | Current Noncombat Talents + 3      | Gain utility or social abilities                  |
+| **New Elemental Talent** | (Current Combat Talents × 2) + 3\* | Master elemental combat arts                      |
+| **Destiny Level**        | Current Destiny Levels + 5         | Unlock a talent's ultimate potential              |
 
-### Quick Reference
+\*Spelltouched characters pay only (Current Combat Talents + 3) for elemental talents
 
-- **Aspects**: Start at rank 1, max rank 5
-- **Hit Points**: Increase by 10 each purchase
-- **Ability Dice**: d4 → d6 → d8 → d10 → d12 → d20
-- **Heart Die**: Increases automatically at 200/500/1000 XP thresholds
+### Understanding Your Options
+
+**Aspects** define who your character is and what they excel at. New aspects broaden your capabilities, while increasing existing ones deepens your expertise. Changing aspects costs nothing because character growth should never be penalized.
+
+**Hit Points** represent your stamina and ability to withstand punishment. Each purchase adds 10 HP, making you significantly more durable in extended conflicts.
+
+**Ability Dice** determine your raw potential in different areas. Higher dice mean more consistent success and spectacular results. Note that your Heart Die increases automatically through experience milestones (see below).
+
+**Talents** provide specific techniques and abilities:
+
+- **Combat Talents** enhance your effectiveness in battle
+- **Noncombat Talents** expand your options outside fights
+- **Elemental Talents** require elemental attunement but offer powerful magical effects
+
+**Destiny Levels** transform good talents into legendary abilities, unlocking their full potential once you've mastered the basics.
+
+## Automatic Progression
+
+Your Heart Die—representing your character's spirit and determination—grows automatically as you accumulate experience:
+
+| Total XP  | Heart Die | What This Means                         |
+| --------- | --------- | --------------------------------------- |
+| 0-199     | d8        | Starting hero finding their path        |
+| **200+**  | **d10**   | Seasoned adventurer with proven mettle  |
+| **500+**  | **d12**   | Veteran hero whose name carries weight  |
+| **1000+** | **d20**   | Legendary champion of tremendous spirit |
+
+These upgrades happen automatically when you reach each threshold—no purchase necessary. Your growing Heart Die reflects the confidence and inner strength that comes from surviving countless dangers.
+
+## Quick Reference
+
+**Aspect Ranks**: 1 (novice) to 5 (master)  
+**Ability Progression**: d4 → d6 → d8 → d10 → d12  
+**Hit Point Increases**: Always +10 per purchase  
+**Heart Die Milestones**: Automatic at 200/500/1000 XP
