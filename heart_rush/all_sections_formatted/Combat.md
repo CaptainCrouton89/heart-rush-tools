@@ -258,13 +258,13 @@ _Engagement ends. New round begins—everyone regains their action and can activ
 
 ## Taking Damage
 
-When you take damage, you can choose to use some of your stamina to "shrug off" or "dodge" the injury. In this case, you take half as much damage, but your heart die falls one size. If you cannot decrease your heart die because it's already a d4, you must take the full amount of damage.
+When you take damage, **you can choose to use some of your stamina to "shrug off" or "dodge" the injury. In this case, you take half as much damage, but your heart die falls one size.** If you cannot decrease your heart die because it's already a d4, you must take the full amount of damage.
 
-Regardless, whatever damage you do take gets subtracted from your hit points. If this would cause your hit points to reach a negative amount equal to your maximum hit points, you are dead.
+Regardless, whatever damage you do take gets subtracted from your hit points. **If this would cause your hit points to reach a negative amount equal to your maximum hit points, you are dead**.
 
 ### More than 10 Damage
 
-If you take 10 or more damage, this represents serious bodily harm. In addition to reducing your hit points, mark a wound. The GM will give you a plain English description of the wound. For example, a wound could be "a nasty gash in your arm," or "a fractured leg," or "your guts are spilling out". Write this down. Next to it, write the rank of the wound. The rank is equal to the amount of damage you took. Read more about wounds in the next section.
+If you take 10 or more damage, this represents serious bodily harm. **In addition to reducing your hit points, mark a wound**. The GM will give you a plain English description of the wound. For example, a wound could be "a nasty gash in your arm," or "a fractured leg," or "your guts are spilling out". Write this down. Next to it, write the rank of the wound. The rank is equal to the amount of damage you took. Read more about wounds in the next section.
 
 ### Wounds
 
