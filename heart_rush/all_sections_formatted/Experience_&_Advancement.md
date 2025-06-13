@@ -67,7 +67,7 @@ Your Heart Die—representing your character's spirit and determination—grows 
 
 | Total XP  | Heart Die | What This Means                         |
 | --------- | --------- | --------------------------------------- |
-| 0-199     | d8        | Starting hero finding their path        |
+| **0-199** | **d8**    | Starting hero finding their path        |
 | **200+**  | **d10**   | Seasoned adventurer with proven mettle  |
 | **500+**  | **d12**   | Veteran hero whose name carries weight  |
 | **1000+** | **d20**   | Legendary champion of tremendous spirit |
