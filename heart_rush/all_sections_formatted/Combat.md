@@ -127,6 +127,8 @@ After the dust of movement settles and abilities have been unleashed, every comb
 
 **During the engagement, only instant abilities can be used.** Regular abilities must be activated during the action phase—once steel starts swinging, you're limited to reactive instant abilities that let you defend, counter, or enhance your strikes.
 
+**If you have used your action, you cannot attack.** You've already committed your focus and energy to another task this round, leaving no capacity for offensive strikes during the engagement.
+
 ### How Engagements Work
 
 The engagement transforms simultaneous chaos into tactical decisions through a simple process:
@@ -153,14 +155,14 @@ This isn't arbitrary—it reflects real combat dynamics. Speed defeats power by 
 
 ### Choosing Your Stance
 
-Every combatant secretly chooses their stance for this engagement. The simultaneous reveal creates genuine tension—you must predict opponents' moves while they predict yours.
+Every combatant secretly chooses their stance for this engagement. In order to succeed, you must predict opponents' moves while they try to predict yours.
 
 **Core Selection Rules:**
 
 - **GM Locks In First** - When players discuss strategy, the GM must finalize all enemy stances before players commit. This prevents any reactive adjustments.
-- **Simultaneous Reveal** - Use any method: closed fists (1=might, 2=agility, 3=cunning, 4=defensive), face-down cards, or written notes. The key is revealing together.
+- **Strategically Determine stances** - Players can coordinate openly ("I'll take agility, 'cuz I think the Orc will choose might").
+- **Simultaneous Reveal** - Use any method: closed fists (1=might, 2=agility, 3=cunning, 4=defensive), face-down cards, written notes, or just simply stating them aloud and relying on the honor system. The key is revealing together.
 - **No Changes After Reveal** - Once shown, stances are locked. Everyone lives with their choices.
-- **Strategic Discussion** - Players can coordinate openly ("I'll take might to handle the orc"), but remember—intelligent enemies might be listening and adapting in future rounds.
 
 #### Cunning Stance
 
