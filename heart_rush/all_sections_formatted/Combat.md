@@ -21,17 +21,17 @@ The action phase operates on instinct and opportunity. Any combatant can declare
 
 ### Understanding Actions and Abilities
 
-**You get one action per round**. This represents your major physical commitment—dashing across the battlefield, helping a fallen ally, or similar focused efforts. Once spent, you cannot take another action until the next round.
+**You get one action per round**. This represents your major physical commitment—dashing across the battlefield, helping a fallen ally, or smashing an orc's face with your axe.
 
-**During the action phase, abilities never cost actions unless explicitly stated.** You can use as many abilities as you want throughout the action phase, limited only by any usage restrictions on the abilities themselves. The vast majority of your combat options are abilities, not actions.
+**During the action phase, abilities never cost actions unless explicitly stated.** You can use as many abilities as you want throughout the action phase, limited only by any usage restrictions on the abilities themselves. The majority of your combat options are abilities, not actions.
 
 **During the engagement, only instant abilities can be used.** These reactive abilities trigger in response to attacks, letting you defend, counter, or enhance your strikes in the heat of battle. Regular abilities must be activated during the action phase.
 
 Think of it this way:
 
-- **Actions**: The short list of basic options below, plus any ability that specifically says "uses your action"
+- **Actions**: The short list of basic options below, making an attack, plus any ability that specifically says "uses your action"
 - **Abilities**: Everything else—talents, combat legacy features, class abilities, equipment powers, magical effects, or anything that gives you an option in combat. Free to use during the action phase unless the ability itself says otherwise.
-- **Instant Abilities**: Special reactive abilities marked as "instant" that can trigger during engagements
+- **Instant Abilities**: Special reactive abilities marked as "instant" that can trigger during engagements.
 
 ### Common Ability Restrictions
 
@@ -71,6 +71,10 @@ Combat flows dynamically—you cannot simply declare a complex sequence and exec
 Declare your intentions freely, but expect interruptions. Other combatants will inject their own actions between yours, creating realistic exchanges where plans adapt moment by moment. You must wait for all responses to your first action before proceeding to your second—combat is a conversation, not a monologue.
 
 ### Actions You Can Take
+
+The most common action to take during the action phase is _none at all_. During the engagement phase, it requires your action to make an attack, so it's usually a good idea to save your action for that. However, you can dash once and interact with an object once for free.
+
+If you really want to do something other than attack, choose one of the actions below.
 
 **Dash**  
 Sprint up to your full movement speed (60 feet base, before equipment). **Your first dash is free** (it doesn't require your action).
@@ -127,7 +131,9 @@ After the dust of movement settles and abilities have been unleashed, every comb
 
 **During the engagement, only instant abilities can be used.** Regular abilities must be activated during the action phase—once steel starts swinging, you're limited to reactive instant abilities that let you defend, counter, or enhance your strikes.
 
-**If you have used your action, you cannot attack.** You've already committed your focus and energy to another task this round, leaving no capacity for offensive strikes during the engagement.
+**If you have no action left, you cannot attack\*.** You've already committed your focus and energy to another task this round, leaving no capacity for offensive strikes during the engagement.
+
+_\*In most cases. Some abilities may let you make extra attack rolls without using your action, for example_
 
 ### How Engagements Work
 
@@ -155,12 +161,12 @@ This isn't arbitrary—it reflects real combat dynamics. Speed defeats power by 
 
 ### Choosing Your Stance
 
-Every combatant secretly chooses their stance for this engagement. In order to succeed, you must predict opponents' moves while they try to predict yours.
+Every combatant secretly chooses their stance for this engagement. In order to succeed, you must predict opponents' moves while they try to predict yours. Even if you have no action and cannot attack, your stance will determine who can hit you and how, so it's importatn to choose wisely.
 
 **Core Selection Rules:**
 
-- **GM Locks In First** - When players discuss strategy, the GM must finalize all enemy stances before players commit. This prevents any reactive adjustments.
-- **Strategically Determine stances** - Players can coordinate openly ("I'll take agility, 'cuz I think the Orc will choose might").
+- **GM Locks In First** - The GM must finalize all enemy stances before players commit. This prevents any reactive adjustments.
+- **Strategically Determine stances** - Players should coordinate openly ("I'll take agility, 'cuz I think the Orc will choose might").
 - **Simultaneous Reveal** - Use any method: closed fists (1=might, 2=agility, 3=cunning, 4=defensive), face-down cards, written notes, or just simply stating them aloud and relying on the honor system. The key is revealing together.
 - **No Changes After Reveal** - Once shown, stances are locked. Everyone lives with their choices.
 
@@ -190,7 +196,7 @@ You bring crushing force that smashes through clever defenses. Your attacks reso
 
 #### Defensive Stance
 
-You abandon offense entirely, focusing everything on survival. While you cannot attack, you become remarkably difficult to hurt.
+You abandon offense entirely, focusing everything on survival. Although you cannot attack, you become difficult to hurt.
 
 **Damage Reduction**: After subtracting defense from incoming attacks, halve any remaining damage (round up). This stacks with your normal defenses, making you incredibly resilient.
 
@@ -235,25 +241,25 @@ When you attack during engagement:
 **Damage dealt = Attack roll - Defense roll** (minimum 0)
 
 [[Example
-_Round begins. You activate Blade Dance (boosting agility attacks) and trigger Momentum Strike to store energy. You dash toward the undead orc, spending your action to close distance._
+_Round begins. You activate your major ability Blade Dance, boosting all agility attacks for the next minute. You dash toward the undead orc (without using your action—the first dash is free)._
 
-_The wolf uses Pack Hunter and dashes adjacent to you, spending its action on movement._
+_The wolf remains still—it's saving its action for combat. It doesn't have any abilities it wants to use—it just wants to bite you._
 
-_The orc activates Undead Resilience for damage reduction. He uses his action to activate Crushing Blow—this ability specifically states "uses your action" and stores devastating power for the engagement._
+_The orc moves in close as well, positioning next to you and the wolf._
 
-_Your archer uses Eagle Eye and marks the orc with Hunter's Mark. She saves her action, waiting to see how things develop. After a pause where no one else acts, she decides to dash to better position, spending her action._
+_Your archer ally uses Eagle Eye (a minor ability) and marks the orc._
 
-_With all actions resolved, the engagement begins automatically._
+_With all activities resolved, the engagement begins._
 
-_The GM locks in enemy stances: orc picks might, wolf selects cunning. You and your ally coordinate—you'll use agility (boosted by Blade Dance) while she takes agility as well to counter the orc's likely might stance. Stances reveal._
+_The GM locks in enemy stances: orc picks might, wolf selects cunning. You and your ally coordinate—you'll use agility (boosted by Blade Dance) while she takes might—a hedge against the orc trying to counter your agility stance by choosing cunning. Stances reveal._
 
-**Cunning Phase**: The wolf's cunning beats your agility. It bites and triggers Hamstring, inflicting off-balanced. You activate Defensive Roll (an instant ability) to reduce incoming damage.
+**Cunning Phase**: The wolf's cunning beats your agility. It bites, rolling 16, you roll 10, so you take 6 damage. However, it also gets it's cunning stance bonus, and inflicts two levels of off-balanced, which sucks, because it means that you'll have disadvantage on your agility attack.
 
-**Agility Phase**: Both you and your archer chose agility, which beats the orc's might. Your archer goes first, triggering Execute for bonus damage. Her arrow strikes true. The orc burns stamina to halve damage but staggers.
+Your archer chose cunning as well, and although she can't attack the orc (who chose might), she can attack the wolf. She rolls her attack, the wolf rolls defense, and the archer uses here Execute instant ability. She deals extra damage from her execute ability, but doesn't get to apply extra conditions from her cunning stance, since she is attacking a creature that chose the same stance.
 
-You sidestep free, then unleash stored Momentum Strike against the orc. The orc's prepared Crushing Blow can't connect as you both dance aside.
+**Agility Phase**: You chose agility, which beats the orc's might. You make your attack, deal damage, and then sidestep away from the orc. The orc sidestep wasn't necessary because the orc couldn't attack you anyways, because the orc chose might, but now you have more freedom to move without provoking opportunity attacks.
 
-**Might Phase**: The orc's might stance leaves him with no valid targets—both of you are in agility, which might cannot attack. His stored Crushing Blow goes unused this engagement.
+**Might Phase**: The orc's might stance leaves him with no valid targets—you are in range and chose agility, which might cannot attack, and your archer is not in melee range.
 
 _Engagement ends. New round begins—everyone regains their action and can activate abilities freely once more._
 ]]
