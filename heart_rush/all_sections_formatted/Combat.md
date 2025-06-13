@@ -313,66 +313,126 @@ If you're in a nasty fight, combatants tend to try to attack the people who are 
 
 ## Other Offensive Actions
 
-If you want to do something to an enemy other than hit it with a weapon, such as grapple it, climb onto it, or otherwise mess with it, it still begins with winning an engagement. However, you must win the engagement by directly beating their stance—both choosing the same stance does not let you perform these types of acts. Assuming you have directly beaten their stance, you may forgo your attack roll and instead use one of these other options. If you do, the effects of the offensive action occur after all attack rolls have been made.
+When combat gets personal, sometimes raw damage isn't your goal. Maybe you need to restrain that fleeing assassin, scale a dragon's back to reach its vulnerable spot, or blind an ogre with a handful of dirt. These tactical maneuvers transform fights from simple damage races into dynamic encounters where positioning, timing, and creativity determine victory.
 
-Some of these options require a contested skill check, rather than an attack and defense roll. These contested checks still receive advantage or disadvantage as though they were an attack or defense roll of their corresponding ability, but they should not use any additional dice (such as from your weapon) or bonuses from armor.
+### Executing Special Maneuvers
+
+**To perform any offensive action beyond a standard attack, you must first win an engagement by directly beating your opponent's stance.** Ties won't cut it—you need a clear tactical advantage. Once you've outmaneuvered them, you can forgo your damage roll to execute one of these specialized techniques.
+
+**Timing matters:** These maneuvers resolve _after_ all attack rolls for the round, creating dramatic moments where the battlefield shifts just as blades finish falling.
+
+#### Core Maneuver Rules
+
+- **Requires winning stance:** You must choose a different stance than your opponent and beat their choice
+- **Replaces attack roll:** Choose the maneuver instead of rolling damage
+- **Uses contested checks:** Most maneuvers pit your abilities directly against theirs
+- **No weapon bonuses:** These checks use only your raw ability (advantage/disadvantage still applies)
+- **Resolves last:** Effects happen after all attacks conclude
 
 ### Grappling
 
-Make a might ability check against an adjacent creature, contested by the creature's own might or agility ability check. If either creature is larger, it gets a level of advantage on their roll for each level of size difference.
+Wrestling an opponent into submission lets you control the battlefield by locking down dangerous enemies. Perfect for protecting vulnerable allies or preventing escapes.
 
-If you roll higher, the creature is grappled. You gain the condition grappling and the opposing creature gains the condition grappled.
+**To grapple an adjacent creature:**
 
-Unless otherwise specified, at least one hand must be free to grapple another creature. You can grapple with one or two hands. If grappling with only one hand, halve your grapple ability check, rounding up.
+1. Win the engagement by beating their stance
+2. Make a **Might check** contested by their **Might or Agility**
+3. Each size category difference grants **one level of advantage** to the larger creature
+4. Success applies the **grappled** condition to them and **grappling** to you
 
-A creature can only be grappled by one creature at a time, and can only grapple one creature at a time.
+#### Grappling Requirements
 
-[[Example  
-You want to grapple an adjacent wolf before it moves past you and attacks your badly hurt friend. You enter an engagement with it, choose stances, and stances are revealed. You chose cunning, and it chose agility. Since cunning beats agility, you get to attack. However, since you're trying to grapple it, you decide not to attack, and instead make a might check. Your ally used the help action earlier in the round, so you have advantage. The wolf makes an agility check to avoid getting grappled, but it rolls less than you. The wolf is now grappled, and you are now grappling. The wolf is stuck.]]
+| Requirement            | Details                                      |
+| ---------------------- | -------------------------------------------- |
+| **Range**              | Must be adjacent                             |
+| **Hands**              | At least one free hand required              |
+| **One-handed penalty** | Halve your check result (round up)           |
+| **Limitations**        | Can only grapple/be grappled by one creature |
+
+#### Grappling Example
+
+_The wounded cleric stumbles behind you as a snarling wolf charges forward. You need to stop it before it reaches your friend._
+
+- **Engagement:** You choose Cunning, wolf chooses Agility
+- **Result:** Cunning beats Agility—you win!
+- **Action:** Forgo damage to attempt grapple
+- **Might check:** You roll with advantage (ally helped earlier): 16
+- **Wolf's defense:** Agility check: 12
+- **Outcome:** Wolf is grappled, stuck in your iron grip while the cleric escapes
 
 ### Climb On
 
-Choose an adjacent creature two or more sizes larger than you. Make a might or agility ability check contested by the creature's might or agility ability check. If you roll higher, you climb onto the creature. So long as you are on the creature, you have the creature climber condition. Likewise, the climbed on creature has the climbed on condition.
+When facing colossal foes, sometimes the best strategy is using their size against them. Climbing onto massive creatures opens up vulnerable spots and dramatic cinematic moments.
 
-A creature can only climb on one creature at a time.
+**To climb an adjacent creature at least two sizes larger:**
+
+1. Win the engagement
+2. Make a **Might or Agility check** contested by their **Might or Agility**
+3. Success grants you **creature climber** status; they gain **climbed on**
+
+This maneuver transforms fights against giants and dragons from hopeless ground battles into epic vertical encounters where brave warriors scale their foes like living mountains.
 
 ### Hinder
 
-When you choose this option, you perform some other sort of option that interferes with your target. This could be represented by throwing sand in their eyes, kicking out their legs, or sucker punching them. You must be adjacent to the creature you target with this ability.
+Dirty fighting saves lives. These underhanded tactics create openings, buy time, and shift momentum when you need it most.
 
-Choose one option from the following list:
+**Choose one effect when you successfully hinder:**
 
-- The creature takes 1d4 damage and 2 levels of weakened, off-balanced, or dazed.
-- The creature takes 1 level of blinded.
-- The creature is knocked prone so long as it is no more than one size larger than you.
-- Push the creature 5 feet. It travels 5 feet less for every size larger than you it is, and 5 feet more for every size smaller. The creature gains 2 levels of off-balanced.
+| Effect           | Impact                                                    | Best Used When                           |
+| ---------------- | --------------------------------------------------------- | ---------------------------------------- |
+| **Dirty Strike** | 1d4 damage + 2 levels of weakened, off-balanced, OR dazed | Setting up allies for powerful attacks   |
+| **Blind**        | 1 level of blinded                                        | Neutralizing accurate attackers          |
+| **Trip**         | Knock prone (max 1 size larger)                           | Controlling mobile enemies               |
+| **Shove**        | Push 5 feet\* + 2 levels off-balanced                     | Creating distance or environmental kills |
+
+\*Distance modified by size: -5 feet per size larger, +5 feet per size smaller
+
+[[Example
+_The orc champion raises his massive blade for a killing blow on your fallen companion._
+
+- **Action:** Sand in the eyes (Blind effect)
+- **Result:** Orc gains 1 level of blinded
+- **Impact:** His next attack suffers disadvantage, likely missing your friend
+- **Next turn:** Your ally scrambles to safety while the orc clears his vision]]
 
 ### Stunt
 
-Choose your own effect, with the GM's permission. This could be something like stealing an item from around the creature's neck, grabbing their sword by the blade to turn it into clay, trying to taunt the creature by patting them on the head, or swinging into the creature from a rope to knock it off its feet.
+When standard tactics won't suffice, creativity becomes your greatest weapon. Stunts encompass any clever maneuver beyond the standard options—limited only by your imagination and GM approval.
 
-In these cases, make a contested ability check against the creature.
+**Popular stunts include:**
 
-## Special Circumstances
+- Stealing a pendant mid-combat
+- Transmuting an enemy's weapon by grabbing the blade
+- Taunting with a patronizing head-pat
+- Swinging from chandeliers for dramatic entrances
 
-Combat doesn't always begin on equal footing. Various circumstances can dramatically alter how a fight unfolds, giving advantages or disadvantages to different participants.
+Work with your GM to determine appropriate ability checks and effects. The best stunts create memorable moments that players recount for years.
 
-### Surprise
+### Special Circumstances
 
-In some cases when combat begins, one or more parties will be completely surprised, giving anyone who was already prepared to fight a large advantage.
+#### Surprise
 
-Combat special rules apply in these circumstances.
+Ambushes and sudden betrayals create devastating first-strike advantages. **When combat erupts unexpectedly, surprised creatures lose their entire first turn** while prepared combatants unleash opportunity attacks.
 
-A creature is not surprised if they can see their opponent before the round begins, and they are unfriendly or hostile towards their opponent or don't know their opponent.
+**You avoid surprise if:**
 
-If one of the parties in an encounter is completely surprised by combat, then each un-surprised creature can use their action to make an opportunity attack, and each surprised creature does not get to use abilities or move on the first round of combat.
+- You can see opponents before combat starts
+- You're already hostile or wary of them
+- You don't know them (stranger danger keeps you alert)
 
-### Attacking the Helpless
+#### Attacking the Helpless
 
-Sometimes, you will make attacks against creatures that are completely unable to defend themselves. At the GM's discretion, you may make an opportunity attack against the creature. Depending on the circumstances, the GM may also choose for the creature to immediately die instead.
+Sometimes opponents can't defend themselves—unconscious, paralyzed, or completely unaware. The GM determines whether you get an **opportunity attack** or if the target simply dies. Context matters: executing a sleeping guard differs vastly from coup de grâce on a paralyzed dragon.
 
-### Cover
+#### Cover
 
-Cover is an important part of staying alive—if you remain behind cover, you remain safe from ranged enemy attacks. There are three different types of cover, based on how many lines of sight exist between the attacker and the defender. Determining what type of cover you have from an attacker can be done by drawing imaginary lines between any one point on the attacker and each corner of a square that the enemy takes the space of. For each line that is obstructed by an obstacle, the attacker gets a level of disadvantage on their ranged attack roll. If all four lines are blocked by solid objects, you cannot attack that creature.
+Smart positioning behind obstacles transforms deadly firefights into tactical chess matches. **Each obstructed line between attacker and defender imposes one level of disadvantage on ranged attacks.**
 
-Sometimes, obstacles do not lend themselves to the line blocked method of determining cover. It is then up to the GM to decide how much cover should be awarded to the defender. Usually, anything small but not very helpful like a small tree in the way of your shot will provide one level of cover. Things that the defender has to poke their body out from behind to attack, such as the rise of a hill, or back of a couch, provide two levels of cover. Lastly, things that are specifically designed for uni-directional attacks, such as arrow slits, will provide three levels of cover.
+| Cover Type   | Disadvantage Levels | Examples                      | Tactical Use                      |
+| ------------ | ------------------- | ----------------------------- | --------------------------------- |
+| **Light**    | 1 level             | Small trees, furniture        | Quick protection while moving     |
+| **Heavy**    | 2 levels            | Hills, walls, large rocks     | Defensive positions for exchanges |
+| **Superior** | 3 levels            | Arrow slits, murder holes     | Fortified positions for sieges    |
+| **Total**    | Cannot target       | Full walls, complete barriers | Force melee engagement            |
+
+**Determining cover:** Draw imaginary lines from any point on the attacker to each corner of your space. Count blocked lines for disadvantage levels. All four blocked = total cover.
