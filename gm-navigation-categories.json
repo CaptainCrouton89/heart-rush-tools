@@ -5,6 +5,10 @@
       "sections": ["Pacing_Guide", "Timescale"]
     },
     {
+      "name": "Combat",
+      "sections": ["Monster_Creation_Guide"]
+    },
+    {
       "name": "Tables",
       "sections": ["Weather_&_Events_Tables"]
     },
