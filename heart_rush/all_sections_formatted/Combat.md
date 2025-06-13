@@ -311,9 +311,6 @@ You can recover hit points and reduce wounds by taking rests. Read more in the R
 
 If you're in a nasty fight, combatants tend to try to attack the people who are still fighting back. If you go unconscious, people usually won't view you as a threat, so you're a lot less likely to be attacked (and potentially die). Things trying to eat you generally don't abide by this, so in some cases this is definitely not recommended…
 
-[[Example  
-You want to grapple an adjacent wolf before it moves past you and attacks your badly hurt friend. You enter an engagement with it, choose stances, and stances are revealed. You chose cunning, and it chose agility. Since cunning beats agility, you get to attack. However, since you're trying to grapple it, you decide not to attack, and instead make a might check. Your ally used the help action earlier in the round, so you have advantage. The wolf makes an agility check to avoid getting grappled, but it rolls less than you. The wolf is now grappled, and you are now grappling. The wolf is stuck.]]
-
 ## Other Offensive Actions
 
 If you want to do something to an enemy other than hit it with a weapon, such as grapple it, climb onto it, or otherwise mess with it, it still begins with winning an engagement. However, you must win the engagement by directly beating their stance—both choosing the same stance does not let you perform these types of acts. Assuming you have directly beaten their stance, you may forgo your attack roll and instead use one of these other options. If you do, the effects of the offensive action occur after all attack rolls have been made.
@@ -329,6 +326,9 @@ If you roll higher, the creature is grappled. You gain the condition grappling a
 Unless otherwise specified, at least one hand must be free to grapple another creature. You can grapple with one or two hands. If grappling with only one hand, halve your grapple ability check, rounding up.
 
 A creature can only be grappled by one creature at a time, and can only grapple one creature at a time.
+
+[[Example  
+You want to grapple an adjacent wolf before it moves past you and attacks your badly hurt friend. You enter an engagement with it, choose stances, and stances are revealed. You chose cunning, and it chose agility. Since cunning beats agility, you get to attack. However, since you're trying to grapple it, you decide not to attack, and instead make a might check. Your ally used the help action earlier in the round, so you have advantage. The wolf makes an agility check to avoid getting grappled, but it rolls less than you. The wolf is now grappled, and you are now grappling. The wolf is stuck.]]
 
 ### Climb On
 
