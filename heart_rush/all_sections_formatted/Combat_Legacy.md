@@ -659,6 +659,19 @@ You may transform into a minuscule or large creature. The creature may have two 
 
 ## Battle-Tested Combat Approaches
 
+### Quick Combat Style Guide
+
+| What's Your Battle Fantasy?                                  | Your Approach                  |
+| ------------------------------------------------------------ | ------------------------------ |
+| **"I want to be an immovable wall that protects my allies"** | → **The Living Fortress**      |
+| **"I want to grab enemies and never let go"**                | → **The Bone Breaker**         |
+| **"I want to be a tough bruiser who knocks enemies down"**   | → **The Battlefield Brawler**  |
+| **"I want to deal massive damage to single targets"**        | → **The Perfect Killer**       |
+| **"I want to cut through hordes of enemies"**                | → **The Whirlwind**            |
+| **"I want to make my whole team better"**                    | → **The Battle Commander**     |
+| **"I want to dance around enemies with tricks"**             | → **The Shadow Dancer**        |
+| **"I want to blend magic with martial combat"**              | → **The War Mage** + any above |
+
 While your bloodmarks let you forge any combat style imaginable, certain ability combinations have proven devastatingly effective across countless battles. These aren't restrictions—they're starting points for warriors seeking proven paths to glory. Mix and match as you see fit, but know that these combinations create powerful synergies.
 
 ### The Living Fortress
