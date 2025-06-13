@@ -6,7 +6,7 @@ When you perform legendary feats in battle—moments that make allies gasp and e
 
 The GM awards bloodmarks for combat achievements that go beyond simple victory. Think cinematic moments: defeating a superior foe against impossible odds, protecting allies through heroic sacrifice, or turning the tide of battle through sheer audacity. These aren't participation trophies—they're recognition of the moments when you transcend normal combat into something memorable.
 
-[[When to Award Bloodmarks
+[[GM Note: When to Award Bloodmarks
 
 Award bloodmarks to players after you feel they have achieved a major, story milestone in combat. Their first bloodmark may be just for defending a caravan from goblin thieves—what matters is that the moment felt significant to the story and the player rose to meet it.
 
