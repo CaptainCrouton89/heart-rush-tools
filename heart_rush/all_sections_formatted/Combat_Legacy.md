@@ -253,7 +253,7 @@ _Minor ability. Instant._
 
 You can launch from one foe to the next with grace.
 
-- When you attack a creature that has not been attacked yet this round, you get +3 on the attack roll.
+- When you attack a creature that has not been attacked yet this round, add 1d4 to the attack roll.
 - When you deal enough damage to cause a creature to go unconscious or die this round, you gain an additional action you may take during the next action phase.
 
 #### Tactics
@@ -401,21 +401,15 @@ Paragon abilities are on a whole different level compared to other abilities. Th
 
 ### Assassinate
 
-_Major ability. Instant. Subclass: Striker. PL: 2._
+_Major ability. Instant. Combat mastery: Devastation Strike. Bloodmark: 6._
 
 When you would make an attack roll, you may instead attempt to assassinate the creature, killing it in a single blow. Before making the attack roll, you may declare it to be an assassination. If your attack deals damage equal to half or more of the target creature's remaining hit points, the creature takes twice as much damage.
 
 ### Battlespirit
 
-_Passive ability. Subclass: Any._
+_Passive ability: Any._
 
 You gain twice as many rush points at the start of each round of combat.
-
-### Battletuned
-
-_Passive ability. Subclass: Battlemind, Ravager, Skirmisher._
-
-You may make an additional attack against a valid target during each engagement.
 
 ### Bard of Gaea
 
@@ -431,223 +425,214 @@ Your companion can take the help action once each round for free, and can attack
 
 ### Bulwark Infinitum
 
-_Passive ability. Subclass: Bastion. PL: Last Bastion._
+_Passive ability. Combat mastery: Eternal Fortitude._
 
-When you use your major ability, add twice as many dice to your defense pool.
+When you use _Eternal Fortitude_, add twice as many dice to your defense pool.
 
 ### Cleave
 
-_Minor ability. Instant. Subclass: Ravager, Striker, Wrathguard._
+_Minor ability. Instant._
 
 When you deal damage with a heavy, melee, slashing weapons against a creature, if there is another creature also within melee reach, you may have that creature make a defense roll against whatever damage you dealt to the previous creature, and take the difference as damage. This continues so long as there is another creature you wish to hit within melee range, and there is damage left over.
 
 ### Undying Fury
 
-_Passive ability. Subclass: Wrathguard._
+_Passive ability. Combat mastery: Battle Spirited._
 
-When you would be reduced to 0 or fewer hit points, you may immediately use your Battle Spirited ability for free (if available) before falling unconscious. If this brings you above 0 hit points, you remain conscious.
+When you would be reduced to 0 or fewer hit points, you may immediately use _Battle Spirited_ for free (if available) before falling unconscious. If this brings you above 0 hit points, you remain conscious.
 
 ### Coordinated Efforts
 
-_Passive ability. Subclass: Battlemind._
+_Passive ability. Signature ability: Tactics._
 
 When you are in an engagement, if you and your allies each choose the same stance, each ally may double the benefits of their stance if their attack hits.
 
 ### Crescendo of Blows
 
-_Passive ability. Subclass: Ravager._
+_Passive ability. Combat mastery: Blitz._
 
 You may add 1d4 to your attack roll for every creature you have attacked this round, including the current target.
 
 ### Dance of One Thousand Strikes
 
-_Passive ability. Subclass: Ravager._
+_Passive ability. Combat mastery: Blitz._
 
 Whenever you make an attack roll, you may move 5 feet. This does not provoke opportunity attacks, but you count as adjacent to all creatures adjacent to any square you move from while using this ability.
 
-### Deoric Archmage
-
-_Passive ability. Subclass: Any. PL: 2._
-
-Can invent deoric spells? No, but that is fun and should be allowed from the beginning, just with high initial investment. Can invent more deoric?.
-
 ### Divine Dexterity
 
-_Passive ability. Subclass: Any. Agility die: d12. PL: 2._
+_Passive ability. Agility die: d12. Bloodmark: 6 2._
 
 Your agility die becomes a d20.
 
 ### Draconic Presence
 
-_Passive ability. Subclass: Any. Presence die: d12. PL: 2._
+_Passive ability. Presence die: d12. Bloodmark: 6._
 
 Your presence die becomes a d20.
 
 ### Elemental Paragon
 
-_Passive ability. Subclass: Spelltouched._
+_Passive ability._
 
 Choose an element you have an advanced attunement with. You gain the corresponding paragon level attunement.
 
 ### Elemental Spell Mastery
 
-_Passive ability. Subclass: Spelltouched._
+_Passive ability._
 
-Choose three spells from spell lists that match your elemental attunements. You learn those spells.
+Gain three elemental talents. They don't count towards the total number of talents you know.
 
 ### Eye of the Storm
 
-_Passive ability. Subclass: Wrathguard._
+_Passive ability. Specialization: Sentinel._
 
 Whenever someone leaves your reach and would provoke an opportunity attack, you may instead make two opportunity attacks.
 
 ### Favored Attacker
 
-_Passive ability. Subclass: Any._
+_Passive ability._
 
 Whenever you make an attack roll, roll an additional instance of your heart die.
 
 ### Favored Defender
 
-_Passive ability. Subclass: Any._
+_Passive ability._
 
 Whenever you make a defense roll, roll an additional instance of your heart die.
 
 ### Hordebreaker
 
-_Passive ability. Subclass: Ravager._
+_Passive ability. Specialization: Everywhere at Once._
 
 At the end of an engagement, if there are adjacent creatures that did not attack you, and you haven't attacked them yet this round, you may make an attack roll against each of them using your stance for the engagement.
 
 ### Hottest Flames
 
-_Passive ability. Subclass: Spelltouched: Fire. Talent: Hotter Flames._
+_Passive ability. Talent: Hotter Flames._
 
 If you have taken the Hotter Flames talent enough times to increase the damage die of fire to a d12, you may now increase the die to a d20.
 
 ### Improved Commander's Call
 
-_Passive ability. Subclass: Battlemind._
+_Passive ability. Signature ability: Commander's Call._
 
 Whenever you use your Commander's Call minor ability, you may grant the destiny level of the chosen talents rather than their basic level.
 
 ### Indomitable Might
 
-_Passive ability. Subclass: Bastion, Vicehand, Wrathguard._
+_Passive ability._
 
 Add 10 to all your A/D rolls made using the might stance.
 
 ### Indomitable Fortitude
 
-_Passive ability. Subclass: Bastion, Vicehand, Wrathguard._
+_Passive ability. Signature ability: Cry of Defiance._
 
 So long as you have more than 0 hit points, regain 10 hit points at the beginning of each round.
 
 ### Ingenious Cunning
 
-_Passive ability. Subclass: Any. Cunning die: d12. PL: 2._
+_Passive ability. Cunning die: d12. Bloodmark: 6 2._
 
 Your cunning die becomes a d20.
 
 ### Last Bastion
 
-_Passive ability. Subclass: Bastion._
+_Passive ability. Combat mastery: Eternal Fortitude._
 
 When you use your major ability, use d12s instead of d6s.
 
 ### Martial Master
 
-_Passive ability. Class: Any._
+_Passive ability._
 
 Gain any combination of three martial talents or destiny levels. These don't count for the purposes of calculating the cost of future talents and destiny levels.
 
-### Master of the Elements
-
-_Passive ability. Subclass: Spelltouched._
-
-You may use any of the elemental states and elemental attacks from the spelltouched class that you have an attunement to. If you have an advanced attunement to an element, you may also use its corresponding elemental convergence ability. You can use each elemental convergence ability up to once per day but not at the same time.
-
 ### One with War
 
-_Passive ability. Subclass: Wrathguard._
+_Passive ability. Combat mastery: Battle Spirited._
 
-Whenever you use your major ability, you may choose two options per rush point instead of one. You may take this paragon level additional times to increase the number of options by one each time.
+Whenever you use _Battle Spirited_, you may choose two options per rush point instead of one. You may take this paragon level additional times to increase the number of options by one each time.
 
 ### Piercing Shot
 
-_Minor ability. Instant. Subclass: Striker._
+_Minor ability. Instant. Signature ability: Power Strike._
 
 When you deal damage with a heavy, ranged, piercing weapon, draw a line from any corner of your space to anywhere in the square with the creature you damaged. If this line continued and would pass through another creature's space, you may have that creature make a defense roll against whatever damage you dealt to the previous creature, and take the difference as damage. This continues down the line until a creature takes no damage, you have exceeded the range of your weapon, or at any point you wish to stop before then.
 
 ### Psionics
 
-_Passive ability. Subclass: Any. Talent: Cast Thoughts._
+_Passive ability. Talent: Cast Thoughts._
 
-When you take the help action, you may instead apply three levels of frightened, enraged, or confused. This ability can only be used on each creature once per day.
+When you take the hinder action, you may instead apply three levels of frightened, enraged, or confused. This ability can only be used on each creature once per day.
 
 ### Relentless
 
-_Passive ability. Subclass: Bastion, Vicehand, Wrathguard, Ravager._
+_Passive ability._
 
 When making A/D rolls, use your maximum heart die rather than your current heart die.
 
 ### Stunning Strikes
 
-_Passive ability. Subclass: Bastion._
+_Passive ability. Signature ability: Hulking Blows._
 
 Whenever you roll the maximum result on one of your dice in an attack roll made with a heavy melee weapon, you may triple the result of that die. If this occurs on a d12, the creature is stunned until the beginning of the next round.
 
 ### Tactically Savvy
 
-_Passive ability. Subclass: Battlemind._
+_Passive ability. Signature ability: Call to Action._
 
 When you are in an engagement, if you and your allies cumulatively choose every possible stance, excluding the defensive stance, then each of your allies gain the benefits of every stance, should their attack hit.
 
 ### Titanic Strength
 
-_Passive ability. Subclass: Any. Might die: d12. PL: 2._
+_Passive ability. Might die: d12. Bloodmark: 6._
 
 Your might die becomes a d20.
 
 ### Trickster
 
-_Passive ability. Subclass: Skirmisher._
+_Passive ability. Specialization: Improved Interference. Combat mastery: Bag of Tricks._
 
 When you choose to interfere, choose two options rather than one. When you use your Bag of Tricks ability, you may choose two options instead of one.
 
 ### Savior
 
-_Passive ability. Class: Bastion._
+_Passive ability. Signature ability: I Didn't Feel a Thing._
 
 The threshold of negative hit points necessary to kill you is doubled. So if you previously could survive until -60 hit points, you can now survive until -120. Whenever you take a wound, gain an additional three rush points.
 
 ### Strategic Supremacy
 
-_Major ability. Instant. Subclass: Battlemind._
+_Major ability. Instant. Combat mastery: Rallying Cry._
 
-During the next minute, you may choose to use either of the following options. Once you have chosen an option, you cannot choose it again until you use this ability again. Damage dealt to a creature within 45 feet is halved, rounded down. Damage dealt to a creature within 45 feet is doubled.
+During the next minute, you may use each of the following options once:
+
+- **Protect:** Choose a creature within 45 feet. All damage dealt to that creature is halved (rounded down) until the end of the minute.
+- **Devastate:** Choose a creature within 45 feet. All damage dealt to that creature is doubled until the end of the minute.
 
 ### Tough as Nails
 
-_Passive ability. Class: Strongheart._
+_Passive ability. Signature ability: I Didn't Feel a Thing._
 
 The threshold at which damage causes wounds increases by 10. You may take this paragon level any number of times.
 
 ### Uncanny Accuracy
 
-_Passive ability. Subclass: Striker._
+_Passive ability._
 
 You gain A3 on all attack rolls.
 
 ### Veteran
 
-_Major ability. Subclass: Any. PL: 2._
+_Major ability. Bloodmark: 6._
 
 You may use the major ability granted by your subclass again.
 
 ### War Borne
 
-_Passive ability. Subclass: Wrathguard, Ravager._
+_Passive ability. Specialization: In the Thick of It._
 
 If you begin and end the round adjacent to three or more enemies, you may make an opportunity attack at the end of the round.
 
