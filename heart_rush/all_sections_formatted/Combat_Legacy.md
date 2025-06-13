@@ -411,6 +411,12 @@ _Passive ability: Any._
 
 You gain twice as many rush points at the start of each round of combat.
 
+### Battletuned
+
+_Passive ability. Signature ability: Everywhere at Once OR Specialization: In the Thick of It._
+
+You may make an attack against an additional valid target during each egagement.
+
 ### Bard of Gaea
 
 _Passive ability. Subclass: Any._
