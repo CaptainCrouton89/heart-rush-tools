@@ -191,7 +191,7 @@ Until the end of the round, when you make an unarmed attack roll against a creat
 
 Grappling the creature does not impose disadvantage on your attack rolls against the creature this round.
 
-#### I don't think so
+#### I don't Think So
 
 _Minor ability._
 
@@ -669,16 +669,17 @@ _For warriors who plant themselves between danger and their allies_
 
 **Foundation Abilities:**
 
-- **In the Thick of It** (Specialization): Surrounded isn't disadvantaged—it's where you thrive
-- **Cry of Defiance** (Signature): Shrug off conditions and keep standing when others would fall
+- **In the Thick of It** (Specialization): +1 attack/defense per adjacent enemy
+- **Cry of Defiance** (Signature Ability): Remove conditions or regain HP
 
-**Synergistic Choices:**
+**Recommended Abilities:**
 
-- **Guardian's Sacrifice**: Turn your positioning into active protection
-- **Violent Defense**: Make attackers regret choosing you as a target
-- **Eternal Fortitude**: When you absolutely must not fall
+- **Guardian's Sacrifice** (Specialization): Turn your positioning into active protection
+- **Violent Defense** (Signature Ability): Make attackers regret choosing you as a target
+- **Hulking Blows** (Signature Ability): Devastating attacks with heavy weapons
+- **Eternal Fortitude** (Combat Mastery): When you absolutely must not fall
 
-**Combat Flow:** Position yourself where enemies must deal with you first. Use Guardian's Sacrifice to protect squishier allies while In the Thick of It turns being surrounded into defensive superiority. Violent Defense punishes attackers, while Cry of Defiance ensures conditions don't lock you down.
+**Combat Flow:** Position yourself where enemies must deal with you first. Use Guardian's Sacrifice to protect squishier allies while In the Thick of It turns being surrounded into defensive superiority. Violent Defense punishes attackers, while Hulking Blows ensures your counterstrikes devastate. Cry of Defiance and Eternal Fortitude keep you standing when others would fall.
 
 ### The Bone Breaker
 
@@ -689,15 +690,16 @@ _For grapplers who turn close combat into a nightmare_
 **Foundation Abilities:**
 
 - **In the Thick of It** (Specialization): Close quarters is your domain
-- **Cry of Defiance** (Signature): Break free from conditions that would stop your grapples
+- **Cry of Defiance** (Signature Ability): Break free from conditions that would stop your grapples
 
-**Synergistic Choices:**
+**Recommended Abilities:**
 
-- **Grappler**: Master the clinch
-- **Fists, Knees, and Elbows**: Every hold becomes a damage opportunity
-- **Cinch Down**: Squeeze the life out of trapped foes
+- **Grappler** (Specialization): Master the clinch
+- **Fists, Knees, and Elbows** (Signature Ability): Every hold becomes a damage opportunity
+- **I Don't Think So** (Signature Ability): Control options for grappled enemies
+- **Cinch Down** (Combat Mastery): Squeeze the life out of trapped foes
 
-**Combat Flow:** Rush into melee and grab priority targets. Your enhanced grappling from Grappler combines with bonus damage from Fists, Knees, and Elbows to create a death spiral for trapped enemies. Use Cinch Down to maintain control while dealing consistent damage.
+**Combat Flow:** Rush into melee and grab priority targets. Your enhanced grappling from Grappler combines with bonus damage from Fists, Knees, and Elbows to create a death spiral for trapped enemies. Use I Don't Think So to control their options while Cinch Down maintains your grip and deals sustained damage.
 
 ### The Battlefield Brawler
 
@@ -708,15 +710,16 @@ _For aggressive tanks who control through violence_
 **Foundation Abilities:**
 
 - **In the Thick of It** (Specialization): More enemies means more opportunities
-- **Cry of Defiance** (Signature): Keep swinging no matter what they throw at you
+- **Cry of Defiance** (Signature Ability): Keep swinging no matter what they throw at you
 
-**Synergistic Choices:**
+**Recommended Abilities:**
 
-- **Sentinel**: Punish anyone who ignores you
-- **Crippling Blows**: Each hit disrupts enemy positioning
-- **Battle Spirited**: Your fury inspires allies
+- **Sentinel** (Specialization): Punish anyone who ignores you
+- **I Didn't Feel A Thing** (Signature Ability): Damage reduction
+- **Crippling Blows** (Signature Ability): Each hit disrupts enemy positioning
+- **Battle Spirited** (Combat Mastery): Your fury inspires allies
 
-**Combat Flow:** Wade into groups of enemies where In the Thick of It maximizes your combat prowess. Use Sentinel to punish enemies trying to bypass you, while Crippling Blows keeps them off-balance. Battle Spirited turns your aggressive positioning into team-wide benefits.
+**Combat Flow:** Wade into groups of enemies where In the Thick of It maximizes your combat prowess. Use Sentinel to punish enemies trying to bypass you, while I Didn't Feel A Thing keeps you in the fight. Crippling Blows disrupts enemy formations, and Battle Spirited turns your aggressive positioning into team-wide benefits.
 
 ### The Perfect Killer
 
@@ -726,16 +729,17 @@ _For precision strikers who end fights with surgical efficiency_
 
 **Foundation Abilities:**
 
-- **Brutal Attacks** (Specialization): When you hit, you hit hard
-- **Making it Count** (Signature): Double down on decisive moments
+- **Brutal Attacks** (Specialization): Exploding dice on max rolls
+- **Making it Count** (Signature Ability): Apply stance effects twice
 
-**Synergistic Choices:**
+**Recommended Abilities:**
 
-- **Called Shot**: Trade safety for devastating precision
-- **Power Strike**: Turn brutal attacks into annihilation
-- **Execute**: End wounded foes instantly
+- **Called Shot** (Specialization): Trade safety for devastating precision
+- **Power Strike** (Signature Ability): Turn brutal attacks into annihilation
+- **Execute** (Signature Ability): End wounded foes instantly
+- **Devastation Strike** (Combat Mastery): Free abilities and bonus attack dice
 
-**Combat Flow:** Set up the perfect strike with Called Shot, accepting defensive vulnerability for massive damage potential. Brutal Attacks and Power Strike create explosive damage chains, while Execute ensures wounded enemies don't get second chances.
+**Combat Flow:** Set up the perfect strike with Called Shot, accepting defensive vulnerability for massive damage potential. Brutal Attacks and Power Strike create explosive damage chains. Execute ensures wounded enemies don't get second chances, while Devastation Strike provides the ultimate alpha strike capability.
 
 ### The Whirlwind
 
@@ -746,15 +750,16 @@ _For warriors who thrive against hordes_
 **Foundation Abilities:**
 
 - **Brutal Attacks** (Specialization): Damage that spreads through enemy ranks
-- **Making it Count** (Signature): Multiply your multi-target devastation
+- **Making it Count** (Signature Ability): Multiply your multi-target devastation
 
-**Synergistic Choices:**
+**Recommended Abilities:**
 
-- **Everywhere at Once**: Strike multiple enemies per attack
-- **Bloodthirsty**: Fresh targets fuel your rampage
-- **Blitz**: Turn the battlefield into your personal highway
+- **Everywhere at Once** (Specialization): Strike multiple enemies per attack
+- **Lightning Reflexes** (Signature Ability): Act first, uninterruptible
+- **Bloodthirsty** (Signature Ability): Fresh targets fuel your rampage
+- **Blitz** (Combat Mastery): Turn the battlefield into your personal highway
 
-**Combat Flow:** Dive into enemy groups with Everywhere at Once, letting Brutal Attacks create cascading damage. Bloodthirsty rewards target switching while Blitz provides the mobility to reach fresh victims. You're not holding a position—you're thinning the herd.
+**Combat Flow:** Lightning Reflexes ensures you strike first. Dive into enemy groups with Everywhere at Once, letting Brutal Attacks create cascading damage. Bloodthirsty rewards target switching while Blitz provides ultimate mobility to reach fresh victims. You're not holding a position—you're thinning the herd.
 
 ### The Battle Commander
 
@@ -764,16 +769,17 @@ _For tactical minds who multiply force through leadership_
 
 **Foundation Abilities:**
 
-- **Above the Fray** (Specialization): Always have options beyond just attacking
-- **Tactics** (Signature): Turn enemy weaknesses into team advantages
+- **Above the Fray** (Specialization): Free utility action per round
+- **Tactics** (Signature Ability): Grant advantage based on enemy conditions
 
-**Synergistic Choices:**
+**Recommended Abilities:**
 
-- **Commander's Call**: Share your abilities with allies
-- **Call to Action**: Orchestrate team attacks
-- **Rallying Cry**: Provide the right buff at the right moment
+- **Versatile Training** (Specialization): Cheaper talent costs
+- **Commander's Call** (Signature Ability): Share your abilities with allies
+- **Call to Action** (Signature Ability): Orchestrate team attacks
+- **Rallying Cry** (Combat Mastery): Provide the right buff at the right moment
 
-**Combat Flow:** Use Above the Fray to constantly support allies while maintaining your own offense. Tactics ensures your team capitalizes on every opening, while Commander's Call and Call to Action turn individual abilities into team-wide advantages.
+**Combat Flow:** Use Above the Fray to constantly support allies while maintaining your own offense. Tactics ensures your team capitalizes on every opening. Commander's Call shares your tactical advantages, Call to Action orchestrates devastating team combinations, and Rallying Cry provides game-changing buffs when needed most.
 
 ### The Shadow Dancer
 
@@ -784,15 +790,16 @@ _For tricksters who win through disruption and misdirection_
 **Foundation Abilities:**
 
 - **Above the Fray** (Specialization): Utility and attacks in equal measure
-- **Tactics** (Signature): Exploit every enemy mistake
+- **Tactics** (Signature Ability): Exploit every enemy mistake
 
-**Synergistic Choices:**
+**Recommended Abilities:**
 
-- **Improved Interference**: Master battlefield disruption
-- **Bag of Tricks**: Always have the right tool
-- **Elusive**: Turn defense into repositioning
+- **Improved Interference** (Specialization): Master battlefield disruption
+- **Bag of Tricks** (Signature Ability): Always have the right tool
+- **Elusive** (Signature Ability): Turn defense into repositioning
+- **Nasty Tricksies** (Combat Mastery): Permanent debuffs on enemies
 
-**Combat Flow:** Dart between enemies using Elusive to avoid retaliation while Improved Interference disrupts their plans. Bag of Tricks provides situational solutions while Above the Fray ensures you're always contributing beyond basic attacks.
+**Combat Flow:** Dart between enemies using Elusive to avoid retaliation while Improved Interference disrupts their plans. Bag of Tricks provides situational solutions while Above the Fray ensures you're always contributing. Save Nasty Tricksies to permanently cripple the most dangerous foes.
 
 ### The War Mage
 
@@ -802,10 +809,10 @@ _For those who blend steel and sorcery_
 
 **Foundation Abilities:**
 
-- **Warcaster** (Specialization): Seamless magic-martial fusion
+- **Warcaster** (Specialization): Cheaper elemental talents, gain attunement
 - **Any other foundation**: Build your unique hybrid approach
 
-**Synergistic Choices:** The beauty of the war mage is flexibility—combine Warcaster with any other approach above. Add spellcasting to the Living Fortress for elemental armor. Blend it with Perfect Killer for magically-enhanced strikes. The battlefield is your canvas.
+**Synergistic Choices:** The beauty of the war mage is flexibility—combine Warcaster with any other approach above. Add spellcasting to the Living Fortress for elemental armor. Blend it with Perfect Killer for magically-enhanced strikes. Mix it with Shadow Dancer for spell-powered trickery. The battlefield is your canvas.
 
 **Combat Flow:** Varies wildly based on your chosen blend. The key is using Warcaster to add magical options to whatever combat style you prefer, creating combinations your enemies won't expect.
 
