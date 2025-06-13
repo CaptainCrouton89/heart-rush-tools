@@ -35,6 +35,17 @@ Most gameplay happens in this conversational space. You might spend twenty minut
 
 Without all three conditions, play continues through pure narration. This keeps the game flowing and ensures dice rolls feel important rather than routine.
 
+**Special Resolution: Combat**
+
+When violence erupts and multiple participants engage in deadly struggle, the game shifts to the combat system. This specialized resolution framework handles the chaos of battle through structured phases that capture simultaneous action. Combat begins when:
+
+- **Initiative matters** — Multiple combatants act with conflicting goals
+- **Positioning is tactical** — Where you stand affects what you can do
+- **Exchanges are lethal** — Attacks threaten immediate harm
+- **Timing is critical** — Split-second decisions determine survival
+
+A simple shove might use a basic skill check, but when swords are drawn and battle lines form, combat rules provide the granular detail these life-or-death moments deserve.
+
 ## Scales of Play
 
 Heart Rush's elegant zoom mechanic allows seamless transitions between different scales of action. Like a film director choosing between close-ups and panoramic shots, you'll shift focus based on what serves the story best. Each scale has its own rhythm and rules, but transitions happen naturally through play rather than rigid mechanics.
@@ -64,6 +75,12 @@ This is Heart Rush's default mode—experiencing the world through your characte
 - Tactical positioning matters
 - Individual skill checks for discrete actions
 - Real-time decision making
+
+**Combat as Zoomed-In Resolution**
+
+Combat represents the most granular form of zoomed-in play. When violence breaks out, the game zooms in even further to track individual attacks, defensive maneuvers, and split-second tactical decisions. While a tense negotiation might involve several skill checks over ten minutes, a combat encounter tracks every swing, spell, and desperate dodge in six-second rounds. This hyper-focused resolution ensures that life-or-death struggles feel appropriately intense and tactical.
+
+**See the Combat section for complete rules on initiative, attack sequences, and tactical options.**
 
 ### Montage: Compressed Time
 
@@ -221,11 +238,24 @@ The GM calls for specific dice rolls based on your approach and the situation. N
 3. **Combat Rolls** — Resolving violent conflicts
 
    - Attack/Defense rolls with specific combat mechanics
-   - Used for: armed conflicts, brawls, duels
+   - Used when: Violence erupts between multiple participants
+   - Why combat: Provides granular tactical resolution for life-or-death struggles
+   - Includes: Initiative, positioning, attack sequences, defensive reactions
 
 4. **Stratagem Rolls** — Managing complex endeavors
    - d8 + ability die + profession + aspect vs Challenge Number
    - Used for: leading organizations, long-term projects
+
+**Knowing When Combat Begins**
+
+The shift to combat rules happens naturally when:
+
+- **Weapons are drawn with intent** — Not just threats, but actual violence
+- **Multiple sides engage** — More than a simple shove or punch
+- **Tactical positioning matters** — Cover, flanking, and distance become crucial
+- **Order of actions is contested** — Everyone wants to act first
+
+A barroom brawl might stay as skill checks if it's just shoving and posturing. But when bottles break into weapons and combatants circle for advantage, combat rules engage to handle the complexity.
 
 ### Types of Challenges
 
@@ -250,7 +280,8 @@ Heart Rush presents diverse challenges requiring different approaches. Understan
 - **Direct Confrontation** — Bandits, monsters, rival adventurers
 - **Ambushes** — Surprise attacks requiring quick response
 - **Duels** — Formal single combat with specific rules
-- **Resolution** — Combat system with initiative and attack/defense rolls
+- **Mass Battles** — Large-scale conflicts (often use stratagems)
+- **Resolution** — Combat system when violence erupts; stratagems for armies
 
 **Strategic Challenges**
 
