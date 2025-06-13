@@ -1,6 +1,6 @@
 # Combat Legacy
 
-When you perform legendary feats in battle—moments that make allies gasp and enemies hesitate—you earn bloodmarks. These supernatural battle-scars represent your growing reputation as a warrior, manifesting as abilities that reflect your unique fighting style. Each bloodmark transforms you further from mere combatant into seasoned hero.
+When you perform legendary feats in battle—moments that make allies gasp and enemies hesitate—you earn bloodmarks. These supernatural battle-scars represent your growing reputation as a warrior, manifesting as abilities that reflect your unique fighting style. Each bloodmark transforms you further from mere combatant into seasoned hero, with no limit to how legendary you might become.
 
 ## Earning Your Legacy
 
@@ -27,13 +27,13 @@ Remember: bloodmarks represent the evolution from "person who fights" to "warrio
 
 Your combat legacy grows with each bloodmark you earn:
 
-| Bloodmark Level   | Abilities Gained                       | What This Means                                                        |
-| ----------------- | -------------------------------------- | ---------------------------------------------------------------------- |
-| **1st Bloodmark** | 1 Specialization                       | Your fighting style begins to evolve beyond survival instincts         |
-| **2nd Bloodmark** | 1 Specialization + 1 Signature Ability | Combat becomes second nature; specialized techniques emerge            |
-| **3rd Bloodmark** | 2 Signature Abilities                  | You master advanced maneuvers that chain into devastating combinations |
-| **4th Bloodmark** | 1 Combat Mastery                       | You reach minor hero status with a signature combat technique          |
-| **5th Bloodmark** | 1 Paragon Ability                      | Your combat mastery achieves legendary status among warriors           |
+| Bloodmark Level    | Abilities Gained                       | What This Means                                                          |
+| ------------------ | -------------------------------------- | ------------------------------------------------------------------------ |
+| **1st Bloodmark**  | 1 Specialization                       | Your fighting style begins to evolve beyond survival instincts           |
+| **2nd Bloodmark**  | 1 Specialization + 1 Signature Ability | Combat becomes second nature; specialized techniques emerge              |
+| **3rd Bloodmark**  | 2 Signature Abilities                  | You master advanced maneuvers that chain into devastating combinations   |
+| **4th Bloodmark**  | 1 Combat Mastery                       | You reach minor hero status with a signature combat technique            |
+| **5th+ Bloodmark** | 1 Paragon Ability (each)               | Each new bloodmark grants another legendary technique as your myth grows |
 
 **Specializations** grant permanent enhancements to your fighting style—brutal strikes that explode into devastating damage chains, defensive awareness that lets you protect nearby allies, or combat versatility that reduces training costs. These passive abilities fundamentally change how you approach every fight. Choose from the Specializations list below.
 
