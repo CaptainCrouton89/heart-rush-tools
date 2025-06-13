@@ -157,7 +157,7 @@ You can compress your body to fit through any opening large enough for a creatur
 
 ### Emotional Currents
 
-**Heart ability. Instant.**
+**Major ability. Instant.**
 You can sense the emotional undercurrents around you with supernatural clarity. For the next minute, you know the current emotional state of all creatures within 30 feet and can detect lies automatically. Additionally, you can choose one creature in range—they must make a presence saving throw against your cunning challenge number or have their attitude toward you improved by one step (hostile to unfriendly, unfriendly to neutral, etc.).
 
 ## Children of Anubis
@@ -523,7 +523,7 @@ These battle-scarred dwarves view each conflict as a sacred offering to the gods
 
 #### Spiked Charge
 
-**Heart ability.**
+**Minor ability.**
 While wearing your specially crafted spiked armor, when you dash at least 20 feet toward an enemy, you may use your action to make an opportunity attack with your armor instead. You must choose the might stance and your armor counts as a heavy piercing melee weapon. Add your armor's defense bonus in place of a weapon die roll. However, the violent impact body-slam damages you as well—you take damage equal to the target's defense roll.
 
 Additionally, whenever you are grappled while wearing your spiked armor, the enemy immediately takes damage equal to your armor's defense bonus, and takes the same damage again at the start of each subsequent round they maintain the grapple.
@@ -2010,7 +2010,7 @@ In their hidden palace-fortresses beneath tropical reefs, the Kendrel engage in 
 
 #### Mesmerizing Presence
 
-**Heart ability.**
+**Major ability.**
 Your beauty and grace can stop conflicts before they begin. When combat would begin, you may use this ability before initiative is rolled. Each creature makes cunning saving throw against your presence challenge number. Each creature that fails becomes unable to take hostile actions against you for the next minute unless you or your allies attack them first. Affected creatures may still defend themselves if attacked. This ability has no effect on creatures that are already in combat or have been in combat with you within the last hour.
 
 ### Cendoriln (Abyss Kendor)
@@ -2094,7 +2094,7 @@ They form loose packs and hunting bands, valuing cunning and strength over propr
 
 #### Savage Grace
 
-**Heart ability.**
+**Major ability.**
 You can unleash your feral nature in combat. When you do, your claws count as light melee weapons that deal slashing damage. For the next minute:
 
 - Your move speed increases by 20 feet
@@ -2129,7 +2129,7 @@ You can communicate telepathically with other Krell within 1 mile through pherom
 
 ### Swarm Tactics
 
-**Heart ability.**
+**Minor ability.**
 When you make an attack roll while adjacent to at least one ally, you may activate this ability to gain advantage on the attack and add an additional 1d4 to it for each ally adjacent to you (maximum +3d4). If this attack reduces an enemy to 0 hit points, you and all adjacent allies may immediately move up to your speed toward another enemy without provoking opportunity attacks.
 
 ## Lizardfolk
@@ -2194,7 +2194,7 @@ Their distinctive black scales shimmer with an oily iridescence, and their jaws 
 
 #### Venomous Bite
 
-**Heart ability.**
+**Passive ability.**
 
 Your bite delivers a potent neurotoxin that causes excruciating pain. Your teeth count as an ultralight, piercing melee weapon. If you bite and deal damage, the target takes normal damage plus 1 level of poisoned that lasts until they take a long rest. These levels of poisoned do not stack. A creature can only be affected by one instance of your venom at a time.
 
@@ -2408,7 +2408,7 @@ You can breathe both air and water, and suffer no disadvantage for skill checks 
 
 ### Pearl Diver's Fortune
 
-**Heart ability.**
+**Passive ability.**
 Your expertise in finding valuable pearls extends to sensing all forms of hidden treasure. You can sense the presence of valuable objects (worth 50+ ducats) within 30 feet, even through solid barriers. Once per day, when you spend at least 10 minutes searching an area, you automatically find something valuable (GM determines what, but it should be level-appropriate).
 
 ## Myushli
@@ -3235,7 +3235,7 @@ Your skin is rough bark. You have +2 to defense rolls against bludgeoning, pierc
 
 ### Rooted Soul
 
-**Heart ability.**
+**Minor ability.**
 
 As an action, you may root yourself to the ground. While rooted, you cannot move or be moved by any force, and you have advantage on all might-based rolls. You may uproot yourself as an action.
 
@@ -3261,7 +3261,7 @@ The Drifting Isles that spawned them are a lawless collection of hidden ports an
 
 ### Cutthroat's Edge
 
-**Heart ability.**
+**Minor ability.**
 
 Your blade work targets the gaps and weaknesses that armor cannot protect. When you make an attack with a sword, you may activate this ability to completely ignore the target's defense bonus from armor and shields. Your blade finds the joints, straps, and vital points with murderous precision.
 
@@ -3364,7 +3364,7 @@ You do not age and are immune to disease and poison. You need only one-tenth the
 
 ### Chromatic Flux
 
-**Heart ability.**
+**Major ability.**
 Your emotional state causes your skin to shift through brilliant colors, creating hypnotic patterns. As an action, you can intensify this effect, forcing all creatures within 30 feet who can see you to make a cunning saving throw against your presence challenge number or gain 1 level of charmed toward you. Additionally, you can create bright light in a 20-foot radius or dim light in a 40-foot radius at will by glowing.
 
 ## Triton

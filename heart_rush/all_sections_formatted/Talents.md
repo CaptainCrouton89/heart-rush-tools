@@ -74,7 +74,7 @@ Once per month, you may declare a humanoid to be the target of your assassinatio
 
 ### Backstab
 
-_Heart ability. Instant. Martial talent._
+_Minor ability. Instant. Martial talent._
 
 When you have flanking position on an enemy (you can draw a straight line from any corner of your space through the enemy's space to any corner of your ally's space), you may treat your weapon as using a d20 for your next melee attack roll against that enemy until end of the round. You must be wielding an ultralight melee weapon to gain the benefits of this ability.
 
@@ -85,7 +85,7 @@ You may replace your weapon die with 2d20 instead.
 
 ### Baited Attack
 
-_Heart ability. Instant. Martial talent._
+_Minor ability. Instant. Martial talent._
 
 If a creature makes an attack against you and deals no damage to you, they instead deal damage equal to their roll to another creature behind you as you redirect their attack. A creature is considered behind you if at least one straight line can be drawn from a corner of the attacker's space, through your space, and to a corner of the new victim's space.
 
@@ -109,15 +109,6 @@ While there are two or more enemies adjacent to you, you have advantage on your 
 
 **Destiny Level:**
 Whenever you start the round with two or more enemies adjacent to you, you gain a rush point for each adjacent enemy.
-
-### Battlescreech
-
-_Heart ability. Martial talent._
-
-You emit a horrifying, earsplitting screech, terrifying and disturbing your enemies. Choose any number of creatures within 30 feet. Those creatures get D2 on their next A/D roll.
-
-**Destiny Level:**
-Those creatures also don't gain the benefit of the next stance they choose, and gain two levels of dazed.
 
 ### Battleweave
 
@@ -199,7 +190,7 @@ You have advantage on A/D rolls against your sworn enemy. In addition, you do no
 
 ### Body Shield
 
-_Heart ability. Instant. Martial talent._
+_Minor ability. Instant. Martial talent._
 
 The next time you are hit by a melee attack from a source that is adjacent to both you and a creature you are grappling, if the attacking creature's stance did not directly beat your own, you may use the grappled creature as a body shield. Add the creature's defense bonus to your own and split the damage between you, rounding up.
 
@@ -217,7 +208,7 @@ Whenever you reduce a creature to 0 hit points, your next attack roll deals an a
 
 ### Brutal Criticals
 
-_Heart ability. Instant. Martial talent._
+_Minor ability. Instant. Martial talent._
 
 Whenever you roll the maximum result on any two dice in an attack roll, you double each of their values. Both dice must be a d6 or higher.
 
@@ -226,7 +217,7 @@ This ability becomes a passive ability instead.
 
 ### Bunker Down
 
-_Heart ability. Martial talent._
+_Minor ability. Martial talent._
 
 You bunker down, preparing for the worst. You may only use this ability if you have a shield. When you bunker down, you gain the following effects until the end of the round:
 
@@ -434,7 +425,7 @@ You may add 4d6 instead. If you do, decrease your heart die twice instead.
 
 ### Fast Friends
 
-_Heart ability. Handmagic._
+_Minor ability. Handmagic._
 
 Choose two creatures besides yourself. They have D2 on attack rolls against each other for the next 10 minutes.
 
@@ -574,9 +565,9 @@ Once per round, you may call out encouragement as a quick ability. Choose a crea
 
 ### Intimidating
 
-_Heart ability. Instant. Cognitive talent._
+_Minor ability. Instant. Cognitive talent._
 
-If you reduce an enemy to 0 hit points, all enemies within 5 feet of you or the enemy gain a level of frightened.
+If you reduce an enemy to 0 hit points, you may perform some intimidating action. All enemies within 5 feet of you or the enemy gain a level of frightened.
 
 **Destiny Level:**
 Enemies that are frightened of you cannot enter an engagement with you unless they are joined by at least two other creatures.
@@ -871,9 +862,9 @@ You instead get a number of levels of advantage on your attack rolls equal to th
 
 ### Target the Weakness
 
-_Heart ability. Instant. Cognitive talent._
+_Minor ability. Instant. Cognitive talent._
 
-After entering an engagement, but before anyone declares stances, you may use this ability. Announce a stance, and a creature in the engagement. Once stances are revealed, any attack roll against the creature made using the announced stance ignores half of the target's defense roll.
+During an engagement, but before anyone declares stances, you may use this ability. Announce a stance, and a creature in the engagement. Once stances are revealed, any attack roll against the creature made using the announced stance ignores half of the target's defense roll.
 
 **Destiny Level:**
 Ignore the creature's entire defense roll instead.
@@ -939,7 +930,7 @@ _Major ability. Instant. Martial talent._
 When you make an attack roll against an enemy using a melee slashing weapon, you may make the attack a whirlwind attack. If you do, creatures of your choice within melee range must make a defense roll against your attack roll and take the damage as well. This only counts as making one attack.
 
 **Destiny Level:**
-This ability becomes a heart ability instead.
+This ability becomes a minor ability instead.
 
 ### Whispers of Madness
 
@@ -956,7 +947,7 @@ The talents in this section are noncombat-related talents. This categorization i
 
 ### Adherence
 
-_Heart ability. Handmagic._
+_Major ability. Handmagic._
 
 As an action, you may point at a non-living, unoccupied object or space within 30 feet. Up to a 5-foot cube worth of volume of that object becomes covered in an extremely sticky slime, with sticking power equal to 100 pounds. If a creature steps on the object, they must use their action to step free of it, and the space counts as difficult terrain.
 
@@ -977,7 +968,8 @@ You may touch an object to see its past. Choose one:
 In addition, you may ask the object any question about its past. The object will answer the question truthfully.
 
 ### Animate Object
-_Heart ability. Full action. Handmagic._
+
+_Major ability. Full action. Handmagic._
 
 As an action, you may point at an inanimate object within 30 feet that could fit in a 5-foot cube. The object obeys your commands to the best of its ability, and gains a move speed of 15 feet. This effect lasts for as long as you remain pointing at it. You cannot animate more than one object using this ability.
 
@@ -985,7 +977,8 @@ As an action, you may point at an inanimate object within 30 feet that could fit
 You may manipulate up to three objects at once with this ability. You do not have to point at them to animate them, but they must remain within 30 feet. The objects must fit in a 10-foot cube.
 
 ### Anthropomorphize
-_Heart ability. Handmagic._
+
+_Major ability. Handmagic._
 
 As an action, you may lay your hand on a non-hostile animal. The following effects last for one hour. Choose two:
 
@@ -1013,7 +1006,8 @@ So long as you can see the stars, you may ignore the navigation challenge number
 You have advantage on navigation checks. You can identify your location from a successful navigation check.
 
 ### Attraction
-_Heart ability. Cognitive talent. Elemental attunement: Force._
+
+_Major ability. Cognitive talent. Elemental attunement: Force._
 
 Choose any two inanimate objects. Those objects attract each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
 
@@ -1040,7 +1034,8 @@ You automatically revert to your natural form after one hour, or as an action an
 This becomes a passive ability. You may stay in your transformed state for any amount of time. The creature you transform into may be tiny, and may have a swim speed. The creature can have 2d8s, or a d4 and d10 for its might and agility dice.
 
 ### Befuddle
-_Heart ability. Handmagic._
+
+_Major ability. Handmagic._
 
 As an action, you may point at a sentient creature. That creature forms no new memories for the next ten minutes, though it is aware that you performed mind-altering magic on it.
 
@@ -1268,15 +1263,17 @@ By molding and sculpting the air, you can create and shape intricate, small obje
 The size limit on the object increases to a 5-foot cube.
 
 ### Gravity
-_Heart ability. Full action. Cognitive talent. Elemental attunement: Force._
 
-You may use your action to change the direction of gravity for yourself. You may dispel this effect at any time as a quick ability.
+_Major ability. Full action. Cognitive talent. Elemental attunement: Force._
+
+You may use your action to change the direction of gravity for yourself. You may dispel this effect at any time.
 
 **Destiny Level:**  
 You may change the direction of gravity for up to six willing creatures.
 
 ### Grip of the Kraken
-_Heart ability. Handmagic._
+
+_Major ability. Handmagic._
 
 While holding a single, inanimate object of homogenous material in your hand, you can choose to make it immovable. It remains transfixed in space in relation to the nearest ground beneath it until you let go of it.
 
@@ -1292,7 +1289,8 @@ When you touch an inanimate object, you may choose to mark it. While marked, you
 You may mark up to three objects at a time, and the source of your senses can originate from any point on the object within 5 feet of where you touched it.
 
 ### Harmonic
-_Heart ability. Handmagic._
+
+_Minor ability. Handmagic._
 
 You may redistribute hit points among any number of willing creatures adjacent to you, including yourself.
 
@@ -1437,8 +1435,8 @@ You may alter the thoughts and memories of a non-hostile creature that you touch
 You may instead replace one hour's worth of memories from the last day.
 
 ### Merchant's Luck
-_Heart ability. Handmagic._
 
+_Major ability. Handmagic._
 
 Fortune favors the bold in business. When making any roll related to trading, buying, selling, or negotiating prices, you may immediately reroll all dice showing results of 3 or lower. You must keep the new results. This includes rolls for finding buyers/sellers, determining trader levels, negotiating prices, or avoiding trade-related complications.
 
@@ -1524,7 +1522,8 @@ As an action, you may place your hand on a non-living object that fits in a spac
 The transformation lasts indefinitely, though you may not use this ability on more than three different objects at once. The upper limit of the size increases to a 25-foot cube.
 
 ### Rejection
-_Heart ability. Cognitive talent. Elemental attunement: Force._
+
+_Major ability. Cognitive talent. Elemental attunement: Force._
 
 Choose any two objects. Those objects repulse each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
 
@@ -1548,8 +1547,8 @@ If you have aspect 4 or higher in runescribing or a similar aspect, you may now 
 If you have aspect 5 or higher in runescribing or a similar aspect, you may make the additional modifications to a handmagic sign to make its destiny level upgrade. You must spend a week studying and practicing before memorizing and inscribing the destiny level version of a sign.
 
 ### Salvage Master
-_Heart ability. Cognitive talent._
 
+_Major ability. Cognitive talent._
 
 When you come across a broken or ruined magical item, you may spend an hour examining it to extract a single magical component. The component's level equals half the item's level (round down, minimum 1), and its tags relate to the item's original properties.
 
@@ -1573,7 +1572,8 @@ After playing your instrument for a minute or more, all creatures within 60 feet
 The range of your song increases to 120 feet. In addition, you may choose to exclude individuals from the collection of creatures you enthrall.
 
 ### Smell Something Fishy
-_Heart ability. Cognitive talent._
+
+_Major ability. Cognitive talent._
 
 When investigating the location of a mystery or crime, you may ask the GM if there are any undiscovered clues related to a question of your choice about whatever event occurred in your location. The GM must answer truthfully.
 
@@ -1695,12 +1695,12 @@ This becomes a major ability.
 
 ### Beckon
 
-_Heart ability. Void._
+_Major ability. Void._
 
-Choose a creature you can see within 30 feet. It teleports to a free space in which it can stand that is adjacent to you.
+Choose a creature you can see within 90 feet. It teleports to a free space in which it can stand that is adjacent to you.
 
 **Destiny Level:**
-The range extends to 90 feet instead.
+You may use this as a minor ability instead.
 
 ### Billowing Smoke
 
@@ -1715,14 +1715,14 @@ The radius of smoke increases by 5 feet each round.
 
 _Major ability. Light. Ongoing._
 
-You rub a sphere of pure, brilliant light into your fingers before casting it into the air. Choose a point within 45 feet. Creatures of your choice within a 5-foot radius of that point take three levels of blindness whenever they enter or start the round in that space, no more than once per round. For every 5 feet further you are from the point, creatures gain one level fewer of blindness.
+You rub a sphere of pure, brilliant light into your fingers before casting it into the air. Choose a point within 45 feet. Creatures of your choice within a 5-foot radius of that point take three levels of blindness whenever they enter or start the round in that space, no more than once per round. For every 5 feet further you are from the point, creatures gain one level fewer of blindness. Bright light is cast in a 120 foot range, and dim light 120 feet beyond that.
 
 **Destiny Level:**
-You may use this as a heart ability.
+You may cast this spell at a range of 1000 feet, and the bright light extends to 250 feet, and dim light 250 feet beyond that.
 
 ### Blink Step
 
-_Heart ability. Instant. Void._
+_Minor ability. Instant. Void._
 
 When you dash, you may instead teleport to an unoccupied space that you can see within 90 feet.
 
@@ -1767,7 +1767,7 @@ This becomes a major ability instead.
 
 ### Collapse in Shadows
 
-_Heart ability. Dark and Force._
+_Major ability. Dark and Force._
 
 You clap your fingers to your palm, dragging everyone's bodies to their shadows. Creatures of your choice in bright or dim light within 10 feet of you fall prone.
 
@@ -1786,18 +1786,18 @@ Ice you create is as hard as stone and does not melt unless exposed to fire.
 
 ### Deluge
 
-_Heart ability. Water and Force._
+_Major ability. Water and Force._
 
-You wave your hand in a curling motion, sending a river of water rushing by, sweeping people away. Choose a 10-foot by 20-foot section of the map. Everyone creature of size L3 or smaller in that area is swept to one of the 10-foot sides of the rectangle, and lands prone. The water puts out any fire in that area.
+You wave your hand in a curling motion, sending a river of water rushing by, sweeping people away. Choose a 15-foot by 30-foot section of the map. Everyone creature of size L3 or smaller in that area is swept to one of the 15-foot sides of the rectangle, and lands prone. The water puts out any fire in that area.
 
 **Destiny Level:**
-The wave can be up to 30 feet by 60 feet, and pushes creatures up to L4 in size.
+The wave can be up to 45 feet by 90 feet, and pushes creatures up to L4 in size.
 
 ### Earthen Shackles
 
-_Heart ability. Earth and Force._
+_Minor ability. Earth and Force._
 
-You grasp your hand into an upturned fist, causing the ground to reach up and anchor those above it. Creatures of your choice within 5 feet of you take the crippled condition until end of turn.
+You grasp your hand into an upturned fist, causing the ground to reach up and anchor those above it. Creatures of your choice that are size large or smaller and are within 5 feet of you take the crippled condition until end of turn.
 
 **Destiny Level:**
 This becomes a passive ability.
@@ -1876,7 +1876,7 @@ Choose any number of spaces within 120 feet instead.
 
 ### Force Strike
 
-_Heart ability. Force. Ongoing._
+_Minor ability. Force. Ongoing._
 
 You motion with your fingers in the direction of the movement of your weapon, accelerating it with force. Your next attack with a weapon pushes the target 15 feet away from you.
 
@@ -2082,7 +2082,7 @@ This becomes a passive ability.
 
 ### Rewind
 
-_Heart ability. Time._
+_Major ability. Time._
 
 Choose any number of creatures within 45 feet. For each leveled condition affecting each of those creatures, increase it by one.
 
@@ -2129,7 +2129,7 @@ The bars have 40 hit points and 10 defense.
 
 ### Shadowy Double
 
-_Heart ability. Dark. Ongoing._
+_Major ability. Dark. Ongoing._
 
 You drag darkness from around you to your form. If you are in dim light, you may create shadowy duplicates of yourself. The next times you are attacked, you instead take no damage, as they attack a shadowy double. The duplicates disappear if you exit dim light.
 
