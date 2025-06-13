@@ -27,25 +27,25 @@ Remember: bloodmarks represent the evolution from "person who fights" to "warrio
 
 Your combat legacy grows with each bloodmark you earn:
 
-| Bloodmark Level   | Abilities Gained                    | What This Means                                                        |
-| ----------------- | ----------------------------------- | ---------------------------------------------------------------------- |
-| **1st Bloodmark** | 1 Passive Ability                   | Your fighting style begins to evolve beyond survival instincts         |
-| **2nd Bloodmark** | 1 Passive Ability + 1 Minor Ability | Combat becomes second nature; specialized techniques emerge            |
-| **3rd Bloodmark** | 2 Minor Abilities                   | You master advanced maneuvers that chain into devastating combinations |
-| **4th Bloodmark** | 1 Heart Ability                     | You reach minor hero status with a signature combat technique          |
-| **5th Bloodmark** | 1 Paragon Ability                   | Your combat mastery achieves legendary status among warriors           |
+| Bloodmark Level   | Abilities Gained                       | What This Means                                                        |
+| ----------------- | -------------------------------------- | ---------------------------------------------------------------------- |
+| **1st Bloodmark** | 1 Specialization                       | Your fighting style begins to evolve beyond survival instincts         |
+| **2nd Bloodmark** | 1 Specialization + 1 Signature Ability | Combat becomes second nature; specialized techniques emerge            |
+| **3rd Bloodmark** | 2 Signature Abilities                  | You master advanced maneuvers that chain into devastating combinations |
+| **4th Bloodmark** | 1 Combat Mastery                       | You reach minor hero status with a signature combat technique          |
+| **5th Bloodmark** | 1 Paragon Ability                      | Your combat mastery achieves legendary status among warriors           |
 
-**Passive Abilities** enhance your combat presence constantly—reflexes that border on precognition, strikes that carry supernatural weight, or defensive instincts that turn near-misses into advantages. Choose from the Passive Abilities list below.
+**Specializations** grant permanent enhancements to your fighting style—brutal strikes that explode into devastating damage chains, defensive awareness that lets you protect nearby allies, or combat versatility that reduces training costs. These passive abilities fundamentally change how you approach every fight. Choose from the Specializations list below.
 
-**Minor Abilities** grant specialized techniques you can activate for dramatic effect—explosive counterattacks, battlefield mobility that defies expectations, or strikes that shatter enemy defenses. Select from the Minor Abilities list below.
+**Signature Abilities** are powerful techniques you activate by spending rush points—tactical commands that enhance your whole team, defensive stances that turn attacks into counterstrikes, or mobility tricks that let you control battlefield positioning. Each costs escalating rush points per fight (1 for first use, 2 for second, etc.). Select from the Signature Abilities list below.
 
-**Heart Abilities** represent signature combat techniques—the moves that define your fighting style. At fourth bloodmark, you've reached the level of a seasoned adventurer with abilities that can single-handedly turn battles. Choose from the Heart Abilities list below.
+**Combat Masteries** represent once-per-day ultimate techniques—abilities so powerful they can single-handedly turn the tide of battle. Whether you're shrugging off lethal damage, inspiring allies beyond their limits, or unleashing devastating combination attacks, these define your heroic moments. Choose from the Combat Masteries list below.
 
-**Paragon Abilities** mark true combat mastery—techniques so extraordinary they become the stuff of legend. These reality-bending powers separate legendary heroes from even veteran warriors. Select from the Paragon Abilities list below when you achieve your fifth bloodmark.
+**Paragon Abilities** transcend normal combat entirely—class-specific techniques that mark you as a legendary warrior. From assassinating enemies in a single strike to commanding the battlefield with tactical supremacy, these abilities separate mythic heroes from everyday adventurers. Select from the Paragon Abilities list below when you achieve your fifth bloodmark.
 
 Each ability you select shapes your combat identity. Will you become an untouchable duelist, a battlefield controller who dominates positioning, or a berserker whose fury grows with each wound? Your bloodmarks tell that story.
 
-## Passive Abilities
+## Specializations
 
 Passive abilities are always active.
 
@@ -152,7 +152,7 @@ You excel at disrupting enemies through clever positioning and dirty tactics.
   - If the creature can see or hear you, it gains one level of enraged towards you.
   - If the creature is no more than one size bigger or smaller than you, switch places with it.
 
-## Minor Abilities
+## Signature Abilities
 
 Minor abilities are like any other ability, but they require rushpoints to use. The first time you use a minor ability, it costs one rush point. The second time, two, and so on. All usage of your minor abilities resets after a fight ends.
 
@@ -315,7 +315,7 @@ You react to danger with fluid grace, slipping away from harm at the last moment
 - This may cause you to no longer be a valid target for some attackers.
 - You cannot make any attack rolls this round.
 
-## Major Abilities
+## Combat Masteries
 
 You may use a major ability once per day.
 
