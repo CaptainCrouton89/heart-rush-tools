@@ -433,12 +433,7 @@ You have more versatility in combat.
 
 _Minor ability. Instant. Rank 3._
 
-You provide tactical aid to a teammate.
-
-- Choose any combination of up to four creatures and combat talents you know.
-- The chosen creatures must be within 120 feet and in earshot.
-- Until the end of this round, the chosen creatures gain the benefits of the basic level of the chosen talents.
-- If a heart ability or major ability is granted, that ability cannot be used again by you or them until the next day.
+You provide tactical aid to a teammate. Choose any combination of up to four creatures and combat talents you know. The chosen creatures must be within 120 feet and in earshot. Until the end of this round, the chosen creatures gain the benefits of the basic level of the chosen talents. If an ability with a cooldown is granted (major, weekly, monhtly), it counts as you using the ability, and it cannot be granted using this ability again.
 
 #### Call to Action
 
