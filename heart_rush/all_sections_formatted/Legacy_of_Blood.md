@@ -74,7 +74,7 @@ _Passive ability._
 You are naturally talented at handling the elements.
 
 - Gaining elemental talents costs only X+3 XP where X is the number of elemental talents you have.
-- You gain an elemental attunement.
+- You gain a basic elemental attunement
 
 #### Guardian's Sacrifice
 
