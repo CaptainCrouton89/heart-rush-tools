@@ -6,15 +6,15 @@ When you're crafting opponents for Heart Rush, you're not just filling stat bloc
 
 Heart Rush monsters use a streamlined format that captures everything you need at a glance. Here's what each element means and why it matters for your encounters:
 
-```
-### [Monster Name]
-*[Optional Subtitle/Description]*
+[[### [Monster Name]
+
+_[Optional Subtitle/Description]_
 **Size**: [S/M/L/L2/L3/etc.]
 [Might]/[Agility]/[Cunning]/[Presence] **HD** [d4-d20] **HP** [Number] **w** [Threshold]
 **A** +[Bonus] **D** +[Bonus]
+
 - [Special Ability 1]
-- [Special Ability 2]
-```
+- [Special Ability 2]]]
 
 Let's break down each component:
 
@@ -105,43 +105,39 @@ Monster abilities should create interesting decisions, not just add numbers. Foc
 
 ### Core Ability Templates
 
-#### Stance Rewards
+[[Stance Rewards
 
-```
 - On stance beat, [effect]
 - When winning with might, [effect]
 - If defending in cunning stance, [effect]
-```
+  ]]
 
 These abilities make stance selection more complex than simple rock-paper-scissors. Players must weigh the risk of triggering these effects against their tactical needs.
 
-#### Conditional Advantages
+[[Conditional Advantages
 
-```
 - Adv A when [condition]
 - A2 against [target type]
 - Adv D while [circumstance]
-```
+  ]]
 
 Advantages multiply the impact of good positioning or proper setup. Design conditions that players can manipulate through smart play.
 
-#### Status Applications
+[[Status Applications
 
-```
 - On hit, AC10 or dazed×2
 - Start of round, all within 10ft MC12 or sickened×1
 - When bloodied, aura of frightened×1 (PC10 negates)
-```
+  ]]
 
 Status effects create lasting consequences beyond damage. Use save DCs that give players meaningful choice—burn stamina for better saves, or accept the condition?
 
-#### Triggered Responses
+[[Triggered Responses
 
-```
 - When damaged by fire, explode for 1d6 in 10ft
 - If reduced below half HP, gain extra engagement
 - When an ally dies, enter rage (all attacks gain advantage)
-```
+  ]]
 
 These abilities create dynamic battlefields where the situation evolves based on player actions.
 
@@ -151,35 +147,33 @@ These abilities create dynamic battlefields where the situation evolves based on
 
 Design creatures that transform as they take damage:
 
-```
-### Metamorphic Horror
+[[### Metamorphic Horror
+
 - **Phase 1** (60+ HP): Defensive, probing attacks
 - **Phase 2** (30-59 HP): Aggressive, reveals true form
-- When reduced below 30 HP, split into two Horrorlings
-```
+- When reduced below 30 HP, split into two Horrorlings]]
 
 #### Environmental Integration
 
 Creatures that reshape the battlefield:
 
-```
-### Earthshaker Elemental
+[[### Earthshaker Elemental
+
 - All ground within 20ft becomes difficult terrain
 - 1/round, create 10ft stone wall (HP 20)
-- When moving, MC10 or knocked prone for adjacent creatures
-```
+- When moving, MC10 or knocked prone for adjacent creatures]]
 
 #### Component Creatures
 
 Multi-part monsters requiring different tactics:
 
-```
-### Hydra
+[[### Hydra
+
 **Body**: L2, attacks anyone adjacent
 **Heads** (×3): M, 30ft reach, independent targets
+
 - Destroying a head spawns two new heads next round
-- Body takes half damage while any head survives
-```
+- Body takes half damage while any head survives]]
 
 ## Scaling Encounters
 
@@ -299,17 +293,17 @@ Medium undead, tough but not agile
 **Step 3 - Abilities**:
 Design abilities reinforcing the concept:
 
-```
-### Phantom Knight
-*Cursed Guardian of the Fallen Temple*
+[[### Phantom Knight
+
+_Cursed Guardian of the Fallen Temple_
 **Size**: M
 10/6/10/8 **HD** 10 **HP** 50 **w** 15
 **A** +6 **D** +8(physical) +4(magic)
+
 - **Ghostly**: Can move through creatures/objects, difficult terrain doesn't slow
 - **Punish Aggression**: When attacked in might stance, attacker takes 1d6 psychic damage
 - **Spectral Chains**: On stance beat, MC12 or pulled 10ft and grappled
-- **Fade**: 1/combat, become incorporeal until next turn (can't attack or be attacked)
-```
+- **Fade**: 1/combat, become incorporeal until next turn (can't attack or be attacked)]]
 
 This creates a monster that:
 
@@ -324,31 +318,23 @@ For rapid encounter building, modify these templates:
 
 ### Brute
 
-```
-[Name] L [8-10]/[4-6]/[4-6]/[4-6] HD8 HP40 w12
-A+8 D+4 | On might stance beat, knock prone | Takes half damage from [type]
-```
+[[[Name] L [8-10]/[4-6]/[4-6]/[4-6] HD8 HP40 w12
+A+8 D+4 | On might stance beat, knock prone | Takes half damage from [type]]]
 
 ### Skirmisher
 
-```
-[Name] M [4-6]/[10-12]/[6-8]/[6-8] HD8 HP30 w10
-A+6 D+6 | Free sidestep after attacking | Adv A vs off-balanced
-```
+[[[Name] M [4-6]/[10-12]/[6-8]/[6-8] HD8 HP30 w10
+A+6 D+6 | Free sidestep after attacking | Adv A vs off-balanced]]
 
 ### Controller
 
-```
-[Name] M [4-6]/[6-8]/[10-12]/[8-10] HD10 HP35 w12
-A+5 D+5 | On stance beat, apply condition×2 | 1/round, create battlefield effect
-```
+[[[Name] M [4-6]/[6-8]/[10-12]/[8-10] HD10 HP35 w12
+A+5 D+5 | On stance beat, apply condition×2 | 1/round, create battlefield effect]]
 
 ### Minion Swarm
 
-```
-[Name] Swarm L [4]/[8]/[6]/[4] HD6 HP25 w/
-A+4 D+3 | Attacks all adjacent | Immune to single-target conditions
-```
+[[[Name] Swarm L [4]/[8]/[6]/[4] HD6 HP25 w/
+A+4 D+3 | Attacks all adjacent | Immune to single-target conditions]]
 
 ## Final Design Principles
 

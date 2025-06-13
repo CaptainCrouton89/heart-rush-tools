@@ -185,7 +185,7 @@ const mdxComponents = {
 
   code: ({ children, ...props }: ComponentProps) => (
     <code
-      className="bg-accent text-primary px-1 py-0.5 rounded text-sm font-mono"
+      className="bg-muted text-foreground px-1 py-0.5 rounded text-sm font-mono"
       {...props}
     >
       {children}
