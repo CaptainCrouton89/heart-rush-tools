@@ -1,5 +1,5 @@
 import { MonsterStatBlock } from "./types";
-import { formatAttackDefenseMarkdown, formatAbility } from "./utils";
+import { formatAbility, formatAttackDefenseMarkdown } from "./utils";
 
 export const generateMarkdown = (monster: MonsterStatBlock): string => {
   let markdown: string;
@@ -32,7 +32,26 @@ export const generateMarkdown = (monster: MonsterStatBlock): string => {
       if (component.movement?.cannotBePushed) {
         markdown += ". Cannot be Pushed";
       }
+      if (component.shared) {
+        markdown += ". Shared damage";
+      }
       markdown += `.\n`;
+
+      if (component.movement) {
+        const movementParts: string[] = [];
+        if (component.movement.speed) {
+          movementParts.push(`Speed ${component.movement.speed}`);
+        }
+        if (
+          component.movement.special &&
+          component.movement.special.length > 0
+        ) {
+          movementParts.push(`(${component.movement.special.join(", ")})`);
+        }
+        if (movementParts.length > 0) {
+          markdown += `**Movement**: ${movementParts.join(" ")}\n`;
+        }
+      }
 
       const attackStr = formatAttackDefenseMarkdown(component.attack, "A");
       const defenseStr = formatAttackDefenseMarkdown(component.defense, "D");
@@ -58,6 +77,19 @@ export const generateMarkdown = (monster: MonsterStatBlock): string => {
     }
     markdown += `\n`;
 
+    if (monster.movement) {
+      const movementParts: string[] = [];
+      if (monster.movement.speed) {
+        movementParts.push(`Speed ${monster.movement.speed}`);
+      }
+      if (monster.movement.special && monster.movement.special.length > 0) {
+        movementParts.push(`(${monster.movement.special.join(", ")})`);
+      }
+      if (movementParts.length > 0) {
+        markdown += `**Movement**: ${movementParts.join(" ")}\n`;
+      }
+    }
+
     const attackStr = formatAttackDefenseMarkdown(monster.attack, "A");
     const defenseStr = formatAttackDefenseMarkdown(monster.defense, "D");
     const woundStr =
@@ -76,6 +108,13 @@ export const generateMarkdown = (monster: MonsterStatBlock): string => {
     monster.specialAbilities.forEach((ability) => {
       markdown += `- ${formatAbility(ability)}\n`;
     });
+
+    if (monster.mechanics?.phases && monster.mechanics.phases.length > 0) {
+      markdown += `\n**Phases**:\n`;
+      monster.mechanics.phases.forEach((phase) => {
+        markdown += `- *${phase.trigger}*: ${phase.changes.join("; ")}\n`;
+      });
+    }
 
     if (monster.notes) {
       markdown += `\n**Notes**: ${monster.notes}\n`;

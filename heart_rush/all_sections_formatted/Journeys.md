@@ -64,7 +64,7 @@ At the start of each segment, one character makes a journey roll. This is typica
 - **Cunning:** Complex navigation, finding safe paths, weather prediction
 - **Presence:** Maintaining group morale, negotiating passage
 
-Other characters can help (granting advantage) if they could reasonably assist.
+Other characters can help (granting advantage) if they can provide unique expertise to the journey, beyond things that anyone with eyes, ears, and a brain could do. For example, if they are a sailor and it's a sea voyage, or if they have wilderness knowledge on a mountaineering trip.
 
 ### Journey Roll Results
 
@@ -76,32 +76,60 @@ Other characters can help (granting advantage) if they could reasonably assist.
 
 ## Failure Consequences
 
-When a journey roll fails, the party has genuinely failed at their goal for that segment. The GM chooses one:
+When a journey roll fails, the party has genuinely failed at their goal for that segment. The GM chooses from one of the options below, selecting one from the list below. They may also choose to offer the players a choice between a few, though they have no obligation to do so.
+
+When they choose an option, the GM should describe exactly what is stopping the party from succeeding. Sometimes, the party will have an idea on how to overcome the failure, in which case they are welcome to try—play should zoom back in.
 
 ### Lost or Stalled
 
 The party's navigation fails catastrophically:
 
-- **Completely Lost:** The segment must be repeated—no progress made
-- **Wrong Direction:** Add an extra segment as you correct course
-- **Impassable Route:** The way forward is blocked; find another path (adding a segment) or turn back
-- **Circles in the Wilderness:** Arrive back where you started the segment
+- **Wrong Direction**
+  - Add an extra, new segment as you correct course.
+  - GM: "The mountain pass you've been following for days ends at a sheer cliff face. Your map shows this should connect to the valley road, but clearly something's wrong. You'll need to backtrack and find the correct route."
+  - Party followup: The party may decide to scale the cliff, just to make sure. Maybe the trail continues?
+- **Impassable Route**
+  - The way forward is blocked; add an extra, new segment, or repeat the previous one.
+  - GM: "The bridge spanning the gorge has collapsed, its stone blocks scattered in the rushing water below. The detour through the highland paths will add days to your journey."
+  - Party followup: The party might attempt to repair the bridge, find materials to build a raft, or use magic to cross the gap directly.
+- **Circles in the Wilderness**
+  - Arrive back where you started the segment.
+  - GM: "Something's not right—that lightning-struck oak looks familiar. Too familiar. You've been walking in circles for hours, and the sun is already setting where it should be rising."
+  - Party followup: The party may climb high to get their bearings, use magical divination, or carefully examine the ground for their own tracks to break the pattern.
 
 ### Unable to Find Safe Haven
 
 The party cannot secure proper shelter or safety:
 
-- **No Safe Camps:** Cannot find adequate shelter—all sleeping checks this segment have disadvantage
-- **Exposed Camps:** Poor shelter in harsh conditions—everyone takes a rank 1d6 wound labeled "exposure"
-- **Forced March:** Must travel without rest—everyone gains 2 levels of weakened
+- **No Safe Camps**
+  - Cannot find adequate shelter for restful sleep—everyone takes 1 level of dazed, weakened, and off-balanced that do not fade until they sleep a full night.
+  - GM: "As darkness falls, every potential campsite proves unsuitable—too exposed to wind, too rocky for bedrolls, or showing signs of dangerous wildlife. You're forced to huddle together in whatever meager shelter you can find."
+  - Party followup: The party might use magic to create shelter, attempt to build better protection from available materials, or decide to travel through the night to find proper rest elsewhere.
+- **Exposed Camps**
+  - Poor shelter in harsh conditions—everyone takes a rank 1d6 wound labeled "exposure."
+  - GM: "The storm hits harder than expected, and your makeshift shelter barely holds. Rain seeps through every gap, the wind cuts through your clothes, and by morning everyone is shivering and miserable."
+  - Party followup: The party may try to find better materials to improve their shelter, use magic to ward off the elements, or seek out natural protection like caves or dense tree cover.
+- **Forced March**
+  - Must travel without rest—everyone gains 3 levels of weakened.
+  - GM: "The ground here is too unstable to camp safely, and with the weather turning, you have no choice but to keep moving through the night. By dawn, everyone is stumbling with exhaustion."
+  - Party followup: The party might look for any small shelter to rest briefly, use stimulants or magic to push through the fatigue, or decide to risk camping despite the dangerous conditions.
 
 ### Critical Delays
 
 When time matters, the journey takes far longer than expected:
 
-- **Missed Opportunity:** Arrive too late for time-sensitive goals
-- **Season Change:** Weather turns against you—increase all remaining segment CNs by 3
-- **Pursued:** Whatever you're fleeing catches up
+- **Missed Opportunity**
+  - Arrive too late for time-sensitive goals.
+  - GM: "You crest the final hill to see the merchant caravan's dust cloud disappearing over the horizon. The trading post keeper shakes his head—they left at dawn, couldn't wait any longer with winter coming."
+  - Party followup: The party might try to catch up by pushing hard, seek alternative transportation, or find another way to accomplish their original goal.
+- **Season Change**
+  - Weather turns against you—increase all remaining segment CNs by 3.
+  - GM: "The first snow begins to fall as you make camp, earlier than anyone expected. What started as autumn travel has become a winter expedition, and the mountain passes ahead will be far more treacherous."
+  - Party followup: The party may decide to turn back while they still can, seek better cold weather gear from locals, or push forward despite the increased danger.
+- **Pursued**
+  - Whatever you're fleeing catches up.
+  - GM: "The sound of hoofbeats echoes off the canyon walls behind you. Your pursuers have found your trail, and they're gaining fast. There's nowhere left to run—you'll have to face them here."
+  - Party followup: The party might prepare an ambush, try to negotiate from a position of weakness, or look for a last-minute escape route like climbing the canyon walls.
 
 ## Complications
 

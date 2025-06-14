@@ -6,7 +6,11 @@
     },
     {
       "name": "Combat",
-      "sections": ["Monster_Creation_Guide"]
+      "sections": ["Monster_Creation_Guide", "Running_Encounters"]
+    },
+    {
+      "name": "Systems",
+      "sections": ["Travel_Guide"]
     },
     {
       "name": "Tables",
