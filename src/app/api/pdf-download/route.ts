@@ -8,7 +8,7 @@ import puppeteer from "puppeteer";
 import { getAllContent, getAllContentMetadata } from "../../../lib/content";
 import { ContentSection } from "../../../types/content";
 
-export async function GET() {
+export async function GET(): Promise<NextResponse> {
   try {
     // Read navigation categories to determine order
 
@@ -185,143 +185,137 @@ export async function GET() {
       htmlPath,
     ];
 
-    return new Promise((resolve) => {
-      // First convert to HTML
-      nodePandoc(mdPath, htmlArgs, async (err: Error | null) => {
-        if (err) {
-          console.error("Pandoc HTML conversion error:", err);
-          await fs.rm(tempDir, { recursive: true, force: true });
-          resolve(
-            NextResponse.json(
-              {
-                success: false,
-                error: "Failed to convert to HTML: " + err.message,
-              },
-              { status: 500 }
-            )
-          );
-          return;
-        }
-
-        try {
-          // Read the generated HTML and our custom CSS
-          const htmlContent = await fs.readFile(htmlPath, "utf8");
-          const cssPath = path.join(process.cwd(), "scripts", "pdf-styles.css");
-          const cssContent = await fs.readFile(cssPath, "utf8");
-
-          // Embed CSS directly into HTML by adding it in the head section
-          const htmlWithEmbeddedCSS = htmlContent.replace(
-            "</head>",
-            `  <style>\n    ${cssContent}\n  </style>\n</head>`
-          );
-
-          try {
-            // Add print instructions overlay to HTML before PDF conversion
-            const htmlWithInstructions = htmlWithEmbeddedCSS.replace(
-              "<body>",
-              `<body>
-                <div class="print-instructions no-print">
-                  <strong>Print Instructions:</strong><br>
-                  • Use "Save as PDF" in print dialog<br>
-                  • Select "More settings" → "Print backgrounds"<br>
-                  • This message won't appear in the PDF
-                </div>`
-            );
-
-            // Launch puppeteer and convert HTML to PDF
-            const browser = await puppeteer.launch({
-              headless: true,
-              args: ["--no-sandbox", "--disable-setuid-sandbox"],
-            });
-
-            const page = await browser.newPage();
-            await page.setContent(htmlWithInstructions, {
-              waitUntil: "networkidle0",
-            });
-
-            const pdfBuffer = await page.pdf({
-              format: "A4",
-              margin: {
-                top: "25mm",
-                right: "25mm",
-                bottom: "25mm",
-                left: "25mm",
-              },
-              printBackground: true,
-              displayHeaderFooter: true,
-              headerTemplate:
-                '<div style="font-size: 10px; margin: 0 auto;">Heart Rush Digital Rulebook</div>',
-              footerTemplate:
-                '<div style="font-size: 10px; margin: 0 auto;"><span class="pageNumber"></span> / <span class="totalPages"></span></div>',
-            });
-
-            await browser.close();
-
-            // Clean up temp files
-            await fs.rm(tempDir, { recursive: true, force: true });
-
-            // Return PDF as response
-            resolve(
-              new NextResponse(pdfBuffer, {
-                status: 200,
-                headers: {
-                  "Content-Type": "application/pdf",
-                  "Content-Disposition":
-                    'attachment; filename="heart-rush-rulebook.pdf"',
-                  "Content-Length": pdfBuffer.length.toString(),
-                },
-              })
-            );
-          } catch (puppeteerError) {
-            console.warn(
-              "Puppeteer failed, falling back to HTML:",
-              puppeteerError
-            );
-
-            // Add print instructions to HTML for fallback
-            const htmlWithInstructions = htmlWithEmbeddedCSS.replace(
-              "<body>",
-              `<body>
-                <div class="print-instructions no-print">
-                  <strong>Print to PDF Instructions:</strong><br>
-                  • Press Ctrl+P (or Cmd+P on Mac) to print<br>
-                  • Select "Save as PDF" as destination<br>
-                  • Enable "Print backgrounds" in More settings<br>
-                  • This red box won't appear in the PDF
-                </div>`
-            );
-
-            // Fallback to HTML download
-            const htmlBuffer = Buffer.from(htmlWithInstructions, "utf8");
-
-            // Clean up temp files
-            await fs.rm(tempDir, { recursive: true, force: true });
-
-            // Return HTML as downloadable file (fallback)
-            resolve(
-              new NextResponse(htmlBuffer, {
-                status: 200,
-                headers: {
-                  "Content-Type": "text/html",
-                  "Content-Disposition":
-                    'attachment; filename="heart-rush-rulebook.html"',
-                  "Content-Length": htmlBuffer.length.toString(),
-                },
-              })
-            );
-          }
-        } catch (error) {
-          console.error("Error reading HTML:", error);
-          await fs.rm(tempDir, { recursive: true, force: true });
-          resolve(
-            NextResponse.json(
-              { success: false, error: "Failed to read generated HTML" },
-              { status: 500 }
-            )
-          );
-        }
+    // First convert to HTML
+    try {
+      await new Promise<void>((resolve, reject) => {
+        nodePandoc(mdPath, htmlArgs, (err: Error | null) => {
+          if (err) reject(err);
+          else resolve();
+        });
       });
-    });
+    } catch (err) {
+      console.error("Pandoc HTML conversion error:", err);
+      await fs.rm(tempDir, { recursive: true, force: true });
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Failed to convert to HTML: " + (err as Error).message,
+        },
+        { status: 500 }
+      );
+    }
+
+    try {
+      // Read the generated HTML and our custom CSS
+      const htmlContent = await fs.readFile(htmlPath, "utf8");
+      const cssPath = path.join(process.cwd(), "scripts", "pdf-styles.css");
+      const cssContent = await fs.readFile(cssPath, "utf8");
+
+      // Embed CSS directly into HTML by adding it in the head section
+      const htmlWithEmbeddedCSS = htmlContent.replace(
+        "</head>",
+        `  <style>\n    ${cssContent}\n  </style>\n</head>`
+      );
+
+      try {
+        // Add print instructions overlay to HTML before PDF conversion
+        const htmlWithInstructions = htmlWithEmbeddedCSS.replace(
+          "<body>",
+          `<body>
+            <div class="print-instructions no-print">
+              <strong>Print Instructions:</strong><br>
+              • Use "Save as PDF" in print dialog<br>
+              • Select "More settings" → "Print backgrounds"<br>
+              • This message won't appear in the PDF
+            </div>`
+        );
+
+        // Launch puppeteer and convert HTML to PDF
+        const browser = await puppeteer.launch({
+          headless: true,
+          args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        });
+
+        const page = await browser.newPage();
+        await page.setContent(htmlWithInstructions, {
+          waitUntil: "networkidle0",
+        });
+
+        const pdfBuffer = await page.pdf({
+          format: "A4",
+          margin: {
+            top: "25mm",
+            right: "25mm",
+            bottom: "25mm",
+            left: "25mm",
+          },
+          printBackground: true,
+          displayHeaderFooter: true,
+          headerTemplate:
+            '<div style="font-size: 10px; margin: 0 auto;">Heart Rush Digital Rulebook</div>',
+          footerTemplate:
+            '<div style="font-size: 10px; margin: 0 auto;"><span class="pageNumber"></span> / <span class="totalPages"></span></div>',
+        });
+
+        await browser.close();
+
+        // Clean up temp files
+        await fs.rm(tempDir, { recursive: true, force: true });
+
+        // Return PDF as response
+        return new NextResponse(pdfBuffer, {
+          status: 200,
+          headers: {
+            "Content-Type": "application/pdf",
+            "Content-Disposition":
+              'attachment; filename="heart-rush-rulebook.pdf"',
+            "Content-Length": pdfBuffer.length.toString(),
+          },
+        });
+      } catch (puppeteerError) {
+        console.warn(
+          "Puppeteer failed, falling back to HTML:",
+          puppeteerError
+        );
+
+        // Add print instructions to HTML for fallback
+        const htmlWithInstructions = htmlWithEmbeddedCSS.replace(
+          "<body>",
+          `<body>
+            <div class="print-instructions no-print">
+              <strong>Print to PDF Instructions:</strong><br>
+              • Press Ctrl+P (or Cmd+P on Mac) to print<br>
+              • Select "Save as PDF" as destination<br>
+              • Enable "Print backgrounds" in More settings<br>
+              • This red box won't appear in the PDF
+            </div>`
+        );
+
+        // Fallback to HTML download
+        const htmlBuffer = Buffer.from(htmlWithInstructions, "utf8");
+
+        // Clean up temp files
+        await fs.rm(tempDir, { recursive: true, force: true });
+
+        // Return HTML as downloadable file (fallback)
+        return new NextResponse(htmlBuffer, {
+          status: 200,
+          headers: {
+            "Content-Type": "text/html",
+            "Content-Disposition":
+              'attachment; filename="heart-rush-rulebook.html"',
+            "Content-Length": htmlBuffer.length.toString(),
+          },
+        });
+      }
+    } catch (error) {
+      console.error("Error reading HTML:", error);
+      await fs.rm(tempDir, { recursive: true, force: true });
+      return NextResponse.json(
+        { success: false, error: "Failed to read generated HTML" },
+        { status: 500 }
+      );
+    }
   } catch (error) {
     console.error("Error generating PDF data:", error);
     return NextResponse.json(
