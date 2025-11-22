@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "../lib/polyfills";
 import { AppLayout } from "../components/layout/AppLayout";
 import { ThemeProvider } from "../components/layout/ThemeProvider";
 import { GMProvider } from "../context/GMContext";
@@ -23,6 +24,45 @@ export const metadata: Metadata = {
   title: "Heart Rush TTRPG Reference",
   description:
     "Complete reference guide for the Heart Rush tabletop RPG system",
+  icons: {
+    icon: "/heart.png",
+    apple: "/heart.png",
+  },
+  openGraph: {
+    title: "Heart Rush TTRPG Reference",
+    description:
+      "Complete reference guide for the Heart Rush tabletop RPG system",
+    type: "website",
+    images: [
+      {
+        url: "/heart.png",
+        width: 512,
+        height: 512,
+        alt: "Heart Rush Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Heart Rush TTRPG Reference",
+    description:
+      "Complete reference guide for the Heart Rush tabletop RPG system",
+    images: ["/heart.png"],
+  },
+  manifest: "/manifest.json",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a1a1a" },
+  ],
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -32,32 +72,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-              html { background-color: #ffffff; }
-              html.dark { background-color: #0a0a0a; }
-            `,
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('theme');
-                  var systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  var shouldBeDark = theme === 'dark' || (theme === 'system' && systemPrefersDark) || (!theme && systemPrefersDark);
-                  if (shouldBeDark) {
-                    document.documentElement.classList.add('dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
