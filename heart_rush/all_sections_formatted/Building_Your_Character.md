@@ -526,56 +526,40 @@ Begin play with whatever equipment makes sense for your character concept and ba
 
 ## Progress
 
-There are six different ranks of combat power you can start at in Heart Rush. With each rank, you have access to more combat abilities. When you first start to play, everyone should agree which rank to begin the game at.
+Your combat prowess grows through **bloodmarks**—supernatural battle-scars earned by performing legendary feats in combat. Unlike experience points (which you spend on talents, aspects, and character upgrades), bloodmarks represent your evolution from warrior to legend.
 
-At rank 1, players are barely more than commoners with a desire for excitement; at rank 4, players are incredible combatants, likely known throughout their community; and at rank 6 and beyond, players are at low heroic levels; with everything else falling somewhere in between.
+See **Bloodmarks** for complete details on:
+- How bloodmarks are earned through memorable combat achievements
+- What abilities each bloodmark unlocks
+- Battle-tested combat approaches that guide you toward coherent fighting styles
 
-| Combat Rank | Abilities                         | Starting XP        |
-| ----------- | --------------------------------- | ------------------ |
-| 0           | None                              | 5                  |
-| 1           | Some class abilities              | 15                 |
-| 2           | Class and subclass abilities      | 30                 |
-| 3           | More subclass abilities           | 50                 |
-| 4           | Even more subclass abilities      | 80                 |
-| 5+          | A paragon ability per rank beyond | 120 + 40 per level |
+### Starting Bloodmarks
 
-At each rank, you gain new abilities. If you are starting at a rank higher than rank 1, gain all the abilities from each previous rank, and start with XP equal to the corresponding value in the row.
+When creating your character, choose a starting bloodmark level that fits your campaign's power level. When you first start to play, everyone should agree which bloodmark level to begin the game at.
 
-### Combat Ranks, Classes, Subclasses, & Paragon Levels
+At 0 bloodmarks, you're barely more than a commoner with a dream; at 4 bloodmarks, you're an incredible combatant likely known throughout your community; and at 5+ bloodmarks, you're entering heroic tiers of power.
 
-While you will gain XP every session, you progress in combat ranks at the GM's discretion. In general, you should expect to graduate to the next combat rank around when you have an amount of total XP corresponding to the respective rank, as outlined in the table above. However, it is ultimately up to the GM.
+| Bloodmarks | Experience Level | Starting XP | Bloodmark Abilities |
+|------------|------------------|-------------|------------------------|
+| **0** | Fresh adventurer | 5 | None yet |
+| **1** | Emerging combatant | 15 | 1 Specialization |
+| **2** | Specialized fighter | 30 | 2 Specializations + 1 Signature Ability |
+| **3** | Advanced warrior | 50 | 2 Specializations + 3 Signature Abilities |
+| **4** | Minor hero | 80 | 2 Specializations + 3 Signature Abilities + 1 Combat Mastery |
+| **5+** | Legendary champion | 120 + 40/bloodmark | All previous + 1 Paragon Ability per bloodmark beyond 4th |
 
-#### Rank 0
+When starting at higher bloodmark levels, you choose your abilities from the pools in **Bloodmarks** (Specializations, Signature Abilities, Combat Masteries, and Paragon Abilities based on your bloodmark level). You also receive the listed starting XP to spend on talents, aspects, hit points, and ability dice.
 
-At this rank, you have no special abilities beyond those that you purchase with your XP.
+### Bloodmarks vs Experience Points
 
-[[GM Note  
-When determining when to grant players the next combat rank, it's generally a good idea to wait until a suitably impressive fight has been won by the party. These combat ranks are major upgrades in player combat power, so they act as a great reward for players accepting and defeating more dangerous fights.]]
+These are two separate progression systems that work together:
 
-#### Rank 1
+- **Bloodmarks** unlock combat abilities and measure your combat prowess. The GM awards bloodmarks for legendary combat achievements (roughly one every 4-6 sessions). These are narrative milestones that mark your growth as a warrior.
 
-When you reach rank 1, you will have to choose a class, as listed in the Classes section. Your class will determine what role you have in combat—tanking heavy blows, dealing damage, or supporting your teammates.
+- **Experience Points (XP)** are spent on talents, aspects, hit points, and ability dice. You gain XP regularly throughout play and spend it between sessions to customize your character.
 
-You are welcome to do whatever you want in combat, but your class will give you an edge in its respective role. Mark down all of the abilities for that class that are at or below rank 1.
-
-#### Rank 2
-
-Upon reaching rank 2, you will have to choose a subclass. Each class has a few subclasses, which are specializations of your class. You must choose one of them. Mark down all of the abilities for your class and subclass that are at or below rank 2.
-
-Additionally, at this stage you must decide if you wish to become spelltouched. Spelltouched are a universal subclass specializing in using elements to deal damage. You can read more about them in the Spelltouched section.
-
-#### Rank 3
-
-When you reach rank 3, you unlock more abilities in your subclass. Mark down all of the abilities for your subclass that are at or below rank 3.
-
-#### Rank 4
-
-At rank 4, you unlock the last abilities from your subclass. Mark down all of the abilities for your subclass that are at or below rank 4.
-
-#### Rank 5 and above
-
-Finally, upon reaching rank 5, and for each rank thereafter, you gain a paragon level. When you gain a paragon level, you may choose and gain an ability from the Paragon Abilities section. These abilities represent heroic level capstones to various combat archetypes.
+See **Experience & Advancement** for how to spend XP on character development.
 
 ## Advice For New Groups
 
-If everyone in your group is brand new to Heart Rush, rank 0 is a good place to start. There are many rules that only kick into play once you have a class, and Heart Rush combat can take some time to wrap your head around, so it can be nice to start small.
+If everyone in your group is brand new to Heart Rush, starting at 0 bloodmarks is a good place to begin. This lets you learn the core combat mechanics before adding bloodmark abilities, which can take some time to wrap your head around. Once you've got the fundamentals down, earning your first bloodmark feels like a meaningful achievement that marks your transition from commoner to emerging warrior.
