@@ -14,6 +14,8 @@ export function GMProvider({ children }: { children: ReactNode }) {
 
   // Load GM mode from localStorage on mount
   useEffect(() => {
+    if (typeof window === 'undefined' || typeof localStorage === 'undefined' || typeof localStorage.getItem !== 'function') return;
+
     const savedGMMode = localStorage.getItem('gmMode');
     if (savedGMMode !== null) {
       setIsGMMode(JSON.parse(savedGMMode));
@@ -22,7 +24,9 @@ export function GMProvider({ children }: { children: ReactNode }) {
 
   const setGMMode = (gmMode: boolean) => {
     setIsGMMode(gmMode);
-    localStorage.setItem('gmMode', JSON.stringify(gmMode));
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined' && typeof localStorage.setItem === 'function') {
+      localStorage.setItem('gmMode', JSON.stringify(gmMode));
+    }
   };
 
   return (

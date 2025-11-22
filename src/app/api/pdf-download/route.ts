@@ -263,7 +263,7 @@ export async function GET(): Promise<NextResponse> {
         await fs.rm(tempDir, { recursive: true, force: true });
 
         // Return PDF as response
-        return new NextResponse(pdfBuffer, {
+        return new NextResponse(Buffer.from(pdfBuffer), {
           status: 200,
           headers: {
             "Content-Type": "application/pdf",
