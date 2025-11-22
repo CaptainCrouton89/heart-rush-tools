@@ -84,14 +84,24 @@ export default function MapPage() {
   }, []);
 
   // Handle mouse wheel zoom
-  const handleWheel = useCallback((e: React.WheelEvent) => {
-    e.preventDefault();
-    const delta = e.deltaY > 0 ? 0.9 : 1.1;
-    setZoom(prev => Math.min(Math.max(prev * delta, 0.05), 2));
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const delta = e.deltaY > 0 ? 0.9 : 1.1;
+      setZoom(prev => Math.min(Math.max(prev * delta, 0.05), 2));
+    };
+
+    container.addEventListener('wheel', handleWheel, { passive: false });
+    return () => container.removeEventListener('wheel', handleWheel);
   }, []);
 
   // Load info box visibility from localStorage
   useEffect(() => {
+    if (typeof window === 'undefined' || typeof localStorage === 'undefined' || typeof localStorage.getItem !== 'function') return;
+
     const saved = localStorage.getItem('maps-info-box-hidden');
     if (saved === 'true') {
       setShowInfoBox(false);
@@ -101,7 +111,9 @@ export default function MapPage() {
   // Handle closing info box
   const closeInfoBox = useCallback(() => {
     setShowInfoBox(false);
-    localStorage.setItem('maps-info-box-hidden', 'true');
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined' && typeof localStorage.setItem === 'function') {
+      localStorage.setItem('maps-info-box-hidden', 'true');
+    }
   }, []);
 
   // Handle keyboard shortcuts
@@ -279,14 +291,13 @@ export default function MapPage() {
         </div>
         
         {/* Fullscreen Map Container */}
-        <div 
+        <div
           ref={containerRef}
           className={`flex-1 overflow-auto bg-card ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseLeave}
-          onWheel={handleWheel}
           style={{
             scrollbarWidth: 'thin',
             scrollbarColor: 'rgba(155, 155, 155, 0.5) transparent'
@@ -468,14 +479,13 @@ export default function MapPage() {
           </div>
         </div>
         
-        <div 
+        <div
           ref={containerRef}
           className={`relative w-full h-[80vh] overflow-auto border rounded-lg bg-card ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseLeave}
-          onWheel={handleWheel}
           style={{
             scrollbarWidth: 'thin',
             scrollbarColor: 'rgba(155, 155, 155, 0.5) transparent'
