@@ -296,7 +296,7 @@ async function createImagePrompt(
         ...(OPENAI_PROJECT_ID && { "OpenAI-Project": OPENAI_PROJECT_ID }),
       },
       body: JSON.stringify({
-        model: "gpt-4.1-nano",
+        model: "gpt-5-nano",
         messages: [
           {
             role: "system",
@@ -309,7 +309,7 @@ async function createImagePrompt(
           },
         ],
         max_tokens: 400,
-        temperature: 0.7,
+        temperature: 1,
       }),
     });
 

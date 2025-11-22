@@ -70,7 +70,7 @@ const baseMonsterSchema = z.object({
   heartDie: dieSchema.describe(
     "The creature's heart die (stamina/fighting spirit)"
   ),
-  hp: z.number().int().min(20).describe("Hit points - 40 is 'average'"),
+  hp: z.number().int().min(10).describe("Hit points - 40 is 'average'"),
   woundThreshold: z
     .number()
     .int()
@@ -152,8 +152,8 @@ export async function POST(request: Request) {
 
     // Step 1: Use 4.1-nano to determine monster level and complexity
     const { text: enhancedConcept } = await generateText({
-      model: openai("gpt-4.1-nano"),
-      temperature: 0.3,
+      model: openai("gpt-5-nano"),
+      temperature: 1,
       system: `You analyze monster concepts and determine their level and complexity. Respond with the format:
 
 LEVEL: [level]
@@ -198,9 +198,9 @@ Examples:
 
     // Step 2: Use the enhanced concept to generate the full monster with 4.1
     const { object } = await generateObject({
-      model: openai("gpt-4.1"),
+      model: openai("gpt-5-mini"),
       schema: monsterSchema,
-      temperature: 0.5,
+      temperature: 1,
       system: `You are an expert at creating monsters for the Heart Rush TTRPG system. Generate balanced, interesting monster statblocks that follow the game's design principles, and match the complexity of the input.
 
 # Heart Rush Monster Creation Guidelines
