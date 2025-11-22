@@ -15,7 +15,7 @@ Your GM awards XP based on the campaign's focus and pacing. Common triggers incl
 - **Combat Victory**: Overcoming dangerous encounters
 - **Session Length**: Consistent play rewards steady progress
 
-**GM Guidance**: Award XP equal to the party's average combat rank as a baseline—this keeps characters advancing every few sessions. For faster progression, increase this by one or two points. Always communicate your XP triggers to players so they understand what drives advancement.
+**GM Guidance**: Award 2-4 XP per session as a baseline—this keeps characters advancing every few sessions. For faster progression, increase this amount. Always communicate your XP triggers to players so they understand what drives advancement. Note that XP is separate from bloodmarks (see Bloodmarks), which are awarded for legendary combat achievements.
 
 ### When to Spend Experience
 

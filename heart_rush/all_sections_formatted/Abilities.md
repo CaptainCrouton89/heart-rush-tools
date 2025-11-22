@@ -4,7 +4,7 @@ When creating your character, you will inevitably gain a lot of abilities.
 
 Abilities are any chunk of rules that let you create an effect, perform some activity, or do anything at all.
 
-Examples include class abilities, racial abilities, talents, and paragon levels, though some abilities grant you their own abilities.
+Examples include bloodmark abilities, racial abilities, talents, and paragon abilities, though some abilities grant you their own abilities.
 
 You can most easily recognize an ability because of the format it has in this book:
 

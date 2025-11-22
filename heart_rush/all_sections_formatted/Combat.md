@@ -30,7 +30,7 @@ The action phase operates on instinct and opportunity. Any combatant can declare
 Think of it this way:
 
 - **Actions**: The short list of basic options below, making an attack, plus any ability that specifically says "uses your action"
-- **Abilities**: Everything else—talents, combat legacy features, class abilities, equipment powers, magical effects, or anything that gives you an option in combat. Free to use during the action phase unless the ability itself says otherwise.
+- **Abilities**: Everything else—talents, bloodmark abilities, equipment powers, magical effects, or anything that gives you an option in combat. Free to use during the action phase unless the ability itself says otherwise.
 - **Instant Abilities**: Special reactive abilities marked as "instant" that can trigger during engagements.
 
 ### Common Ability Restrictions

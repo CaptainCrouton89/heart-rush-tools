@@ -24,14 +24,14 @@ Let's cut to the chase. Here's what you're getting:
 
 - **Zoom in for tactics, zoom out for strategy.** One flexible system handles everything from bar brawls to kingdom management.
 - **Start desperate, end legendary.** Begin counting copper as struggling mercenaries, end as rulers shaping nations.
-- **You'll feel heroic eventually—but you'll earn it.** Power comes from surviving impossible odds, not from class features.
+- **You'll feel heroic eventually—but you'll earn it.** Power comes from surviving impossible odds, not from prescribed build paths.
 
 **Character Building Without Limits**
 
 - **Wild character design.** Barbarian wizard? Ninja detective? Fire-bending assassin? All completely viable.
 - **Constant leveling.** Spend XP whenever you want on whatever you want—no waiting for arbitrary milestones.
 - **Extremely flexible trait system.** Plain English descriptions become actual mechanics—"terrible gambler" isn't just flavor.
-- **Hyper-flexible elemental magic.** Air-benders can do all the air-bender things, and it's not tied to any class.
+- **Hyper-flexible elemental magic.** Air-benders can do all the air-bender things—no restrictions on who can learn it.
 
 ## For GMs: Why Run This?
 

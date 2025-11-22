@@ -2,7 +2,7 @@
 
 **IMPORTANT: This section is WIP.**
 
-Paths represent fundamental transformations that forever change how your character interacts with the world. Unlike classes which define your combat role, paths alter your very nature—granting profound abilities at equally profound costs.
+Paths represent fundamental transformations that forever change how your character interacts with the world. Unlike bloodmark abilities which define your fighting style, paths alter your very nature—granting profound abilities at equally profound costs.
 
 ## Path Mechanics
 
@@ -418,7 +418,7 @@ Requires the Beast Companion talent and at least one year of constant companions
 **Benefits:**
 
 - Major ability: Merge with companion—gain its physical stats and abilities while keeping your mental stats and abilities for 1 hour
-- While separate, both can use each other's abilities (including class abilities)
+- While separate, both can use each other's abilities (including bloodmark abilities and talents)
 - Companion becomes immune to mental conditions
 - If either dies, consciousness transfers to the survivor once per lifetime
 - Can manifest partial transformations (grow claws, enhance senses, etc.) at will
