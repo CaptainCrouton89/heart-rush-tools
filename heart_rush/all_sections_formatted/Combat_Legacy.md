@@ -547,7 +547,7 @@ Your cunning die becomes a d20.
 
 _Passive ability. Combat mastery: Eternal Fortitude._
 
-When you use your major ability, use d12s instead of d6s.
+When you use your _eternal fortitude_, use d12s instead of d6s.
 
 ### Martial Master
 
