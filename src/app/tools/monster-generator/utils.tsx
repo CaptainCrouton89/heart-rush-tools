@@ -39,12 +39,12 @@ export const formatAttackDefense = (
     if (typeParts.length > 0) {
       if (parts.length === 0) {
         parts.push(
-          <>
+          <span key={`${prefix}-types`}>
             <strong>{prefix}</strong> {typeParts.join(" ")}
-          </>
+          </span>
         );
       } else {
-        parts.push(<> {typeParts.join(" ")}</>);
+        parts.push(<span key={`${prefix}-types`}> {typeParts.join(" ")}</span>);
       }
     }
   }

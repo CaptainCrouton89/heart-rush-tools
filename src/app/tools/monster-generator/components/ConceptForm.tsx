@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 interface ConceptFormProps {
   concept: string;
@@ -8,6 +8,14 @@ interface ConceptFormProps {
   onSubmit: () => void;
 }
 
+const LOADING_MESSAGES = [
+  "Generating Monster...",
+  "Crafting abilities...",
+  "Balancing stats...",
+  "Adding lore details...",
+  "Finalizing stat block...",
+];
+
 export function ConceptForm({
   concept,
   setConcept,
@@ -15,6 +23,20 @@ export function ConceptForm({
   error,
   onSubmit,
 }: ConceptFormProps) {
+  const [loadingMessageIndex, setLoadingMessageIndex] = useState(0);
+
+  useEffect(() => {
+    if (!loading) {
+      setLoadingMessageIndex(0);
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setLoadingMessageIndex((prev) => (prev + 1) % LOADING_MESSAGES.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [loading]);
   return (
     <section className="space-y-6" aria-labelledby="input-heading">
       <article className="bg-card border border-border rounded-lg p-6">
@@ -66,8 +88,19 @@ export function ConceptForm({
             className="w-full px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             aria-describedby="generate-help"
           >
-            {loading ? "Generating Monster..." : "Generate Monster"}
+            {loading ? (
+              <span className="animate-pulse-glow inline-block">
+                {LOADING_MESSAGES[loadingMessageIndex]}
+              </span>
+            ) : (
+              "Generate Monster"
+            )}
           </button>
+          {loading && (
+            <p className="text-xs text-muted-foreground text-center mt-2">
+              This can take up to 90 seconds
+            </p>
+          )}
           <p id="concept-help" className="sr-only">
             Describe the monster you want to create, including its abilities,
             behavior, and role in combat.
