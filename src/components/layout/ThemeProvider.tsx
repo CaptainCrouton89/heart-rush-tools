@@ -1,84 +1,30 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
-import { ThemeState } from '../../types/content';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { ReactNode, useEffect, useState } from 'react';
 
-interface ThemeContextType {
-  theme: ThemeState;
-  setTheme: (mode: 'light' | 'dark' | 'system') => void;
-  toggleTheme: () => void;
-}
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const [mounted, setMounted] = useState(false);
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
-
-export function useTheme() {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
-  return context;
-}
-
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<ThemeState>({
-    mode: 'system',
-    systemPreference: 'light'
-  });
-
-  // Load saved theme and set up system preference detection
+  // Only render ThemeProvider after client-side mount to avoid SSR localStorage issues
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    const updateSystemPreference = () => {
-      setThemeState(prev => ({
-        ...prev,
-        systemPreference: mediaQuery.matches ? 'dark' : 'light'
-      }));
-    };
-
-    // Set initial system preference
-    const initialSystemPreference = mediaQuery.matches ? 'dark' : 'light';
-    
-    // Load saved theme from localStorage, defaulting to system
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'system';
-    const themeMode = savedTheme && ['light', 'dark', 'system'].includes(savedTheme) ? savedTheme : 'system';
-    
-    setThemeState({
-      mode: themeMode,
-      systemPreference: initialSystemPreference
-    });
-
-    // Listen for system preference changes
-    mediaQuery.addEventListener('change', updateSystemPreference);
-    return () => mediaQuery.removeEventListener('change', updateSystemPreference);
+    setMounted(true);
   }, []);
 
-  // Apply theme to document
-  useEffect(() => {
-    const isDark = theme.mode === 'dark' || 
-      (theme.mode === 'system' && theme.systemPreference === 'dark');
-    
-    console.log('Applying theme:', { theme, isDark, classList: document.documentElement.classList.toString() });
-    document.documentElement.classList.toggle('dark', isDark);
-    localStorage.setItem('theme', theme.mode);
-    console.log('After toggle:', { classList: document.documentElement.classList.toString() });
-  }, [theme]);
-
-  const setTheme = (mode: 'light' | 'dark' | 'system') => {
-    setThemeState(prev => ({ ...prev, mode }));
-  };
-
-  const toggleTheme = () => {
-    const currentMode = theme.mode === 'dark' || 
-      (theme.mode === 'system' && theme.systemPreference === 'dark') ? 'dark' : 'light';
-    const newMode = currentMode === 'dark' ? 'light' : 'dark';
-    console.log('Toggle theme:', { currentMode, newMode, currentTheme: theme });
-    setTheme(newMode);
-  };
+  // Return children without theme provider during SSR
+  if (!mounted) {
+    return <>{children}</>;
+  }
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
+    <NextThemesProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange={false}
+      storageKey="theme"
+    >
       {children}
-    </ThemeContext.Provider>
+    </NextThemesProvider>
   );
 }

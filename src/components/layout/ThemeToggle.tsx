@@ -1,19 +1,44 @@
 "use client";
 
-import { useTheme } from "./ThemeProvider";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  const isDark =
-    theme.mode === "dark" ||
-    (theme.mode === "system" && theme.systemPreference === "dark");
+  // Avoid hydration mismatch by only rendering after mount
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="p-2 w-9 h-9" aria-label="Loading theme toggle">
+        {/* Placeholder to prevent layout shift */}
+      </div>
+    );
+  }
+
+  const isDark = resolvedTheme === "dark";
+
+  const toggleTheme = () => {
+    // Cycle through: light -> dark -> system -> light
+    if (theme === "light") {
+      setTheme("dark");
+    } else if (theme === "dark") {
+      setTheme("system");
+    } else {
+      setTheme("light");
+    }
+  };
 
   return (
     <button
       onClick={toggleTheme}
       className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent/20 cursor-pointer transition-all duration-200"
-      aria-label="Toggle theme"
+      aria-label={`Current theme: ${theme}. Click to toggle.`}
+      title={`Current: ${theme} (${isDark ? 'dark' : 'light'})`}
     >
       {isDark ? (
         // Sun icon for light mode

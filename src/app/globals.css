@@ -113,3 +113,18 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    opacity: 0.85;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  }
+}
+
+@theme {
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+}
