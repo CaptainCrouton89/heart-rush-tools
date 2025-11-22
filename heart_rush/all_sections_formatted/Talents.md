@@ -1,6 +1,6 @@
 # Talents
 
-Talents represent specific abilities you have learned, been gifted, or know how to perform through religious or magical ritual. Each talent will fall into one of three types of abilities: passive abilities, heart abilities, or major abilities. Like bloodmark abilities, passive abilities can be used whenever and at no cost, and major abilities can be used once per day. Heart abilities, in contrast, can be used again only after you have taken a short or long rest, or if you take a wound.
+Talents represent specific abilities you have learned, been gifted, or know how to perform through religious or magical ritual. Each talent will fall into one of three types of abilities: passive abilities, heart abilities, or major abilities. As with abilities gained from your class, passive abilities can be used whenever and at no cost, and major abilities can be used once per day. Heart abilities, in contrast, can be used again only after you have taken a short or long rest, or if you take a wound.
 
 Additionally, talents may also have the instant or full action tag. If it is instant, then you can use the ability at literally any time, even right before you roll. If it has the full action tag, it requires you to use your action.
 
@@ -43,7 +43,7 @@ _Major ability. Martial talent._
 You push your body and mind beyond normal limits, moving with impossible speed and precision. When you use this ability on your turn, immediately gain an additional action that must be used during this same turn. This action follows all normal rules and restrictions, and you may use other major abilities with this extra action.
 
 **Destiny Level:**
-When you use Action Surge, you also immediately gain 3 rush points. However, these rush points cannot be spent on combat masteries - they must be used for signature abilities, opportunity attacks, or sidestepping.
+When you use Action Surge, you also immediately gain 3 rush points. However, these rush points cannot be spent to enhance your class's major ability - they must be used for minor abilities, opportunity attacks, or sidestepping.
 
 ### Adrenaline spike
 
