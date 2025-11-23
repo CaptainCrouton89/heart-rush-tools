@@ -41,7 +41,9 @@ async function compilePlayerContent(): Promise<void> {
 
     // Read source files
     const sourceFiles = await fs.readdir(SOURCE_DIR);
-    const markdownFiles = sourceFiles.filter((file) => file.endsWith(".md"));
+    const markdownFiles = sourceFiles.filter(
+      (file) => file.endsWith(".md") && file !== "CLAUDE.md"
+    );
 
     console.log(`Found ${markdownFiles.length} markdown files to process`);
 
@@ -189,7 +191,9 @@ async function compileGMContent(): Promise<void> {
 
     // Read all markdown files from GM source directory
     const files = await fs.readdir(GM_SOURCE_DIR);
-    const markdownFiles = files.filter((file) => file.endsWith(".md"));
+    const markdownFiles = files.filter(
+      (file) => file.endsWith(".md") && file !== "CLAUDE.md"
+    );
 
     const allSections: ContentSection[] = [];
     const existingSlugs = new Set<string>();
