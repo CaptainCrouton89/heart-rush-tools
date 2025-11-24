@@ -58,13 +58,23 @@ Your move speed becomes zero and you cannot dash or sidestep. You have disadvant
 
 _Ongoing._
 
-Your move speed becomes zero, and you cannot take actions, use abilities, or make attack rolls.
+Your move speed becomes zero, and you cannot take actions, use abilities, or make attack rolls. All attacks against you are considered opportunity attacks. You have D5 on might and agility checks requiring motion. You can speak only falteringly.
 
 ### Incapacitated
 
 _Ongoing._
 
-You are under the effects of stunned. In addition, enemies may choose to use their action to make opportunity attacks against you rather than enter engagements.
+You are under the effects of stunned. You automatically fail any check requiring motion. All attacks made against you from within five feet of you do maximum damage.
+
+### Unconscious
+
+_Ongoing._
+
+You are under the effects of incapacitated. In addition, you cannot perceive your surroundings in any way (you are effectively blinded and deafened), and you are prone.
+
+You automatically fail all ability checks and saving throws that require conscious action or awareness.
+
+An ally can use the help action to attempt to wake you. If you take any damage while unconscious, you immediately wake but remain prone.
 
 ### Poisoned
 
@@ -78,11 +88,17 @@ _Leveled. Fading._
 
 You have disadvantage on A/D and ability rolls requiring sight. If you have five levels of blinded, you cannot see anything.
 
+### Deafened
+
+_Leveled. Fading._
+
+You have disadvantage on ability rolls requiring hearing. If you have 5 levels of deafened you cannot hear anything.
+
 ### Suffocating
 
 _Ongoing._
 
-You take 1d6 damage at the end of each round and whenever you move or take an action.
+Whenever you end your turn while suffocating, and again whenver you dash or take an action, roll your might die. On a 1, it decreases by one size for as long as you are suffocating. If you would roll a 1 while your might die is a d4, you fall unconscious. While unconscious, continue rolling your might die at the end of each turn. On future 1s, your cunning die permanently decreases by one size.
 
 ### Slowed
 
@@ -142,6 +158,12 @@ For each level of charm, you move up one level on the relationship track toward 
 
 The source of the charm has advantage on all presence checks made against you for each level of charmed. If the charmer takes any hostile action against you, the charm effect ends immediately and your relationship level returns to what it was before being charmed.
 
+### Mute
+
+_Ongoing._
+
+You are incapable of any sort of verbal communication
+
 ## Status Conditions
 
 While many of these conditions can be caused by combat, some of them have more to do with your environment than any interaction with others.
@@ -162,9 +184,9 @@ As an action, you or another creature can attempt to put out the fire, and remov
 
 ### Obscured
 
-_Ongoing._
+_Leveled. Ongoing._
 
-If you are not visible to a creature, but have not hidden, then you are obscured. While obscured, attacks against you have D5. Likewise, defense rolls against obscured creatures have D5.
+If you are not visible to a creature, but have not hidden, then you are obscured. While obscured, you have advantage on A/D rolls.
 
 ### Hidden
 
