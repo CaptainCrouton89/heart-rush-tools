@@ -662,6 +662,17 @@ When you hit a creature with an opportunity attack, that creature's movement spe
 **Destiny Level:**
 Creatures also cannot take the sidestep action until the end of the next round. The creature gains two levels of aggravated instead of one.
 
+### Maledict
+
+_Minor ability. Instant. Martial talent._
+
+When you or an ally within 10 feet of you makes an attack roll against a creature, you can invoke this curse to add 2 levels of a fading condition to the attack (choose from: weakened, off-balanced, dazed, shaken, or slowed). However, the curse takes its toll on you as well—you immediately take 1 level of the same condition you inflicted.
+
+This ability represents a tactical sacrifice, allowing you to debilitate a dangerous foe at the cost of your own combat effectiveness.
+
+**Destiny Level:**
+You can apply up to 5 levels of the chosen condition to the attack. You take half as many levels (rounded up) of the same condition. If you would gain more than 5 levels of a condition by using this ability, you instead gain 1 level of mental vulnerability (for dazed or shaken) or physical vulnerability (for weakened, off-balanced, or slowed), based on the condition applied.
+
 ### Master Grappler
 
 _Passive ability. Martial talent._
@@ -868,6 +879,17 @@ Whenever you make a skill check or saving throw to try to physically dodge a tra
 
 **Destiny Level:**
 Once per round, if you roll doubles on a defense roll, you may immediately sidestep. If you are no longer a valid target for your attacker, you do not take damage.
+
+### Soulbound Weapon
+
+_Passive ability. Handmagic._
+
+You perform a one-hour ritual to forge a mystical bond with a single weapon, binding a portion of your essence to it. Once bonded, you can summon the weapon to your hand or banish it to an extradimensional space as an object interaction, regardless of distance. The weapon appears in your hand when summoned and vanishes when dismissed.
+
+While wielding your soulbound weapon, your attacks count as magical damage for the purpose of overcoming damage resistances and immunities. The bond persists until you perform the ritual again with a different weapon, which severs the previous bond.
+
+**Destiny Level:**
+Your connection to the soulbound weapon deepens. When you make an attack with your soulbound weapon, add 1d4 to the damage roll. This represents the weapon's attunement to your fighting style and the arcane energy flowing through your bond.
 
 ### Staggering Blows
 
@@ -1197,6 +1219,21 @@ By spending one minute concentrating on someone else within 10 feet, you can pul
 
 **Destiny Level:**  
 You only require a few seconds of concentration in order to use this ability. Additionally, on a success, you may ask a follow-up question.
+
+### Dream Witness
+
+_Minor ability. Void._
+
+You spend one minute concentrating on a willing or unconscious creature within 10 feet to pierce the veil between consciousness and dreams. Make a contested cunning check against their presence or cunning—willing participants can choose to fail this check. On a success, both of you enter a shared dream state where you are unconscious, incapacitated, and completely unaware of your physical surroundings.
+
+While dreaming, you witness one specific event from the target's memory that occurred within the last month. You experience it from their perspective, seeing what they saw, feeling what they felt, understanding their thoughts and emotions in that moment. The dream continues until the memory concludes naturally, or you choose to end it early.
+
+If either of you takes damage or another creature spends an action attempting to wake you, the target can make another contested cunning check to break free if they wish to resist. On a failed check, the dream continues uninterrupted.
+
+**Destiny Level:**
+Your mastery of dream-walking allows you to extract deeper truths. While in the dream, you can ask the target questions about the event they're reliving. They must answer truthfully, though their answers may manifest as cryptic symbols or metaphorical imagery, as dreams often distort meaning. You can also follow threads of memory to witness additional related events that connect to the central experience, forming a chain of connected memories.
+
+However, this deeper intrusion risks detection. For every two questions you ask or each additional event you attempt to witness, an unwilling target may begin to sense the artificial nature of the dream. Make another contested cunning check. On a success, you maintain the dream's integrity and continue your investigation. On a failure, the target's subconscious recognizes the intrusion—they awaken immediately and the dream shatters, ending the effect and leaving both of you disoriented.
 
 ### Druid's Step
 _Passive ability. Handmagic._  
