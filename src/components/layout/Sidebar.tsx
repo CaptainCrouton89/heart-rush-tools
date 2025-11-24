@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useGM } from "../../context/GMContext";
+import { useWorld } from "../../context/WorldContext";
 import { CategorizedNavigationNode, SearchResult } from "../../types/content";
 import { SearchInput } from "../search/SearchInput";
 import { SearchResults } from "../search/SearchResults";
@@ -16,6 +17,7 @@ interface SidebarProps {
 
 export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   const { isGMMode, setGMMode } = useGM();
+  const { currentWorld, setCurrentWorld, availableWorlds } = useWorld();
   const [navigation, setNavigation] = useState<CategorizedNavigationNode[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
@@ -24,23 +26,29 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
 
   useEffect(() => {
     const loadNavigation = async () => {
-      try {
-        // Fetch navigation from API route (GM or regular)
-        const endpoint = isGMMode ? "/api/gm/navigation" : "/api/navigation";
-        const response = await fetch(endpoint);
-        if (!response.ok) throw new Error("Failed to fetch navigation");
-        const nav = await response.json();
-        setNavigation(nav);
-      } catch (error) {
-        console.error("Failed to load navigation:", error);
-        setNavigation([]); // Fallback to empty array
-      } finally {
-        setLoading(false);
+      setLoading(true);
+
+      // Determine endpoint based on context (world > GM > regular)
+      let endpoint: string;
+      if (currentWorld) {
+        endpoint = `/api/world/${currentWorld}/navigation`;
+      } else if (isGMMode) {
+        endpoint = "/api/gm/navigation";
+      } else {
+        endpoint = "/api/navigation";
       }
+
+      const response = await fetch(endpoint);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch navigation from ${endpoint}: ${response.statusText}`);
+      }
+      const nav = await response.json();
+      setNavigation(nav);
+      setLoading(false);
     };
 
     loadNavigation();
-  }, [isGMMode]);
+  }, [isGMMode, currentWorld]);
 
   const handleSearchResults = (results: SearchResult[]) => {
     setSearchResults(results);
@@ -190,32 +198,58 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
             </div>
           </div>
 
+          {/* World Switcher */}
+          {availableWorlds.length > 0 && (
+            <div className="mb-3">
+              <label className="text-xs font-medium text-muted-foreground mb-2 block text-center">
+                Wiki Context
+              </label>
+              <select
+                value={currentWorld === null ? "main" : currentWorld}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setCurrentWorld(value === "main" ? null : value);
+                }}
+                className="w-full px-3 py-2 text-sm bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
+              >
+                <option value="main">Heart Rush Rulebook</option>
+                {availableWorlds.map((world) => (
+                  <option key={world} value={world}>
+                    {world.charAt(0).toUpperCase() + world.slice(1)} Wiki
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+
           {/* GM Mode Toggle */}
-          <div className="flex items-center justify-center mb-3">
-            <label className="flex items-center gap-2 cursor-pointer">
-              <span className="text-xs text-muted-foreground">Player</span>
-              <div className="relative">
-                <input
-                  type="checkbox"
-                  checked={isGMMode}
-                  onChange={(e) => setGMMode(e.target.checked)}
-                  className="sr-only"
-                />
-                <div
-                  className={`w-10 h-5 rounded-full transition-colors ${
-                    isGMMode ? "bg-primary" : "bg-muted"
-                  }`}
-                >
-                  <div
-                    className={`w-4 h-4 rounded-full bg-white transition-transform ${
-                      isGMMode ? "translate-x-5" : "translate-x-0.5"
-                    } translate-y-0.5`}
+          {!currentWorld && (
+            <div className="flex items-center justify-center mb-3">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <span className="text-xs text-muted-foreground">Player</span>
+                <div className="relative">
+                  <input
+                    type="checkbox"
+                    checked={isGMMode}
+                    onChange={(e) => setGMMode(e.target.checked)}
+                    className="sr-only"
                   />
+                  <div
+                    className={`w-10 h-5 rounded-full transition-colors ${
+                      isGMMode ? "bg-primary" : "bg-muted"
+                    }`}
+                  >
+                    <div
+                      className={`w-4 h-4 rounded-full bg-white transition-transform ${
+                        isGMMode ? "translate-x-5" : "translate-x-0.5"
+                      } translate-y-0.5`}
+                    />
+                  </div>
                 </div>
-              </div>
-              <span className="text-xs text-muted-foreground">GM</span>
-            </label>
-          </div>
+                <span className="text-xs text-muted-foreground">GM</span>
+              </label>
+            </div>
+          )}
 
           <p className="text-xs text-muted-foreground text-center">
             Heart Rush TTRPG Reference

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useGM } from "../../context/GMContext";
+import { useWorld } from "../../context/WorldContext";
 import { CategorizedNavigationNode, NavigationNode } from "../../types/content";
 
 interface NavigationTreeProps {
@@ -45,6 +46,7 @@ function NavigationItem({
   onToggle,
 }: NavigationItemProps) {
   const { isGMMode } = useGM();
+  const { currentWorld } = useWorld();
 
   // Handle categorized navigation nodes
   if ("type" in node && node.type === "category") {
@@ -82,10 +84,21 @@ function NavigationItem({
     }
   };
 
+  // Determine the href based on context (world > GM > regular)
+  const getHref = () => {
+    if (currentWorld) {
+      return `/world/${currentWorld}/${nodeSlug}`;
+    }
+    if (isGMMode) {
+      return `/gm/${nodeSlug}`;
+    }
+    return `/${nodeSlug}`;
+  };
+
   return (
     <div>
       <Link
-        href={isGMMode ? `/gm/${nodeSlug}` : `/${nodeSlug}`}
+        href={getHref()}
         onClick={handleItemClick}
         className={`
           flex items-center py-2 px-2 rounded-md text-sm block transition-all duration-200
@@ -167,6 +180,7 @@ export function NavigationTree({
 }: NavigationTreeProps) {
   const pathname = usePathname();
   const { isGMMode } = useGM();
+  const { currentWorld } = useWorld();
   const [openNodes, setOpenNodes] = useState<Set<string>>(new Set());
 
   const toggleNode = (slug: string) => {
@@ -194,7 +208,11 @@ export function NavigationTree({
       }
 
       const nodeSlug = "slug" in node ? node.slug : "";
-      const expectedPath = isGMMode ? `/gm/${nodeSlug}` : `/${nodeSlug}`;
+      const expectedPath = currentWorld
+        ? `/world/${currentWorld}/${nodeSlug}`
+        : isGMMode
+        ? `/gm/${nodeSlug}`
+        : `/${nodeSlug}`;
       if (pathname === expectedPath) return true;
       if (node.children) {
         return node.children.some((child) => isInActivePath(child));
@@ -230,7 +248,7 @@ export function NavigationTree({
 
     const activePath = findActivePath(nodes);
     setOpenNodes((prev) => new Set([...prev, ...activePath]));
-  }, [pathname, nodes, isGMMode]);
+  }, [pathname, nodes, isGMMode, currentWorld]);
 
   return (
     <div className="space-y-1">
@@ -252,7 +270,12 @@ export function NavigationTree({
             level={level}
             isActive={Boolean(
               nodeSlug &&
-                pathname === (isGMMode ? `/gm/${nodeSlug}` : `/${nodeSlug}`)
+                pathname ===
+                  (currentWorld
+                    ? `/world/${currentWorld}/${nodeSlug}`
+                    : isGMMode
+                    ? `/gm/${nodeSlug}`
+                    : `/${nodeSlug}`)
             )}
             isOpen={nodeSlug ? openNodes.has(nodeSlug) : false}
             onToggle={() => nodeSlug && toggleNode(nodeSlug)}

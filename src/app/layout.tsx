@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../lib/polyfills";
 import { AppLayout } from "../components/layout/AppLayout";
 import { ThemeProvider } from "../components/layout/ThemeProvider";
 import { GMProvider } from "../context/GMContext";
+import { WorldProvider } from "../context/WorldContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,7 +21,13 @@ const geistMono = Geist_Mono({
   preload: true,
 });
 
+const appUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ??
+  "http://localhost:3909";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(appUrl),
   title: "Heart Rush TTRPG Reference",
   description:
     "Complete reference guide for the Heart Rush tabletop RPG system",
@@ -50,19 +57,20 @@ export const metadata: Metadata = {
     images: ["/heart.png"],
   },
   manifest: "/manifest.json",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#1a1a1a" },
-  ],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   robots: {
     index: true,
     follow: true,
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a1a1a" },
+  ],
 };
 
 export default function RootLayout({
@@ -77,7 +85,9 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <GMProvider>
-            <AppLayout>{children}</AppLayout>
+            <WorldProvider>
+              <AppLayout>{children}</AppLayout>
+            </WorldProvider>
           </GMProvider>
         </ThemeProvider>
       </body>

@@ -18,20 +18,28 @@ export function Breadcrumbs({ slug }: BreadcrumbsProps) {
 
   useEffect(() => {
     const loadBreadcrumbs = async () => {
-      try {
-        // Determine if we're in GM mode based on pathname or context
-        const isCurrentlyGM = pathname.startsWith('/gm/') || isGMMode;
-        const endpoint = isCurrentlyGM ? `/api/gm/breadcrumbs/${slug}` : `/api/breadcrumbs?slug=${slug}`;
-        
-        const response = await fetch(endpoint);
-        if (!response.ok) throw new Error('Failed to fetch breadcrumbs');
-        const crumbs = await response.json();
-        setBreadcrumbs(crumbs);
-      } catch (error) {
-        console.error('Failed to load breadcrumbs:', error);
-      } finally {
-        setLoading(false);
+      setLoading(true);
+
+      // Determine endpoint based on context (world > GM > regular)
+      let endpoint: string;
+      const worldMatch = pathname.match(/^\/world\/([^/]+)\//);
+
+      if (worldMatch) {
+        const world = worldMatch[1];
+        endpoint = `/api/world/${world}/breadcrumbs/${slug}`;
+      } else if (pathname.startsWith('/gm/') || isGMMode) {
+        endpoint = `/api/gm/breadcrumbs/${slug}`;
+      } else {
+        endpoint = `/api/breadcrumbs?slug=${slug}`;
       }
+
+      const response = await fetch(endpoint);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch breadcrumbs from ${endpoint}: ${response.statusText}`);
+      }
+      const crumbs = await response.json();
+      setBreadcrumbs(crumbs);
+      setLoading(false);
     };
 
     loadBreadcrumbs();
@@ -51,18 +59,32 @@ export function Breadcrumbs({ slug }: BreadcrumbsProps) {
     return null;
   }
 
-  const isCurrentlyGM = pathname.startsWith('/gm/') || isGMMode;
-  const linkPrefix = isCurrentlyGM ? '/gm' : '';
+  // Determine link prefix based on context (world > GM > regular)
+  const worldMatch = pathname.match(/^\/world\/([^/]+)\//);
+  const linkPrefix = worldMatch
+    ? `/world/${worldMatch[1]}`
+    : pathname.startsWith('/gm/') || isGMMode
+    ? '/gm'
+    : '';
 
   return (
     <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-sm text-muted-foreground">
-      <Link 
-        href="/" 
+      <Link
+        href="/"
         className="hover:text-foreground transition-colors"
       >
         Home
       </Link>
-      
+
+      {worldMatch && (
+        <>
+          <span className="text-muted-foreground">/</span>
+          <span className="text-foreground/80 font-medium">
+            {worldMatch[1].charAt(0).toUpperCase() + worldMatch[1].slice(1)}
+          </span>
+        </>
+      )}
+
       {breadcrumbs.map((crumb, index) => (
         <div key={crumb.slug} className="flex items-center space-x-2">
           <span className="text-muted-foreground">/</span>
