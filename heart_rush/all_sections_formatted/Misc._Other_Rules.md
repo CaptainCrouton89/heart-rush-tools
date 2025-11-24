@@ -19,7 +19,7 @@ The framework is as follows. The GM should first determine the timeframe of chec
 
 | CN  | Circumstances                                     |
 | --- | ------------------------------------------------- |
-| 6   | <7 y/o, phenomenal teacher, or complete immersion |
+| 6   | &lt;7 y/o, phenomenal teacher, or complete immersion |
 | 9   | Daily lessons from a fluent speaker               |
 | 12  | Half-immersion                                    |
 | 15  | Self-taught, no interaction with fluent speakers  |

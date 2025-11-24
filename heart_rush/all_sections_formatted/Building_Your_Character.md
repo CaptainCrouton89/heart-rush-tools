@@ -14,7 +14,7 @@ Once you have come up with something, write this dream down somewhere. You may w
 
 ## Kin & Culture
 
-Everyone comes from a different background and has a different upbringing. When you create a character, choose a race from the Kin & Culture section. You gain the aspects and abilities that come from choosing that race (aspects and abilities will be explained later—for now, just pick a race that sounds cool).
+Everyone comes from a different background and has a different upbringing. When you create a character, choose a race from the [Kin & Culture](#kin--culture) section. You gain the aspects and abilities that come from choosing that race (aspects and abilities will be explained later—for now, just pick a race that sounds cool).
 
 Many races have multiple heritages or subraces within that race. In that case, you gain the aspects and abilities of the race, as well as those of a chosen heritage. For example, the race Dwarf has a base ability, but then you may choose the subrace "Aureum" which includes two aspects and another ability.
 
@@ -24,7 +24,7 @@ These are the core-most stats of your character. They represent the raw capabili
 
 ### Experience
 
-When the game begins, you will start with some experience (XP). During the game and between sessions, you may spend XP to upgrade your vitals, gain new abilities, and more. See the Spending Experience section to learn more. After making your character, you may begin spending your XP.
+When the game begins, you will start with some experience (XP). During the game and between sessions, you may spend XP to upgrade your vitals, gain new abilities, and more. See the [Experience & Advancement](#experience--advancement) section to learn more. After making your character, you may begin spending your XP.
 
 ### Ability Dice
 
@@ -54,7 +54,7 @@ The first step in creating your character is determining which dice you will use
 
 ### Movement
 
-By default, you have a 60 feet move speed. That means that when you take the dash action (see the Combat section), you can cover that distance. Note that your move speed is negatively affected by equipment penalties (like armor).
+By default, you have a 60 feet move speed. That means that when you take the dash action (see the [Combat](#combat) section), you can cover that distance. Note that your move speed is negatively affected by equipment penalties (like armor).
 
 When swimming, you have a swim speed of 15 feet. This is also negatively affected by equipment penalties: don't swim with heavy armor on.
 
@@ -82,7 +82,7 @@ Sometimes, there will be effects that cause your heart die to increase or decrea
 
 #### Wounds
 
-When you take damage in Heart Rush, it can mean different things depending on how much damage you take. If it's less than 10 damage, this represents minor injuries—nothing that poses a real threat. However, if you take 10 or more damage, this represents something serious—a wound. The exact details of taking wounds and healing them will be described later in the Combat section.
+When you take damage in Heart Rush, it can mean different things depending on how much damage you take. If it's less than 10 damage, this represents minor injuries—nothing that poses a real threat. However, if you take 10 or more damage, this represents something serious—a wound. The exact details of taking wounds and healing them will be described later in the [Combat](#combat) section.
 
 ## Your Age and Experience
 
@@ -390,7 +390,7 @@ Professions represent broad life paths and careers:
 
 Professions should be broad enough to cover multiple related activities. A "Thief" can pick locks, move stealthily, fence goods, and forge documents. A "Merchant" can appraise goods, negotiate deals, manage logistics, and understand markets.
 
-Work with your GM to ensure your profession reflects a realistic life path from the game world.
+Work with your GM to ensure your profession reflects a realistic life path from the game world. For more information on advancing professions and spending XP, see the [Experience & Advancement](#experience--advancement) section.
 
 ### Creating Missions
 
@@ -487,6 +487,8 @@ If multiple professions could apply to a task, use the highest applicable profes
 ## Talents
 
 Talents are specialized abilities that you know and can utilize. These act as a way of specializing your play style and differentiating you from anyone else in the world. Although you do not start with any talents, they can be purchased with XP, with which you start the game and can immediately use to buy talents.
+
+See the [Talents](#talents) section for the complete catalog of available combat talents, non-combat talents, and elemental spells.
 
 ## Aspects
 
@@ -1398,7 +1400,7 @@ _For those who blend steel and sorcery_
 - **Warcaster** (Specialization): Cheaper elemental talents, gain attunement
 - **Any other foundation**: Build your unique hybrid approach
 
-**Synergistic Choices:** The beauty of the war mage is flexibility—combine Warcaster with any other approach above. Add spellcasting to the Living Fortress for elemental armor. Blend it with Perfect Killer for magically-enhanced strikes. Mix it with Shadow Dancer for spell-powered trickery. The battlefield is your canvas.
+**Synergistic Choices:** The beauty of the war mage is flexibility—combine Warcaster with any other approach above. Add spellcasting to the Living Fortress for elemental armor. Blend it with Perfect Killer for magically-enhanced strikes. Mix it with Shadow Dancer for spell-powered trickery. The battlefield is your canvas. See the [Kethic Elementalism](#kethic-elementalism) section for the complete magic system.
 
 **Combat Flow:** Varies wildly based on your chosen blend. The key is using Warcaster to add magical options to whatever combat style you prefer, creating combinations your enemies won't expect.
 
@@ -1431,7 +1433,7 @@ These are two separate progression systems that work together:
 
 - **Experience Points (XP)** are spent on talents, aspects, hit points, and ability dice. You gain XP regularly throughout play and spend it between sessions to customize your character.
 
-See **Experience & Advancement** for how to spend XP on character development.
+See the [Experience & Advancement](#experience--advancement) section for how to spend XP on character development.
 
 ## Advice For New Groups
 

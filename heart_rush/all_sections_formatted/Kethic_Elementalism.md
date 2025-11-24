@@ -4,7 +4,7 @@ Kethic elementalism, also known as Kethic and elemental magic, is one of the mos
 
 There are nine fundamental elements: earth, air, fire, water, light, dark, force, time, and void. With these elements, nearly everything is created.
 
-By attuning to different elements, you have some basic power over those elements. There are three different levels of attunement for each element—each of which grant you increasing abilities.
+By attuning to different elements, you have some basic power over those elements. There are three different levels of attunement for each element—each of which grant you increasing abilities. To gain attunement, take the **Elemental Affinity** talent (see [Talents](#talents)).
 
 However, attuning to an element is difficult. Most people never attune to any elements in their lifetimes, and your spirit must be able to handle the additional pressure of resonating with your attuned element. Those who do will frequently do so by accident after an unusual or extreme exposure to one of these such elements. More advanced attunements require even more exposure, and paragon level attunements generally require special activity dedicated to developing an attunement to that element.
 

@@ -81,8 +81,8 @@ Sprint up to your full movement speed (60 feet base, before equipment). **Your f
 
 Moving more than 5 feet within an enemy's reach or leaving their threat range without sidestepping invites opportunity attacks—you're prioritizing speed over defense.
 
-**Sidestep**  
-Uses your action, or spend a rush point instead.
+**Sidestep**
+Uses your action, or spend a rush point instead (see [Abilities](#abilities) for more on rush points).
 
 Carefully move 5 feet or rise from prone without dropping your guard. This defensive movement never provokes opportunity attacks.
 
@@ -107,7 +107,7 @@ Creativity thrives in combat. Propose other actions to your GM—toppling pillar
 
 Opportunity attacks punish tactical errors with devastating consequences. These free strikes occur outside normal combat flow, allowing you to capitalize on enemy mistakes without risking counter-attack.
 
-**Uses your action**, or spend a rush point. Opportunity attacks resolve instantly—no one acts before you strike. You're exploiting an immediate opening that even faster opponents cannot interrupt.
+**Uses your action**, or spend a rush point (see [Abilities](#abilities) for more on rush points). Opportunity attacks resolve instantly—no one acts before you strike. You're exploiting an immediate opening that even faster opponents cannot interrupt.
 
 You earn opportunity attacks when enemies:
 
@@ -176,9 +176,9 @@ You read the battlefield like a book, striking where enemies leave themselves vu
 
 **Valid Targets**: Agility, defensive, or cunning stance opponents
 
-**Damage Type Bonus**: If wielding a Piercing weapon, add an additional weapon die to all your Cunning stance attacks (always applies, regardless of opponent's stance).
+**Damage Type Bonus**: If wielding a Piercing weapon (see [Equipment & Gear](#equipment--gear)), add an additional weapon die to all your Cunning stance attacks (always applies, regardless of opponent's stance).
 
-**Attack Type Bonus**: When attacking Agility stance opponents (Cunning beats Agility), apply up to two levels of dazed, off-balanced, or weakened. You've completely decoded their movements, leaving them reeling from perfectly-placed strikes.
+**Attack Type Bonus**: When attacking Agility stance opponents (Cunning beats Agility), apply up to two levels of dazed, off-balanced, or weakened (see [Conditions](#conditions) for effects). You've completely decoded their movements, leaving them reeling from perfectly-placed strikes.
 
 #### Agility Stance
 
@@ -338,7 +338,7 @@ For example, if you have the rank 12 wound, "Guts spilling out," you could gain 
 Whenever you take a wound, you'll want to get it treated. Treating a wound will mitigate a large amount of the harm. To treat a wound, make a medicine skill check and reduce the rank of all untreated wounds affecting the wounded creature by the rolled amount. If this would reduce a wound's rank below zero, remove the wound completely.
 
 If you are treating your own wounds, you have disadvantage.  
-You can treat any number of wounds at once, but once a wound has been treated it cannot be treated again. Once treated, these wounds will naturally heal over time when you take long rests. See the Rests & Healing section for more details.
+You can treat any number of wounds at once, but once a wound has been treated it cannot be treated again. Once treated, these wounds will naturally heal over time when you take long rests. See the [Rests & Healing](#rests--healing) section for more details.
 
 ### Zero Hit points
 
@@ -347,7 +347,7 @@ When your hit points reach zero, you are in bad condition. If you wish, you may 
 If your hit points ever reach an amount equal to or less than the negative of your maximum, you die.
 
 Once you are unconscious, you remain unconscious so long as your hit points are zero or fewer.  
-You can recover hit points and reduce wounds by taking rests. Read more in the Rests & Healing section.
+You can recover hit points and reduce wounds by taking rests. Read more in the [Rests & Healing](#rests--healing) section.
 
 #### Why would I go unconscious??
 

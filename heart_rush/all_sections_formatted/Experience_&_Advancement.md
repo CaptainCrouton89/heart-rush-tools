@@ -15,7 +15,7 @@ Your GM awards XP based on the campaign's focus and pacing. Common triggers incl
 - **Combat Victory**: Overcoming dangerous encounters
 - **Session Length**: Consistent play rewards steady progress
 
-**GM Guidance**: Award 2-4 XP per session as a baseline—this keeps characters advancing every few sessions. For faster progression, increase this amount. Always communicate your XP triggers to players so they understand what drives advancement. Note that XP is separate from bloodmarks (see Bloodmarks), which are awarded for legendary combat achievements.
+**GM Guidance**: Award 2-4 XP per session as a baseline—this keeps characters advancing every few sessions. For faster progression, increase this amount. Always communicate your XP triggers to players so they understand what drives advancement. Note that XP is separate from bloodmarks (see [Bloodmarks](#bloodmarks)), which are awarded for legendary combat achievements.
 
 ### When to Spend Experience
 
@@ -47,17 +47,17 @@ Each upgrade type serves a different purpose in shaping your character:
 
 ### Understanding Your Options
 
-**Aspects** define who your character is and what they excel at. New aspects broaden your capabilities, while increasing existing ones deepens your expertise. Changing aspects costs nothing because character growth should never be penalized.
+**Aspects** define who your character is and what they excel at (see [Aspects](#aspects) in the Building Your Character section). New aspects broaden your capabilities, while increasing existing ones deepens your expertise. Changing aspects costs nothing because character growth should never be penalized.
 
 **Hit Points** represent your stamina and ability to withstand punishment. Each purchase adds 10 HP, making you significantly more durable in extended conflicts.
 
 **Ability Dice** determine your raw potential in different areas. Higher dice mean more consistent success and spectacular results. Note that your Heart Die increases automatically through experience milestones (see below).
 
-**Talents** provide specific techniques and abilities:
+**Talents** provide specific techniques and abilities (see [Talents](#talents) for the complete catalog):
 
 - **Combat Talents** enhance your effectiveness in battle
 - **Noncombat Talents** expand your options outside fights
-- **Elemental Talents** require elemental attunement but offer powerful magical effects
+- **Elemental Talents** require elemental attunement (see [Kethic Elementalism](#kethic-elementalism)) but offer powerful magical effects
 
 **Destiny Levels** transform good talents into legendary abilities, unlocking their full potential once you've mastered the basics.
 
