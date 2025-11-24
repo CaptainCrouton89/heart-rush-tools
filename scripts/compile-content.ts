@@ -19,8 +19,10 @@ import { copyRaceImages, findRaceImage } from "./lib/image-handler.js";
 
 const SOURCE_DIR = "heart_rush/all_sections_formatted";
 const GM_SOURCE_DIR = "heart_rush/gm_guide";
+const WORLDS_SOURCE_DIR = "world-wikis";
 const OUTPUT_DIR = "content";
 const GM_OUTPUT_DIR = "content/gm";
+const WORLDS_OUTPUT_DIR = "content/worlds";
 const GM_CATEGORIES_CONFIG_PATH = "gm-navigation-categories.json";
 
 async function compilePlayerContent(): Promise<void> {
@@ -314,6 +316,216 @@ async function compileGMContent(): Promise<void> {
   }
 }
 
+async function compileWorldWiki(worldName: string): Promise<void> {
+  console.log(`\nCompiling world wiki: ${worldName}...`);
+
+  try {
+    const worldSourceDir = path.join(WORLDS_SOURCE_DIR, worldName);
+    const worldOutputDir = path.join(WORLDS_OUTPUT_DIR, worldName);
+
+    // Ensure output directory exists
+    await fs.mkdir(worldOutputDir, { recursive: true });
+
+    // Auto-detect content structure - look for markdown files
+    const allMarkdownFiles: string[] = [];
+
+    async function findMarkdownFiles(dir: string, basePath: string = ""): Promise<void> {
+      const entries = await fs.readdir(dir, { withFileTypes: true });
+
+      for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        const relativePath = path.join(basePath, entry.name);
+
+        if (entry.isDirectory()) {
+          // Recursively search subdirectories
+          await findMarkdownFiles(fullPath, relativePath);
+        } else if (entry.isFile() && entry.name.endsWith(".md") &&
+                   entry.name !== "CLAUDE.md" && entry.name !== ".claude-md-manager.md") {
+          allMarkdownFiles.push(relativePath);
+        }
+      }
+    }
+
+    await findMarkdownFiles(worldSourceDir);
+
+    if (allMarkdownFiles.length === 0) {
+      console.log(`  ⚠️  No markdown files found in ${worldName}, skipping`);
+      return;
+    }
+
+    console.log(`  Found ${allMarkdownFiles.length} markdown files`);
+
+    const allSections: ContentSection[] = [];
+    const existingSlugs = new Set<string>();
+    let globalOrder = 0;
+
+    // Process each markdown file
+    for (const relativeFilePath of allMarkdownFiles.sort()) {
+      const filePath = path.join(worldSourceDir, relativeFilePath);
+      const fileContent = await fs.readFile(filePath, "utf-8");
+
+      // Parse frontmatter
+      const { data: frontMatter, content } = matter(fileContent);
+
+      // Determine category from frontmatter or relative path
+      const category = frontMatter.category ||
+                      path.dirname(relativeFilePath)
+                        .replace(/\//g, " / ")
+                        .replace(/_/g, " ")
+                        .replace(/^\./, worldName);
+
+      // Split content into sections
+      const sections = splitContent(content, relativeFilePath);
+
+      const fileSections: ContentSection[] = [];
+
+      // Process each section
+      for (const section of sections) {
+        const wordCount = countWords(section.content);
+        const readingTime = calculateReadingTime(wordCount);
+
+        const contentSection: ContentSection = {
+          slug: generateSlug(section.title, existingSlugs),
+          title: section.title,
+          category,
+          level: section.level,
+          content: section.content,
+          tags: extractTags(section.content, section.title),
+          cross_refs: extractCrossReferences(section.content),
+          word_count: wordCount,
+          reading_time: readingTime,
+          order: globalOrder++,
+        };
+
+        // Set parent relationship for subsections
+        if (section.level > 1 && fileSections.length > 0) {
+          let bestParent = null;
+
+          for (let j = fileSections.length - 1; j >= 0; j--) {
+            const candidateParent = fileSections[j];
+            if (candidateParent.level < section.level) {
+              if (candidateParent.level === section.level - 1) {
+                bestParent = candidateParent;
+                break;
+              }
+              if (!bestParent) {
+                bestParent = candidateParent;
+              }
+            }
+          }
+
+          if (bestParent) {
+            contentSection.parent = bestParent.slug;
+          }
+        }
+
+        fileSections.push(contentSection);
+        allSections.push(contentSection);
+      }
+    }
+
+    console.log(`  Generated ${allSections.length} sections`);
+
+    // Write individual section files
+    for (const section of allSections) {
+      const sectionPath = path.join(worldOutputDir, `${section.slug}.json`);
+      await fs.writeFile(sectionPath, JSON.stringify(section, null, 2));
+    }
+
+    // Try to load custom navigation categories for this world
+    let categories;
+    const worldCategoriesPath = path.join(worldSourceDir, "navigation-categories.json");
+    try {
+      await fs.access(worldCategoriesPath);
+      categories = await loadNavigationCategories(worldCategoriesPath);
+    } catch {
+      // No custom categories, use auto-generated ones from content
+      const uniqueCategories = Array.from(
+        new Set(allSections.map(s => s.category))
+      ).map((cat, i) => ({
+        name: cat,
+        sections: allSections.filter(s => s.category === cat).map(s => s.slug)
+      }));
+      categories = uniqueCategories;
+    }
+
+    const categorizedNavigation = createCategorizedNavigation(
+      allSections,
+      categories
+    );
+
+    // Write navigation file
+    await fs.writeFile(
+      path.join(worldOutputDir, "navigation.json"),
+      JSON.stringify(categorizedNavigation, null, 2)
+    );
+
+    // Write index file
+    const index = allSections.map((section) => ({
+      slug: section.slug,
+      title: section.title,
+      category: section.category,
+      level: section.level,
+      parent: section.parent,
+      tags: section.tags,
+      cross_refs: section.cross_refs,
+      word_count: section.word_count,
+      reading_time: section.reading_time,
+      order: section.order,
+    }));
+
+    await fs.writeFile(
+      path.join(worldOutputDir, "index.json"),
+      JSON.stringify(index, null, 2)
+    );
+
+    console.log(`  ✅ ${worldName} compilation complete`);
+  } catch (error) {
+    console.error(`  ❌ Error compiling ${worldName}:`, error);
+    throw error;
+  }
+}
+
+async function compileAllWorldWikis(): Promise<void> {
+  console.log("\nStarting world wikis compilation...");
+
+  try {
+    // Check if worlds directory exists
+    try {
+      await fs.access(WORLDS_SOURCE_DIR);
+    } catch {
+      console.log("No world-wikis directory found, skipping world wikis compilation");
+      return;
+    }
+
+    // Ensure worlds output directory exists
+    await fs.mkdir(WORLDS_OUTPUT_DIR, { recursive: true });
+
+    // Get all world directories
+    const entries = await fs.readdir(WORLDS_SOURCE_DIR, { withFileTypes: true });
+    const worldDirs = entries
+      .filter(entry => entry.isDirectory())
+      .map(entry => entry.name);
+
+    if (worldDirs.length === 0) {
+      console.log("No world directories found, skipping world wikis compilation");
+      return;
+    }
+
+    console.log(`Found ${worldDirs.length} world(s): ${worldDirs.join(", ")}`);
+
+    // Compile each world
+    for (const worldName of worldDirs) {
+      await compileWorldWiki(worldName);
+    }
+
+    console.log("\n✅ All world wikis compilation completed!");
+  } catch (error) {
+    console.error("Error during world wikis compilation:", error);
+    throw error;
+  }
+}
+
 async function compileContent(): Promise<void> {
   try {
     // Compile both player and GM content
@@ -328,6 +540,9 @@ async function compileContent(): Promise<void> {
         "No GM guide directory found, skipping GM content compilation"
       );
     }
+
+    // Compile world wikis
+    await compileAllWorldWikis();
 
     console.log("\n🎉 All content compilation completed successfully!");
   } catch (error) {

@@ -475,3 +475,154 @@ export async function getGMChildContent(parentSlug: string): Promise<ContentSect
 export function clearCache(): void {
   CACHE.clear();
 }
+
+// World Content Functions
+
+// Get world content by slug
+export async function getWorldContentBySlug(world: string, slug: string): Promise<ContentSection | null> {
+  try {
+    const worldContentDir = path.join(process.cwd(), 'content', 'worlds', world);
+    const filePath = path.join(worldContentDir, `${slug}.json`);
+    const content = await getCachedOrLoad(`world-${world}-content:${slug}`, async () => {
+      const fileContent = await fs.readFile(filePath, 'utf-8');
+      return JSON.parse(fileContent) as ContentSection;
+    });
+
+    return content;
+  } catch (error) {
+    console.error(`Error loading ${world} world content for slug ${slug}:`, error);
+    return null;
+  }
+}
+
+// Get all world content metadata
+export async function getAllWorldContentMetadata(world: string): Promise<ContentMetadata[]> {
+  try {
+    const worldContentDir = path.join(process.cwd(), 'content', 'worlds', world);
+    const indexPath = path.join(worldContentDir, 'index.json');
+    const metadata = await getCachedOrLoad(`world-${world}-metadata:all`, async () => {
+      const fileContent = await fs.readFile(indexPath, 'utf-8');
+      return JSON.parse(fileContent) as ContentMetadata[];
+    });
+
+    return metadata.sort((a, b) => a.order - b.order);
+  } catch (error) {
+    console.error(`Error loading ${world} world content metadata:`, error);
+    return [];
+  }
+}
+
+// Get world navigation tree
+export async function getWorldNavigationTree(world: string): Promise<CategorizedNavigationNode[]> {
+  try {
+    const worldContentDir = path.join(process.cwd(), 'content', 'worlds', world);
+    const navPath = path.join(worldContentDir, 'navigation.json');
+    const navigation = await getCachedOrLoad(`world-${world}-navigation:tree`, async () => {
+      const fileContent = await fs.readFile(navPath, 'utf-8');
+      return JSON.parse(fileContent) as CategorizedNavigationNode[];
+    });
+
+    return navigation;
+  } catch (error) {
+    console.error(`Error loading ${world} world navigation tree:`, error);
+    return [];
+  }
+}
+
+// Get world breadcrumbs
+export async function getWorldBreadcrumbs(world: string, slug: string): Promise<Breadcrumb[]> {
+  try {
+    const content = await getWorldContentBySlug(world, slug);
+    if (!content) return [];
+
+    const breadcrumbs: Breadcrumb[] = [];
+    const allMetadata = await getAllWorldContentMetadata(world);
+    const metadataMap = new Map(allMetadata.map(item => [item.slug, item]));
+
+    // Build breadcrumb trail by walking up parent chain
+    let current: ContentMetadata | undefined = metadataMap.get(slug);
+    while (current) {
+      breadcrumbs.unshift({
+        slug: current.slug,
+        title: current.title,
+        level: current.level
+      });
+
+      if (current.parent) {
+        current = metadataMap.get(current.parent);
+      } else {
+        break;
+      }
+    }
+
+    return breadcrumbs;
+  } catch (error) {
+    console.error(`Error getting ${world} world breadcrumbs for ${slug}:`, error);
+    return [];
+  }
+}
+
+// Get world adjacent content
+export async function getWorldAdjacentContent(world: string, slug: string): Promise<{
+  previous: ContentMetadata | null;
+  next: ContentMetadata | null;
+}> {
+  try {
+    const allMetadata = await getAllWorldContentMetadata(world);
+    const currentIndex = allMetadata.findIndex(item => item.slug === slug);
+
+    if (currentIndex === -1) {
+      return { previous: null, next: null };
+    }
+
+    return {
+      previous: currentIndex > 0 ? allMetadata[currentIndex - 1] : null,
+      next: currentIndex < allMetadata.length - 1 ? allMetadata[currentIndex + 1] : null
+    };
+  } catch (error) {
+    console.error(`Error getting ${world} world adjacent content for ${slug}:`, error);
+    return { previous: null, next: null };
+  }
+}
+
+// Get world child content
+export async function getWorldChildContent(world: string, parentSlug: string): Promise<ContentSection[]> {
+  try {
+    const allMetadata = await getAllWorldContentMetadata(world);
+    const allContent = new Map<string, ContentSection>();
+
+    // Load all content sections first
+    const contentPromises = allMetadata.map(async (item) => {
+      const content = await getWorldContentBySlug(world, item.slug);
+      if (content) {
+        allContent.set(item.slug, content);
+      }
+    });
+    await Promise.all(contentPromises);
+
+    // Helper function to recursively build children structure
+    const buildChildrenTree = (slug: string): ContentSection[] => {
+      const directChildren = allMetadata
+        .filter(item => item.parent === slug)
+        .sort((a, b) => a.order - b.order);
+
+      return directChildren.map(child => {
+        const content = allContent.get(child.slug);
+        if (!content) return null;
+
+        // Recursively get children of this child
+        const grandchildren = buildChildrenTree(child.slug);
+
+        return {
+          ...content,
+          children: grandchildren.length > 0 ? grandchildren : undefined
+        } as ContentSection;
+      }).filter((content): content is ContentSection => content !== null);
+    };
+
+    return buildChildrenTree(parentSlug);
+  } catch (error) {
+    console.error(`Error loading ${world} world child content for ${parentSlug}:`, error);
+    return [];
+  }
+}
