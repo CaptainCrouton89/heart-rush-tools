@@ -54,6 +54,15 @@ Increase the size of an ability die for a single roll. You can't increase the si
 **Destiny Level:**
 Increase the size of the die by two instead, or increase a d12 to a d20.
 
+### Aggravator
+
+_Passive ability. Martial talent._
+
+You excel at drawing attention to yourself. Whenever you deal damage to a creature, you may choose to have that creature gain one level of aggravated towards you. Additionally, for each level of aggravated a creature has, you gain one level advantage on attack rolls against that creature.
+
+**Destiny Level:**
+Your advantage becomes A2 on all A/D rolls against aggravated creatures. Additionally, when a creature aggravated towards you would make a save to escape aggravation, they have disadvantage.
+
 ### Agile
 
 _Passive ability. Martial talent._
@@ -238,6 +247,62 @@ You may choose to move 50 more feet this round, spread out however you wish betw
 **Destiny Level:**
 So long as you end your movement on the ground, you can run on walls and ceilings while using this talent. Additionally, you don't provoke opportunity attacks from creatures you pass, so long as you do not pause or interact with the creature while within its melee range.
 
+# Combat Talents Directory
+
+This directory contains combat-focused talents for Heart Rush characters. These are martial and tactical abilities that enhance character performance in combat encounters.
+
+### File Organization
+
+Each file represents a single combat talent following the standard talent format documented in `heart_rush/CLAUDE.md`.
+
+### Combat Talent Patterns
+
+### Ability Type Designation
+
+Combat talents use these designations:
+
+- **Passive ability** - Always active combat enhancement (e.g., bonus to attack rolls, damage reduction, improved stance effectiveness)
+- **Major ability** - Significant action required to activate, high power level (e.g., special attack maneuvers, defensive reactions)
+- **Minor ability** - Limited usage or Rush Point cost (e.g., quick tactical adjustments, temporary bonuses)
+
+### Stance Integration
+
+Many combat talents interact with the four stances:
+
+- **Might Stance** - Offensive power and damage
+- **Agility Stance** - Speed, mobility, and dodging
+- **Cunning Stance** - Tactical advantage and positioning
+- **Defensive Stance** - Protection and mitigation
+
+Reference stance mechanics when talents modify or enhance stance effectiveness.
+
+### Destiny Level Mechanics
+
+Combat talents with Destiny Level upgrades typically:
+
+- Increase damage output or effectiveness
+- Expand usage range or frequency
+- Add secondary effects or tactical options
+- Reduce costs or activation requirements
+
+Include both base and Destiny Level versions in the talent file.
+
+### Common Combat Mechanics
+
+When describing combat talents, use these consistent terms:
+
+- **Heart Die shrink** - Reducing Heart Die size to mitigate damage
+- **Rush Points** - Resource for ability activation
+- **Challenge Number (CN)** - Target difficulty for opposed rolls
+- **Simultaneous action** - Heart Rush uses simultaneous combat, not turn order
+- **Engagement** - Active combat participation
+
+### Compilation Notes
+
+All combat talent files in this directory are automatically combined by the build system into the compiled `Talents.md` file. File names are converted to standardized slugs for web navigation.
+
+Maintain consistent file naming (use underscores for spaces, proper capitalization) to ensure predictable slug generation.
+
 ### Careful Shot
 
 _Passive ability. Martial talent._
@@ -246,6 +311,15 @@ If you didn't move in the previous round and have not moved yet during this roun
 
 **Destiny Level:**
 You may instead apply two levels of each condition.
+
+### Chain Warden
+
+_Passive ability. Martial talent._
+
+When you hit a creature with a melee weapon that has the reach tag, you may pull that creature up to 10 feet closer to you. If they end their movement adjacent to you, you may immediately attempt to grapple them as a free action.
+
+**Destiny Level:**
+You may pull creatures up to 15 feet closer instead. You have A2 on grapple checks made with this ability. Alternatively, when you hit a creature with a reach weapon, you may tether yourself to that creature until the end of the round. While tethered, the creature gains the slowed condition and you are dragged behind the creature, maintaining a distance no greater than your current distance from them.
 
 ### Charge
 
@@ -526,7 +600,7 @@ Treat them as 12s instead.
 
 _Passive ability. Martial talent._
 
-Whenever you enter an engagement with one or more enemies that are adjacent to a wall or another piece of impassable terrain, you may choose one of those creatures. That creature cannot take the sidestep action until the end of the next round, and if that creature attacks anyone besides you in that engagement, you may make an opportunity attack against it.
+Whenever you enter an engagement with one or more enemies that are adjacent to a wall or another piece of impassable terrain (other than your own shield), you may choose one of those creatures. That creature cannot take the sidestep action until the end of the next round, and if that creature attacks anyone besides you in that engagement, you may make an opportunity attack against it.
 
 **Destiny Level:**
 The opportunity attack does not cost an action.
@@ -548,6 +622,24 @@ You count as one size larger than you are. If you are now size large or larger, 
 
 **Destiny Level:**
 Increasing your maximum hit points costs 2 less XP. When you take this destiny level, you gain 2 XP for each time you have increased your hit point maximum with XP.
+
+### Imperial Defenses
+
+_Passive ability. Martial talent._
+
+Whenever a creature makes an attack roll against you and fails to wound you, it gains one level of aggravated towards you. Additionally, you have advantage on defense rolls against creatures that are aggravated towards you.
+
+**Destiny Level:**
+If a creature's attack deals no damage to you, they gain five levels of aggravated towards you instead of one. You gain A2 on defense rolls against creatures that are aggravated towards you instead of advantage.
+
+### Infuriating
+
+_Passive ability. Martial talent._
+
+When you are in an engagement with a creature that you have aggravated, it must make its attack against you if its able.
+
+**Destiny Level:**
+Creatures with 3+ levels of aggravation towards you can only attack you in engagements that you are part of (or make no attack at all).
 
 ### Inspiring
 
@@ -625,6 +717,15 @@ While not wearing any armor or shield, you get +2 on all defense rolls.
 
 **Destiny Level:**
 You get +4 instead.
+
+### Lockdown
+
+_Passive ability. Martial talent._
+
+When you hit a creature with an opportunity attack, that creature's movement speed becomes 0 until the end of the round, and it gains one level of aggravated towards you.
+
+**Destiny Level:**
+Creatures also cannot take the sidestep action until the end of the next round. The creature gains two levels of aggravated instead of one.
 
 ### Master Grappler
 
@@ -724,6 +825,15 @@ As an action, you may snap your fingers to teleport to a creature you have dealt
 
 **Destiny Level:**
 So long as you have dealt damage to them in the last 24 hours, you may use this ability.
+
+### Provoking Strike
+
+_Passive ability. Martial talent._
+
+You may declare your stance as you enter an engagement. If you do, and you deal damage to an enemy during that engagement, that enemy gains three levels of aggravated towards you.
+
+**Destiny Level:**
+The enemy gains five levels of aggravated instead of three.
 
 ### Push Off
 
@@ -873,10 +983,19 @@ Ignore the creature's entire defense roll instead.
 
 _Passive ability. Martial talent._
 
-Whenever you make an attack roll with the cunning stance against someone who chose the agility stance, you may choose to give them two fewer conditions and instead give them a level of aggravated towards you.
+Whenever you make an attack roll with the cunning stance against someone who chose the agility stance, you may choose to give them two fewer conditions and instead give them two levels of aggravated towards you.
 
 **Destiny Level:**
-You may choose to also forgo making an attack roll to instead give them three levels of aggravated.
+You may choose to also forgo making an attack roll to instead give them five levels of aggravated.
+
+### Threatening Presence
+
+_Passive ability. Martial talent._
+
+Whenever a creature ends its turn adjacent to you without having entered an engagement with you or joined an engagement you were part of, it gains a level of aggravation towards you.
+
+**Destiny Level:**
+Creatures aggravated at you cannot initiate engagements with creatures other than you so long as they are adjacent to you.
 
 ### Thrower
 
@@ -1005,15 +1124,6 @@ So long as you can see the stars, you may ignore the navigation challenge number
 **Destiny Level:**  
 You have advantage on navigation checks. You can identify your location from a successful navigation check.
 
-### Attraction
-
-_Major ability. Cognitive talent. Elemental attunement: Force._
-
-Choose any two inanimate objects. Those objects attract each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
-
-**Destiny Level:**  
-You may choose up to five objects, and the attractive force begins at 100 feet away. If you use this ability on the same objects every day for a month, the effect becomes permanent.
-
 ### Batch Producer
 _Passive ability. Cognitive talent._
 
@@ -1041,6 +1151,56 @@ As an action, you may point at a sentient creature. That creature forms no new m
 
 **Destiny Level:**  
 The target does not realize that you performed mind-altering magic on it.
+
+# Non-Combat Talents
+
+This directory contains non-combat talent definitions for the Heart Rush TTRPG. These are character abilities used outside of direct combat scenarios.
+
+### File Structure
+
+Each talent is a separate markdown file named `TalentName.md` (using underscores for spaces in filenames).
+
+### Talent Format
+
+Non-combat talents follow this consistent structure:
+
+```markdown
+### Talent Name
+
+_[Tier]. [Action Type]. [Trait Tags]._
+
+[Main ability description with mechanical details, ranges, durations, and constraints.]
+
+**Destiny Level:**
+[Upgraded version of the ability at higher character levels.]
+```
+
+### Key Components
+
+- **Header**: `## Talent Name` (h2)
+- **Metadata Line**: Italic line with: Tier (Major/Minor ability), Action Type (Full action, Free action, etc.), and Trait Tags (Handmagic, Shaman, etc.)
+- **Description**: Mechanical rules written in clear prose
+- **Destiny Level**: Optional upgraded version available at higher character progression
+
+### Guidelines
+
+- Keep descriptions concise but complete with all mechanical information
+- Include ranges, durations, and action economy clearly
+- Specify any constraints (e.g., "cannot animate more than one object")
+- Destiny Level upgrades should be meaningful mechanical improvements
+- Use markdown emphasis (_italics_ and **bold**) sparingly for key information
+
+### Processing
+
+These files are compiled by `scripts/compile-content.ts` which:
+- Combines all talent files into a single `Talents.md` in `heart_rush/all_sections_formatted/`
+- Generates JSON content for the web application
+- Creates searchable sections with cross-references
+
+### Related Directories
+
+- `../combat_talents/` - Combat-focused abilities
+- `../` - Parent talents directory with organization by type
 
 ### Call of Delorn
 _Monthly ability. Gaeic melody._
@@ -1263,15 +1423,6 @@ By molding and sculpting the air, you can create and shape intricate, small obje
 **Destiny Level:**  
 The size limit on the object increases to a 5-foot cube.
 
-### Gravity
-
-_Major ability. Full action. Cognitive talent. Elemental attunement: Force._
-
-You may use your action to change the direction of gravity for yourself. You may dispel this effect at any time.
-
-**Destiny Level:**  
-You may change the direction of gravity for up to six willing creatures.
-
 ### Grip of the Kraken
 
 _Major ability. Handmagic._
@@ -1350,14 +1501,6 @@ You have advantage when trying to persuade your followers to take an action that
 Your rhetoric is so strong, you can convert 1/4th of a crowd to followers, rather than 1/10th.  
 When you take this destiny level, you may also choose and describe how you gain one devotee to your ideology. You may take this destiny level multiple times.
 
-### Impenetrable Fog
-_Passive ability. Cognitive Talent. Elemental attunement: Water & Air._  
-
-Add fog to your resonate substances as a gaseous attunement. Your attunement to fog is equal to the lower of levels between your attunements to water and air. Fog cannot be seen through.
-
-**Destiny Level:**  
-The fog you create is incredibly thick, and hangs heavy in the air. It takes 1 hour to dissipate instead of 1 minute, and mutes the sounds within it, granting A3 on all stealth checks to remain quiet while navigating within the fog.
-
 ### Inanimate Object
 _Major ability. Full action. Handmagic._
 
@@ -1384,14 +1527,6 @@ When you make a perception check, you may declare one thing that is unusual but 
 
 **Destiny Level:**  
 You may add one detail to whatever thing you notice.
-
-### Let it Go
-_Major ability. Cognitive talent. Elemental attunement: Void._
-
-As an action, you may touch an inanimate object that could fit inside a 30-foot cube. The object permanently disappears. There must be no sentient creatures contained inside the object.
-
-**Destiny Level:**  
-The object must fit inside a 100-foot cube instead.
 
 ### Lucky
 _Passive ability. Handmagic._  
@@ -1443,25 +1578,6 @@ Fortune favors the bold in business. When making any roll related to trading, bu
 
 **Destiny Level:**
 This ability becomes a passive ability instead. Additionally, when you roll the maximum value on any die during a trade-related roll, you may roll that die again and add the result.
-
-### Metallurgy
-_Passive ability. Cognitive talent. Elemental attunement: Earth._  
-
-Add iron and steel to your resonate substances as a basic solid attunement.  
-Whenever you are hit with a melee weapon made of iron or steel, you may catch the blade in your hand, warping and bending it in your grip. Do not roll a defense roll—you take the full damage—but the weapon is rendered useless, and cannot be used again.
-
-**Destiny Level:**  
-If you have a paragon attunement to earth, you gain an advanced attunement to iron and steel.
-
-### Misty Illusions
-_Passive ability. Cognitive Talent. Elemental attunement: Water & Air._  
-
-You can manipulate the water in the air to create realistic illusions. Add mist to your resonate substances as a liquid attunement.  
-As an action, you may make an illusion of a single object within the range of your mist manipulation. The illusion cannot be seen through, and creatures will not realize that it is an illusion until they have interacted with it in some way, at which point the illusion fades from their sight. Illusions can be hidden behind if the illusion is of another object, though they appear as three-dimensional objects, so they cannot be illusions of darkness, empty space, or your immediate surroundings.  
-If a creature has reason to suspect it is an illusion, such as if something suddenly appears or disappears, they may make a cunning check contested by your cunning challenge number. On a success, they see through the illusion.
-
-**Destiny Level:**  
-By agitating the molecules in the air, you can also cause the illusion to emit realistic sounds of your choice. You may manipulate the image and sounds as an object interaction.
 
 ### Nature's Child
 _Passive ability. Handmagic._  
@@ -1521,15 +1637,6 @@ As an action, you may place your hand on a non-living object that fits in a spac
 
 **Destiny Level:**  
 The transformation lasts indefinitely, though you may not use this ability on more than three different objects at once. The upper limit of the size increases to a 25-foot cube.
-
-### Rejection
-
-_Major ability. Cognitive talent. Elemental attunement: Force._
-
-Choose any two objects. Those objects repulse each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
-
-**Destiny Level:**  
-You may choose up to 5 objects, and the repulsive force begins at 100 feet away.
 
 ### Rope Servant
 _Passive ability. Handmagic._  
@@ -1684,6 +1791,157 @@ Rather than claim a connection to someone you meet, you may use this ability bef
 The talents in this section are elemental talents. Each talent will have one or more elemental tags, indicating the element it is associated with, and the attunement(s) required to pick up the talent.
 
 These talents also may include the tag "ongoing", indicating that the effect lasts for 1 minute. Players may choose to end the effect early as a free ability during the action phase.
+
+### Attraction
+
+_Major ability. Cognitive talent. Elemental attunement: Force._
+
+Choose any two inanimate objects. Those objects attract each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
+
+**Destiny Level:**  
+You may choose up to five objects, and the attractive force begins at 100 feet away. If you use this ability on the same objects every day for a month, the effect becomes permanent.
+
+# CLAUDE.md - Spells Directory
+
+This directory contains spell talent files for the Heart Rush TTRPG. Spells are a specialized type of talent that require elemental attunement and follow specific formatting conventions.
+
+### Spell File Format
+
+Each spell file should follow this structure:
+
+```markdown
+### Spell Name
+
+_[Ability Type] ability. [Martial|Cognitive] talent. [Element] attunement._
+
+[Flavor text and mechanical description]
+
+**Destiny Level:**
+[Enhanced version mechanics and effects]
+```
+
+### Required Metadata
+
+Every spell file must include:
+
+1. **Header (H2):** Spell name matching the filename
+2. **Ability Type:** Passive, Major, or Minor
+3. **Talent Category:** Always "Cognitive talent" for spells (not Martial)
+4. **Elemental Attunement:** One of nine elements
+   - Fire, Water, Air, Earth, Light, Dark, Force, Void, Time
+5. **Destiny Level:** Enhanced mechanics for upgraded versions
+
+### Elemental Attunement System
+
+Spells are tied to one of nine elemental systems in Heart Rush. When creating or modifying spells:
+
+- **Fire:** Offensive, damage-focused magic
+- **Water:** Healing, fluid, adaptive magic
+- **Air:** Speed, evasion, movement-focused
+- **Earth:** Defense, stability, grounding effects
+- **Light:** Healing, protection, revelation
+- **Dark:** Stealth, shadow, deception
+- **Force:** Movement, positioning, impact
+- **Void:** Negation, null-space, disruption
+- **Time:** Duration, preparation, temporal effects
+
+### Compilation Behavior
+
+Spell files from this directory are combined with other talent files into a single `Talents.md` file during compilation. The compilation script:
+
+1. Combines all files from `talents/combat_talents/`, `talents/noncombat_talents/`, and `talents/spells/`
+2. Preserves the markdown structure and hierarchy
+3. Generates slugs based on spell names
+4. Extracts metadata (ability type, attunement) for indexing
+
+All spell files are automatically included in the compiled output—no manual configuration needed.
+
+### Writing Guidelines
+
+### Mechanics Description
+
+- Be clear about what the spell does mechanically
+- Include Challenge Numbers if the spell requires a roll
+- Specify any resource costs (Rush Points, Heart Die shrinkage, etc.)
+- Describe range, area of effect, and duration
+- Explain interaction with other game mechanics (stances, damage types, etc.)
+
+### Destiny Level Enhancements
+
+The enhanced version should:
+- Increase potency or scope of the base spell
+- Add new mechanical options or flexibility
+- Enhance range, duration, or area of effect
+- Preserve the core theme while expanding capability
+
+### Consistency Notes
+
+- Match formatting with existing spell files in this directory
+- Use the same ability type designations (Passive, Major, Minor)
+- Maintain consistent language for similar mechanical concepts
+- Cross-reference other talents/spells when relevant using markdown links
+
+### Testing Content
+
+After creating or modifying spells:
+
+1. From parent project: `pnpm run compile-content` to verify compilation
+2. Check that spell appears in generated content with correct metadata
+3. Verify elemental attunement is properly captured
+4. Ensure markdown formatting doesn't break compilation
+
+### Gravity
+
+_Major ability. Full action. Cognitive talent. Elemental attunement: Force._
+
+You may use your action to change the direction of gravity for yourself. You may dispel this effect at any time.
+
+**Destiny Level:**  
+You may change the direction of gravity for up to six willing creatures.
+
+### Impenetrable Fog
+_Passive ability. Cognitive Talent. Elemental attunement: Water & Air._  
+
+Add fog to your resonate substances as a gaseous attunement. Your attunement to fog is equal to the lower of levels between your attunements to water and air. Fog cannot be seen through.
+
+**Destiny Level:**  
+The fog you create is incredibly thick, and hangs heavy in the air. It takes 1 hour to dissipate instead of 1 minute, and mutes the sounds within it, granting A3 on all stealth checks to remain quiet while navigating within the fog.
+
+### Let it Go
+_Major ability. Cognitive talent. Elemental attunement: Void._
+
+As an action, you may touch an inanimate object that could fit inside a 30-foot cube. The object permanently disappears. There must be no sentient creatures contained inside the object.
+
+**Destiny Level:**  
+The object must fit inside a 100-foot cube instead.
+
+### Metallurgy
+_Passive ability. Cognitive talent. Elemental attunement: Earth._  
+
+Add iron and steel to your resonate substances as a basic solid attunement.  
+Whenever you are hit with a melee weapon made of iron or steel, you may catch the blade in your hand, warping and bending it in your grip. Do not roll a defense roll—you take the full damage—but the weapon is rendered useless, and cannot be used again.
+
+**Destiny Level:**  
+If you have a paragon attunement to earth, you gain an advanced attunement to iron and steel.
+
+### Misty Illusions
+_Passive ability. Cognitive Talent. Elemental attunement: Water & Air._  
+
+You can manipulate the water in the air to create realistic illusions. Add mist to your resonate substances as a liquid attunement.  
+As an action, you may make an illusion of a single object within the range of your mist manipulation. The illusion cannot be seen through, and creatures will not realize that it is an illusion until they have interacted with it in some way, at which point the illusion fades from their sight. Illusions can be hidden behind if the illusion is of another object, though they appear as three-dimensional objects, so they cannot be illusions of darkness, empty space, or your immediate surroundings.  
+If a creature has reason to suspect it is an illusion, such as if something suddenly appears or disappears, they may make a cunning check contested by your cunning challenge number. On a success, they see through the illusion.
+
+**Destiny Level:**  
+By agitating the molecules in the air, you can also cause the illusion to emit realistic sounds of your choice. You may manipulate the image and sounds as an object interaction.
+
+### Rejection
+
+_Major ability. Cognitive talent. Elemental attunement: Force._
+
+Choose any two objects. Those objects repulse each other with 50 pounds of force if they are within 10 feet of each other. The effect lasts until you choose two new objects.
+
+**Destiny Level:**  
+You may choose up to 5 objects, and the repulsive force begins at 100 feet away.
 
 ### Aura of Ignition
 

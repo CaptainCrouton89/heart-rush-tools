@@ -1,0 +1,17 @@
+{
+  "name": "Heart Rush TTRPG Reference",
+  "short_name": "Heart Rush",
+  "description": "Complete reference guide for the Heart Rush tabletop RPG system",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/heart.png",
+      "sizes": "450x450",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
