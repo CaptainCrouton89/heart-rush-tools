@@ -176,7 +176,9 @@ You read the battlefield like a book, striking where enemies leave themselves vu
 
 **Valid Targets**: Agility, defensive, or cunning stance opponents
 
-**Special vs Agility**: Apply up to two levels of dazed, off-balanced, or weakened when attacking agility stance. You've completely decoded their movements, leaving them reeling from perfectly-placed strikes.
+**Damage Type Bonus**: If wielding a Piercing weapon, add an additional weapon die to all your Cunning stance attacks (always applies, regardless of opponent's stance).
+
+**Attack Type Bonus**: When attacking Agility stance opponents (Cunning beats Agility), apply up to two levels of dazed, off-balanced, or weakened. You've completely decoded their movements, leaving them reeling from perfectly-placed strikes.
 
 #### Agility Stance
 
@@ -184,7 +186,9 @@ You flow through combat like water, dancing between heavy blows to strike expose
 
 **Valid Targets**: Might, defensive, or agility stance opponents
 
-**Free Movement**: Take a free sidestep (5 feet, no opportunity attacks) immediately before or after your attack. When multiple combatants claim this movement and timing matters, use action phase ordering.
+**Damage Type Bonus**: If wielding a Slashing weapon, add an additional weapon die to all your Agility stance attacks (always applies, regardless of opponent's stance).
+
+**Attack Type Bonus**: When attacking Might stance opponents (Agility beats Might), take a free sidestep (5 feet, no opportunity attacks) immediately before or after your attack. When multiple combatants claim this movement and timing matters, use action phase ordering.
 
 #### Might Stance
 
@@ -192,7 +196,9 @@ You bring crushing force that smashes through clever defenses. Your attacks reso
 
 **Valid Targets**: Cunning, defensive, or might stance opponents
 
-**Weapon Bonus**: Trigger your weapon's might stance bonus when attacking cunning stance opponents. Raw power crushes careful planning.
+**Damage Type Bonus**: If wielding a Bludgeoning weapon, add an additional weapon die to all your Might stance attacks (always applies, regardless of opponent's stance).
+
+**Attack Type Bonus**: When attacking Cunning stance opponents (Might beats Cunning), trigger your weapon's attack type bonus—melee weapons push targets, ranged weapons ignore armor, thrown weapons enable follow-up attacks, and whips add another weapon die. Raw power crushes careful planning.
 
 #### Defensive Stance
 
@@ -226,19 +232,64 @@ When attacking someone in your own stance, make **contested attack rolls**—bot
 
 When you attack during engagement:
 
-**Your Attack Roll:**
+**Attack Roll Formula:**
+```
+Heart die + Ability die + Weapon die + Damage Type Bonus (if applicable)
+```
 
-- **Heart die** - Your current stamina and fighting spirit
-- **Ability die** - For your chosen stance (might/agility/cunning)
-- **Weapon die** - Your weapon's damage potential
+**Defense Roll Formula:**
+```
+Heart die + Ability die + Armor bonus
+```
 
-**Defender's Roll:**
+**Damage Calculation:**
+```
+Damage dealt = Attack roll - Defense roll (minimum 0)
+```
 
-- **Heart die** - Their endurance
-- **Ability die** - Matching your attack stance
-- **Armor bonus** - If applicable
+Where:
+- **Heart die** - Your current stamina and fighting spirit (theirs for defense)
+- **Ability die** - For your chosen stance: might/agility/cunning (matching for defense)
+- **Weapon die** - Your weapon's damage potential (heavy = d12, light = d8, ultralight = d4)
+- **Damage Type Bonus** - Additional weapon die if stance matches damage type (see below)
+- **Armor bonus** - Defender's armor protection (if applicable)
 
-**Damage dealt = Attack roll - Defense roll** (minimum 0)
+### Understanding Weapon Bonuses
+
+Your weapon grants bonuses in two distinct ways—it's crucial to understand the difference:
+
+#### Damage Type Bonuses (Always Apply)
+
+These are **unconditional rewards** for using the optimal stance for your weapon's material. When you use the matching stance, you **always** add an additional weapon die to your attack roll, regardless of your opponent's stance choice.
+
+- **Bludgeoning + Might stance** → Add another weapon die to every attack
+- **Slashing + Agility stance** → Add another weapon die to every attack
+- **Piercing + Cunning stance** → Add another weapon die to every attack
+
+**Example:** A warrior wielding a heavy bludgeoning maul (1d12) uses Might stance. Whether attacking a Cunning, Defensive, or even another Might opponent, they roll **2d12** (base weapon die + damage type bonus). This reward encourages using the "right" stance for your weapon.
+
+#### Attack Type Bonuses (Only When Beating Opponent's Stance)
+
+These are **tactical rewards** for winning the stance matchup. Each weapon type grants a special effect, but only when your stance beats your opponent's choice:
+
+- **Melee weapons + Might beats Cunning** → Push target 10 feet + free movement
+- **Ranged weapons + Might beats Cunning** → Target cannot add armor bonus to defense
+- **Thrown weapons + Might beats Cunning** → Make follow-up attack against different target
+- **Whip weapons + Might beats Cunning** → Add another weapon die to attack roll
+
+Similarly:
+- **Agility beats Might** → Free 5-foot sidestep (all weapon types)
+- **Cunning beats Agility** → Apply conditions (slowed, weakened, dazed, etc.)
+
+**Example:** That same warrior with the maul uses Might stance. Against a Cunning opponent (Might beats Cunning), they deal **2d12 damage** (from damage type bonus) **and** push the target 10 feet back (from attack type bonus). Against a Defensive opponent, they still deal **2d12 damage** but don't get the push effect because they didn't beat a stance.
+
+#### Stacking Example
+
+A warrior wielding a **heavy bludgeoning whip** (rare but devastating) uses Might stance:
+
+- **vs Cunning opponent:** Base (1d12) + Damage type bonus (1d12) + Whip attack type bonus (1d12) = **3d12 total!**
+- **vs Defensive opponent:** Base (1d12) + Damage type bonus (1d12) = **2d12 total**
+- **vs Might opponent:** Contested roll using **2d12** (damage type bonus still applies to contested rolls)
 
 [[Example
 _Round begins. You activate your major ability Blade Dance, boosting all agility attacks for the next minute. You dash toward the undead orc (without using your action—the first dash is free)._

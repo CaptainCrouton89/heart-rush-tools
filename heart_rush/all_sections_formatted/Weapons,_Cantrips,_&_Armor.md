@@ -35,13 +35,75 @@ You can only wield one weapon at a time. If wielding a weapon does not require b
 
 ### Damage Types & Stance Bonuses
 
-| Damage Type     | Best Stance | Stance Bonus                                        | Examples                |
+**Damage type bonuses reward using the optimal stance for your weapon's material.** These bonuses apply to **every attack** when using the matching stance, regardless of your opponent's stance choice. This encourages matching your fighting style to your weapon.
+
+| Damage Type     | Best Stance | Always-On Stance Bonus                              | Examples                |
 | --------------- | ----------- | --------------------------------------------------- | ----------------------- |
 | **Bludgeoning** | Might       | Add additional weapon die when using might stance   | War hammers, clubs      |
 | **Slashing**    | Agility     | Add additional weapon die when using agility stance | Swords, scythes         |
 | **Piercing**    | Cunning     | Add additional weapon die when using cunning stance | Rapiers, arrows, spears |
 
-Understanding your weapon's damage type helps you choose the most effective stance in combat.
+**Important:** These damage type bonuses are **separate from and stack with** Attack Type bonuses (listed in the table above), which only trigger when you beat your opponent's stance. A bludgeoning maul wielder in Might stance always gets the extra weapon die (damage type bonus), and additionally gets the push effect when attacking Cunning opponents (attack type bonus).
+
+### How Weapon Bonuses Stack
+
+Understanding how damage type and attack type bonuses combine is crucial for maximizing your combat effectiveness. Here are concrete examples:
+
+#### Example 1: Heavy Bludgeoning Maul (Melee) in Might Stance
+
+A classic warrior's weapon that rewards aggressive play.
+
+- **vs Cunning opponent:** Heart + Might + 1d12 (base) + 1d12 (damage type) + push 10ft (attack type) = **2d12 + push effect**
+- **vs Defensive opponent:** Heart + Might + 1d12 (base) + 1d12 (damage type) = **2d12 damage only**
+- **vs Might opponent:** Contested roll using Heart + Might + 2d12 (damage type bonus applies to contested rolls)
+
+The maul user always benefits from the damage type bonus when using Might stance, making it a powerful choice even against defensive enemies.
+
+#### Example 2: Heavy Bludgeoning Whip in Might Stance
+
+An exotic weapon that stacks both bonuses as additional dice.
+
+- **vs Cunning opponent:** Heart + Might + 1d12 (base) + 1d12 (damage type) + 1d12 (whip attack type) = **3d12 total damage!**
+- **vs Defensive opponent:** Heart + Might + 1d12 (base) + 1d12 (damage type) = **2d12 damage**
+- **vs Might opponent:** Contested roll using Heart + Might + 2d12
+
+The whip is unique because its attack type bonus is also an additional die, allowing for devastating burst damage when everything aligns.
+
+#### Example 3: Light Piercing Rapier (Melee) in Might Stance
+
+Using a weapon with the "wrong" stance reduces your damage potential.
+
+- **vs Cunning opponent:** Heart + Might + 1d8 (base) + push 10ft (attack type) = **1d8 + push**
+- **vs Defensive opponent:** Heart + Might + 1d8 (base) = **1d8 damage only**
+
+No damage type bonus because Piercing weapons need Cunning stance, not Might. However, you still get the melee attack type bonus when beating Cunning opponents.
+
+#### Example 4: Light Slashing Sword (Melee) in Agility Stance
+
+A finesse weapon used with its optimal stance.
+
+- **vs Might opponent:** Heart + Agility + 1d8 (base) + 1d8 (damage type) + free 5ft sidestep (attack type) = **2d8 + mobility**
+- **vs Defensive opponent:** Heart + Agility + 1d8 (base) + 1d8 (damage type) = **2d8 damage**
+- **vs Agility opponent:** Contested roll using Heart + Agility + 2d8
+
+The slashing sword excels with Agility stance, offering both increased damage and tactical repositioning.
+
+#### Example 5: Heavy Piercing Longbow (Ranged) in Cunning Stance
+
+Ranged weapons have different attack type bonuses.
+
+- **vs Agility opponent:** Heart + Cunning + 1d12 (base) + 1d12 (damage type) + apply 2 conditions (attack type) = **2d12 + conditions**
+- **vs Defensive opponent:** Heart + Cunning + 1d12 (base) + 1d12 (damage type) = **2d12 damage**
+
+The longbow benefits from Piercing + Cunning for maximum damage, and when beating Agility opponents, the archer can apply debilitating conditions instead of dealing extra damage.
+
+#### Key Takeaways
+
+1. **Always match your stance to your damage type** when possible—it's free extra damage on every attack
+2. **Attack type bonuses are "win conditions"**—they reward you for making the right stance prediction
+3. **Damage type bonuses apply even in contested rolls** when both fighters choose the same stance
+4. **Whips are uniquely powerful** in the right circumstances because both bonuses add dice
+5. **Defensive stance opponents** still take damage type bonus damage, making them less safe against matched weapons
 
 ### Special Weapons
 
