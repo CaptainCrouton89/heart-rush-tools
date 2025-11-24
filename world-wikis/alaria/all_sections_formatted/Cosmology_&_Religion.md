@@ -19,7 +19,6 @@ In the very middle is the Material Plane—a world of kingdoms and conquest and 
 
 Celesté was created when the Alarian Planar Stack fragmented and Ezz poured in from beyond. The material plane peeled apart and a new plane of conceptual existence was born. Emotion, free will, and thought poured into Alaria. Celesté is made of the coalescense  of thought/emotion/etc on the material plane. Where there is thought, there is a counterpart to the material planes.
 
-<hr/>
 ### Astral Plane
 
 "Above" the Material Plane is the Astral Plane. Although technically connected to the Material Plane, it is quite distant from it, and the laws of physics and nature are different. The Astral Plane is home to ghosts, and consists of small desert islands scattered throughout a vast ocean under a bright white sun. The spirit cannot naturally survive here, but creatures exist here—just with weaker free will. They are agents of Aurus, living pawns of his will.
@@ -28,7 +27,6 @@ Celesté was created when the Alarian Planar Stack fragmented and Ezz poured in 
 
 On the flip side of the Astral Plane is Astraeva. Astraeva mirrors the Astral Plane but is devoid of souls. Aurus has no power here—spirits are weaker here—it is nearly barren except for a few notable points of interest. Psyic energy still exists here, but it is weak.
 
-<hr/>
 ### Malstaris
 
 "Below" the Material Plane is Malstaris—an intensely dark, mountainous, ashen land filled with caves and covered with black lakes. Like the Astral Plane, it is physically connected to the Material Plane, but has different laws of nature, and is fundamentally inhospitable to creatures that live on the Material Plane. The spirit cannot naturally survive here, but creatures exist here—just with weaker free will. They are agents of Nydus, living pawns of his will.
@@ -37,7 +35,6 @@ On the flip side of the Astral Plane is Astraeva. Astraeva mirrors the Astral Pl
 
 On its flip side of Malstaris is Eindumor. Eindumor mirrors Malstaris but is devoid of shadows. Nydus has no power here—spirits are weaker here—it is nearly barren except for a few notable points of interest. Psyic energy still exists here, but it is weak.
 
-<hr/>
 ### Elemental Planes
 
 In addition to these planes, there are nine planes of the primary elements, known as the elemental planes, each thinly overlayed on the top sides of the three main layers. 
@@ -46,7 +43,6 @@ In addition to these planes, there are nine planes of the primary elements, know
 
 Lastly, there are two very faint planes that overlay all of the rest of the planes—the Ethereal and Nethereal Planes. Physical objects do not exist in these planes, but elements of ones spirit, among other types of energy, can be found on these planes. 
 
-<hr/>
 ### Planar Travel
 
 Many of the planes are physically connected to one another, although their connections do not always obey Euclidean laws of geometry. 
