@@ -675,7 +675,7 @@ You excel at disrupting enemies through clever positioning and dirty tactics.
   - The creature takes 1d6 damage and 2 levels of blinded.
   - The creature is knocked prone so long as it is not more than two sizes larger than you.
   - Push the creature 10 feet. It travels 5 less feet for every size larger than you that it is, and 5 more feet for every size smaller.
-  - If the creature can see or hear you, it gains one level of enraged towards you.
+  - If the creature can see or hear you, it gains one level of aggravated towards you.
   - If the creature is no more than one size bigger or smaller than you, switch places with it.
 
 ### Signature Abilities
@@ -805,7 +805,7 @@ You provide tactical aid to a teammate.
 - Choose any combination of up to four creatures and combat talents you know.
 - The chosen creatures must be within 120 feet and in earshot.
 - Until the end of this round, the chosen creatures gain the benefits of the basic level of the chosen talents.
-- If a heart ability or major ability is granted, that ability cannot be used again by you or them until the next day.
+- If a minor ability or major ability is granted, that ability cannot be used again by you or them until the next day.
 
 #### Call to Action
 
@@ -828,7 +828,7 @@ Choose one:
 - Scamper: Increase your climb speed by 20 feet this round.
 - Shenanigans: The next time you perform a stunt, you have +3 on the contested ability check.
 - Switcheroo: The next time you sidestep, you may sidestep into an adjacent and willing creature's space. Switch places with that creature. The creature must be no more than one size bigger or smaller than you.
-- Taunt: After stances are chosen but before stances are revealed, you may choose a creature and call out their stance. After stances are revealed, if you guessed correctly, that creature gains a level of enraged towards you.
+- Taunt: After stances are chosen but before stances are revealed, you may choose a creature and call out their stance. After stances are revealed, if you guessed correctly, that creature gains a level of aggravated towards you.
 - Quick Reflexes: Other creatures cannot interupt actions and abilities you take this round. Treat your agility die as a d20 for the purposes of determining order of activities in the action phase.
 
 #### Elusive
@@ -1097,7 +1097,7 @@ When you deal damage with a heavy, ranged, piercing weapon, draw a line from any
 
 _Passive ability. Talent: Cast Thoughts._
 
-When you take the hinder action, you may instead apply three levels of frightened, enraged, or confused. This ability can only be used on each creature once per day.
+When you take the hinder action, you may instead apply three levels of frightened, aggravated, or confused. This ability can only be used on each creature once per day.
 
 #### Relentless
 

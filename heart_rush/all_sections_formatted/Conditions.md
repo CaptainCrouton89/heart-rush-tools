@@ -108,6 +108,16 @@ These conditions are likely to arise from magical effects.
 
 _Note: These mental conditions are pretty powerful, and generally shouldn't be thrown around unless it's supposed to be a very powerful effect, or if the effect is from a magical source._
 
+### Aggravated
+
+_Leveled. Ongoing._
+
+You are overcome with anger at another creature. You have disadvantage on A/D and ability rolls against any other creature besides the source of your aggravation.
+
+As an action, you may make a cunning saving throw contested by the source's presence challenge number to immediately remove all levels of aggravated. 
+
+If another creature causes you to become aggravated towards them, those levels replace the aggravation towards the previous target.
+
 ### Confused
 
 _Leveled. Ongoing._
@@ -124,23 +134,13 @@ You are terrified of something. You have disadvantage on A/D and ability rolls s
 
 As an action, you may make a cunning saving throw contested by the source's presence challenge number to immediately remove all levels of frightened.
 
-### Enraged
-
-_Leveled. Ongoing._
-
-You are overcome with rage at another creature. You have disadvantage on A/D and ability rolls against any other creature besides the source of your rage.
-
-You may remove all levels of enraged if you make an attack roll against the source of your aggravation, or if another creature causes you to gain a level of enraged.
-
-Additionally, as an action, you may make a cunning saving throw contested by the source's presence challenge number to immediately remove all levels of enraged.
-
 ### Charmed
 
 _Leveled. Ongoing._
 
 For each level of charm, you move up one level on the enemy to friend track. If you are violent, you become hostile. If you are hostile, you become neutral. If you are neutral, you become friendly. If you are friendly, you become allied.
 
-The source of the charm has advantage on all presence checks made against you. If the charmer takes any hostile action against you, the charm effect ends immediately.
+The source of the charm has advantage on all presence checks made against you for each level of charmed. If the charmer takes any hostile action against you, the charm effect ends immediately.
 
 ## Status Conditions
 

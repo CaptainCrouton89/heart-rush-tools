@@ -90,7 +90,7 @@ _Minor ability. Instant. Martial talent._
 If a creature makes an attack against you and deals no damage to you, they instead deal damage equal to their roll to another creature behind you as you redirect their attack. A creature is considered behind you if at least one straight line can be drawn from a corner of the attacker's space, through your space, and to a corner of the new victim's space.
 
 **Destiny Level:**
-When you use this ability, both creatures gain 2 levels of enraged towards you.
+When you use this ability, both creatures gain 2 levels of aggravated towards you.
 
 ### Ballad of Björn
 
@@ -553,7 +553,7 @@ Increasing your maximum hit points costs 2 less XP. When you take this destiny l
 
 _Passive ability. Cognitive talent._
 
-Whenever an ally has a clear line of sight and hearing towards you, they cannot be enraged or frightened unless you suffer one of those conditions as well. Additionally, whenever you are in an engagement, allies in the same engagement take 1 less damage from all sources.
+Whenever an ally has a clear line of sight and hearing towards you, they cannot be aggravated or frightened unless you suffer one of those conditions as well. Additionally, whenever you are in an engagement, allies in the same engagement take 1 less damage from all sources.
 
 **Destiny Level:**
 Once per round, you may call out encouragement as a quick ability. Choose a creature besides yourself that is within 30 feet that can see and hear you. It gains one of the following benefits:
@@ -747,10 +747,10 @@ Your movement speed increases by 20 more feet.
 
 _Passive ability. Cognitive talent._
 
-Whenever a creature attacks you, you gain a level of enraged towards it. You have A2 on attacks against creatures you are enraged at.
+Whenever a creature attacks you, you gain a level of aggravated towards it. You have A2 on attacks against creatures you are aggravated at.
 
 **Destiny Level:**
-You take 2 levels of enraged and gain A3 on attacks instead.
+You take 2 levels of aggravated and gain A3 on attacks instead.
 
 ### Rapid Shot
 
@@ -873,10 +873,10 @@ Ignore the creature's entire defense roll instead.
 
 _Passive ability. Martial talent._
 
-Whenever you make an attack roll with the cunning stance against someone who chose the agility stance, you may choose to give them two fewer conditions and instead give them a level of enraged towards you.
+Whenever you make an attack roll with the cunning stance against someone who chose the agility stance, you may choose to give them two fewer conditions and instead give them a level of aggravated towards you.
 
 **Destiny Level:**
-You may choose to also forgo making an attack roll to instead give them three levels of enraged.
+You may choose to also forgo making an attack roll to instead give them three levels of aggravated.
 
 ### Thrower
 
@@ -1603,7 +1603,7 @@ _Weekly ability. Gaeic melody._
 After playing your instrument for a minute or more, you may choose a creature within 60 feet and in earshot. It feels an inexplicable dislike towards a creature of your choice. If they were close, they become neutral. If they were friendly, they become unfriendly. If they were neutral or unfriendly, they become hostile, and potentially violent. This effect lasts for the rest of the day.
 
 **Destiny Level:**  
-That creature gains three levels of enraged towards that creature until the end of the day.
+That creature gains three levels of aggravated towards that creature until the end of the day.
 
 ### Song of Rest
 _Monthly ability. Gaeic melody._

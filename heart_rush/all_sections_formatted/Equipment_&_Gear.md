@@ -63,7 +63,7 @@ By using a pack animal or vehicle, you can carry substantially more gear.
 
 ## Shields
 
-| Shield Type  | Notes              | Slots | Price |
-| ------------ | ------------------ | ----- | ----- |
-| Light Shield | See armor section. | 1     | 40    |
-| Heavy Shield | See armor section. | 1     | 100   |
+| Shield Type  | Notes                | Slots | Price |
+| ------------ | -------------------- | ----- | ----- |
+| Light Shield | See shields section. | 1     | 40    |
+| Heavy Shield | See shields section. | 1     | 100   |

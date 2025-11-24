@@ -174,7 +174,7 @@ As you progress, you gain ranks in beast upgrades. No single upgrade can have mo
 
 - "Bloodthirsty" increases to rank 5 permanently
 - During full moon or while transformed, aspect increases to rank 10
-- When you smell fresh blood (within 60 feet), must make a cunning saving throw (CN 15) or gain one level of enraged toward the source
+- When you smell fresh blood (within 60 feet), must make a cunning saving throw (CN 15) or gain one level of aggravated toward the source
 - Begin to exhibit beast traits even in human form (GM discretion)
 
 #### Tier 4: Primal
@@ -193,7 +193,7 @@ As you progress, you gain ranks in beast upgrades. No single upgrade can have mo
 - While transformed, cannot benefit from destiny points or use aspects positively
 - Taking any wound immediately triggers transformation (cunning save CN = wound rank to resist)
 - Your dreams are always from your beast's perspective
-- Must hunt and kill at least once per month or gain one level of enraged that doesn't fade
+- Must hunt and kill at least once per month or gain one level of aggravated that doesn't fade
 
 ### Syncopath
 
@@ -248,7 +248,7 @@ Undergo intense meditation at a ley line convergence, consume certain forbidden 
 **Drawbacks:**
 
 - "Self loathing" becomes rank 3 when triggered
-- If half the creatures in range share a mental condition (confused, charmed, enraged, frightened), you gain it at the highest rank present
+- If half the creatures in range share a mental condition (confused, charmed, aggravated, frightened), you gain it at the highest rank present
 - Gain aspect "Emotional Chameleon" at rank 3—your emotions shift to match the strongest emotion in range
 - Your own thoughts sometimes leak to others in range (GM discretion)
 
@@ -308,7 +308,7 @@ Requires months of training with a master physiarch, discovering ancient body cu
 
 - Require triple rations daily
 - "Mind Over Matter" increases to rank 2
-- While confused, charmed, frightened, or enraged, lose all Physiarch benefits
+- While confused, charmed, frightened, or aggravated, lose all Physiarch benefits
 - Cannot benefit from healing potions (your controlled biology rejects them)
 - Must meditate for 10 minutes each morning or suffer -2 to all rolls that day
 
@@ -374,7 +374,7 @@ Requires the Beast Companion talent and at least one year of constant companions
 
 - Must remain within 1 mile of companion or gain one level of mental vulnerability per day separated
 - When companion takes a wound, you take damage equal to the wound rank
-- Gain aspect "Shared Soul" at rank 1—when companion is frightened or enraged, so are you
+- Gain aspect "Shared Soul" at rank 1—when companion is frightened or aggravated, so are you
 - Cannot form bonds with other animals while this connection exists
 
 #### Tier 2: Unified

@@ -45,7 +45,7 @@ Tikhaya can be found across central and northern Alaria, as well as the Nautili 
 #### Clear Mind
 
 **Passive ability.**
-You are immune to being confused, frightened, enraged, or charmed. Additionally, you have A2 when making skill checks or saving throws to see through deception.
+You are immune to being confused, frightened, aggravated, or charmed. Additionally, you have A2 when making skill checks or saving throws to see through deception.
 
 ### Neth
 
@@ -123,7 +123,7 @@ The Husakas form close bonds with giant scorpions that serve as both mounts and 
 **Passive ability.**
 You carry a small pouch of red dust that you must consume daily. The dust has been running through your veins since childhood, awakening mystical powers within you. Choose any handmagic talent - you gain it as a racial ability (it does not count towards your total number of talents).
 
-However, you are dependent on the dust. If you go more than a week without consuming it, you gain one level of all mental conditions (confused, frightened, enraged, charmed) that do not fade until you consume the dust again. Your dust supply must be replenished yearly through trade or pilgrimage to the sacred harvesting grounds.
+However, you are dependent on the dust. If you go more than a week without consuming it, you gain one level of all mental conditions (confused, frightened, aggravated, charmed) that do not fade until you consume the dust again. Your dust supply must be replenished yearly through trade or pilgrimage to the sacred harvesting grounds.
 
 ### The Guiltless
 

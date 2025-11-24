@@ -23,7 +23,7 @@ You may channel the blood of Nagatayora, causing your head to transform into a d
 
 - Your scales provide +1 to defense rolls
 - You have advantage on intimidation checks
-- Whenever a creature deals damage to you, gain one level of enraged toward that creature (removing previous enraged levels from this ability)
+- Whenever a creature deals damage to you, gain one level of aggravated toward that creature (removing previous aggravated levels from this ability)
 
 ### Nagakani (Scale Riders)
 
@@ -64,4 +64,4 @@ Their transformation is perhaps the purest expression of their heritage - a dire
 Your connection to Nagatayora's final rage grants you exceptional resilience and fighting spirit. You take half damage from fire. Additionally, while transformed via Draconic Awakening:
 
 - You may breathe fire once per transformation, dealing 2d6 damage in a 10-foot cone
-- You gain a level of advantage on attack rolls agaisnt the source of your enragement, per level of enraged.
+- You gain a level of advantage on attack rolls agaisnt the source of your aggravation, per level of aggravated.

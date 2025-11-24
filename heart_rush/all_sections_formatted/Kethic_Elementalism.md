@@ -312,12 +312,14 @@ Light represents revelation, truth, and illumination. Those attuned to light can
 
 ### Darkness
 
-Darkness represents secrets, concealment, and the unknown. Those attuned to darkness can see in the dark and extinguish light sources.
+Darkness represents secrets, concealment, and the unknown. Those attuned to darkness can see in the dark, manipulate light and shadow, and become masters of stealth.
 
 #### Basic Attunement
 
 - You gain darkvision out to a range of 30 feet, or increase your current darkvision by 30 feet.
 - As an action, you dim the light in a 30-foot radius, turning non-magical, bright light into dim light, or dim light into darkness.
+- You have advantage on stealth checks while in dim light or darkness.
+- You are immune to the blinded condition caused by darkness.
 
 > **A note on Light and Dark**
 >
@@ -326,12 +328,18 @@ Darkness represents secrets, concealment, and the unknown. Those attuned to dark
 #### Advanced Attunement
 
 - The range of your darkvision increases by 30 feet.
-- The range at which you can create darkness increases by 30 feet.
+- The range at which you can create darkness increases to 60 feet.
+- You gain the obscured condition while in dim light or darkness (attacks against you have D5, your defense rolls have D5).
+- You can attempt to hide while in dim light or darkness without needing a suitable hiding place (still requires stealth check).
 
 #### Paragon Attunement
 
+- The range of your darkvision increases by 30 feet.
+- The range at which you can create darkness increases to 120 feet.
 - Other creatures with darkvision cannot see through darkness you create.
-- The range at which you can create darkness increases by 60 feet.
+- You automatically succeed on stealth checks while in dim light or darkness (you become hidden without rolling).
+- While hidden in darkness, you can move up to your full movement without breaking the hidden condition.
+- You lose the hidden condition when you attack or cast a spell.
 
 ### Force
 
