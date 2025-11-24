@@ -1256,13 +1256,15 @@ Note: Elemental attunements grant access to both cantrips (magical weapons) and 
 
 There is destiny level for this talent.
 
-### Everything has a price
+### Everything Has a Price
+
 _Weekly ability. Handmagic._
 
-If you touch someone, you may force them to be willing to sell any item to you. They will not necessarily be willing to sell it for a price that you desire, but if they would not have otherwise been willing to sell the item, they are now.
+You gain advantage (d4) on all rolls for haggling over material goods—persuading someone to sell to you at a cheaper cost, or buy from you at a higher cost—and appraising item value.
 
 **Destiny Level:**  
-When you touch someone, you know with certainty for the next 24 hours when they are bluffing about anything related to prices, markets, risk, and gambling.
+
+Your advantage is not limited to material goods and extends to information, services, and other intangible exchanges. Additionally, you gain advantage (d4) to tell when someone is bluffing about a thing in their possession. This applies when they claim to have or not have something (an item, information about an external thing, etc.), or when they misrepresent its value. This does not reveal lies about their internal state or motivations.
 
 ### Explorer
 _Passive ability. Cognitive talent._  
@@ -1296,10 +1298,11 @@ Each day, you may choose between rolling 1d4, 1d6, or 1d8.
 ### Forager
 _Passive ability. Cognitive talent._  
 
-Whenever you forage for food, you gather twice as much food as you would otherwise.
+Whenever you forage for food, poison ingredients, or magical ingredients, you gather twice as much as you would otherwise.
 
 **Destiny Level:**  
-You gather four times as much food instead.
+
+You gather four times as much food or poison ingredients instead.
 
 ### Ghost carriage
 _Weekly ability. Full action. Handmagic._
@@ -1748,6 +1751,17 @@ Choose any two objects. Those objects repulse each other with 50 pounds of force
 **Destiny Level:**  
 You may choose up to 5 objects, and the repulsive force begins at 100 feet away.
 
+### Shadow Jaunt
+
+_Minor ability. Instant. Dark._
+
+When you dash, you may instead teleport to an unoccupied space that you can see within 60 feet. Both your current location and your destination must be in shadow, darkness, or dim light.
+
+When you arrive, you become obscured until the start of your next turn or until you make an attack or cast a spell, whichever comes first.
+
+**Destiny Level:**
+The range increases to 90 feet. So long as you are holding on to someone in shadow or darkness, they may come with you if they are willing. You can bring up to two creatures besides yourself when using this ability. All creatures brought with you also become obscured until the start of their next turn or until they make an attack or cast a spell.
+
 ### Aura of Ignition
 
 _Weekly ability. Fire. Ongoing._
@@ -1840,7 +1854,7 @@ If the creatures are in bright light, they gain a level of restrained.
 
 ### Cryomancy
 
-_Passive ability. Water._
+_Heart ability. Cognitive talent. Elemental attunement: Water._
 
 Add ice to your resonate substances as a solid attunement. Your level of attunement with ice is equal to your level of attunement with water.  
 In addition to creating or destroying ice out of nothing, you can also convert between water and ice. Use the resonate substance conversion rules to determine the rate and range of your control.

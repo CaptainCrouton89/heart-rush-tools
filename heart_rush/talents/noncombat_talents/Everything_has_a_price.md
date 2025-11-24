@@ -1,7 +1,9 @@
-## Everything has a price
+## Everything Has a Price
+
 _Weekly ability. Handmagic._
 
-If you touch someone, you may force them to be willing to sell any item to you. They will not necessarily be willing to sell it for a price that you desire, but if they would not have otherwise been willing to sell the item, they are now.
+You gain advantage (d4) on all rolls for haggling over material goods—persuading someone to sell to you at a cheaper cost, or buy from you at a higher cost—and appraising item value.
 
 **Destiny Level:**  
-When you touch someone, you know with certainty for the next 24 hours when they are bluffing about anything related to prices, markets, risk, and gambling.
+
+Your advantage is not limited to material goods and extends to information, services, and other intangible exchanges. Additionally, you gain advantage (d4) to tell when someone is bluffing about a thing in their possession. This applies when they claim to have or not have something (an item, information about an external thing, etc.), or when they misrepresent its value. This does not reveal lies about their internal state or motivations.
