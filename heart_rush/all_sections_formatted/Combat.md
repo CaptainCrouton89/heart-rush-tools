@@ -82,7 +82,7 @@ Sprint up to your full movement speed (60 feet base, before equipment). **Your f
 Moving more than 5 feet within an enemy's reach or leaving their threat range without sidestepping invites opportunity attacks—you're prioritizing speed over defense.
 
 **Sidestep**  
-Uses your action, **or spend a rush point instead**.
+Uses your action, or spend a rush point instead.
 
 Carefully move 5 feet or rise from prone without dropping your guard. This defensive movement never provokes opportunity attacks.
 
@@ -266,9 +266,9 @@ _Engagement ends. New round begins—everyone regains their action and can activ
 
 ## Taking Damage
 
-When you take damage, **you can choose to use some of your stamina to "shrug off" or "dodge" the injury. In this case, you take half as much damage, but your heart die falls one size.** If you cannot decrease your heart die because it's already a d4, you must take the full amount of damage.
+When you take damage, you can spend stamina to reduce the harm (see **Spending Stamina** below for all options, including the **Endure** option that halves damage).
 
-Regardless, whatever damage you do take gets subtracted from your hit points. **If this would cause your hit points to reach a negative amount equal to your maximum hit points, you are dead**.
+Whatever damage you do take gets subtracted from your hit points. **If this would cause your hit points to reach a negative amount equal to your maximum hit points, you are dead**.
 
 ### More than 10 Damage
 
@@ -301,6 +301,44 @@ You can recover hit points and reduce wounds by taking rests. Read more in the R
 #### Why would I go unconscious??
 
 If you're in a nasty fight, combatants tend to try to attack the people who are still fighting back. If you go unconscious, people usually won't view you as a threat, so you're a lot less likely to be attacked (and potentially die). Things trying to eat you generally don't abide by this, so in some cases this is definitely not recommended…
+
+## Spending Stamina
+
+Combat pushes you to your limits, forcing desperate choices about how much of yourself you're willing to burn to survive or seize victory. **Once per round, you can drop your heart die one size** (d12→d10→d8→d6→d4) **to trigger one of the following effects.** This represents pushing past exhaustion, trading your dwindling stamina for a crucial advantage or protection.
+
+Each option creates a different tactical opportunity, but all share the same cost: your heart die shrinks, making every subsequent roll weaker until you can rest and recover. Choose wisely—burning your reserves at the wrong moment might leave you helpless when you need strength most.
+
+**Limitation**: If your heart die is already a d4, you cannot use these options—you have no stamina left to spend.
+
+### Endure
+
+**Reactive - When taking damage**
+
+When an attack lands and damage is about to reduce your hit points, you can dig deep and endure the blow. Your body absorbs the impact through sheer force of will, though the effort leaves you visibly exhausted.
+
+**Effect**: Halve the incoming damage (round up), but your heart die drops one size.
+
+This desperate gamble can mean the difference between staying conscious or collapsing, but you're burning the candle at both ends—every endure leaves you weaker for what comes next.
+
+### Focus
+
+**After rolling - Any roll during combat**
+
+When you see a crucial roll come up short—an attack that almost connected, a defense that barely failed, a desperate skill check in the midst of battle—you can push through exhaustion to force success. Your vision narrows, time slows, and you channel everything you have into making this moment count.
+
+**Effect**: After rolling, change one die's result to its maximum value. This can be your heart die, ability die, weapon die, or any other die in the roll. Your heart die then drops one size.
+
+This works on any roll made during combat: attacks, defenses, skill checks, saving throws—any moment where one die showing its maximum could change everything. You see the roll, recognize the critical moment, and burn stamina to seize it.
+
+### Surge
+
+**Action Phase - Gain an action**
+
+Sometimes one action isn't enough. When the moment demands more than you thought possible, you can push your body past its limits to act again. Your muscles scream in protest, but you force yourself into motion—another strike, another dash, another desperate gamble.
+
+**Effect**: Gain a full action during the action phase. This means you could attack twice during the engagement (though remember—engagements can be dangerous, and attacking twice means two chances to be hit). Your heart die drops one size.
+
+This isn't free power—it's borrowing from your future self. You're trading sustained capability for a burst of activity, betting that this moment is worth the cost.
 
 ## Attack Alternatives
 
