@@ -74,6 +74,75 @@ Multiple successes build toward your goal:
 
 Each success brings you closer. **Progress persists**—those two successes toward sinking the ship remain even if your third attempt fails. Only specific fictional circumstances ("they reached port for repairs") would reduce accumulated successes.
 
+## Assets & Hindrances
+
+Assets and hindrances represent what makes your forces or situation exceptional compared to typical circumstances. They modify stratagem difficulty by adjusting the Challenge Number.
+
+### Understanding the Baseline
+
+The base Challenge Number already accounts for the opposition's strength and the inherent difficulty of the task. Assets and hindrances aren't about comparing yourself to the enemy—they're about comparing your specific circumstances to what a **typical, competent force** would have when attempting this goal.
+
+When setting up a stratagem, the GM uses this process:
+
+**1. Set Base CN**: "How difficult is this task for a normal, well-prepared force attempting it?"
+
+**2. Identify the Baseline**: "What would a typical attempt look like? What resources, capabilities, and circumstances would be standard?"
+
+**3. Compare to Player's Situation**:
+- Better resources/intel/position/capabilities than typical → **Assets** (reduce CN)
+- Worse resources/intel/position/capabilities than typical → **Hindrances** (increase CN)
+- Standard or average → No modifier
+
+**4. Player Input**: Players can propose assets based on narrative setup or previous play. The GM adjudicates whether these truly represent exceptional circumstances.
+
+**The Key Question**: "Is this situation notably better or worse than what a competent, well-prepared group would normally have when attempting this goal?"
+
+If the answer is "that's pretty standard for this kind of operation," it's not an asset or hindrance—it's already factored into the base CN.
+
+### Assets (Reduce Your CN)
+
+Your advantages that make success more likely:
+
+- **Elite Forces**: "Veteran Mercenaries" or "Handpicked Crew"
+- **Information**: "Enemy Plans Revealed" or "Perfect Maps"
+- **Resources**: "Unlimited Funding" or "Master-Crafted Weapons"
+- **Position**: "Defensive Advantage" or "Element of Surprise"
+- **Support**: "Local Population Aids Us" or "Divine Blessing"
+
+### Hindrances (Increase Your CN)
+
+Your disadvantages that impede success:
+
+- **Weakened Forces**: "Demoralized Troops" or "Sick Crew"
+- **Lack of Information**: "Operating Blind" or "False Intelligence"
+- **Resource Problems**: "Low Supplies" or "Damaged Equipment"
+- **Poor Position**: "Exposed Flanks" or "Fighting Uphill"
+- **Internal Issues**: "Saboteur in Ranks" or "Divided Leadership"
+
+### Gaining and Losing Assets & Hindrances
+
+Assets and hindrances emerge from the fiction and evolve through play:
+
+**Starting Assets/Hindrances**: The GM assesses the situation at the beginning of the stratagem. If you narratively established veteran troops in previous sessions, you have the "Veteran Troops" asset. If your army just marched through a blizzard, you have the "Exhausted Forces" hindrance.
+
+**Gained Through Interventions**: Successful interventions often create new assets or remove hindrances. Failed interventions create hindrances or remove assets (see intervention examples).
+
+**Gained Through Narrative Events**: Major story developments affect your circumstances. If enemy reinforcements arrive, you might gain "Outnumbered" hindrance. If locals pledge support, you gain "Popular Support" asset.
+
+**Gained From Stratagem Outcomes**: Success or failure can create lasting circumstances. Winning a battle might give you "Momentum" for the next engagement. Losing might create "Shaken Morale."
+
+**Persistence**: Assets and hindrances persist between rolls within the same stratagem unless the fiction changes them. "Veteran Troops" doesn't disappear between attempts—but a devastating loss might transform it into "Bloodied Veterans" (lesser asset) or remove it entirely.
+
+**Removing Hindrances**: You can use interventions specifically to clear hindrances. Intervention to "Restore Morale" can remove "Demoralized Troops." Successful supply runs remove "Low Supplies."
+
+### Magnitude Guidelines
+
+Each asset or hindrance typically modifies CN by **±3**, representing a significant but not overwhelming advantage or disadvantage. Multiple assets/hindrances stack freely—a force with many advantages might reduce CN by 9 or more.
+
+The GM can rule that particularly impactful circumstances warrant larger modifiers (±6 or more), but most situations fit the ±3 guideline.
+
+**Example**: _Besieging a fortress is normally Hard (CN 12) for a typical army. Your army has "Veteran Siege Engineers" (-3) and "Superior Artillery" (-3), reducing it to CN 6. But "Running Low on Supplies" (+3) brings the final CN to 9._
+
 ## Running a Stratagem
 
 ### Setting Up
@@ -86,7 +155,9 @@ Before the first roll, establish these key elements with your GM:
 
 **3. Time Scale**: How much fictional time does each stratagem action represent? Naval battles might be 10-minute increments, while trade expansion could be monthly efforts.
 
-**4. Your Involvement**: Are you personally leading the charge or managing from afar? This affects both your intervention options and the narrative framing.
+**4. Assets & Hindrances**: The GM assesses your starting circumstances compared to a typical force attempting this goal. Players can propose assets based on narrative setup. See the Assets & Hindrances section for details.
+
+**5. Your Involvement**: Are you personally leading the charge or managing from afar? This affects both your intervention options and the narrative framing.
 
 ### The Action Cycle
 
@@ -155,36 +226,6 @@ _Your revolutionary army besieges the tyrant's fortress (CN 15 - Very Hard). Bef
 _[Full scene plays out with skill checks, encounters with guards, discovering the gate mechanism is damaged, improvising a solution, a desperate fight, and finally throwing open the gates as dawn breaks]_
 
 **GM**: "Your soldiers pour through the open gates! The intervention reduces the stratagem CN from 15 to 9. Now roll for the overall battle..."
-
-## Assets & Hindrances
-
-Assets and hindrances represent what makes your forces or situation exceptional compared to typical circumstances. They modify stratagem difficulty by adjusting the Challenge Number.
-
-### Assets (Reduce Your CN)
-
-Your advantages that make success more likely:
-
-- **Elite Forces**: "Veteran Mercenaries" or "Handpicked Crew"
-- **Information**: "Enemy Plans Revealed" or "Perfect Maps"
-- **Resources**: "Unlimited Funding" or "Master-Crafted Weapons"
-- **Position**: "Defensive Advantage" or "Element of Surprise"
-- **Support**: "Local Population Aids Us" or "Divine Blessing"
-
-### Hindrances (Increase Your CN)
-
-Your disadvantages that impede success:
-
-- **Weakened Forces**: "Demoralized Troops" or "Sick Crew"
-- **Lack of Information**: "Operating Blind" or "False Intelligence"
-- **Resource Problems**: "Low Supplies" or "Damaged Equipment"
-- **Poor Position**: "Exposed Flanks" or "Fighting Uphill"
-- **Internal Issues**: "Saboteur in Ranks" or "Divided Leadership"
-
-### How They Apply
-
-The GM starts with base difficulty for a typical force in this situation, then adjusts based on your specific advantages and disadvantages. The opposition's strength is already factored into the base difficulty—your assets and hindrances represent what makes YOU exceptional.
-
-**Example**: _Besieging a fortress is normally Hard (CN 12). Your "Veteran Siege Engineers" (-3) and "Superior Artillery" (-3) would reduce it to CN 6, but "Running Low on Supplies" (+3) brings the final CN to 9._
 
 ## Nested Stratagems
 
@@ -267,5 +308,12 @@ _[They zoom in for 15 minutes of tense infiltration, including skill checks, a b
 - **Minor** (±3 CN): Small advantages or setbacks
 - **Major** (±6 CN): Significant tide-turners
 - **Dramatic** (±9+ CN): Legendary moments
+
+### Assets & Hindrances
+
+- **Typical modifier**: ±3 CN each
+- **Determined by**: GM compares your circumstances to baseline "typical force"
+- **Gained/Lost through**: Interventions, narrative events, stratagem outcomes
+- **Persistence**: Last until fiction changes them
 
 Remember: Stratagems exist to skip the tedious parts while preserving the exciting ones. When something would be fun to play through, zoom in and play it. When you need to resolve complex coordinated efforts, zoom out with a stratagem. The goal is always to get to the next interesting decision or dramatic moment.
