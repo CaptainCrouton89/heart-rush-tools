@@ -14,6 +14,36 @@ Raw Aether spends most of it's time in the air—inert, invisible, and immateria
 
 An uncommon, gray-blue type of stone that requires some expensive processing to purify.
 
+## Deoric
+
+Tags: magic
+
+Deoric is the language of absolute power. Statements spoken in deoric have the power to rip the world apart, if anybody had the knowledge and capacity to wield the power required to do so. According to legends, this is the language the gods spoke when they created the world. Nowadays, the spoken language is nearly dead, though the written form remains alive in the runes used in handmagic, as well as forbidden rituals performed by the few left who know them. 
+
+### Handmagic
+
+The amount of power required to channel Deoric is immense, let alone wield it in a purposeful way. It is only through the strengthening of the astral thread binding one’s soul and shadow that one can hope to bind the power necessary to use Deoric. With stronger astral thread, one’s hand can be tattooed with more runes in titan blood (or the ground up dust from titan bones, mixed into a paste) which act both as a means of holding the magic as well as channeling it in way described by the Deoric runes. However, inscribing too many runes on one’s hand runs the risk of snapping one’s astral thread, killing the owner instantly. 
+
+Handmagic comes in two main flavors—unique abilities, and skill buffs. Both strain your astral thread, though the skill buffs are generally simpler and cheaper, as the addition in skill is usually a less complicated rune. 
+
+For players of Heart Rush, strengthening one’s astral thread takes the form of gaining XP and spending it on handmagic. 
+
+### Ritual Magic
+
+Ritual magic is magic performed using Deoric speech, powered by blood sacrifice. Anything is possible with ritual magic so long as you know the words and have a suitable amount of life sacrificed. Rules for ritual magic are described in below the Spells section.
+
+### Recording Deoric Text
+
+Deoric cannot be recorded except with titan blood or special ink made from their ground up bones. It is magically draining to write, due to the powerful nature of the text. Writing a rune or simple command takes about an hour to complete, and causes you to lose 10 hitpoints. You regain hitpoints lost in this way at a rate of 1 hitpoint each week. 
+
+Once Deoric text is read by someone other than the author, the text disintegrates into ash. For this reason, along with the reasons above, any book of Deoric text is incredibly valuable. 
+
+### Deoric, Daemons, & Celesté
+
+Deoric is primarily used by the daemons of Celesté. Having been around for centuries, millennia, or in some rare cases, eons, these beings are frequently at much higher levels of mastery with the Deoric language that mortals can only dream of. By using this magic, they serve their followers.
+
+There are several different varieties of magic in Alaria. Each come from different sources of energy and have different properties. …**
+
 ## Diamonds
 
 Tags: material
@@ -55,6 +85,86 @@ By attuning to different elements, you have some basic power over those elements
 However, attuning to an element is difficult. Most people never attune to any elements in their life times, and your spirit must be able to handle the additional pressure of resonating with the your attuned element. Those who do will frequently do so by accident after an unusual or extreme exposure to one of these such elements. More advanced attunements require even more exposure, and paragon level attunements generally require special activity dedicated to developing an attunement to that element.
 
 Kethic also comes with limitations. Every living thing has some very low level attunement with all the elements, and for this reason, it is nearly impossible for another creature to interfere with elements especially close to another living being, such as its blood or flesh.
+
+## Languages
+
+Tags: cosmology
+
+### Major Languages
+
+There are many major languages spoken across Alaria, as well as even more minor ones. 
+
+### Northern Commonfolk
+
+Northern Commonfolk is the most used language across Alaria. The language is native to much of the central region of Clueanda, but speakers exist in nearly every major trading port.
+
+#### Locations of Native Speakers
+
+- Phirexes
+- The United Free Nations
+- Iylovia
+- Kazül
+- Thespia
+- Anarak
+- Griselia
+- Watar
+- Erasnus
+- Bestacia
+- Echea
+- Lier
+- Mkinti
+- Azuros
+- Tornia
+- Sylke
+- Joswik
+- Ubrik
+- Camaran
+- Argysis
+- Hephake
+- Adron
+- Eloesi
+- Old Tolaria
+- All of Ve
+
+### Islander
+
+Spoken in Urok as well as all of the West Isles and Mueras. Also spoken in Roule and the northwestern regions of Upoceax. 
+
+### Orcish
+
+Orcish is spoken by the orcs of northwestern Clueanda. 
+
+### Gorathi
+
+Gorathi is spoken primarily by natives of Gorath, but as Gorath grows, so does the influence of its langauge.
+
+### Ylindian
+
+Ylindian is spoken by much of Upoceax, the Free Isles, and western Aboyuinzu. 
+
+### Minor Languages
+
+### Elven
+
+Many of the elves still speak their own dialects of Elven, which stemmed from Druidic. Most elves can roughly understand each other when speaking in their native elven tongue, if they have one.
+
+### Dwarven
+
+Unlike elven, dwarven tongues have mostly died out, as the dwarves pick up the languages of their neighboring trade partners. However, some locations still exist where various dialects of dwarven are still spoken.
+
+### Countries of Aboyuinzu
+
+Many of the countries here speak different langauges, that are only spoken within their country.
+
+### Tribal States
+
+Most tribal states speak languages that are only native to that region. 
+
+### Deoric: The Language of Absolutes
+
+Deoric was once spoken by the titans who long ago inhabited Alaria. It is the language of absolutes—things spoken in Deoric *must* occur, if there is power behind the words. Now, however, it is used by dark mages to perform powerful magic. The language is extremely complex, and takes centuries to learn, but unlocks great power.
+
+This power comes from spiritual sacrifice, usually by killing a sentient creature and performing a ritual.
 
 ## Magic
 
