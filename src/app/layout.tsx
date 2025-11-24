@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   title: "Heart Rush TTRPG Reference",
   description:
     "Complete reference guide for the Heart Rush tabletop RPG system",
+  icons: {
+    icon: "/heart.png",
+    apple: "/heart.png",
+  },
   openGraph: {
     title: "Heart Rush TTRPG Reference",
     description:

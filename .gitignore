@@ -70,3 +70,7 @@ tasks/
 
 # Investigation and temporary docs
 /docs/
+
+# Ignore Next.js metadata icons (they cause LFS issues on Vercel)
+/src/app/icon.png
+/src/app/apple-icon.png
