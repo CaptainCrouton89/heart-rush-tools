@@ -60,6 +60,60 @@ You have two sets of arms. You may take an additional object interaction each ro
 
 You don't need to sleep. Instead, you enter a meditative trance for 4 hours to gain the benefits of a long rest. While in this trance, you remain conscious and aware of your surroundings but have disadvantage on all skill checks and cannot take actions. You automatically succeed on sleeping checks when taking a long rest.
 
+## Belgron
+
+The Belgron are a distinct offshoot of cyclopes, known for their massive, overweight frames and distinctive purplish skin. Unlike their more athletic cousins who forge weapons or tend sheep in the mountains, the Belgron are creatures of excess and indulgence. They are often solitary, claiming large territories where they can eat and lounge undisturbed.
+
+Despite their sluggish appearance, their bulk hides a terrifying strength. A Belgron in motion is like a landslide—unstoppable and destructive. They are not unintelligent, but their minds are often focused entirely on their next meal or comfort, making them seem simple to those who don't understand their hedonistic philosophy. A contented Belgron is surprisingly philosophical, discoursing on the nature of pleasure and satisfaction between enormous bites of roasted goat.
+
+### Vitals
+
+- **Size:** Large
+- **Height:** 8-10 feet
+- **Weight:** 800-1200 pounds
+
+### Aspects
+
+- Singular vision, singular appetite
+- Immovable object
+
+### Crushing Bulk
+
+**Passive ability.**
+Your sheer size and weight are weapons in themselves. You can make unarmed attacks that deal 2d6 bludgeoning damage. You have A2 on checks to resist being moved, knocked prone, or grappled. When you successfully grapple a creature smaller than you, it takes 1d6 crushing damage at the start of each of its turns.
+
+### Thick Hide
+
+**Passive ability.**
+Your purple skin is thick and rubbery, absorbing blows that would cut through lesser creatures. You have +2 to defense rolls against bludgeoning damage. You are immune to the prone condition from external forces (though you can choose to lie down).
+
+## Bfaspeen
+
+The Bfaspeen are horrid, aquatic monstrosities that plague the Bejeweled Sea. With the lower body of a powerful eel and a torso dominated by mandibles and bulbous eyes, they are the stuff of sailors' nightmares. They live in strict matriarchal broods, where the males are subservient hunters who drag prey back to the deep lairs to be consumed.
+
+They have a pathological lust for gold and shiny objects, often attacking ships not just for food, but to sink them and loot the wreckage. Bfaspeen are cruel and intelligent, capable of coordinating complex raids on merchant vessels. Their underwater hoards glitter with centuries of accumulated treasure, jealously guarded by the brood mothers.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 6-8 feet (length)
+- **Weight:** 180-250 pounds
+
+### Aspects
+
+- Matriarchal hunger
+- Gold sinks, we rise
+
+### Eel-Tail Propulsion
+
+**Passive ability.**
+Your powerful tail grants you a swim speed of 60 feet. You can launch yourself out of the water up to 20 feet into the air. You can breathe both air and water. You suffer no penalties for fighting underwater.
+
+### Mandible Crush
+
+**Major ability.**
+Your massive mandibles can snap through wood and bone alike. Once per combat, when you hit with a bite attack, you can choose to deal an additional 3d6 damage and destroy any non-magical armor, shield, or weapon the target is holding (target chooses which item if multiple). Against structures or objects, your bite deals double damage.
+
 ## Blaize
 
 The Blaize are enigmatic humanoids whose very existence seems to flicker between states of being, their blue-tinged skin constantly shifting in subtle ways that make them difficult to focus on. These emotion-feeding beings were once enslaved across the western regions of Alaria, bred for their supernatural speed and used as messengers, scouts, and worse. Though now free, the scars of their servitude run deep—they are pathologically suggestible, finding it nearly impossible to resist direct commands or strong suggestions.
@@ -130,6 +184,33 @@ Your skin constantly produces poison. Any creature that grapples you or hits you
 
 **Major ability.**
 You can enter a state of suspended animation by burying yourself in mud or submerging in swamp water. While hibernating, you don't need to breathe, eat, or drink, and you can remain hidden for up to 3 months. You have tremorsense out to 30 feet while buried and can choose to wake at any time. Creatures must succeed on a CN 18 perception check to notice you while hibernating.
+
+## Centaur
+
+The Centaurs of Siquestrya are a proud and volatile race, possessing the upper bodies of humanoids and the lower bodies of powerful horses. They are quick to anger and prone to violence, valuing strength and speed above all other virtues. Centaur society is nomadic and herd-based, roaming the vast plains and trampling anyone foolish enough to cross their path.
+
+They view bipedal races with a mixture of pity and contempt, seeing them as slow and fragile. To a Centaur, the thundering of hooves is the heartbeat of the world, and a life spent inside walls is a life wasted. Their herds follow ancient migration routes, and the arrival of a centaur herd is an event that sends most settlements into a panic.
+
+### Vitals
+
+- **Size:** Large
+- **Height:** 7-8 feet
+- **Weight:** 1000-1500 pounds
+
+### Aspects
+
+- Fury of the herd
+- Trample the weak
+
+### Thundering Charge
+
+**Major ability.**
+When you move at least 30 feet in a straight line and make a melee attack, you deal an additional 1d8 damage and the target must make a Might saving throw against CN 12 or be knocked prone. If the target is smaller than you, they are also pushed 10 feet away from you.
+
+### Hoof Strike
+
+**Passive ability.**
+Your hooves are deadly natural weapons that count as light bludgeoning weapons. You can make hoof attacks even when your hands are occupied. Once per round, as a reaction when a creature enters or leaves a space adjacent to you, you may make a single hoof attack against them.
 
 ## Chargon
 
@@ -307,6 +388,33 @@ You are magically prevented from directly or intentionally killing any living cr
 **Passive ability.**
 Your brilliant corvid intellect absorbs knowledge at an extraordinary rate. For every 7 XP you gain, gain an additional 1 XP.
 
+## Dead Claw
+
+The Dead Claw are a race of feline warriors residing in the mountainous region of Phaer Hom. They possess cat-like agility, retractable claws, and fur whose color determines their physical traits and social standing. Known for their ritual scarring and silent demeanor, they are the ultimate stalkers of the high peaks.
+
+Legend says the Dead Claw possess nine lives, making them fearless in battle. They never cut their whiskers, which serve as sensitive sensory organs that can detect the slightest air currents. Their culture is one of quiet lethality, where a threat is rarely spoken but simply acted upon. Dead Claw society is organized into Prides, each led by a Pridekeeper whose word is law.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5-6 feet
+- **Weight:** 100-160 pounds
+
+### Aspects
+
+- Nine lives to give
+- Silent stalker
+
+### Nine Lives
+
+**Major ability.**
+Death is not the end for you. When you would die, you may instead survive with 1 HP. You can use this ability a number of times equal to 9 minus the number of times you have already used it in your lifetime. Each use permanently reduces your maximum HP by 5. When you use this ability, you are stunned until the start of your next turn as your body miraculously knits itself back together.
+
+### Whisker Sense
+
+**Passive ability.**
+Your whiskers can detect the slightest change in air pressure. You cannot be surprised, and you can navigate and fight effectively even in total darkness or when blinded. You have blindsight out to 10 feet. You have A2 on perception checks to detect hidden creatures or ambushes.
+
 ## Deva
 
 Deva are rare, beautiful, creatures with very commanding presences that enter the world fully grown, intelligent, with no family, and a single, driving purpose. Several explanation exist on how they appear, though the most supported reasoning is that they are manifestations of collective thought and hope from the Psyic plane.
@@ -342,6 +450,33 @@ The psyic energy from which you spawned occasionally provides imagery from other
 
 You also do not have a soul or shadow, and are thus invisible on both the ethereal and nethereal planes. This also excludes you from effects on creatures with souls or shadows.
 
+## Dwarblin
+
+The Dwarblin are the unfortunate progeny of dwarves and goblins, residing primarily in Watar. Hated by both parent races, they are viewed as "mutt" creatures—too chaotic for dwarves, too sturdy for goblins. Yet, in their isolation, they have forged a culture of resilience and shrewd business.
+
+Physically, they possess the green skin of goblins but the stout build and beards of dwarves. They are fantastic tradesmen, serving as the bridge between markets that would otherwise never interact. While they lack magical aptitude, their craftsmanship is practical and solid. A Dwarblin-made tool may not be beautiful, but it will never break.
+
+### Vitals
+
+- **Size:** Small
+- **Height:** 3.5-4.5 feet
+- **Weight:** 100-140 pounds
+
+### Aspects
+
+- Hated by kin on both sides
+- Master of the deal
+
+### Hybrid Vigor
+
+**Passive ability.**
+You possess the sturdiness of a dwarf and the wiry resilience of a goblin. You have A2 on saves against poison and disease. You can squeeze through spaces as if you were one size smaller without any movement penalty.
+
+### Eye for Value
+
+**Passive ability.**
+Your survival depends on trade. You can instantly appraise the value of any item within 10% accuracy by examining it for one round. You have A2 on checks to spot counterfeits, hidden flaws, or magical properties in items. When haggling or negotiating prices, you have A2 on all relevant presence checks.
+
 ## Dwarf
 
 Dwarves are a short but hearty people, and are generally more pragmatic than the other races. While some live underground, many more do not.
@@ -375,9 +510,9 @@ As a whole, they value education, money, and preserving their cultural and relig
 #### Alert
 
 **Passive ability.**
-You have advantage on all cunning checks to determine if someone has bad intentions. When combat begins, you may use treat your initiative roll as its maximum value.
+You have advantage on all cunning checks to determine if someone has bad intentions. When combat begins, you may treat your initiative roll as its maximum value.
 
-In addition, you gain the perceptive talent as a racial ability (it does not count towards the number of talents you have).
+In addition, you gain the Observant talent as a racial ability (it does not count towards the number of talents you have).
 
 ### Uline (Chain Dwarf)
 
@@ -460,8 +595,6 @@ Hestrube society operates more like geological formations than traditional commu
 **Passive ability.**
 Your body can shift between flesh and living stone at will. While in stone form, you gain +2 to defense rolls against physical attacks but move at half speed. You can sustain yourself by consuming 1 pound of stone or minerals daily instead of normal food.
 
-When you take the defensive stance, you can choose to become solid stone, taking one-quarter damage instead of half until the start of your next turn.
-
 ### Grendel (Chord Dwarves)
 
 The Grendel are wandering dwarves who travel in close-knit family caravans, their culture built around music, storytelling, and fierce loyalty to blood relations. Often misunderstood and persecuted by settled folk who view them as thieves and troublemakers, the Grendel have developed a complex code of honor that governs interactions both within their clans and with outsiders.
@@ -523,8 +656,8 @@ These battle-scarred dwarves view each conflict as a sacred offering to the gods
 
 #### Spiked Charge
 
-**Minor ability.**
-While wearing your specially crafted spiked armor, when you dash at least 20 feet toward an enemy, you may use your action to make an opportunity attack with your armor instead. You must choose the might stance and your armor counts as a heavy piercing melee weapon. Add your armor's defense bonus in place of a weapon die roll. However, the violent impact body-slam damages you as well—you take damage equal to the target's defense roll.
+**Passive ability.**
+While wearing your specially crafted spiked armor, when you move at least 20 feet in a straight line and make a melee attack, you may choose to body-slam your target instead. You must choose the might stance and your armor counts as a heavy piercing melee weapon. Add your armor's defense bonus in place of a weapon die roll. However, the violent impact damages you as well—you take damage equal to the target's defense roll.
 
 Additionally, whenever you are grappled while wearing your spiked armor, the enemy immediately takes damage equal to your armor's defense bonus, and takes the same damage again at the start of each subsequent round they maintain the grapple.
 
@@ -598,7 +731,7 @@ Clan loyalty runs deeper than blood among the Gruynmar, and abandoning one's shi
 #### Gunpowder Mastery
 
 **Passive ability.**
-You can craft and use firearms, which count as an ultra-heavy ranged weapons with 90-foot range that deal piercing damage. Firearms require gunpowder charges and take a full action to reload after each shot. Ultra-heavy weapons use a d20 as their weapon die.
+You can craft and use firearms, which count as heavy ranged weapons with 90-foot range that deal piercing damage. Firearms require gunpowder charges and take a full action to reload after each shot.
 
 You can craft a basic firearm in 3 days with access to a forge and 50 ducats worth of materials. You can create gunpowder charges from sulfur, charcoal, and saltpeter (5 ducats of materials yields 20 charges). In settlements, charges typically cost 1 ducat each when available.
 
@@ -632,6 +765,47 @@ Living so deep underground, the Cendelle have developed a culture centered aroun
 Unlike their cousins who fear the dark or seek the sun, the Cendelle have learned to navigate between light and shadow, between the material and the celestial. They are equally comfortable in the absolute darkness of the deep earth and the alien radiance of Celesté. This duality has made them philosophical and contemplative, often speaking in riddles and seeing patterns where others see only stone.
 
 This is not a playable race.
+
+### Sennites (Lake Dwarf)
+
+The Sennites are a pragmatic and often reviled clan of dwarves residing in Sennos. With slimy green skin and webbed fingers, they adapted to life in Ennros Lake after a desperate magical pact saved them from drowning when their underground home flooded. They are viewed as untrustworthy backstabbers by other dwarves, but in truth, they simply value survival above honor.
+
+They are proficient in Deoric magic, having traded forbidden secrets with entities of the deep to survive in their watery prison. Their settlements are built half-submerged in the lake's murky waters, accessible only to those who can breathe beneath the surface. The Sennites have long memories and longer grudges against those who abandoned them to drown.
+
+#### Aspects
+
+- Survival over honor
+- Lake-locked
+
+#### Amphibious
+
+**Passive ability.**
+You can breathe underwater and have a swim speed equal to your movement speed. Your webbed hands give you D2 on checks requiring fine manipulation with tools when dry, but you have A2 on all swimming-related checks.
+
+#### Deoric Secret
+
+**Major ability.**
+You know fragments of the language of truth. As an action, you may spend 5 HP to speak a word of power, producing one of the following effects:
+
+- Cause a lock within touch to unlock
+- Extinguish all non-magical flames within 30 feet
+- Heal yourself or a creature you touch for 2d6 HP
+
+### Zwaeron (Tundra Dwarf)
+
+The Zwaeron are tundra dwarves who have abandoned the mines for the open snow. Distinguished by their gray-blue skin and wild frizzy orange hair that stands out against the white landscape, they are true mountain people who scorn the confines of underground life. They have formed a symbiotic bond with dire wolves, riding them into battle and using them to hunt the giant stags that roam the frozen north.
+
+They are nomadic, living in temporary camps and moving with the herds. To a Zwaeron, a roof is a coffin; the open sky is home. Their culture values freedom, endurance, and the hunt above all else. They trade furs, ivory, and their expertise as guides to outsiders brave enough to venture into the frozen wastes.
+
+#### Aspects
+
+- Wolf-brother
+- The sky is my only roof
+
+#### Wolf Rider
+
+**Passive ability.**
+You gain the Beast Companion talent as a racial ability (it does not count towards the number of talents you have). Your companion is a dire wolf with the statistics of a warhorse but with a bite attack (1d8 damage) instead of hooves. If your wolf dies, you may spend a month in the tundra to bond with a new one. You have A2 on all checks related to wolves, canines, and tracking in snow. You are immune to the effects of extreme cold and suffer no penalties from snow, ice, or blizzard conditions.
 
 ## Dwelyn
 
@@ -987,6 +1161,106 @@ Your vampiric nature grants you tools to hunt among civilized prey. You possess 
 - You have darkvision out to 30 feet, allowing you to hunt in darkness
 - However, you must feed on humanoid blood at least once per week or gain a level of weakened that doesn't fade until you feed
 
+### Xicrein (Island Elf)
+
+The Xicrein are elves of the Bynü Island Tribes, attuned to water and darkness. They have dark features, high cheekbones, and a brooding demeanor that makes other races uneasy in their presence. Their culture is one of polite, silent lethality—clans wage brutal wars against each other using assassination rather than open battle.
+
+They disdain Deoric magic and poison, considering such methods dishonorable. A Xicrein prefers the "honest" kill of an oyster-shell blade across the throat to any trickery. They are master sailors and killers, equally comfortable navigating treacherous island waters or slipping into an enemy's chambers under cover of darkness.
+
+#### Aspects
+
+- Silent kill
+- Clan blood feud
+
+#### Tidal Shadows
+
+**Passive ability.**
+Your connection to water and darkness grants you a basic attunement to both water and dark. Additionally, you have darkvision out to 60 feet, and while in dim light or darkness, you have A2 on stealth checks.
+
+#### First Strike
+
+**Passive ability.**
+When you attack a creature that has not yet acted in the current combat, you deal an additional 2d6 damage. This bonus applies only to your first attack against that creature in the encounter.
+
+### Spindral (Quill Elf)
+
+The Spindral are elves who fled underground to escape the dragon Ural of the Third Moon. Living in perpetual darkness for generations, they have become attuned to the Void and shadow. Their most striking feature is the long, midnight-black quills that sprout from their backs and arms, which seem to absorb all light that touches them.
+
+They venture to the surface only to hunt and keep watch for their ancient draconic enemy. They are silent, deadly, and accustomed to a world without sun. Other underground races have learned to avoid Spindral territory—these elves do not negotiate with trespassers.
+
+#### Aspects
+
+- Void touched
+- The dragon will return
+
+#### Quill Volley
+
+**Major ability.**
+You can flex your muscles to fire a volley of sharp quills from your body. As an action, you launch quills at up to 3 creatures within 30 feet. Make a ranged attack against each target—on a hit, a quill deals 1d6 piercing damage and the target must make a CN 12 Might saving throw or become slowed for 1 minute as numbing void-toxin spreads through their body. Once you use this ability, you cannot use it again until you complete a short rest.
+
+#### Void Sight
+
+**Passive ability.**
+You have a basic attunement to void. You can see perfectly in magical darkness, and you are immune to the blinded condition. Additionally, you can sense void entities and planar disturbances within 60 feet, even through walls.
+
+### Gamori (Jungle Elf)
+
+The Gamori are brutally wild elves who have rejected civilization for the savagery of the deep jungle. With wild, tangled hair and supernatural senses honed by generations of nocturnal hunting, they are the terrors of the canopy. They have formed a symbiotic bond with giant jungle bats, riding them through the night skies on raids against any who dare encroach on their territory.
+
+They are nocturnal hunters who fear the burning sun and worship the moon and the darkness beneath the trees. Their society is matriarchal and fiercely territorial, with each tribe controlling vast swaths of jungle that they patrol from above. To outsiders, the Gamori seem like savage monsters, but among themselves they maintain complex social bonds and oral traditions passed down through generations of moonlit gatherings.
+
+#### Aspects
+
+- Rider of the night sky
+- The jungle belongs to me
+
+#### Bat Bond
+
+**Passive ability.**
+You have a giant bat companion that serves as your mount. The bat has the statistics of a riding horse but with a fly speed of 60 feet (cannot hover) and blindsight out to 60 feet. You can communicate simple concepts with it telepathically within 300 feet. If your bat dies, you may spend a month in the deep jungle to bond with a new one. You have A2 on all checks to handle, calm, or communicate with bats.
+
+#### Echolocation
+
+**Passive ability.**
+Like your bat mount, you can navigate by sound. By making small clicking sounds, you gain blindsight out to 30 feet, allowing you to detect invisible creatures and navigate in total darkness. You have A2 on perception checks that rely on hearing.
+
+## Elnir
+
+The Elnir were once druids who protected the wilds, but they have been corrupted by dark magic and a desire to *control* nature rather than serve it. Now, they are terrifying "mad scientists" of the natural world, splicing animals together and warping plants into rigid, unnatural shapes.
+
+They view humanoids as mere biological clay to be molded. An Elnir might have the arm of a bear, the eyes of a hawk, or skin of bark, all grafted or grown through their twisted magic. They reside in deep forests where the trees grow in perfect, terrifying grids, and animals with too many legs or wrong numbers of eyes serve as their guardians.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5-7 feet
+- **Weight:** 120-250 pounds
+
+### Aspects
+
+- Nature must obey
+- Flesh is clay to be shaped
+
+### Corrupted Shapeshift
+
+**Major ability.**
+Once per long rest, you can reshape your own body, growing natural weapons or adaptations. Choose one adaptation when you use this ability; it lasts until your next long rest:
+
+- **Claws:** Your hands become vicious claws (light slashing weapons, 1d8 damage)
+- **Scales:** Gain +2 to defense rolls against physical damage
+- **Gills:** Gain the ability to breathe underwater and a swim speed equal to your movement
+- **Wings:** Gain a glide speed of 40 feet (fall 10 feet per round while moving horizontally)
+
+### Biological Augmentation
+
+**Passive ability.**
+You have permanently modified your body. Choose one augmentation at character creation:
+
+- **Venomous:** Your bite or natural weapons deal an additional 1d4 poison damage
+- **Wall-Climber:** You have a climb speed equal to your movement and can climb on walls and ceilings
+- **Armored Hide:** You have +1 to all defense rolls
+- **Enhanced Senses:** You have darkvision to 60 feet and A2 on perception checks
+
 ## Faeja
 
 The Faeja are perhaps the most elusive of all Alaria's races, small jungle dwellers whose bodies are covered in fine, iridescent tendrils that can shift color and texture to match their surroundings perfectly. These delicate beings appear almost fairy-like, with large eyes that reflect light like jewels and voices that sound like wind through leaves.
@@ -1070,6 +1344,33 @@ Where the Sarakiel isolate themselves out of disgust, the Xaphkiel integrate int
 **Passive ability.**
 You have a basic attunement to darkness as a racial feature. When in dim light or darkness, you regenerate 2 hit points at the start of each round. Once per combat, you can wrap yourself in shadows, gaining obscurement for one round (attacks against you have disadvantage, and you have advantage on stealth checks). However, bright light causes you discomfort—you have disadvantage on perception checks in bright light.
 
+## Frialve
+
+The Frialve are a bird-like race residing in the sprawling jungle city of Bygos Shemazari. Their heads are dominated by massive beaks, and their arms are feathered, functioning as stunted wings. Though they cannot truly fly, they are agile jumpers and climbers, using their wings to glide between the massive trees of their homeland.
+
+Their city is a low-density sprawl of nests and tree-homes stretching for hundreds of miles through the jungle canopy. They communicate through complex bird calls that can carry for miles through the forest, allowing them to coordinate hunts and warn of dangers across vast distances. To outsiders, the jungle seems empty—but the Frialve are always watching, always listening.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5-6 feet
+- **Weight:** 80-120 pounds
+
+### Aspects
+
+- The canopy is my home
+- Beak and claw
+
+### Jungle Leap
+
+**Passive ability.**
+Your stunted wings allow you to make incredible leaps and control your descent. You can jump three times the normal distance (both horizontal and vertical), and you take no damage from falling if you are conscious. Additionally, you have a glide speed of 40 feet—for every 10 feet you fall, you can move 40 feet horizontally.
+
+### Mimicry
+
+**Passive ability.**
+You can perfectly imitate any sound you have heard, from animal calls to specific voices. Creatures hearing your mimicry must succeed on a CN 15 Cunning check to recognize it as an imitation. You have A2 on deception checks that involve vocal imitation, and you can communicate simple messages to allies up to 1 mile away using your people's call language.
+
 ## Ghoul
 
 Ghouls are the descendants of servants spawned by ancient, powerful wizards. They were created as butlers, maids, and test subjects, fabricated from the combination of Deoric ritual and a body of the recently deceased, made to serve the wizards. Because of this, ghouls lack any spirit, making them immune to some effects, but incredibly susceptible to Kethic elemental magic. They exert no Kethic presence, meaning there's nothing stopping a water attuned mage from filling a ghoul's lungs with water, or a fire attuned mage from igniting the very skin of a ghoul.
@@ -1111,6 +1412,35 @@ While flesh is a preferred substitute for standard food, you can still consume n
 Gaining oath talents and their destiny levels cost 2 XP less.
 
 As an action, someone with a basic attunement may inflict 10 damage on you, so long as you are within 45 feet. If they have an advanced attunement, they inflict 20 damage instead, and the range increases to 90 feet. With a paragon level attunement, they may inflict 30 damage, and the range increases to 120 feet. The Infuse option from your Soul Eater can prevent creatures with elemental attunement from doing this.
+
+## Giant
+
+Giants are huge, lumbering humanoids of limited intelligence but terrifying strength. They are divided into two main groups: Hill Giants and Gorgers.
+
+**Hill Giants** are sedentary, living in sparsely populated communities where they herd massive sheep and throw boulders at intruders. They are territorial but can be reasoned with if one speaks their simple language and brings enough food.
+
+**Gorgers** are nomadic scavengers, massive engines of consumption that roam the land eating everything in their path—entire herds of cattle, trees, and unlucky travelers. They are universally feared and reviled.
+
+### Vitals
+
+- **Size:** Huge
+- **Height:** 12-16 feet
+- **Weight:** 2000-4000 pounds
+
+### Aspects
+
+- Fee-fi-fo-fum
+- Might makes right
+
+### Massive Strength
+
+**Passive ability.**
+Your strength is legendary. You can wield heavy weapons in one hand without penalty. Your unarmed attacks deal 2d8 bludgeoning damage and can affect structures. You have A2 on all might checks involving lifting, throwing, or breaking objects. When you hit a creature smaller than you with a melee attack, you can push them 10 feet in any direction.
+
+### Tough Skin
+
+**Passive ability.**
+Your skin is like leather armor. You have +2 to all defense rolls against physical attacks. The damage threshold for taking wounds increases by 2 for you (you take wounds from 12+ damage instead of 10+).
 
 ## Gillykin
 
@@ -1171,7 +1501,7 @@ Goshwen's culture of openness and constant change has resulted in numerous fragm
 #### Clever
 
 **Passive ability.**
-You gain the talent as a racial ability (it does not count towards the number of talents you have), along with it's destiny level.
+You gain the Lucky talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level.
 
 ### Ezuri (Tree Gnome)
 
@@ -1203,7 +1533,7 @@ The Foxborne value honor, loyalty, and grace above all else. Their cherry blosso
 #### Vulpine Bond
 
 **Passive ability.**
-You gain a fox as a loyal mount and companion. The fox has the stats of a Beast Companion with d6/d6/d4/d4 abilities, 25 hit points, and a d8 heart die. It can carry you without penalty and has a move speed of 50 feet. If your fox dies, you can bond with a new one after a week of mourning.
+You gain the Beast Companion talent as a racial ability (it does not count towards the number of talents you have). Your companion is a fox with d6/d6/d4/d4 abilities, 25 hit points, a d8 heart die, and a move speed of 50 feet. It can carry you without penalty due to your small size. If your fox dies, you can bond with a new one after a week of mourning.
 
 ### Bloodlings (Vampire Gnome)
 
@@ -1331,6 +1661,27 @@ Your innate connection to the ocean grants you supernatural awareness of the sea
 **Passive ability.**
 Your blue-green skin allows you to blend seamlessly with tropical waters and coastal vegetation. You have A2 on all stealth checks while in coastal environments (beaches, reefs, tidal pools, or dense coastal vegetation). While motionless in shallow water, you are nearly invisible—creatures must succeed on a CN 15 Cunning check to spot you.
 
+### Shyoka Saseidi (Forest Gnome)
+
+The Shyoka Saseidi are forest gnomes who dwell in Nykotheryx Amberylika. While the Luma elves tend the trees, the Shyoka care for the forest's fauna. They live in hidden dens beneath the roots of great pines and wear badger pelts as camouflage, emerging at dawn and dusk to tend to their animal charges.
+
+They are wary of the ancient dragon totems scattered throughout their forest, knowing them to be dangerous remnants of a darker age. Only their priests dare approach these monuments, and even then only during specific celestial alignments. The Shyoka are friends to all burrowing creatures—badgers, rabbits, foxes, and groundhogs consider them kin.
+
+#### Aspects
+
+- Friend of the burrow
+- Guardian of forest creatures
+
+#### Speak with Small Beasts
+
+**Passive ability.**
+You can communicate freely with squirrels, badgers, rabbits, foxes, and other small forest creatures. They recognize you as a friend and will perform small favors—acting as scouts, warning of danger, or leading you to food and water. You have A2 on all checks related to handling, calming, or befriending small animals.
+
+#### Forest Stealth
+
+**Passive ability.**
+You can vanish into the undergrowth with preternatural ease. You can hide even when only lightly obscured by foliage, and you leave no tracks in natural forest environments. You have A2 on stealth checks in forests and woodlands.
+
 ## Goblin
 
 Goblins are born in broods, from a single father and up to hundreds of mothers. A single brood-father may sire thousands of goblin children, who are all raised together, with no knowledge of their specific mother. The brood-father, over the course of his lifetime, will eventually choose exactly one queen, who will mother the next brood-father—the first born son.
@@ -1456,7 +1807,7 @@ Their unique physiology makes them both fascinating and hazardous to be around, 
 #### Static Discharge
 
 **Passive ability.**
-You accumulate static charge throughout combat. At the start of each round, gain 1 charge point (maximum 5). As an action, you may discharge all stored charge, dealing 1d6 lightning damage per charge point to all creatures within 5 feet of you. Creatures wearing metal armor take double damage. You take half the total damage dealt.
+You accumulate static charge throughout combat. At the start of each round, gain 1 charge point (maximum 3). As an action, you may discharge all stored charge, dealing 1d6 lightning damage per charge point to all creatures within 5 feet of you. Creatures wearing metal armor take double damage. You take half the total damage dealt.
 
 ### Mudzwiti
 
@@ -1472,7 +1823,7 @@ Their culture revolves around death and legacy, constructing incredibly elaborat
 #### Raptor Bond
 
 **Passive ability.**
-You have formed a bond with a utahraptor companion. The raptor has the stats of a riding horse but with a climb speed of 20 feet and the ability to make claw attacks (1d8 damage). If your raptor dies, you may spend a week in the jungle to bond with a new one. You have advantage on all checks related to dinosaurs and prehistoric creatures.
+You gain the Beast Companion talent as a racial ability (it does not count towards the number of talents you have). Your companion is a utahraptor with Medium size, a climb speed of 20 feet, and claw attacks (1d8 damage). If your raptor dies, you may spend a week in the jungle to bond with a new one. You have advantage on all checks related to dinosaurs and prehistoric creatures.
 
 ### Spine Goblin
 
@@ -1488,7 +1839,7 @@ These crude and malevolent creatures represent the darkest aspects of goblin nat
 #### Bone Spikes
 
 **Passive ability.**
-Your exposed bones are fitted with sharp metal implements. Whenever a creature grapples you or hits you with an unarmed attack, they take 1d4 piercing damage. You may use your bone spikes as ultralight piercing weapons. When you take damage, you may spend 1 rush point to cause the attacker to take 1d6 piercing damage if they are within 5 feet.
+Your exposed bones are fitted with sharp metal implements. Whenever a creature grapples you or hits you with an unarmed attack, they take 1d4 piercing damage. You may use your bone spikes as ultralight piercing weapons. Additionally, whenever a creature deals damage to you with a melee attack while within 5 feet, they take 1d4 piercing damage from your spikes.
 
 ### Wydling
 
@@ -1528,6 +1879,53 @@ Your tattoos channel your innate fire magic, granting you a basic attunement to 
 
 **Passive ability.**
 Your tattoos and training give you an eidetic memory for text, symbols, and historical facts. You have A2 on all checks related to history, lore, or recalling information you have previously encountered. You can read any language you have spent at least an hour studying, though you cannot speak it without additional training.
+
+### Aciabro
+
+The Aciabro are a unique offshoot of goblin-kind, somewhat related to the Cogheads but distinct in their dark ingenuity. While Cogheads use aether and steam to power their creations, the Aciabro have turned to a more visceral source of energy: their own blood. These "cyborgs" of the goblin world replace their limbs and organs with terrifying machines that run on vital essence, making them formidable but perpetually teetering on the edge of exhaustion.
+
+Specializing in invention that others would deem mad, they live in secluded workshops where the scent of oil and copper is overwhelming. They are driven by an obsessive need to upgrade themselves, viewing flesh as weak and fuel-inefficient.
+
+#### Aspects
+
+- Blood fuels the gear
+- Invention over safety
+
+#### Sanguine Engine
+
+**Passive ability.**
+Your mechanical augmentations are powered by your own life force. As an action, you may spend up to 10 HP to supercharge your systems. For each 2 HP spent, choose one benefit that lasts until the end of your next turn:
+
+- Increase your movement speed by 10 feet
+- Gain +1 to attack rolls
+- Gain +1 to defense rolls
+- Deal +1d4 damage with melee attacks
+
+#### Jerry-Rigged Anatomy
+
+**Major ability.**
+You can quickly repair or modify your mechanical parts in the field. As an action, you may regain HP equal to your heart die roll, or immediately remove the slowed condition from yourself.
+
+### Xibli
+
+The Xibli are an aquatic offshoot of goblins inhabiting the islands around Melrox. They have blue skin, webbed hands and feet, and spiny backs. Unlike their land-bound cousins, they are excellent swimmers who live a semi-aquatic life in the intertidal zones.
+
+They are freedom-loving hedonists who sleep on the beach and party in the waves. While they trade with outsiders, they view anyone who can't hold their breath for five minutes as lesser beings.
+
+#### Aspects
+
+- Slippery as a fish
+- Tide-born
+
+#### Amphibious
+
+**Passive ability.**
+You can breathe air and water equally well. You have a swim speed equal to your movement speed and can see clearly underwater. You suffer no penalties for fighting underwater, and your unarmed attacks deal +1d4 damage while submerged.
+
+#### Slippery Escape
+
+**Passive ability.**
+Your skin secretes a slick coating that makes you difficult to hold. You have A2 on all checks to escape grapples or restraints. Additionally, creatures have D2 on attempts to grapple you.
 
 ## Grayls
 
@@ -2045,6 +2443,189 @@ You can perfectly transform your physical appearance to match any humanoid you h
 
 The transformation takes one minute and lasts until you choose to change again or revert to your true form. You retain all your abilities and statistics while transformed, but gain no special knowledge or memories of the person you're mimicking.
 
+### Bledreon
+
+Residing in the arid lands of Sheîr, the Bledreon are a human culture adapted to the harsh sun and blowing sands. They are instantly recognizable by their dual-lidded eyes—an evolutionary trait that allows them to see clearly even in the fiercest sandstorms. Their skin is typically dark to protect against the sun, and they are known for their endurance and stoicism.
+
+Bledreon culture values preservation and water above all else. They are masters of desert survival, able to find sustenance where others would see only death. Their cities are marvels of cooling architecture, designed to catch the wind and hide from the sun. A Bledreon never wastes water—not a single drop—and they view those who do with barely concealed contempt.
+
+#### Aspects
+
+- The desert provides, if you know how to ask
+- Clear sight in blinding storms
+
+#### Dual-Lid Vision
+
+**Passive ability.**
+Your second set of translucent eyelids protects your eyes from sand, dust, and intense light. You can see perfectly in sandstorms, blizzards, and similar conditions, and you are immune to being blinded by bright light or particulates. You have A2 on perception checks in harsh weather.
+
+#### Heat Endurance
+
+**Passive ability.**
+You are adapted to extreme heat and dehydration. You require half as much water as other humans and suffer no penalties from environments of extreme heat. You have A2 on survival checks in desert environments.
+
+### Gezzerin
+
+The Gezzerin are humans who inhabit the arid Hills of Gezzeri. Their culture has been shaped by two factors: water scarcity and the constant threat of giants. They have evolved—both culturally and physically—to hide. Their bodies retain water with camel-like efficiency, and their skin is covered in ritual scarification that helps them blend into the rocky terrain.
+
+They are masters of guerrilla warfare and stealth, able to vanish into the landscape when a giant's shadow falls over them. Gezzerin children learn to freeze mid-step at the first rumble of approaching footfalls, and their settlements are built into cliff faces and under overhangs where massive hands cannot reach.
+
+#### Aspects
+
+- Hidden from the giants' gaze
+- Water is life
+
+#### Giant-Dodger
+
+**Passive ability.**
+You are an expert at hiding from large creatures. You have A2 on stealth checks against creatures larger than you, and you can attempt to hide even when only lightly obscured.
+
+#### Arid Endurance
+
+**Passive ability.**
+You can survive for weeks with minimal water. You are immune to the effects of dehydration and extreme heat, and you require half the normal amount of water to survive. You have A2 on survival checks in arid environments.
+
+### Inavolin
+
+The Inavolin are a noble human culture from the land of Breia. Distinguished by their bronze skin and shorter stature, they are giants of the sky. They have mastered the art of griffin-riding, forming an elite order of sky knights that protect their mountain homes from aerial threats.
+
+Inavolin society is built on honor and aerial chivalry. They live in high-altitude citadels carved into mountain peaks, and an Inavolin is said to be clumsy on the ground but a dancer in the clouds. Their children learn to ride griffins before they learn to run, and the bond between rider and mount is considered sacred.
+
+#### Aspects
+
+- Sky knight
+- Noble bearing
+
+#### Griffin Bond
+
+**Passive ability.**
+You have a lifelong bond with a griffin mount. The griffin has the statistics of a warhorse but with a fly speed of 80 feet (cannot hover) and a beak attack (1d8 damage). You share a telepathic link with your griffin within 1 mile and can summon it to your side with a whistle (it arrives within 1d4 minutes if within range). If your griffin dies, you may bond with a new one after a month of mourning. You have A2 on all checks related to aerial combat and riding flying creatures.
+
+#### Death from Above
+
+**Major ability.**
+You are trained to fight in three dimensions. When you attack a creature from at least 20 feet above them while mounted on a flying creature, you deal an additional 2d6 damage on a hit. Additionally, ground-based creatures have D2 on attack rolls against you while you are mounted and airborne.
+
+### Qindo
+
+The Qindo are a human culture of sailors and charmers, distinguished by their bluish skin and piercing sapphire eyes. They live life at their own pace, notoriously running "Qindo time" (always late), but their infectious charm means no one stays mad at them for long.
+
+They are masters of the sea and social navigation. A Qindo considers anything not nailed down to be potentially theirs, not out of malice, but out of a communal view of property—a view that conveniently benefits them. Their port cities are chaotic, colorful affairs where the line between merchant and pirate is delightfully blurred.
+
+#### Aspects
+
+- Time is a suggestion
+- Silver tongue
+
+#### Sea Legs
+
+**Passive ability.**
+You are at home on a rocking deck. You cannot be knocked prone by ship movement or rough seas, you have A2 on climbing and balance checks aboard ships, and you suffer no penalties for fighting on an unstable surface.
+
+#### Charismatic Bargain
+
+**Minor ability.**
+You can talk your way out of almost anything. Spend 1 Rush Point to gain A2 on a presence check to persuade, deceive, or negotiate. If you succeed, the target's attitude toward you improves by one step (hostile to unfriendly, unfriendly to neutral, etc.) for the next hour.
+
+### Stone Men
+
+The Stone Men are a reclusive human culture living in the inaccessible peaks of the Wurn Mountains. Their skin is gray and hard as rock, a result of generations of elemental exposure. They are serious, blunt, and pragmatic, valuing action over words.
+
+They herd sheep on perilous cliffs and defend their flocks from mountain lions with their bare hands. To a Stone Man, a problem that cannot be solved by hitting it hard is not a problem worth solving. Their communities are small, isolated, and fiercely independent, welcoming visitors rarely but treating them fairly when they do.
+
+#### Aspects
+
+- Hard as rock
+- Actions speak louder than words
+
+#### Stone Skin
+
+**Passive ability.**
+Your skin provides natural armor, granting you +1 to defense rolls against physical attacks. Your unarmed strikes deal 1d6 bludgeoning damage instead of the normal 1d4, and count as light weapons.
+
+#### Mountain Stride
+
+**Passive ability.**
+You can move across steep cliffs, loose scree, and narrow ledges without slowing down. You ignore difficult terrain caused by rocky or mountainous environments, are immune to altitude sickness and environmental cold, and have A2 on climbing checks.
+
+### Wendi
+
+The Wendi are a fierce human culture defined by their strawberry-blonde hair and their aerial mounts. They ride lesser drakes through the sky, hurling lightning spears at the giants who threaten their lands. They are known for their sass, courage, and flamboyant bravery.
+
+To a Wendi, the ground is just a place to land and refuel; real life happens in the clouds, dodging giant-thrown boulders and diving through thunderstorms. Their warriors compete to see who can pull off the most daring aerial maneuvers, and their festivals feature death-defying sky races.
+
+#### Aspects
+
+- Storm rider
+- Giant slayer
+
+#### Lightning Resistance
+
+**Passive ability.**
+Your exposure to storm magic and high-altitude flights has made you resistant to electricity. You take half damage from lightning attacks and are immune to the stunned condition from electrical sources.
+
+#### Aerial Charge
+
+**Major ability.**
+When mounted on a flying creature and you descend at least 30 feet before attacking, your first attack that round deals an additional 3d6 damage. If the attack hits, the target must make a CN 12 Might saving throw or be knocked prone.
+
+## Kappa
+
+The Kappa are massive, toad-like beings that dominate the criminal underbelly of Moigos. Resembling gigantic, toxic toads, they are often obese and sluggish, preferring to have others do their dirty work. They secrete a constant layer of mucous that keeps their skin moist and makes them slippery to hold.
+
+Despite their appearance, they are shrewd, intelligent, and powerful. They run vast criminal syndicates, acting as mob bosses who trade in secrets, illicit goods, and favors. A Kappa never forgets a debt, and their patience is as vast as their appetites. To cross a Kappa is to invite a slow, methodical destruction of everything you hold dear.
+
+### Vitals
+
+- **Size:** Large
+- **Height:** 5-6 feet (slouching), 7-8 feet (standing)
+- **Weight:** 300-500 pounds
+
+### Aspects
+
+- Crime lord of the swamps
+- Patience is a virtue
+
+### Mucous Skin
+
+**Passive ability.**
+Your skin oozes a slippery, mildly toxic slime. You are immune to poison damage and the poisoned condition. You have A2 on checks to escape grapples, and any creature that grapples you or hits you with an unarmed attack must make a CN 10 Might saving throw or become poisoned for 1 minute, suffering D2 on all checks as the toxin clouds their mind.
+
+### Tongue Lash
+
+**Major ability.**
+Your tongue is a muscular whip that can extend 15 feet. As an action, you can use your tongue to:
+- **Snatch:** Grab an unattended object weighing up to 20 pounds and pull it to your hand
+- **Disarm:** Force a creature to make a CN 12 Might saving throw or drop one item they are holding
+- **Grapple:** Make a grapple attempt against a creature within range. On success, you can pull them 10 feet toward you as part of the grapple
+
+## Karchon
+
+The Karchon are shark-headed humanoids from the Shattered Sea. They possess the rough, sandpaper skin of sharks and rows of serrated teeth that regrow constantly. They are a people of steel will and resolute action—once a Karchon decides on a course, nothing short of death will stop them.
+
+They are feared pirates and naval mercenaries, known for their bloodlust in battle and their cold, efficient demeanor. To a Karchon, hesitation is death. Their societies are built around strength and decisiveness, with leaders earning their positions through combat rather than inheritance. A Karchon who shows weakness is quickly replaced.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5.5-6.5 feet
+- **Weight:** 160-220 pounds
+
+### Aspects
+
+- Cold as the deep
+- Relentless pursuit
+
+### Blood Scent
+
+**Passive ability.**
+You can smell blood from 300 feet away, or up to a mile away if in water. You automatically know the location of any wounded creature within 60 feet. When moving toward a wounded creature, your movement speed increases by 10 feet.
+
+### Shark Bite
+
+**Minor ability.**
+Your jaws are your primary weapon—your bite counts as a light piercing weapon dealing 1d8 damage. When you deal damage with your bite, spend 1 Rush Point to cause the wound to bleed profusely. The target takes 1d4 damage at the start of each of their turns until they or an ally spends an action to staunch the bleeding, or until they receive magical healing.
+
 ## Kendor
 
 The Kendor are an ancient aquatic people whose grace and beauty are matched only by their mastery of courtly intrigue. Evolved from seahorses in the warm tropical seas, they have developed into bipedal beings who can thrive both in water and on land, though they vastly prefer their hidden underwater palaces. Their elongated, elegant forms move with hypnotic fluidity, and their iridescent scales shift color with their moods and intentions.
@@ -2417,6 +2998,41 @@ What the Rentar do not realize is that their "divine guidance" has been corrupte
 **Major ability.**
 Through deep meditation and prayer, you commune with what you believe are divine forces for guidance in difficult situations. Once per day, you may spend 10 minutes in spiritual communion to ask a single yes-or-no question about a course of action you are considering. The GM must answer truthfully.
 
+## Mira
+
+The Mira are a strange, mirror-skinned race with extreme sexual dimorphism and a rigid caste system. Their skin is reflective, like polished chrome or mercury, catching and throwing light in mesmerizing patterns.
+
+- **Males** are huge, hulking brutes with natural armor, serving as soldiers and laborers.
+- **Females** are faceless, slender beings with high magical aptitude, serving as mages and advisors.
+- **Common (Third Gender)** are the balanced leaders, possessing traits of both but ruling over all.
+
+Their society is one of absolute order, with each caste fulfilling their designated role without question. The Mira believe their reflection shows their true soul, and those whose reflection appears distorted are shunned as spiritually corrupt.
+
+### Vitals
+
+- **Size:** Medium (Large for Males)
+- **Height:** Varies by caste
+- **Weight:** Varies by caste
+
+### Aspects
+
+- Reflection of the soul
+- Caste destiny is absolute
+
+### Reflective Skin
+
+**Major ability.**
+Your mirrored skin can turn magic back on its caster. Once per long rest, when a spell or magical effect targets you, you may reflect it back at the source. The original caster becomes the new target of their own spell or effect. Alternatively, you can use this ability to blind all creatures within 30 feet who can see you for 1 round (no save).
+
+### Caste Trait
+
+**Passive ability.**
+Choose your caste at character creation:
+
+- **Male:** Your size is Large. You have +2 to defense rolls against physical attacks and A2 on all Might checks.
+- **Female:** Your size is Medium. You have A2 on all checks involving magic, and elemental talents cost 2 less XP.
+- **Common:** Your size is Medium. You have A2 on all Presence checks and can communicate telepathically with any Mira within 100 feet.
+
 ## Mnurvlyon
 
 The Mnurvlyon are walking contradictions—beings who inherited both the giants' towering height and the dwarves' love of enclosed spaces. Standing over fifteen feet tall with the broad, stocky build of their dwarven ancestry, they are forced to carve enormous halls in their Grey Mountain homes. These gentle giants move with surprising care, having learned through painful experience that the world was not built for their scale.
@@ -2574,6 +3190,27 @@ Your connection to Nagatayora's final rage grants you exceptional resilience and
 - You may breathe fire once per transformation, dealing 2d6 damage in a 10-foot cone
 - You gain a level of advantage on attack rolls agaisnt the source of your aggravation, per level of aggravated.
 
+### Megélren (Shadow Naga)
+
+The Megélren are the black-scaled outcasts of the Naga race. Viewed as treacherous traitors who betrayed the great dragon-father Nagatayora during his final battle against Hykravones, they are universally distrusted by other Naga. In reality, they are simply pragmatic survivors who saw the futility of the ancient war and chose self-preservation over glorious death.
+
+Lithe, clever, and sly, they have adapted to life in the shadows. They are masters of espionage, poison, and assassination, serving as spies and killers for hire across Alaria. A Megélren knows that honor is a comfort for the dead, while the living rely on wit. Their scales are obsidian black, absorbing light rather than reflecting it, and their eyes gleam with calculating intelligence.
+
+#### Aspects
+
+- Betrayer's legacy
+- Survival through cunning
+
+#### Shadow Slip
+
+**Passive ability.**
+You blend into shadows as if you were made of them. You can attempt to hide even when only in dim light, and you have A2 on stealth checks in darkness or shadow. You move silently across any surface, leaving no sound.
+
+#### Poison Affinity
+
+**Minor ability.**
+You have natural resistance to toxins and an innate knowledge of how to brew them. You have A2 on saves against poison. Spend 1 Rush Point to coat your weapon in venom—the next creature you hit must make a CN 12 Might save or become poisoned (D2 on all rolls) for 1 minute.
+
 ## Naruaghin
 
 The Naruaghin are the fierce offspring of dwarven stoicism and draconic fury. These reptilian dwarves inhabit the hill caves and ancient temples throughout the Ishnit Jungle, their gray-green scaled skin and slit noses marking them as something between mammal and reptile. Males grow thick, scaley beards, while females sport impressive spinal ridges instead. Each scale is hard as stone.
@@ -2697,7 +3334,7 @@ The Silzar value their weapons above all else, treating them as sacred objects p
 #### Mammoth Artillery
 
 **Passive ability.**
-You are trained in the ways of mounted siege warfare. You suffer no penalties for firing ranged weapons while moving on a mount, and you can reload heavy ranged weapons (cannons, ballistae, heavy crossbows) as a free action rather than an action. Additionally, you begin play bonded to a war mammoth mount (use the stats of a war horse but with 60 HP, 30 move speed, and a trample attack dealing 2d8 damage). If your mammoth dies, you can bond with a new one after a month of mourning.
+You are trained in the ways of mounted siege warfare. You suffer no penalties for firing ranged weapons while moving on a mount, and you can reload heavy ranged weapons (cannons, ballistae, heavy crossbows) as an interact action rather than a full action. You gain the Beast Companion talent as a racial ability (it does not count towards the number of talents you have). Your companion is a war mammoth with 40 HP, 30 move speed, and a trample attack dealing 1d10 damage. If your mammoth dies, you can bond with a new one after a month of mourning.
 
 ### Groyza (Swamp Ogre)
 
@@ -3087,6 +3724,33 @@ You gain an advanced attunement to air.
 **Passive ability**
 Despite your size, you are unnaturally light. For this reason, your size is small. You take half damage from falling and can jump twice as high and far as normal.
 
+## Rokunuri
+
+The Rokunuri are a terrifying race of predators inhabiting the southern region of Aboyuinzu. At first glance, they appear to be normal humans, allowing them to blend into settlements. However, their true form is revealed when they hunt: their necks can extend up to 15 feet like a constrictor snake, and their mouths house a second row of razor-sharp incisors behind their human teeth.
+
+They are extremely quick, intelligent, and feast on human flesh. A Rokunuri can snap a victim's neck from across a room before anyone realizes they aren't human. They infiltrate communities, living among their prey for months or years before striking, and their victims often never know what killed them.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5-6 feet (normal), +15 feet (neck extension)
+- **Weight:** 120-180 pounds
+
+### Aspects
+
+- Serpent's neck, human face
+- Hidden predator
+
+### Reach Bite
+
+**Major ability.**
+You can extend your neck with blinding speed. Once per round, you can make a bite attack against any creature within 15 feet, regardless of reach. This bite deals 2d6 piercing damage. If the target is smaller than you and you hit, you can choose to grapple them, pulling them adjacent to you. While grappling a creature this way, they take 1d6 damage at the start of each of their turns as you constrict.
+
+### Deceptive Form
+
+**Passive ability.**
+You are a master of disguise. While not extending your neck or using your true bite, you are indistinguishable from a normal human. You have A2 on all checks to pass as human, maintain a false identity, or conceal your true nature. Magical detection of your nature requires a CN 15 check to succeed.
+
 ## Rusalka
 
 The Rusalka are solitary predators of swamps and marshes, appearing as beautiful women who lure travelers to watery graves. These nymph-like creatures possess an uncanny ability to peer into the hearts of their prey, transforming their appearance to match the deepest desires of those they hunt. No two Rusalka look the same, as each shapes herself to be irresistible to her chosen victim.
@@ -3131,20 +3795,52 @@ Normal clothing and armor cannot accommodate their unique physiology, forcing th
 - **Height:** 5-6 feet
 - **Weight:** 100-200 pounds
 
-### Aspects
-
-- Wild and untamed
-- Bloodthirsty reveler
-
 ### Blood Frenzy
 
 **Major ability. Instant.**
 When you kill a creature, you may shower yourself in its blood to enter an uncontrollable frenzy. For the next minute, you have A2 on all attack rolls and cannot choose the defensive stance. You must attack if able, prioritizing the nearest enemy.
 
-### Enchanting Pipes
+### Greater Satyr
+
+The Greater Satyr are a warlike and disciplined evolution of the satyr race. Unlike their hedonistic lesser cousins, the Greater Satyr have organized into a rigid, caste-based society dedicated to conquest. They are physically imposing, standing a full head taller than other satyrs, with larger horns and more muscular builds.
+
+They view war as the ultimate celebration—a festival of strength and dominance. Their armies march to the beat of war-drums and the skirl of pipes, terrifying enemies before the first blow is struck. Where lesser satyrs spread chaos, the Greater Satyr channel that chaos into devastating military force.
+
+#### Aspects
+
+- War is a celebration
+- Caste hierarchy
+
+#### Enchanting Pipes
 
 **Major ability. Full action.**
 You play haunting melodies on your magical pipes. Choose a creature within 60 feet that can hear you. That creature must make a cunning saving throw against your presence challenge number. On a failure, they are charmed by you for the next hour and compelled to dance to your music, giving them D2 on all rolls. The charm immediately ends if you attack them, and they know they were charmed when the effect ends.
+
+#### Horns of War
+
+**Passive ability.**
+Your massive horns are weapons of war. Your horns count as light piercing weapons, and when you move at least 20 feet in a straight line before attacking with them, you deal an additional 1d8 damage and the target must make a Might saving throw against CN 12 or be knocked prone.
+
+### Lesser Satyr
+
+The Lesser Satyr are the feral, chaotic cousins of the Greater Satyr. While their larger kin build armies, the Lesser Satyr spread panic and pandemonium. They are bloodthirsty tricksters, reveling in confusion and fear. Their bodies are leaner, their movements twitchy and frantic, their laughter unsettling.
+
+They are often found in the retinue of dark fey or serving as skirmishers for larger chaotic armies. To a Lesser Satyr, a fair fight is a boring fight—ambush, misdirection, and terror are the tools of their trade.
+
+#### Aspects
+
+- Panic and pandemonium
+- Never fight fair
+
+#### Panic Shriek
+
+**Major ability. Full action.**
+You emit a shrill, magical cackle that induces irrational fear. All creatures within 30 feet that can hear you must make a Presence saving throw against your Presence challenge number. On a failure, they are frightened of you for 1 minute and must use their movement to flee from you. A creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. Once you use this ability, you cannot use it again until you complete a short rest.
+
+#### Deceptive Speed
+
+**Passive ability.**
+You gain the Nimble talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level. Additionally, your move speed increases by 10 feet.
 
 ## Savant
 
@@ -3287,6 +3983,33 @@ Your transformation carries the weight of Shara Bolasi's legendary defiance. Whi
 
 Once per transformation, you may use your action to roar. All hostile creatures within 30 feet must make a cunning saving throw against your presence challenge number or gain a level of frightened. Creatures that fail by 5 or more are also knocked prone by the sheer force of your defiance.
 
+## Shyka
+
+The Shyka are tall, kobold-like reptilians with dragon snouts and reddish-brown scales. They harbor a burning hatred for dwarves, a trait bred into them by their dark patron, Rothogomos. They are fanatically loyal to their god, believing that he devours those who fail to conform to his will.
+
+Wiry and fast, they fight in coordinated packs, overwhelming stronger enemies with sheer numbers and viciousness. Shyka society is strictly hierarchical, with priests of Rothogomos at the top and warriors just below. Those who displease the priesthood are sacrificed to their devouring god in elaborate rituals.
+
+### Vitals
+
+- **Size:** Small
+- **Height:** 4-5 feet
+- **Weight:** 70-100 pounds
+
+### Aspects
+
+- Servant of the Devourer
+- Dwarves must die
+
+### Pack Tactics
+
+**Passive ability.**
+You fight best when your allies are close. You have A2 on attack rolls against a creature if at least one ally is within 5 feet of that creature. Additionally, you and your allies within 5 feet of each other can communicate tactical information as a free action through hisses and gestures that are difficult for outsiders to interpret.
+
+### Draconic Sorcery
+
+**Minor ability.**
+You can channel a spark of Rothogomos's power. Spend 1 Rush Point to breathe a 15-foot cone of fire, dealing 2d6 fire damage to all creatures in the area (CN 12 Agility save for half). Alternatively, spend 1 Rush Point to harden your scales, gaining +2 to defense rolls until the start of your next turn.
+
 ## Skaag
 
 The Skaag, commonly known as "rat people," bear the heads of rats atop humanoid bodies. Their fur ranges from brown to black to gray, with pink tails and constantly twitching whiskers. Large ears swivel independently to track sounds, while their dark, beady eyes dart nervously even in apparent safety. Despite their unsettling appearance, most Skaag dress in typical humanoid clothing, trying desperately to fit in with societies that largely reject them.
@@ -3352,6 +4075,33 @@ Your skin is rough bark. You have +2 to defense rolls against bludgeoning, pierc
 **Minor ability.**
 
 As an action, you may root yourself to the ground. While rooted, you cannot move or be moved by any force, and you have advantage on all might-based rolls. You may uproot yourself as an action.
+
+## Star Hag
+
+Star Hags are ancient, malevolent beings born of starlight. They appear as wizened crones with eyes that shine like distant galaxies. They are hunted across Alaria for their body parts—eyes, claws, and spirits—which are powerful magical ingredients. This persecution has driven them to hate all other races.
+
+They can read the stars to divine the future and use their gaze to pierce a mortal's soul, inflicting spiritual wounds that never fully heal. Star Hags live in isolated towers and cave systems, emerging only at night to hunt or gather components for their strange rituals. They are solitary by nature, viewing even other Star Hags with suspicion.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5-6 feet
+- **Weight:** 100-160 pounds
+
+### Aspects
+
+- Starlight in the blood
+- Hunted for parts
+
+### Star Prophecy
+
+**Passive ability.**
+You can read the movement of the stars to gain insight into future events. Once per day while under an open night sky, you may spend 10 minutes in meditation to ask the GM one question about events that will occur within the next week. The answer will be truthful but cryptic, often requiring interpretation.
+
+### Soul Pierce
+
+**Major ability.**
+You can focus your starlit gaze on a creature within 30 feet. They must make a CN 12 Presence saving throw or take 3d6 psychic damage that ignores armor and physical defenses. This damage cannot be healed by non-magical means—only magical healing or a full week of rest can restore HP lost to this ability. Once you use this ability, you cannot use it again until you complete a long rest.
 
 ## Swordsmen
 
@@ -3511,6 +4261,33 @@ You can breathe underwater, you have a swim speed equal to your move speed, and 
 
 You were trained on how to use a net and trident from a young age. You gain the _Net Master_ talent as a racial ability.
 
+## Troenka
+
+The Troenka are cruel, wood-like beings that inhabit the deep forests of Ichneum and Tenekee. Indistinguishable from trees when they stand still, they ambush travelers not for food, but for the sheer sadistic pleasure of torture. They are strong, intelligent, and view themselves as the forest's punishment on intruders.
+
+A Troenka can stand motionless for days, waiting for a victim to walk beneath its branches before striking. Their bark-like skin is resistant to most weapons, and their root-like tendrils can entangle and crush victims with terrifying strength. Some scholars believe they were once peaceful forest spirits, corrupted by centuries of watching their woods burned and cut.
+
+### Vitals
+
+- **Size:** Large
+- **Height:** 7-9 feet
+- **Weight:** 300-500 pounds
+
+### Aspects
+
+- Forest's malice
+- Patience of the ancient wood
+
+### Tree Form
+
+**Passive ability.**
+As an action, you can take root and become indistinguishable from a normal tree. While in this form, you cannot move but are aware of your surroundings within 60 feet through your roots. You have +4 to defense rolls against all damage while rooted, and you automatically succeed on stealth checks to appear as a normal tree. You can end this form as a free action on your turn.
+
+### Root Strangle
+
+**Major ability.**
+You can animate the roots around you to entrap your enemies. Once per combat, as an action, all creatures within 15 feet of you must make a CN 12 Agility saving throw or become grappled by roots. Grappled creatures take 2d6 bludgeoning damage at the start of each of their turns and can use their action to attempt a CN 12 Might check to break free.
+
 ## Trollkin
 
 Half-breeds and outcasts—trollkin are the unwanted children of humans and trolls. Rare is the troll and human couple, and rarer still is the trollkin child that makes it past the first few months in the world. If not surreptitiously smothered or abandoned in a forest, most trollkin end up in orphanages, where they grow up as outsiders amongst their peers. In troll communities, they are viewed as weak and fragile, and in human communities, they are viewed as too stupid and emotionless to be effective members of society.
@@ -3570,6 +4347,33 @@ Your thick shell provides +2 natural armor defense that stacks with worn armor. 
 
 **Major ability. Instant.**
 Your wounds fuel the strength of your blows. You may use this ability to add a d6 to your next attack roll equal to the number of wounds you have.
+
+## Tykrenv
+
+The Tykrenv are scavengers of the deep desert, humanoid in body but possessing the head and secondary wings of a vulture. They subsist by feeding on the eternally regenerating corpse of a cursed giant god in the desert's heart. This diet of divine, rotten flesh has made them immune to disease and capable of digesting anything organic.
+
+They are patient observers, often circling battles from high above, waiting for the combatants to weaken or die before descending to feast. Tykrenv society revolves around the sacred corpse at the center of their territory—they believe it is their duty to consume the god's flesh and prevent it from rising again.
+
+### Vitals
+
+- **Size:** Medium
+- **Height:** 5-6 feet
+- **Weight:** 90-130 pounds
+
+### Aspects
+
+- Scavenger's patience
+- Carrion feeder divine
+
+### Flight
+
+**Passive ability.**
+Your wings allow you to fly with a fly speed of 40 feet. You cannot hover, and you must move at least half your fly speed each round you remain airborne. You can glide for hours on thermal currents without tiring—while gliding (moving horizontally while descending at least 5 feet per round), you do not need to use your movement to maintain altitude.
+
+### Iron Stomach
+
+**Passive ability.**
+You are immune to all ingested poisons and diseases. You can eat any organic matter—rotten meat, bone, leather, wood, or offal—without ill effect and gain full nourishment from it. You have A2 on all saves against disease from any source, and you can identify whether something is poisonous or diseased by smell alone.
 
 ## Ulvsjael
 
@@ -3641,6 +4445,40 @@ Additionally, while transformed via Wolf's Blood Awakening:
 - You may take the dash action as a free action once per round
 - When you move at least 20 feet toward an enemy and make an attack in the same round, add 1d6 to your attack roll
 - You have advantage on initiative rolls as your predatory instincts alert you to danger
+
+## Wytrolape
+
+The Wytrolape are white-furred giant apes residing in Kyorda. Normally, they are peaceful, intelligent beings who work as laborers in northern tribes. However, they are cursed by the moon. During the "War Moon" (when both moons are dark), they descend into a primal rage, becoming violent and uncontrollable.
+
+They struggle constantly against this inner beast, seeking civilization as a way to tame their own nature. Many Wytrolape become monks, philosophers, or craftsmen, hoping that discipline and routine will help them control the rage within. Despite their efforts, every Wytrolape fears the War Moon—and fears what they might do when it rises.
+
+### Vitals
+
+- **Size:** Large
+- **Height:** 8-9 feet
+- **Weight:** 400-600 pounds
+
+### Aspects
+
+- Moon-cursed rage
+- Gentle giant seeking peace
+
+### Moon Rage
+
+**Passive ability.**
+Under the War Moon (both moons dark, typically 2-3 days per month) or when reduced to below half your maximum HP, you must make a CN 12 Presence save at the start of each of your turns. On a failure, you enter a rage:
+
+- You gain A2 on all attack rolls and might checks
+- Your unarmed attacks deal an additional 1d6 damage
+- You cannot distinguish friend from foe—you attack the nearest creature each round
+- You cannot use abilities that require concentration or careful thought
+
+The rage lasts until all nearby creatures are dead, unconscious, or out of sight, or until you succeed on a CN 15 Presence save (you can attempt this save once per round as a free action).
+
+### Ape Strength
+
+**Passive ability.**
+You have a climb speed equal to your movement speed. You can wield heavy weapons with one hand and throw objects (or willing creatures) up to 60 feet as an action—thrown objects deal 2d6 damage to the target on a hit (Agility save CN 12 to avoid), and willing creatures land safely.
 
 ## Yngli
 
