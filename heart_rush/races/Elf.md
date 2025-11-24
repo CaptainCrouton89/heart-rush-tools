@@ -322,3 +322,66 @@ Your vampiric nature grants you tools to hunt among civilized prey. You possess 
 - When you successfully feed (either through this ability or by dealing damage with a bite attack), you heal hit points equal to your heart die and remove one level of any condition affecting you
 - You have darkvision out to 30 feet, allowing you to hunt in darkness
 - However, you must feed on humanoid blood at least once per week or gain a level of weakened that doesn't fade until you feed
+
+### Xicrein (Island Elf)
+
+The Xicrein are elves of the Bynü Island Tribes, attuned to water and darkness. They have dark features, high cheekbones, and a brooding demeanor that makes other races uneasy in their presence. Their culture is one of polite, silent lethality—clans wage brutal wars against each other using assassination rather than open battle.
+
+They disdain Deoric magic and poison, considering such methods dishonorable. A Xicrein prefers the "honest" kill of an oyster-shell blade across the throat to any trickery. They are master sailors and killers, equally comfortable navigating treacherous island waters or slipping into an enemy's chambers under cover of darkness.
+
+#### Aspects
+
+- Silent kill
+- Clan blood feud
+
+#### Tidal Shadows
+
+**Passive ability.**
+Your connection to water and darkness grants you a basic attunement to both water and dark. Additionally, you have darkvision out to 60 feet, and while in dim light or darkness, you have A2 on stealth checks.
+
+#### First Strike
+
+**Passive ability.**
+When you attack a creature that has not yet acted in the current combat, you deal an additional 2d6 damage. This bonus applies only to your first attack against that creature in the encounter.
+
+### Spindral (Quill Elf)
+
+The Spindral are elves who fled underground to escape the dragon Ural of the Third Moon. Living in perpetual darkness for generations, they have become attuned to the Void and shadow. Their most striking feature is the long, midnight-black quills that sprout from their backs and arms, which seem to absorb all light that touches them.
+
+They venture to the surface only to hunt and keep watch for their ancient draconic enemy. They are silent, deadly, and accustomed to a world without sun. Other underground races have learned to avoid Spindral territory—these elves do not negotiate with trespassers.
+
+#### Aspects
+
+- Void touched
+- The dragon will return
+
+#### Quill Volley
+
+**Major ability.**
+You can flex your muscles to fire a volley of sharp quills from your body. As an action, you launch quills at up to 3 creatures within 30 feet. Make a ranged attack against each target—on a hit, a quill deals 1d6 piercing damage and the target must make a CN 12 Might saving throw or become slowed for 1 minute as numbing void-toxin spreads through their body. Once you use this ability, you cannot use it again until you complete a short rest.
+
+#### Void Sight
+
+**Passive ability.**
+You have a basic attunement to void. You can see perfectly in magical darkness, and you are immune to the blinded condition. Additionally, you can sense void entities and planar disturbances within 60 feet, even through walls.
+
+### Gamori (Jungle Elf)
+
+The Gamori are brutally wild elves who have rejected civilization for the savagery of the deep jungle. With wild, tangled hair and supernatural senses honed by generations of nocturnal hunting, they are the terrors of the canopy. They have formed a symbiotic bond with giant jungle bats, riding them through the night skies on raids against any who dare encroach on their territory.
+
+They are nocturnal hunters who fear the burning sun and worship the moon and the darkness beneath the trees. Their society is matriarchal and fiercely territorial, with each tribe controlling vast swaths of jungle that they patrol from above. To outsiders, the Gamori seem like savage monsters, but among themselves they maintain complex social bonds and oral traditions passed down through generations of moonlit gatherings.
+
+#### Aspects
+
+- Rider of the night sky
+- The jungle belongs to me
+
+#### Bat Bond
+
+**Passive ability.**
+You have a giant bat companion that serves as your mount. The bat has the statistics of a riding horse but with a fly speed of 60 feet (cannot hover) and blindsight out to 60 feet. You can communicate simple concepts with it telepathically within 300 feet. If your bat dies, you may spend a month in the deep jungle to bond with a new one. You have A2 on all checks to handle, calm, or communicate with bats.
+
+#### Echolocation
+
+**Passive ability.**
+Like your bat mount, you can navigate by sound. By making small clicking sounds, you gain blindsight out to 30 feet, allowing you to detect invisible creatures and navigate in total darkness. You have A2 on perception checks that rely on hearing.

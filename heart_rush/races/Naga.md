@@ -65,3 +65,24 @@ Your connection to Nagatayora's final rage grants you exceptional resilience and
 
 - You may breathe fire once per transformation, dealing 2d6 damage in a 10-foot cone
 - You gain a level of advantage on attack rolls agaisnt the source of your aggravation, per level of aggravated.
+
+### Megélren (Shadow Naga)
+
+The Megélren are the black-scaled outcasts of the Naga race. Viewed as treacherous traitors who betrayed the great dragon-father Nagatayora during his final battle against Hykravones, they are universally distrusted by other Naga. In reality, they are simply pragmatic survivors who saw the futility of the ancient war and chose self-preservation over glorious death.
+
+Lithe, clever, and sly, they have adapted to life in the shadows. They are masters of espionage, poison, and assassination, serving as spies and killers for hire across Alaria. A Megélren knows that honor is a comfort for the dead, while the living rely on wit. Their scales are obsidian black, absorbing light rather than reflecting it, and their eyes gleam with calculating intelligence.
+
+#### Aspects
+
+- Betrayer's legacy
+- Survival through cunning
+
+#### Shadow Slip
+
+**Passive ability.**
+You blend into shadows as if you were made of them. You can attempt to hide even when only in dim light, and you have A2 on stealth checks in darkness or shadow. You move silently across any surface, leaving no sound.
+
+#### Poison Affinity
+
+**Minor ability.**
+You have natural resistance to toxins and an innate knowledge of how to brew them. You have A2 on saves against poison. Spend 1 Rush Point to coat your weapon in venom—the next creature you hit must make a CN 12 Might save or become poisoned (D2 on all rolls) for 1 minute.

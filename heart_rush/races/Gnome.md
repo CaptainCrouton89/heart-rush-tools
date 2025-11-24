@@ -27,7 +27,7 @@ Goshwen's culture of openness and constant change has resulted in numerous fragm
 #### Clever
 
 **Passive ability.**
-You gain the talent as a racial ability (it does not count towards the number of talents you have), along with it's destiny level.
+You gain the Lucky talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level.
 
 ### Ezuri (Tree Gnome)
 
@@ -59,7 +59,7 @@ The Foxborne value honor, loyalty, and grace above all else. Their cherry blosso
 #### Vulpine Bond
 
 **Passive ability.**
-You gain a fox as a loyal mount and companion. The fox has the stats of a Beast Companion with d6/d6/d4/d4 abilities, 25 hit points, and a d8 heart die. It can carry you without penalty and has a move speed of 50 feet. If your fox dies, you can bond with a new one after a week of mourning.
+You gain the Beast Companion talent as a racial ability (it does not count towards the number of talents you have). Your companion is a fox with d6/d6/d4/d4 abilities, 25 hit points, a d8 heart die, and a move speed of 50 feet. It can carry you without penalty due to your small size. If your fox dies, you can bond with a new one after a week of mourning.
 
 ### Bloodlings (Vampire Gnome)
 
@@ -165,3 +165,45 @@ Their extreme rarity and prophetic abilities make Whitelings objects of obsessio
 
 **Passive ability.**
 You gain the Oracle talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level. However, your connection to the threads of fate has left your body withered: your maximum hit points start at 25 instead of 40, and increasing your maximum hit points costs 1 additional XP (stacking with the gnomish penalty for 2 total). Additionally, your might die can never be increased above a d6.
+
+### Ansari (Sea Gnome)
+
+The Ansari are a reclusive subrace of gnomes inhabiting the Pelican Isles. Distinguished by their blue-green skin and dark hair, they have adapted perfectly to island life. They are famously wary of outsiders, often retreating into their hidden coastal coves when strange ships approach. However, once trust is earned, they display a warmth and hospitality that rivals the tropical sun of their homeland.
+
+Culturally, they disdain heavy clothing, preferring to go shirtless or wear simple woven grass garments to feel the sea breeze against their skin. They are master navigators of the local archipelagos, reading the waves and wind with an innate sense that baffles mainland sailors.
+
+#### Aspects
+
+- Wary of the horizon
+- Island hospitality
+
+#### Tide Reader
+
+**Passive ability.**
+Your innate connection to the ocean grants you supernatural awareness of the sea's moods. You can accurately predict weather up to 24 hours in advance while near the coast, you have A2 on all navigation checks while at sea, and you can hold your breath for 10 minutes. Additionally, you can sense the depth, current, and approximate distance to shore when submerged in saltwater.
+
+#### Coastal Camouflage
+
+**Passive ability.**
+Your blue-green skin allows you to blend seamlessly with tropical waters and coastal vegetation. You have A2 on all stealth checks while in coastal environments (beaches, reefs, tidal pools, or dense coastal vegetation). While motionless in shallow water, you are nearly invisible—creatures must succeed on a CN 15 Cunning check to spot you.
+
+### Shyoka Saseidi (Forest Gnome)
+
+The Shyoka Saseidi are forest gnomes who dwell in Nykotheryx Amberylika. While the Luma elves tend the trees, the Shyoka care for the forest's fauna. They live in hidden dens beneath the roots of great pines and wear badger pelts as camouflage, emerging at dawn and dusk to tend to their animal charges.
+
+They are wary of the ancient dragon totems scattered throughout their forest, knowing them to be dangerous remnants of a darker age. Only their priests dare approach these monuments, and even then only during specific celestial alignments. The Shyoka are friends to all burrowing creatures—badgers, rabbits, foxes, and groundhogs consider them kin.
+
+#### Aspects
+
+- Friend of the burrow
+- Guardian of forest creatures
+
+#### Speak with Small Beasts
+
+**Passive ability.**
+You can communicate freely with squirrels, badgers, rabbits, foxes, and other small forest creatures. They recognize you as a friend and will perform small favors—acting as scouts, warning of danger, or leading you to food and water. You have A2 on all checks related to handling, calming, or befriending small animals.
+
+#### Forest Stealth
+
+**Passive ability.**
+You can vanish into the undergrowth with preternatural ease. You can hide even when only lightly obscured by foliage, and you leave no tracks in natural forest environments. You have A2 on stealth checks in forests and woodlands.

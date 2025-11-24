@@ -7,6 +7,55 @@ const TALENTS_DIR = "heart_rush/talents";
 const COMBAT_TALENTS_DIR = "heart_rush/talents/combat_talents";
 const NONCOMBAT_TALENTS_DIR = "heart_rush/talents/noncombat_talents";
 const SPELLS_DIR = "heart_rush/talents/spells";
+const WORLDS_SOURCE_DIR = "world-wikis";
+
+// World wiki category configurations
+// Each category can have subdirectories that become their own super-documents
+interface WorldWikiCategoryConfig {
+  sourceDir: string;
+  outputName: string;
+  subdirectories?: {
+    sourceDir: string;
+    outputName: string;
+  }[];
+}
+
+const ALARIA_CATEGORIES: WorldWikiCategoryConfig[] = [
+  {
+    sourceDir: "atlas_of_alaria",
+    outputName: "Atlas_of_Alaria",
+  },
+  {
+    sourceDir: "nations_and_powers",
+    outputName: "Nations_&_Powers",
+  },
+  {
+    sourceDir: "cosmology_and_religion",
+    outputName: "Cosmology_&_Religion",
+    subdirectories: [
+      { sourceDir: "daemons", outputName: "Daemons" },
+    ],
+  },
+  {
+    sourceDir: "history_and_lore",
+    outputName: "History_&_Lore",
+  },
+  {
+    sourceDir: "magic_and_knowledge",
+    outputName: "Magic_&_Knowledge",
+  },
+  {
+    sourceDir: "bestiary",
+    outputName: "Bestiary",
+    subdirectories: [
+      { sourceDir: "dragons", outputName: "Dragons" },
+    ],
+  },
+  {
+    sourceDir: "dramatis_personae",
+    outputName: "Dramatis_Personae",
+  },
+];
 
 export async function combineRaceFiles(): Promise<void> {
   console.log("Combining race files into Kin_&_Culture.md...");
@@ -215,4 +264,138 @@ These talents also may include the tag "ongoing", indicating that the effect las
     console.error("Error combining talent files:", error);
     throw error;
   }
+}
+
+/**
+ * Collects markdown files from a directory (non-recursive, top-level only)
+ */
+async function collectTopLevelMarkdownFiles(dir: string): Promise<string[]> {
+  const markdownFiles: string[] = [];
+
+  try {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+
+    for (const entry of entries) {
+      if (
+        entry.isFile() &&
+        entry.name.endsWith(".md") &&
+        entry.name !== "CLAUDE.md" &&
+        entry.name !== ".claude-md-manager.md"
+      ) {
+        markdownFiles.push(entry.name);
+      }
+    }
+  } catch {
+    // Directory doesn't exist
+  }
+
+  return markdownFiles.sort();
+}
+
+/**
+ * Converts a filename to a display title
+ * e.g., "Zhorheim_Mountains.md" -> "Zhorheim Mountains"
+ */
+function filenameToTitle(filename: string): string {
+  return filename
+    .replace(/\.md$/, "")
+    .replace(/_/g, " ");
+}
+
+/**
+ * Combines markdown files from a directory into a single super-document
+ */
+async function combineDirectoryToSuperDocument(
+  sourceDir: string,
+  outputPath: string,
+  documentTitle: string
+): Promise<number> {
+  const files = await collectTopLevelMarkdownFiles(sourceDir);
+
+  if (files.length === 0) {
+    return 0;
+  }
+
+  let combinedContent = `# ${documentTitle}\n\n`;
+
+  for (const filename of files) {
+    const filePath = path.join(sourceDir, filename);
+    let fileContent = await fs.readFile(filePath, "utf-8");
+
+    // If file already starts with a ## header, use that directly
+    // Otherwise, generate a header from the filename
+    const startsWithH2 = /^##\s+/.test(fileContent.trim());
+
+    if (startsWithH2) {
+      // File already has proper header structure, use as-is
+      combinedContent += fileContent.trim() + "\n\n";
+    } else {
+      // Add header from filename
+      const title = filenameToTitle(filename);
+      combinedContent += `## ${title}\n\n`;
+      combinedContent += fileContent.trim() + "\n\n";
+    }
+  }
+
+  await fs.writeFile(outputPath, combinedContent.trim());
+  return files.length;
+}
+
+/**
+ * Combines all Alaria world wiki files into super-documents in all_sections_formatted/
+ */
+export async function combineAlariaFiles(): Promise<void> {
+  console.log("Combining Alaria world wiki files...");
+
+  const worldDir = path.join(WORLDS_SOURCE_DIR, "alaria");
+  const outputDir = path.join(worldDir, "all_sections_formatted");
+
+  try {
+    await fs.access(worldDir);
+  } catch {
+    console.log("  Alaria world directory not found, skipping");
+    return;
+  }
+
+  // Ensure output directory exists
+  await fs.mkdir(outputDir, { recursive: true });
+
+  for (const category of ALARIA_CATEGORIES) {
+    const categoryPath = path.join(worldDir, category.sourceDir);
+
+    // First, process any subdirectories as separate super-documents
+    if (category.subdirectories) {
+      for (const subdir of category.subdirectories) {
+        const subdirPath = path.join(categoryPath, subdir.sourceDir);
+        const subdirOutputPath = path.join(outputDir, `${subdir.outputName}.md`);
+        const displayTitle = subdir.outputName.replace(/_/g, " ").replace(/&/g, "&");
+
+        const count = await combineDirectoryToSuperDocument(
+          subdirPath,
+          subdirOutputPath,
+          displayTitle
+        );
+
+        if (count > 0) {
+          console.log(`  ✅ Combined ${count} files into ${subdir.outputName}.md`);
+        }
+      }
+    }
+
+    // Then combine top-level files (excluding subdirectories) into main category document
+    const outputPath = path.join(outputDir, `${category.outputName}.md`);
+    const displayTitle = category.outputName.replace(/_/g, " ").replace(/&/g, "&");
+
+    const count = await combineDirectoryToSuperDocument(
+      categoryPath,
+      outputPath,
+      displayTitle
+    );
+
+    if (count > 0) {
+      console.log(`  ✅ Combined ${count} files into ${category.outputName}.md`);
+    }
+  }
+
+  console.log("✅ Alaria file combination complete");
 }

@@ -12,17 +12,49 @@ Normal clothing and armor cannot accommodate their unique physiology, forcing th
 - **Height:** 5-6 feet
 - **Weight:** 100-200 pounds
 
-### Aspects
-
-- Wild and untamed
-- Bloodthirsty reveler
-
 ### Blood Frenzy
 
 **Major ability. Instant.**
 When you kill a creature, you may shower yourself in its blood to enter an uncontrollable frenzy. For the next minute, you have A2 on all attack rolls and cannot choose the defensive stance. You must attack if able, prioritizing the nearest enemy.
 
-### Enchanting Pipes
+### Greater Satyr
+
+The Greater Satyr are a warlike and disciplined evolution of the satyr race. Unlike their hedonistic lesser cousins, the Greater Satyr have organized into a rigid, caste-based society dedicated to conquest. They are physically imposing, standing a full head taller than other satyrs, with larger horns and more muscular builds.
+
+They view war as the ultimate celebration—a festival of strength and dominance. Their armies march to the beat of war-drums and the skirl of pipes, terrifying enemies before the first blow is struck. Where lesser satyrs spread chaos, the Greater Satyr channel that chaos into devastating military force.
+
+#### Aspects
+
+- War is a celebration
+- Caste hierarchy
+
+#### Enchanting Pipes
 
 **Major ability. Full action.**
 You play haunting melodies on your magical pipes. Choose a creature within 60 feet that can hear you. That creature must make a cunning saving throw against your presence challenge number. On a failure, they are charmed by you for the next hour and compelled to dance to your music, giving them D2 on all rolls. The charm immediately ends if you attack them, and they know they were charmed when the effect ends.
+
+#### Horns of War
+
+**Passive ability.**
+Your massive horns are weapons of war. Your horns count as light piercing weapons, and when you move at least 20 feet in a straight line before attacking with them, you deal an additional 1d8 damage and the target must make a Might saving throw against CN 12 or be knocked prone.
+
+### Lesser Satyr
+
+The Lesser Satyr are the feral, chaotic cousins of the Greater Satyr. While their larger kin build armies, the Lesser Satyr spread panic and pandemonium. They are bloodthirsty tricksters, reveling in confusion and fear. Their bodies are leaner, their movements twitchy and frantic, their laughter unsettling.
+
+They are often found in the retinue of dark fey or serving as skirmishers for larger chaotic armies. To a Lesser Satyr, a fair fight is a boring fight—ambush, misdirection, and terror are the tools of their trade.
+
+#### Aspects
+
+- Panic and pandemonium
+- Never fight fair
+
+#### Panic Shriek
+
+**Major ability. Full action.**
+You emit a shrill, magical cackle that induces irrational fear. All creatures within 30 feet that can hear you must make a Presence saving throw against your Presence challenge number. On a failure, they are frightened of you for 1 minute and must use their movement to flee from you. A creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. Once you use this ability, you cannot use it again until you complete a short rest.
+
+#### Deceptive Speed
+
+**Passive ability.**
+You gain the Nimble talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level. Additionally, your move speed increases by 10 feet.

@@ -1,5 +1,14 @@
 import { SectionData } from "./types.js";
 
+function formatTitleFromFilename(filename: string): string {
+  const normalizedPath = filename.replace(/\\/g, "/");
+  const baseName = normalizedPath.substring(normalizedPath.lastIndexOf("/") + 1);
+  return baseName
+    .replace(/\.md$/, "")
+    .replace(/_/g, " ")
+    .replace(/,/g, " &");
+}
+
 export function splitContent(
   content: string,
   filename: string
@@ -21,10 +30,7 @@ export function splitContent(
 
   // If no headers found, create one section from entire content
   if (matches.length === 0) {
-    const mainTitle = filename
-      .replace(/\.md$/, "")
-      .replace(/_/g, " ")
-      .replace(/,/g, " &");
+    const mainTitle = formatTitleFromFilename(filename);
     sections.push({
       title: mainTitle,
       content: content.trim(),
@@ -67,10 +73,7 @@ export function splitContent(
     if (currentMatch.level === 1) {
       // If no content, create a minimal section with the filename-based description
       if (sectionContent.length === 0) {
-        const categoryName = filename
-          .replace(/\.md$/, "")
-          .replace(/_/g, " ")
-          .replace(/,/g, " &");
+        const categoryName = formatTitleFromFilename(filename);
         sectionContent = `This section contains information about ${categoryName.toLowerCase()}.`;
       }
 
@@ -98,10 +101,7 @@ export function splitContent(
   if (matches.length > 0 && matches[0].index > 0) {
     const preHeaderContent = content.slice(0, matches[0].index).trim();
     if (preHeaderContent.length > 0) {
-      const mainTitle = filename
-        .replace(/\.md$/, "")
-        .replace(/_/g, " ")
-        .replace(/,/g, " &");
+      const mainTitle = formatTitleFromFilename(filename);
       sections.unshift({
         title: mainTitle,
         content: preHeaderContent,

@@ -10,18 +10,23 @@ This directory (`heart_rush/`) contains the source markdown files for the Heart 
 
 ### Main Content Areas
 
-- `all_sections_formatted/` - Core rulebook sections (31 files) including character creation, combat, magic systems, equipment, and advancement
-- `races/` - Individual race files (54 files) - each race/culture gets its own markdown file with vitals, aspects, and passive abilities
-- `talents/` - Character abilities organized into three subdirectories (246 total files):
+- `all_sections_formatted/` - Core rulebook sections (33 files) including character creation, combat, magic systems, equipment, and advancement
+- `races/` - Individual race files (112 files) - each race/culture gets its own markdown file with vitals, aspects, and passive abilities
+- `talents/` - Character abilities organized into three subdirectories (262 total files):
   - `combat_talents/` - Martial and combat-focused talents
   - `noncombat_talents/` - Utility and non-combat abilities
   - `spells/` - Elemental magic spells requiring attunement
 - `gm_guide/` - GM-specific content including monster creation, pacing guides, travel guides, and event tables
+- `archive/` - Legacy content and deprecated mechanics (not included in compilations)
+- `maps/` - Map-related content and assets
 
 ### Supporting Files
 
 - `Heart_Rush_Player_Guide.md` - Comprehensive overview of the game system and design philosophy
+- `ideas-for-heart-dice.md` - Design notes and experimental mechanics
 - `ToC.md` - Table of contents reference
+- `GEMINI.md` - AI-specific instructions for Gemini
+- `.claude/` - Local Claude Code configuration
 
 ## Content Architecture
 
@@ -82,7 +87,7 @@ The parent project's `scripts/compile-content.ts` processes these files:
 - Maintain consistent formatting for passive/major/minor ability designations
 - Use markdown formatting (bold, italic, lists) consistently
 - Cross-references should use descriptive link text
-- Files in `all_sections_formatted/CLAUDE.md` should NOT be compiled (excluded via compilation script)
+- Archive files are excluded from compilation (legacy content only)
 
 ## Game System Reference
 

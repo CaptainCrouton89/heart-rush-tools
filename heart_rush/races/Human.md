@@ -286,3 +286,129 @@ Many Shapers struggle with questions of identity, as the ease with which they ca
 You can perfectly transform your physical appearance to match any humanoid you have seen, changing height, build, facial features, skin tone, and even voice. This transformation is not an illusion but a true physical change that can fool even magical detection. However, your distinctive silver eyes never change, always remaining as the one identifying feature that cannot be hidden.
 
 The transformation takes one minute and lasts until you choose to change again or revert to your true form. You retain all your abilities and statistics while transformed, but gain no special knowledge or memories of the person you're mimicking.
+
+### Bledreon
+
+Residing in the arid lands of Sheîr, the Bledreon are a human culture adapted to the harsh sun and blowing sands. They are instantly recognizable by their dual-lidded eyes—an evolutionary trait that allows them to see clearly even in the fiercest sandstorms. Their skin is typically dark to protect against the sun, and they are known for their endurance and stoicism.
+
+Bledreon culture values preservation and water above all else. They are masters of desert survival, able to find sustenance where others would see only death. Their cities are marvels of cooling architecture, designed to catch the wind and hide from the sun. A Bledreon never wastes water—not a single drop—and they view those who do with barely concealed contempt.
+
+#### Aspects
+
+- The desert provides, if you know how to ask
+- Clear sight in blinding storms
+
+#### Dual-Lid Vision
+
+**Passive ability.**
+Your second set of translucent eyelids protects your eyes from sand, dust, and intense light. You can see perfectly in sandstorms, blizzards, and similar conditions, and you are immune to being blinded by bright light or particulates. You have A2 on perception checks in harsh weather.
+
+#### Heat Endurance
+
+**Passive ability.**
+You are adapted to extreme heat and dehydration. You require half as much water as other humans and suffer no penalties from environments of extreme heat. You have A2 on survival checks in desert environments.
+
+### Gezzerin
+
+The Gezzerin are humans who inhabit the arid Hills of Gezzeri. Their culture has been shaped by two factors: water scarcity and the constant threat of giants. They have evolved—both culturally and physically—to hide. Their bodies retain water with camel-like efficiency, and their skin is covered in ritual scarification that helps them blend into the rocky terrain.
+
+They are masters of guerrilla warfare and stealth, able to vanish into the landscape when a giant's shadow falls over them. Gezzerin children learn to freeze mid-step at the first rumble of approaching footfalls, and their settlements are built into cliff faces and under overhangs where massive hands cannot reach.
+
+#### Aspects
+
+- Hidden from the giants' gaze
+- Water is life
+
+#### Giant-Dodger
+
+**Passive ability.**
+You are an expert at hiding from large creatures. You have A2 on stealth checks against creatures larger than you, and you can attempt to hide even when only lightly obscured.
+
+#### Arid Endurance
+
+**Passive ability.**
+You can survive for weeks with minimal water. You are immune to the effects of dehydration and extreme heat, and you require half the normal amount of water to survive. You have A2 on survival checks in arid environments.
+
+### Inavolin
+
+The Inavolin are a noble human culture from the land of Breia. Distinguished by their bronze skin and shorter stature, they are giants of the sky. They have mastered the art of griffin-riding, forming an elite order of sky knights that protect their mountain homes from aerial threats.
+
+Inavolin society is built on honor and aerial chivalry. They live in high-altitude citadels carved into mountain peaks, and an Inavolin is said to be clumsy on the ground but a dancer in the clouds. Their children learn to ride griffins before they learn to run, and the bond between rider and mount is considered sacred.
+
+#### Aspects
+
+- Sky knight
+- Noble bearing
+
+#### Griffin Bond
+
+**Passive ability.**
+You have a lifelong bond with a griffin mount. The griffin has the statistics of a warhorse but with a fly speed of 80 feet (cannot hover) and a beak attack (1d8 damage). You share a telepathic link with your griffin within 1 mile and can summon it to your side with a whistle (it arrives within 1d4 minutes if within range). If your griffin dies, you may bond with a new one after a month of mourning. You have A2 on all checks related to aerial combat and riding flying creatures.
+
+#### Death from Above
+
+**Major ability.**
+You are trained to fight in three dimensions. When you attack a creature from at least 20 feet above them while mounted on a flying creature, you deal an additional 2d6 damage on a hit. Additionally, ground-based creatures have D2 on attack rolls against you while you are mounted and airborne.
+
+### Qindo
+
+The Qindo are a human culture of sailors and charmers, distinguished by their bluish skin and piercing sapphire eyes. They live life at their own pace, notoriously running "Qindo time" (always late), but their infectious charm means no one stays mad at them for long.
+
+They are masters of the sea and social navigation. A Qindo considers anything not nailed down to be potentially theirs, not out of malice, but out of a communal view of property—a view that conveniently benefits them. Their port cities are chaotic, colorful affairs where the line between merchant and pirate is delightfully blurred.
+
+#### Aspects
+
+- Time is a suggestion
+- Silver tongue
+
+#### Sea Legs
+
+**Passive ability.**
+You are at home on a rocking deck. You cannot be knocked prone by ship movement or rough seas, you have A2 on climbing and balance checks aboard ships, and you suffer no penalties for fighting on an unstable surface.
+
+#### Charismatic Bargain
+
+**Minor ability.**
+You can talk your way out of almost anything. Spend 1 Rush Point to gain A2 on a presence check to persuade, deceive, or negotiate. If you succeed, the target's attitude toward you improves by one step (hostile to unfriendly, unfriendly to neutral, etc.) for the next hour.
+
+### Stone Men
+
+The Stone Men are a reclusive human culture living in the inaccessible peaks of the Wurn Mountains. Their skin is gray and hard as rock, a result of generations of elemental exposure. They are serious, blunt, and pragmatic, valuing action over words.
+
+They herd sheep on perilous cliffs and defend their flocks from mountain lions with their bare hands. To a Stone Man, a problem that cannot be solved by hitting it hard is not a problem worth solving. Their communities are small, isolated, and fiercely independent, welcoming visitors rarely but treating them fairly when they do.
+
+#### Aspects
+
+- Hard as rock
+- Actions speak louder than words
+
+#### Stone Skin
+
+**Passive ability.**
+Your skin provides natural armor, granting you +1 to defense rolls against physical attacks. Your unarmed strikes deal 1d6 bludgeoning damage instead of the normal 1d4, and count as light weapons.
+
+#### Mountain Stride
+
+**Passive ability.**
+You can move across steep cliffs, loose scree, and narrow ledges without slowing down. You ignore difficult terrain caused by rocky or mountainous environments, are immune to altitude sickness and environmental cold, and have A2 on climbing checks.
+
+### Wendi
+
+The Wendi are a fierce human culture defined by their strawberry-blonde hair and their aerial mounts. They ride lesser drakes through the sky, hurling lightning spears at the giants who threaten their lands. They are known for their sass, courage, and flamboyant bravery.
+
+To a Wendi, the ground is just a place to land and refuel; real life happens in the clouds, dodging giant-thrown boulders and diving through thunderstorms. Their warriors compete to see who can pull off the most daring aerial maneuvers, and their festivals feature death-defying sky races.
+
+#### Aspects
+
+- Storm rider
+- Giant slayer
+
+#### Lightning Resistance
+
+**Passive ability.**
+Your exposure to storm magic and high-altitude flights has made you resistant to electricity. You take half damage from lightning attacks and are immune to the stunned condition from electrical sources.
+
+#### Aerial Charge
+
+**Major ability.**
+When mounted on a flying creature and you descend at least 30 feet before attacking, your first attack that round deals an additional 3d6 damage. If the attack hits, the target must make a CN 12 Might saving throw or be knocked prone.

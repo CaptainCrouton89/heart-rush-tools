@@ -1,20 +1,46 @@
 {
   "categories": [
     {
-      "name": "Overview",
-      "sections": ["all sections formatted"]
+      "name": "Atlas of Alaria",
+      "icon": "🗺️",
+      "description": "The physical world and its landmarks",
+      "sections": ["Atlas_of_Alaria"]
     },
     {
-      "name": "Geography",
-      "sections": ["geography"]
+      "name": "Nations & Powers",
+      "icon": "👑",
+      "description": "Civilizations and the organizations within them",
+      "sections": ["Nations_&_Powers"]
     },
     {
-      "name": "History",
-      "sections": ["history"]
+      "name": "Cosmology & Religion",
+      "icon": "🌌",
+      "description": "The universe, planes, and divine beings",
+      "sections": ["Cosmology_&_Religion", "Daemons"]
     },
     {
-      "name": "Factions",
-      "sections": ["factions"]
+      "name": "History & Lore",
+      "icon": "📜",
+      "description": "The past events that shaped the world",
+      "sections": ["History_&_Lore"]
+    },
+    {
+      "name": "Magic & Knowledge",
+      "icon": "✨",
+      "description": "How supernatural forces work",
+      "sections": ["Magic_&_Knowledge"]
+    },
+    {
+      "name": "Bestiary",
+      "icon": "🐉",
+      "description": "Non-playable fauna and monsters",
+      "sections": ["Bestiary", "Dragons"]
+    },
+    {
+      "name": "Dramatis Personae",
+      "icon": "👤",
+      "description": "Important individuals",
+      "sections": ["Dramatis_Personae"]
     }
   ]
 }

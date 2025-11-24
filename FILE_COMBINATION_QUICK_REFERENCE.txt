@@ -1,0 +1,341 @@
+================================================================================
+FILE COMBINATION PATTERN - QUICK REFERENCE
+================================================================================
+
+OVERVIEW
+--------
+The Heart Rush content system combines individual files into super-documents
+before processing. This allows maintaining organized source files while
+creating hierarchical documents for compilation.
+
+Flow: Individual Files → Combination Function → Super-Document → Processing
+
+================================================================================
+PATTERN 1: SIMPLE COMBINATION (Races)
+================================================================================
+
+Location: scripts/lib/file-combiners.ts:20-67
+
+Use when: Individual files should be sections in a super-document
+Example: 60 race files → single Kin_&_Culture.md
+
+Algorithm:
+  1. Create main header: "# Title\n\n"
+  2. Read all .md files from source directory
+  3. Sort alphabetically
+  4. Append each file content (trim + double newline)
+  5. Write combined file to output directory
+
+Code Pattern:
+  let combined = "# Kin & Culture\n\n";
+  for (const file of files.sort()) {
+    const content = await fs.readFile(file, "utf-8");
+    combined += content.trim() + "\n\n";
+  }
+  await fs.writeFile(outputPath, combined.trim());
+
+Result:
+  # Kin & Culture
+  ## Race 1
+    ### Subsection
+  ## Race 2
+    ### Subsection
+
+Key Points:
+  ✓ Files already have ## headers (no adjustment)
+  ✓ Simple linear combination
+  ✓ Alphabetical sorting ensures consistency
+  ✓ Clear hierarchy automatically created
+
+================================================================================
+PATTERN 2: MULTI-SECTION COMBINATION (Talents)
+================================================================================
+
+Location: scripts/lib/file-combiners.ts:69-227
+
+Use when: Multiple directories → sections in single super-document
+Example: 3 directories (combat, noncombat, spells) → single Talents.md
+
+Algorithm:
+  1. Create main header + intro text
+  2. For each section:
+     a. Add section header ("## Section Name")
+     b. Add section description
+     c. Read all files from subdirectory
+     d. Adjust header levels (## → ##)
+     e. Append adjusted content
+  3. Write combined file
+
+Code Pattern:
+  let combined = "# Talents\n\n[intro]\n\n";
+  combined += "## Combat Talents\n\n";
+  
+  for (const file of combatFiles.sort()) {
+    const content = await fs.readFile(file, "utf-8");
+    const adjusted = content.replace(/^## /gm, "### ");
+    combined += adjusted.trim() + "\n\n";
+  }
+  
+  combined += "## Noncombat Talents\n\n";
+  // ... repeat for other sections ...
+
+Result:
+  # Talents
+  [intro]
+  ## Combat Talents
+    ### Talent 1
+    ### Talent 2
+  ## Noncombat Talents
+    ### Talent 1
+  ## Elemental Talents
+    ### Spell 1
+
+Key Points:
+  ✓ Header level adjustment: replace /^## /gm with "### "
+  ✓ Intermediate section descriptions
+  ✓ Multiple subdirectories in one file
+  ✓ Graceful handling of missing directories
+
+================================================================================
+PATTERN 3: RECURSIVE WORLD WIKI COMBINATION
+================================================================================
+
+Location: scripts/lib/file-combiners.ts:256-309
+
+Use when: World wiki category with nested subdirectories
+Example: bestiary/daemons/ with 157 files → Daemons.md
+
+Algorithm:
+  1. Recursively collect all .md files from category directory
+  2. Create category header from directory name
+  3. For each file:
+     a. Extract filename without .md extension
+     b. Create ## header from filename (replace _ with spaces)
+     c. Append file content
+  4. Write combined file to world root (not in category directory)
+  5. Return path for cleanup
+
+Code Pattern:
+  function recursivelyCollectMarkdownFiles(dir, basePath = "") {
+    for (const entry of readdir(dir)) {
+      if (entry.isDirectory()) {
+        subFiles = recursivelyCollectMarkdownFiles(entry);
+        files.push(...subFiles);
+      } else if (entry.name.endsWith(".md")) {
+        files.push(entry);
+      }
+    }
+    return files;
+  }
+
+  const files = await recursivelyCollectMarkdownFiles(categoryPath);
+  let combined = `# ${displayName}\n\n`;
+  for (const file of files.sort()) {
+    const content = await fs.readFile(file, "utf-8");
+    const name = basename(file, ".md").replace(/_/g, " ");
+    combined += `## ${name}\n\n${content.trim()}\n\n`;
+  }
+  await fs.writeFile(outputPath, combined);
+
+Result:
+  # Bestiary
+  ## Dragon
+    [content]
+  ## Goblin
+    [content]
+  ## Orc
+    [content]
+
+Key Points:
+  ✓ Recursive file collection handles nested directories
+  ✓ Creates headers from filenames
+  ✓ Output written to world root (not category)
+  ✓ Returns path for cleanup
+  ✓ Already used for Alaria: nations, atlas, dramatis_personae, bestiary
+
+================================================================================
+INTEGRATION WITH COMPILATION PIPELINE
+================================================================================
+
+For Heart Rush Content (compile-content.ts:42-50):
+  
+  1. compilePlayerContent() called
+  2. combineRaceFiles() ← Creates Kin_&_Culture.md
+  3. combineTalentFiles() ← Creates Talents.md
+  4. Main processing pipeline reads all files from all_sections_formatted/
+  5. Combined files processed like any other file
+  6. splitContent() splits by headers → individual sections
+  7. Each section → JSON file with metadata
+
+For World Wiki Content (compile-content.ts:333-531):
+  
+  1. compileWorldWiki("alaria") called
+  2. combineWorldWikiFiles("alaria") called ← Combines categories
+  3. Marks which directories were combined (skips them in file search)
+  4. findMarkdownFiles() skips combined directories
+  5. Reads combined files from world root instead
+  6. Normal processing: splitContent() → sections → JSON
+  7. cleanupCombinedWorldFiles() deletes temporary combined files
+
+================================================================================
+APPLYING TO ALARIA DAEMONS (Current Status)
+================================================================================
+
+Current System Supports:
+  ✓ nations_and_powers/
+  ✓ atlas_of_alaria/
+  ✓ dramatis_personae/
+  ✓ bestiary/
+
+To Add Daemons:
+
+  1. Create directory:
+     world-wikis/alaria/bestiary/daemons/
+     
+  2. Add individual daemon files:
+     Daemon_1.md, Daemon_2.md, ...
+     
+  3. Update file-combiners.ts line 13-18:
+     
+     const WORLD_WIKI_COMBINABLE_DIRS = [
+       "nations_and_powers",
+       "atlas_of_alaria",
+       "dramatis_personae",
+       "bestiary",
+       "daemons"  ← ADD THIS LINE
+     ];
+     
+  4. Run compilation:
+     pnpm run compile-content
+     
+  5. Result:
+     ✓ Daemons.md created (temporary)
+     ✓ All daemon sections compiled to JSON
+     ✓ Appears in world wiki navigation
+     ✓ Individual daemon pages accessible
+     ✓ Temporary file cleaned up
+
+No additional code needed. The existing system handles everything.
+
+================================================================================
+KEY CODE LOCATIONS
+================================================================================
+
+File Combination Functions:
+  combineRaceFiles()              scripts/lib/file-combiners.ts:20-67
+  combineTalentFiles()            scripts/lib/file-combiners.ts:69-227
+  combineWorldWikiCategory()      scripts/lib/file-combiners.ts:256-309
+  combineWorldWikiFiles()         scripts/lib/file-combiners.ts:311-339
+  recursivelyCollectMarkdownFiles() scripts/lib/file-combiners.ts:229-254
+
+Integration Points:
+  compilePlayerContent()          scripts/compile-content.ts:42-199
+  compileWorldWiki()              scripts/compile-content.ts:333-531
+  compileAllWorldWikis()          scripts/compile-content.ts:534-572
+  
+Processing:
+  splitContent()                  scripts/lib/content-processors.ts
+  createCategorizedNavigation()   scripts/lib/navigation-builder.ts
+
+================================================================================
+IMPORTANT DETAILS
+================================================================================
+
+1. Alphabetical Sorting
+   - All combinations sort files alphabetically
+   - Ensures consistent ordering
+   - Important for reproducibility
+
+2. Header Levels
+   - Individual files: ## (level 2)
+   - Combined file parent: # (level 1)
+   - Adjust to ### if nested under section headers
+   - Pattern: talent files have ## → adjust to ###
+
+3. File Filtering
+   - Skip: CLAUDE.md, .claude-md-manager.md
+   - Include: All other .md files
+   - Recursive search includes subdirectories
+
+4. Output Location
+   - Heart Rush: all_sections_formatted/ (stays in git)
+   - World Wiki: world root (deleted after processing)
+   - Decision: Whether combined file is temporary or permanent
+
+5. Cleanup
+   - World wiki combined files deleted via cleanupCombinedWorldFiles()
+   - Heart Rush combined files intentionally kept
+   - Allows tracking merged documents in git history
+
+6. Cross-References
+   - Slugs generated from section titles
+   - Links updated during processing
+   - Navigation tree maintains relationships
+
+================================================================================
+TESTING CHECKLIST
+================================================================================
+
+For new combination (e.g., daemons):
+
+  [ ] Directory exists with markdown files
+  [ ] Directory added to combinable list
+  [ ] Compilation runs without errors
+  [ ] Combined file created (visible during run)
+  [ ] JSON sections generated
+  [ ] navigation.json includes new category
+  [ ] index.json includes all items
+  [ ] Development server starts
+  [ ] New category appears in UI
+  [ ] Individual items accessible
+  [ ] Search finds new items
+  [ ] Cross-references work
+  [ ] Temporary files cleaned up
+
+================================================================================
+DESIGN PRINCIPLES
+================================================================================
+
+1. Separation of Concerns
+   Source: Individual files (editable, organized)
+   Combination: Super-documents (processing format)
+   Output: JSON (app format)
+
+2. Hierarchical Structure
+   File system organization → markdown hierarchy → JSON tree
+
+3. Declarative Configuration
+   Combinable directories list determines what gets combined
+   Easy to add/remove categories
+
+4. Scalability
+   System handles 300+ files (Heart Rush) + 400+ files (Alaria)
+   Same code works for any directory structure
+
+5. Maintainability
+   Individual files stay manageable (1 file per entity)
+   No need to edit giant combined documents
+   Clear separation of concerns
+
+================================================================================
+FURTHER READING
+================================================================================
+
+Detailed Investigation Documents:
+  docs/investigations/SUMMARY.md                          6 KB
+  docs/investigations/content-combination-pattern.md      12 KB
+  docs/investigations/file-combination-code-patterns.md   16 KB
+  docs/investigations/alaria-daemon-implementation-guide.md 11 KB
+
+Reference Documents:
+  CONTENT_COMBINATION_PATTERNS.md                         In repo root
+  FILE_COMBINATION_QUICK_REFERENCE.txt                    This file
+
+Source Code:
+  scripts/lib/file-combiners.ts                           339 lines
+  scripts/compile-content.ts                              601 lines
+  scripts/lib/content-processors.ts                       ~500 lines
+
+================================================================================
+END OF QUICK REFERENCE
+================================================================================

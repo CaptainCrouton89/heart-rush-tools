@@ -1310,6 +1310,27 @@ Their extreme rarity and prophetic abilities make Whitelings objects of obsessio
 **Passive ability.**
 You gain the Oracle talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level. However, your connection to the threads of fate has left your body withered: your maximum hit points start at 25 instead of 40, and increasing your maximum hit points costs 1 additional XP (stacking with the gnomish penalty for 2 total). Additionally, your might die can never be increased above a d6.
 
+### Ansari (Sea Gnome)
+
+The Ansari are a reclusive subrace of gnomes inhabiting the Pelican Isles. Distinguished by their blue-green skin and dark hair, they have adapted perfectly to island life. They are famously wary of outsiders, often retreating into their hidden coastal coves when strange ships approach. However, once trust is earned, they display a warmth and hospitality that rivals the tropical sun of their homeland.
+
+Culturally, they disdain heavy clothing, preferring to go shirtless or wear simple woven grass garments to feel the sea breeze against their skin. They are master navigators of the local archipelagos, reading the waves and wind with an innate sense that baffles mainland sailors.
+
+#### Aspects
+
+- Wary of the horizon
+- Island hospitality
+
+#### Tide Reader
+
+**Passive ability.**
+Your innate connection to the ocean grants you supernatural awareness of the sea's moods. You can accurately predict weather up to 24 hours in advance while near the coast, you have A2 on all navigation checks while at sea, and you can hold your breath for 10 minutes. Additionally, you can sense the depth, current, and approximate distance to shore when submerged in saltwater.
+
+#### Coastal Camouflage
+
+**Passive ability.**
+Your blue-green skin allows you to blend seamlessly with tropical waters and coastal vegetation. You have A2 on all stealth checks while in coastal environments (beaches, reefs, tidal pools, or dense coastal vegetation). While motionless in shallow water, you are nearly invisible—creatures must succeed on a CN 15 Cunning check to spot you.
+
 ## Goblin
 
 Goblins are born in broods, from a single father and up to hundreds of mothers. A single brood-father may sire thousands of goblin children, who are all raised together, with no knowledge of their specific mother. The brood-father, over the course of his lifetime, will eventually choose exactly one queen, who will mother the next brood-father—the first born son.
@@ -1484,8 +1505,29 @@ Those Wydlings who venture south often find work as guides through mountain pass
 
 #### Frostbite
 
-**Passive ability.**  
+**Passive ability.**
 Your icy heritage grants you several adaptations. You are immune to the effects of freezing temperatures and take half damage from cold-based attacks. Your razor-sharp teeth count as ultralight piercing melee weapons. Additionally, when you deal damage with your bite, the bitten creature gains 2 level of slowed as numbing cold spreads from your icy fangs.
+
+### Stravlar
+
+The Stravlar are a sophisticated goblin subrace marked by extensive, embossed tattoos that cover their bodies. Their skin is either yellow with red tattoos or red with yellow tattoos—scholars still argue over which is the base color. These tattoos are not mere decoration but a living record of their family's history and achievements, inked with crushed mussel shells infused with fire magic.
+
+They are fire-attuned scholars, merchants, and guild leaders who value knowledge and preservation above all else. A Stravlar treats physical scarring as a tragedy greater than death, for it erases their history. Their communities maintain vast oral and visual libraries, with the eldest members serving as living encyclopedias whose skin tells the stories of generations.
+
+#### Aspects
+
+- My skin is my story
+- Fire in the ink
+
+#### Ember Skin
+
+**Passive ability.**
+Your tattoos channel your innate fire magic, granting you a basic attunement to fire. Additionally, your inked skin can flare with protective heat—when a creature grapples you or hits you with an unarmed attack, they take 1d4 fire damage. You can suppress or activate this heat at will.
+
+#### Living Record
+
+**Passive ability.**
+Your tattoos and training give you an eidetic memory for text, symbols, and historical facts. You have A2 on all checks related to history, lore, or recalling information you have previously encountered. You can read any language you have spent at least an hour studying, though you cannot speak it without additional training.
 
 ## Grayls
 
@@ -2623,6 +2665,55 @@ Your five head tentacles can manipulate objects with surprising precision and in
 
 **Passive ability.**
 Your deep connection to the sea grants you uncanny insight into both natural and social currents. You automatically succeed on navigation checks while at sea or following coastlines. Additionally, you have advantage on skill checks to predict weather, read people's intentions, or sense when someone is lying to you.
+
+## Ogre
+
+Ogres are massive, powerful greenskins standing around seven to eight feet tall with small tusks and hairy bodies. Unlike the dull-witted giants they are sometimes confused with, ogres possess complex emotions and keen senses, though they are often ruled by their passions. An ogre's rage is legendary, but so is their capacity for loyalty and love.
+
+Culturally, ogres mate for life but live in separate tribes divided by gender, reuniting only during mating seasons and festivals. They are deeply connected to nature and their tribal bonds, with elaborate rituals governing interactions between tribes. An ogre without a tribe is considered pitiable—a creature without purpose or protection.
+
+### Vitals
+
+- **Size:** Large
+- **Height:** 7-8 feet
+- **Weight:** 300-400 pounds
+
+### Primal Senses
+
+**Passive ability.**
+Your senses are primal and sharp. You can track creatures by scent, detecting their presence within 30 feet even through obstacles. You have A2 on perception checks to detect hidden creatures, and you cannot be surprised while conscious.
+
+### Silzar (Plains Ogre)
+
+The Silzar are nomadic ogres who have mastered the art of mounted warfare on massive war mammoths. They roam the plains of Silwyn, their mounts serving as mobile artillery platforms mounted with massive cannons and ballistae. Gruff and patriarchal, they adhere to a strict code of honor that governs their nomadic lives.
+
+The Silzar value their weapons above all else, treating them as sacred objects passed down through generations. A Silzar's cannon has a name, a history, and is considered an extension of the warrior's soul. To lose one's weapon to an enemy is a shame that can only be cleansed by reclaiming it or dying in the attempt.
+
+#### Aspects
+
+- Mobile artillery
+- Code of the plains
+
+#### Mammoth Artillery
+
+**Passive ability.**
+You are trained in the ways of mounted siege warfare. You suffer no penalties for firing ranged weapons while moving on a mount, and you can reload heavy ranged weapons (cannons, ballistae, heavy crossbows) as a free action rather than an action. Additionally, you begin play bonded to a war mammoth mount (use the stats of a war horse but with 60 HP, 30 move speed, and a trample attack dealing 2d8 damage). If your mammoth dies, you can bond with a new one after a month of mourning.
+
+### Groyza (Swamp Ogre)
+
+The Groyza are swamp-dwelling ogres who have adapted to the murky waters and dense vegetation of the southern marshlands. Their skin has taken on a greenish-brown mottled pattern that blends perfectly with their boggy homes, and their bodies have grown slightly leaner than their plains cousins—though still massive by any other race's standards.
+
+The Groyza are master ambush predators, using the swamp's natural concealment to surprise prey and enemies alike. They are also skilled herbalists, brewing potent poisons and medicines from the unique flora of their wetland homes. Other races approach Groyza territory with extreme caution, for the swamps are full of hidden dangers—and the ogres are often the least of them.
+
+#### Aspects
+
+- The swamp provides
+- Patient as a crocodile
+
+#### Bog Stalker
+
+**Passive ability.**
+You are perfectly adapted to swamp environments. You can move through difficult terrain caused by mud, water, or vegetation without penalty, and you can hold your breath for up to 30 minutes. While in swamp or wetland terrain, you have A2 on stealth checks and your first attack against a creature that hasn't acted in combat deals an additional 1d8 damage.
 
 ## Orc
 

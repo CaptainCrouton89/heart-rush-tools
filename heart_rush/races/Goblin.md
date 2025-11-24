@@ -123,7 +123,7 @@ Their unique physiology makes them both fascinating and hazardous to be around, 
 #### Static Discharge
 
 **Passive ability.**
-You accumulate static charge throughout combat. At the start of each round, gain 1 charge point (maximum 5). As an action, you may discharge all stored charge, dealing 1d6 lightning damage per charge point to all creatures within 5 feet of you. Creatures wearing metal armor take double damage. You take half the total damage dealt.
+You accumulate static charge throughout combat. At the start of each round, gain 1 charge point (maximum 3). As an action, you may discharge all stored charge, dealing 1d6 lightning damage per charge point to all creatures within 5 feet of you. Creatures wearing metal armor take double damage. You take half the total damage dealt.
 
 ### Mudzwiti
 
@@ -139,7 +139,7 @@ Their culture revolves around death and legacy, constructing incredibly elaborat
 #### Raptor Bond
 
 **Passive ability.**
-You have formed a bond with a utahraptor companion. The raptor has the stats of a riding horse but with a climb speed of 20 feet and the ability to make claw attacks (1d8 damage). If your raptor dies, you may spend a week in the jungle to bond with a new one. You have advantage on all checks related to dinosaurs and prehistoric creatures.
+You gain the Beast Companion talent as a racial ability (it does not count towards the number of talents you have). Your companion is a utahraptor with Medium size, a climb speed of 20 feet, and claw attacks (1d8 damage). If your raptor dies, you may spend a week in the jungle to bond with a new one. You have advantage on all checks related to dinosaurs and prehistoric creatures.
 
 ### Spine Goblin
 
@@ -155,7 +155,7 @@ These crude and malevolent creatures represent the darkest aspects of goblin nat
 #### Bone Spikes
 
 **Passive ability.**
-Your exposed bones are fitted with sharp metal implements. Whenever a creature grapples you or hits you with an unarmed attack, they take 1d4 piercing damage. You may use your bone spikes as ultralight piercing weapons. When you take damage, you may spend 1 rush point to cause the attacker to take 1d6 piercing damage if they are within 5 feet.
+Your exposed bones are fitted with sharp metal implements. Whenever a creature grapples you or hits you with an unarmed attack, they take 1d4 piercing damage. You may use your bone spikes as ultralight piercing weapons. Additionally, whenever a creature deals damage to you with a melee attack while within 5 feet, they take 1d4 piercing damage from your spikes.
 
 ### Wydling
 
@@ -172,5 +172,73 @@ Those Wydlings who venture south often find work as guides through mountain pass
 
 #### Frostbite
 
-**Passive ability.**  
+**Passive ability.**
 Your icy heritage grants you several adaptations. You are immune to the effects of freezing temperatures and take half damage from cold-based attacks. Your razor-sharp teeth count as ultralight piercing melee weapons. Additionally, when you deal damage with your bite, the bitten creature gains 2 level of slowed as numbing cold spreads from your icy fangs.
+
+### Stravlar
+
+The Stravlar are a sophisticated goblin subrace marked by extensive, embossed tattoos that cover their bodies. Their skin is either yellow with red tattoos or red with yellow tattoos—scholars still argue over which is the base color. These tattoos are not mere decoration but a living record of their family's history and achievements, inked with crushed mussel shells infused with fire magic.
+
+They are fire-attuned scholars, merchants, and guild leaders who value knowledge and preservation above all else. A Stravlar treats physical scarring as a tragedy greater than death, for it erases their history. Their communities maintain vast oral and visual libraries, with the eldest members serving as living encyclopedias whose skin tells the stories of generations.
+
+#### Aspects
+
+- My skin is my story
+- Fire in the ink
+
+#### Ember Skin
+
+**Passive ability.**
+Your tattoos channel your innate fire magic, granting you a basic attunement to fire. Additionally, your inked skin can flare with protective heat—when a creature grapples you or hits you with an unarmed attack, they take 1d4 fire damage. You can suppress or activate this heat at will.
+
+#### Living Record
+
+**Passive ability.**
+Your tattoos and training give you an eidetic memory for text, symbols, and historical facts. You have A2 on all checks related to history, lore, or recalling information you have previously encountered. You can read any language you have spent at least an hour studying, though you cannot speak it without additional training.
+
+### Aciabro
+
+The Aciabro are a unique offshoot of goblin-kind, somewhat related to the Cogheads but distinct in their dark ingenuity. While Cogheads use aether and steam to power their creations, the Aciabro have turned to a more visceral source of energy: their own blood. These "cyborgs" of the goblin world replace their limbs and organs with terrifying machines that run on vital essence, making them formidable but perpetually teetering on the edge of exhaustion.
+
+Specializing in invention that others would deem mad, they live in secluded workshops where the scent of oil and copper is overwhelming. They are driven by an obsessive need to upgrade themselves, viewing flesh as weak and fuel-inefficient.
+
+#### Aspects
+
+- Blood fuels the gear
+- Invention over safety
+
+#### Sanguine Engine
+
+**Passive ability.**
+Your mechanical augmentations are powered by your own life force. As an action, you may spend up to 10 HP to supercharge your systems. For each 2 HP spent, choose one benefit that lasts until the end of your next turn:
+
+- Increase your movement speed by 10 feet
+- Gain +1 to attack rolls
+- Gain +1 to defense rolls
+- Deal +1d4 damage with melee attacks
+
+#### Jerry-Rigged Anatomy
+
+**Major ability.**
+You can quickly repair or modify your mechanical parts in the field. As an action, you may regain HP equal to your heart die roll, or immediately remove the slowed condition from yourself.
+
+### Xibli
+
+The Xibli are an aquatic offshoot of goblins inhabiting the islands around Melrox. They have blue skin, webbed hands and feet, and spiny backs. Unlike their land-bound cousins, they are excellent swimmers who live a semi-aquatic life in the intertidal zones.
+
+They are freedom-loving hedonists who sleep on the beach and party in the waves. While they trade with outsiders, they view anyone who can't hold their breath for five minutes as lesser beings.
+
+#### Aspects
+
+- Slippery as a fish
+- Tide-born
+
+#### Amphibious
+
+**Passive ability.**
+You can breathe air and water equally well. You have a swim speed equal to your movement speed and can see clearly underwater. You suffer no penalties for fighting underwater, and your unarmed attacks deal +1d4 damage while submerged.
+
+#### Slippery Escape
+
+**Passive ability.**
+Your skin secretes a slick coating that makes you difficult to hold. You have A2 on all checks to escape grapples or restraints. Additionally, creatures have D2 on attempts to grapple you.

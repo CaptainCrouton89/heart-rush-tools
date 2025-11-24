@@ -68,6 +68,12 @@ tasks/
 # Generated content directory
 /content/
 
+# Combined world wiki files (generated artifacts)
+world-wikis/**/Nations?And?Powers.md
+world-wikis/**/Atlas?Of?Alaria.md
+world-wikis/**/Dramatis?Personae.md
+world-wikis/**/Bestiary.md
+
 # Investigation and temporary docs
 /docs/
 

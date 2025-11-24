@@ -1,0 +1,5 @@
+## Liches
+
+Tags: creature
+
+A lich is a being that has split its spirit in two, and usually, is using another being’s soul and shadow to remain alive. By binding a piece of its spirit to an object, it can survive death by transferring to the spirit saved in the object. This has the effect of fragmenting the spirit more and more times with subsequent deaths, causing the lich to fade more and more from any sense of humanity. On top of this, the soul and shadow must be replenished with each new iteration, usually requiring taking the life of another being of similar strength.

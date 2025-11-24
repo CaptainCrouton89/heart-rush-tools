@@ -10,6 +10,16 @@ import { generateCategorySlug } from "./utils.js";
 const CATEGORIES_CONFIG_PATH = "navigation-categories.json";
 const GM_CATEGORIES_CONFIG_PATH = "gm-navigation-categories.json";
 
+function normalizeCategoryName(name: string | undefined): string {
+  if (!name) return "";
+  return name
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export async function loadNavigationCategories(
   configPath: string = CATEGORIES_CONFIG_PATH
 ): Promise<NavigationCategory[]> {
@@ -88,7 +98,7 @@ export function createCategorizedNavigation(
 
   // Group sections by their base filename (category)
   for (const section of sections) {
-    const key = section.category;
+    const key = normalizeCategoryName(section.category);
     if (!sectionMap.has(key)) {
       sectionMap.set(key, []);
     }
@@ -108,9 +118,10 @@ export function createCategorizedNavigation(
 
     // Add sections for this category in the specified order
     for (const sectionKey of category.sections) {
-      const sectionsForKey = sectionMap.get(
+      const normalizedKey = normalizeCategoryName(
         sectionKey.replace(/_/g, " ").replace(/,/g, " &")
       );
+      const sectionsForKey = sectionMap.get(normalizedKey);
       if (sectionsForKey) {
         // Create navigation tree for this section group
         const navigationMap = new Map<string, CategorizedNavigationItem>();
@@ -147,12 +158,14 @@ export function createCategorizedNavigation(
   // Add any uncategorized sections
   const categorizedSectionKeys = new Set(
     categories.flatMap((cat) =>
-      cat.sections.map((s) => s.replace(/_/g, " ").replace(/,/g, " &"))
+      cat.sections.map((s) =>
+        normalizeCategoryName(s.replace(/_/g, " ").replace(/,/g, " &"))
+      )
     )
   );
 
   const uncategorizedSections = sections.filter(
-    (section) => !categorizedSectionKeys.has(section.category)
+    (section) => !categorizedSectionKeys.has(normalizeCategoryName(section.category))
   );
 
   if (uncategorizedSections.length > 0) {

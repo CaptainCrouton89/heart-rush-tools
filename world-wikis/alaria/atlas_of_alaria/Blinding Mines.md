@@ -1,0 +1,5 @@
+## Blinding Mines
+
+Tags: mines, poi, hazard
+
+Mines filled with crystals of pure light. However, susceptible to teleporting around in the mines, leading to getting lost and other very dangerous situations.

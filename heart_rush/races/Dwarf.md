@@ -31,9 +31,9 @@ As a whole, they value education, money, and preserving their cultural and relig
 #### Alert
 
 **Passive ability.**
-You have advantage on all cunning checks to determine if someone has bad intentions. When combat begins, you may use treat your initiative roll as its maximum value.
+You have advantage on all cunning checks to determine if someone has bad intentions. When combat begins, you may treat your initiative roll as its maximum value.
 
-In addition, you gain the perceptive talent as a racial ability (it does not count towards the number of talents you have).
+In addition, you gain the Observant talent as a racial ability (it does not count towards the number of talents you have).
 
 ### Uline (Chain Dwarf)
 
@@ -116,8 +116,6 @@ Hestrube society operates more like geological formations than traditional commu
 **Passive ability.**
 Your body can shift between flesh and living stone at will. While in stone form, you gain +2 to defense rolls against physical attacks but move at half speed. You can sustain yourself by consuming 1 pound of stone or minerals daily instead of normal food.
 
-When you take the defensive stance, you can choose to become solid stone, taking one-quarter damage instead of half until the start of your next turn.
-
 ### Grendel (Chord Dwarves)
 
 The Grendel are wandering dwarves who travel in close-knit family caravans, their culture built around music, storytelling, and fierce loyalty to blood relations. Often misunderstood and persecuted by settled folk who view them as thieves and troublemakers, the Grendel have developed a complex code of honor that governs interactions both within their clans and with outsiders.
@@ -179,8 +177,8 @@ These battle-scarred dwarves view each conflict as a sacred offering to the gods
 
 #### Spiked Charge
 
-**Minor ability.**
-While wearing your specially crafted spiked armor, when you dash at least 20 feet toward an enemy, you may use your action to make an opportunity attack with your armor instead. You must choose the might stance and your armor counts as a heavy piercing melee weapon. Add your armor's defense bonus in place of a weapon die roll. However, the violent impact body-slam damages you as well—you take damage equal to the target's defense roll.
+**Passive ability.**
+While wearing your specially crafted spiked armor, when you move at least 20 feet in a straight line and make a melee attack, you may choose to body-slam your target instead. You must choose the might stance and your armor counts as a heavy piercing melee weapon. Add your armor's defense bonus in place of a weapon die roll. However, the violent impact damages you as well—you take damage equal to the target's defense roll.
 
 Additionally, whenever you are grappled while wearing your spiked armor, the enemy immediately takes damage equal to your armor's defense bonus, and takes the same damage again at the start of each subsequent round they maintain the grapple.
 
@@ -254,7 +252,7 @@ Clan loyalty runs deeper than blood among the Gruynmar, and abandoning one's shi
 #### Gunpowder Mastery
 
 **Passive ability.**
-You can craft and use firearms, which count as an ultra-heavy ranged weapons with 90-foot range that deal piercing damage. Firearms require gunpowder charges and take a full action to reload after each shot. Ultra-heavy weapons use a d20 as their weapon die.
+You can craft and use firearms, which count as heavy ranged weapons with 90-foot range that deal piercing damage. Firearms require gunpowder charges and take a full action to reload after each shot.
 
 You can craft a basic firearm in 3 days with access to a forge and 50 ducats worth of materials. You can create gunpowder charges from sulfur, charcoal, and saltpeter (5 ducats of materials yields 20 charges). In settlements, charges typically cost 1 ducat each when available.
 
@@ -288,3 +286,44 @@ Living so deep underground, the Cendelle have developed a culture centered aroun
 Unlike their cousins who fear the dark or seek the sun, the Cendelle have learned to navigate between light and shadow, between the material and the celestial. They are equally comfortable in the absolute darkness of the deep earth and the alien radiance of Celesté. This duality has made them philosophical and contemplative, often speaking in riddles and seeing patterns where others see only stone.
 
 This is not a playable race.
+
+### Sennites (Lake Dwarf)
+
+The Sennites are a pragmatic and often reviled clan of dwarves residing in Sennos. With slimy green skin and webbed fingers, they adapted to life in Ennros Lake after a desperate magical pact saved them from drowning when their underground home flooded. They are viewed as untrustworthy backstabbers by other dwarves, but in truth, they simply value survival above honor.
+
+They are proficient in Deoric magic, having traded forbidden secrets with entities of the deep to survive in their watery prison. Their settlements are built half-submerged in the lake's murky waters, accessible only to those who can breathe beneath the surface. The Sennites have long memories and longer grudges against those who abandoned them to drown.
+
+#### Aspects
+
+- Survival over honor
+- Lake-locked
+
+#### Amphibious
+
+**Passive ability.**
+You can breathe underwater and have a swim speed equal to your movement speed. Your webbed hands give you D2 on checks requiring fine manipulation with tools when dry, but you have A2 on all swimming-related checks.
+
+#### Deoric Secret
+
+**Major ability.**
+You know fragments of the language of truth. As an action, you may spend 5 HP to speak a word of power, producing one of the following effects:
+
+- Cause a lock within touch to unlock
+- Extinguish all non-magical flames within 30 feet
+- Heal yourself or a creature you touch for 2d6 HP
+
+### Zwaeron (Tundra Dwarf)
+
+The Zwaeron are tundra dwarves who have abandoned the mines for the open snow. Distinguished by their gray-blue skin and wild frizzy orange hair that stands out against the white landscape, they are true mountain people who scorn the confines of underground life. They have formed a symbiotic bond with dire wolves, riding them into battle and using them to hunt the giant stags that roam the frozen north.
+
+They are nomadic, living in temporary camps and moving with the herds. To a Zwaeron, a roof is a coffin; the open sky is home. Their culture values freedom, endurance, and the hunt above all else. They trade furs, ivory, and their expertise as guides to outsiders brave enough to venture into the frozen wastes.
+
+#### Aspects
+
+- Wolf-brother
+- The sky is my only roof
+
+#### Wolf Rider
+
+**Passive ability.**
+You gain the Beast Companion talent as a racial ability (it does not count towards the number of talents you have). Your companion is a dire wolf with the statistics of a warhorse but with a bite attack (1d8 damage) instead of hooves. If your wolf dies, you may spend a month in the tundra to bond with a new one. You have A2 on all checks related to wolves, canines, and tracking in snow. You are immune to the effects of extreme cold and suffer no penalties from snow, ice, or blizzard conditions.

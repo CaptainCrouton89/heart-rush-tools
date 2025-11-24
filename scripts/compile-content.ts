@@ -12,7 +12,7 @@ import {
   extractTags, 
   extractCrossReferences 
 } from "./lib/utils.js";
-import { combineRaceFiles, combineTalentFiles } from "./lib/file-combiners.js";
+import { combineRaceFiles, combineTalentFiles, combineAlariaFiles } from "./lib/file-combiners.js";
 import { splitContent } from "./lib/content-processors.js";
 import { loadNavigationCategories, createCategorizedNavigation } from "./lib/navigation-builder.js";
 import { copyRaceImages, findRaceImage } from "./lib/image-handler.js";
@@ -24,6 +24,7 @@ const OUTPUT_DIR = "content";
 const GM_OUTPUT_DIR = "content/gm";
 const WORLDS_OUTPUT_DIR = "content/worlds";
 const GM_CATEGORIES_CONFIG_PATH = "gm-navigation-categories.json";
+
 
 async function compilePlayerContent(): Promise<void> {
   console.log("Starting player content compilation...");
@@ -321,61 +322,54 @@ async function compileWorldWiki(worldName: string): Promise<void> {
 
   try {
     const worldSourceDir = path.join(WORLDS_SOURCE_DIR, worldName);
+    const allSectionsDir = path.join(worldSourceDir, "all_sections_formatted");
     const worldOutputDir = path.join(WORLDS_OUTPUT_DIR, worldName);
 
-    // Ensure output directory exists
-    await fs.mkdir(worldOutputDir, { recursive: true });
-
-    // Auto-detect content structure - look for markdown files
-    const allMarkdownFiles: string[] = [];
-
-    async function findMarkdownFiles(dir: string, basePath: string = ""): Promise<void> {
-      const entries = await fs.readdir(dir, { withFileTypes: true });
-
-      for (const entry of entries) {
-        const fullPath = path.join(dir, entry.name);
-        const relativePath = path.join(basePath, entry.name);
-
-        if (entry.isDirectory()) {
-          // Recursively search subdirectories
-          await findMarkdownFiles(fullPath, relativePath);
-        } else if (entry.isFile() && entry.name.endsWith(".md") &&
-                   entry.name !== "CLAUDE.md" && entry.name !== ".claude-md-manager.md") {
-          allMarkdownFiles.push(relativePath);
-        }
-      }
-    }
-
-    await findMarkdownFiles(worldSourceDir);
-
-    if (allMarkdownFiles.length === 0) {
-      console.log(`  ⚠️  No markdown files found in ${worldName}, skipping`);
+    // Check if all_sections_formatted exists
+    try {
+      await fs.access(allSectionsDir);
+    } catch {
+      console.log(`  ⚠️  No all_sections_formatted directory in ${worldName}, skipping`);
       return;
     }
 
-    console.log(`  Found ${allMarkdownFiles.length} markdown files`);
+    // Read markdown files from all_sections_formatted
+    const sourceFiles = await fs.readdir(allSectionsDir);
+    const markdownFiles = sourceFiles.filter(
+      (file) => file.endsWith(".md") && file !== "CLAUDE.md" && file !== ".claude-md-manager.md"
+    );
+
+    if (markdownFiles.length === 0) {
+      console.log(`  ⚠️  No markdown files found in ${worldName}/all_sections_formatted, skipping`);
+      return;
+    }
+
+    // Create output directory
+    await fs.rm(worldOutputDir, { recursive: true, force: true });
+    await fs.mkdir(worldOutputDir, { recursive: true });
+
+    console.log(`  Found ${markdownFiles.length} markdown files to process`);
 
     const allSections: ContentSection[] = [];
     const existingSlugs = new Set<string>();
     let globalOrder = 0;
 
-    // Process each markdown file
-    for (const relativeFilePath of allMarkdownFiles.sort()) {
-      const filePath = path.join(worldSourceDir, relativeFilePath);
+    // Process each file (same pattern as Heart Rush player content)
+    for (const filename of markdownFiles.sort()) {
+      const filePath = path.join(allSectionsDir, filename);
       const fileContent = await fs.readFile(filePath, "utf-8");
 
       // Parse frontmatter
-      const { data: frontMatter, content } = matter(fileContent);
+      const { content } = matter(fileContent);
 
-      // Determine category from frontmatter or relative path
-      const category = frontMatter.category ||
-                      path.dirname(relativeFilePath)
-                        .replace(/\//g, " / ")
-                        .replace(/_/g, " ")
-                        .replace(/^\./, worldName);
+      // Determine category from filename
+      const category = filename
+        .replace(/\.md$/, "")
+        .replace(/_/g, " ")
+        .replace(/&/g, " & ");
 
       // Split content into sections
-      const sections = splitContent(content, relativeFilePath);
+      const sections = splitContent(content, filename);
 
       const fileSections: ContentSection[] = [];
 
@@ -432,17 +426,17 @@ async function compileWorldWiki(worldName: string): Promise<void> {
       await fs.writeFile(sectionPath, JSON.stringify(section, null, 2));
     }
 
-    // Try to load custom navigation categories for this world
+    // Load navigation categories for this world
     let categories;
     const worldCategoriesPath = path.join(worldSourceDir, "navigation-categories.json");
     try {
       await fs.access(worldCategoriesPath);
       categories = await loadNavigationCategories(worldCategoriesPath);
     } catch {
-      // No custom categories, use auto-generated ones from content
+      // No custom categories, auto-generate from content
       const uniqueCategories = Array.from(
         new Set(allSections.map(s => s.category))
-      ).map((cat, i) => ({
+      ).map((cat) => ({
         name: cat,
         sections: allSections.filter(s => s.category === cat).map(s => s.slug)
       }));
@@ -497,6 +491,9 @@ async function compileAllWorldWikis(): Promise<void> {
       console.log("No world-wikis directory found, skipping world wikis compilation");
       return;
     }
+
+    // Combine Alaria files first (like how we combine race/talent files for Heart Rush)
+    await combineAlariaFiles();
 
     // Ensure worlds output directory exists
     await fs.mkdir(WORLDS_OUTPUT_DIR, { recursive: true });
