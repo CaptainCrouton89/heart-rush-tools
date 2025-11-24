@@ -133,7 +133,7 @@ When time matters, the journey takes far longer than expected:
 
 ## Complications
 
-Complications represent unexpected challenges that arise during travel. They don't prevent progress but demand immediate attention. When a complication occurs, play zooms in to action mode—describe the situation and let players decide how to handle it.
+Complications represent immediate dangers or crises that erupt during travel. They don't prevent progress on their own, but they demand split-second decisions and action. When a complication occurs, play always zooms in to action mode—the situation is happening now, and the players must react.
 
 ### Mountain & Arctic Complications
 
@@ -144,7 +144,7 @@ Complications represent unexpected challenges that arise during travel. They don
 | 3   | Whiteout conditions approaching—shelter in place or push through?       |
 | 4   | Mountain predators stalking the party—confront or evade?                |
 | 5   | Critical gear falls into ravine—risk climbing down or continue without? |
-| 6   | Ancient ruins or cave discovered—investigate or stay on schedule?       |
+| 6   | Ruins collapse as you pass—dive for cover or grab falling companion?    |
 
 ### Forest & Jungle Complications
 
@@ -155,7 +155,7 @@ Complications represent unexpected challenges that arise during travel. They don
 | 3   | River crossing washed out—ford, build rafts, or long detour?           |
 | 4   | Thick canopy causes navigation confusion—trust instincts or backtrack? |
 | 5   | Venomous creatures nest on the path—clear them or go around?           |
-| 6   | Ancient overgrown road discovered—follow it or stick to plan?          |
+| 6   | Overgrown road collapses into pit trap beneath scout—catch them or fall? |
 
 ### Desert & Wasteland Complications
 
@@ -164,9 +164,9 @@ Complications represent unexpected challenges that arise during travel. They don
 | 1   | Sandstorm building on horizon—shelter or try to outrun?        |
 | 2   | Oasis occupied by hostile group—negotiate, fight, or continue? |
 | 3   | Sinkhole or unstable ground—test path or wide detour?          |
-| 4   | Mirages confusing navigation—trust the guide or change course? |
+| 4   | Mirage hides sinkhole—stop the lead traveler or they plunge through? |
 | 5   | Water source is fouled—purify, ration, or search for another?  |
-| 6   | Ancient monument or ruins—investigate or avoid?                |
+| 6   | Monument's guardian spirit manifests, demands tribute—pay, fight, or flee? |
 
 ### Ocean & River Complications
 
@@ -175,9 +175,9 @@ Complications represent unexpected challenges that arise during travel. They don
 | 1   | Storm building ahead—sail through or around?                     |
 | 2   | Pirates or raiders spotted—evade, parlay, or prepare for battle? |
 | 3   | Sea creature following vessel—drive it off or change course?     |
-| 4   | Damage to vessel discovered—stop for repairs or risk continuing? |
+| 4   | Hull breach discovered mid-voyage—patch it now or abandon cargo? |
 | 5   | Mysterious fog bank ahead—navigate through or wait?              |
-| 6   | Uncharted island spotted—explore or maintain course?             |
+| 6   | Island survivors signal desperately—rescue before storm hits or sail on? |
 
 ### Underground Complications
 
@@ -188,7 +188,7 @@ Complications represent unexpected challenges that arise during travel. They don
 | 3   | Toxic gas detected ahead—find safe path or risk exposure? |
 | 4   | Strange echoing sounds—investigate or avoid?              |
 | 5   | Bioluminescent passage discovered—follow or stick to map? |
-| 6   | Ancient worked tunnels found—explore or continue?         |
+| 6   | Worked tunnels echo with approaching footsteps—hide, ambush, or flee? |
 
 ## Resources and Survival
 
@@ -251,6 +251,8 @@ Some quick advice for GMs and players.
 ### For GMs
 
 The journey system creates a framework for travel drama without simulation. Focus on interesting choices rather than bookkeeping.
+
+**Don't hide story beats behind rolls:** Journey rolls handle uncertainty, not every interesting event. If the mountain pass is secretly patrolled by dragons, just have the party encounter dragons—don't wait for a complication roll. If there are ruins central to your adventure, the party finds them. Use journey rolls for random chance and danger, but script guaranteed events for planned story moments.
 
 **Prepare segments based on story needs:** A desperate race might have many short segments with complications, while exploration might have fewer, longer segments.
 
