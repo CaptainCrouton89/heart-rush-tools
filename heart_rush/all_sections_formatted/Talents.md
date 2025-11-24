@@ -432,15 +432,6 @@ You may declare someone the target of a duel. For the next minute, you get A2 on
 **Destiny Level:**
 Your bonus to A/D increases to A4, and your penalty to defense rolls increases to D6.
 
-### Exert
-
-_Passive ability. Martial talent._
-
-Whenever you make an attack roll, you may add 2d6 to the roll. If you do, decrease your heart die by one size after making your attack roll.
-
-**Destiny Level:**
-You may add 4d6 instead. If you do, decrease your heart die twice instead.
-
 ### Fast Friends
 
 _Minor ability. Handmagic._
@@ -1854,7 +1845,7 @@ If the creatures are in bright light, they gain a level of restrained.
 
 ### Cryomancy
 
-_Heart ability. Cognitive talent. Elemental attunement: Water._
+_Passive ability. Cognitive talent. Elemental attunement: Water._
 
 Add ice to your resonate substances as a solid attunement. Your level of attunement with ice is equal to your level of attunement with water.  
 In addition to creating or destroying ice out of nothing, you can also convert between water and ice. Use the resonate substance conversion rules to determine the rate and range of your control.
@@ -1992,10 +1983,11 @@ If the grappled creature would regain hitpoints, it regains half as many (rounde
 
 _Major ability. Dark. Ongoing._
 
-By clenching your hand into a fist, you can engulf your surroundings in shadows. The space in a 45-foot radius around you becomes dark if the space was previously dim, and dim if it was previously bright. Nonmagical light cannot penetrate through this darkness.
+By clenching your hand into a fist, you can engulf your surroundings in shadows. The space in up to a 90-foot radius around you becomes darkness. Nonmagical light cannot penetrate through this darkness.
 
 **Destiny Level:**
-The space becomes dark, even if it was previously bright.
+
+Creatures with darkvision cannot see through this darkness. Creatures of your choice can see within this darkness as though they had darkvision. The range of this spell increases to 500 feet.
 
 ### Heat Stroke
 
@@ -2065,7 +2057,7 @@ Use a d8 instead of a d4.
 _Major ability. Earth. Ongoing._
 
 You flutter your hand such that it resonates at the exact frequency to turn the surrounding rock into an unstable slew of loose stone. The ground within 10 feet of you immediately becomes difficult terrain, and creatures of your choice that enter or start the round in that space begin sinking into the ground and gain one level of restrained.  
-Creatures stuck in the ground may take the dash action to remove all levels of the restrained condition from themselves.
+Creatures stuck in the ground may use an action to remove all levels of the restrained condition from themselves.
 
 **Destiny Level:**
 Creatures gain two levels of restrained instead.
