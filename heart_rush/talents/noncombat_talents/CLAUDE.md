@@ -13,9 +13,9 @@ Non-combat talents follow this consistent structure:
 ```markdown
 ## Talent Name
 
-_[Tier]. [Action Type]. [Trait Tags]._
+_[Ability Type]. [Category/Trait Tags]._
 
-[Main ability description with mechanical details, ranges, durations, and constraints.]
+[Main ability description with mechanical details, ranges, and constraints.]
 
 **Destiny Level:**
 [Upgraded version of the ability at higher character levels.]
@@ -24,17 +24,16 @@ _[Tier]. [Action Type]. [Trait Tags]._
 ### Key Components
 
 - **Header**: `## Talent Name` (h2)
-- **Metadata Line**: Italic line with: Tier (Major/Minor ability), Action Type (Full action, Free action, etc.), and Trait Tags (Handmagic, Shaman, etc.)
+- **Metadata Line**: Italic line with: Ability Type (Passive, Weekly, Major, Minor) and Category/Traits (Cognitive talent, Handmagic, Shaman, etc.)
 - **Description**: Mechanical rules written in clear prose
 - **Destiny Level**: Optional upgraded version available at higher character progression
 
 ## Guidelines
 
 - Keep descriptions concise but complete with all mechanical information
-- Include ranges, durations, and action economy clearly
-- Specify any constraints (e.g., "cannot animate more than one object")
-- Destiny Level upgrades should be meaningful mechanical improvements
+- Clearly specify ability activation (passive, weekly frequency, action cost, etc.)
 - Use markdown emphasis (_italics_ and **bold**) sparingly for key information
+- Destiny Level upgrades should be meaningful mechanical improvements, often broadening scope or increasing potency
 
 ## Processing
 
@@ -46,4 +45,5 @@ These files are compiled by `scripts/compile-content.ts` which:
 ## Related Directories
 
 - `../combat_talents/` - Combat-focused abilities
+- `../spells/` - Elemental magic requiring attunement
 - `../` - Parent talents directory with organization by type

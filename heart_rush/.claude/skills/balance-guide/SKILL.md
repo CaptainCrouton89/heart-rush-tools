@@ -31,7 +31,6 @@ The first tag determines power budget.
 | :--- | :--- | :--- |
 | **Passive** | Always active. | **Low Impact/Consistent.** No cost. Avoid stacking flat bonuses. Good for niche perks or unlocking actions. |
 | **Minor** | Encounter resource (Rush Points). | **Tactical/Spammable.** Costs 1 RP (1st use), 2 RP (2nd), etc. Resets after fight. Good for damage boosts, conditions, mobility. |
-| **Heart** | Short/Long Rest, or take a Wound. | **Resilient/Recovery.** Resets if you take a Wound. Good for defensive reactions or burst damage. |
 | **Major** | Daily (Long Rest). | **High Impact.** "Ultimate" moves defining a session. Good for boss fights. |
 | **Weekly** | Once per 7 days. | **Narrative Power.** Long-term buffs, economic influence. |
 | **Monthly** | Once per 30 days. | **Plot Device.** Resurrection, weather alteration, legendary crafting. |

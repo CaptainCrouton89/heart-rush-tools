@@ -9,7 +9,7 @@ Each spell file should follow this structure:
 ```markdown
 ## Spell Name
 
-_[Ability Type] ability. [Martial|Cognitive] talent. [Element] attunement._
+_[Ability Type] ability. Cognitive talent. Elemental attunement: [Element]._
 
 [Flavor text and mechanical description]
 
@@ -22,7 +22,7 @@ _[Ability Type] ability. [Martial|Cognitive] talent. [Element] attunement._
 Every spell file must include:
 
 1. **Header (H2):** Spell name matching the filename
-2. **Ability Type:** Passive, Major, or Minor
+2. **Ability Type:** Passive, Major, Minor, or Heart
 3. **Talent Category:** Always "Cognitive talent" for spells (not Martial)
 4. **Elemental Attunement:** One of nine elements
    - Fire, Water, Air, Earth, Light, Dark, Force, Void, Time
@@ -61,7 +61,7 @@ All spell files are automatically included in the compiled output—no manual co
 - Include Challenge Numbers if the spell requires a roll
 - Specify any resource costs (Rush Points, Heart Die shrinkage, etc.)
 - Describe range, area of effect, and duration
-- Explain interaction with other game mechanics (stances, damage types, etc.)
+- Explain interaction with other game mechanics (stances, attunement conversion, etc.)
 
 ### Destiny Level Enhancements
 
@@ -74,7 +74,7 @@ The enhanced version should:
 ### Consistency Notes
 
 - Match formatting with existing spell files in this directory
-- Use the same ability type designations (Passive, Major, Minor)
+- Use consistent ability type designations
 - Maintain consistent language for similar mechanical concepts
 - Cross-reference other talents/spells when relevant using markdown links
 
@@ -86,4 +86,3 @@ After creating or modifying spells:
 2. Check that spell appears in generated content with correct metadata
 3. Verify elemental attunement is properly captured
 4. Ensure markdown formatting doesn't break compilation
-
