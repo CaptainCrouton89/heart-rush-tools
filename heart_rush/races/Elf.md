@@ -86,21 +86,40 @@ You have an advanced attunement to water, but only saltwater.
 
 ### Teflin (Crimson Elf)
 
-The Teflin reside in Hik, their reddish skin marking them as a people touched by an ancient curse. Blood is sacred to their culture, as an old Deoric enchantment runs through their veins—a curse that traded immortality for power, but at a terrible cost.
+The Teflin reside in Hik, their reddish skin marking them as a people touched by an ancient curse. Blood is sacred to their culture, as an old Deoric enchantment runs through their veins—a curse that grants them agelessness but at a terrible cost.
 
-The curse builds up in their blood over time, and if allowed to accumulate too much, it will kill them. To manage this, the Teflin practice ritual bloodletting to relieve the curse's pressure. In exchange for this constant sacrifice, they gain power proportional to their suffering.
+Deoric magic functions by sacrificing blood for power, and the Teflin curse causes their blood to continuously channel Deoric power into their bodies. This power accumulates over time, making them increasingly formidable—but also burning them from the inside. To survive, Teflin practice ritual bloodletting to purge the excess power before it consumes them entirely.
 
 #### Aspects
 
 - Blood is my burden and strength
 - Cursed heritage
 
-#### Crimson Sacrifice
+#### Crimson Curse
 
 **Passive ability.**
-The ancient Deoric curse prevents you from aging or dying from natural causes, but builds dangerous power over time. At the end of each long rest, you gain 1 Curse Point. If you ever reach 5 Curse Points, you die.
+The ancient Deoric enchantment prevents you from aging, but channels dangerous power through your blood.
 
-When you first wake up after a long rest, you may perform ritual bloodletting to alleviate the curse's burden. Lose hit points equal to 1/10th of your maximum hit points (minimum 1), spend 1 Curse Point, and reduce the rank of all wounds you have by 2.
+**Power Accumulation:**
+At the end of each long rest, you gain 1 Curse Point. There is no maximum—Curse Points accumulate indefinitely until purged.
+
+**Curse Wounds:**
+When you gain a Curse Point, you immediately gain a curse wound of rank equal to your new total Curse Points. These wounds stack with each other and any other wounds you have. Curse wounds represent the power burning through your body—invisible agony manifesting as reduced vitality. Curse wounds automatically heal by 1 rank per day, but cannot be healed through magic or medicine.
+
+**Empowerment:**
+While you have Curse Points, you gain the following benefits:
+- **Regeneration:** At the start of each of your turns in combat, regain HP equal to your current Curse Points
+- **Power Strike:** You gain a bonus to all attack and damage rolls equal to your current Curse Points
+- **Crimson Glow:** Your blood glows with increasing intensity through your skin. At high Curse Points, your veins are visibly luminous.
+
+**Bloodletting Ritual:**
+You may perform a 1-minute ritual bloodletting at any time to purge the accumulated power. When you do:
+- Immediately lose HP equal to your current Curse Points
+- Your Curse Points reset to 0
+- You lose all Curse Point benefits (regeneration and power strike bonuses)
+- Existing curse wounds remain but continue healing normally at 1 rank per day
+
+If the accumulated curse wounds reduce your maximum HP to 0, or you die from the wounds themselves, you die permanently.
 
 ### Kuzagt (Bone Elf)
 
