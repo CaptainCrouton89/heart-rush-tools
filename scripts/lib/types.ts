@@ -43,3 +43,11 @@ export interface SectionData {
   content: string;
   level: number;
 }
+
+export interface CompilationConfig {
+  name: string;
+  sourceDir: string;
+  outputDir: string;
+  navigationConfigPath?: string;
+  enrichSection?: (section: ContentSection, filename: string) => Promise<ContentSection>;
+}
