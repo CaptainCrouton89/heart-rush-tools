@@ -116,7 +116,7 @@ Adults represent the baseline of capability—experienced enough to be competent
 
 Elderly characters have accumulated significant life experience, though their bodies have slowed with age. The definition of "elderly" depends on your character's background—a hard life might age someone prematurely, while a comfortable existence might see them maintaining vitality into their later years.
 
-- **Profession Ranks**: Start with 4 ranks to distribute among your professions. You cannot distribute more than 3 ranks to a single profession.
+- **Profession Ranks**: Start with 5 ranks to distribute among your professions. You cannot distribute more than 4 ranks to a single profession.
 - **Physical Limitation**: Your movement speed is reduced by 20 feet
 - **Choose ONE benefit**:
   - **Wisdom of Experience**: Choose one of your starting professions. When making skill checks with this profession, you may reroll any 1s on your dice (this does not trigger complications)
@@ -151,6 +151,18 @@ Your character's professional background defines their expertise and capabilitie
 - **Rank 6+**: +6, +7, etc. (Legendary)
 
 When making a skill check (as described in Gameplay Basics), add your profession rank to the roll if the profession applies.
+
+### How Advancement Works
+
+Your profession advances through three complementary methods that work together to create meaningful progression:
+
+**Challenges** represent individual moments of expertise—difficult tasks where you push your capabilities and learn from the experience. These are the day-to-day tests that sharpen your skills.
+
+**Missions** represent career-defining achievements—significant undertakings that demonstrate you've reached a new tier of mastery. These are the milestones that other professionals recognize and respect.
+
+**Practice** represents dedicated training during downtime—the focused study and repetition that cements your knowledge between adventures. This is the consistent work that turns raw experience into refined skill.
+
+Together, these three methods ensure advancement feels earned through both dramatic moments and steady dedication. Completing challenges and missions during play provides the foundation, while practice during downtime fills in the gaps.
 
 ### Usage-Based Advancement
 
@@ -206,7 +218,9 @@ The key is achieving something significant to your profession, not following a s
 | 5 → 6          | Master → Legendary      | 7          | Yes              | 36 weeks      |
 | 6 → 7          | Legendary →             | 8          | Yes              | 49 weeks      |
 
-**Practice Time**: Represents dedicated downtime training. You can reduce this by 1 week for each challenge completed beyond the minimum (including challenges completed during missions).
+**Practice Time**: Represents 8 hours per day of focused training, study, and deliberate practice. This must occur during extended downtime—traveling between destinations, spending time in cities between adventures, or during other periods of rest. You cannot practice while actively adventuring or engaged in other intensive activities.
+
+You can reduce the required practice time by 1 week for each challenge completed beyond the minimum (including challenges completed during missions). Extra challenges accelerate learning—real application is more effective than pure study.
 
 ### Starting Professions
 
@@ -414,23 +428,61 @@ Remember: A clever thief who accomplishes their heist without picking a single l
 
 ### Using Professions in Play
 
-**Direct Application (Full Bonus)**:
+#### When to Apply Professions
 
+All skill checks use Ability Die + Heart Die as the base. The question is: does a profession apply, and if so, how much of its bonus?
+
+**With Profession Bonus**: The task involves specialized training or expertise. Add the profession rank (full or half) to the skill check.
+
+**Without Profession Bonus**: The task is purely about raw physical or mental capability with no specialized knowledge component. Don't add any profession rank.
+
+#### Determining Application Level
+
+**Direct Application (Full Bonus)**
+The task is core to what this profession does day-to-day. Someone with this profession would do this regularly as part of their work.
+
+*Examples:*
 - Blacksmith forging a sword
 - Thief picking a lock
 - Diplomat negotiating a treaty
+- Scholar translating ancient text
 
-**Tangential Application (Half Bonus)**:
+**Tangential Application (Half Bonus, Rounded Down)**
+The profession provides useful context or related knowledge, but isn't the primary skill being tested. The professional has an edge, but it's not their core competency.
 
-- Blacksmith appraising weapon quality
-- Thief estimating a gem's value
-- Diplomat reading someone's mood
+*Examples:*
+- Blacksmith appraising weapon quality (related knowledge, but not forging)
+- Thief estimating a gem's value (exposure through stolen goods, but not expertise)
+- Diplomat reading someone's mood (social awareness from negotiations, but not the same skill)
+- Scholar recalling historical gossip (adjacent to their research, but not their field)
 
-**No Application**:
+**No Application**
+The profession provides no meaningful advantage. A person with this profession is no better at this task than anyone else with the same ability score.
 
+*Examples:*
 - Blacksmith navigating at sea
 - Thief performing surgery
 - Diplomat tracking through wilderness
+- Scholar swimming across a river
+
+#### Adjudication Framework
+
+When deciding if a profession applies, ask yourself:
+
+**"Would someone with this profession be noticeably better at this task than a random person with the same ability score?"**
+
+- **Yes, significantly better** → Direct application
+- **Yes, somewhat better** → Tangential application
+- **No meaningful difference** → No application
+
+**Edge Cases:**
+- When in doubt between direct and tangential, default to tangential
+- When in doubt between tangential and none, ask the player to justify how their profession helps
+- Creative applications are encouraged, but must make narrative sense
+- Professions shouldn't apply to everything—specialization should matter
+
+**Multiple Professions:**
+If multiple professions could apply to a task, use the highest applicable profession rank. Don't stack them.
 
 ## Talents
 
