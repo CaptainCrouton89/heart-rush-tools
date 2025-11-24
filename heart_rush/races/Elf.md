@@ -101,10 +101,14 @@ Deoric magic functions by sacrificing blood for power, and the Teflin curse caus
 The ancient Deoric enchantment prevents you from aging, but channels dangerous power through your blood.
 
 **Power Accumulation:**
-At the end of each long rest, you gain 1 Curse Point. There is no maximum—Curse Points accumulate indefinitely until purged.
+At the end of each long rest, the following occurs in sequence:
+1. You gain 1 Curse Point (there is no maximum—Curse Points accumulate indefinitely until purged)
+2. You immediately take a NEW curse wound with rank equal to your total Curse Points (after the increase)
 
 **Curse Wounds:**
-When you gain a Curse Point, you immediately gain a curse wound of rank equal to your new total Curse Points. These wounds stack with each other and any other wounds you have. Curse wounds represent the power burning through your body—invisible agony manifesting as reduced vitality. Curse wounds automatically heal by 1 rank per day, but cannot be healed through magic or medicine.
+Each curse wound you take is a separate wound that stacks with all other wounds you have. Curse wounds represent the power burning through your body—invisible agony manifesting as reduced vitality. Curse wounds heal naturally like any other wound, but cannot be healed through magic or medicine.
+
+*Example: After your first long rest, you have 1 Curse Point and a rank 1 wound. After your third long rest, you have 3 Curse Points. Your first wound has healed completely, your second wound is now rank 1, and you just gained a new rank 3 wound.*
 
 **Empowerment:**
 While you have Curse Points, you gain the following benefits:
@@ -117,7 +121,7 @@ You may perform a 1-minute ritual bloodletting at any time to purge the accumula
 - Immediately lose HP equal to your current Curse Points
 - Your Curse Points reset to 0
 - You lose all Curse Point benefits (regeneration and power strike bonuses)
-- Existing curse wounds remain but continue healing normally at 1 rank per day
+- Existing curse wounds remain but continue healing normally
 
 If the accumulated curse wounds reduce your maximum HP to 0, or you die from the wounds themselves, you die permanently.
 
