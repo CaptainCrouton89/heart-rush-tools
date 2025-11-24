@@ -138,9 +138,9 @@ As an action, you may make a cunning saving throw contested by the source's pres
 
 _Leveled. Ongoing._
 
-For each level of charm, you move up one level on the enemy to friend track. If you are violent, you become hostile. If you are hostile, you become neutral. If you are neutral, you become friendly. If you are friendly, you become allied.
+For each level of charm, you move up one level on the relationship track toward the source of the charm. For example, if you are currently Hostile (-3) toward the charmer and gain 2 levels of charmed, you become Negative (-1). If you are Neutral (0) and gain 3 levels of charmed, you become Helpful (+3).
 
-The source of the charm has advantage on all presence checks made against you for each level of charmed. If the charmer takes any hostile action against you, the charm effect ends immediately.
+The source of the charm has advantage on all presence checks made against you for each level of charmed. If the charmer takes any hostile action against you, the charm effect ends immediately and your relationship level returns to what it was before being charmed.
 
 ## Status Conditions
 
