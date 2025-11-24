@@ -51,6 +51,14 @@ export default async function HomePage() {
               >
                 Start Building →
               </Link>
+              <a
+                href="https://docs.google.com/spreadsheets/d/1LaB8VcwgbskMt2Sdh6WKEKal1QRyPspl3WE1eHeL4ZU/edit?gid=0#gid=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full hover:bg-accent/90 transition-colors w-full text-center"
+              >
+                Character Sheet →
+              </a>
             </div>
           </div>
 
