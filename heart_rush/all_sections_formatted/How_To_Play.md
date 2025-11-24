@@ -275,6 +275,38 @@ Heart Rush presents diverse challenges requiring different approaches. Understan
 - **Persuasion** — Changing minds, rallying crowds, seeking aid
 - **Resolution** — Skill checks modified by approach and relationship
 
+### Relationship Track
+
+The relationship track measures how one creature regards another, ranging from deadly nemesis to soulmate-level devotion. This track modifies social skill checks, determines NPC behavior, and interacts with certain conditions like Charmed.
+
+**How Relationships Work**
+
+When making social skill checks, the GM applies advantage or disadvantage based on the relationship level between you and the target. A Helpful (+3) merchant might give you A2 on persuasion checks to get better prices, while a Hostile (-3) guard gives you D2 on attempts to talk your way past them.
+
+Relationships can shift through your actions and choices during play. Helping an NPC achieve their goals might move them from Friendly to Ally, while betraying trust could drop an Ally down to Hostile or worse.
+
+**Track Levels**
+
+**Positive Relationships:**
+
+- **+5 Soulmate** — Someone you would die for (you'd murder people with them). This is not necessarily romantic—it represents the deepest non-romantic bond of loyalty and trust.
+- **+4 Ally** — Someone you would take risks for (you'd help them hide the bodies).
+- **+3 Helpful** — Someone you would help, but not at great personal risk (you'd help them move, but not help them hide the bodies).
+- **+2 Friendly** — Someone you are happy to see and have mostly positive feelings about (you'd drink tea with them, but not help them move).
+- **+1 Positive** — Someone you have a generally positive impression of, but aren't close to (you'd be surprised if they asked you to tea).
+
+**Neutral:**
+
+- **0 Neutral** — Someone you don't know/haven't heard of, or have genuinely mixed feelings about.
+
+**Negative Relationships:**
+
+- **-1 Negative** — Someone you have a generally negative impression of, but don't really know (that guy you saw being rude to the waiter that one time).
+- **-2 Unfriendly** — Someone you would avoid if possible but could tolerate being around (you'd rather not drink tea with them, but if they're at the party, you'd still attend).
+- **-3 Hostile** — Someone you might go out of your way to harm, but not at great personal risk (you'd put a laxative in their tea).
+- **-4 Enemy** — Someone you would go out of your way to harm, even if it was a risk to you (you'd put poison in their tea).
+- **-5 Nemesis** — Someone you would devote your life to bringing down, at any cost to yourself or others (you'd poison the entire city's water supply just to kill them).
+
 **Combat Challenges**
 
 - **Direct Confrontation** — Bandits, monsters, rival adventurers
@@ -504,7 +536,7 @@ Your first Heart Rush session might feel overwhelming—new rules, unfamiliar me
 
 **Before the Game:**
 
-- Read your character sheet thoroughly
+- Read your character sheet thoroughly (access the [official character sheet](https://docs.google.com/spreadsheets/d/1LaB8VcwgbskMt2Sdh6WKEKal1QRyPspl3WE1eHeL4ZU/edit?gid=0#gid=0))
 - Prepare 2-3 character goals
 - Think about your character's personality
 - Bring dice, pencil, and notes

@@ -2,6 +2,8 @@
 
 As you make a character in Heart Rush, remember that at the center of every Heart Rush character is their heart. It is the foundation on which you build your life, your soul; it is the chassis and essence of your decisions and their consequences; and it is what drives you forward. You are building an entire, fictional person. Make them awesome.
 
+**Want to track your character as you build?** Access the [official Heart Rush character sheet](https://docs.google.com/spreadsheets/d/1LaB8VcwgbskMt2Sdh6WKEKal1QRyPspl3WE1eHeL4ZU/edit?gid=0#gid=0) to fill in your choices as you go.
+
 ## Your Dream
 
 With this in mind, build a character that has a vision towards what they want to achieve. You should have a dream of what you want to do in the world, one that is complex and difficult and worthy of the caliber of legend you wish to become. Remember—you determine the direction the story takes. There's no goal to this game besides the one you set for yourself.
@@ -215,6 +217,8 @@ Choose up to three professions and distribute ranks between them based on your a
 - **Elderly**: 5 ranks to distribute (e.g., one profession at rank 3 and two at rank 1)
 
 These initial ranks are free and reflect your life before adventuring. You cannot distribute more than 3 ranks to a single profession.
+
+**Note**: Record your profession choices on the [character sheet](https://docs.google.com/spreadsheets/d/1LaB8VcwgbskMt2Sdh6WKEKal1QRyPspl3WE1eHeL4ZU/edit?gid=0#gid=0).
 
 ### Profession Application
 
