@@ -24,7 +24,7 @@ export async function combineRaceFiles(): Promise<void> {
     // Read all race files
     const raceFiles = await fs.readdir(racesPath);
     const raceMarkdownFiles = raceFiles
-      .filter((file) => file.endsWith(".md") && file !== "CLAUDE.md")
+      .filter((file) => file.endsWith(".md") && file !== "CLAUDE.md" && file !== ".claude-md-manager.md")
       .sort(); // Sort alphabetically for consistent ordering
 
     if (raceMarkdownFiles.length === 0) {
@@ -118,7 +118,7 @@ The talents in this section are combat-related talents. This categorization is f
       await fs.access(COMBAT_TALENTS_DIR);
       const combatFiles = await fs.readdir(COMBAT_TALENTS_DIR);
       const combatMarkdownFiles = combatFiles
-        .filter((file) => file.endsWith(".md") && file !== "CLAUDE.md")
+        .filter((file) => file.endsWith(".md") && file !== "CLAUDE.md" && file !== ".claude-md-manager.md")
         .sort(); // Sort alphabetically for consistent ordering
 
       if (combatMarkdownFiles.length > 0) {
@@ -150,7 +150,7 @@ The talents in this section are noncombat-related talents. This categorization i
       await fs.access(NONCOMBAT_TALENTS_DIR);
       const noncombatFiles = await fs.readdir(NONCOMBAT_TALENTS_DIR);
       const noncombatMarkdownFiles = noncombatFiles
-        .filter((file) => file.endsWith(".md") && file !== "CLAUDE.md")
+        .filter((file) => file.endsWith(".md") && file !== "CLAUDE.md" && file !== ".claude-md-manager.md")
         .sort(); // Sort alphabetically for consistent ordering
 
       if (noncombatMarkdownFiles.length > 0) {
@@ -186,7 +186,7 @@ These talents also may include the tag "ongoing", indicating that the effect las
       await fs.access(SPELLS_DIR);
       const spellsFiles = await fs.readdir(SPELLS_DIR);
       const spellsMarkdownFiles = spellsFiles
-        .filter((file) => file.endsWith(".md") && file !== "CLAUDE.md")
+        .filter((file) => file.endsWith(".md") && file !== "CLAUDE.md" && file !== ".claude-md-manager.md")
         .sort(); // Sort alphabetically for consistent ordering
 
       if (spellsMarkdownFiles.length > 0) {
