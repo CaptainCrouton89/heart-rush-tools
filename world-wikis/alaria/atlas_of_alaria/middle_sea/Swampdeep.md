@@ -9,3 +9,7 @@ Also has witches, which prey upon the goblins. Entire swamp fills with toxic gas
 Infested with massive leeches, deathfog, and misery-sprites.
 
 Water is quite deep—easy to drown. Saltwater
+
+### Omegra's Hut
+
+Mostly sunken dungeon in Swampdeep.

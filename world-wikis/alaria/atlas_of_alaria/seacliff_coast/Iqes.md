@@ -2,6 +2,6 @@
 
 Tags: state, nation
 
-A state on the Seacliff Coast.
+A state on the Seacleft Coast.
 
 TODO

@@ -2,6 +2,6 @@
 
 Tags: island, geography
 
-An island off the Seacliff Coast.
+An island off the Seacleft Coast.
 
 TODO

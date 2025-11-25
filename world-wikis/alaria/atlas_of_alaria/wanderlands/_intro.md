@@ -1,19 +1,38 @@
-## Wanderlands
+# Wanderlands
 
-Tags: region, geography
+## Geography
 
-### Geography
+The Wanderlands form the long southern peninsula of Aboyinzu—a great curved finger of land stretching southward into the South Sea. This diverse region is characterized by rolling plains, scattered forests, and rugged hill country, distinct from both the savannas of Central Aboyinzu to the north and the ancient rainforests of the Elderwilds to the east.
 
-The Wanderlands is a diverse region characterized by rolling plains, scattered forests, and rugged hill country. The area encompasses the mystical Dragonsong region with its ancient forests, the pastoral meadows of Grendenheim, the windswept Donclik Peninsula, and various hill ranges and moorlands. The Troughs cut deep canyons through the landscape, while marshes like Krinea Mikea dot the lowlands.
+### Boundaries and Position
 
-### History
+- **North**: Central Aboyinzu and the interior savanna
+- **East**: The Elderwilds peninsula; the South Sea separates them at the southern extent
+- **South**: The South Sea
+- **West**: Western coastline; the South Sea curves around the peninsula
+
+### Terrain
+
+The Wanderlands encompass:
+- **Dragonsong**: Mystical region with ancient forests
+- **Grendenheim**: Pastoral meadows
+- **Donclik Peninsula**: Windswept promontory extending into the Donclik Sound
+- **The Troughs**: Deep canyons cutting through the landscape
+- **Krinea Mikea**: Marshland in the lowlands
+- Various hill ranges and moorlands (Karik Hills, Snakefoot Hills, Argum Hills, Eshire Moors)
+
+### Relationship to the South Sea
+
+The South Sea lies to the west of the Elderwilds and north of the Wanderlands peninsula. This body of water separates the Wanderlands/Elderwilds region from the eastern Shacklands (Kyagos and surrounding areas). The peninsula's position makes it a crucial waypoint for maritime traffic between Aboyinzu and the slave-trading ports to the east.
+
+## Political Climate
 
 TODO
 
-### Culture
+## What Makes It Interesting
 
 TODO
 
-### Notable Locations
+## What Will Go Wrong
 
 TODO
