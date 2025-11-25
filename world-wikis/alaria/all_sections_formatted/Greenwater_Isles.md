@@ -124,6 +124,10 @@ Tags: jungle
 
 Inhabited by Neka gnomes.
 
+### Firespine
+
+A long rip in the ground where smoke and fire spits forth, torn straight through the Nekanzi Jungle. Fire spirit creatures come out.
+
 ## North Agreben
 
 Tags: sea, geography
@@ -174,7 +178,17 @@ A waterway on Roule.
 
 An island near Roule.
 
-TODO
+### Kilik
+
+The most forward outpost of Roule as it ventures into Rakite. The town provost has heard stories from some farmers of the discovery of charcoal on the ground—a sure sign of other people already here.
+
+### Roule Channel
+
+A waterway south of Roule, where light and force leylines intersect beneath the waves.
+
+#### Sunbeam Prison
+
+At the intersection of light and force leylines in the Roule Channel stands one of the most unusual prisons in all of Alaria. The Sunbeam Prison is not made of stone or iron, but of beams of solidified light bound together by force magic. These sunbeams create a perfect cage—impenetrable, unbreakable, and visible from miles away as they shimmer above the water. The prison requires constant magical maintenance to sustain the leyline convergence, making it both a marvel of magical engineering and a constant drain on resources.
 
 ## Sea of Spiders
 
@@ -244,19 +258,21 @@ A valley in the Tethryn Mountains.
 
 ### Pearly Mountains
 
-A mountain range on Urok.
+A mountain range on Urok's southwestern tip.
+
+#### Shenchen Forest
+
+At the southwestern tip of the Pearly Mountains, north of the Tyberoskos forest, lies the Shenchen Forest—an eerie woodland inhabited by ancient samurai suits of enchanted armor. These dark knights stand eternal vigil over ruined shrines and temples, their armor animated by old magic. The forest grew up around and atop the ruins, but the guardians remain, still defending the sacred sites they were bound to protect centuries ago.
+
+Approaching the ruins means facing these spectral sentinels, whose skill with blade and bow has not diminished with the passing years. They attack intruders without warning or mercy, their movements as precise and deadly as the day they were first enchanted.
 
 ### Xoth
 
 A state on Urok.
 
-### Senchen Forest
+### Tyberoskos
 
-A forest on Urok.
-
-### Thberoskos
-
-A forest on Urok.
+A forest on Urok near the Pearly Mountains, inhabited by weretigers who are deadly on the new moon but peaceful otherwise. The forest is also home to the Qipi—a very small race of gnomes who live in huge sinkholes where they've built small cities. A couple of these sinkhole settlements exist throughout the forest, hidden beneath the canopy.
 
 ### Maun
 

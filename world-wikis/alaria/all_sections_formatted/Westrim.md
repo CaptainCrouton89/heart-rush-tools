@@ -6,6 +6,10 @@ Tags: state, nation
 
 A state in Westrim.
 
+### Mykala
+
+Source of religious importance among all the cities of Atriik. Druid lives there, though an Elnor is trying to take it.
+
 TODO
 
 ## Baerlüen Mountains
@@ -37,6 +41,14 @@ Tags: desert
 Home to giant sand wurms a'la *Dune*.
 
 Well traveled by []()
+
+### Benshu's Promise
+
+This oasis is located in the Dunes of Kunagi, and is the only source of freshwater for hundreds of miles. It is guarded by Benshu, a large, incredibly deadly sphinx. To drink from the water, you must answer at least one of the sphinx's three questions correctly. If you drink from the oasis before asking the sphinx for permission, the sphinx captures you (all your muscles go limp) and gives you choice for doing maze or being eaten.
+
+### Shyalaviin (Malasi Karkus)
+
+Hills just south of the Eronia range that poke into the northern edge of the Dunes of Kunagi. This region, also known as Malasi Karkus, is home to the Blitzling—creatures that inhabit these transitional hills between the mountains and the desert sands.
 
 ## Dustwind Plateau
 
@@ -106,7 +118,25 @@ TODO
 
 Tags: forest, geography
 
-TODO
+Superduper fucking deadly unless your quite powerful. Lots of nasty monsters.
+
+Home to Naruaghin.
+
+### Ekomorn
+
+Rift in the Ishnit Jungles. Absurdly deep—all the way to the center of the material plane.
+
+The Naruaghin who live in the surrounding jungle are terrified of the pit, and won't go near it.
+
+Occasionally, *thinsgs* emerge from the pit. Animals brutally killed and left to rot on outside edge of cliff. a mile down, and 30 miles north-east, is a location where someone has devoted their life to the study of darkness. It is within the rift, but deep, deep inside.
+
+The rift extends at a diagonal much further than you can tell from map—jungle has just grown over it. Shadows sometimes come up from the cracks.
+
+### Demonwatch
+
+Large, darkstone palace on the southern cape of the Ishnit Jungles, vines growing up over all of it. Overrun when a demon-summoning wizard lost control over his subjects. The demons are confined to the tower, but they're quite powerful, and immortal. Decorated with large, leathery-winged gargoyles with curling horns perched on guard.
+
+Sailors are incredibly superstitious of the place, won't go near it. Others make fun of them for it—"the stone gargoyles just look scary, they aren't real." They aren't, but the demons within are.
 
 ## Juda's Perch
 
@@ -132,9 +162,11 @@ TODO
 
 Tags: state, nation
 
-A state in Westrim.
+A state in Westrim, located on the western side of the Dunes of Kunagi. Kura lies south of the Righteous Peaks (the mountains on the southern border of Astrelle, part of Tarkhon). To its south is Atriik, and to its east are the Wyrm Teeth hills.
 
-TODO
+### Tul Azreitnok
+
+In the southern hills and dunes region of Kura stands Tul Azreitnok—a fortress and specialized academy dedicated to the study of midnight fire, a rare and dangerous form of dark flame magic. The academy trains mages in the manipulation of fire that burns with darkness rather than light, flames that consume without illuminating.
 
 ## Lupuno
 
@@ -183,6 +215,16 @@ Tags: state, nation
 A state in Westrim.
 
 TODO
+
+### Kaspion
+
+Old capital of Mueros. Cruel dictator, would execute anyone he saw as a traitor at Cliffdrop. Rebel uprising eventually overthrew King Kasper, who then killed everyone with his death. Very cursed place.
+
+#### Cliffdrop
+
+Location at which "traitors" of Kaspion were thrown off and killed, before Kaspion was eventually overthrown.
+
+Haunted by ghosts. Home to other powers now?
 
 ## North Naruaghin tribes
 
@@ -246,7 +288,9 @@ TODO
 
 Tags: hills, geography
 
-TODO
+Hills just south of the Eronia range that poke into the northern edge of the Dunes of Kunagi. This region, also known as Malasi Karkus, is home to the Blitzling—creatures that inhabit these transitional hills between the mountains and the desert sands.
+
+See also: [Dunes of Kunagi](Dunes%20of%20Kunagi.md#shyalaviin-malasi-karkus)
 
 ## Silwyn
 
@@ -304,7 +348,11 @@ TODO
 
 Tags: hills, geography
 
-TODO
+A range of hills in Westrim, east of Kura and north of the Milras Forest. The Wyrm Teeth earned their name from their jagged, tooth-like peaks and their historical connection to the wyrms that once roamed these lands.
+
+### Urk Noulgas
+
+On the southwest point of the Wyrm Teeth stands Urk Noulgas—a ruined fortress that was once home to the Keeper of the Wyrms. In ancient times, wyrms were controlled by powerful mages in the Dunes of Kunagi, and Urk Noulgas served as a command post for these wyrm-keepers. The fortress now lies in ruins, abandoned after the fall of the wyrm-keeping tradition, though some say the echoes of old power still linger in the stones.
 
 ## Üod
 

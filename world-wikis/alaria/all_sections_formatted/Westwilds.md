@@ -72,7 +72,23 @@ Named after the famed cartographer and explorer Oregeg Tolkarsus who traveled it
 
 Tags: lake, geography
 
-TODO
+A series of interconnected freshwater lakes in the Westwilds, home to the reclusive Griebi people.
+
+### The Griebi: The Lakemen
+
+The Griebi are a unique subspecies of aquatic orcs with blueish-gray skin adapted for underwater life. They are accomplished hunters and fishers who rarely interact with surface-dwellers and communicate sparingly even among themselves.
+
+**Physical Characteristics:**
+- Blueish-gray skin
+- Ability to breathe underwater
+- Long, needle-like teeth adapted for swimming and catching fish
+
+**Culture & Society:**
+- Subsist primarily through hunting and fishing
+- Rarely speak, preferring non-verbal communication
+- Ruled by a hag queen
+
+The Griebi's terrifying appearance - particularly their needle-like dentition - makes encounters with them unsettling for most surface dwellers, though they are primarily focused on survival rather than aggression.
 
 ## Grieb
 
@@ -128,7 +144,17 @@ TODO
 
 Tags: mountains, geography
 
-TODO
+A mountain range in the Westwilds, featuring both dense forests and strategic passes.
+
+### The Everwood
+
+A vast forest stretching across the breadth of the Krenglelan Range, covering much of the mountain valleys and lower slopes.
+
+### Ipt
+
+On the western side of the Krenglelan Range, north of the Everwood and along a major trade route, stands Ipt—a formidable fortress built for Feriptus, an extremely powerful lich. The fortress serves as his primary research facility, where he conducts necromantic experiments in complete isolation.
+
+Ipt is built into the mountainside with tall, iron-reinforced stone walls and heavy defensive wards that notify Feriptus of any approaching visitors. The fortress is supplied through a grim arrangement: a personal Enti trader makes bi-yearly trips south to acquire slaves, delivering fresh bodies for Feriptus's dark work. Despite its location along a trade route, travelers give Ipt a wide berth, knowing that those who approach uninvited rarely leave.
 
 ## Laeire
 

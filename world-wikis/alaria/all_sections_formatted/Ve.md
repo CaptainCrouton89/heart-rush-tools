@@ -12,9 +12,11 @@ TODO
 
 Tags: state, nation
 
-A state in Ve.
+A state in Ve, immediately north and west of the Widebarrow Mountains. A land of grasslands and forests, more temperate than the surrounding regions.
 
-TODO
+### Tarolin
+
+The capital city of Avalon, serving as the political and cultural center of the state.
 
 ## Belanora
 
@@ -66,9 +68,15 @@ TODO
 
 Tags: state, nation
 
-A state in Ve.
+A state in southwestern Ve, controlling the Suki Jungle and extending through the Blood Mountains into the plains south of Avalon. Chimea has a history of conflict with neighboring Dernis.
 
-TODO
+### Suki Jungle
+
+The dense tropical jungle that covers much of Chimea's territory, divided into South Suki, West Suki, and North Suki regions.
+
+#### Boneswamps
+
+A cursed swamp deep within the Suki Jungle, filled with the dead bodies of Dernish and Chimean soldiers from ancient wars between the two nations. The bones of the fallen animate and rise from the murky water, driven by residual hatred and the trauma of violent death. The swamp is perpetually haunted by skeletal warriors who reenact their final battles, attacking any living creatures that enter their domain. The constant presence of undead makes the Boneswamps one of the most dangerous regions in the Suki Jungle.
 
 ## Chitin Cove
 
@@ -175,6 +183,10 @@ TODO
 Tags: citystate
 
 Huge lake with orange algae growing on it. Algae is harvested to make Orange Flake, a potent drug. Drug is taken in ships downstream to Orangeport where it is shipped around the world.
+
+### Orange Flake
+
+Gives you a relatively safe high. Extremely extremely addictive, and quite expensive since it can only be manufactured in Gnotobi.
 
 ## Goataya
 
@@ -448,7 +460,23 @@ Tags: state, nation
 
 A state in Ve.
 
-TODO
+### Sunrise Mountains
+
+Mountain range in the northeast of Shyona.
+
+### Gilded Plains
+
+Great, beautiful plains of golden grass located north of the Sunrise Mountains. When the sun rises, the entire expanse becomes a brilliant gold, making it one of the most beautiful places in the world.
+
+### Marthavia Mountains
+
+A mountain range in Shyona known for its treacherous peaks and dangerous mining operations. The mountains sit at the intersection of void and air leylines, creating supernatural hazards.
+
+#### Choking Mines
+
+Located at the southwest point of the Marthavia Mountains, at the precise intersection of void and air leylines, the Choking Mines are among the most dangerous mining operations in Shyona. The intersection of these leylines causes air to spontaneously appear and cease to exist—miners can be breathing normally one moment and instantly choking the next as the air vanishes from their lungs.
+
+The unpredictable nature of the void-air interaction makes the mines extremely sketchy. Many elves have died here, their bodies found frozen in poses of sudden suffocation. Despite the extreme danger, the mines contain valuable magical minerals and crystals formed by the leyline convergence, drawing prospectors willing to risk their lives for wealth.
 
 ## Slonari Bay
 

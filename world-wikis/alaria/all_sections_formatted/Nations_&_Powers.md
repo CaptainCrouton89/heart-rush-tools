@@ -750,6 +750,11 @@ Inhabited by the Inavolin.
 
 Noble, intelligent.
 
+### Shtaneres
+
+
+Once a great city of Breia. However, Hermelia worked there, got pissed, and burned the entire thing down.
+
 ## Bynü Island Tribes
 
 Tags: state
@@ -2000,6 +2005,16 @@ Tags: state
 
 ### History
 
+### Slaver's Coast
+
+
+The coast that Gorath (and others) slavers travel up and down, gathering slaves from the local Tamadrez population. 
+
+### Slavewatch
+
+
+Built by Gorath to watch for slaves journeying north to escape, and to prevent them. Magically enhanced sight.
+
 ## Grieb
 
 Tags: state
@@ -2254,6 +2269,11 @@ Iylovia : Gyv - Silver haired, mentally manipulative humanoids. Aristocracy, whe
 Gyrdyr Forest contains all varieties of magical beasts, which are farmed and hunted by the aristocracy for a sizeable profit
 
 mildly rich nation, no army, deal with silwyn attacks in the south.
+
+### Scorpion Bats
+
+
+Deadly bats with stingers. They are farmed by the Ilyovian aristocracy. They are deadly, but prised for their magical value and their incredibly soft fur.
 
 ## Ios
 
@@ -3010,6 +3030,13 @@ Tags: state
 
 
 ### History
+
+### Syvlius
+
+
+After undergoing a bloody revolution in which thousands of enslaved dwarves revolted from Sylthik control, led by a party of heroes (Xe, Alice, Bryce, Woof, Bordrick, Snuffles), the city within Kyagos has begun to rebuild under its new rulers—a small party of heroes.
+
+Extremely lucrative mines lie beside the city, and provide enormous riches which have funded the rapid regrowth of the. city.
 
 ## Kyorda
 
@@ -4004,6 +4031,11 @@ Myorna: 50 years ago, Myorna did not exist. But then, moon elves surfaced from t
 
 Even longer ago, Tiira was made into their goddess, after Myorna was driven underground by other elves. Elves spent thousands of years underground.
 
+### Stone Slums
+
+
+The Stone Slums are an area of super foggy, flat, slate-built, short buildings. Many of the poor of Myorna make their home here, and it is home to many unsavory and mysterious characters. This is where golems were discovered and first built.
+
 ## Nashua
 
 Tags: state
@@ -4494,6 +4526,14 @@ Tags: state
 ### History
 
 Sixty years ago, the Dengar lived in the swamp, in peace. They were close with many of the beasts of the marshes, and knew how to survive. Then, the gorgon Phendexelas arrived, and the fogs began. At first the fogs were not an issue, but slowly the beasts of the swamp were driven mad, and the Dengar became affected. A city was built by the queen, and the Dengar fled to it, running from a swamp that had turned against them. The gorgon had solved a problem she had created, and now she was the queen of a city.
+
+## Pity Knights
+
+Tags: order
+
+An ancient order of lich hunters. They had questionable means of fighting liches (using Deoric themselves—see the Whispering Isles), but they were very successful. 
+
+THe order collapsed when one of the members used the deep knowledge of fighting liches to become a powerful and even more death-resistant lich themselves. This man is Xynoth Azkonor
 
 ## Postronamas Empire
 
@@ -5247,6 +5287,11 @@ Links: States
 
 ### History
 
+### Shadowkeep
+
+
+A tower for skyships, shrouded in darkness. Once owned by Shyona royalty, now cursed. Inhabited by hag princess.
+
 ## Silwyn
 
 Tags: state
@@ -5323,6 +5368,12 @@ Tags: state
 
 
 ### History
+
+## Soldiers of the Third Eye
+
+Tags: faction
+
+Tattoo of the eye on ack of hand. All time attuned, very powerful mercaneries. Can foresee strategic outcomes, nasty opponents. Are neutral.
 
 ## Solhalven
 
@@ -5812,6 +5863,16 @@ Tags: state
 Tags: state
 
 Inhabited by Ezuri. Live in towering tree in center of island, many miles across. Entire island is trapped to shit.
+
+## The Ivory Hand
+
+Tags: faction
+
+The Ivory Hand is an incredibly secretive, and equally powerful organization of people who pull many of the strings behind the scenes across the world. The order seeks to maintain the systems and people involved in the transferral of slaves to be sacrificed for Deoric magic. Members incldue the Sylke queen, various merchants of Bonnetaz, and several dragons, among others.
+
+## The Way Watchers
+
+Tags: poi
 
 ## Thespia
 
@@ -6781,6 +6842,13 @@ Tags: state
 
 
 ### History
+
+### Romper Liko
+
+
+A temporary bazaar, that pops up once every winter, all the tribes of Zintacas trade with one another. Entire fair is on a small, island cliff, connected to its surroudnings via long rope bridges.
+
+Hook: someone has ben pushed off to their death. Why?
 
 ## state_ex
 

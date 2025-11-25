@@ -100,7 +100,9 @@ Hills in the Dalizi Wildlands.
 
 ### Nykotheryx Amberylika
 
-A forest in the Dalizi Wildlands.
+An ancient forest, once home to the Dark Elves. Ancient dragon totems of bone and silver dot the forest. Unbeknownst to many, these totems hold the spirits of powerful dark elves. Rather than go to Celesté, powerful dark elven leaders preferred to remain on the material plane. Like daemons of Celesté, the spirits in these totems still have power. Unlike spirits of Celesté, they will not fade upon being forgotten. Those who find their true names are likely to be showered in power as thanks.
+
+Within the forest live the Luma, crystaline and irridescent pixies that live among the upper reaches of the forest, and the Shyoka Saseidi, gnomish caretakers of the forest.
 
 ### Wandering Hills
 
@@ -720,9 +722,19 @@ TODO
 
 Tags: forest, geography
 
-A forest in the Dalizi Wildlands.
+A large ancient forest region in the Dalizi Wildlands, positioned north of the Dragon's Spine mountains and east of the Dalizi Confederation proper. The forest is known for its dream-attuned magical properties and otherworldly phenomena.
 
-TODO
+### Real Forest
+
+The Real Forest lies in the northern reaches of Nykotheryx Amberylika, notorious for its reality-warping properties. During fall, the pollen from the trees causes dreams and reality to intermingle—travelers cannot tell if they are awake or asleep. The disorientation is so complete that people can wander for days convinced they are dreaming when they are awake, or vice versa.
+
+The forest is home to the Pine Jester, a wild, mischievous spirit that delights in tormenting confused travelers. The Pine Jester is unkillable so long as the forest itself lives—it is bound to the forest's essence and will regenerate from any harm.
+
+### Dreamlake
+
+North of the main Nykotheryx Amberylika forest, just south of the Real Forest, lies Dreamlake—a body of water with profound magical properties. Drinking from the lake allows you to interact far more vividly with your dreams, experiencing them with perfect clarity and control. More remarkably, those who drink the water can enter and interact with other people's dreams, creating shared dreamscapes or invading the private dreams of others.
+
+Dream-mages and mystics make pilgrimages to Dreamlake to enhance their oneiromantic abilities, though the power comes with risks—some who drink too deeply find themselves unable to distinguish waking from dreaming even after the water's effects should have faded.
 
 ## Ogre Hills
 

@@ -26,7 +26,9 @@ Tags: island, geography
 
 A group of islands in the Western Isles.
 
-TODO
+A region of more, treacherous terrain. Extremely sharp rocks made of obsidian stick up from the water, which can shred a boat, and definitely your body. Mysterious currents surround the area, and the Qorgath lives somewhere in its murky depths, guarding her hatch of Erzqin.
+
+The Erzqin also patrol the waters, slaying and destroying those who dare to enter.
 
 ## Drifting Isles
 
@@ -148,6 +150,8 @@ The islands here are shear cliffs, and inhabiated by sirens who live in small ca
 
 Only reason to come here is if you want to interact with the sirens, who know gaeic melodies.
 
+! Northwest of Bynü Island Tribes, South of the Cliffs of Syquindonos. contains Ivory Keep (fortress)
+
 ## Soros
 
 Tags: island, geography
@@ -191,6 +195,10 @@ Home to the lich queen Sirinas. From here, she researches how to harness Gaeic m
 Soros, the island she's on, used to be home to the nation of Endoros, a country that highly valued music. They had some of the best bards in the world, and definitely the best instruments. The organ that resides in her palace is extremely magical.
 
 In the north lies Songport, where the ruins of the old harbor lie. It has fallen into ruin, but it is the only place on the entire island that one could land a ship—everywhere else, underwater rocks sink ships, and horrible waves dash you on shore.
+
+### Ithagas
+
+An island of musical significance and dark ritual.
 
 ## Wurm Maw Bay
 

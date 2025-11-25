@@ -16,7 +16,11 @@ A mountain range in Adron.
 
 ### Gozwin Mountains
 
-A mountain range in Adron.
+A mountain range on the eastern coast of Adron, along the Denrik Sea.
+
+#### Waterdark
+
+Hidden within the Gozwin Mountains lies Waterdark, the fortress where those who overthrew the dragons once lived. The residents were masters of water and darkness magic—secretive, hated, and deadly, but undeniably competent. A secret order still resides in Waterdark, but the fortress appears completely empty unless you know what to look for. The order continues its dark work in the shadows, manipulating water and darkness to pursue goals known only to themselves.
 
 ### Shrieking Peaks
 
@@ -38,6 +42,16 @@ A fortress in Adron.
 
 A group of islands near Adron.
 
+### Ámas Kiori
+
+Dragonborn homeland. Sacred basin in Adron. Entire area is a holy land.
+
+### Stillwater
+
+North of the Ámas Kiori region in the central basin, west of the Majesty Mountains, lies Stillwater—a sacred pool that forms in a river, watched over by Naga priests. The pool exhibits extraordinary temporal properties: in the eddies surrounding the still center, time passes very quickly, while in the perfectly motionless water at the pool's heart, time does not pass at all.
+
+The Naga guard this sacred site with reverence, understanding that Stillwater is a place where the normal flow of time bends and breaks. Those who enter the still center may emerge to find decades have passed in the outside world, while those caught in the swift eddies age in moments.
+
 ## Alacayir
 
 Tags: city, state, nation
@@ -55,6 +69,10 @@ TODO
 ### Black Hills
 
 Hills within Anarak.
+
+### Mosoyevo
+
+Home to many naga. Similar to Anarak, less evil though.
 
 ## Apketrii
 
@@ -175,6 +193,10 @@ A city-state in the Bygone Hills.
 Tags: state, nation
 
 TODO
+
+### Ngül Mountains
+
+Home to Güli mountain giants, as well as thousands of Kimril, who live peacefully alongside the giants.
 
 ## Chavux
 
@@ -566,7 +588,7 @@ A forest in Iylovia.
 
 Tags: plains, geography
 
-TODO
+! SW of Azawahasi (state) in middle sea region.
 
 ## Joswik
 
@@ -593,14 +615,6 @@ TODO
 ## Kazül
 
 Tags: state, nation
-
-TODO
-
-## Keletus
-
-Tags: state, nation
-
-A state on Apketrii.
 
 TODO
 
@@ -637,6 +651,10 @@ Tags: state, nation
 A state on Erpeus.
 
 TODO
+
+### Bejeweled Palace
+
+Cursed palace of old king of Mkinti. Extremely valuable treasury, cursed as hell. Gnomes don't dare to go near it.
 
 ## Murder Hills
 
@@ -876,6 +894,28 @@ Infested with massive leeches, deathfog, and misery-sprites.
 
 Water is quite deep—easy to drown. Saltwater
 
+### Omegra's Hut
+
+Mostly sunken dungeon in Swampdeep.
+
+## Bygone Hills
+
+Just south of the eastern edge of Swampdeep lie the Bygone Hills, a region of rolling terrain marked by ancient ruins and forgotten city-states.
+
+### Eidlesandres
+
+A city-state in the Bygone Hills, maintaining its independence through careful neutrality and strategic positioning.
+
+### Shystani Forest
+
+A small forest east of Eidlesandres, notable for its sacred sites and ancient power.
+
+#### God's Court
+
+A massive open-air arena encircled by towering stone statues—the pantheon of a vanished people, each deity frozen in stone, staring in eternal judgment at those who stand at the center. The weight of those divine gazes creates a powerful zone of truth magic.
+
+At the center of the arena stands an ancient altar. Anyone who swears to tell the truth upon this altar becomes magically bound to speak only truth—lies become impossible, evasions fail, and the full truth spills forth regardless of consequence. The Shystani forest has grown around this place, but locals still use God's Court to settle disputes, verify oaths, and force confessions from the accused. Those who enter the arena feel the stone gods' eyes boring into their souls.
+
 ## Sylke
 
 Tags: state, nation
@@ -1038,7 +1078,7 @@ TODO
 
 ## Wastes of Dezolos
 
-Tags: desert
+Tags: desert, poi
 
 Water magically evaporates here—not just because it is hot. It won't last more than a day, and it can't be created magically.
 
