@@ -1,5 +1,0 @@
-## Plains
-
-Tags: poi
-
-

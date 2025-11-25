@@ -1,5 +1,0 @@
-## Plateau
-
-Tags: poi
-
-

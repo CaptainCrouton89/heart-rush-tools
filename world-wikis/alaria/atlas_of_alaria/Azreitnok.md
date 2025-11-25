@@ -1,5 +1,0 @@
-## Azreitnok
-
-Tags: poi
-
-

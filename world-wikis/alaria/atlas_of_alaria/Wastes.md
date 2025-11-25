@@ -1,4 +1,0 @@
-## Wastes
-
-Tags: poi
-

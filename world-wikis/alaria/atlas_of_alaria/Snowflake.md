@@ -1,5 +1,0 @@
-## Snowflake
-
-Tags: poi
-
-

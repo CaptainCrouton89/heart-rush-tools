@@ -1,5 +1,0 @@
-## Priest
-
-Tags: poi
-
-

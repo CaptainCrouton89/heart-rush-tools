@@ -1,3 +1,0 @@
-## Zicadia
-
-Tags: poi

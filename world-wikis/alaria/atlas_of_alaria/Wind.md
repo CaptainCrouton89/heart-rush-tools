@@ -1,3 +1,0 @@
-## Wind
-
-Tags: poi

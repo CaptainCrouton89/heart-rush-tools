@@ -1,5 +1,0 @@
-## Dezolos
-
-Tags: poi
-
-

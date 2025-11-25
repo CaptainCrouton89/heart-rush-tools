@@ -1,5 +1,0 @@
-## Isles
-
-Tags: poi
-
-

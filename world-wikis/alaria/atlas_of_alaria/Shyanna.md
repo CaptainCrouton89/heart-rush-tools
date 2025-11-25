@@ -1,5 +1,0 @@
-## Shyanna
-
-Tags: poi
-
-

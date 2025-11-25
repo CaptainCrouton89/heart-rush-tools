@@ -1,3 +1,0 @@
-## Trader
-
-Tags: poi

@@ -1,5 +1,0 @@
-## Hand
-
-Tags: poi
-
-

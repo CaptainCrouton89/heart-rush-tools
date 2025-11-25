@@ -1,5 +1,0 @@
-## Ithagas
-
-Tags: poi
-
-

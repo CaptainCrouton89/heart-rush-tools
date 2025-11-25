@@ -1,5 +1,0 @@
-## Rui
-
-Tags: poi
-
-

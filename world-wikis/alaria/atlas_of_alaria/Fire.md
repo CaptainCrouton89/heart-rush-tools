@@ -1,5 +1,0 @@
-## Fire
-
-Tags: poi
-
-
