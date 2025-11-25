@@ -114,6 +114,9 @@ const ALARIA_COMBINERS: CombinerConfig[] = [
     subdirectories: [
       // Daemons become their own separate super-document
       { sourceDir: "daemons", outputName: "Daemons" },
+      { sourceDir: "planes", outputName: "Planes" },
+      { sourceDir: "celestial", outputName: "Celestial" },
+      { sourceDir: "life_and_death", outputName: "Life_&_Death" },
     ],
   },
   {
@@ -133,6 +136,7 @@ const ALARIA_COMBINERS: CombinerConfig[] = [
     subdirectories: [
       // Dragons become their own separate super-document
       { sourceDir: "dragons", outputName: "Dragons" },
+      { sourceDir: "diseases", outputName: "Diseases" },
     ],
   },
   {

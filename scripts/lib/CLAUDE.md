@@ -44,7 +44,7 @@ Utility functions for the content compilation pipeline.
 
 **Predefined configurations:**
 - **`HEART_RUSH_COMBINERS`** - Race and talent combiners with intro files and header adjustments
-- **`ALARIA_COMBINERS`** - 7 categories: Atlas (25 regional subdocs), Nations & Powers, Cosmology & Religion (Daemons subdoc), History & Lore, Magic & Knowledge, Bestiary (Dragons subdoc), Dramatis Personae
+- **`ALARIA_COMBINERS`** - 7 categories: Atlas (25 regional subdocs), Nations & Powers, Cosmology & Religion (Daemons, Planes, Celestial, Life & Death subdocs), History & Lore, Magic & Knowledge, Bestiary (Dragons, Diseases subdocs), Dramatis Personae
 
 ## Key Patterns
 
