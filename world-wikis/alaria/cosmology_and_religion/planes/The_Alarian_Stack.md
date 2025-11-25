@@ -1,6 +1,8 @@
-## Alaria
+## The Alarian Planar Stack
 
-Tags: cosmology
+Tags: cosmology, planar stack
+
+!Horizontal View
 
 ### About Alaria
 
@@ -8,14 +10,13 @@ The Alarian Planar Stack, also commonly known as Alaria, is the focus of this al
 
 ### Geography of the Planes
 
-
 ### Material Plane
 
 In the very middle is the Material Plane—a world of kingdoms and conquest and magic, dominated by typical masses of land and ocean. However, on the opposite side of the Material Plane—as though on the flip side—lies Celesté: the realm of daemons. It is a dream-like mirror image of the material plane. 
 
 #### Celesté
 
-Celesté was created when the Alarian Planar Stack fragmented and Ezz poured in from beyond. The material plane peeled apart and a new plane of conceptual existence was born. Emotion, free will, and thought poured into Alaria. Celesté is made of the coalescense  of thought/emotion/etc on the material plane. Where there is thought, there is a counterpart to the material planes.
+Celesté was created when the Alarian Planar Stack fragmented and Ezz poured in from beyond. The material plane peeled apart and a new plane of conceptual existence was born. Emotion, free will, and thought poured into Alaria. Celesté is made of the coalescense of thought/emotion/etc on the material plane. Where there is thought, there is a counterpart to the material planes.
 
 ### Astral Plane
 
