@@ -79,3 +79,8 @@ Links: States
 Myorna: 50 years ago, Myorna did not exist. But then, moon elves surfaced from the mountains, declaring that now they wanted to interact with the rest of the world, and trade. Since then, relations have been tenuous. Despite entering into the Aldriktch trade alliance with its neighbors, discoveries about the nature of moon elves (also known as silver elves here) has made their neighbors wary. More recent terrorist attacks with links pointing back to Myorna have made their neighbors outright hostile. Even within Myorna there is political unrest. King Thyolinor brought the kingdom to the surface, but many feel they are unwelcome, and wish to return to the caves from which they came. King Thyolinor is not without supporters though—many of the settlements closer to the borders have already begun to assimilate into Erasnian (Erasnus) culture, and hope to stay.
 
 Even longer ago, Tiira was made into their goddess, after Myorna was driven underground by other elves. Elves spent thousands of years underground.
+
+### Stone Slums
+
+
+The Stone Slums are an area of super foggy, flat, slate-built, short buildings. Many of the poor of Myorna make their home here, and it is home to many unsavory and mysterious characters. This is where golems were discovered and first built.

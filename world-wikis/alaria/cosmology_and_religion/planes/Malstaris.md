@@ -13,3 +13,15 @@ Long periods of time spent in Malstaris can cause strange interactions, as your 
 Strange creatures have made Malstaris their home, including Devourers, Mind Fiends, and Voids. 
 
 High above Malstaris is Nydus, the Black Sun, spilling heavy darkness across the land.
+
+### Breakneck Canyons
+
+A region of treacherous cliffs within Malstaris.
+
+#### Black Citadel
+
+A tower built atop cliffs in the Breakneck Canyons. Home to a vampire lord. The dead line up outside the citadel for miles, waiting for their turn.
+
+### Parliament of Shadows
+
+The governing body of the largest region of Malstaris. Composed of the lords of all of the comprising regions.

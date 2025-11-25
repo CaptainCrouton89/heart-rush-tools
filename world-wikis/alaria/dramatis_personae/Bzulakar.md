@@ -7,3 +7,7 @@ Bzulakar is the most powerful person on Alaria. The power of his ice magic is en
 A total master of many of Kethic elementalism, as well as tons of Deoric. Has lived for over nine-thousand years—his power rivals that of major gods.
 
 Holds the secret to powering Deoric magic without death by using the ambient warmth of the ground. Has caused the entire area to freeze.
+
+### Bzulakar's Keep
+
+Atop a tower that stretches 2 miles into the sky stands Bzulakar's Keep—an enormous fortress of permanently frozen ice. And within the tower lives the ancient lich Bzulakar. Ascending the spire is treacherous, due to high winds, extreme temperatures, and sheer cliff. At the base of the spire lives Strolzaq, Bzulakar's pet dragon.

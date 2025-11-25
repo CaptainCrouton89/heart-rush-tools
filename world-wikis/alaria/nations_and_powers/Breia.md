@@ -7,3 +7,8 @@ Golden skinned sky-knights. Numerous towers in the sky, interconnected city buil
 Inhabited by the Inavolin.
 
 Noble, intelligent.
+
+### Shtaneres
+
+
+Once a great city of Breia. However, Hermelia worked there, got pissed, and burned the entire thing down.

@@ -76,3 +76,13 @@ Tags: state
 
 
 ### History
+
+### Slaver's Coast
+
+
+The coast that Gorath (and others) slavers travel up and down, gathering slaves from the local Tamadrez population. 
+
+### Slavewatch
+
+
+Built by Gorath to watch for slaves journeying north to escape, and to prevent them. Magically enhanced sight. 
