@@ -4,7 +4,37 @@
       "name": "Atlas of Alaria",
       "icon": "🗺️",
       "description": "The physical world and its landmarks",
-      "sections": ["Atlas_of_Alaria"]
+      "sections": [
+        "Atlas_of_Alaria",
+        "Northlands",
+        "Celedrim_Plains",
+        "Northern_Isles",
+        "Frostmarch_Peninsula",
+        "Kharvorn_Mountains",
+        "Westwilds",
+        "Western_Isles",
+        "Seacliff_Coast",
+        "Greenwater_Isles",
+        "Tarkhon",
+        "Westrim",
+        "Middle_Sea",
+        "Emerald_Coast",
+        "Sandreach",
+        "Sandreach_Mountains",
+        "Shacklands",
+        "Terrenia",
+        "Central_Aboyinzu",
+        "Elder_Wilds",
+        "Dalizi",
+        "Sea_of_Daggers",
+        "Dragons_Spine_Coast",
+        "Venalthier",
+        "Farlands",
+        "Ve",
+        "Wanderlands",
+        "Crimson_Coast",
+        "Wycendeula"
+      ]
     },
     {
       "name": "Nations & Powers",
@@ -16,7 +46,7 @@
       "name": "Cosmology & Religion",
       "icon": "🌌",
       "description": "The universe, planes, and divine beings",
-      "sections": ["Cosmology_&_Religion", "Daemons"]
+      "sections": ["Cosmology_&_Religion", "Daemons", "Planes", "Celestial", "Life_&_Death"]
     },
     {
       "name": "History & Lore",
@@ -28,7 +58,7 @@
       "name": "Magic & Knowledge",
       "icon": "✨",
       "description": "How supernatural forces work",
-      "sections": ["Magic_&_Knowledge"]
+      "sections": ["Magic_&_Knowledge", "Magic_Systems", "Magical_Materials", "Artifacts", "Arcane_Lore"]
     },
     {
       "name": "Bestiary",
