@@ -4,10 +4,11 @@ Utility functions for the content compilation pipeline.
 
 ## Files
 
-- **file-combiners.ts** - Combines multiple markdown source files into single files:
-  - Race files → `Kin_&_Culture.md`
-  - Talent/combat/noncombat/spell files → `Talents.md`
-  - World wiki category directories → combined category files
+- **file-combiners.ts** - Config-driven file combining system for markdown sources:
+  - Combines race files into `Kin_&_Culture.md`
+  - Combines talent files (combat/noncombat/spells) into `Talents.md`
+  - Combines Alaria world wiki categories into super-documents
+  - Supports arbitrary nesting and separate sub-documents per subdirectory
 - **content-processors.ts** - Splits markdown content by headers into structured sections
 - **slug-generator.ts** - Generates URL-safe slugs from titles and headers
 - **cross-references.ts** - Detects and resolves cross-references between content sections
@@ -16,32 +17,46 @@ Utility functions for the content compilation pipeline.
 
 ## Key Functions
 
-**content-processors.ts:**
-- **`splitContent(content, filename)`** - Splits markdown by headers (H1-H6) into sections with metadata
-
 **file-combiners.ts:**
-- **`combineRaceFiles()`** - Merges individual race markdown files into `Kin_&_Culture.md`
-- **`combineTalentFiles()`** - Merges combat, noncombat, and spell files into `Talents.md` with section headers
-- **`combineWorldWikiFiles(worldName)`** - Orchestrates combining world wiki categories and returns generated file paths
-- **`combineWorldWikiCategory(worldName, categoryDir)`** - Combines nested markdown files in a category
-- **`recursivelyCollectMarkdownFiles(dir, basePath)`** - Recursively collects markdown files from nested directories
+- **`combineRaceFiles()`** - Combines Heart Rush races via config-driven system
+- **`combineTalentFiles()`** - Combines Heart Rush talents (combat/noncombat/spells) with header level adjustment
+- **`combineAlariaFiles()`** - Processes all 7 Alaria world wiki categories, creating separate super-documents for regional subdirectories
+- **`combineFromConfig(config)`** - Core generic combiner that processes a `CombinerConfig` object
+- **`combineDirectoryFiles(sourceDir, headerLevelAdjust)`** - Combines markdown files from a single directory with optional header adjustment
 
-**navigation-builder.ts:**
-- **`loadNavigationCategories(configPath)`** - Loads navigation configuration from JSON
-- **`createCategorizedNavigation(sections, categories)`** - Builds navigation tree with category normalization (handles "And"/"&" mismatches)
-- **`normalizeCategoryName(name)`** - Normalizes category names for consistent matching
+**Other files:**
+- **`splitContent(content, filename)`** (content-processors.ts) - Splits markdown by headers (H1-H6) into sections with metadata
+- **`loadNavigationCategories(configPath)`** (navigation-builder.ts) - Loads navigation configuration from JSON
+- **`createCategorizedNavigation(sections, categories)`** (navigation-builder.ts) - Builds navigation tree with category normalization
+
+## Architecture
+
+**Configuration-driven combining** uses two interfaces:
+- **`CombinerConfig`** - Top-level config specifying source/output dirs, output name, optional intro file, and subdirectories array
+- **`SubdirectoryConfig`** - Subdirectory config with `sourceDir`, optional `outputName` (creates separate super-document if set), optional `introFile`, and `headerLevelAdjust`
+
+**Combining behavior:**
+- If `outputName` is set, subdirectory becomes separate super-document with its own file
+- If `outputName` is omitted, subdirectory merges into parent with optional intro and header level adjustment
+- Header levels adjusted via `#`.repeat(adjustment) regex replacement on `^(#+)`
+- Filenames auto-convert to headers if file doesn't start with H2 (`^##\s+`)
+- Special files excluded: `CLAUDE.md`, `.claude-md-manager.md`, `_intro.md`
+
+**Predefined configurations:**
+- **`HEART_RUSH_COMBINERS`** - Race and talent combiners with intro files and header adjustments
+- **`ALARIA_COMBINERS`** - 7 categories: Atlas (25 regional subdocs), Nations & Powers, Cosmology & Religion (Daemons subdoc), History & Lore, Magic & Knowledge, Bestiary (Dragons subdoc), Dramatis Personae
 
 ## Key Patterns
 
-- File combiners filter out `CLAUDE.md` and `.claude-md-manager.md` files
-- Category names normalized by converting `&` to `and` before matching (prevents "Other" section creation)
-- World wiki categories support arbitrary nesting depth
-- Navigation building requires optional `navigation-categories.json` config file
-- Section splitting handles edge cases: no headers, content before first header, empty sections
+- Config-based approach eliminates per-category custom logic
+- Subdirectory `outputName` controls whether it becomes separate document or merges into parent
+- Header adjustment enables proper nesting when merging subdirectories
+- Intro files handle category preamble and are required (fail-fast) when specified
+- Title generation from filename uses underscore-to-space conversion
+- Logging shows combined file counts for transparency
 
 ## Integration Points
 
-- Used exclusively by `scripts/compile-content.ts`
-- Output feeds into `src/lib/content.ts` for runtime loading
-- Markdown sources in `heart_rush/` → JSON output in `content/` (gitignored)
-- World wiki sources in `world-wikis/[world]/` → combined intermediates → JSON output in `content/worlds/[world]/`
+- Used exclusively by `scripts/compile-content.ts` which calls `combineRaceFiles()`, `combineTalentFiles()`, and `combineAlariaFiles()`
+- Output feeds into content processors for splitting and metadata generation
+- Markdown sources in `heart_rush/` and `world-wikis/alaria/` → combined intermediates in `all_sections_formatted/` → JSON output via `src/lib/content.ts`
