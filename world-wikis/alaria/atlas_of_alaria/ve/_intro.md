@@ -8,11 +8,14 @@ Ve is a large, isolated continent to the far east of Alaria, separated from the 
 
 - **Alrock Ocean**: The vast ocean to the west, separating Ve from the rest of Alaria
 - **Norswell Sea**: The northern waters
-- **Sea of Fools**: The eastern ocean, marked on maps with warnings of maritime dangers
+- **Sea of Fools**: The eastern ocean, what Meadow Sound opens to, lying due east of the Krell Lands. Despite its lovely appearance—filled with beautiful coral reefs and inviting waters—the Sea of Fools is treacherous. Every creature here, from the eels to the snails to the smallest reef dwellers, carries slow-acting poison. Not necessarily lethal, but awful nonetheless. The sea's beauty is a deadly lure, earning it the name "Sea of Fools" for those who trust what they see
+- **Shadowreap**: Far to the east of Ve, north of the Sea of Fools, lies Shadowreap—a region where force and dark leylines intersect beneath the ocean. Massive clouds of pure darkness drift across the water, and sailing into them invites disaster. The combined power of force and darkness can tear ships apart, ripping hulls to splinters and scattering wreckage across the waves. Few vessels that enter Shadowreap return intact
 
 ### Continental Layout (Clockwise from Northwest)
 
 **Northwest - Edari**: Savannah plains occupy the northwestern corner of Ve, a land of golden grasses and scattered trees.
+
+**Shepherd's Stones**: Steep golden plains that form a natural barrier between Edari and Sestros, marking the transition between the two regions.
 
 **North - Turquish Bay**: This bay separates Edari from Shyona, cutting into the northern coastline.
 

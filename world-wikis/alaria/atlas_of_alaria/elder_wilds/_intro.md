@@ -43,3 +43,13 @@ Blue ruins, huge crumbling walls, labyrinthine. Blue/black lotus flowers grow th
 ### Forest of Statues
 
 Time witches/hags live in this forest. Turn to stone, slow movements, move faster than you can see. Also Ciri the Time Witch, possesses one of the time stones. Can train you, in exchange for a piece of your soul.
+
+### Seyiy
+
+A centrally located hilly region within the Elder Wilds, notable for its dramatic terrain and treacherous waterways.
+
+#### Archfalls
+
+Moss-covered stone arches span throughout this waterfall-laden region, creating a maze of cascading water and ancient stonework. The slightest misstep sends travelers tumbling toward the abyss below. The water harbors brain-eating amoebae, and water hags lurk in the pools and mists.
+
+The area teems with unusual wildlife—quad-winged dove-like creatures drift through the spray, while pterodactyls nest on the higher arches and hunt in the updrafts. The combination of dangerous fauna, deadly parasites, and treacherous footing makes Archfalls one of the most hazardous locations in the Elder Wilds.

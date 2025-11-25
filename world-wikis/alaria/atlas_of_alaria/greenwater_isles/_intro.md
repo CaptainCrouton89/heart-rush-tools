@@ -54,3 +54,13 @@ TODO
 ## What Will Go Wrong
 
 TODO
+
+## Notable Locations
+
+### Agreben Sea Islands
+
+#### Prophecy Island
+
+Located north of Crab Island and west of Smokestack Island, Prophecy Island was once heralded as a miracle—a volcanic island that rose directly from the sea, seemingly as a gift from the gods to the people. Colonists arrived with hope and built a thriving civilization, believing they had found their promised land.
+
+For two years, the settlement flourished. Then the volcano erupted a second time, burying the entire population in ash and lava. The ruins of Zyquirk village remain visible among the hardened lava flows, a haunting reminder of false prophecy and divine cruelty. Some say the island continues to whisper false promises to sailors who pass too close, luring them to their doom.

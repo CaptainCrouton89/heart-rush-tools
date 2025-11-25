@@ -33,3 +33,11 @@ TODO
 ## What Will Go Wrong
 
 TODO
+
+## Notable Locations
+
+### Crystal Caverns
+
+Deep beneath the coastal waters of the Emerald Coast lie the Crystal Caverns—submarine cave systems filled with brilliant, extraordinarily potent force-attuned crystals. These crystals pulse with concentrated magical energy, glowing with an inner light that illuminates the dark waters.
+
+The crystals possess formidable powers of force magic, making them highly valuable to mages and artificers. However, they are also extremely volatile—when shattered, they release their stored energy in a massive explosion capable of collapsing entire cave sections or sinking ships above. Harvesting the crystals requires expert technique and extreme caution, as a single mistake can trigger a cascading chain reaction throughout the cavern system.

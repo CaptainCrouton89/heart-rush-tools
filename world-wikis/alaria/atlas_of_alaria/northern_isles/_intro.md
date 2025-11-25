@@ -46,3 +46,19 @@ In the very center of the Northern Isles stands [Bzulakar's](../../dramatis_pers
 The most densely foggy islands in this half of the world. Home to an old Tuktuk named Gelnor who is paragon attuned to fog and water. Lives here eternally to atone for his sins (he's a lich, immortal).
 
 On shore are giant hermit crabs that eat the algae off the rocks.
+
+### Amber Coast
+
+Located in Pherezi Imnuttut, the Amber Coast is a beach where beautiful amber minerals frequently wash ashore. These minerals possess magical properties, making them highly prized by mages and collectors. The constant flow of enchanted amber from the frozen depths creates a dangerous attraction—both for treasure seekers and the predators that hunt them along the icy shoreline.
+
+### Blyzrynthine
+
+A canyonland region in the north of Pherezi Imnuttut, bordered by the Hills of Insanity to the north and east, and the mountainous region of Giantfell to the south. A fire leyline passes through Blyzrynthine, superheating the canyons below.
+
+#### Thermarift
+
+Deep within the canyons of Crevakus in Blyzrynthine, huge fiery rifts tear through the ground. These Thermarifts are caused by the fire leyline running beneath the canyonlands, creating massive fissures that belch flame and superheated air. The ground far below in the canyon depths is covered with these fiery tears in the earth, making the deep canyons effectively impassable without magical protection from heat and flame.
+
+### Timeless Wastes
+
+Southwest of Blyzrynthine and west of Giantfell lie the Timeless Wastes—a frozen desert where time itself behaves strangely. Travelers cannot keep track of time accurately here; hours feel like days, days feel like hours, and aging progresses at unpredictable rates. Some emerge having aged decades in what felt like a day, while others spend what seems like weeks only to find mere hours have passed in the outside world. Everything about the Wastes feels wrong and disorienting, as if time itself has come unmoored from reality.

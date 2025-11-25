@@ -50,19 +50,21 @@ A valley in the Tethryn Mountains.
 
 ### Pearly Mountains
 
-A mountain range on Urok.
+A mountain range on Urok's southwestern tip.
+
+#### Shenchen Forest
+
+At the southwestern tip of the Pearly Mountains, north of the Tyberoskos forest, lies the Shenchen Forest—an eerie woodland inhabited by ancient samurai suits of enchanted armor. These dark knights stand eternal vigil over ruined shrines and temples, their armor animated by old magic. The forest grew up around and atop the ruins, but the guardians remain, still defending the sacred sites they were bound to protect centuries ago.
+
+Approaching the ruins means facing these spectral sentinels, whose skill with blade and bow has not diminished with the passing years. They attack intruders without warning or mercy, their movements as precise and deadly as the day they were first enchanted.
 
 ### Xoth
 
 A state on Urok.
 
-### Senchen Forest
+### Tyberoskos
 
-A forest on Urok.
-
-### Thberoskos
-
-A forest on Urok.
+A forest on Urok near the Pearly Mountains, inhabited by weretigers who are deadly on the new moon but peaceful otherwise. The forest is also home to the Qipi—a very small race of gnomes who live in huge sinkholes where they've built small cities. A couple of these sinkhole settlements exist throughout the forest, hidden beneath the canopy.
 
 ### Maun
 

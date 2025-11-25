@@ -43,3 +43,15 @@ TODO
 ## What Will Go Wrong
 
 TODO
+
+## Notable Locations
+
+### Klevnaf
+
+An elven kingdom on the Crimson Coast, positioned west of Istora (another elven kingdom). Klevnaf is divided by ancient conflict and civil war.
+
+#### Murder Creek
+
+A river that runs down the center of Klevnaf, dividing the kingdom in two. The creek is named after the murder of Ghy the Elder, the last king of the unified Winter Elves. Upon his death at this site, the country fractured into two rival kingdoms that have been locked in bitter conflict for centuries.
+
+The creek itself is said to be cursed—the water runs dark, and those who drink from it are haunted by visions of Ghy's assassination. The kingdoms on either side of Murder Creek maintain fortified positions along its banks, ensuring that the geographic division mirrors the political one. Peace talks always fail when they reach the question of who controls the creek where their last unified king fell.

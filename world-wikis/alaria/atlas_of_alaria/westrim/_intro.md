@@ -44,3 +44,25 @@ TODO
 ## What Will Go Wrong
 
 TODO
+
+## Notable Locations
+
+### Dunes of Kunagi
+
+#### Husakas
+
+A desert region in the southwest Dunes of Kunagi, roamed by scorpion riders who have adapted to the harsh conditions. Husakas contains one of the few sources of water in this part of the dunes—a network of seasonal streams and creeks that flow during rare rains.
+
+However, the water carries a terrible curse: drinking from these streams causes complete loss of long-term memory. Victims forget their past, their identity, everything except the immediate present. The water's power is bound to the region—if transported away from Husakas, it becomes ordinary water. This creates a grim trap: travelers dying of thirst must choose between death and losing themselves entirely.
+
+The scorpion riders who patrol Husakas have developed techniques to survive on minimal water, avoiding the cursed streams except in the direst emergencies.
+
+### Mueras
+
+The western coastal state of Westrim, positioned between the Taflex Forest and Grimreach in the southwest, overlooking the Agreben Sea.
+
+#### Darkened Coast
+
+East of the Taflex Forest and south of Grimreach, along the northwest coast of the Agreben Sea, lies the Darkened Coast—a stretch of shoreline perpetually shrouded in shadow. The waters teem with dark-attuned sea creatures: shadow rays that glide beneath the waves, void eels that drain light from their surroundings, and worse things that rise from the lightless depths during moonless nights.
+
+Sailors avoid this coast when possible, as ships that venture too close risk being pulled under by creatures that exist more in shadow than flesh.

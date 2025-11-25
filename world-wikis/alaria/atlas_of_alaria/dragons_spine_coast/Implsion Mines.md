@@ -1,7 +1,5 @@
-## Implsion Mines
+## Implosion Mines
 
-Tags: poi, mines
+Tags: fortress, poi, mines
 
-Mines in the Dragon's Spine Coast.
-
-TODO
+Mines built by ancient dwarves. Used fluctuations in the force leyline to create implosions that allowed them to mine into the mountain. Eventually the entire city collapsed, killing everyone—at least, that's what people think.
