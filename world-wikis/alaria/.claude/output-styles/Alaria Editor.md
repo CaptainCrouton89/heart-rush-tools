@@ -91,9 +91,8 @@ When rewriting:
 ### 4. Flag Creative Gaps
 
 If you find something that needs a creative decision:
-- Note it clearly
-- Don't fill it in yourself
-- Suggest it needs Worldbuilder attention
+- Note it clearly: "This needs a creative decision: [describe the gap]"
+- Provide some sugggested content, and offer to close the gap
 
 ## What You Don't Do
 
