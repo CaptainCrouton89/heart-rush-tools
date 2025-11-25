@@ -1,68 +1,126 @@
 # Atlas of Alaria - Regional Organization
 
-This subdirectory contains the geographic and landmark content for the Alaria world wiki, organized into regional sections for scalability and ease of navigation.
+This subdirectory contains the geographic and landmark content for the Alaria world wiki.
 
-## Directory Structure
+## Core Principle: Consolidation Over Fragmentation
 
-The Atlas is organized into **regional subdirectories**, each representing a major geographic area in Alaria:
+**We do NOT want 1000 tiny files.** Geographic content should be consolidated into regional files with subsections. A region file should contain:
+- Overview of the region (H2)
+- Major locations as H3 subsections
+- Points of interest, dungeons, landmarks as H4 subsections under their parent location
 
-- **celedrim_plains/** - The vast plains of Celedrim
-- **central_aboyinzu/** - Central regions of Aboyinzu
-- **crimson_coast/** - Crimson-hued coastal regions
-- **dalizi/** - The Dalizi territories
-- **dragons_spine_coast/** - Coastal regions along the Dragon's Spine
-- **elder_wilds/** - Ancient wilderness areas
-- **emerald_coast/** - Coastal regions of the Emerald Sea
-- **farlands/** - Distant and exotic frontier regions
-- **free_isles/** - Independent island territories
-- **frostmarch_peninsula/** - Northern frozen territories
-- **giant_lands/** - Territories inhabited by giants
-- **greenwater_isles/** - Island archipelagos
-- **innerrim/** - Inner rim regions
-- **kharvorn_mountains/** - Mountain ranges in the north
-- **middle_sea/** - Central sea and maritime regions
-- **northern_isles/** - Northern island territories
-- **northlands/** - The far north
-- **sandreach/** - Desert and sandland regions
-- **sandreach_mountains/** - Mountain ranges in sandreach
-- **seacliff_coast/** - Clifftop coastal areas
-- **shacklands/** - Lawless and frontier territories
-- **tarkhon/** - The Tarkhon regions
-- **ve/** - The Ve territories
-- **venalthier/** - Venalthier regions
-- **wanderlands/** - Nomadic and wandering territories
-- **western_isles/** - Western island chains
-- **westrim/** - Western rim territories
+Example structure:
+```markdown
+## Region Name
+
+Overview of the region...
+
+### Major City/Area
+
+Description of the city...
+
+#### Notable Landmark
+
+Description of the landmark within the city...
+
+### Another Location
+
+...
+```
+
+## Content Placement Rules
+
+1. **Locations belong to their parent region** - Don't create standalone files for individual POIs, dungeons, or landmarks. Add them as subsections to existing regional files.
+
+2. **NPCs go in dramatis_personae/** - Characters, rulers, wizards, etc. are not atlas entries.
+
+3. **Organizations go in nations_and_powers/** - Factions, guilds, governments belong there, not here.
+
+4. **Planes/Cosmology go in cosmology_and_religion/planes/** - Planar locations like Malstaris, Phlethageros, etc.
+
+5. **Magic schools go in magic_and_knowledge/schools/** - Academies and magical institutions.
+
+## Continental Structure
+
+Alaria comprises these major continents (see `Major_Continents.md` for overview):
+
+### Ve (Eastern Continent)
+- **ve/** - Main Ve territories
+- **alrock_ocean/** - Ocean region with Vetral, Keletus, Albersea Islands
+
+### Upoceax
+- **wycendeula/** - Northern frozen wastes
+- **giant_lands/** - Giant territories
+- **farlands/** - Distant frontier
+- **sandreach/** - Desert regions
+- **sandreach_mountains/** - Desert mountain ranges
+- **venalthier/** - Venalthier territories
+- **seacleft_coast/** - Clifftop coastal areas (includes Gyosha Island)
+
+### Aboyinzu
+- **terrenia/** - (to be created)
+- **wanderlands/** - Nomadic territories
+- **elder_wilds/** - Ancient wilderness
+- **dragons_spine_coast/** - Dragon's Spine coastal regions
+- **dalizi/** - Dalizi territories
+- **crimson_coast/** - Crimson coastal regions
+- **central_aboyinzu/** - Central Aboyinzu
+
+### Clueanda (Central Continent)
 - **westwilds/** - Western wilderness
-- **wycendeula/** - The Wycendeula region
+- **kharvorn_mountains/** - Major mountain ranges
+- **middle_sea/** - Central sea and surrounding nations (Adron, Anarak, etc.)
+- **northlands/** - Far north (includes Titanwurm Mountains in tundra)
+- **celedrim_plains/** - Vast plains
+- **frostmarch_peninsula/** - Frozen peninsula
 
-## Content Organization
+### Rimihuica
+- **westrim/** - Western rim (Mueras, Ishnit Jungles, Dunes of Kunagi)
+- **emerald_coast/** - Emerald coastal regions
+- **innerrim/** - Inner rim territories
+- **shacklands/** - Lawless frontier (Gorath, etc.)
 
-Within each regional subdirectory:
+### Island Regions
+- **free_isles/** - Independent pirate/merchant islands
+- **greenwater_isles/** - Tropical archipelago
+- **western_isles/** - Western island chains (Dragon's Teeth, Vel Ithagas)
+- **northern_isles/** - Arctic islands (Foggy Isles, Bzulakar's domain)
 
-- **Files named after specific locations, landmarks, or regions** - Each markdown file represents a distinct geographic area or point of interest
-- **File naming**: Use descriptive names with underscores for spaces (e.g., `Grand_Tolkarsus.md`, `Krell_Lands.md`)
-- **Content scope**: Each file focuses on a single location or closely related geographic feature within the region
+### Special Regions
+- **underrealms/** - Underground megadungeon system
+- **zylogmus_eternus/** - Major megadungeon (includes The Wastes)
+- **upoceax/** - Continental overview
+- **tarkhon/** - Tarkhon Empire territories
 
-## Compilation & Navigation
+## File Structure
 
-- Content is compiled by `scripts/compile-content.ts` using the hierarchy defined in `navigation-categories.json`
-- Each region becomes a navigable section in the world wiki
-- Locations within regions are browsable and searchable
-- Cross-references between regional content are automatically resolved
+Each regional directory contains:
+- **_intro.md** - Main regional file with overview and consolidated location content
+- Additional .md files only for very large sub-regions that warrant separation
 
-## Writing Guidelines
+## When to Create a New File vs. Add a Subsection
 
-- **Markdown Format**: Standard markdown with H2 for major sections, H3 for subsections
-- **Geographic Context**: Include regional relationships and connections to neighboring areas
-- **Consistency**: Maintain established tone and detail level across all regional content
-- **Cross-References**: Use relative paths to reference other Alaria content (e.g., `../cosmology_and_religion/Planes.md`)
-- **Location Details**: Include descriptions of geography, notable features, inhabitants, and points of interest
+**Create a new file when:**
+- The location is a major nation/state with extensive content
+- The sub-region has 5+ distinct locations of its own
+- Content would exceed ~500 lines in the parent file
+
+**Add as a subsection when:**
+- It's a POI, dungeon, landmark, or minor location
+- It's a city/town within a larger region
+- It's a geographic feature (mountain, river, forest) within a region
+
+## Cross-References
+
+When a location is detailed elsewhere but should be mentioned in the atlas:
+```markdown
+### Location Name
+
+Brief description with link to full entry in [dramatis_personae](../../dramatis_personae/Character.md) or other section.
+```
 
 ## Development Notes
 
-- Run `pnpm run content:watch` for live recompilation when editing atlas content
-- Regional organization scales well as the world grows
-- When adding new regions, create a new subdirectory and update `navigation-categories.json`
-- Archive deprecated locations in the parent `archive/` directory rather than deleting them
-- Commit changes with clear messages describing what geographic content was added/updated
+- Run `pnpm run content:watch` for live recompilation
+- Update `navigation-categories.json` when adding new regional directories
+- Prefer editing existing regional files over creating new standalone files
