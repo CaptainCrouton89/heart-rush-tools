@@ -5,72 +5,47 @@
       "icon": "🗺️",
       "description": "The physical world and its landmarks",
       "sections": [
-        "Atlas_of_Alaria",
-        "Northlands",
-        "Celedrim_Plains",
-        "Northern_Isles",
-        "Frostmarch_Peninsula",
-        "Kharvorn_Mountains",
-        "Westwilds",
-        "Western_Isles",
-        "Seacliff_Coast",
-        "Greenwater_Isles",
-        "Tarkhon",
-        "Westrim",
-        "Middle_Sea",
-        "Emerald_Coast",
-        "Sandreach",
-        "Sandreach_Mountains",
-        "Shacklands",
-        "Terrenia",
-        "Central_Aboyinzu",
-        "Elder_Wilds",
-        "Dalizi",
-        "Sea_of_Daggers",
-        "Dragons_Spine_Coast",
-        "Venalthier",
-        "Farlands",
+        "Overview",
         "Ve",
-        "Wanderlands",
-        "Crimson_Coast",
-        "Wycendeula"
+        "Upoceax",
+        "Aboyinzu",
+        "Clueanda",
+        "Rimihuica",
+        "Greenwater_Isles",
+        "Western_Isles",
+        "Underrealms",
+        "Zylogmus_Eternus"
       ]
     },
     {
       "name": "Nations & Powers",
       "icon": "👑",
       "description": "Civilizations and the organizations within them",
-      "sections": ["Nations_&_Powers"]
+      "sections": ["States", "City_States", "Factions", "Daemons"]
     },
     {
       "name": "Cosmology & Religion",
       "icon": "🌌",
       "description": "The universe, planes, and divine beings",
-      "sections": ["Cosmology_&_Religion", "Daemons", "Planes", "Celestial", "Life_&_Death"]
+      "sections": ["Alarian_Planar_Stack", "Planes", "Life_&_Death", "Beyond_Alaria", "Other_Planar_Stacks"]
     },
     {
       "name": "History & Lore",
       "icon": "📜",
       "description": "The past events that shaped the world",
-      "sections": ["History_&_Lore"]
+      "sections": ["Events", "Timelines", "Dramatis_Personae", "Artifacts"]
     },
     {
       "name": "Magic & Knowledge",
       "icon": "✨",
       "description": "How supernatural forces work",
-      "sections": ["Magic_&_Knowledge", "Magic_Systems", "Magical_Materials", "Artifacts", "Arcane_Lore"]
+      "sections": ["Deoric", "Faesong", "Gaeic_Melodies", "Psy_Magic", "Elemental_Magic", "Schools", "Languages", "Materials"]
     },
     {
       "name": "Bestiary",
       "icon": "🐉",
       "description": "Non-playable fauna and monsters",
-      "sections": ["Bestiary", "Dragons"]
-    },
-    {
-      "name": "Dramatis Personae",
-      "icon": "👤",
-      "description": "Important individuals",
-      "sections": ["Dramatis_Personae"]
+      "sections": ["Bestiary", "Dragons", "Diseases"]
     }
   ]
 }
