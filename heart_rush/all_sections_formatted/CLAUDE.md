@@ -29,13 +29,20 @@ When content is compiled:
 5. Cross-references are identified
 6. Output JSON is written to `content/` directory
 
-## Content Guidelines
+## Game Balance & Content Guidelines
 
-- Use clear, hierarchical header structure (H1 → H2 → H3)
-- Keep sections focused and self-contained
-- Cross-references should use standard markdown link syntax
-- Avoid complex HTML—use markdown formatting instead
-- Content is rendered as-is, so formatting accuracy is important
+When adding or modifying rulebook sections, especially those describing abilities and mechanics:
+
+- **Understand the power curve**: Heart Rush is "fail-forward" and gritty—power is earned through advancement
+- **Balance frequency and impact**: Reference ability tags (Passive, Minor, Major, Weekly, Monthly) and understand their balance implications
+- **Niche protection**: Ensure new mechanics enable specific playstyles without invalidating existing talents or races
+- **Resource management**: Abilities should have meaningful costs (Actions, Rush Points, daily uses) reflecting their power level
+
+For detailed guidance on balancing talents, races, bloodmarks, and progression, use the **balance-guide skill** with the `/learn` command or reference:
+- `heart_rush/.claude/skills/balance-guide/SKILL.md`
+
+For context on game mechanics and design philosophy:
+- `heart_rush/Heart_Rush_Player_Guide.md`
 
 ## Related Files
 
