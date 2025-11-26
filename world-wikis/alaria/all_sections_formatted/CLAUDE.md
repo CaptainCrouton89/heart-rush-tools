@@ -4,23 +4,43 @@ This directory contains aggregated, formatted versions of Alaria world wiki cont
 
 ## Purpose
 
-These files are compiled/aggregated versions that combine related content from category subdirectories into comprehensive topic files. They serve as reference documents and may be used for:
+These files represent compiled/aggregated versions that combine related content from category subdirectories into comprehensive topic files. They serve as reference documents and may be used for:
 - Generating combined exports or PDFs
 - Providing complete topic overviews
 - Facilitating cross-reference resolution during compilation
 
 ## Files
 
-Each markdown file represents a major topic area:
+Each markdown file represents a major topic area covering content from corresponding source subdirectories:
 
-- **Cosmology_&_Religion.md** - Planar systems, deities, cosmic forces, and spiritual beliefs
-- **Magic_&_Knowledge.md** - Magical systems, schools of magic, and arcane knowledge
+- **Overview.md** - Introduction to Alaria and world overview
+- **Alarian_Planar_Stack.md** - Planar systems, the cosmology, and material plane structure
+- **Beyond_Alaria.md** - Other planar stacks and cosmic forces beyond Alaria
+- **States.md** - Nations, governments, political structures, and state powers
+- **Factions.md** - Organizations, secret societies, and non-state powers
+- **Daemons.md** - Daemon entities and otherworldly forces
+- **Languages.md** - Languages, writing systems, and communication
+- **Materials.md** - Resources, crafting materials, and natural substances
+- **Elemental_Magic.md** - Elemental magical systems and schools
+- **Faesong.md** - Fae magic and nature-based magical practices
+- **Gaeic_Melodies.md** - Gaeic magical traditions
+- **Psy_Magic.md** - Psychic and mental magical systems
+- **Deoric.md** - Deoric magical traditions
+- **Schools.md** - Magical schools and scholarly traditions
+- **Life_&_Death.md** - Mortality, undeath, reincarnation, and the afterlife
+- **Events.md** - Historical events, campaigns, and major occurrences
+- **Timelines.md** - Historical timelines and chronological records
+- **Artifacts.md** - Magical items, legendary objects, and artifacts
+- **Planes.md** - Individual planar descriptions and properties
+- **Ve.md** - Ve race and culture
+- **Western_Isles.md** - Western Isles region content
+- **Greenwater_Isles.md** - Greenwater Isles region content
 - Additional topic files as needed
 
 ## Editing Notes
 
 - These files are generated/aggregated during the content compilation process
-- Prefer editing source files in category subdirectories (`cosmology_and_religion/`, `magic_and_knowledge/`, etc.)
+- Prefer editing source files in category subdirectories rather than these aggregated versions
 - Changes to this directory may be overwritten during compilation—verify source files instead
 - Maintain clear heading hierarchy and consistent formatting with other sections
 
