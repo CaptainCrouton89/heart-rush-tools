@@ -36,6 +36,8 @@ Elemental talents include passive elemental effects and powerful invocations of 
 
 The talents in this section are combat-related talents. This categorization is for the ease of finding talents, and has no other effect.
 
+## Combat Talents
+
 ### Action Surge
 
 _Major ability. Martial talent._
