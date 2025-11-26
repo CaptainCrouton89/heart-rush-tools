@@ -104,20 +104,18 @@ combined += "## Combat Talents\n\n";
 const combatFiles = await fs.readdir(COMBAT_TALENTS_DIR);
 for (const file of combatFiles.filter(f => f.endsWith(".md")).sort()) {
   const content = await fs.readFile(file, "utf-8");
-  // Adjust ## to ### for proper hierarchy
-  const adjusted = content.replace(/^## /gm, "### ");
-  combined += adjusted.trim() + "\n\n";
+  // Heading levels are normalized automatically during combination
+  combined += content.trim() + "\n\n";
 }
 
 // 4. Repeat for other sections
 combined += "## Noncombat Talents\n\n";
 for (const file of noncombatFiles) {
   const content = await fs.readFile(file, "utf-8");
-  const adjusted = content.replace(/^## /gm, "### ");
-  combined += adjusted.trim() + "\n\n";
+  combined += content.trim() + "\n\n";
 }
 
-// 5. Repeat for spells section
+// 5. Repeat for spells section (no manual heading tweaks required)
 
 // 6. Write output
 await fs.writeFile("heart_rush/all_sections_formatted/Talents.md", combined);
