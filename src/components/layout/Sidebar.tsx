@@ -201,9 +201,6 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
           {/* World Switcher */}
           {availableWorlds.length > 0 && (
             <div className="mb-3">
-              <label className="text-xs font-medium text-muted-foreground mb-2 block text-center">
-                Wiki Context
-              </label>
               <select
                 value={currentWorld === null ? "main" : currentWorld}
                 onChange={(e) => {
@@ -250,13 +247,6 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
               </label>
             </div>
           )}
-
-          <p className="text-xs text-muted-foreground text-center">
-            Heart Rush TTRPG Reference
-          </p>
-          <div className="flex justify-center mt-2">
-            <div className="w-16 h-1 bg-gradient-to-r from-primary via-accent to-secondary rounded-full"></div>
-          </div>
         </div>
       </aside>
     </>
