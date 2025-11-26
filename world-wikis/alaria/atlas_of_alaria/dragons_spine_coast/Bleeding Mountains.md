@@ -2,6 +2,6 @@
 
 Tags: mountains, geography
 
-Mountains within Embylydium.
+Mountain range within Emblydium, located to the north of the state's core territory.
 
 TODO

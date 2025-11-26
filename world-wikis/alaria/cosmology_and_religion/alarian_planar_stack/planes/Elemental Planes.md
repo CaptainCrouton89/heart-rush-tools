@@ -2,7 +2,7 @@
 
 Tags: planes
 
-All of the primary elements of the world each make up a layer, thinly placed in between the material planes (astral, malstaric, material realm) and the immaterial planes (ethereal, nethereal, Celestian). Things and creatures with higher attunement to these other layers cause the layers to spill down and into the visible world, affecting the material planes. The layers closer to the material planes are more accessible to those on the material planes, whereas the elemental layers closer to Celesté and the other immaterial planes are more accessible to those inhabitants instead.
+All of the primary elements of the world each make up a layer, thinly placed in between the material planes (astral, malstaric, material realm) and the immaterial planes (ethereal, nethereal, Celestian). Things and creatures with higher attunement to these other layers cause the layers to spill down and into the visible world, affecting the material planes. The layers closer to the material planes are more accessible to those on the material planes, whereas the elemental layers closer to Celestia and the other immaterial planes are more accessible to those inhabitants instead.
 
 Leylines are cracks in the planes where individual elemental planes spill through much closer to the material plane. Thes are areas of much stronger elemental power. Elemental magic performed on leylines is always more fantastic.
 

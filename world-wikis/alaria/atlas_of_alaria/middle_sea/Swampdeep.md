@@ -10,9 +10,19 @@ Infested with massive leeches, deathfog, and misery-sprites.
 
 Water is quite deep—easy to drown. Saltwater
 
-### Omegra's Hut
+### Origin: The Drowning of the Emerald Coast
 
-Mostly sunken dungeon in Swampdeep.
+Swampdeep is not a natural swamp—it is a monument to catastrophe. Fifty million years ago, a Deluge Titan—a living tsunami the size of a mountain—emerged from a Pelus leyline intersection off the western coast in what became known as the largest Pelus breach in recorded history. The creature rolled inland for three hundred miles before dispersing, leaving the land beneath it permanently waterlogged. Where once a thriving civilization stood, only waterlogged ruin remains. The land will never dry. The waters will never recede.
+
+The civilization that existed before the Drowning left no survivors and few traces. Most architectural remnants were obliterated by the deluge, scattered and sunken beyond recovery. What few structures survived remain buried under poisoned waters—monuments to a world that drowned.
+
+### Omegra's Hut: A Window into the Before
+
+Omegra's Hut is the only known pre-Drowning structure still accessible. This mostly sunken dungeon contains architecture from the civilization the Deluge Titan erased—the only physical evidence of who lived here before the waters came. Its presence suggests a sophisticated society was lost to the Drowning, their knowledge and culture dissolved into saltwater and toxic gas.
+
+### Tide Walkers: The Eternal Guardians
+
+The catastrophe that created Swampdeep did not end with the Drowning itself. Manifestations of Pelus water elementals—beings known as Tide Walkers—still patrol the swamp's depths. These confused guardians, born from the raw elemental chaos of the breached leyline, remain bound to the flooded lands. They defend depths of a nation that no longer exists, fulfilling purposes perhaps only they remember. Whether they serve as protectors, wardens, or prisoners of their own creation remains unknown.
 
 ## Bygone Hills
 

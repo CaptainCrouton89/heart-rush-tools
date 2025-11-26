@@ -2,7 +2,9 @@
 
 Tags: state
 
-Home to the Splinkreen
+Home to the Splinkreen—woodland people whose souls were transplanted from mighty trees into humanoid forms. Their bark-like skin ranges from smooth birch white to rough oak brown.
+
+Located on Petrona Septia Island in the Seacleft Coast, within the forest of Puma Wood. The city-state lies north/northeast of Ios and southeast of Moigos, on the northeastern side of the Screech Peaks.
 
 ### Government & Peoples
 

@@ -24,7 +24,11 @@ The Seacleft Coast contains a smattering of states, arranged roughly from south 
 - **Iqes**
 - **Enavadi** (northernmost)
 
-Plus several scattered city-states throughout the region.
+Plus several scattered city-states throughout the region, including Rilyn.
+
+### Petrona Septia Island
+
+A major island in the Seacleft Coast containing the states of Ios and Moigos, as well as the city-state of Rilyn. The Screech Peaks mountain range divides the island, with Ios on the southwestern side and Rilyn in Puma Wood forest on the northeastern slopes.
 
 ### Terrain
 

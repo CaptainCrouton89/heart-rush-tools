@@ -24,8 +24,24 @@ Deoric cannot be recorded except with titan blood or special ink made from their
 
 Once Deoric text is read by someone other than the author, the text disintegrates into ash. For this reason, along with the reasons above, any book of Deoric text is incredibly valuable. 
 
-### Deoric, Daemons, & Celesté
+### Deoric, Daemons, & Celestia
 
-Deoric is primarily used by the daemons of Celesté. Having been around for centuries, millennia, or in some rare cases, eons, these beings are frequently at much higher levels of mastery with the Deoric language that mortals can only dream of. By using this magic, they serve their followers.
+Deoric is primarily used by the daemons of Celestia. Having been around for centuries, millennia, or in some rare cases, eons, these beings are frequently at much higher levels of mastery with the Deoric language than mortals can hope to achieve.
 
-There are several different varieties of magic in Alaria. Each come from different sources of energy and have different properties. …**
+#### The Celestia Paradox
+
+Deoric does not function on Celestia. The plane is saturated with Ezz—the same substance that gave it form—and this Ezzic interference disrupts the absolute commands of Deoric speech. A daemon standing in Celestia cannot simply speak Deoric words and reshape reality as a mortal could on the Material Plane.
+
+Yet daemons are the greatest Deoric practitioners in existence. How?
+
+#### Projection Across the Boundary
+
+Daemons cannot cast Deoric *within* Celestia, but they can project their knowledge and power *across* the boundary to the Material Plane. This is how daemons grant miracles to their followers:
+
+1. A worshipper on the Material Plane performs a ritual, providing the necessary blood sacrifice and speaking the Deoric words they have been taught
+2. The daemon, perceiving this through the Psywinds, guides the ritual—correcting pronunciation, amplifying intent, or providing knowledge the mortal lacks
+3. The Deoric magic takes effect on the Material Plane, where it functions normally
+
+The worshipper provides the physical presence, the sacrifice, and the initial invocation. The daemon provides mastery, knowledge, and subtle guidance. Neither could accomplish what they achieve together: the mortal lacks knowledge; the daemon lacks a location where Deoric functions.
+
+This is why daemon worship requires *active followers*. A daemon who loses all worshippers loses their ability to affect the Material Plane through Deoric—they become trapped in Celestia, powerful in knowledge but impotent in action, slowly fading as their name is forgotten.

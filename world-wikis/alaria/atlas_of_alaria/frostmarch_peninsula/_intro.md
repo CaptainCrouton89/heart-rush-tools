@@ -18,6 +18,10 @@ The peninsula and Celedrim Plains create a stepped geography—the plains occupy
 - **Plutochranes Forest**: Lies to the west of the peninsula, north of the Kharvorn sub-range Myorna
 - **Northern Isles**: The peninsula transitions into this archipelago as the land fragments into islands
 
+### Notable Subregions
+
+- **Twilight Forest**: A vast, supernaturally darkened forest in the southeastern reaches of the peninsula, home to the Spindral (Quill Elves) who dwell in underground warrens beneath the cursed trees
+
 ### Climate
 
 The Frostmarch represents the edge of the arctic world. The northern part remains white and snowy year-round, while the southern edges show signs of brown, thawing terrain in warmer seasons. Ice gives way to earth here, but only barely.

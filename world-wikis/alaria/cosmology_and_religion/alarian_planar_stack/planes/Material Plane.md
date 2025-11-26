@@ -31,7 +31,7 @@ Massive, low hanging stalactites constantly pour forth lava from above the Waste
 
 #### The Edges of the World
 
-**North/South/East/West**: if you walk far enough in any of the cardinal direction, eventually you will wrap around the side of the world and into Celesté.
+**North/South/East/West**: if you walk far enough in any of the cardinal direction, eventually you will wrap around the side of the world and into Celestia.
 
 **Up**: Although it is difficult, by traveling directly up far enough, you eventually reach the Astral Sea, and then the Astral Plane itself. 
 

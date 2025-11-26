@@ -1,5 +1,15 @@
 ## Belagria
 
-Tags: region
+Tags: region, material plane
 
-Belagria is lit by the Sun, a giant orb of Astral stone, made up of sunstone (heavily light attuned). It floats across the astral sea each night, then rolls over, becoming the moon, and lighting up the Astral Plane from below as it makes its jounrey across the sky in the opposite direction. It's enchanted, to continue indefinitely.
+Belagria is the upper half of the Material Plane—the inhabited world where most of "life" occurs. It consists of two major layers: the **Surfacelands**, where kingdoms and civilizations rise and fall, and the **Underrealms**, a 200-mile thick crust of stone crisscrossed with tunnels, caves, and mysteries.
+
+### The Sun
+
+Belagria is lit by **Bryn**, the awakened sun—the greatest of the titan-crafted stars. Unlike Aurus (who illuminates the Astral Plane) or Nydus (who casts dark light over Malstaris), Bryn is not a dissolved titan-god but a construct that gained consciousness when the Ezz Rift flooded Alaria with spirit-essence.
+
+The sun is a giant orb of celestial glass, made primarily of sunstone (heavily light-attuned astral stone). It travels across the sky because Bryn *chooses* to travel—its path influenced by the prayers of the faithful. When it passes below the horizon of the Surfacelands, it continues its journey across the underbelly of the Astral Sea before returning, creating the cycle of day and night.
+
+### Below Belagria
+
+Beneath the Underrealms lies **Emphathum**—a 100-mile stretch of weightlessness filled with floating stones and absolute darkness. Below that, gravity reverses, leading to **Phlethageros**: the cruel underside of the Material Plane, dominated by the Zylogmus Eternus and the hellish Wastes.

@@ -48,15 +48,13 @@ Tags: state
 
 ### Geography
 
-**Location**: 
+**Location**: Small mountainous peninsula at the tip of the Watar peninsula, jutting into the Middle Sea
 
-**Biomes**: 
+**Biomes**: Alpine mountains, rocky coastline
 
-**Named Entities**:
+**Climate**: Mediterranean at the coasts, alpine in the peaks
 
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
+**Named Entities**: Iri Mountains (the two peaks that make up most of the country) 
 
 
 ### Political Geography

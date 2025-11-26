@@ -2,7 +2,7 @@
 
 Tags: state, nation
 
-TODO
+A state in Terrenia, located south of the Green Mountains and east of Aal Salma. Inhabited by Scalawags. A huge civil war has recently broken out—total disaster, as the northern region has declared independence from the rest of the state. Total chaos, lots of death. Armies are assembling and marching on each other.
 
 ### Stalking Fields
 

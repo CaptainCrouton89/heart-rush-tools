@@ -12,11 +12,13 @@ The Alarian Planar Stack, also commonly known as Alaria, is the focus of this al
 
 ### Material Plane
 
-In the very middle is the Material Plane—a world of kingdoms and conquest and magic, dominated by typical masses of land and ocean. However, on the opposite side of the Material Plane—as though on the flip side—lies Celesté: the realm of daemons. It is a dream-like mirror image of the material plane. 
+In the very middle is the Material Plane—a world of kingdoms and conquest and magic, dominated by typical masses of land and ocean. However, on the opposite side of the Material Plane—as though on the flip side—lies Celestia: the realm of daemons. It is a dream-like mirror image of the material plane. 
 
-#### Celesté
+#### Celestia
 
-Celesté was created when the Alarian Planar Stack fragmented and Ezz poured in from beyond. The material plane peeled apart and a new plane of conceptual existence was born. Emotion, free will, and thought poured into Alaria. Celesté is made of the coalescense of thought/emotion/etc on the material plane. Where there is thought, there is a counterpart to the material planes.
+Celestia's creation required two events. During the Lyzaria Era (235–180 million years ago), the titan-god Celest sacrificed herself to create a pocket dimension—a seed that would become Celestia. For 115 million years, this seed remained small and hidden. Then came the Ezz Rift: when Melera's music fractured the Alarian Planar Stack, Ezz accumulated around this seed because it was the only structure that resonated with her song. The pocket dimension bloomed into a full plane, peeling away from the Material Plane to become its mirror-image flip side.
+
+This dual origin explains Celestia's strange nature: its *core* is Celest's essence (which is why it serves as a refuge for spirits), but its *substance* is made of Ezz (which is why it reflects the thoughts and beliefs of the living). Where there is thought on the Material Plane, there is a counterpart in Celestia.
 
 ### Astral Plane
 
@@ -24,7 +26,15 @@ Celesté was created when the Alarian Planar Stack fragmented and Ezz poured in 
 
 #### Astraeva
 
-On the flip side of the Astral Plane is Astraeva. Astraeva mirrors the Astral Plane but is devoid of souls. Aurus has no power here—spirits are weaker here—it is nearly barren except for a few notable points of interest. Psyic energy still exists here, but it is weak.
+On the flip side of the Astral Plane is Astraeva—and unlike the other planes, Astraeva is not truly a "place" in the conventional sense. Astraeva is **Aurus himself**, unfiltered.
+
+The Astral Plane is Aurus's light filtered through structure: the islands, the sea, the accumulated souls that buffer his radiance. Astraeva is what remains when those buffers are stripped away—the raw, unmediated presence of the White Sun. It is the reservoir from which all souls are drawn, and the destination to which all souls eventually return.
+
+**The Cycle of Souls**: When a new creature is conceived, a soul is drawn from Astraeva—raw Aurus-essence that passes through the Astral Plane and threads down through the Ethereal to bind with the new spirit. When a creature dies, their soul returns to the Astral Plane, where it persists for a time. But souls do not remain there forever. Eventually, worn souls—those that have cycled through many lives, or those that are forgotten—drift back through to Astraeva, dissolving into Aurus's light to be renewed and eventually drawn forth again.
+
+**The Danger**: Traveling to Astraeva means exposing yourself to Aurus without protection. Your soul is not a separate thing here—it is *part* of Aurus, and the boundary between you and the cosmic source grows thin. Visitors report their sense of self beginning to blur. Memories feel shared. Identity becomes negotiable. Stay too long, and your soul may simply... rejoin the source. You would not die, exactly. You would become part of everything, and therefore nothing in particular.
+
+Astraeva is nearly empty of defined entities because almost nothing can maintain definition there. What few beings exist are either echoes of Aurus's will or things that were never truly separate from him to begin with.
 
 ### Malstaris
 
@@ -32,7 +42,15 @@ On the flip side of the Astral Plane is Astraeva. Astraeva mirrors the Astral Pl
 
 #### Eindumor
 
-On its flip side of Malstaris is Eindumor. Eindumor mirrors Malstaris but is devoid of shadows. Nydus has no power here—spirits are weaker here—it is nearly barren except for a few notable points of interest. Psyic energy still exists here, but it is weak.
+On the flip side of Malstaris is Eindumor—and like Astraeva, Eindumor is not truly a separate plane. Eindumor is **Nydus himself**, unfiltered.
+
+Malstaris is Nydus's darkness filtered through structure: the caverns, the black lakes, the accumulated shadows that give shape to his murk. Eindumor is what remains when those structures are stripped away—the raw, unmediated presence of the Black Sun. It is the reservoir from which all shadows are drawn, and the destination to which all shadows eventually return.
+
+**The Cycle of Shadows**: When a new creature is conceived, a shadow is drawn from Eindumor—raw Nydus-essence that passes through Malstaris and threads up through the Nethereal to bind with the new spirit. When a creature dies, their shadow sinks to Malstaris, where it persists for a time. But shadows do not remain there forever. Eventually, worn shadows—those that have cycled through many lives, or those whose secrets have all been revealed—drift back through to Eindumor, dissolving into Nydus's darkness to be renewed and eventually drawn forth again.
+
+**The Danger**: Traveling to Eindumor means exposing yourself to Nydus without protection. Your shadow is not a separate thing here—it is *part* of Nydus, and the boundary between you and the cosmic source grows thin. Visitors report their secrets beginning to leak. Hidden depths become visible. Everything you've concealed rises to the surface. Stay too long, and your shadow may simply... rejoin the source. You would not die, exactly. You would become part of the primordial dark, and therefore incapable of concealment, of interiority, of self.
+
+Eindumor is nearly empty of defined entities because almost nothing can maintain hidden depths there. What few beings exist are either echoes of Nydus's will or things that never had secrets to begin with.
 
 ### Elemental Planes
 
@@ -46,7 +64,7 @@ Lastly, there are two very faint planes that overlay all of the rest of the plan
 
 Many of the planes are physically connected to one another, although their connections do not always obey Euclidean laws of geometry. 
 
-Each plane is a square, meaning that each plane has four sides where the plane ends. Crossing any one of these borders results in flipping to the "opposite" side of that plane. For exmaple, if you were on the Material Plane, upon reaching the edge of the ocean, you could continue travling that direction but now be traveling back towards land (as though mirrored) and now in Celesté. 
+Each plane is a square, meaning that each plane has four sides where the plane ends. Crossing any one of these borders results in flipping to the "opposite" side of that plane. For exmaple, if you were on the Material Plane, upon reaching the edge of the ocean, you could continue travling that direction but now be traveling back towards land (as though mirrored) and now in Celestia. 
 
 Likewise, traveling to the border north, south, west, or eastern border of Malstaris would take you to Eindumor. 
 

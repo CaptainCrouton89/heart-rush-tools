@@ -10,9 +10,19 @@ Malstaris is the counterpart to the Nethereal Plane, and is where shadows go upo
 
 Long periods of time spent in Malstaris can cause strange interactions, as your soul is so far away, and your shadow so close (on the other side).
 
-Strange creatures have made Malstaris their home, including Devourers, Mind Fiends, and Voids. 
+Strange creatures have made Malstaris their home, including Devourers, Mind Fiends, and Voids.
 
 High above Malstaris is Nydus, the Black Sun, spilling heavy darkness across the land.
+
+### The First Dark
+
+When Lyzaria, the first titan to die, was split apart 235 million years ago, her soul rose to the Astral Plane—but her shadow sank here, to Malstaris. As the first shadow to ever enter this plane, she carried with her the first secret Malstaris had ever known: the secret of what death *is*.
+
+That shadow became the entity known as **The First Dark**—the oldest and most powerful of the Shadow Lords. Unlike other shadows in Malstaris, which are echoes or remnants of the living, The First Dark is something closer to a titan in nature: ancient, vast, and terribly aware.
+
+The First Dark rules a region of Malstaris that no other power dares challenge. Even Demegolas, the Lord of the Dead, does not extend his authority into her domain. What occurs there is unknown—shadows that enter do not return, or return changed in ways they cannot explain.
+
+Some scholars believe The First Dark still longs for reunion with her other half—the Dreaming of Lyzaria in the Astral Sea. They claim the strange currents between the planes, the ways shadows sometimes seem to reach for light, are echoes of her attempt to become whole. Others believe the separation has driven her to something darker: if she cannot reunite with herself, perhaps she will find other ways to bridge the gap between soul and shadow.
 
 ### Breakneck Canyons
 

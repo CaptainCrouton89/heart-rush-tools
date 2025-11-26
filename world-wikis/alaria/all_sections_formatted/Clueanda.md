@@ -367,11 +367,13 @@ TODO
 
 ### Desert of One Million Shards
 
-Tags: desert, geography
+Tags: desert, geography, Yolus breach, Scorching of Clueanda
 
-This desert was created when a massive meteor struck a desert oasis kingdom. In a last ditch effort to avert the collision, powerful fire mages transfered the heat from the explosion to the rest of the desert. Although the oasis city was still destroyed, the meteor was not as cataclysmic. However, the distributed heat melted the desert, turning it to glass.
+The Desert of One Million Shards is the scarred remains of **The Scorching of Clueanda**, a catastrophic breach of the Yolus plane approximately 25,000 BSD. Three Infernals—building-sized entities of pure fire—emerged from the breach and walked the land for weeks, their passage incinerating everything in their wake. The oasis kingdoms that once flourished in this region were utterly obliterated.
 
-Over the millenia, this glass has been sandblasted and fractured—resulting in some places being blanketed in huge swaths of glass fragments.
+In desperation, fire mages attempted to redirect the overwhelming heat to prevent further devastation. However, their efforts only spread the destruction wider across the landscape. The concentrated and dispersed heat fused vast stretches of sand into glass for hundreds of miles in every direction. Over the millennia, this glass has been sandblasted and fractured by winds and weathering, creating immense fields of jagged glass shards that give the desert its ominous name.
+
+The deepest shards still harbor echoes of that ancient catastrophe—Cinder Swarms occasionally emerge from the fractured glass depths, drawn forth by heat and flame-magic, serving as a grim reminder of the Infernals' terrible passage.
 
 Rocs in the nearby mountains now hunt large prey by lifting them up into the sky, and dropping them on the desert to break their bones before bringing them back to their enormous nests in the mountains.
 
@@ -1033,9 +1035,19 @@ Infested with massive leeches, deathfog, and misery-sprites.
 
 Water is quite deep—easy to drown. Saltwater
 
-#### Omegra's Hut
+#### Origin: The Drowning of the Emerald Coast
 
-Mostly sunken dungeon in Swampdeep.
+Swampdeep is not a natural swamp—it is a monument to catastrophe. Fifty million years ago, a Deluge Titan—a living tsunami the size of a mountain—emerged from a Pelus leyline intersection off the western coast in what became known as the largest Pelus breach in recorded history. The creature rolled inland for three hundred miles before dispersing, leaving the land beneath it permanently waterlogged. Where once a thriving civilization stood, only waterlogged ruin remains. The land will never dry. The waters will never recede.
+
+The civilization that existed before the Drowning left no survivors and few traces. Most architectural remnants were obliterated by the deluge, scattered and sunken beyond recovery. What few structures survived remain buried under poisoned waters—monuments to a world that drowned.
+
+#### Omegra's Hut: A Window into the Before
+
+Omegra's Hut is the only known pre-Drowning structure still accessible. This mostly sunken dungeon contains architecture from the civilization the Deluge Titan erased—the only physical evidence of who lived here before the waters came. Its presence suggests a sophisticated society was lost to the Drowning, their knowledge and culture dissolved into saltwater and toxic gas.
+
+#### Tide Walkers: The Eternal Guardians
+
+The catastrophe that created Swampdeep did not end with the Drowning itself. Manifestations of Pelus water elementals—beings known as Tide Walkers—still patrol the swamp's depths. These confused guardians, born from the raw elemental chaos of the breached leyline, remain bound to the flooded lands. They defend depths of a nation that no longer exists, fulfilling purposes perhaps only they remember. Whether they serve as protectors, wardens, or prisoners of their own creation remains unknown.
 
 ### Bygone Hills
 
@@ -1547,7 +1559,7 @@ Now the temple stands as a haunting reminder, its halls filled with the howling 
 
 #### Zhorheim Mountains
 
-Home to Pythlokravaleci, the dragon guardian of the Einwissel dwarves who traveled back from Celesté. The dragon can travel to Celesté easily as well. The dwarves know its true name, and vice versa—a foundation of enormous trust. Located in a mountain range forming part of the southwest side of the northlands, northeast of Ichneum (forest), marking the northern edge of the forest region.
+Home to Pythlokravaleci, the dragon guardian of the Einwissel dwarves who traveled back from Celestia. The dragon can travel to Celestia easily as well. The dwarves know its true name, and vice versa—a foundation of enormous trust. Located in a mountain range forming part of the southwest side of the northlands, northeast of Ichneum (forest), marking the northern edge of the forest region.
 
 ### Chakatann
 
@@ -2306,7 +2318,7 @@ They are home to a large population of northern rocs, which hunt the caribou in 
 
 #### Anderegnons
 
-The Anderegnons are a miserable, cold, windy range of mountains, on the border of the Material Plane and Celesté. It is also a rich source of malstaric ash, which can be found throughout the mountains. The Bollinger Mining Company have discovered it, laid claim to it, and now mine and ship the ash south towards the sea. It is an incredibly expensive and dangerous operation, as food has to be shipped in, and ash shipped out. The journey is treacherous. They have so far managed to avoid the Atowtowa by skirting along the eastern edge of the Senaveer Mountains. However, stray too far west and get eaten by the Northern Rocs in the mountains, and stray too far east an get captured and killed by the Atowatowa.
+The Anderegnons are a miserable, cold, windy range of mountains, on the border of the Material Plane and Celestia. It is also a rich source of malstaric ash, which can be found throughout the mountains. The Bollinger Mining Company have discovered it, laid claim to it, and now mine and ship the ash south towards the sea. It is an incredibly expensive and dangerous operation, as food has to be shipped in, and ash shipped out. The journey is treacherous. They have so far managed to avoid the Atowtowa by skirting along the eastern edge of the Senaveer Mountains. However, stray too far west and get eaten by the Northern Rocs in the mountains, and stray too far east an get captured and killed by the Atowatowa.
 
 ### Shananae
 

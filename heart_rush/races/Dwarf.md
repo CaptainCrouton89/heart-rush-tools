@@ -327,3 +327,5 @@ They are nomadic, living in temporary camps and moving with the herds. To a Zwae
 
 **Passive ability.**
 You gain the Beast Companion talent as a racial ability (it does not count towards the number of talents you have). Your companion is a dire wolf with the statistics of a warhorse but with a bite attack (1d8 damage) instead of hooves. If your wolf dies, you may spend a month in the tundra to bond with a new one. You have A2 on all checks related to wolves, canines, and tracking in snow. You are immune to the effects of extreme cold and suffer no penalties from snow, ice, or blizzard conditions.
+
+

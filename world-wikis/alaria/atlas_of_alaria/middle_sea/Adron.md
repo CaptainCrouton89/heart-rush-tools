@@ -2,50 +2,64 @@
 
 Tags: state, nation
 
-TODO
+Adron is the easternmost state on the Middle Sea, a proud Naga kingdom nestled between dramatic mountain ranges. Once the land of dragon riders, it now trades on banking, shipbuilding, and the legendary red gold mined from its peaks. The climate is Mediterranean—warm coastlines, temperate forests in the valleys, and snow-capped mountains framing the horizon.
 
-### The Salt Moors
+Three major ley lines cross Adron: water (through the capital), time (southwest to northeast across the north), and dark (through the center). The intersections produce an unusually high number of elementally attuned Naga.
 
-A salt marsh region within Adron.
+### Adrak
 
-### Majesty Mountains
+The capital city, seat of the monarchy, and home to the Royal Adrak Bank. Sits on or near the water ley line. The nobility here keep domesticated dragons as pets—impressive creatures, but shadows of the war-beasts their ancestors once rode. The city exudes old wealth and older pride.
 
-A mountain range in Adron.
+### Tenori River
 
-### Gozwin Mountains
+The economic spine of Adron. Flows from the highlands northeast of Adrak, runs south along the Drakespine Mountains, and empties into the sea at Shipmarsh. Most internal trade moves along this river.
 
-A mountain range on the eastern coast of Adron, along the Denrik Sea.
+### Shipmarsh
 
-#### Waterdark
+The largest city in Adron after Adrak, built where the Tenori River meets the sea. Massive shipyards produce vessels for the Middle Sea trade. A working city—less refined than Adrak, more prosperous than anywhere else.
 
-Hidden within the Gozwin Mountains lies Waterdark, the fortress where those who overthrew the dragons once lived. The residents were masters of water and darkness magic—secretive, hated, and deadly, but undeniably competent. A secret order still resides in Waterdark, but the fortress appears completely empty unless you know what to look for. The order continues its dark work in the shadows, manipulating water and darkness to pursue goals known only to themselves.
+### Greyport
 
-### Shrieking Peaks
-
-A mountain range in Adron.
-
-### Stillstone
-
-A fortress in Adron.
-
-### Gemecas
-
-A point of interest in Adron.
-
-### Wateytrdark
-
-A fortress in Adron.
+A southern port that suffers from the dragon Chavux's raids on nearby shipping. Merchants here would pay well to have the dragon problem "solved," though killing a dragon remains sacrilege in Adron.
 
 ### The Blades
 
-A group of islands near Adron.
+A collection of islands off the southwest coast. Chavux, a green dragon, lairs on one of the northern islands and terrorizes ships passing through the strait.
 
 ### Ámas Kiori
 
-Dragonborn homeland. Sacred basin in Adron. Entire area is a holy land.
+The sacred basin north of Adrak, holy land to all dragonborn. The entire region is considered sacred ground.
 
 ### Stillwater
 
-North of the Ámas Kiori region in the central basin, west of the Majesty Mountains, lies Stillwater—a sacred pool that forms in a river, watched over by Naga priests. The pool exhibits extraordinary temporal properties: in the eddies surrounding the still center, time passes very quickly, while in the perfectly motionless water at the pool's heart, time does not pass at all.
+Within Ámas Kiori, north of Adrak in the central basin. A sacred pool guarded by Naga priests where time bends—eddies where time races, and a still center where it stops entirely. Located near the intersection of the water and time ley lines.
 
-The Naga guard this sacred site with reverence, understanding that Stillwater is a place where the normal flow of time bends and breaks. Those who enter the still center may emerge to find decades have passed in the outside world, while those caught in the swift eddies age in moments.
+### The Salt Moors
+
+Salt marshes in the lowlands, source of preserving salt for the fishing industry.
+
+### Mountain Ranges
+
+**Gozwin Mountains**: Eastern coast along the Denrik Sea. Source of red gold and home to Waterdark.
+
+**Majesty Mountains**: Northeastern range. Rich in red gold. The self-styled Dwarf King lurks here, claiming ancestral rights and robbing travelers.
+
+**Shrieking Peaks**: Southern range, named for the wind that howls through the passes.
+
+**Drakespine Mountains**: Central range running north-south, dividing eastern and western Adron. Named for the dragon riders who once patrolled its peaks.
+
+### Waterdark
+
+Hidden within the Gozwin Mountains. The fortress of the secret order that severed the dragon-bonds four centuries ago. Masters of water and darkness magic. The fortress appears empty unless you know what to look for. The order continues its work in shadow, pursuing goals known only to themselves.
+
+### Western Lakes
+
+Several towns dot the shores of lakes in western Adron. Beneath the waters lie drowned Triton ruins—remnants of the civilization that inhabited this land before fleeing to the Alrock Ocean eons ago.
+
+### Stillstone
+
+A fortress in the mountains, exact purpose unclear.
+
+### Gemecas
+
+A point of interest in eastern Adron, near the Gozwin Mountains.

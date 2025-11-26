@@ -2,36 +2,44 @@
 
 Tags: state, nation
 
-TODO
+A confederation of eight Scalawag goblin city-states occupying the Crags of Geth—a shallow bowl-shaped mountain range west of Erasnus, east of Ta Minn, and south of Anarak. Chaotic but functional, Griselia runs on brood loyalty, dramatic flair, and an endless appetite for theatrical conflict.
 
-### Shinishini
+The goblins perpetually threaten to invade Erasnus. They never will. Everyone knows this. Trade continues regardless.
 
-A city-state within Griselia.
+### The Crags of Geth
 
-### Codunp
+A bowl-shaped mountain range forming natural walls around a sheltered interior. The rim provides defense; the valleys within provide livable space for goblin settlements. Eight major valleys house eight city-states, each ruled by a brood-father lineage.
 
-A city-state within Griselia.
-
-### Gor
-
-A city-state within Griselia.
-
-### Grisel
-
-A city-state within Griselia.
-
-### Bu
-
-A city-state within Griselia.
-
-### Aster
-
-A city-state within Griselia.
-
-### Dygon
-
-A city-state within Griselia.
+North of the Crags lies Anarak. South are the Browthiel Hills and the plains approaching Ta Minn.
 
 ### Pholiki
 
-A city-state within Griselia.
+Easternmost city-state, closest to Erasnus. Primary point of contact for trade and theatrical diplomacy. Pholiki's brood-father typically leads the delegations that travel to Traduci to make grandiose invasion threats before signing trade agreements.
+
+### Dygon
+
+Central of the three eastern city-states. Known for its philosophers—Scalawag goblins who devote years to elaborate metaphysical arguments that outsiders find incomprehensible but goblins consider profound.
+
+### Aster
+
+Westernmost of the three eastern city-states. More militant reputation than its neighbors, though "militant" for Griselia still means more posturing than actual fighting.
+
+### Shinishini
+
+Interior city-state known for its performers. Traveling Shinishini theater troupes occasionally venture into Erasnus and beyond, staging elaborate productions that blend comedy, tragedy, and chaos.
+
+### Codunp
+
+Interior city-state with a reputation for craftsmanship—when the goblins can focus long enough to finish projects. Codunp goods are either brilliant or baffling, with little middle ground.
+
+### Gor
+
+Interior city-state. Less is known about Gor than the others; they keep to themselves more than typical Griselian goblins. Some suspect Gor harbors ambitions beyond theater.
+
+### Grisel
+
+The largest city-state, occupying the deepest valley in the bowl. Grisel's brood-father claims ceremonial precedence over the others, which the other seven city-states politely ignore.
+
+### Bu
+
+The smallest city-state, tucked into a narrow valley near the northern rim. Bu trades more with Anarak than with Erasnus, and its goblins are quieter than their southern cousins. This is considered suspicious.

@@ -33,3 +33,17 @@ Among the demon slayers who remained were the brothers Averos and Perleus. They 
 With no other options, the two paladin brother kings cast two spells with the aid and sacrifice of their kingdom to forever protect their world. The younger brother cast a spell to make an impenetrable wall between their kingdom and the raining hell above, and the elder brother cast a spell cursing the demons to slowly die.
 
 Unfortunately, one of the most powerful demons infiltrated and corrupted the elder brother's spell, reflecting it upon their own kingdom, cursing them to make sacrifices forever. Eldest brother sacrifices himself in shame as first sacrifice for the kingdom.
+
+### The Unmaking of Trivulin
+
+Though the spells held for a time, the corruption ran deeper than anyone realized. Approximately 15,000 BSD, a catastrophic breach of the Nilus—the void itself—tore open beneath Trivulin. The kingdom was not merely destroyed. It was unmade. Erased from existence so completely that even its name has been largely forgotten from the histories of the world, known now only in fragmented texts and fading recollections.
+
+What remains is Zylogmus Eternus—a labyrinth born from Trivulin's geography twisted and warped by the unmaking force. The corridors and caverns that once connected the kingdom's cities have been stretched, inverted, and transformed into an endless maze. The very stone remembers what was lost.
+
+The void breach never fully sealed. Instead, it was merely... contained. The paladin kings and their descendants discovered that the rupture could be held in place through sacrifice—blood spilled into the burning braziers throughout the labyrinth channels a kind of spiritual power that reinforces whatever barrier remains between Zylogmus Eternus and the infinite void beyond. Every month, the invisible grid that divides the labyrinth exacts its price: a random death unless a sacrifice is made to stave off the hunger of what lies at the edge of reality.
+
+### What Waits Below
+
+At the labyrinth's deepest point—at Emphathum and beyond—something stirs. The entity that consumed Trivulin, that unmade an entire kingdom and left only a twisted maze in its place, remains. It does not sleep. It does not rest. It merely watches from the abyss, pressing against the boundaries of the sacrificial seal, waiting for the day when the offerings cease and the barrier fails. For now, the monthly deaths—whether by sacrifice or the grid's random claim—hold it at bay.
+
+But the seal weakens with each passing generation. The people of the labyrinth know this. They whisper it in the dark. The question is no longer if the breach will open again, but when.

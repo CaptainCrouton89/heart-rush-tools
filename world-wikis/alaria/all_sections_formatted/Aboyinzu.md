@@ -889,7 +889,25 @@ Blue ruins, huge crumbling walls, labyrinthine. Blue/black lotus flowers grow th
 
 #### Forest of Statues
 
-Time witches/hags live in this forest. Turn to stone, slow movements, move faster than you can see. Also Ciri the Time Witch, possesses one of the time stones. Can train you, in exchange for a piece of your soul.
+An ancient, eerily silent expanse of the Elder Wilds where reality bends and time becomes a tangible force. The Forest of Statues is the site of **The Stillness**—a permanent Izzus (time) breach that has existed since the Lost Ages, creating one of the most dangerous and mysterious locations in Alaria.
+
+##### The Stillness: A Temporal Breach
+
+Within the forest, time flows in deeply inconsistent patterns. The breach itself is not localized to a single point but pervades the entire forest region, creating zones of accelerated, decelerated, and frozen time. Those who venture into the forest without understanding its nature face a horrifying fate: they slow down progressively, their movements becoming increasingly sluggish until they effectively become stone-like—frozen in moments that stretch for centuries from the outside world, yet feel like mere seconds from their own distorted perspective.
+
+The statues that give the forest its name are victims of The Stillness—travelers, explorers, and adventurers who became trapped by the temporal anomaly, their bodies hardened and petrified by the strange forces at work. Some are centuries old; others are recent additions to the forest's grim collection.
+
+##### The Time Witches
+
+Over centuries, a society of witches and hags has learned to navigate The Stillness and exploit its power. These **time witches** possess an innate understanding of temporal flow—a gift or curse that allows them to move within the breach as others move through normal space. To outsiders, they appear to move impossibly fast, blurring between moments. They inhabit the forest and guard its secrets jealously.
+
+The time witches have become custodians of a unique form of power: **time stones**—artifacts of concentrated Izzus energy that channel the breach's temporal manipulations. These stones are rare, precious, and tightly controlled by the witch communities. Those who possess them can influence time on localized scales, though the cost of such power is invariably steep.
+
+##### Ciri the Time Witch
+
+Among the time witches, **Ciri** stands out as a legendary figure—ancient, powerful, and possessor of one of the most potent time stones. She is said to have lived through multiple centuries of subjective experience while only decades passed in the outside world. Ciri has been known to accept capable and determined travelers as students, teaching them to navigate The Stillness and understand temporal magic. However, her price is steep: she demands a piece of her student's soul—a literal fragment of their essence—in exchange for knowledge that most could never acquire elsewhere.
+
+Those who have trained under Ciri emerge transformed, bearing subtle marks of temporal affinity and understanding, but forever diminished in some ineffable way.
 
 #### Seyiy
 
@@ -1208,7 +1226,7 @@ Hills in the Dalizi Wildlands.
 
 #### Nykotheryx Amberylika
 
-An ancient forest, once home to the Dark Elves. Ancient dragon totems of bone and silver dot the forest. Unbeknownst to many, these totems hold the spirits of powerful dark elves. Rather than go to Celesté, powerful dark elven leaders preferred to remain on the material plane. Like daemons of Celesté, the spirits in these totems still have power. Unlike spirits of Celesté, they will not fade upon being forgotten. Those who find their true names are likely to be showered in power as thanks.
+An ancient forest, once home to the Dark Elves. Ancient dragon totems of bone and silver dot the forest. Unbeknownst to many, these totems hold the spirits of powerful dark elves. Rather than go to Celestia, powerful dark elven leaders preferred to remain on the material plane. Like daemons of Celestia, the spirits in these totems still have power. Unlike spirits of Celestia, they will not fade upon being forgotten. Those who find their true names are likely to be showered in power as thanks.
 
 Within the forest live the Luma, crystaline and irridescent pixies that live among the upper reaches of the forest, and the Shyoka Saseidi, gnomish caretakers of the forest.
 
@@ -2235,9 +2253,15 @@ TODO
 
 ### Implosion Mines
 
-Tags: fortress, poi, mines
+Tags: fortress, poi, mines, vimlus, the-collapse
 
-Mines built by ancient dwarves. Used fluctuations in the force leyline to create implosions that allowed them to mine into the mountain. Eventually the entire city collapsed, killing everyone—at least, that's what people think.
+The Implosion Mines are the ruins of an ancient dwarven civilization built around the manipulation of force leylines. The dwarves of this era were master engineers of Vimlus energy, using controlled implosions to delicately extract ore from the mountain without destabilizing the surrounding rock. Their techniques were precise—decades of accumulated knowledge allowed them to harness the force leyline's fluctuations for mining with surgical accuracy.
+
+Everything changed around 20,000 BSD when catastrophe struck. **The Collapse**—a sudden and catastrophic destabilization of the Vimlus leyline beneath the city—shattered the delicate balance the dwarves had maintained. The force leyline breached violently, and in seconds, the entire civilization was annihilated. An entire mountain range folded inward upon itself, transforming into a massive crater of impossible destruction.
+
+The ruins of the Implosion Mines remain trapped in a state of warped physics. Gravity itself pulls inward from all directions toward the center of the crater, as if the Collapse left behind a permanent wound in the natural order. Within the ruins, **Crushers** and **Gravity Wells** drift through the devastation—artifacts and creatures born from the residual Vimlus energy, moving in strange patterns as gravity warps around them. The site is simultaneously a monument to dwarven ingenuity and a grave marker for their hubris.
+
+Most believe everyone died in the Collapse. Most believe this.
 
 ### Kanzekill
 

@@ -2,27 +2,39 @@
 
 Tags: state
 
-Links: States
-
 ### Government & Peoples
 
-**Government Type**:
+**Government Type**: Monarchy (compromised)
 
-**Primary Inhabitants**: Sivakr
+**Primary Inhabitants**: Sivakr (Silver Elves)
 
-**Population**: 
+**Population**: 60,000
 
 **Stability**: Very Unstable
 
-**Core Values**: 
+**Core Values**: Mental superiority, memory, influence, secrecy
 
-- Using mind manipulation on each other is strictly forbidden, though it is totally permitted on outsiders, who are viewed as beneath them
-- Memories are key—influential households have memory libraries—expensive, but extraordinary libraries for holding memories. Generally contain memories of important events, historical figures, and cultural traditions.
-- Through memory rituals, you can unlock further mind controlling powers. These are what the Grand Weaver has done.
-- Memory art—freeze frames of memories. The best artists have fantastic memories.
-- Memory duels are used to settle agreements between equals. Must have a witness. Both are allowed to use mental manipulation on each other in this case.
-- Paper is highly cherished, and is used to control population. Poor people can't be controlled as well any more, but now they can free themselves. 
+- Sivakr are gray-skinned elves who spent thousands of years underground. Physical exercise is considered vulgar—status comes entirely from mental acuity and influence.
+- Mind manipulation on each other is strictly forbidden, but totally permitted on outsiders, who are viewed as beneath them.
+- King Thyolinor nominally rules, but he is being mind-controlled by a breakaway faction within Myorna. The terrorist attacks on neighboring states are state-sanctioned but officially denied.
 
+### Culture
+
+**Memory Manipulation**
+
+The Sivakr can alter memories—a terrifying ability that defines their society. Memory duels settle disputes between equals: both parties interlock fingers and attempt to convince the other they made a mistake in accepting the challenge. Must have a witness.
+
+**Memory Libraries**
+
+Influential households maintain memory libraries—expensive repositories containing preserved memories of historical figures, important events, and cultural traditions. These are status symbols and sources of power.
+
+**Memory Art**
+
+Freeze-frames of memories, rendered visible. The best artists have extraordinary recall. Memory art galleries are prestigious cultural institutions.
+
+**Paper Control**
+
+Paper is highly cherished and was historically used to control the population—records, contracts, debts. The poor, lacking access to paper, couldn't be tracked or controlled as effectively. Now some are using this gap to free themselves from the system.
 
 ### Economy
 
@@ -30,57 +42,71 @@ Links: States
 
 **Tech**: Somewhat Developed
 
-**Primary Exports**: 
+**Primary Exports**: Memory art, Deoric knowledge (secretly), silver, mountain goods
 
-**Primary Imports**: 
+**Primary Imports**: Food, surface goods, paper
 
-- Members of the Aldriktch Trade Alliance
-
+- Members of the Aldriktch Trade Alliance, though this membership is increasingly strained as neighbors discover the truth about Sivakr abilities.
 
 ### Military
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
+**Size**: Small
 
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
+**Quality**: High (terrifying)
 
-**Enrollment**: [Voluntary, Mandatory]
+**Enrollment**: Voluntary
 
-- 
-
+- The Myornan military is small but potentially devastating. Sivakr soldiers can manipulate enemy memories mid-battle—making soldiers forget their training, forget which side they're on, forget they were ever in danger.
+- Most Sivakr consider physical combat vulgar, so the military is composed of those willing to dirty themselves for the state.
 
 ### Geography
 
-**Location**: 
+**Location**: Southern slopes of the Kharvorn Mountains, specifically the Grey Mountains sub-range. Borders Camaran (southeast), Erasnus (southwest), barely touches Hephake (northwest).
 
-**Biomes**: 
+**Biomes**: Mountain peaks, deep valleys, underground complexes
 
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Climate**: Alpine—cold, harsh winters, brief summers
 
 ### Political Geography
 
-**Capital**: 
-**Cities**: 
-**Towns**: 
-**Villages**: 
+**Capital**: Vad Ilghak
 
+**Cities**: Vad Ilghak, Urkhuk
+
+**Towns**: Scattered mountain settlements, many with entrances to the underground warrens
+
+### The Forbidden Valley
+
+North of Vad Ilghak lies the Forbidden Valley—a massive, impossibly deep chasm in the mountains. At its bottom, the Sivakr keep a **chained giant**, from whom they extract consistent blood sacrifices. This blood powers all Sivakr mind magic.
+
+A massive statue of **Tiira**, their patron goddess, overlooks the valley. The Sivakr cultivated Tiira as a savior figure for their people—but the truth is darker. They effectively brainwashed their own goddess into serving Myornan interests. Even their god is a victim of their manipulation.
+
+### The Deoric Library
+
+Vad Ilghak houses a massive library of **Deoric spellbooks**—texts of secret, sacrifice-based magic. This knowledge is closely guarded but represents one of the largest collections of Deoric lore in existence. Outsiders who learn of it would be horrified.
 
 ### Primary Conflicts
 
-- 
+**The Breakaway Faction**
 
+A faction within Myorna has seized control of King Thyolinor through mind manipulation. They are directing terrorist attacks against neighboring states while the king officially denies involvement. The faction's goals are unclear—perhaps they want war, perhaps they want Myorna driven back underground, perhaps something worse.
+
+**Neighbor Relations**
+
+Discoveries about Sivakr memory manipulation have made every neighbor hostile. The Trade Alliance members tolerated Myorna for access to silver and mountain goods, but the terrorist attacks are pushing them toward breaking ties entirely. Erasnus is trying to hold things together; everyone else wants Myorna out.
+
+**Internal Division**
+
+Many Sivakr want to return underground. The surface has brought nothing but conflict and exposure. Others—particularly those near the Erasnun border—have begun assimilating into surface culture and want to stay. The kingdom is splitting.
+
+**The Stone Slums**
+
+The poor of Myorna, concentrated in the Stone Slums (foggy, flat, slate-built districts), are increasingly ungovernable. Without paper records, they slip through the system. This is where golems were first discovered and built—desperate people finding desperate solutions.
 
 ### History
 
-Myorna: 50 years ago, Myorna did not exist. But then, moon elves surfaced from the mountains, declaring that now they wanted to interact with the rest of the world, and trade. Since then, relations have been tenuous. Despite entering into the Aldriktch trade alliance with its neighbors, discoveries about the nature of moon elves (also known as silver elves here) has made their neighbors wary. More recent terrorist attacks with links pointing back to Myorna have made their neighbors outright hostile. Even within Myorna there is political unrest. King Thyolinor brought the kingdom to the surface, but many feel they are unwelcome, and wish to return to the caves from which they came. King Thyolinor is not without supporters though—many of the settlements closer to the borders have already begun to assimilate into Erasnian (Erasnus) culture, and hope to stay.
+Thousands of years ago, the Sivakr were driven underground by other elves. In the darkness, they developed their memory manipulation abilities and cultivated Tiira as their goddess—though "cultivated" may mean something more sinister than worship.
 
-Even longer ago, Tiira was made into their goddess, after Myorna was driven underground by other elves. Elves spent thousands of years underground.
+Fifty years ago, King Thyolinor decided to bring his people to the surface and engage with the wider world. They joined the Aldriktch Trade Alliance. Relations were tenuous from the start—outsiders found the Sivakr unsettling even before they understood why.
 
-### Stone Slums
-
-
-The Stone Slums are an area of super foggy, flat, slate-built, short buildings. Many of the poor of Myorna make their home here, and it is home to many unsavory and mysterious characters. This is where golems were discovered and first built.
+Now the truth is emerging. The terrorist attacks have been traced back to Myorna. Neighbors are learning what memory manipulation really means. The Alliance is fracturing. And somewhere in the Forbidden Valley, a giant bleeds to fuel it all.

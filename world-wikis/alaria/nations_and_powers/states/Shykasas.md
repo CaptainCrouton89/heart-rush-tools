@@ -45,9 +45,9 @@ Tags: state
 
 ### Geography
 
-**Location**: 
+**Location**: Frostmarch Peninsula (frozen wastes)
 
-**Biomes**: 
+**Biomes**: Jungle within arctic environment (unique anomaly) 
 
 **Named Entities**:
 

@@ -6,19 +6,19 @@ Tags: state
 
 **Government Type**: Theocracy
 
-**Primary Inhabitants**: Oznak
+**Primary Inhabitants**: Oznak (Humans)
 
 **Population**: 40,000
 
 **Stability**: Stable
 
-**Core Values**: Proud, personal life and secrets, horses, speed, courage, exploration
+**Core Values**: Pride, personal life and secrets, horses, speed, courage, exploration
 
-- Their small, dispersed settlements are each controlled by a local priest, which each report back to the Kazigh, the chief horse shaman who rules from a temple in the center of Lindana. There he is attended by a select group of individuals, ones who spend their life in servitude to the shaman and will die there as well when they turn 30. 
-- Each year, new servants are sent from each town during a magical selection process where all the eligible teenagers will arrange in a ring with outstretched hand full of grass. Then, a blindfolded horse will walk and eat from one of the kids, thereby choosing the next person to be sent. 
-- The Shaman declares the next shaman when he has been deemed unable to survive a week longer, at which point they are immediately appointed and the old shaman is killed
-- Many grow an attunement with the winds of the plains, which whip through during most seasons
-
+- Small, dispersed settlements each controlled by a local priest, who report to the Kazigh—the chief horse shaman ruling from the great temple in Büüli Umén.
+- The Kazigh is attended by a select group of servants who spend their lives in servitude and are killed when they turn 30.
+- **Selection ritual:** Each year, eligible teenagers stand in a ring with outstretched hands full of grass. A blindfolded horse walks among them and eats from one child's hand, selecting the next servant to be sent to the temple.
+- When the Kazigh is deemed unable to survive another week, they declare their successor, who is immediately appointed. The old shaman is then killed.
+- Many Ta Minn develop an attunement with the winds that whip across the plains.
 
 ### Economy
 
@@ -28,10 +28,10 @@ Tags: state
 
 **Primary Exports**: Weaving, horse hides, horse products
 
-**Primary Imports**: 
+**Primary Imports**: Metal goods, lumber
 
-- The plains are slightly magical, and attunement with the winds seems to seep into everything, including the horse hides used in nearly everything they make.
-
+- The plains are slightly magical—wind attunement seeps into everything, including the horse hides used in nearly all Ta Minn craftsmanship.
+- Products from Ta Minn carry a faint enchantment of speed and air.
 
 ### Military
 
@@ -41,38 +41,47 @@ Tags: state
 
 **Enrollment**: Voluntary
 
-- It is an honor to serve in the military
-
+- It is an honor to serve in the military. Ta Minn cavalry are legendary—fast, skilled, and utterly fearless.
+- The horse warriors of Ta Minn once aggressively expanded across the plains before running into established civilizations.
 
 ### Geography
 
-**Location**: 
+**Location**: Western Middle Sea coast, west of the Crags of Geth (Griselia), south of the Browthiel Hills
 
-**Biomes**: 
+**Biomes**: Grassy steppe, prairie, occasional hills, river valleys
 
-**Named Entities**:
+**Climate**: Continental steppe—harsh winds, hot summers, cold winters
 
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Named Features**: Kanüli Daha Plains (north), Cercesa Plains (southeast)
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Büüli Umén (central plains, site of the great temple)
 
-**Cities**: 
+**Cities**: Büüli Umén, Ta Akikis (west), Toh Hural (north), Avar Sonnon (east), Limoste (southwest coast)
 
-**Towns**: 
+### The Coastline
 
-**Villages**: 
+Ta Minn's southern border is a jagged coastline along the Middle Sea, with several inlets and natural harbors. The Chedwin Strait lies along the southwestern coast. Limoste is the main coastal settlement.
 
+### The Northern Plains
+
+The Kanüli Daha Plains in the north are flat, fertile ground—and contested territory. A river flows from Anarak through a gap in the mountains between the Kharvorn and Griselia, providing a route for Anarak forces to reach Ta Minn. The northern plains are where the two nations clash.
 
 ### Primary Conflicts
 
-- Ta Minn is facing increasingly violent and bloody skirmishes against Anarak, as both try to expand.
+**The Anarak War**
 
+Ta Minn and Anarak are locked in increasingly violent skirmishes over the northern plains. Anarak's forces come through the mountain gap via the river route; Ta Minn cavalry meet them on the open steppe. Neither side has achieved decisive victory, but the fighting grows bloodier each season.
+
+Tepheranos wants Ta Minn's territory. The Ta Minn refuse to yield their ancestral plains. The war will likely escalate.
+
+**Expansion Halted**
+
+The Ta Minn once aggressively expanded across the plains, their cavalry unstoppable in open terrain. They've since run into other civilizations—Griselia to the east, Thespia to the southwest, Anarak to the north—and been forced to pause. The proud horse warriors chafe at the constraint.
 
 ### History
 
-The Ta Minn live on the prairie, a grassy steppe with occasional hills and rivers. They arrived from the West, and speak Ashakri, as do many of the other Western states. The Ta Minn once aggressively expanded, but have since run into other civilizations and have paused due to heavy aggression from their neighbors.
+The Ta Minn arrived from the West, speaking Ashakri like many western peoples. They found the windswept plains and made them home, bonding with the horses and the winds. For generations, they expanded freely, their cavalry sweeping across the steppe.
+
+Then they hit the mountains, the sea, and other nations. The expansion stopped. Now they hold their territory against Anarak's encroachment and dream of the days when the plains had no borders.

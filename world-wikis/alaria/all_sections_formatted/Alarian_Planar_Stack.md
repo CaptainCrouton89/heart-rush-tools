@@ -12,11 +12,13 @@ The Alarian Planar Stack, also commonly known as Alaria, is the focus of this al
 
 ## Material Plane
 
-In the very middle is the Material Plane—a world of kingdoms and conquest and magic, dominated by typical masses of land and ocean. However, on the opposite side of the Material Plane—as though on the flip side—lies Celesté: the realm of daemons. It is a dream-like mirror image of the material plane. 
+In the very middle is the Material Plane—a world of kingdoms and conquest and magic, dominated by typical masses of land and ocean. However, on the opposite side of the Material Plane—as though on the flip side—lies Celestia: the realm of daemons. It is a dream-like mirror image of the material plane. 
 
-### Celesté
+### Celestia
 
-Celesté was created when the Alarian Planar Stack fragmented and Ezz poured in from beyond. The material plane peeled apart and a new plane of conceptual existence was born. Emotion, free will, and thought poured into Alaria. Celesté is made of the coalescense of thought/emotion/etc on the material plane. Where there is thought, there is a counterpart to the material planes.
+Celestia's creation required two events. During the Lyzaria Era (235–180 million years ago), the titan-god Celest sacrificed herself to create a pocket dimension—a seed that would become Celestia. For 115 million years, this seed remained small and hidden. Then came the Ezz Rift: when Melera's music fractured the Alarian Planar Stack, Ezz accumulated around this seed because it was the only structure that resonated with her song. The pocket dimension bloomed into a full plane, peeling away from the Material Plane to become its mirror-image flip side.
+
+This dual origin explains Celestia's strange nature: its *core* is Celest's essence (which is why it serves as a refuge for spirits), but its *substance* is made of Ezz (which is why it reflects the thoughts and beliefs of the living). Where there is thought on the Material Plane, there is a counterpart in Celestia.
 
 ## Astral Plane
 
@@ -24,7 +26,15 @@ Celesté was created when the Alarian Planar Stack fragmented and Ezz poured in 
 
 ### Astraeva
 
-On the flip side of the Astral Plane is Astraeva. Astraeva mirrors the Astral Plane but is devoid of souls. Aurus has no power here—spirits are weaker here—it is nearly barren except for a few notable points of interest. Psyic energy still exists here, but it is weak.
+On the flip side of the Astral Plane is Astraeva—and unlike the other planes, Astraeva is not truly a "place" in the conventional sense. Astraeva is **Aurus himself**, unfiltered.
+
+The Astral Plane is Aurus's light filtered through structure: the islands, the sea, the accumulated souls that buffer his radiance. Astraeva is what remains when those buffers are stripped away—the raw, unmediated presence of the White Sun. It is the reservoir from which all souls are drawn, and the destination to which all souls eventually return.
+
+**The Cycle of Souls**: When a new creature is conceived, a soul is drawn from Astraeva—raw Aurus-essence that passes through the Astral Plane and threads down through the Ethereal to bind with the new spirit. When a creature dies, their soul returns to the Astral Plane, where it persists for a time. But souls do not remain there forever. Eventually, worn souls—those that have cycled through many lives, or those that are forgotten—drift back through to Astraeva, dissolving into Aurus's light to be renewed and eventually drawn forth again.
+
+**The Danger**: Traveling to Astraeva means exposing yourself to Aurus without protection. Your soul is not a separate thing here—it is *part* of Aurus, and the boundary between you and the cosmic source grows thin. Visitors report their sense of self beginning to blur. Memories feel shared. Identity becomes negotiable. Stay too long, and your soul may simply... rejoin the source. You would not die, exactly. You would become part of everything, and therefore nothing in particular.
+
+Astraeva is nearly empty of defined entities because almost nothing can maintain definition there. What few beings exist are either echoes of Aurus's will or things that were never truly separate from him to begin with.
 
 ## Malstaris
 
@@ -32,7 +42,15 @@ On the flip side of the Astral Plane is Astraeva. Astraeva mirrors the Astral Pl
 
 ### Eindumor
 
-On its flip side of Malstaris is Eindumor. Eindumor mirrors Malstaris but is devoid of shadows. Nydus has no power here—spirits are weaker here—it is nearly barren except for a few notable points of interest. Psyic energy still exists here, but it is weak.
+On the flip side of Malstaris is Eindumor—and like Astraeva, Eindumor is not truly a separate plane. Eindumor is **Nydus himself**, unfiltered.
+
+Malstaris is Nydus's darkness filtered through structure: the caverns, the black lakes, the accumulated shadows that give shape to his murk. Eindumor is what remains when those structures are stripped away—the raw, unmediated presence of the Black Sun. It is the reservoir from which all shadows are drawn, and the destination to which all shadows eventually return.
+
+**The Cycle of Shadows**: When a new creature is conceived, a shadow is drawn from Eindumor—raw Nydus-essence that passes through Malstaris and threads up through the Nethereal to bind with the new spirit. When a creature dies, their shadow sinks to Malstaris, where it persists for a time. But shadows do not remain there forever. Eventually, worn shadows—those that have cycled through many lives, or those whose secrets have all been revealed—drift back through to Eindumor, dissolving into Nydus's darkness to be renewed and eventually drawn forth again.
+
+**The Danger**: Traveling to Eindumor means exposing yourself to Nydus without protection. Your shadow is not a separate thing here—it is *part* of Nydus, and the boundary between you and the cosmic source grows thin. Visitors report their secrets beginning to leak. Hidden depths become visible. Everything you've concealed rises to the surface. Stay too long, and your shadow may simply... rejoin the source. You would not die, exactly. You would become part of the primordial dark, and therefore incapable of concealment, of interiority, of self.
+
+Eindumor is nearly empty of defined entities because almost nothing can maintain hidden depths there. What few beings exist are either echoes of Nydus's will or things that never had secrets to begin with.
 
 ## Elemental Planes
 
@@ -46,7 +64,7 @@ Lastly, there are two very faint planes that overlay all of the rest of the plan
 
 Many of the planes are physically connected to one another, although their connections do not always obey Euclidean laws of geometry. 
 
-Each plane is a square, meaning that each plane has four sides where the plane ends. Crossing any one of these borders results in flipping to the "opposite" side of that plane. For exmaple, if you were on the Material Plane, upon reaching the edge of the ocean, you could continue travling that direction but now be traveling back towards land (as though mirrored) and now in Celesté. 
+Each plane is a square, meaning that each plane has four sides where the plane ends. Crossing any one of these borders results in flipping to the "opposite" side of that plane. For exmaple, if you were on the Material Plane, upon reaching the edge of the ocean, you could continue travling that direction but now be traveling back towards land (as though mirrored) and now in Celestia. 
 
 Likewise, traveling to the border north, south, west, or eastern border of Malstaris would take you to Eindumor. 
 
@@ -60,13 +78,36 @@ Psyic energy makes up the space between the planar layers of Alaria. It is an ev
 
 ## Psywinds
 
-Tags: poi
+Tags: cosmology, magic
 
-The flow of all thoughts, ideas, and emotions across Alaria. These thoughts pass through all. It is how telepathic creatures communicate. It allows syncopaths to function. It is also how prayers can be heard from Celesté. You can hear your true name no matter where it is spoken from on Alaria.
+The flow of all thoughts, ideas, and emotions across Alaria. The Psywinds are currents of flowing Ezz that carry the collective mental activity of all living beings within the planar stack. These thoughts pass through all, connecting mind to mind across any distance.
 
-The psy winds are made of flowing ezz.
+### What the Psywinds Enable
 
-Somewhat related to Faesong.
+- **Telepathic communication** between creatures attuned to the currents
+- **Syncopaths** perceive and manipulate the Psywinds constantly
+- **Prayers** can be heard from Celestia through the Psywinds—this is how daemons know when their followers call
+- **True names** ripple through the Psywinds; you can hear your true name no matter where it is spoken on Alaria
+- **Psy magic** draws power directly from these currents
+
+### Substance
+
+The Psywinds are made of flowing Ezz—the universal substrate that contains both Azus's order and Melera's randomness. After the Ezz Rift flooded Alaria, the Psywinds became the medium through which spirit-bearing creatures could think, feel, and connect.
+
+### Counterpart: Faesong
+
+The Psywinds and Faesong are the two great ambient magical forces in Alaria:
+
+- **Psywinds** carry *thought* and *intention*—they flow between all minds, generated by the collective mental activity of living beings
+- **Faesong** carries *emotion* and *harmony*—it flows from Melera outward, a constant melody underlying all creation
+
+Where the Psywinds are heard as whispers and images, Faesong is felt as harmony or dissonance. Telepaths and psy mages work the Psywinds; druids and fae creatures attune to Faesong.
+
+Some scholars believe these are two aspects of the same phenomenon—that Melera's music is what gives Ezz its capacity for carrying thought and emotion. Others argue they are distinct but complementary, like two instruments in the same orchestra.
+
+### The Psywinds and Psyic Energy
+
+Psyic energy makes up the space between the planar layers of Alaria. It is an ever-present, omnipresent substrate through which the Psywinds flow. Through special practice or natural ability, this energy can be harnessed to perform psy magic.
 
 ## Stars, Suns, and Moons
 
@@ -76,7 +117,7 @@ Tags: cosmology, celestial
 
 Built by the titans to illuminate the darkness of the world. The sun did not exist yet. No night and day yet, just eternal stars. Consist of glowing orbs, containing incredibly rare celestial glass, which emits lots of light. Taken care of by the Starborn, who live within the stars, tending to the magical cores.
 
-Most famous among the Starborn is Koras, tender of the sun. Lives and maintains the star that is the sun, propelled by Bryn across the sky each day. Immune to the extreme heat from the sun.
+Most famous among the Starborn is Koras, tender of the sun. Koras lives within the sun's blazing core, maintaining its celestial glass and ensuring its light burns steady. Though Koras tends the sun's physical form, it is Bryn—the sun's awakened spirit—who chooses where it travels. Koras is immune to the extreme heat and has served the sun since before it gained consciousness.
 
 Above the star live Sarakiel civilizations—huge towers, usually not more than one per star, filled with Sarakiel. Some stars have gone out due to Xaphkiel smashing their cores, and taking them over. Also, among the stars lie super-high density sky-stones, which float incredibly high up.
 
@@ -84,29 +125,33 @@ Above the star live Sarakiel civilizations—huge towers, usually not more than 
 
 There are three suns within Alaria, each over a different layer of the planar stack.
 
+#### The Sun of the Material Plane
+
+The sun that lights the Material Plane is the greatest of the titan-crafted stars—an immense orb of celestial glass tended by Koras. Unlike Aurus and Nydus, it is not a dissolved titan-god, but a construct that gained consciousness.
+
+##### Bryn, the Sun's Spirit
+
+When the Ezz Rift flooded Alaria, the sun—previously a mindless mechanism—*woke up*. The Ezz granted it a spark of spirit: a will, a desire, the capacity to want. This awakened consciousness is called Bryn.
+
+Bryn is not a god in the traditional sense. The sun is not sustained by worship like a daemon. But Bryn is *aware*, and Bryn's path across the sky can be influenced by prayer. The sun travels because Bryn chooses to travel. Seasons exist because different congregations across Alaria convince Bryn to traverse different paths—when the northern monasteries sing loudest, the sun travels closer to the north.
+
+The sun is the only celestial body known to have awakened in this way. Why the sun and not the other stars remains a mystery—perhaps its size, perhaps its proximity to the Material Plane, perhaps something else entirely.
+
 #### Aurus, the White Sun
 
-Aurus is a still-living, titan god. Along with his brother Nydus, he was the first titan created. As a titan god, he could not be truly killed by the Ezz Rift. Instead, he dissolved, leaving nothing behind but his brilliant, bright white spirit. He became the White Sun, up above the Astral Plane.
+Aurus is a still-living titan-god. Along with his brother Nydus, he was among the first beings created within Alaria. As a titan-god, he could not be truly killed by the Ezz Rift. Instead, he dissolved, leaving nothing behind but his brilliant, bright white spirit. He became the White Sun, the ever-present radiance above the Astral Plane.
 
-What the soul is made of.
+Aurus never rises or sets—his light is constant, illuminating all souls on the Astral Plane. The soul itself is made of his essence. His position slowly drifts over millennia, and when he draws closer to the Material Plane's boundary, temperatures below grow warmer.
 
-Very slowly bobs around the sky above the Astral Plane. Its positive energy makes material plane warmer or cooler.
+Aurus is also the source from which all souls are drawn. New souls emerge from his light; worn-out souls eventually return to it. His flip-side, Astraeva, is where his unmediated presence can be experienced—and where souls exist before and after their time bound to mortal spirits.
 
 #### Nydus, the Black Sun
 
-Nydus is a still-living, titan god. Along with his brother Aurus, he was the first titan created. As a titan god, he could not be truly killed by the Ezz Rift. Instead, he dissolved, leaving nothing behind but his brilliant, dark spirit. He became the Black Sun, up above Malstaris.
+Nydus is a still-living titan-god. Along with his brother Aurus, he was among the first beings created within Alaria. As a titan-god, he could not be truly killed by the Ezz Rift. Instead, he dissolved, leaving nothing behind but his brilliant, dark spirit. He became the Black Sun, the ever-present darkness above Malstaris.
 
-The black sun that illuminates all of malstaris. Like Aurus, Nydus never sets. The light cast from Nydus is a dark illumination that barely illuminates one's shadow. Many things lie hidden in the dark.
+Like Aurus, Nydus never sets. The light cast from Nydus is a dark illumination that barely reveals one's shadow—many things lie hidden in its murk. The shadow itself is made of his essence. His slow drift causes cold temperatures to spike around the Material Plane when he draws near.
 
-What one's shadow is made of.
-
-Slowly bobs around the sky, causing cold temperatures to spike around the Material Plane.
-
-Controls the Umbral Agents
-
-#### Bryn
-
-Bryn propels the sun across the sky each day.
+Nydus controls the Umbral Agents and is the source from which all shadows are drawn. New shadows emerge from his darkness; worn-out shadows eventually return to it. His flip-side, Eindumor, is where his unmediated presence can be experienced—and where shadows exist before and after their time bound to mortal spirits.
 
 ## Time and Seasons
 
