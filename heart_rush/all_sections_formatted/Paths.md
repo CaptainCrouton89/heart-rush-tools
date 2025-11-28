@@ -368,13 +368,14 @@ Requires the Beast Companion talent and at least one year of constant companions
 - Companion gains +10 HP and +1 to all ability dice
 - Always know companion's location, health, and emotional state within 1 mile
 - Companion can use your skill ranks instead of its own
-- You can see through your companion's eyes for up to 10 seconds per minute
+- You can see through your companion's eyes for up to 1 minute as an action
 
 **Drawbacks:**
 
 - Must remain within 1 mile of companion or gain one level of mental vulnerability per day separated
-- When companion takes a wound, you take damage equal to the wound rank
-- Gain aspect "Shared Soul" at rank 1—when companion is frightened or aggravated, so are you
+- When companion takes a wound, you take damage equal to half the wound rank (rounded up)
+- When companion gains frightened or aggravated, you gain it at the same level
+- Gain aspect "Shared Soul" at rank 1 (this aspect cannot be decreased or removed)
 - Cannot form bonds with other animals while this connection exists
 
 #### Tier 2: Unified
@@ -383,6 +384,7 @@ Requires the Beast Companion talent and at least one year of constant companions
 
 - Telepathic range increases to 1 mile (can share complex thoughts and memories)
 - Companion gains additional +10 HP and increases heart die by one size
+- Companion can now use its action to enter engagements
 - Minor ability: Perceive through companion's senses for up to 10 minutes
 - If sized appropriately, can ride companion without skill checks and fight while mounted without penalty
 - Share saving throw results—both use the better roll when affected by the same effect
@@ -390,9 +392,8 @@ Requires the Beast Companion talent and at least one year of constant companions
 **Drawbacks:**
 
 - "Shared Soul" increases to rank 3
-- When companion reaches 0 HP, immediately take wound "Sympathetic Trauma" at rank 10
-- Must spend 2 hours daily in physical contact with companion or lose all benefits for 24 hours
-- Begin sharing personality traits with your companion
+- When companion reaches 0 HP, immediately gain wound "Sympathetic Trauma" at rank 8
+- Must spend 2 hours daily in physical contact with companion or both gain one level of mental vulnerability until fulfilled
 
 #### Tier 3: Symbiotic
 
@@ -400,38 +401,37 @@ Requires the Beast Companion talent and at least one year of constant companions
 
 - No range limit on telepathic communication (works across planes)
 - Companion gains natural armor +3 and +10 movement speed
+- Companion can use your martial talents (sharing cooldowns with you)
 - Can cast spells through companion as if you were in its location
-- Minor ability: Instantly swap positions with companion (range 60 feet)
+- Minor ability: Instantly swap positions with companion (range 60 feet, line of sight)
 - When either gains temporary HP, both gain the same amount
 - Companion gains ability to speak one language you know
 
 **Drawbacks:**
 
 - "Shared Soul" increases to rank 5
-- Share all conditions between you and companion (if one is blinded, both are)
-- If companion dies, immediately drop to -10 HP and gain wound "Severed Soul" at rank 20
-- Your dreams are always shared experiences
-- Physical changes to one are reflected in the other (scars appear on both, etc.)
+- When either gains a condition, the other gains it at one level lower (minimum 1)
+- If companion dies, immediately drop to 0 HP and gain wound "Severed Soul" at rank 15
+- You cannot benefit from a long rest unless your companion also rests
 
 #### Tier 4: One Being
 
 **Benefits:**
 
-- Major ability: Merge with companion—gain its physical stats and abilities while keeping your mental stats and abilities for 1 hour
-- While separate, both can use each other's abilities (including bloodmark abilities and talents)
+- Major ability: Merge with companion for up to 1 hour. While merged, use the higher of your physical stats or companion's physical stats, retain your mental stats, and use all abilities from both. Equipment melds into the merged form (weapons accessible if form can wield them). Ending merge early requires an action
+- While separate, both can use each other's abilities (including bloodmark abilities and talents), though cooldowns are shared
 - Companion becomes immune to mental conditions
-- If either dies, consciousness transfers to the survivor once per lifetime
-- Can manifest partial transformations (grow claws, enhance senses, etc.) at will
+- If either would die, consciousness transfers to the survivor once per lifetime—the survivor retains both souls as a unified identity
+- Can manifest partial transformations at will (grow claws, enhance senses, sprout wings if companion had flight, etc.)
 - Age at the same rate regardless of natural lifespans
 
 **Drawbacks:**
 
 - "Shared Soul" increases to rank 10
 - Share a single HP pool (combined maximum of both)
-- Cannot be more than 100 feet apart without both gaining stunned
-- If one dies permanently (after consciousness transfer), the other dies within 1 minute
-- Think in "we" instead of "I"—even when separated
-- Cannot be resurrected separately—both must be brought back together
+- After the consciousness transfer has been used, if either body dies, both souls die within 1 minute
+- If separated by more than 100 feet for longer than 1 minute, both gain one level of confused per additional minute until reunited
+- Cannot be resurrected separately—both souls must be brought back together or neither returns
 
 ## Using Paths in Your Game
 

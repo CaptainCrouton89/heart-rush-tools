@@ -207,3 +207,5 @@ You can communicate freely with squirrels, badgers, rabbits, foxes, and other sm
 
 **Passive ability.**
 You can vanish into the undergrowth with preternatural ease. You can hide even when only lightly obscured by foliage, and you leave no tracks in natural forest environments. You have A2 on stealth checks in forests and woodlands.
+
+
