@@ -83,6 +83,7 @@ world-wikis/**/Bestiary.md
 
 # Claude Code metadata files
 .claude-md-manager.md
+.claude/settings.local.json
 
 # Scratch notes and temporary content
 heart_rush/talents/spells/notes.md
