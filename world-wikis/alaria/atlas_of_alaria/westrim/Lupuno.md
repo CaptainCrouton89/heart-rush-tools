@@ -1,7 +1,7 @@
 ## Lupuno
 
-Tags: city, state, nation
+Tags: city, state
 
-A city-state in Westrim.
+A Kor city-state in northwestern Atriik, built where the Sha Puniki emerges from the Milras Forest. Lupuno controls the timber trade and river commerce for the region.
 
-TODO
+See [Atriik](Atriik.md#lupuno) for full details.

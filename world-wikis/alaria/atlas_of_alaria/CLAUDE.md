@@ -40,6 +40,14 @@ Description of the landmark within the city...
 
 5. **Magic schools go in magic_and_knowledge/schools/** - Academies and magical institutions.
 
+6. **Creatures and peoples go in bestiary/** - When writing about a region's inhabitants, check `bestiary/` for existing entries and add new ones there when introducing creatures or cultures.
+
+## Cross-Reference Before Writing
+
+Before adding geographic content, check for established lore in:
+- `bestiary/` - Creatures, peoples, cultures inhabiting the region
+- `heart_rush/races/` - Racial homelands and cultural details
+
 ## Continental Structure
 
 Alaria comprises these major continents (see `Major_Continents.md` for overview):

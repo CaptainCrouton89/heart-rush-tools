@@ -26,6 +26,14 @@ An interior settlement surrounded by what remains of the island's forests. Loggi
 
 A fishing village on the southern coast, as far from Shipton as you can get without swimming. The residents here are the closest thing Myastor has to old families—people whose ancestors settled the island before it became a penal colony. They keep to themselves, sell fish to whoever's buying, and pretend the rest of the island doesn't exist.
 
+### The Singing Trees
+
+A grove in the island's interior where the wind produces an eerie, almost musical sound as it passes through the branches. The trees here are an unusual species—their bark is pocked with natural holes that create the resonance. On quiet nights, the sound carries for miles.
+
+Local legend claims the trees sing the names of the dead—prisoners who died on Myastor and were buried without proper rites. The more pragmatic explanation is simply unusual acoustics, but new arrivals often find the sound unsettling. Long-term residents barely notice anymore.
+
+Some prisoners who've escaped into the interior report that the Singing Trees helped them—or hindered them. The stories contradict each other. The trees don't comment.
+
 ### The Interior
 
 Scrubland and second-growth forest, crisscrossed by rough paths connecting the settlements. Nothing of value grows here naturally; nothing planted survives the poor soil and irregular rainfall. The interior is used for grazing goats, hiding from authority, and burying things that shouldn't be found.

@@ -1,7 +1,7 @@
 ## Byonowidi
 
-Tags: city, state, nation
+Tags: city, state
 
-A city-state in Westrim.
+A Sharabha city-state in western Atriik, the only non-Kor monarchy in the confederation. Located on the Sha Ulokoni near Sprenwood, Byonowidi is known for its fur trade and renowned cavalry.
 
-TODO
+See [Atriik](Atriik.md#byonowidi) for full details.

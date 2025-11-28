@@ -11,6 +11,8 @@ The Tarkhon Empire straddles the critical strait between Clueanda and Rimihuica,
 - **Enymu**: Agricultural state east of Nektuna
 - **Kerwin**: Halfling kingdom in the far northeast, nominally tributary
 - **Astrelle**: Vassal state of Nektuna
+- **Vogenfeld**: Uline dwarf settlements in the northern mountains, guarding the passes against Hedroscobb
+- **Murth**: Dual-capital state of Rhea scholars and human merchants
 
 #### On Rimihuica (Southern Holdings)
 - Extends from the strait southward to the northern shoreline of the Eronia Range
@@ -33,6 +35,25 @@ Tarkhetan, the capital, sits directly on the strait. Its massive navy and fire-m
 The Tarkhon heartlands are temperate and green—rolling hills and fertile plains with easy access to the ocean. This is hospitable land that supports both civilization and agriculture, a stark contrast to the desert and jungle that lies south of the Eronia Range.
 
 To the north, the land grows drier as it approaches Kerwin and the volcanic Fireknife Mountains. To the south, the Eronia Range marks the boundary between Tarkhon territory and the lands beyond—mountains that were cleared of hostile inhabitants two centuries ago by Klor the Blood Lord.
+
+### The Wurmspine
+
+The massive mountain range that forms Tarkhon's northern frontier, separating the empire from the orcish Wildwood and stretching from the coastal regions in the west to the steppes in the east. The Wurmspine is not a single chain but a complex system of interconnected ranges, peaks, and highland regions.
+
+**Major components of the Wurmspine:**
+- **Vogenfeld**: The Uline dwarf settlements controlling the main passes against Hedroscobb
+- **Murth**: The dual mountains of Mt. Disyus and Mt. Arn, home to Rhea scholars and human merchants
+- **Wurn Mountains**: Eastern alpine range home to the Stone Men
+- **Fireknife Mountains**: Volcanic range northeast of the Wurn, marking Kerwin's border
+- **Freedom's Way**: Mountain passes and highlands west of Vogenfeld
+- **Silver Hills**: Rolling mineral-rich highlands
+- **Mt. Thryke**: Major peak in Morgnor's Cradle territory
+- **Morgnor's Cradle**: Dragon-ruled mountains northwest of Thespia
+- **Hills of Nowhere**: Remote highland region
+- **Kobuk**: Mountain territory home to surviving Coghead goblins
+- **Hills of Hellion**: Treacherous peaks along the range's edge
+
+The Wurmspine serves as both barrier and boundary—protecting Tarkhon from northern invasion while defining the limits of imperial influence. Control of the Wurmspine passes has determined the fate of empires; the dwarves of Vogenfeld have held these passes for centuries, though their loyalty grows strained as Tarkhon forgets its obligations.
 
 ## Political Climate
 
@@ -61,3 +82,5 @@ The empire's great symbol is the **Evertorch**—an eternally burning flame in T
 - **The Alternative Route**: Someone could discover (or create) a way around the strait. A canal, a portal, a mountain pass, a magical transport network. The moment trade can bypass Tarkhon, the empire dies.
 
 - **Ulyas's Choice**: The immortal king has been playing along for five centuries because it was convenient. If he decided to stop—if he actively opposed the empire—Kerwin's strategic position and his personal power could cause real problems.
+
+- **The Northern Collapse**: Vogenfeld's dwarves have held the northern passes for centuries, but Tarkhon has forgotten to pay them. If the dwarves withdraw—or worse, help the orcs through their secret tunnels—six orcish tribal states from Hedroscobb could sweep south. The orcs have been fighting each other for generations, but if they ever unite, nothing stands between them and Tarkhon except increasingly resentful dwarves.

@@ -20,10 +20,6 @@ Dense overbrush prevents people from passing through the top of the maze, forcin
 
 A jungle forest in the northwest of Kyagos, sharing a coast with the Sea of Seven Snakes.
 
-#### Melera Skeyad
-
-Translating to "Melera's Rest," this ancient city was dedicated to the deity Melera. The music of Melera still flows through the ruins, keeping the city supernaturally alive—a very powerful and sacred place. However, the city's power has attracted the attention of Elnir, making it both a site of wonder and danger.
-
 ### Traevluong
 
 A jungle forest on the southeast side of Kyagos, home to the Ulvsjael—werewolves who never transform to human form, remaining always in wolf form. They are somewhat feral but not evil, living in harmony with the deep jungle.

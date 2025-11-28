@@ -2,7 +2,7 @@
 
 Tags: state, nation
 
-The domain of Morgnor, an ancient earth-attuned dragon who rules over Etherweaver goblins in the mountains northwest of Thespia. The goblins mine precious metals and enchant them for the dragon's ever-growing hoard.
+The domain of Morgnor, an ancient earth-attuned dragon who rules over Etherweaver goblins in the Wurmspine Mountains northwest of Thespia. The goblins mine precious metals and enchant them for the dragon's ever-growing hoard.
 
 Very rich. Very greedy. Very dangerous.
 

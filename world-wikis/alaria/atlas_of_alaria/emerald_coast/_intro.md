@@ -2,33 +2,63 @@
 
 ## Geography
 
-The Emerald Coast occupies the eastern seaboard of Rimihuica, a verdant strip of jungle and coastline running from south of Ofrenia all the way to Phyrexes in the southeast. True to its name, this region is deep, lush green—dense rainforest benefiting from ocean moisture, creating fertile territory where life thrives in abundance.
+The Emerald Coast occupies the eastern seaboard of Rimihuica, a verdant strip of jungle and coastline running from south of Ofrenia all the way to Phirexes in the southeast. True to its name, this region is deep, lush green—dense rainforest benefiting from ocean moisture, creating fertile territory where life thrives in abundance.
 
 ### Boundaries and Position
 
-- **North**: Begins south of Ofrenia (the island in the Middle Sea) and Swampdeep
-- **West**: The Green Mountains, Seawatch Mountains, and Tambrielle Mountains form the western boundary, separating the coast from the Innerrim basin
-- **South**: Extends to Phyrexes (a misty swamp) and borders Kyagos (the mountainous southeastern peninsula)
+- **North**: Begins south of Ofrenia (the island in the Middle Sea), with Micah Inlet marking the northern coast and Swampdeep beyond
+- **West**: The Myjornis Mountains and western highlands separate the coast from the Gulf of Tears region and the United Free Nations
+- **South**: Extends to Phirexes (a misty swamp) and borders Kyagos (the mountainous southeastern peninsula) via the Cloud Mountains
 - **East**: Faces the open ocean; the permanent storm Oblivion churns offshore to the northeast
 
 ### Geographic Extent
 
 The Emerald Coast stretches along the entire eastern shoreline of Rimihuica's jungle regions. It includes:
+- The **Jungles of Godahi**: The great interior basin containing five distinct nations (Da Trang, New Chimea, Qet Yemani, Vystrilik, Eoga)
 - The coastal portions of **New Chimea** and **Vystrilik**, states that span across the mountain divide from the Innerrim
-- **Phyrexes**: A misty, fog-shrouded swamp marking the southeastern extent of the coast, positioned north of the mountainous Kyagos peninsula
+- **Phirexes**: A misty, fog-shrouded swamp marking the southeastern extent of the coast, positioned north of the mountainous Kyagos peninsula
 
-### Surrounding Seas
+### Major Mountain Ranges
 
-- **Sea of Seven Snakes**: The body of water between Phyrexes and Kyagos/Gorath to the south
+- **Green Mountains**: Northern range separating the Jungles of Godahi from the Micah Inlet coast; filled with trolls and wyverns
+- **Seawatch Mountains**: Interior range running through New Chimea, separating the coastal nation from the deep jungle
+- **Tambrielle Mountains**: Southeastern range on the border of Vystrilik, containing passes to the Innerrim
+- **Cloud Mountains**: Southern boundary separating Eoga from Phirexes and the routes to Kyagos
+- **Myjornis Mountains**: Southwestern range marking the edge of the Emerald Coast region
+
+### Major Rivers
+
+Three river systems drain the Jungles of Godahi:
+
+- **Silver River**: Originates in the Green Mountains and flows south through Da Trang, cascading over the famous Cascades of Ygg before continuing into Qet Yemani. The primary trade artery for the western Jungles.
+- **Vortek River**: Flows east through Vystrilik to the sea at Garum. The main route connecting the interior jungle to the eastern coast.
+- **Elite Creek**: A secondary waterway winding through central Qet Yemani, connecting the Tora Mazîl forest to the broader river network.
+
+### Coastal Waters
+
+- **Micah Inlet**: A large inlet on the northern coast, bounded by the Green Mountains to the south. The ports of Gherdikhisar, Kalemeydani, and Donokasi serve as Da Trang's connection to sea trade.
+- **Sea of Seven Snakes**: The body of water between Phirexes and Kyagos/Gorath to the south
 - **Oblivion**: A permanent supernatural storm northeast of the coast, between the Middle Sea and open ocean. Anyone who enters forgets everything they know and sails out in confusion.
 
 ## Political Climate
 
-TODO
+The Emerald Coast is dominated by the five nations of the Jungles of Godahi, each controlling a portion of the interior basin:
+
+- **New Chimea**: The most powerful, controlling the best harbors and the bulk of ocean trade
+- **Vystrilik**: Strategic control of mountain passes gives it leverage over trans-regional commerce
+- **Da Trang**: Controls the northern approaches and the routes through the Green Mountains
+- **Qet Yemani**: Largest territory but mostly deep jungle; wealthy from timber and rare plants
+- **Eoga**: The smallest and poorest, surviving through cunning and control of southern passes
+
+Beyond the Jungles, **Phirexes** controls the southeastern swamps, maintaining an independent character distinct from the jungle nations.
 
 ## What Makes It Interesting
 
-TODO
+The Emerald Coast offers:
+- **Political complexity**: Five nations in close proximity, constantly maneuvering for advantage
+- **Treacherous terrain**: Dense jungle, vast swamps, and dangerous wildlife make travel an adventure
+- **Valuable resources**: Rare hardwoods, exotic spices, medicinal plants, and the legendary Crystal Caverns
+- **Cultural isolation**: Cut off by mountains and ocean, the Jungles have developed unique traditions
 
 ## What Will Go Wrong
 
@@ -41,3 +71,15 @@ TODO
 Deep beneath the coastal waters of the Emerald Coast lie the Crystal Caverns—submarine cave systems filled with brilliant, extraordinarily potent force-attuned crystals. These crystals pulse with concentrated magical energy, glowing with an inner light that illuminates the dark waters.
 
 The crystals possess formidable powers of force magic, making them highly valuable to mages and artificers. However, they are also extremely volatile—when shattered, they release their stored energy in a massive explosion capable of collapsing entire cave sections or sinking ships above. Harvesting the crystals requires expert technique and extreme caution, as a single mistake can trigger a cascading chain reaction throughout the cavern system.
+
+### Cascades of Ygg
+
+See [Jungles of Godahi](./Jungles%20of%20Godahi.md) for details on this sacred waterfall site.
+
+### Hell's Paradise
+
+A notorious stretch of jungle between New Chimea and Vystrilik. See [New Chimea](./New%20Chimea.md) for details.
+
+### The Drift
+
+A treacherous region of unstable terrain in Eoga. See [Eoga](./Eoga.md) for details.

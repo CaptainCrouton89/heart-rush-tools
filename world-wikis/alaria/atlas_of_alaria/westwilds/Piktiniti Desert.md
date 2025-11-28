@@ -1,19 +1,67 @@
 ## Piktiniti Desert
 
-Tags: desert
+Tags: desert, geography
 
-A vast, arid desert (less sand, more shrubland). All the water beneath the desert is leeched out by the Everwood in the north. The sandy soil contians trace amounts of twyl, a crystal that magically produces oxygen.
+A vast arid expanse south of the Everwood, the Piktiniti is less a sea of sand dunes than a harsh shrubland—cracked earth, scrub vegetation, and stony barrens stretching to the horizon. The desert exists because the Everwood to the north has drained the water table dry, pulling every drop of moisture northward to feed its immortal growth.
 
-Beneath the desert are the ruins of the Postronamas Empire, an incredibly powerful civilization that used the powers of twyl to become incredibly powerful themselves. Large, crystal caves were used for meditation by their leaders, granting them fabulous powers. huge crystal caverns beneath the ground. Tons of crystals available, but can drive you mad from their music. Permeates mind unless you are literally deaf? Literally too dumb to think? 
+### The Twyl
 
-The desert is dominated by giant insects, which flourish in the oxygen rich environment. Every 7 years, the locusts hatch and ravage the surface of anything edible. Large scorpions hunt the insects.
+The sandy soil contains trace amounts of twyl—a crystalline mineral that magically produces oxygen. This seemingly minor detail has shaped everything about the Piktiniti.
 
-Desert also contains Sand Dragons, not true dragons, but still quite dangerous.
+The oxygen-rich air allows insects to grow to enormous sizes. Beetles the size of dogs. Scorpions the size of horses. Dragonflies with fifteen-foot wingspans. The Piktiniti teems with giant arthropods that would suffocate anywhere else.
 
-Most of the plants are filled with parasites and will fuck you up.
+Beneath the desert, the twyl deposits are far more concentrated. Vast crystal caverns extend deep underground, remnants of an ancient civilization that built its power on twyl's potential.
 
-Tumbleweeds of massive wasp nests roll across the desert.
+### The Postronamas Empire
 
-Sidewinders will fuck you up
+Beneath the Piktiniti lie the ruins of the Postronamas—an ancient civilization that rose to greatness through mastery of twyl crystals.
 
-Plants that give off the smell of "clean water". Fools water attunement too. Very large, sub-sand venus-fly trap.
+The Postronamas discovered that concentrated twyl doesn't just produce oxygen—it resonates. The crystals hum at frequencies below conscious hearing, and those who meditate in their presence can achieve extraordinary mental states. Postronamas leaders used massive crystal caves as meditation chambers, granting themselves enhanced perception, magical sensitivity, and according to some accounts, genuine psychic abilities.
+
+They built an empire spanning the western Westwilds, constructing the Chakatann pillars as a resonance network that amplified their crystal-magic to continental scales. For centuries, they dominated the region.
+
+Then they pushed too deep.
+
+The crystal caverns extend far underground, and the deeper crystals sing differently. The music becomes maddening—a resonance that permeates the mind, overwhelming thought, erasing identity. The Postronamas leaders who sought the deepest power found it, and it broke them. The madness spread through the resonance network, cascading from pillar to pillar. Within a generation, the empire collapsed into psychosis, civil war, and abandonment.
+
+### Enimogos
+
+At the desert's heart stands Enimogos—the shattered capital of the Postronamas Empire.
+
+Visible for miles: a cluster of massive crystalline spires erupting from the sand, half-collapsed, surrounded by buried ruins. These were the largest crystals, the most powerful amplifiers in the network. When the empire fell, Enimogos was ground zero.
+
+The spires still resonate. Approaching within a mile, you feel it in your bones: a hum below hearing. Within a hundred yards, the hallucinations start—dreams while awake, voices in languages you've never heard, memories that aren't yours. Stay a day, you'll struggle to remember your name. Stay a week, you won't leave.
+
+The Seyiki call Enimogos "the Broken Song" and refuse to approach. Treasure hunters occasionally try for the artifacts buried in the ruins. Some return wealthy; more return mad; most don't return at all.
+
+### The Fauna
+
+**Giant Insects:** The dominant lifeforms. Massive beetles (including the dung beetles the Postronamas used to harvest twyl), enormous scorpions, centipedes as long as carts, and the locusts.
+
+**The Locusts:** Every seven years, they hatch. Billions of insects rising from underground chambers where they've spent seven years maturing. For weeks, the swarms devastate everything edible—stripping plants, killing animals, darkening the sky. Civilizations across the Piktiniti have built their calendars around the locust cycle.
+
+**Sand Dragons:** Not true dragons, but dragon-like lizards reaching forty feet in length. Brown and gold scaled, four-legged, with breath weapons that blast sand hard enough to destroy structures and strip armor from bodies. Apex predators that hunt the giant insects.
+
+**Wasp Tumbleweeds:** Massive wasp nests that break free and roll across the desert. Disturbing one releases clouds of aggressive, giant wasps. Experienced travelers give them wide berth.
+
+### The Flora
+
+Most plants in the Piktiniti are dangerous.
+
+**Parasitic species:** The majority of surface vegetation hosts parasites that transfer to animals on contact—burrowing larvae, blood-drinking vines, spores that colonize the lungs.
+
+**Trap plants:** Large, sub-sand predators that emit the smell of clean water and even fool magical water attunement. Travelers who dig toward the "spring" discover a venus-flytrap structure large enough to consume a horse.
+
+**The thornbush:** One of the few safe plants—its spines make it unpleasant, but it provides edible seeds and doesn't try to kill you.
+
+### Other Hazards
+
+**Sidewinders:** Venomous snakes that strike from concealment. Their venom causes paralysis and hallucinations.
+
+**Heat:** The Piktiniti is searingly hot during the day and surprisingly cold at night. Temperature swings kill the unprepared.
+
+**Dehydration:** Water is scarce. The Everwood has stolen it all. Wells must be dug deep, and many water sources are actually trap plants in disguise.
+
+### The Chakatann Pillars
+
+The western Piktiniti is defined by the Chakatann region—the grid of Postronamas pillars that once formed the empire's resonance network. See separate entry.

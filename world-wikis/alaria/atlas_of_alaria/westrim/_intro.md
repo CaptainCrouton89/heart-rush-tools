@@ -59,10 +59,32 @@ The scorpion riders who patrol Husakas have developed techniques to survive on m
 
 ### Mueras
 
-The western coastal state of Westrim, positioned between the Taflex Forest and Grimreach in the southwest, overlooking the Agreben Sea.
+The westernmost state of Rimihuica, Mueras occupies a stretch of brutally fragmented coastline where the land has shattered against the sea. Cliff-walled islands, treacherous channels, and hidden harbors define this region—geography that created the merchant-king oligarchy. Those who know the waters control the trade; those who control the trade rule Mueras.
 
-#### Darkened Coast
+The coast runs roughly 400 miles north to south, from the Mueras Highlands and Hammer Coast in the north to the Beak of Mueras peninsula in the south. Inland, the arid Dustwind Plateau separates the wealthy coastal cities from the darker eastern reaches—the Taflex Forest, Grimreach, and the shadow-haunted Darkened Coast.
 
-East of the Taflex Forest and south of Grimreach, along the northwest coast of the Agreben Sea, lies the Darkened Coast—a stretch of shoreline perpetually shrouded in shadow. The waters teem with dark-attuned sea creatures: shadow rays that glide beneath the waves, void eels that drain light from their surroundings, and worse things that rise from the lightless depths during moonless nights.
+Key features include:
+- **Labyrinth Sound**: A maze of treacherous channels controlled by pilot guilds loyal to the merchant-kings
+- **Corpse Bay**: Waters where the dead wash ashore with disturbing regularity
+- **Kaspion**: The old capital, death-cursed when King Kasper fell 118 years ago, now a ghost-haunted ruin
+- **Bazz**: The de facto capital, seat of the Council of Seven merchant-king houses
+- **The Darkened Coast**: A stretch of shoreline perpetually shrouded in shadow, home to dark-attuned sea creatures
+- **Sal'emri Bay**: Tarkhon trading enclaves maintaining careful neutrality in merchant-king politics
 
-Sailors avoid this coast when possible, as ships that venture too close risk being pulled under by creatures that exist more in shadow than flesh.
+See the full [Mueras](Mueras.md) entry for detailed coverage of settlements, merchant houses, and regional hazards.
+
+### Atriik
+
+A confederation of four city-states in southwestern Westrim, occupying the territory between the Milras Forest (north), the Dunes of Kunagi (east), the Bloodlands and Ishnit Jungles (south), and Shark Bay (west). The Kor and Sharabha peoples here share a culture of elaborate courtesy that masks constant political maneuvering.
+
+Key features include:
+- **The City-States**: Lupuno, Byonowidi, Shinii, and Wykakas—three Kor monarchies and one Sharabha
+- **Mykala**: A ruined fortress at the base of a colossal tree (30-mile canopy), sacred to all four city-states
+- **Milras Forest**: Dense old-growth woodland containing the time-warped ruins of Milreun Palace
+- **Fatiik Forest**: Contested woodland on the Naruaghin border
+- **Sprenwood**: Managed coastal forest providing timber and furs
+- **Shark Bay**: Maritime access controlled by the Kendor sea-folk of Watalina
+- **The Bloodlands**: Scarred buffer zone between Atriik and Naruaghin territory
+- **Kunagi Hills**: Eastern transitional zone, gateway to the desert trade
+
+See the full [Atriik](Atriik.md) entry for detailed coverage of the city-states and regional features.

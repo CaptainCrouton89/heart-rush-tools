@@ -106,4 +106,4 @@ Now the temple stands as a haunting reminder, its halls filled with the howling 
 
 ### Zhorheim Mountains
 
-Home to Pythlokravaleci, the dragon guardian of the Einwissel dwarves who traveled back from Celestia. The dragon can travel to Celestia easily as well. The dwarves know its true name, and vice versa—a foundation of enormous trust. Located in a mountain range forming part of the southwest side of the northlands, northeast of Ichneum (forest), marking the northern edge of the forest region.
+Home to Zorheim, the dragon guardian of the Einwissel dwarves who traveled back from Celestia. The dragon can travel to Celestia easily as well. The dwarves know its true name, and vice versa—a foundation of enormous trust. Located in a mountain range forming part of the southwest side of the northlands, northeast of Ichneum, marking the northern edge of the forest region.

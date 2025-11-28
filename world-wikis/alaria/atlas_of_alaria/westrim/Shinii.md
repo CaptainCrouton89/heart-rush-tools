@@ -1,7 +1,7 @@
 ## Shinii
 
-Tags: city, state, nation
+Tags: city, state
 
-A city-state in Westrim.
+A Kor city-state in eastern Atriik, positioned at the gateway to desert trade on the western edge of the Kunagi Hills.
 
-TODO
+See [Atriik](Atriik.md#shinii) for full details.

@@ -2,7 +2,7 @@
 
 Tags: mountains, geography
 
-A volcanic range along the northwestern border of Kerwin, marking the boundary between settled Tarkhon territory and the wild lands beyond. The Fireknife is dangerous, unstable, and largely avoided by sensible travelers.
+Part of the greater Wurmspine range, the Fireknife is a volcanic segment along the northwestern border of Kerwin, marking the boundary between settled Tarkhon territory and the wild lands beyond. Dangerous, unstable, and largely avoided by sensible travelers.
 
 ### Geography
 

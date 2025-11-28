@@ -2,20 +2,26 @@
 
 Tags: lake, geography
 
-A series of interconnected freshwater lakes in the Westwilds, home to the reclusive Griebi people.
+A series of freshwater lakes in the hills of the northeastern Wildwood, home to the Griebi people. The largest is Cykravikus Lake; smaller lakes dot the surrounding hills.
 
-### The Griebi: The Lakemen
+### Geography
 
-The Griebi are a unique subspecies of aquatic orcs with blueish-gray skin adapted for underwater life. They are accomplished hunters and fishers who rarely interact with surface-dwellers and communicate sparingly even among themselves.
+The Grieb Lakes occupy a region of forested hills north of Tarn territory. The terrain is rocky and hilly, with cold, deep lakes filling the valleys between ridges. The land isn't good for farming or logging, and no valuable minerals have been found—which is why no one else bothers with it.
 
-**Physical Characteristics:**
-- Blueish-gray skin
-- Ability to breathe underwater
-- Long, needle-like teeth adapted for swimming and catching fish
+Cykravikus Lake is the largest, with multiple inlets extending into the hills. It connects southward to Symonair Lake (claimed by the dragon of the same name) and eventually to Phyndarr Sound.
 
-**Culture & Society:**
-- Subsist primarily through hunting and fishing
-- Rarely speak, preferring non-verbal communication
-- Ruled by a hag queen
+### The Griebi
 
-The Griebi's terrifying appearance - particularly their needle-like dentition - makes encounters with them unsettling for most surface dwellers, though they are primarily focused on survival rather than aggression.
+The Griebi are aquatic orcs—they can breathe underwater, which makes them excellent fishers and divers. They have blueish-gray skin and rows of needle-like teeth adapted for catching fish.
+
+**Settlements:** The Griebi build along the lakeshores, with structures extending partially into the shallows. They fish, gather lake plants, and keep largely to themselves.
+
+**Communication:** The Griebi rarely speak above water, preferring gestures and expressions. Underwater, they communicate through clicks and tones. Surface dwellers find them unnervingly quiet.
+
+**The Hag Queen:** An ancient figure who rules the Griebi from Cykravikus Lake. She's been there longer than anyone remembers. The Griebi serve her without question.
+
+### Why Nobody Bothers Them
+
+The Grieb Lakes offer nothing the other orc states want. No algae beds. No healing waters. No strategic passes. Just cold lakes in rocky hills.
+
+The Griebi themselves are unsettling to fight—needle teeth, ability to retreat into water, patience to wait out any siege—but the main reason for peace is simpler: there's nothing here worth fighting over.
