@@ -66,7 +66,7 @@ Tags: state, empire
 
 **Allied City-States**: Üod, Blvnird, Melaia (First Brotherhood dwarves)
 
-**Other Holdings**: Murth, Yogenfeld, various smaller territories
+**Other Holdings**: Murth, Vogenfeld (northern shield), various smaller territories
 
 ### The Evertorch
 
@@ -92,7 +92,8 @@ Ritual magic of time and fire occurs at the Evertorch shrine. The empire's most 
 
 **Other Territories**
 - **Murth**: Dual-capital state (Eynmore and Vastilin)
-- **Yogenfeld**, **Chykum**, and various smaller holdings
+- **Vogenfeld**: Uline dwarf settlements holding the northern passes against Hedroscobb's orc hordes. The Vogenfeld Pact is ancient but increasingly strained.
+- **Chykum** and various smaller holdings
 
 ### Klor the Blood Lord
 
