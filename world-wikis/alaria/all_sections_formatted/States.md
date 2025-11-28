@@ -85,11 +85,9 @@ Tags: state
 
 **Core Values**: Honor, intelligence, dignity
 
-- The Adrak nobility are famously powerful, well mannered, knowledgeable, and agreeable.
-
-- Descendants of the first dragon, Naga have upheld their ancestors values for eons. "A Naga without honor is no Naga at all
- is a famous saying among Naga elders. 
-
+- The Adrak nobility are famously powerful, well mannered, knowledgeable, and agreeable. They can also be condescending toward non-Naga outsiders, though rarely to the point of rudeness.
+- Descendants of the first dragon, Naga have upheld their ancestors' values for eons. "A Naga without honor is no Naga at all" is a famous saying among Naga elders.
+- Three major ley lines cross Adron—water, time, and dark—creating numerous intersections that produce an unusually high number of elementally attuned citizens.
 
 ### Economy
 
@@ -97,13 +95,13 @@ Tags: state
 
 **Tech**: Very Developed
 
-**Primary Exports**: Cultural artifacts, financial services, food, iron, luxury goods, magic
+**Primary Exports**: Cultural artifacts, financial services, food, ships, iron, luxury goods, magic
 
-**Primary Imports**: animal products, luxury goods
+**Primary Imports**: Animal products, luxury goods
 
 - The Adrak economy relies heavily on the Royal Adrak Bank, famous for funding both sides of foreign wars and coming out on top regardless of the victor.
-- A steady stream of red gold mined out of the Gozwin and Majesty Mountains has provided insane wealth to the nobility of Adrak, and is the source of the famous Adrak jewelry.
-
+- A steady stream of red gold mined out of the Gozwin and Majesty Mountains has provided insane wealth to the nobility of Adrak, and is the source of the famous Adrak jewelry. Red gold is the most valuable currency in Alaria.
+- The shipyards of Shipmarsh are among the finest in the Middle Sea, producing both merchant vessels and warships.
 
 ### Military
 
@@ -114,46 +112,40 @@ Tags: state
 **Enrollment**: Mandatory
 
 - Most Adrak citizens are enthusiastic to join the military, due to its prestige and honor. All Naga citizens are drafted at 19, where they serve until they are 23.
-
 - The nobility generally are trained from a younger age to become leaders of the Adrak army, and it is customary for the king or queen of Adron to lead the charge into major battles.
-
 
 ### Geography
 
-**Location**: 
+**Location**: Easternmost state on the Middle Sea, where the Kharvorn Mountains terminate
 
-**Biomes**: 
+**Biomes**: Mediterranean coastline, temperate forests, mountain ranges, salt marshes, river valleys
 
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Climate**: Mediterranean—warm, dry summers and mild winters
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Adrak
 
-**Cities**: 
+**Cities**: Shipmarsh, Greyport
 
-**Towns**: 
-
-**Villages**: 
-
+**Towns**: Numerous small towns scattered throughout, particularly along the Tenori River and around the western lakes
 
 ### Primary Conflicts
 
 - The Dwarf King continues to steal from travelers through the Majesty Mountains. He is descendant of the dwarves who used to live there, believes the resources of the mountains belong to him.
 - The Royal Adrak Bank is rumored to be funding all three sides of the War of Three Kingdoms.
 - A large influx of Danaki refugees from the Danak-Atyeska war is angering citizens of the northern settlements.
-
+- The dragon Chavux raids ships near The Blades, but killing a dragon is sacrilege—merchants in Greyport would pay handsomely to have the problem "solved" quietly.
 
 ### History
 
-Adron used to raise dragons, and the royal family still holds onto a few dragon eggs. Now, however, the art has died out, and the dragon riders are only a thing of the past.
+Adron was once the land of dragon riders. For centuries, Naga warriors bonded with dragons through sacred rituals at the Maw of Chao, blessed by Damasaki Edara herself. The Adrak dragon cavalry dominated the Middle Sea.
 
-Adron used to raise dragons, and the royal family still holds onto a few dragon eggs. Now, however, the art has died out, and the dragon riders are only a thing of the past.
+Roughly four centuries ago, the Waterdark conspiracy ended this golden age. The secret order—masters of water and darkness magic who had long resented draconic dominance—performed a coordinated ritual that severed every dragon-bond in Adron simultaneously. The dragons, suddenly feeling nothing for their riders, simply flew away. Many riders died from the psychic shock. Those who survived found they could no longer pass through Oblivion to reach the Maw of Chao.
+
+The royal family preserved their dragon eggs and bred smaller, domesticated dragons—beautiful but nothing like the war-beasts of old. The art of true binding was lost. Modern Naga feel deep pride in their draconic heritage alongside quiet shame that they are no longer dragon riders. Some believe the old bond could be restored; others think attempting it would be an abomination.
+
+Before the Naga, Tritons inhabited this land. Their exodus left drowned ruins beneath the western lakes—remnants of a civilization that departed for the Alrock Ocean eons ago.
 
 ## Aldriktch Trade Alliance
 
@@ -181,17 +173,17 @@ Tags: state
 
 **Government Type**: Dictatorship
 
-**Primary Inhabitants**: Anori, Oznak, Tikhaya
+**Primary Inhabitants**: Anori, Oznak, Tikhaya (Humans)
 
 **Population**: 300,000
 
-**Stability**: Very Stable
+**Stability**: Very Stable (through oppression)
 
 **Core Values**: Patriotism, might, revenge
 
-- Anarak is ruled over by a manipulative black dragon named Tepheranos, brother of Rothogomos.
-- People are proud citizens, and few choose to leave, despite poor living conditions.
-
+- Anarak is ruled by the black dragon Tepheranos, brother of Rothogomos. He is manipulative, greedy, and patient.
+- The population has been brainwashed over a century to see Tepheranos as a savior rather than a tyrant. People are proud citizens; few choose to leave despite poor living conditions.
+- The culture emphasizes martial prowess, loyalty to the state, and hatred of Argysis.
 
 ### Economy
 
@@ -203,9 +195,9 @@ Tags: state
 
 **Primary Imports**: None
 
-- The Anarak economy is largely self-contained, as per orders of Tepheranos, who restricts travel in and out of the country.
-- Many people live in relative poverty, as their income is heavily taxed by Tepheranos, and goes towards the military.
-
+- The Anarak economy is largely self-contained. Tepheranos restricts travel in and out of the country.
+- Heavy taxation funds the military while most people live in poverty.
+- The basin produces enough food to sustain the population, barely.
 
 ### Military
 
@@ -215,44 +207,51 @@ Tags: state
 
 **Enrollment**: Mandatory
 
-- The Anarak military is brutally strict, powerful, and filled with some of the cruelest, most ferocious soldiers that can be found anywhere.
-
+- The Anarak military is brutally strict, powerful, and filled with some of the cruelest, most ferocious soldiers anywhere.
+- Everyone serves. The military is the path to status and escape from poverty.
+- The army is ready for war—Tepheranos just needs a target he can hit without Rothogomos striking while he's exposed.
 
 ### Geography
 
-**Location**: 
+**Location**: Great basin between the Crags of Geth (south) and the Kharvorn Mountains/Argysis (north)
 
-**Biomes**: 
+**Biomes**: Basin grasslands, farmland, the Black Hills
 
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Climate**: Continental—harsh winters, hot summers
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Tephrakus (at the base of the Black Hills, near Tepheranos's lair)
 
-**Cities**: 
+**Cities**: Tephrakus, Nidzhoni (center of the basin)
 
-**Towns**: 
-
-**Villages**: 
-
+**Towns**: Scattered agricultural settlements across the basin
 
 ### Primary Conflicts
 
-- Anarak is gearing up for a land war against Drasnia.
-- Tepheranos longs for the wealth of Argysis or even Hephake, but so long as his brother Rothogomos resides in the Argysisean mountain, he cannot leave Anarak for fear of retaliation.
-- Underground dissent for Tepheranos is a constantly spreading, despite the dragon’s best efforts.
-- The Griselian goblins are terrorizing villagers in the South.
+**The Argysis Standoff**
 
+Tepheranos and his brother Rothogomos are locked in a generations-long feud. Long ago, they came together to conquer Argysis and steal the dwarven treasure. Rothogomos betrayed Tepheranos, taking everything for himself. Tepheranos retreated to Anarak, built it into a regional power, and has plotted revenge ever since.
+
+Neither dragon can commit forces elsewhere while the other lives. Argysis is weaker but fortified in the mountains; Anarak is stronger but has hundreds of miles of burnable farmland. The standoff continues.
+
+**Expansionist Hunger**
+
+Tepheranos is greedy. He wants more wealth, more territory, more everything. Anarak will invade whoever they can reach—Erasnus, Hephake, anyone who looks weak. But the Argysis situation ties their hands.
+
+**The Goblin Raids**
+
+Griselian goblins from the Crags of Geth terrorize southern villages. Whether genuine aggression or theatrical spillover is unclear. Either way, villagers suffer and the military can't fully respond while watching the northern border.
+
+**Underground Dissent**
+
+Not everyone believes the propaganda. Resistance cells exist, fragmented and frightened. Tepheranos's agents hunt them constantly, but dissent spreads anyway.
 
 ### History
 
-Anarak used to be a free nation until Tephranos arrived, secretly killed the king, and subjugated the people. Over the last 100 years, he has brainwashed the population from believing he is evil to thinkign he is a saviour.
+Anarak used to be a free nation—unremarkable but peaceful. A century ago, Tepheranos arrived, secretly killed the king, and subjugated the people. Over the following decades, he brainwashed the population, transforming their understanding of history until they believed he was their savior, not their conqueror.
+
+Now Anarak is a military state waiting for war. The only question is who Tepheranos can attack without leaving himself vulnerable to his brother's revenge.
 
 ## Argysis
 
@@ -733,17 +732,17 @@ Tags: state
 
 **Government Type**: Democratic republic
 
-**Primary Inhabitants**: Goshwen, Ghouls
+**Primary Inhabitants**: Goshwen (Hill Gnomes)
 
 **Population**: 30,000
 
-**Stability**: Very stable
+**Stability**: Stable (deteriorating)
 
 **Core Values**: Freedom, invention, independence, gratitude
 
-- Bestacia boasts one of the happiest populations on Alaria. There is plentiful food, rewarding lifestyles, and gratitude abound.
-- Notable for producing great scholars in art, philosophy, history, medicine, literature, and law. Fantastic educational instutitions—education is widely valued.
-
+- Bestacia boasts one of the happiest populations on Alaria. Plentiful food, rewarding lifestyles, and a culture of gratitude and contentment.
+- Notable for producing great scholars in art, philosophy, history, medicine, literature, and law. Education is widely valued; institutions here are among the finest.
+- Goshwen are clever, inventive, good-natured. They've never built empires or started wars—they'd rather tinker and abstain from violence.
 
 ### Economy
 
@@ -751,12 +750,12 @@ Tags: state
 
 **Tech**: Developed
 
-**Primary Exports**: Research, inventions
+**Primary Exports**: Research, inventions, trained scholars, legal expertise
 
 **Primary Imports**: A little bit of nearly everything
 
-- 
-
+- Member of the Aldriktch Trade Alliance. Bestacian diplomats helped secure Myorna's membership, hoping it would deter war.
+- The economy runs on intellectual output rather than raw materials or manufacturing.
 
 ### Military
 
@@ -766,42 +765,66 @@ Tags: state
 
 **Enrollment**: Voluntary
 
-- The Bestacia military is a pitiful group—most want goshwen want nothing to do with war and fighting, and would instead prefer to stay home and work on some new invention.
-
+- The Bestacian military is pitiful. Most Goshwen want nothing to do with war and would rather stay home working on inventions.
+- What Bestacia lacks in military strength, it makes up for in intrigue. They have sharper minds than their neighbors and play the diplomatic game well—spies, information brokers, legal manipulation, and quiet influence.
 
 ### Geography
 
-**Location**: 
+**Location**: Middle Sea coast, between Ubrik (east) and Watar (west), with mountains along the southern border
 
-**Biomes**: 
+**Biomes**: Temperate forests, rolling hills, mountain ranges to the south
 
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Climate**: Mild and pleasant—good growing weather
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Petra
 
-**Cities**: 
+**Cities**: Petra, Kisoy
 
-**Towns**: 
-- Pastrova: Home to one of the best law schools in Alaria.
+**Towns**: Pastrova (home to one of the best law schools in Alaria), various small settlements
 
-**Villages**: 
+### The Ghoul Problem
 
+Bestacia's forests are infested with ghouls. These soulless undead—created by ancient wizards, driven by eternal hunger for flesh and magic—lurk in the woodlands and prey on travelers.
+
+The gnomes barely tolerate this. They can't deal with it effectively—their military is too weak, and ghouls are difficult to kill without elemental mages. Ghoul hunters pass through occasionally, but the problem persists. Most Bestacians simply avoid the deep forests and hope the ghouls stay there.
+
+This is not coexistence. Ghouls are monsters. But the gnomes lack the martial strength to exterminate them.
+
+### The Southern Mountains
+
+The mountain range along Bestacia's southern border separates the country from the Telphineas Strait. Kisoy sits just north of these mountains.
+
+The mountains are home to all sorts of interesting creatures—the Goshwen have a fondness for exotic fauna, and the peaks have become something of a menagerie. Some creatures were brought here deliberately; others simply found the mountains hospitable and stayed.
 
 ### Primary Conflicts
 
-- Although Bestacia produces many great minds, competition for acclaim has led to intellectual sabotage, with Goshwen stealing research and developments from each other.
+**The Telphineas Strait**
 
+South of the mountains lies the Telphineas Strait—a crucial trade chokepoint. Whoever controls it can impose tariffs on shipping and effectively win the economic game. Bestacia wants control but has limited access; the mountains block easy passage, and their military can't project force.
+
+Watar also wants the strait. Tensions are escalating. Bestacia is playing the intrigue game—diplomatic pressure, trade agreements, legal maneuvering—while Watar has actual ships.
+
+**The Ubrik Crisis**
+
+Silvertongue incursions from Ubrik are hitting Bestacia's eastern border. Refugees are flooding in. The gnomes are sympathetic but overwhelmed—their tiny military can't stop the silvertongues, and their communities can't absorb unlimited refugees.
+
+**Intellectual Sabotage**
+
+Even in good times, competition for academic acclaim leads to theft and sabotage. Scholars steal research, claim credit for others' work, and undermine rivals. It's ugly, but contained.
+
+**Alliance Strain**
+
+The Aldriktch Trade Alliance is fracturing. Bestacia helped build it, but Camaran is isolating, Ubrik is collapsing, and the Watar tensions are worsening. Erasnus is desperately trying to hold things together.
 
 ### History
 
-!Bestacian forest
+Bestacia was founded by Goshwen who wanted a peaceful place to think, invent, and live well. They succeeded—for centuries, it's been a quiet, prosperous republic where clever gnomes could pursue their interests without interference.
+
+They never built a military because they never needed one. Neighbors fought each other; Bestacia stayed out of it. The forests acquired a ghoul problem at some point, but the gnomes learned to avoid the deep woods.
+
+Now the peace is ending. Ubrik is vomiting refugees and monsters across the eastern border. Watar is pushing for control of the strait. The alliance is crumbling. Bestacia's greatest asset—its minds—may not be enough to navigate what's coming.
 
 ## Breia
 
@@ -840,10 +863,19 @@ Tags: state
 
 **Core Values**: Purity, law, order
 
-- All varieties of Deoric magic is banned in Camaran. It is seen as corrupting. If seen with hand magic, your hand is cut off. Elemental magic is perimtted.
-- The High Camarik Council makes all laws and determines policy in Camaran
-- If you wish to travel while with handmagic, you can write a formal letter to Rathscar (or if you arrive by ship, you can voluntarily quarantine until approved), requesting approval. You are registered and granted a license for your particular variety of magic.
-- Without a license, depending on the type of magic, you can be sentenced to quite enormous fines (or jail time, if you refuse).
+- The High Camarik Council makes all laws and determines policy. Council seats are technically elected, but in practice controlled by wealthy manufacturing families.
+- Camarans are industrious, educated, and deeply suspicious of anything they cannot control—particularly magic that comes from within rather than from the elements.
+- Protestant work-ethic culture: idleness is shameful, debt is sin, and success is proof of moral worth. The flip side is a rigid class system where poverty implies moral failing.
+
+### Magic Laws
+
+All varieties of Deoric magic are banned in Camaran. It is seen as corrupting—magic that comes from within the self rather than channeled from external elements is considered spiritually polluting.
+
+- **Hand magic**: If caught practicing, your hand is cut off. Repeat offenders lose the other hand.
+- **Elemental magic**: Permitted with a license. Must register at Rathscar or voluntarily quarantine upon arrival by ship until approved.
+- **Unlicensed magic**: Enormous fines, or jail time if you cannot pay.
+
+The licensing system is bureaucratic nightmare—forms in triplicate, inspections, annual renewals, restrictions on where and when you can practice. Many mages simply avoid Camaran entirely.
 
 ### Economy
 
@@ -851,14 +883,14 @@ Tags: state
 
 **Tech**: Very developed
 
-**Primary Exports**: Manufactured goods
+**Primary Exports**: Manufactured goods, textiles, precision instruments, clockwork
 
-**Primary Imports**: Raw materials
+**Primary Imports**: Raw materials, ore, timber, food
 
-- Members of the Aldriktch Trade Alliance
-- Camaran has a highly educated and industrious population, and are the source of many non-magical manufactured goods used all over the world.
-- Some of the best schools are located in Camaran, and although strict, they are rigorous. 
-
+- Member of the Aldriktch Trade Alliance, though becoming increasingly isolationist—threatening the alliance's stability.
+- Camaran has a highly educated and industrious population. They produce non-magical manufactured goods used across Alaria: tools, furniture, textiles, clockwork mechanisms, weapons.
+- Some of the best schools in the world are located here—strict and rigorous, producing skilled craftsmen, engineers, and bureaucrats.
+- Vetoed Echea's membership in the Trade Alliance (reasons unclear, likely political).
 
 ### Military
 
@@ -868,40 +900,52 @@ Tags: state
 
 **Enrollment**: Mandatory
 
-- The Camarik military is not particularly powerful, but their population is substantial, and they are capable of raising a large army quickly, should they need so.
-
+- The Camarik military is not particularly powerful, but their population is substantial and they can raise a large army quickly if needed.
+- Military service is seen as civic duty—another form of productive labor for the state.
 
 ### Geography
 
-**Location**: 
+**Location**: Northwest of Adron, south of the Kharvorn Mountains, west of the Breidlheiss Basin
 
-**Biomes**: 
+**Biomes**: Temperate farmland, rolling hills, river valleys, mountain foothills
 
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Climate**: Temperate continental—cold winters, warm summers, reliable rainfall
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Rathscar
 
-**Cities**: 
+**Cities**: Rathscar, several manufacturing towns along the rivers
 
-**Towns**: 
-
-**Villages**: 
-
+**Towns**: Scattered agricultural and mining settlements
 
 ### Primary Conflicts
 
-- There are council members who want to see the reintroduction of magic into society.
-- Greed and power ambition are rampant in Camaran, and lead to large disparities in power between the upper and lower classes.
+**The Giant Question**
 
+East of Camaran lies the Breidlheiss Basin, home to giants. The Camarik position is that giants are dangerous, unpredictable, and must be contained. In practice, this means Camaran runs mining operations in the basin's foothills—technically giant territory—extracting ore while insisting the giants have no legitimate claim to land they "aren't civilized enough to develop."
+
+When giants object (sometimes violently), Camaran retaliates with punitive military expeditions. The cycle continues: Camaran encroaches, giants push back, Camaran calls it "unprovoked aggression" and takes more territory as "security buffer."
+
+Some Camarans—particularly those who trade with the Ngül Mountain communities where Kimril and Güli giants coexist peacefully—understand the giants aren't inherently hostile. But acknowledging this would mean admitting Camaran's mining expansion is the problem, which would threaten powerful economic interests.
+
+**Internal Tensions**
+
+- Council members who want to relax or repeal the magic bans, arguing they put Camaran at a competitive disadvantage.
+- Massive wealth disparity between manufacturing families and workers. The rhetoric of "moral success" keeps the lower classes blaming themselves rather than the system.
+- Growing isolationism straining the Aldriktch Trade Alliance—some council members want to leave entirely.
 
 ### History
+
+**The Deoric Ban**
+
+Three centuries ago, Camaran was ruled by a Deoric sorcerer-king named Valdric the Beloved. He was genuinely popular—charismatic, generous, seemingly benevolent. For forty years, he guided Camaran to prosperity.
+
+Then the truth emerged: Valdric had been using psy-magic to manipulate the entire population. Every citizen's loyalty, every feeling of contentment, every memory of his "benevolent" rule—manufactured. When a foreign mage broke the enchantment, Camaran experienced collective psychological trauma on a national scale. People couldn't trust their own memories. Families discovered their relationships had been artificially constructed. The suicide rate spiked for a generation.
+
+The revolution that followed was brutal. Valdric was executed (slowly), and the new republic instituted absolute bans on Deoric magic—any magic that comes from within, that could touch the mind or soul. Elemental magic, which channels external forces, was deemed acceptable because it cannot directly manipulate a person's inner self.
+
+Three hundred years later, the trauma has faded into cultural assumption. Most Camarans don't know *why* Deoric magic is evil—they just know it is. The bureaucratic licensing system has become self-perpetuating, a jobs program for inspectors and a revenue stream from fines.
 
 ## Chaal Nazzerox
 
@@ -1310,79 +1354,6 @@ Links: States
 
 ### History
 
-## Dregas
-
-Tags: state
-
-Links: States
-
-### Government & Peoples
-
-**Government Type**:
-
-**Primary Inhabitants**: 
-
-**Population**: 
-
-**Stability**: [Anarchy, Very Unstable, Unstable, Somewhat Stable, Stable, Very Stable, Eternal] 
-
-**Core Values**: 
-
-- 
-
-
-### Economy
-
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
-
-**Tech**: [None, Very Undeveloped, Undeveloped, Somewhat Developed, Developed, Very Developed, Futuristic] 
-
-**Primary Exports**: 
-
-**Primary Imports**: 
-
-- 
-
-
-### Military
-
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
-
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
-
-**Enrollment**: [Voluntary, Mandatory]
-
-- 
-
-
-### Geography
-
-**Location**: 
-
-**Biomes**: 
-
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
-
-### Political Geography
-
-**Capital**: 
-**Cities**: 
-**Towns**: 
-**Villages**: 
-
-
-### Primary Conflicts
-
-- 
-
-
-### History
-
 ## Echea
 
 Tags: state
@@ -1433,15 +1404,13 @@ Tags: state
 
 ### Geography
 
-**Location**: 
+**Location**: Small mountainous peninsula at the tip of the Watar peninsula, jutting into the Middle Sea
 
-**Biomes**: 
+**Biomes**: Alpine mountains, rocky coastline
 
-**Named Entities**:
+**Climate**: Mediterranean at the coasts, alpine in the peaks
 
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
+**Named Entities**: Iri Mountains (the two peaks that make up most of the country) 
 
 
 ### Political Geography
@@ -1472,17 +1441,110 @@ Tags: state
 
 Home to the Korel. Savage, nomadic leopard people. No permanent settlements.
 
-## Elephant Groves
+## Eloesi
 
-Tags: forest
+Tags: state
 
-Enormous forest, inhabited by the spirit of an ancient elephant. Guards this grove, as it is the birthplace of the loxodon. Intruders are repelled. Also contains the pool of knowledge—state into the pool and your wisdom becomes 20. If your wisdom is already 20, your wosdom becomes 22. Sacred pool however.
+### Government & Peoples
+
+**Government Type**: Democratic republic
+
+**Primary Inhabitants**: Eloweir (Sea Elves)
+
+**Population**: 80,000
+
+**Stability**: Very Stable
+
+**Core Values**: Freedom, tradition, excellence, community
+
+- Eloesi is governed by elected councils—a system the Eloweir brought with them when they first settled these shores, long before human memory. The councils are notoriously deliberative, but their decisions carry weight.
+- The culture blends apparent contradictions: sailors who party through the night and fishermen who observe strict protocols about when, where, and how to harvest. Freedom within structure.
+- Outsiders often mistake Eloweir casualness for softness. The sea elves are skilled soldiers and masters of poison—their relaxed demeanor comes from confidence, not weakness.
+- The Eloweir have lived here longer than anyone can remember. They say their ancestors followed the tides from somewhere else, fleeing a calamity they don't name, and found this coast waiting. Whether that's history or myth, none can say.
+
+### Economy
+
+**Size**: Medium
+
+**Tech**: Developed
+
+**Primary Exports**: Pearls, fish, ships, poisons, dyes, salt
+
+**Primary Imports**: Timber, grain, metals, luxury goods
+
+- Oyster Bay's pearls are legendary—thousands harvested each season, each one valuable, the finest worth small fortunes. The Eloweir guard the bay jealously and have refined pearl cultivation to an art form.
+- Fishing and shipping form the economic backbone. Eloweir ships are built to last, designed for the unpredictable coastal waters, and command premium prices.
+- Poison-craft is a respected trade here, not a shameful secret. Eloweir alchemists produce venoms for hunting, warfare, and medicine with equal skill.
+- Trade flows through Kair to the goblin plains, the United Free Nations, and the wider Middle Sea. Eloesi serves as the gateway between Ofrenia and the southern interior.
+
+### Military
+
+**Size**: Medium
+
+**Quality**: High
+
+**Enrollment**: Voluntary
+
+- The Eloweir maintain a professional military of exceptional quality. Every soldier trains for years before active duty, and the standards are unforgiving.
+- Naval power is paramount. The Eloweir fleet patrols the coast, protects trade routes, and can project force across the region when needed.
+- Land forces are smaller but elite—skilled with spear, bow, and the traditional curved blades the Eloweir favor. Many carry poisoned weapons as a matter of course.
+- The military serves the councils, not individual commanders. Political ambition among officers is viewed with deep suspicion.
+
+### Geography
+
+**Location**: Northwestern coast, where Ofrenia connects to the southern interior via the plains
+
+**Biomes**: Rocky coastline, temperate forests, rolling hills, sheltered bays
+
+**Named Entities**: Seawatch Mountains, Oyster Bay, Elessi Bay, Urchin Bay
+
+**Rivers & Lakes**: Several rivers flowing from the Seawatch Mountains to the coast
+
+**Adjacent Waters**: The Middle Sea, Elessi Bay, Oyster Bay, Urchin Bay
+
+### Political Geography
+
+**Capital**: Kair
+
+**Cities**: Kair
+
+**Towns**: Issasmir, Brachly, Dematir, Oakdale, Trailsfor, Zessos, Golun, Holckots, Krakersport
+
+**Villages**: Numerous fishing villages along the coast
+
+### Primary Conflicts
+
+**The Goblin Chaos**
+
+The Shiverplains and Jinxz Plains to the east and south are home to Scalawag goblin broods locked in perpetual, chaotic conflict. The goblins occasionally raid Eloweir settlements, more for sport than strategy. The Eloweir respond with punitive expeditions that accomplish little—the goblins simply scatter and regroup. It's an annoyance rather than a threat, but a persistent one.
+
+**The Urchin Bay Question**
+
+Urchin Bay, south of Oyster Bay, is too dangerous to harvest safely. Giant urchins and worse lurk in its waters, and ships that enter rarely return intact. Rumors persist of treasure in the depths—wrecks accumulated over centuries. Every few years, someone organizes an expedition. Most fail.
+
+**Old Talaria's Shadow**
+
+The fallen empire to the southwest radiates strangeness. Wild magic seeps across the border, and creatures that shouldn't exist occasionally wander into Eloweir territory. The councils maintain a standing watch along the Glass Forest border, but containment is difficult when the threat is so unpredictable.
+
+**The Bygone Hills Mystery**
+
+Goblins who wander into the Bygone Hills east of Glidwyn Forest never return. The Eloweir know something lurks there but have never investigated seriously—the hills aren't their territory, and whatever kills goblins efficiently is doing them a favor. Still, some councillors worry about what might emerge if it ever decides to expand.
+
+### History
+
+The Eloweir came to these shores in an age before human record, following currents and tides from somewhere across the sea. They speak of a homeland lost to catastrophe—some say flood, others say war, still others say both—but the details have faded into myth. What remains is the journey: generations of sea elves sailing toward a coast they'd never seen, guided by currents they trusted to lead them right.
+
+They found a good land. Rocky coasts full of sheltered harbors. Forests for timber. Hills for grazing. And Oyster Bay, with its wealth waiting to be harvested. The Eloweir built Kair on a natural harbor, established their councils as they had in the old country, and began the slow work of making this place home.
+
+For most of recorded history, Eloesi has been stable, prosperous, and largely uninvolved in the wars that wrack other nations. The councils prefer trade to conquest, diplomacy to battle. When threats arise—goblin raids, pirates, the occasional ambitious neighbor—the Eloweir respond with precise, professional force, then return to their nets and ships.
+
+The fall of Old Talaria, centuries ago, changed the neighborhood permanently. Where once a powerful magical civilization bordered Eloesi to the southwest, now there's only the Glass Forest and the wild things within it. The Eloweir watched the cataclysm from a safe distance, grateful their ancestors had never trusted Talarian magic. Whatever the wizards attempted, it ended badly for everyone except the fae.
 
 ## Emblydium
 
 Tags: state
 
-Populated by Nydor
+Populated by Nydor. Located in the northwest tip of the Dragon's Spine Mountains, with the Devil Peaks to its south, the Bleeding Mountains to its north, and the Haunted Hills further north and west. Southwest of Shunda and Dhabisa in Dalizi.
 
 ## Enapay
 
@@ -1590,7 +1652,7 @@ Tags: state
 
 **Government Type**: Feudal, House of Nobles and House of Commerce
 
-**Primary Inhabitants**: Belenstrope
+**Primary Inhabitants**: Belenstrope (Halflings)
 
 **Population**: 100,000
 
@@ -1598,9 +1660,9 @@ Tags: state
 
 **Core Values**: Wealth, prestige, intelligence, vision, entrepreneurship
 
-- Erasnus is jointly ruled by two parliamentary houses—the House of Nobles, and the House of Commerce. These consist of the highest ranking members of society within the two most important areas of Erasnun society.
-- Nearly every village, town, and city is home to multiple nobility, as well as their extended family. Practically everyone has at least a cousin who's distantly related to some noble family or another.
-
+- Erasnus is jointly ruled by two parliamentary houses—the House of Nobles and the House of Commerce. These consist of the highest-ranking members of society within the two most important areas of Erasnun life.
+- Nearly every village, town, and city is home to multiple nobility, as well as their extended family. Practically everyone has at least a cousin who's distantly related to some noble family.
+- Belenstrope halflings have transformed commerce into high art. They trade in influence, information, and favors with complexity that makes seasoned diplomats dizzy. Every Belenstrope maintains a mental ledger of social debts tracked across generations.
 
 ### Economy
 
@@ -1608,14 +1670,14 @@ Tags: state
 
 **Tech**: Developed
 
-**Primary Exports**: Textiles
+**Primary Exports**: Textiles, trade services, financial instruments
 
 **Primary Imports**: Everything
 
-- They are members of the Aldriktch Trade Alliance. 
-- Erasnus is home to the best over-land merchants in Alaria. Their ability to haggle is unparalleled, and their eye for a good deal is uncanny.
-- Lending, business, entreprenuership, and traveling merchant are all extremely common professions in Erasnus.
-
+- Members of the Aldriktch Trade Alliance—and its most profitable member. Erasnus is desperately trying to hold the alliance together as it fractures.
+- Home to the best overland merchants in Alaria. Their ability to haggle is unparalleled, their eye for a good deal uncanny.
+- Lending, business, entrepreneurship, and traveling merchant are all extremely common professions.
+- Super close trading partners with Watar, and strong relationships with all Aldriktch members.
 
 ### Military
 
@@ -1625,43 +1687,55 @@ Tags: state
 
 **Enrollment**: Mandatory
 
-- Military enrollment is mandatory, but there are a thousand ways to wiggle your way out of it, which means that it consists primarily of the poor and less influential.
-- Working in the military is seen as a job for idiots who can't turn a profit on their own. 
-- As tensions heat up between Anarak and Myorna, Erasnus is scrambling to not get swallowed up if war should break out.
-- The population is largely non-violent. If threatened with a sharp stick, most Erasnuns would throw up their hands and give over all of their money. Most see it as much easier to trade to make money rather than risk getting hurt stealing.
-
+- Military enrollment is mandatory, but there are a thousand ways to wiggle out of it—meaning it consists primarily of the poor and less influential.
+- Working in the military is seen as a job for idiots who can't turn a profit on their own.
+- The population is largely non-violent. If threatened with a sharp stick, most Erasnuns would throw up their hands and hand over their money. Much easier to make money trading than risk getting hurt.
 
 ### Geography
 
-**Location**: 
+**Location**: Central Middle Sea region, bordered by Camaran (east), Ubrik (southeast), Myorna (northeast), Hephake mountains (north), Anarak (west, barely), and the Crags of Geth (west)
 
-**Biomes**: 
+**Biomes**: Rolling farmland, river valleys, temperate forests, trade roads everywhere
 
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Climate**: Temperate—good growing weather, mild seasons
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Erdene
 
-**Cities**: 
+**Cities**: Erdene, Minoz, Adnar, Traduci, Simonsor
 
-**Towns**: 
-
-**Villages**: 
-
+**Towns**: Countless market towns and trading posts along the major routes
 
 ### Primary Conflicts
 
-- Myorna and Anarak are both potential sources of war, and Erasnus' military is terribly ill-equiped to handle a war, should it break out. They are currently desparately trying to negotiate peace treaties, and although things look good on paper, there is a lot of uncertainty.
-- The military is largely disrespected, but those at the head of it do control a considerable amount of power, which they could wield to wrestle some control from the nobility and merchants, who have scorned them forever.
+**The Alliance Collapse**
 
+The Aldriktch Trade Alliance is fracturing. Camaran is isolating, Ubrik is collapsing under the silvertongue outbreak, Watar and Bestacia are fighting over the strait. Erasnus profits most from the alliance and is desperately trying to hold it together through diplomacy, trade incentives, and sheer nervous energy.
+
+**The Myorna Problem**
+
+Myorna, to the northeast, is a backstabbing mess of elven politics. They were barely let into the Trade Alliance—pushed through by Bestacian diplomats hoping it would deter war. Now Myorna's internal chaos is spilling outward, and Erasnus is caught dealing with unreliable partners and shifting alliances.
+
+**The Novglim Displacement**
+
+In the Novglim Forest (northeast, just south of Myorna), native gnome tribes have been displaced by expanding settlements and logging operations. The situation is uncomfortable—Erasnus benefits from the resources but knows the displacement is wrong. Mostly they try not to think about it.
+
+**The Goblin Posturing**
+
+West of Erasnus, across the Crags of Geth, lies Griselia—a collection of goblin city-states. The goblins are perpetually posturing, threatening invasion, and making dramatic proclamations. They will absolutely never actually invade. Everyone knows this. Trade continues regardless, punctuated by theatrical diplomatic incidents that both sides secretly enjoy.
+
+**Military Resentment**
+
+The military is disrespected, underfunded, and staffed by those who couldn't escape service. But military leadership does control real power, and some officers are tired of being scorned by nobles and merchants who've never held a sword. If things get bad enough, a military coup isn't impossible.
 
 ### History
+
+Erasnus grew wealthy by being in the middle of everything. While other nations fought wars, the Belenstrope traded with all sides. While empires rose and fell, Erasnun merchants maintained their routes.
+
+The Aldriktch Trade Alliance was largely Erasnun diplomacy—convincing rival states that open trade benefited everyone (especially Erasnus). For decades, it worked beautifully. The alliance made everyone richer and wars less likely.
+
+Now the alliance is crumbling. Erasnus has no army worth mentioning, no walls that could stop a real invasion, and no plan for a world where trade doesn't solve every problem. The merchants are getting nervous.
 
 ## Eros
 
@@ -1835,74 +1909,94 @@ Links: States
 
 Tags: state
 
-Links: States
-
 ### Government & Peoples
 
-**Government Type**:
+**Government Type**: Clan-based confederation
 
-**Primary Inhabitants**: 
+**Primary Inhabitants**: Glorindian (Gold Eyes Dwarves)
 
-**Population**: 
+**Population**: 15,000
 
-**Stability**: [Anarchy, Very Unstable, Unstable, Somewhat Stable, Stable, Very Stable, Eternal] 
+**Stability**: Stable
 
-**Core Values**: 
+**Core Values**: Secrecy, worthiness, clan loyalty, the earth's gifts
 
-- 
-
+- Glorin is governed by a loose confederation of mining clans, each controlling different sections of the vast underground workings. Clan elders meet to resolve disputes and coordinate when necessary, but mostly each clan manages its own affairs.
+- The Glorindians are secretive by nature and by necessity. Their golden eyes can sense precious metals through solid stone—a gift that has made them targets of exploitation throughout history. They've learned to keep quiet about their wealth.
+- They believe gold calls to those worthy of finding it, and that hoarding beyond one's needs brings misfortune. Wealth flows through the community rather than pooling in individual hands.
 
 ### Economy
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
+**Size**: Large (secretly massive)
 
-**Tech**: [None, Very Undeveloped, Undeveloped, Somewhat Developed, Developed, Very Developed, Futuristic] 
+**Tech**: Developed
 
-**Primary Exports**: 
+**Primary Exports**: Gold, precious metals (in controlled quantities)
 
-**Primary Imports**: 
+**Primary Imports**: Food, textiles, surface goods
 
-- 
-
+- Glorin sits atop one of the richest gold deposits in Alaria. The Glorindians have mined it for generations, carving vast underground chasms in pursuit of precious veins.
+- The true scale of their wealth is unknown to outsiders. The Glorindians deliberately limit their visible exports to avoid attracting attention. What the world sees is a modest mining operation; what exists below is staggering.
+- Trade with Kazül is steady but unremarkable. The Glorindians prefer it that way.
 
 ### Military
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
+**Size**: Small
 
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
+**Quality**: Medium
 
-**Enrollment**: [Voluntary, Mandatory]
+**Enrollment**: Voluntary (clan obligation)
 
-- 
-
+- Each clan maintains its own warriors, primarily for defending the mines. The Glorindians have no interest in conquest—they just want to be left alone.
+- The mountains and tunnels are their best defense. Invaders who don't know the passages get lost, trapped, or worse.
 
 ### Geography
 
-**Location**: 
+**Location**: Between Thespia (north) and Kazül (south), centered on the Whistle-Stone Mountains
 
-**Biomes**: 
+**Biomes**: Mountain peaks, deep valleys, vast underground complexes
 
-**Named Entities**:
+**Climate**: Temperate mountain—cool summers, cold winters
 
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Named Features**: Whistle-Stone Mountains (named for the eerie sound of wind through the peaks)
 
 ### Political Geography
 
-**Capital**: 
-**Cities**: 
-**Towns**: 
-**Villages**: 
+**Capital**: Gamgara (surface settlement above the main mine complex)
 
+**Cities**: Gamgara
+
+**Towns**: Matabono, Zubaydah, Taufig
+
+### The Underground
+
+The surface settlements are just the tip. Below lies a network of mine shafts, tunnels, and vast underground chasms where the Glorindians have extracted gold for centuries. Some chambers are so large they have their own weather. The deepest workings are clan secrets, known only to those who labor there.
+
+The wealth down there is almost incomprehensible. The Glorindians have mined tons upon tons of gold—and they're still finding more. Their auric sight means they never dig blind; they always know where the veins run.
+
+### The Whistle-Stone Mountains
+
+The mountain range that defines Glorin. The peaks are riddled with natural caverns and tunnels that create an eerie whistling sound when wind passes through. Outsiders find it unsettling; the Glorindians consider it the voice of the mountains.
 
 ### Primary Conflicts
 
-- 
+**Staying Hidden**
 
+The Glorindians' greatest challenge is remaining unremarkable. If the outside world understood how much gold lies beneath these mountains, every kingdom within marching distance would find a reason to invade. So they export modest amounts, live modestly on the surface, and keep the vast underground wealth secret.
+
+**Morgnor's Interest**
+
+The dragon Morgnor, King of the Mountains to the northwest, knows about Glorin. He knows about the gold. He hasn't moved yet—perhaps he's patient, perhaps he's waiting for the right moment, perhaps he's dealing with other matters first. But the Glorindians are aware that a dragon's eye has turned their way.
+
+When Morgnor decides to act, Glorin's secrecy won't save them. Their small military won't stop a dragon. They're quietly trying to figure out what to do about this—but options are limited when you can't ask for help without revealing what you're protecting.
 
 ### History
+
+The Glorindians found these mountains generations ago, drawn by the call of gold that only they could hear. They dug deep, found riches beyond imagining, and learned to keep quiet about it. History taught them that their gift made them valuable—and being valuable to the powerful is dangerous.
+
+So they built modest surface towns, traded modest amounts of gold, and let the world forget about them. It worked. Glorin became a footnote, a small mining state between more interesting neighbors.
+
+Now Morgnor threatens that peace. The dragon has noticed what the world has not. The Glorindians face a choice they've spent centuries avoiding: reveal their wealth to seek allies, or face the dragon alone.
 
 ## Gondurak
 
@@ -2090,6 +2184,97 @@ Links: States
 
 ### History
 
+## Griselia
+
+Tags: state
+
+### Government & Peoples
+
+**Government Type**: Confederation of city-states (loose)
+
+**Primary Inhabitants**: Scalawag Goblins
+
+**Population**: 80,000 (across all city-states)
+
+**Stability**: Chaotic but functional
+
+**Core Values**: Brood loyalty, performance, rivalry, dramatic flair
+
+- Griselia is not a unified nation but a collection of eight independent city-states, each ruled by a brood-father lineage. They compete constantly but present a united (theatrical) front to outsiders.
+- Scalawag goblins dominate—mischievous, impulsive, passionate. Known for performers, philosophers, and devoting horrifying amounts of time to absurd projects.
+- Some non-Scalawag goblins and a very slim number of non-goblins have migrated here over the years.
+- Goblin politics are loud, dramatic, and bewildering to outsiders. Alliances shift constantly between city-states. Feuds can last generations or be forgotten by next week.
+
+### Economy
+
+**Size**: Medium
+
+**Tech**: Somewhat developed
+
+**Primary Exports**: Crafts, performers, mercenaries, mountain goods, chaos
+
+**Primary Imports**: Food, luxuries, anything shiny
+
+- Trade with Erasnus is brisk despite (or because of) the constant theatrical threats of invasion.
+- Each city-state has its own economic specialties and jealously guards them.
+- Goblin craftsmanship is inconsistent—brilliant one day, incomprehensible the next.
+
+### Military
+
+**Size**: Large (on paper)
+
+**Quality**: Variable
+
+**Enrollment**: Brood obligation
+
+- Every goblin is expected to defend the brood. This means Griselia can theoretically field enormous armies.
+- In practice, coordinating eight city-states is like herding cats. Joint military exercises tend to devolve into arguments, competitions, or impromptu festivals.
+- Individual city-states can be surprisingly effective when motivated. The problem is motivation.
+
+### Geography
+
+**Location**: The Crags of Geth, a shallow bowl-shaped mountain range west of Erasnus, east of Ta Minn, north of the Browthiel Hills
+
+**Biomes**: Mountain valleys, rocky peaks, scattered forests in the bowl
+
+**Climate**: Temperate, sheltered by the bowl shape
+
+### Political Geography
+
+**Capital**: None (each city-state is independent)
+
+**City-States (east to west along southern rim)**: Pholiki, Dygon, Aster (closest to Erasnus)
+
+**City-States (elsewhere in the bowl)**: Shinishini, Codunp, Gor, Grisel, Bu
+
+### Primary Conflicts
+
+**Inter-City Rivalry**
+
+The eight city-states compete over everything—trade routes, prestige, whose brood-father is most impressive, whose philosophers are most profound, whose parties are most legendary. This rarely escalates to actual violence (goblins don't like killing half-siblings), but the drama is constant.
+
+**The Erasnus Theater**
+
+Griselia's relationship with Erasnus is a perpetual comic opera. Goblin delegations arrive in Traduci making grandiose threats of invasion. Erasnun diplomats nod politely. Everyone trades. The goblins go home claiming diplomatic victory. Repeat endlessly.
+
+Both sides know the invasion will never happen. But the theater serves domestic purposes for the goblins (brood-fathers look strong) and the Erasnuns (the military looks necessary). It's a mutually beneficial farce.
+
+**Something Underneath**
+
+Most of the posturing is theatrical. But some city-states—particularly those further from Erasnus, away from the profitable trade—may harbor genuine ambitions. The bowl of the Crags of Geth hides things. Not every brood-father is content with performance.
+
+**Anarak to the North**
+
+The great basin of Anarak lies between the Crags of Geth and Argysis in the Kharvorn Mountains. Relations with Anarak are... complicated. The goblins don't threaten Anarak the way they threaten Erasnus. There may be reasons for that.
+
+### History
+
+The Scalawag goblins have inhabited the Crags of Geth for as long as anyone remembers. The bowl-shaped range provided natural shelter, and the eight major valleys became eight city-states, each dominated by a single brood lineage.
+
+They've never unified. They've never needed to. The mountains protect them, trade sustains them, and the endless inter-city drama keeps everyone entertained. Outsiders have tried to conquer Griselia; the mountains and the chaos defeated them all.
+
+The theatrical threats toward Erasnus started centuries ago—possibly as genuine ambition, possibly as a joke that stuck. Now it's tradition. No one remembers why it began, and no one wants to be the brood-father who stops.
+
 ## Grustos
 
 Tags: state
@@ -2255,21 +2440,6 @@ Used to be close with Argysis. See Sennos.
 Tags: state
 
 Evlen state, follows the old ways. Peaceful, powerful, descendent of some of the first elves in the world.
-
-## Ilyovia
-
-Tags: faction
-
-Iylovia : Gyv - Silver haired, mentally manipulative humanoids. Aristocracy, where strongest mind controllers are at the top. Cutthroat society.
-
-Gyrdyr Forest contains all varieties of magical beasts, which are farmed and hunted by the aristocracy for a sizeable profit
-
-mildly rich nation, no army, deal with silwyn attacks in the south.
-
-### Scorpion Bats
-
-
-Deadly bats with stingers. They are farmed by the Ilyovian aristocracy. They are deadly, but prised for their magical value and their incredibly soft fur.
 
 ## Ios
 
@@ -2526,74 +2696,104 @@ Tags: state, citystate, city
 
 Tags: state
 
-Links: States
-
 ### Government & Peoples
 
-**Government Type**:
+**Government Type**: Monarchy
 
-**Primary Inhabitants**: 
+**Primary Inhabitants**: Humans, mixed
 
-**Population**: 
+**Population**: 250,000
 
-**Stability**: [Anarchy, Very Unstable, Unstable, Somewhat Stable, Stable, Very Stable, Eternal] 
+**Stability**: Unstable
 
-**Core Values**: 
+**Core Values**: Tradition, community, resilience
 
-- 
-
+- Ruled by Prince Edric, the youngest of the three siblings who inherited Ofrenia. He's kind, well-meaning, and completely out of his depth.
+- Edric inherited the southern kingdom—rich in minerals and farmland, but lacking Tornia's trade networks or Sylke's ruthless efficiency. He's tried to rule fairly and has mostly succeeded in pleasing no one.
+- The population is fiercely independent, descended from miners and farmers who carved their living from difficult land. They don't love Edric, but they don't hate him either.
+- With Alisandra now controlling Tornia, Joswik is the last independent kingdom on Ofrenia. Everyone knows what's coming.
 
 ### Economy
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
+**Size**: Medium
 
-**Tech**: [None, Very Undeveloped, Undeveloped, Somewhat Developed, Developed, Very Developed, Futuristic] 
+**Tech**: Developed
 
-**Primary Exports**: 
+**Primary Exports**: Iron, copper, stone, grain, livestock
 
-**Primary Imports**: 
+**Primary Imports**: Manufactured goods, timber, luxury items
 
-- 
-
+- The Gnomestone Mountains yield iron and copper that once supplied all of Ofrenia. Now those minerals flow to whoever will buy them—and increasingly, Alisandra's agents are the only buyers offering fair prices.
+- The Oshkensi Plateau supports sheep and cattle in numbers that feed both Joswik and its neighbors. The herders there answer to no one but themselves.
+- Trade has suffered since the war. Merchants fear traveling through occupied Tornia, and the route through Myastor adds weeks and costs.
+- Joswik could be prosperous, but prosperity requires stability that Edric can't provide and peace that Alisandra won't allow.
 
 ### Military
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
+**Size**: Small
 
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
+**Quality**: Low
 
-**Enrollment**: [Voluntary, Mandatory]
+**Enrollment**: Voluntary
 
-- 
-
+- Joswik has never maintained a large standing army. The population is spread thin across mining towns and farming villages, and pulling workers away disrupts everything.
+- What military exists is poorly equipped, poorly trained, and knows it can't stop Sylke if Alisandra decides to invade.
+- The one bright spot: the terrain. The Gnomestone Mountains and the interior hills favor defense. An invader would need to fight through passes and valleys where numbers matter less.
+- Some nobles have begun hiring mercenaries, but there aren't enough gold and there aren't enough mercenaries to make a real difference.
 
 ### Geography
 
-**Location**: 
+**Location**: Southern Ofrenia, the island at the heart of the Middle Sea
 
-**Biomes**: 
+**Biomes**: Mountain ranges, rolling hills, fertile valleys, coastal lowlands, plateau grasslands
 
-**Named Entities**:
+**Named Entities**: Gnomestone Mountains, Oshkensi Plateau, Gulf of Joswik, Meadow of Laughing
 
-**Rivers & Lakes**: 
+**Rivers & Lakes**: Multiple rivers flowing from the Gnomestone Mountains to the coasts
 
-**Adjacent Waters**: 
-
+**Adjacent Waters**: The Middle Sea, Gulf of Joswik, the Passage (north)
 
 ### Political Geography
 
-**Capital**: 
-**Cities**: 
-**Towns**: 
-**Villages**: 
+**Capital**: Padena
 
+**Cities**: Padena, Valeria
+
+**Towns**: Trenton, Greymill, Sculpton, Shardak, Canfaldo, Banksted, Clifton, Ellismare, Osperton, Dagmanton, Welldale, Pasterton
+
+**Villages**: Mining villages in the mountains, farming villages in the valleys, herding communities on the plateau
 
 ### Primary Conflicts
 
-- 
+**The Coming Storm**
 
+Everyone in Joswik knows Alisandra is coming. The question is when, not if. Edric has tried diplomacy—his sister won't negotiate. He's tried building alliances—no one wants to challenge Sylke. He's tried preparing defenses—there isn't enough money or time. The kingdom waits for the axe to fall.
+
+**The Refugee Crisis**
+
+Tornian refugees have been flooding into Joswik since the occupation—nobles who fled with their wealth, soldiers who refused to serve Alisandra, common folk who saw which way the wind was blowing. They bring skills and gold, but also mouths to feed and resentments to manage. Some want Edric to lead a liberation; others just want safety.
+
+**The Mountain Lords**
+
+The mining towns of the Gnomestone Mountains have always been semi-independent, paying taxes but governing themselves. With Joswik's central authority weakening, some are asking why they should pay taxes at all. Edric needs their minerals for any hope of defense, but he can't afford to antagonize them.
+
+**The Oshkensi Question**
+
+The herders of Oshkensi Plateau care nothing for lowland politics. They've weathered regime changes before and expect to weather this one. If Alisandra conquers Joswik, the plateau folk will simply retreat into their grasslands and wait. This attitude infuriates Edric's advisors but might actually be the wisest response.
 
 ### History
+
+Joswik was the old king's favorite project—the troubled southern province he'd spent decades developing. When he divided Ofrenia among his children, he gave Joswik to Edric, his youngest, believing the gentlest son needed the most guidance and the kingdom with the most potential.
+
+He was half right. Edric is gentle, thoughtful, and genuinely cares about his people. He's also indecisive, easily manipulated, and lacks the ruthlessness that ruling requires. His father's advisors have mostly died or retired; the replacements serve their own interests first.
+
+For the first years after the division, Joswik muddled along. The mines produced, the farms yielded, and Edric presided over a kingdom that functioned despite rather than because of his rule. He maintained cordial relations with both siblings, hoping the family could eventually reconcile.
+
+That hope died when Alisandra invaded Tornia. Now Edric rules the last free kingdom on Ofrenia, surrounded by his sister's territory, watching refugees pour across his borders, and knowing he lacks the strength to stop what's coming.
+
+His one advantage: he hasn't given Alisandra a reason to invade. No insults, no provocations, no alliances with her enemies. If she moves against Joswik, she'll be the naked aggressor—and even her cowed subjects might balk at conquering a brother who offered nothing but peace. Edric is betting that shame, at least, might slow her down.
+
+He's probably wrong. But he doesn't know what else to do.
 
 ## Kadroka
 
@@ -2609,18 +2809,17 @@ Tags: state
 
 **Government Type**: Absolute monarchy
 
-**Primary Inhabitants**: Oznak, Glorindian
+**Primary Inhabitants**: Oznak, Glorindian (Humans)
 
 **Population**: 100,000
 
-**Stability**: Very stable
+**Stability**: Very Stable
 
 **Core Values**: Tradition, religion, wealth, night/day
 
-- Kazül is ruled by Salomor, a powerful king with an even more powerful ring granting him the ability to summon extremely powerful creatures to do his bidding.
-- Society is casted between laborers, merchants, and nobility. Only nobility are allowed to own land, and only merchants and nobility are allowed to make or procure loans.
-- When you marry, your kids inherit the lower caste of their two parents.
-
+- Kazül is ruled by **King Salomor**, who wears a legendary ring granting him the power to summon extremely powerful creatures to do his bidding. The ring is well known—it's why no one challenges him.
+- Society is divided into three castes: laborers, merchants, and nobility. Only nobility can own land. Only merchants and nobility can make or procure loans.
+- When you marry, your children inherit the **lower** caste of their two parents. This ensures downward mobility and keeps the lower castes growing while the nobility remains exclusive.
 
 ### Economy
 
@@ -2632,51 +2831,74 @@ Tags: state
 
 **Primary Imports**: Metal, textiles
 
-- Kazül is the largest producer of glass in Alaria. The glass artists of Kazül are world renown.
-
+- Kazül is the **largest producer of glass in Alaria**. The glass artists of Kazül are world-renowned, and Kazüli stained glass decorates temples and palaces across the continent.
+- The desert sands provide perfect raw materials for glassmaking. The secret techniques are jealously guarded by guild families.
 
 ### Military
 
-**Size**: Very small
+**Size**: Very Small
 
-**Quality**: Very low
+**Quality**: Very Low
 
-**Enrollment**: Mandatory
+**Enrollment**: Mandatory (lower castes)
 
 - Kazül lacks violent neighbors, and the desert is not an appetizing prize for would-be attackers.
-- Those of the lower castes are required to join the military for two years. Merchant castes are allowed to, and enter as officers, but are not required.
-
+- Lower castes are required to serve two years in the military. Merchant castes may volunteer and enter as officers. Nobility don't serve.
+- The real military power is Salomor's ring—why maintain an army when the king can summon monsters?
 
 ### Geography
 
-**Location**: 
+**Location**: Southern Middle Sea coast, south of Glorin, south/southwest of Zintacas, bordering the Jahazai Desert
 
-**Biomes**: 
+**Biomes**: Coastal settlements, river valleys, vast interior desert
 
-**Named Entities**:
+**Climate**: Arid—hot days, cool nights, rain only along the coast and river
 
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Named Features**: Jahazai Desert (interior), Gulf of Kazül (west coast), Peecked Hills (west), Okesha's Passage (southeastern waterway)
 
 ### Political Geography
 
-**Capital**: Urzahd
+**Capital**: Urzahd (northwest, on the river)
 
-**Cities**: 
+**Cities**: Urzahd, Sigiel, Duhkmayas
 
-**Towns**: 
+**Towns**: Shohas, Malki, Bhutag, Boxwatch, Dygalva, Seneka
 
-**Villages**: 
+### The River Settlements
 
+A river flows from Glorin in the north down through Kazül, and most settlements cluster along it. The river is life—without it, the interior would be uninhabitable. Kazüli settlements stretch up the river almost to Glorin's border.
+
+### The Jahazai Desert
+
+The vast interior desert that makes up most of Kazül's territory. Harsh, beautiful, and full of buried secrets. Ancient ruins lie beneath the sands—remnants of civilizations that flourished before the desert claimed the land. Treasure hunters and archaeologists venture into the Jahazai, though many never return.
+
+### The Towers of Ederhi
+
+Deep in the Jahazai Desert stand the Towers of Ederhi—ancient spires of fused glass rising from the sand. No one knows who built them or why. The glass is unlike anything Kazüli artisans can produce—harder, clearer, and faintly luminescent at night.
+
+Some believe the towers are tombs. Others think they're beacons, waiting for someone to activate them. Expeditions have explored the exterior but found no entrance. The towers remain a mystery—and a reminder that the desert holds secrets older than Kazül itself.
+
+### Bhutag
+
+A town in the eastern desert, near the coast. Bhutag sits atop a vast underground complex—catacombs that predate the current settlement by millennia. The locals avoid the deeper tunnels, which are said to be haunted. Occasionally, artifacts emerge from the depths, sold quietly to collectors who don't ask questions.
 
 ### Primary Conflicts
 
-- The caste system drives wedges between those with power and those without.
+**The Caste System**
 
+The brutal downward-mobility rule ensures resentment festers in the lower castes. Laborers have no path upward, and mixed-caste marriages doom children to the bottom. Unrest simmers, though Salomor's ring keeps open rebellion unthinkable.
+
+**Desert Secrets**
+
+The Jahazai holds treasures and dangers. Expeditions into the deep desert sometimes disturb things better left buried. Not every ruin is empty.
 
 ### History
+
+Kazül grew along the river, sustained by water in a land of sand. The desert was always there, full of ruins from older times—civilizations swallowed by the advancing sands.
+
+King Salomor's dynasty has ruled for generations, their power secured by the summoning ring. Where the ring came from is a matter of legend—some say it was found in the Jahazai ruins, others that it was a gift from a dying god. Salomor isn't telling.
+
+The glass trade made Kazül wealthy. The caste system keeps that wealth concentrated. The desert keeps enemies away. It's a stable arrangement—for those at the top.
 
 ## Keletus
 
@@ -2768,9 +2990,133 @@ Multiple, semi-united Kendrel monarchies.
 
 Tags: state
 
-Home to agrarian halflings. Very relaxing country, pretty despite being quite arid. Decent art, very kind people. Like hobbits. 
+### Government & Peoples
 
-However, ruled over by [Ulyas, the Immortal], the 898 year old halfling king. They are certainly a lich, though nobody knows where he gets his spirits from—they believe that his yearly trip to [LOCATION TBD] replenishes his health. In actuality, involves large sacrifice to keep him alive. He is a good king, so believes it's justifiable.
+**Government Type**: Immortal monarchy
+
+**Primary Inhabitants**: Halflings
+
+**Population**: 45,000
+
+**Stability**: Very Stable
+
+**Core Values**: Contentment, tradition, pastoral simplicity, quiet endurance
+
+- Kerwin is ruled by **Ulyas the Immortal**, a halfling who has sat the throne for 898 years. He is, by any reasonable definition, a lich—though he maintains a living appearance and his subjects prefer not to think too hard about what sustains him.
+- The halflings of Kerwin are agrarian and pastoral. They farm, they herd, they craft modest goods. They have no great ambitions. They want to live peaceful lives, raise families, and die in the same villages where they were born.
+- Ulyas is, by all accounts, a good king. He settles disputes fairly, keeps taxes low, maintains roads, and asks little of his people. In return, they don't ask questions about his yearly journey to the Fireknife Mountains.
+- Kerwin is nominally part of the Tarkhon Empire, but this is a polite fiction. Ulyas agreed to fealty five centuries ago when Tarkhon expanded, but he has outlived every emperor since. He pays modest tribute, allows Tarkhon merchants to operate freely, and in exchange, Tarkhon pretends they conquered him.
+
+### Economy
+
+**Size**: Small
+
+**Tech**: Simple
+
+**Primary Exports**: Grain, wool, copper, modest crafts
+
+**Primary Imports**: Metal goods, luxury items, wine
+
+- Kerwin's economy is subsistence-plus. The halflings grow more than they need, so they trade the surplus for things they can't make themselves.
+- The **Copper Hills** provide modest mining income—enough to trade for iron and steel, which Kerwin cannot produce.
+- Kerwin merchants are pleasant but unambitious. They want fair deals, not fortunes.
+- Tarkhon traders pass through regularly, taking advantage of Kerwin's position on overland routes, but the halflings themselves rarely travel far.
+
+### Military
+
+**Size**: Tiny
+
+**Quality**: Low
+
+**Enrollment**: Volunteer militia
+
+- Kerwin has no standing army. Villages maintain small militias for bandit problems and wild animal attacks.
+- Ulyas himself is the kingdom's true defense. Whatever dark power sustains him has made him extraordinarily dangerous when roused. In 898 years, three armies have invaded Kerwin. None succeeded.
+- The halflings don't like to talk about what happened to those armies.
+
+### Geography
+
+**Location**: Northeastern Tarkhon, north of Nektuna and east of Enymu
+
+**Biomes**: Rolling farmland, arid grassland, copper-rich hills, volcanic mountains
+
+**Climate**: Semi-arid continental—hot summers, cold winters, modest rainfall
+
+**Named Features**: Fireknife Mountains (northwest border), Copper Hills (west-central), Da Sharma (southern region)
+
+### Political Geography
+
+**Capital**: Tarkha
+
+**Cities**: None
+
+**Towns**: Sharmatenu, Hebbythus, Nehemiter, Hebmu, Clynisi, Ankbalen, Dlesy, Cuntzam, Kastorbekt, Akhzubdet, Chykum
+
+### Tarkha
+
+The capital of Kerwin—and once, long ago, the capital of the entire Tarkhon Empire.
+
+Tarkha is a quiet city now, its grand avenues too wide for its current population, its ceremonial plazas hosting weekly markets instead of imperial processions. The old palace still stands, and Ulyas rules from it, but much of the building is closed off, dusty halls echoing with centuries of silence.
+
+The halflings don't seem to mind living in the bones of a fallen capital. They've converted imperial granaries into community halls, turned the old mint into a brewery, and let wildflowers grow in the cracks of the processional way. Tarkha is comfortable, if melancholy.
+
+Visitors from Nektuna sometimes weep when they see what Tarkha has become. The halflings offer them tea and wonder what the fuss is about.
+
+### The Fireknife Mountains
+
+The volcanic range along Kerwin's northwestern border. Unstable, dangerous, and largely avoided. Smoke rises from vents, hot springs bubble in unexpected places, and the peaks occasionally glow red at night.
+
+Every year, King Ulyas travels into the Fireknife Mountains. He takes a small retinue and a larger group of "volunteers"—criminals, prisoners, and occasionally people who simply weren't missed. He returns alone.
+
+The halflings don't ask what happens in those mountains. They've learned not to.
+
+### The Copper Hills
+
+Low, scrubby hills west of Tarkha, rich with copper ore. The town of **Chykum** serves as the mining center—halflings and a smattering of dwarven advisors extract enough copper to meet Kerwin's modest needs and trade the surplus.
+
+The hills are dotted with ancient mine shafts, some predating halfling settlement. What the original miners were looking for—and whether they found it—is unclear.
+
+### Da Sharma
+
+The southern region of Kerwin, where the land grows drier and the farms give way to sheep pastures. Da Sharma halflings are considered rustic even by Kerwin standards—insular, traditional, and deeply superstitious about the old ways.
+
+They maintain shrines to spirits that predate Tarkhon, Kerwin, and perhaps the halflings themselves.
+
+### Ulyas the Immortal
+
+Ulyas has ruled Kerwin for 898 years. He appears as an elderly halfling, weathered but hale, with bright eyes and a gentle manner. He settles disputes, blesses weddings, and remembers every citizen's grandparents.
+
+He is almost certainly a lich.
+
+Ulyas does not rot, does not wither, does not age. Whatever sustains him requires yearly renewal—a journey to a forgotten shrine in the Fireknife Mountains, where something ancient and hungry waits. The price is blood. Ulyas has paid it for nearly nine centuries.
+
+He tells himself it's justified. The people he sacrifices are criminals, enemies, the forgotten. He's a good king. His people are happy. Surely that's worth a few dozen lives a year?
+
+The math has grown uncomfortable over the centuries. Ulyas tries not to add it up.
+
+### Primary Conflicts
+
+**The Weight of Centuries**
+
+Ulyas is tired. Nine hundred years is a long time to rule, a long time to make the same compromises, a long time to watch everyone he loves die while he continues. He's considered stopping—letting the yearly sacrifice lapse, letting himself finally rest. But who would rule Kerwin then? His people need him. Don't they?
+
+**Tarkhon's Shadow**
+
+Kerwin's nominal allegiance to Tarkhon is stable but hollow. Ulyas has outlived every attempt to integrate Kerwin more fully into the empire. But King Selron II is ambitious, and some in Nektuna whisper that it's time to remind Kerwin who's really in charge. Ulyas has heard these whispers before. He's buried everyone who acted on them.
+
+**The Old Capital**
+
+Tarkha was once the heart of Tarkhon. The Evertorch burned here before it was moved to Tarkhetan. Some in Kerwin—and some in the wider empire—believe the torch should return, that Tarkha's decline is a wound that festers. Ulyas finds this sentiment exhausting. He liked Tarkha better when it was quiet.
+
+### History
+
+Kerwin was settled by halflings long before Tarkhon existed as an empire. They farmed, they traded, they lived modest lives. Ulyas became king through means he no longer discusses, and he has ruled ever since.
+
+When Tarkhon expanded five centuries ago, Ulyas negotiated rather than fought. He recognized the empire's strength but also its limits—Tarkhon wanted the strait, not the hinterlands. Ulyas offered fealty, tribute, and open roads. In exchange, Tarkhon left Kerwin alone.
+
+The arrangement has held. Ulyas has watched Tarkhon's capital move from Tarkha to Tarkhetan, watched the Evertorch carried away, watched his city fade from imperial heart to provincial backwater. He doesn't seem to mind. The halflings certainly don't.
+
+Kerwin endures. Ulyas endures. The shrine in the mountains waits for its yearly offering. Nothing changes, and perhaps nothing ever will.
 
 ## Kingdoms of Fire
 
@@ -3181,79 +3527,6 @@ Tags: state, elves
 
 ### History
 
-## Lacire
-
-Tags: state
-
-Links: States
-
-### Government & Peoples
-
-**Government Type**:
-
-**Primary Inhabitants**: 
-
-**Population**: 
-
-**Stability**: [Anarchy, Very Unstable, Unstable, Somewhat Stable, Stable, Very Stable, Eternal] 
-
-**Core Values**: 
-
-- 
-
-
-### Economy
-
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
-
-**Tech**: [None, Very Undeveloped, Undeveloped, Somewhat Developed, Developed, Very Developed, Futuristic] 
-
-**Primary Exports**: 
-
-**Primary Imports**: 
-
-- 
-
-
-### Military
-
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
-
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
-
-**Enrollment**: [Voluntary, Mandatory]
-
-- 
-
-
-### Geography
-
-**Location**: 
-
-**Biomes**: 
-
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
-
-### Political Geography
-
-**Capital**: 
-**Cities**: 
-**Towns**: 
-**Villages**: 
-
-
-### Primary Conflicts
-
-- 
-
-
-### History
-
 ## Lenora
 
 Tags: state, elves
@@ -3481,13 +3754,7 @@ This city state was founded by a ship-wrecked merchant. Merchant discovered that
 
 Tags: state
 
-Home to the Ix'Lorett.
-
-## Maio Kon-Greikh
-
-Tags: state
-
-Ogre confederacy of city-states.
+Home to the Ix'Lorett lizardfolk. Located just south of the Crystal Mountains in Central Aboyinzu.
 
 ## Mez
 
@@ -3720,6 +3987,101 @@ Tags: state
 
 ### History
 
+## Morgnor's Cradle
+
+Tags: state
+
+### Government & Peoples
+
+**Government Type**: Dragon tyranny
+
+**Primary Inhabitants**: Etherweaver Goblins
+
+**Population**: 8,000
+
+**Stability**: Very Stable (under the dragon's claw)
+
+**Core Values**: Obedience, mining, enchantment, survival
+
+- Morgnor's Cradle is ruled absolutely by **Morgnor**, an ancient earth-attuned dragon. His word is law. Disobedience is death.
+- The Etherweaver goblins serve the dragon—mining metals from the earth and enchanting them to his specifications. They are skilled with non-basic elements (time, void, force, light, dark) and use this magic in their crafting.
+- Life under the dragon is harsh but predictable. Serve well and live. Fail and die. The goblins have adapted.
+
+### Economy
+
+**Size**: Medium
+
+**Tech**: Developed (magical metallurgy)
+
+**Primary Exports**: None (Morgnor hoards everything)
+
+**Primary Imports**: None (self-sufficient through dragon mandate)
+
+- The goblins mine gold, silver, and other precious metals from the Hills of Red Gold and the surrounding mountains.
+- They enchant these metals using their Etherweaver magic, creating items of considerable power.
+- Nothing leaves the Cradle. Morgnor keeps it all. His hoard is legendary—and growing.
+
+### Military
+
+**Size**: Small
+
+**Quality**: Medium
+
+**Enrollment**: Mandatory (everyone serves the dragon)
+
+- The goblins maintain a guard force, but Morgnor himself is the real military. An earth-attuned dragon in his own mountains is nearly unstoppable.
+- Thespia paid tribute for generations rather than face him. Queen Akta's refusal to continue is either brave or suicidal.
+
+### Geography
+
+**Location**: Mountains northwest of Thespia, west of Glorin, containing the Hills of Red Gold
+
+**Biomes**: Mountain peaks, mining valleys, underground complexes
+
+**Climate**: Alpine—harsh winters, brief summers
+
+**Named Features**: Morgnor's Cradle (central mountains), Hills of Red Gold (southern slopes), Mt. Kazlos, Mt. Thryke
+
+### Political Geography
+
+**Capital**: Morgnor (the dragon's lair, also the name of the central settlement)
+
+**Cities**: None (all settlements serve the lair)
+
+**Towns**: Lagunas, Shegaat, Dir, Addis, Norwun, Scuilli, Telleni, Goldir
+
+### The Hills of Red Gold
+
+The southern slopes of Morgnor's domain, rich with gold and other precious metals. This is where most mining occurs. The earth-attuned dragon can sense every vein, every nugget, every grain of gold in his territory. Nothing escapes his notice.
+
+### The Etherweaver Goblins
+
+Unlike their Scalawag cousins, Etherweavers are reserved, cautious, and born with attunements to non-basic elements. Morgnor conquered their ancestors generations ago and put their magical talents to work. They enchant the metals he hoards, creating items of power that he adds to his collection.
+
+The goblins don't love their master, but they've made peace with their situation. Some even take pride in their craftsmanship, even if Morgnor claims all credit.
+
+### Primary Conflicts
+
+**The Thespian Situation**
+
+Queen Akta has stopped paying tribute. Morgnor hasn't responded yet—perhaps he's considering his options, perhaps he's amused, perhaps he's planning something elaborate. When he does respond, it will be devastating.
+
+**Glorin's Gold**
+
+Morgnor knows about Glorin's hidden wealth. He knows the Glorindian dwarves have been quietly mining gold for centuries. He wants it. The only question is when and how he'll take it.
+
+**The Hoard**
+
+Morgnor's greed is bottomless. No amount of gold, enchanted metal, or magical items is ever enough. The goblins mine constantly, enchant constantly, and it's never enough. The dragon always wants more.
+
+### History
+
+Morgnor claimed these mountains long ago, driving out or subjugating whoever lived there before. When he discovered the Etherweaver goblins' talent for magical enchantment, he conquered them rather than destroying them. A useful slave is better than a dead enemy.
+
+For generations, the goblins have mined and enchanted under the dragon's rule. Thespia paid tribute to avoid his wrath. Glorin hid and hoped he wouldn't notice them. The arrangement was stable.
+
+Now Akta has disrupted the tribute. Glorin's wealth has caught his attention. Morgnor is greedy, patient, and very, very powerful. Something is going to change.
+
 ## Movasi
 
 Tags: state
@@ -3880,96 +4242,139 @@ Inhabited by Rhea.
 
 Tags: state
 
-Very poor. Owned by the three kingdoms, though post fragmentation it was granted to the queen of Sylke. She sees it as a dump, and uses it for political prisoners and as an unofficial exile.
+Very poor. Once shared governance among the three Ofrenian kingdoms; post-fragmentation, it was granted to the Queen of Sylke. Alisandra sees it as a dump and uses it for political prisoners and unofficial exile.
 
 ### Government & Peoples
 
-**Government Type**:
+**Government Type**: Colonial administration (under Sylke)
 
-**Primary Inhabitants**: humans
+**Primary Inhabitants**: Humans
 
 **Population**: 10,000
 
 **Stability**: Unstable
 
-**Core Values**: 
+**Core Values**: Survival, keeping one's head down, minding one's business
 
-- 
-
+- Myastor is ruled by a governor appointed by Queen Alisandra—always someone she wants out of her sight but not quite dead.
+- The population is a mix of longtime residents, transported criminals, political exiles, and people who ended up here by accident and never left.
+- No one chooses to live in Myastor. You're born here, sent here, or stranded here. Leaving requires money, connections, or both.
+- The locals have developed a grim solidarity. Everyone has a past they don't discuss. Questions about how someone arrived are deeply rude.
 
 ### Economy
 
 **Size**: Small
-**Tech**: Somewhat developed 
-**Primary Exports**: Lumber
-**Primary Imports**: Prisoners
 
-- Lots of money goes through Myastor, though none of it stays. It's a major shipping port and first stop on the way to Sylk.
-- 
+**Tech**: Somewhat Developed
 
+**Primary Exports**: Lumber, transshipment services
+
+**Primary Imports**: Prisoners, everything else
+
+- Myastor's economy is almost entirely based on its position. Ships stopping on the way to Sylke need provisions, repairs, and places to offload inconvenient cargo. The island provides all three.
+- Lots of money flows through Myastor; almost none of it stays. Merchants arrive, conduct business, and leave. The locals see wealth pass by but can't capture it.
+- Lumber from the interior provides some legitimate export, but the forests are thinning and no one invests in replanting.
+- The prison economy is grimly important. Feeding, housing, and guarding prisoners employs a significant fraction of the population. When prisoner shipments slow, the whole island feels it.
 
 ### Military
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
-**Enrollment**: [Voluntary, Mandatory]
+**Size**: Very Small
 
-- 
+**Quality**: Low
 
+**Enrollment**: Voluntary (desperate)
+
+- The garrison exists to guard prisoners and discourage pirates. It's understaffed, poorly equipped, and stationed here as punishment.
+- Sylke's navy calls at Shipton regularly, which provides actual security. The local garrison is largely for show.
+- Prison guards are technically military but function more like jailers. The distinction matters to no one except payroll clerks.
 
 ### Geography
 
-**Location**: 
+**Location**: Paluva Amati island, in the Ofrenia Passage east of Ofrenia proper
 
-**Biomes**: 
+**Biomes**: Scrubland, thinning forests, rocky coasts
 
-**Named Entities**:
+**Named Entities**: Paluva Amati (island name)
 
-**Rivers & Lakes**: 
+**Rivers & Lakes**: Small streams, no significant bodies of water
 
-**Adjacent Waters**: 
-
+**Adjacent Waters**: The Ofrenia Passage, the Middle Sea
 
 ### Political Geography
 
-**Capital**: 
-**Cities**: 
-**Towns**: 
-**Villages**: 
+**Capital**: Shipton
 
+**Cities**: None
+
+**Towns**: Shipton, Telara, Partsmouth, Pasterton
+
+**Villages**: Scattered fishing and lumber camps
 
 ### Primary Conflicts
 
-- 
+**The Exile Economy**
 
+Myastor's prosperity—such as it is—depends on Alisandra continuing to send prisoners and exiles. If she conquers Joswik and runs out of political enemies, the island's economy collapses. The governor privately hopes the war drags on forever.
+
+**The Prison Population**
+
+The prisoners outnumber the guards, and everyone knows it. The system works because escape from the island is nearly impossible and because the prisoners include many who've simply given up. But as conditions deteriorate and new arrivals bring fresh grievances, the balance grows more precarious.
+
+**The Sylke Relationship**
+
+Myastor exists at Alisandra's sufferance. The queen sees it as a dumping ground, not a priority. Requests for resources, personnel, or attention go unanswered. The governor has learned to manage without support—but in a crisis, no help is coming.
+
+**The Passing Trade**
+
+Merchants who stop in Shipton could bring prosperity if they stayed. They don't. The locals resent being treated as a waystation, but lack leverage to change anything. Some have begun exploring ways to make Myastor more attractive—or more necessary—to passing ships.
 
 ### History
+
+Paluva Amati was settled generations ago as a waystation for ships crossing the Passage. The three Ofrenian kingdoms shared governance, using the island as neutral ground for negotiations and as a convenient place to warehouse people they'd rather forget.
+
+When the old king died and his children divided Ofrenia, no one wanted Myastor. Tornia had enough ports. Joswik had no navy to speak of. Sylke needed a place to send problems. Alisandra claimed it by default, and her siblings were happy to let her.
+
+Under Alisandra's rule, Myastor has become a dumping ground. Political prisoners fill the old warehouses-turned-prisons. Nobles who annoyed the queen find themselves "governing" the island until they die of boredom or despair. The locals have adapted, building an economy around human misery.
+
+The conquest of Tornia has actually benefited Myastor slightly—refugee ships stop here, desperate for supplies and willing to pay premium prices. But the governor knows this prosperity is temporary. Once Alisandra consolidates her gains, the refugee flow will stop, and Myastor will return to its role as a place the world forgets.
 
 ## Myorna
 
 Tags: state
 
-Links: States
-
 ### Government & Peoples
 
-**Government Type**:
+**Government Type**: Monarchy (compromised)
 
-**Primary Inhabitants**: Sivakr
+**Primary Inhabitants**: Sivakr (Silver Elves)
 
-**Population**: 
+**Population**: 60,000
 
 **Stability**: Very Unstable
 
-**Core Values**: 
+**Core Values**: Mental superiority, memory, influence, secrecy
 
-- Using mind manipulation on each other is strictly forbidden, though it is totally permitted on outsiders, who are viewed as beneath them
-- Memories are key—influential households have memory libraries—expensive, but extraordinary libraries for holding memories. Generally contain memories of important events, historical figures, and cultural traditions.
-- Through memory rituals, you can unlock further mind controlling powers. These are what the Grand Weaver has done.
-- Memory art—freeze frames of memories. The best artists have fantastic memories.
-- Memory duels are used to settle agreements between equals. Must have a witness. Both are allowed to use mental manipulation on each other in this case.
-- Paper is highly cherished, and is used to control population. Poor people can't be controlled as well any more, but now they can free themselves. 
+- Sivakr are gray-skinned elves who spent thousands of years underground. Physical exercise is considered vulgar—status comes entirely from mental acuity and influence.
+- Mind manipulation on each other is strictly forbidden, but totally permitted on outsiders, who are viewed as beneath them.
+- King Thyolinor nominally rules, but he is being mind-controlled by a breakaway faction within Myorna. The terrorist attacks on neighboring states are state-sanctioned but officially denied.
 
+### Culture
+
+**Memory Manipulation**
+
+The Sivakr can alter memories—a terrifying ability that defines their society. Memory duels settle disputes between equals: both parties interlock fingers and attempt to convince the other they made a mistake in accepting the challenge. Must have a witness.
+
+**Memory Libraries**
+
+Influential households maintain memory libraries—expensive repositories containing preserved memories of historical figures, important events, and cultural traditions. These are status symbols and sources of power.
+
+**Memory Art**
+
+Freeze-frames of memories, rendered visible. The best artists have extraordinary recall. Memory art galleries are prestigious cultural institutions.
+
+**Paper Control**
+
+Paper is highly cherished and was historically used to control the population—records, contracts, debts. The poor, lacking access to paper, couldn't be tracked or controlled as effectively. Now some are using this gap to free themselves from the system.
 
 ### Economy
 
@@ -3977,60 +4382,74 @@ Links: States
 
 **Tech**: Somewhat Developed
 
-**Primary Exports**: 
+**Primary Exports**: Memory art, Deoric knowledge (secretly), silver, mountain goods
 
-**Primary Imports**: 
+**Primary Imports**: Food, surface goods, paper
 
-- Members of the Aldriktch Trade Alliance
-
+- Members of the Aldriktch Trade Alliance, though this membership is increasingly strained as neighbors discover the truth about Sivakr abilities.
 
 ### Military
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
+**Size**: Small
 
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
+**Quality**: High (terrifying)
 
-**Enrollment**: [Voluntary, Mandatory]
+**Enrollment**: Voluntary
 
-- 
-
+- The Myornan military is small but potentially devastating. Sivakr soldiers can manipulate enemy memories mid-battle—making soldiers forget their training, forget which side they're on, forget they were ever in danger.
+- Most Sivakr consider physical combat vulgar, so the military is composed of those willing to dirty themselves for the state.
 
 ### Geography
 
-**Location**: 
+**Location**: Southern slopes of the Kharvorn Mountains, specifically the Grey Mountains sub-range. Borders Camaran (southeast), Erasnus (southwest), barely touches Hephake (northwest).
 
-**Biomes**: 
+**Biomes**: Mountain peaks, deep valleys, underground complexes
 
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Climate**: Alpine—cold, harsh winters, brief summers
 
 ### Political Geography
 
-**Capital**: 
-**Cities**: 
-**Towns**: 
-**Villages**: 
+**Capital**: Vad Ilghak
 
+**Cities**: Vad Ilghak, Urkhuk
+
+**Towns**: Scattered mountain settlements, many with entrances to the underground warrens
+
+### The Forbidden Valley
+
+North of Vad Ilghak lies the Forbidden Valley—a massive, impossibly deep chasm in the mountains. At its bottom, the Sivakr keep a **chained giant**, from whom they extract consistent blood sacrifices. This blood powers all Sivakr mind magic.
+
+A massive statue of **Tiira**, their patron goddess, overlooks the valley. The Sivakr cultivated Tiira as a savior figure for their people—but the truth is darker. They effectively brainwashed their own goddess into serving Myornan interests. Even their god is a victim of their manipulation.
+
+### The Deoric Library
+
+Vad Ilghak houses a massive library of **Deoric spellbooks**—texts of secret, sacrifice-based magic. This knowledge is closely guarded but represents one of the largest collections of Deoric lore in existence. Outsiders who learn of it would be horrified.
 
 ### Primary Conflicts
 
-- 
+**The Breakaway Faction**
 
+A faction within Myorna has seized control of King Thyolinor through mind manipulation. They are directing terrorist attacks against neighboring states while the king officially denies involvement. The faction's goals are unclear—perhaps they want war, perhaps they want Myorna driven back underground, perhaps something worse.
+
+**Neighbor Relations**
+
+Discoveries about Sivakr memory manipulation have made every neighbor hostile. The Trade Alliance members tolerated Myorna for access to silver and mountain goods, but the terrorist attacks are pushing them toward breaking ties entirely. Erasnus is trying to hold things together; everyone else wants Myorna out.
+
+**Internal Division**
+
+Many Sivakr want to return underground. The surface has brought nothing but conflict and exposure. Others—particularly those near the Erasnun border—have begun assimilating into surface culture and want to stay. The kingdom is splitting.
+
+**The Stone Slums**
+
+The poor of Myorna, concentrated in the Stone Slums (foggy, flat, slate-built districts), are increasingly ungovernable. Without paper records, they slip through the system. This is where golems were first discovered and built—desperate people finding desperate solutions.
 
 ### History
 
-Myorna: 50 years ago, Myorna did not exist. But then, moon elves surfaced from the mountains, declaring that now they wanted to interact with the rest of the world, and trade. Since then, relations have been tenuous. Despite entering into the Aldriktch trade alliance with its neighbors, discoveries about the nature of moon elves (also known as silver elves here) has made their neighbors wary. More recent terrorist attacks with links pointing back to Myorna have made their neighbors outright hostile. Even within Myorna there is political unrest. King Thyolinor brought the kingdom to the surface, but many feel they are unwelcome, and wish to return to the caves from which they came. King Thyolinor is not without supporters though—many of the settlements closer to the borders have already begun to assimilate into Erasnian (Erasnus) culture, and hope to stay.
+Thousands of years ago, the Sivakr were driven underground by other elves. In the darkness, they developed their memory manipulation abilities and cultivated Tiira as their goddess—though "cultivated" may mean something more sinister than worship.
 
-Even longer ago, Tiira was made into their goddess, after Myorna was driven underground by other elves. Elves spent thousands of years underground.
+Fifty years ago, King Thyolinor decided to bring his people to the surface and engage with the wider world. They joined the Aldriktch Trade Alliance. Relations were tenuous from the start—outsiders found the Sivakr unsettling even before they understood why.
 
-### Stone Slums
-
-
-The Stone Slums are an area of super foggy, flat, slate-built, short buildings. Many of the poor of Myorna make their home here, and it is home to many unsavory and mysterious characters. This is where golems were discovered and first built.
+Now the truth is emerging. The terrorist attacks have been traced back to Myorna. Neighbors are learning what memory manipulation really means. The Alliance is fracturing. And somewhere in the Forbidden Valley, a giant bleeds to fuel it all.
 
 ## Nashua
 
@@ -4109,19 +4528,230 @@ Inhabited by Ithk'Vasyla. Fighting vicious war on two fronts against the Trømga
 
 Tags: state
 
-An incredibly powerful state, as they control the Tarkhetan Strait—a very thin passage of water connecting the Shattered Sea to the Gray Sea. They tax all trade that passes throug the port. Many aren't happy about this, but Tarkhetan is a massive fortress with powerful armaments and a large navy. The city is located on a leyline of fire, and powerful firemages grow up in the city, capable of easily burning ships down from afar.
+### Government & Peoples
 
-Nektuna is hardly safe, however. They are surrounded on all sides by those interested in taking their wealth and controlling the strait themselves. 
+**Government Type**: Feudal monarchy with merchant influence
 
-Based loosely on king's landing from GoT. Controlled by many lords from different regions.
+**Primary Inhabitants**: Humans (dominant), Craven (massive population)
 
-Nektuna is farily diverse place, home to primarily humans, but with a massive population of Craven, and smaller populations of dwarblin, trollkin, and even ayblek. A fair number of weblin also travel throughout, selling their wares.
+**Secondary Inhabitants**: Dwarblin, Trollkin, Ayblek
 
-Also controls the island of Pyris. Pyris is home to an old race of dwarves, who have interbred with humans long enough to be very rough mix of the two. Mostly farmers who want to live simple lives. 
+**Transient**: Weblin traders
 
-Nektuna also contains the city Besnoumeru, which lies directly on the leyline of time. Besnoumeru is almost as famously wealthy as Tarkhetan for the phenomenol ability of its merchants to predict the changes in supply and demand before they happen.
+**Population**: ~400,000 (Tarkhetan alone: ~120,000)
 
-In possession of Astrelle.
+**Stability**: Stable but tense
+
+**Core Values**: Wealth, power, prestige, naval supremacy, the eternal flame
+
+- Nektuna is the imperial heartland of Tarkhon, ruled by **King Selron II** from the capital of **Tarkhetan**. His authority is theoretically absolute, but in practice he navigates a web of noble factions, merchant interests, and military commanders.
+- The state is dominated by humans, but Craven make up perhaps a third of the population—laborers, sailors, soldiers, and increasingly merchants in their own right. Tensions between human and Craven communities simmer constantly but rarely boil over.
+- Smaller populations of dwarblin (dwarven-goblin hybrids), trollkin, and even ayblek add to Nektuna's cosmopolitan character. Weblin traders pass through regularly, their caravans a common sight in Tarkhetan's markets.
+- Nektuna is wealthy beyond measure but also paranoid. Everyone wants what they have. Every ally is a potential enemy. Every smile hides a knife.
+
+### Economy
+
+**Size**: Massive
+
+**Tech**: Advanced (maritime, financial, magical)
+
+**Primary Exports**: Services (shipping, banking, insurance), fire magic, luxury goods
+
+**Primary Imports**: Everything (as intermediary)
+
+- Nektuna doesn't produce much—it *taxes* production. Every ship through the strait pays tariffs. Every merchant using Tarkhon roads pays tolls. Every trader wanting access to Tarkhon markets pays fees.
+- The great merchant houses of Tarkhetan have made fortunes not by making things but by financing those who do. They insure ships, lend money to kingdoms, and take a cut of every transaction they touch.
+- **Besnoumeru**, Nektuna's second city, sits on a time leyline. Its merchants can anticipate market changes before they happen—a massive advantage that has made the city almost as wealthy as the capital.
+- This economy is entirely dependent on controlling the strait. If an alternative route opened, Nektuna would collapse within a generation.
+
+### Military
+
+**Size**: Large (navy-focused)
+
+**Quality**: High
+
+**Enrollment**: Professional with conscription reserves
+
+- Nektuna maintains the most powerful navy in the region. Ships that refuse to pay are sunk. Pirates are hunted relentlessly. The sea lanes are safe—for those who pay.
+- The **Firemage Corps** is Nektuna's elite military asset. Born on the fire leyline that runs through Tarkhetan, these mages can burn ships from a mile away. A single firemage on the walls can destroy an entire fleet.
+- The army is smaller but professional, used primarily to garrison fortresses and project power into troublesome territories.
+- Conscription can raise large reserves in emergencies, drawing from the Craven population especially.
+
+### Geography
+
+**Location**: Central Tarkhon, controlling both shores of the Needle (the strait's narrowest point)
+
+**Biomes**: Temperate coastland, Mediterranean hills, island territories
+
+**Climate**: Warm Mediterranean—mild winters, hot summers
+
+**Named Features**: The Needle (narrowest strait point), Tarkhetan (capital), Besnoumeru (time-leyline city), Pyris Island
+
+### Political Geography
+
+**Capital**: Tarkhetan
+
+**Major Cities**: Besnoumeru
+
+**Controlled Territories**: Pyris Island, Astrelle (vassal state)
+
+**Fortresses**: Torsnerhun (across the Needle), Fort Tenze (Pyris, ruined)
+
+### Tarkhetan
+
+The capital of the Tarkhon Empire and seat of King Selron II.
+
+Tarkhetan is a city of extremes. Gleaming palaces rise beside rotting slums. Merchant princes who could buy kingdoms walk streets where beggars die unnoticed. The harbor never sleeps—ships arrive and depart at all hours, their cargoes taxed, inspected, and sent onward.
+
+The city is built on a series of hills overlooking the Needle, the narrowest point of the strait. From the palace walls, you can see clear across to Torsnerhun fortress on the opposite shore. Between them, nothing passes without Tarkhetan's permission.
+
+**The Old City** occupies the highest hills—noble estates, the royal palace, the great cathedral where the Evertorch burns. Here the wealthy live behind high walls, attended by servants and protected by private guards.
+
+**The Middle City** spreads across the lower slopes—merchant houses, guild halls, respectable taverns, the homes of successful craftsmen. This is where business happens, where deals are made, where fortunes rise and fall.
+
+**The Waterfront** sprawls along the harbor—warehouses, shipyards, sailor's taverns, brothels, and the cramped tenements where workers live. Craven make up the majority here. The smell of fish, tar, and humanity mingles with salt air.
+
+**The Undercity** exists in the spaces between—tunnels, cellars, forgotten passages. Smugglers, thieves, and those who want to disappear find their way here. The city guard doesn't patrol the Undercity. Some say things live down there that have never seen the sun.
+
+### The Evertorch
+
+In the great cathedral at Tarkhetan's heart burns the **Evertorch**—an eternally burning flame that has never been extinguished since its lighting over six centuries ago.
+
+The torch is Tarkhon's most sacred symbol, representing eternal dominion and unbroken continuity. Emperors are crowned in its light. The most binding oaths are sworn before it. Ritual magic of time and fire occurs at its shrine.
+
+What most humans have forgotten—or choose not to remember—is that the Evertorch is a **Neferati creation**. The same tradition of eternal flames that burns in the Kingdoms of Fire. Lit by Neferati hands, sustained by Neferati magic.
+
+The Neferati remember.
+
+### The Fire Leyline
+
+A leyline of fire runs directly through Tarkhetan, its power concentrated beneath the Old City. Children born here sometimes manifest fire attunement—and those who do are claimed by the **Firemage Corps**.
+
+The Corps is both military asset and political faction. Firemages are trained from childhood in the Citadel of Flames, emerging as weapons of terrifying power. A single trained firemage can burn a ship to the waterline from the city walls. A squad of them can destroy a fleet.
+
+This makes the Corps essential to Nektuna's defense—and dangerously influential in its politics. The **Pyremaster**, who commands the Corps, holds a seat on the king's council. Wise rulers keep the firemages loyal. Foolish ones learn why the previous dynasty fell.
+
+### Besnoumeru
+
+Nektuna's second city, built where a **time leyline** surfaces. Besnoumeru is almost as wealthy as Tarkhetan—not from controlling trade, but from predicting it.
+
+Merchants born on the time leyline sometimes develop a peculiar gift: they sense market changes before they happen. Not prophecy exactly—more like an instinct for when to buy and when to sell, when ships will arrive, when prices will shift. The **Oracle Merchants** of Besnoumeru have made fortunes from this gift.
+
+The city is quieter than Tarkhetan, more orderly, with an almost eerie sense of calm. The merchants here don't rush—they already know what's coming.
+
+### Pyris Island
+
+A moderate-sized island southwest of the strait, technically part of Nektuna. Pyris is home to an old population—humans who've interbred with dwarves over centuries, producing a stocky, hardy folk who mostly want to be left alone.
+
+The Pyrisi are farmers and fishers, content with their simple lives. They pay their taxes, send their young to serve in the navy, and try not to attract attention from the capital.
+
+**Fort Tenze**, on the island's eastern coast, guards a secondary chokepoint—not as critical as the Needle, but significant. The fortress has been in ruins for nearly two centuries, and no one has rebuilt it.
+
+### Fort Tenze: The Cursed Fortress
+
+Fort Tenze was a functioning fortress until the **Severance**—the event that ended direct Neferati rule of Tarkhon.
+
+When the last Neferati-blooded emperor died without clear heir, the succession war that followed was brutal. Fort Tenze's garrison chose the wrong side. When the victors came to take the fortress, something went wrong.
+
+The details are disputed. Some say the garrison's firemages lost control during the final assault. Others say Neferati loyalists performed some desperate ritual. What's certain is that the fortress burned—not normal fire, but something that left the stones themselves wrong. Twisted. The flames were extinguished, but the wrongness remained.
+
+Three times since, the crown has ordered Fort Tenze rebuilt. Three times, the workers suffered: accidents, disappearances, madness. Equipment failed. Stones wouldn't set properly. Workers reported whispers, figures in their peripheral vision, dreams of burning.
+
+Now the fortress sits empty. The Pyrisi avoid it. The crown has stopped trying. Smugglers use the ruins as a waypoint, though even they don't stay long.
+
+Whatever happened at Fort Tenze, the fire hasn't quite gone out.
+
+### King Selron II
+
+The current ruler of the Tarkhon Empire, forty-three years old and in the seventeenth year of his reign.
+
+Selron is intelligent, cautious, and deeply aware of how precarious his position is. He inherited a stable empire and has worked to keep it that way—managing the noble factions, maintaining the trade relationships, avoiding the wars that would drain the treasury.
+
+His critics call him weak, indecisive, a king who rules by compromise rather than command. His supporters call him wise, patient, a king who understands that Tarkhon's strength is wealth, not war.
+
+**Appearance**: Average height, running to fat in middle age. Brown hair going gray. Shrewd eyes that miss nothing. Dresses simply by royal standards—he prefers to seem approachable.
+
+**Family**: Married to Queen Vethira of Astrelle (a political match that secured the vassal state). Three children: Prince Hathan (19, the heir), Princess Lyselle (16), Prince Doran (12).
+
+**Governing style**: Selron rules through his council, balancing factions against each other. He rarely makes dramatic pronouncements, preferring to let decisions emerge through negotiation. This makes him seem weak but keeps anyone from becoming strong enough to threaten him.
+
+**Greatest fear**: That the Kingdoms of Fire will remember they have a better claim to the Evertorch than he does.
+
+### The Royal Council
+
+Selron governs through a council of powerful figures, each representing a major interest:
+
+**Lord Gavren Holt** — Master of Coin. Controls the treasury and has the merchant houses' ear. Fat, jolly, and ruthless about money.
+
+**Admiral Kessa Thorn** — Commander of the Fleet. The navy is her domain. Respected by sailors, feared by pirates, and dangerously popular with the common folk.
+
+**Pyremaster Valdros Kaine** — Commander of the Firemage Corps. Gaunt, intense, speaks rarely. When he does speak, people listen. The Corps' loyalty to him is absolute.
+
+**Lord Armund Castor** — Warden of the Marches. Responsible for land defenses, including the fortresses. Old military family, traditional values, suspicious of anything that smells like change.
+
+**High Priestess Salenne** — Keeper of the Evertorch. Leads the cathedral clergy. Her authority is religious, but in Tarkhon, the Evertorch is politics. She knows more secrets than anyone.
+
+**Duchess Ysmera of Astrelle** — Speaks for the vassal state. Also the queen's aunt. Navigates the awkward position of representing Astrelle while her niece is married to its overlord.
+
+### The Neferati Legacy
+
+Six centuries ago, Tarkhon was founded by **Neferati conquerors** who understood that controlling the Needle meant controlling trade. They brought fire magic, the tradition of eternal flames, and the military power to seize the strait.
+
+For nearly three centuries, Tarkhon was ruled by Neferati emperors or their descendants. They lit the Evertorch. They established the Firemage Corps. They built the foundations of everything that makes Tarkhon powerful.
+
+But the Neferati line diluted over generations. Marriages to local humans, the practicalities of ruling a diverse population, the slow drift of blood and culture. By the end, the "Neferati" emperors were mostly human—fire-touched, perhaps, but not truly of the flame.
+
+The **Severance** came when Emperor Valdric III died without legitimate heir. His children by his Neferati mistress were passed over for his nephew—fully human, with no fire in his blood. The Neferati faction resisted. The war that followed was brief but vicious.
+
+The human faction won. The remaining pure Neferati withdrew to the Kingdoms of Fire. The Evertorch stayed—too sacred to move, too dangerous to extinguish. But its keepers changed.
+
+This is why the Kingdoms of Fire stay in the empire despite having the power to leave. They don't see themselves as tributaries—they see themselves as founders in exile. The Evertorch is theirs. Tarkhon is theirs. The humans just haven't realized it yet.
+
+And someday, perhaps, the fire will remember who lit it.
+
+### Primary Conflicts
+
+**The Succession Question**
+
+Prince Hathan is heir, but he's untested and some say weak. Princess Lyselle is sharper, more ambitious—and some whisper she'd make a better ruler. Selron is healthy, but he's not young. The factions are already positioning for what comes next.
+
+**The Firemage Problem**
+
+Pyremaster Valdros is loyal—for now. But the Corps' power has grown over generations, and some fear what happens when a less scrupulous Pyremaster takes command. The firemages could make or break any succession crisis.
+
+**The Neferati Shadow**
+
+The Kingdoms of Fire have been patient for three centuries. But patience isn't infinite. If the right opportunity arose—a succession crisis, a military defeat, a weakened throne—they might remember their claim. High Priestess Salenne has noticed certain Neferati ambassadors spending a lot of time in the cathedral, studying the Evertorch's flames.
+
+**The Naval Rivalry**
+
+Admiral Kessa is popular. Too popular. Selron needs the navy, but he also fears what happens if Kessa decides she wants more than command of a fleet. For now, she seems content with her ships. But ambition has a way of growing.
+
+**Fort Tenze**
+
+The cursed fortress is embarrassing. A functional Fort Tenze would significantly strengthen the western approaches. But every attempt to rebuild has failed. Some on the council want to try again. Others say the cost isn't worth the risk. And some whisper that certain parties benefit from the fortress staying ruined...
+
+### Vassal: Astrelle
+
+Astrelle was absorbed into Nektuna's orbit two centuries ago—peacefully, through a combination of marriage alliances and economic pressure. The current arrangement makes Astrelle a vassal state: self-governing in internal matters but subordinate to Tarkhetan in foreign policy and defense.
+
+Astrelle hosts two critical fortresses: **Torsnerhun** (directly across the Needle from Tarkhetan) and **Sharvatunis** (watching the eastern approach). This makes Astrelle strategically vital—and gives its duchess leverage she wouldn't otherwise have.
+
+Duchess Ysmera walks a careful line: loyal enough to keep Tarkhetan happy, independent enough to maintain Astrelle's dignity. Her niece's marriage to the king complicates things. Is she family or subject? Both, and the tension never quite resolves.
+
+### History
+
+**The Founding (~600 years ago)**: Neferati warlords seize the Needle, establishing control over the strait. The Evertorch is lit in what will become Tarkhetan.
+
+**The Golden Age (~600-300 years ago)**: Neferati emperors rule, expanding the empire through trade dominance and military power. The Firemage Corps is established. Besnoumeru rises on its time leyline.
+
+**The Dilution (~400-300 years ago)**: Neferati bloodlines mix with human through generations of political marriages. The ruling family becomes increasingly human.
+
+**The Severance (~300 years ago)**: The last fire-blooded emperor dies. Succession war between human and Neferati factions. Humans win. Pure Neferati withdraw to the Kingdoms of Fire. Fort Tenze is destroyed in the conflict.
+
+**The Human Era (~300 years ago - present)**: Human dynasties rule, maintaining the traditions and symbols of Neferati founders while slowly forgetting their origins.
+
+**The Present**: King Selron II maintains stability through careful balance. But the old tensions remain—Neferati legacy, naval ambitions, firemage power, and the eternal question of succession.
 
 ## New Chimea
 
@@ -4194,85 +4824,6 @@ Tags: state
 
 - Currently at war with Vystrilik.
 - Upset with their subjugated position towards Chimea. Those in power feel snubbed, and wish to control their new country themselves.
-
-
-### History
-
-## Nguinzi
-
-Tags: state
-
-Dark skinned warriors, teutonic armor, royalty, great religious houses. Have palace djinn, which are floating, cloaked, shadowy creatures, bearing long iron sticks with candles. These are the priests. Deal soul damage, can make unbreakable oaths which the knights swear when the swear fealty.
-
-## Obuje
-
-Tags: state
-
-Links: States
-
-### Government & Peoples
-
-**Government Type**:
-
-**Primary Inhabitants**: 
-
-**Population**: 
-
-**Stability**: [Anarchy, Very Unstable, Unstable, Somewhat Stable, Stable, Very Stable, Eternal] 
-
-**Core Values**: 
-
-- 
-
-
-### Economy
-
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
-
-**Tech**: [None, Very Undeveloped, Undeveloped, Somewhat Developed, Developed, Very Developed, Futuristic] 
-
-**Primary Exports**: 
-
-**Primary Imports**: 
-
-- 
-
-
-### Military
-
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
-
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
-
-**Enrollment**: [Voluntary, Mandatory]
-
-- 
-
-
-### Geography
-
-**Location**: 
-
-**Biomes**: 
-
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
-
-### Political Geography
-
-**Capital**: 
-**Cities**: 
-**Towns**: 
-**Villages**: 
-
-
-### Primary Conflicts
-
-- 
 
 
 ### History
@@ -4529,7 +5080,7 @@ Egypt + Japan + Tlingit
 
 Tags: state
 
-Inhabited by Scalawags. Huge civil war has recently broken out. Total disaster, as northern nation declares independence from rest of state. Total chaos, lots of death. Armies are assembling and marching on each other.
+Located in Terrenia, south of the Green Mountains and east of Aal Salma. Inhabited by Scalawags. A huge civil war has recently broken out—total disaster, as the northern nation declares independence from the rest of the state. Total chaos, lots of death. Armies are assembling and marching on each other.
 
 ## Pyonokraus
 
@@ -4712,7 +5263,9 @@ Culturally very against confrontation. Disagreements are settled by gift giving.
 
 Tags: state
 
-Home to the Splinkreen
+Home to the Splinkreen—woodland people whose souls were transplanted from mighty trees into humanoid forms. Their bark-like skin ranges from smooth birch white to rough oak brown.
+
+Located on Petrona Septia Island in the Seacleft Coast, within the forest of Puma Wood. The city-state lies north/northeast of Ios and southeast of Moigos, on the northeastern side of the Screech Peaks.
 
 ### Government & Peoples
 
@@ -5162,9 +5715,9 @@ Tags: state
 
 ### Geography
 
-**Location**: 
+**Location**: Frostmarch Peninsula (frozen wastes)
 
-**Biomes**: 
+**Biomes**: Jungle within arctic environment (unique anomaly) 
 
 **Named Entities**:
 
@@ -5361,20 +5914,20 @@ Tags: state
 
 ### Government & Peoples
 
-**Government Type**: Gerentocracy
+**Government Type**: Gerontocracy
 
-**Primary Inhabitants**: Ezuri
+**Primary Inhabitants**: Ezuri (Tree Gnomes)
 
 **Population**: 9,000
 
-**Stability**: Very stable
+**Stability**: Very Stable
 
 **Core Values**: Truth, honor, creativity, beauty
 
-- Settlements are built into the trees. Massive trees support multiple homes.
-- The Ezuri here live up to 500 years old, supported by the trees themselves. Upon reaching your elder years, you join the stipen council, which makes the decisions for the state.
-- Fully integrated with the trees. They can speak with them, and are expert gardeners.
-
+- Settlements are built into massive trees—interconnected homes supported by living wood.
+- The Ezuri here live up to 500 years, their longevity sustained by the trees themselves. To leave the forest is to give that up.
+- Upon reaching elder years, you join the Stipen Council, which makes all decisions for the state.
+- Fully integrated with the trees—they can speak with them and are expert gardeners.
 
 ### Economy
 
@@ -5386,63 +5939,63 @@ Tags: state
 
 **Primary Imports**: None
 
-- Many people grow their own gardens in the trees, kept alive and producing through the use of accelerated growth magic.
-- People usually don't leave—their longevity is tied to the forest, and to leave is to give that up.
-
+- Largely self-sufficient. People grow their own gardens in the trees, kept alive and producing through accelerated growth magic.
+- People rarely leave—their longevity is tied to the forest.
+- Trade is minimal; outsiders are tolerated but not encouraged.
 
 ### Military
 
-**Size**: Very small
+**Size**: Very Small
 
-**Quality**: Very high
+**Quality**: Very High
 
 **Enrollment**: Voluntary
 
-- Although not trained, the Stipen people are incredibly adept at working with the nature around them to fight back against their enemies.
-- All of their might is defensive, since outside of the forest, they lose 
-
+- Although not formally trained, the Stipen people are incredibly adept at working with nature to fight back against enemies.
+- All their might is defensive. Outside the forest, they lose their connection and their power.
+- The forest itself fights for them—trees shift, roots trip, branches strike.
 
 ### Geography
 
-**Location**: 
+**Location**: Middle Sea coast along the Chedwin Strait, east of Thespia, north of Zintacas
 
-**Biomes**: 
+**Biomes**: Ancient forest (entirely forested)
 
-**Named Entities**:
+**Climate**: Temperate coastal—mild, humid, perfect for trees
 
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Named Features**: Teleriwood (western forest), Schousterwood (eastern forest)
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Atra
 
-**Cities**: 
+**Cities**: None (Atra is the closest thing)
 
-**Towns**: 
-
-**Villages**: 
-
+**Towns**: Shamwet, Kestrel, and scattered tree-settlements throughout the forest
 
 ### Primary Conflicts
 
-- There is division between the young and old within Stipen, where the young feel as though they lack any representation on the council of elders.
-- Psychedelic drugs have been discovered, and are not approved by all.
+**The Generational Divide**
 
+There is growing tension between the young and old. The council of elders makes all decisions, but young Ezuri—who may be a century old and still considered "youth"—feel they lack any representation. Elders dismiss their concerns as impatience; youth see elders as out of touch with a changing world.
+
+**The Drug Question**
+
+Psychedelic substances have been discovered—flora that grows in the deeper parts of the forest. Some Ezuri use them for spiritual experiences or creative inspiration. The council has not approved, viewing them as dangerous or corrupting. The debate is quiet but persistent.
+
+**Isolation vs. Engagement**
+
+The outside world is increasingly chaotic—mad queens in Thespia, silvertongue plagues in Ubrik, dragon standoffs. Some younger Ezuri think Stipen should engage more, help their neighbors, participate in the wider world. Elders argue that leaving the forest means death, and involvement brings only trouble.
 
 ### History
 
+The Ezuri came to these forests long ago, fleeing the Mad Gorehorn disease that ravaged the Jungles of Titania. They climbed into the trees to escape and never came down. Over centuries, they bonded with the forest until their lives became intertwined with it.
 
-
-!
+Now Stipen is an ancient, peaceful realm where gnomes live for centuries among the branches. They want nothing from the outside world, and hope the outside world wants nothing from them.
 
 ## Sylke
 
 Tags: state
-
-Links: States
 
 ### Government & Peoples
 
@@ -5452,27 +6005,29 @@ Links: States
 
 **Population**: 300,000
 
-**Stability**: Very stable
+**Stability**: Very Stable
 
 **Core Values**: Duty, privacy, minding one's own business, nihilism
 
-- Ruled over by Alisandra the Merciful, a cruel queen with no qualms about massive human sacrifice to power deoric magic for the throne.
-- Recenlty invaded and took over Tornia in a fairly bloodless war.
-- Eyes and ears are everywhere—the queen knows everything, and then some.
-
+- Ruled by Queen Alisandra the Merciful—a title dripping with irony. She's calculating, cruel, and has no qualms about massive human sacrifice to power Deoric magic for the throne.
+- The population has learned not to ask questions. Eyes and ears are everywhere. Neighbors inform on neighbors. The queen knows everything, and then some.
+- Sylke functions with brutal efficiency. Taxes are collected, roads are maintained, criminals are punished. The cost is freedom, privacy, and anyone who draws the queen's attention.
+- Recently conquered Tornia in a swift, "fairly bloodless" war. Now Alisandra rules two of Ofrenia's three kingdoms—with Joswik clearly next on her list.
 
 ### Economy
 
 **Size**: Large
 
-**Tech**: Very developed
+**Tech**: Very Developed
 
-**Primary Exports**: Lumber
+**Primary Exports**: Lumber, manufactured goods, ships
 
-**Primary Imports**: Grain, minerals
+**Primary Imports**: Grain, minerals, slaves (through intermediaries)
 
-- 
-
+- Sylke's forests are legendary—dense, well-managed, and producing timber that builds ships across the Middle Sea.
+- The economy runs on Deoric magic, which runs on human sacrifice. The Ivory Hand ensures a steady supply of victims, disguised as criminals, prisoners, and the inconvenient.
+- With Tornia now under her control, Alisandra has access to Gem Crest Bay's trade routes and Besnoumeru's financial networks. She's moving quickly to integrate these assets.
+- Myastor serves as Sylke's shipping hub and dumping ground for those who displease the crown but don't quite merit execution.
 
 ### Military
 
@@ -5482,39 +6037,64 @@ Links: States
 
 **Enrollment**: Mandatory
 
-- 
-
+- Every citizen serves. No exceptions, no bribes, no escape. The military reflects Sylke's values: dutiful, efficient, and unquestioning.
+- The army that conquered Tornia was well-drilled and well-supplied. It faced minimal resistance and secured the kingdom in weeks.
+- Now that same army occupies hostile territory, stretched thin across two kingdoms while watching Joswik's border.
+- The navy is growing rapidly, incorporating captured Tornian vessels. Alisandra understands that controlling Ofrenia means controlling the surrounding waters.
 
 ### Geography
 
-**Location**: 
+**Location**: Western Ofrenia, the island at the heart of the Middle Sea
 
-**Biomes**: 
+**Biomes**: Dense forests, river valleys, coastal lowlands, hilly interior
 
-**Named Entities**:
+**Named Entities**: Gilded Pass (ley line corridor)
 
-**Rivers & Lakes**: 
+**Rivers & Lakes**: Multiple rivers flowing from the interior to the western coast
 
-**Adjacent Waters**: 
-
+**Adjacent Waters**: The Middle Sea, Tykon Channel (west)
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Helmsbridge
 
-**Cities**: 
+**Cities**: Helmsbridge, Scarnett
 
-**Towns**: 
+**Towns**: Shimmercreek Falls, Seavault, Cat Fell, Fool's Keep, Exralhorn, Mapleburg, Bridgeton
 
-**Villages**: 
-
+**Villages**: Numerous logging and fishing villages throughout
 
 ### Primary Conflicts
 
-- Just invaded Tornia, and now has to subdue revolts and rebellion.
+**Occupying Tornia**
 
+Conquest was the easy part. Alisandra's armies hold Tornia's cities and patrol its roads, but the countryside burns with resistance. The rebels she once cultivated have turned against her. Every week brings ambushes, assassinations, and supply disruptions. The occupation is bleeding resources faster than expected.
+
+**The Joswik Question**
+
+One kingdom remains. Prince Edric of Joswik watches his sister's expansion with growing terror. He lacks the military strength to resist and the political cunning to negotiate. Alisandra could crush Joswik tomorrow—but she's learning from Tornia that rapid conquest creates lasting problems. Some advisors urge patience; others want to finish reunification while momentum holds.
+
+**The Ivory Hand**
+
+Alisandra is a member of the Ivory Hand, a secretive organization that maintains global slave trafficking networks to fuel Deoric magic. Her throne runs on human sacrifice. If this became public knowledge, even Sylke's cowed population might rebel. The Hand protects its own, but Alisandra's rapid expansion has drawn attention she'd prefer to avoid.
+
+**Internal Surveillance**
+
+The network of informants that keeps Sylke stable is expensive, paranoid, and occasionally wrong. Innocent people disappear. Useful people are denounced by rivals. The system works, but it breeds a sullen, fearful population that follows orders without initiative or loyalty. In a crisis, would they fight for their queen—or simply stop pretending to?
 
 ### History
+
+Sylke was always the poorest of Ofrenia's three kingdoms. When the old king divided his realm, Alisandra received the western forests—valuable for lumber, but lacking Tornia's rich farmland or Joswik's mineral wealth. She was the middle child, overlooked and underestimated.
+
+She made that everyone else's problem.
+
+Within a year of her father's death, Alisandra had consolidated absolute power in Sylke. The nobility who opposed her vanished. The merchants who questioned her policies found their businesses destroyed. The common folk learned to keep their heads down and their mouths shut.
+
+She discovered Deoric magic through the Ivory Hand—power fueled by suffering. The organization welcomed a queen willing to provide both victims and protection. In exchange, Alisandra gained access to magic that no legitimate ruler would touch.
+
+For years she watched her brothers squander their inheritances. Aldric drowned Tornia in decadence. Edric let Joswik stagnate. Alisandra built her military, cultivated agents in both kingdoms, and waited.
+
+When she finally moved against Tornia, the war lasted weeks. Now she rules two-thirds of Ofrenia, with the third clearly in her sights. The girl her father overlooked is becoming the queen who reunites the island—not through diplomacy or marriage, but through conquest, surveillance, and blood magic.
 
 ## Ta Minn
 
@@ -5524,19 +6104,19 @@ Tags: state
 
 **Government Type**: Theocracy
 
-**Primary Inhabitants**: Oznak
+**Primary Inhabitants**: Oznak (Humans)
 
 **Population**: 40,000
 
 **Stability**: Stable
 
-**Core Values**: Proud, personal life and secrets, horses, speed, courage, exploration
+**Core Values**: Pride, personal life and secrets, horses, speed, courage, exploration
 
-- Their small, dispersed settlements are each controlled by a local priest, which each report back to the Kazigh, the chief horse shaman who rules from a temple in the center of Lindana. There he is attended by a select group of individuals, ones who spend their life in servitude to the shaman and will die there as well when they turn 30. 
-- Each year, new servants are sent from each town during a magical selection process where all the eligible teenagers will arrange in a ring with outstretched hand full of grass. Then, a blindfolded horse will walk and eat from one of the kids, thereby choosing the next person to be sent. 
-- The Shaman declares the next shaman when he has been deemed unable to survive a week longer, at which point they are immediately appointed and the old shaman is killed
-- Many grow an attunement with the winds of the plains, which whip through during most seasons
-
+- Small, dispersed settlements each controlled by a local priest, who report to the Kazigh—the chief horse shaman ruling from the great temple in Büüli Umén.
+- The Kazigh is attended by a select group of servants who spend their lives in servitude and are killed when they turn 30.
+- **Selection ritual:** Each year, eligible teenagers stand in a ring with outstretched hands full of grass. A blindfolded horse walks among them and eats from one child's hand, selecting the next servant to be sent to the temple.
+- When the Kazigh is deemed unable to survive another week, they declare their successor, who is immediately appointed. The old shaman is then killed.
+- Many Ta Minn develop an attunement with the winds that whip across the plains.
 
 ### Economy
 
@@ -5546,10 +6126,10 @@ Tags: state
 
 **Primary Exports**: Weaving, horse hides, horse products
 
-**Primary Imports**: 
+**Primary Imports**: Metal goods, lumber
 
-- The plains are slightly magical, and attunement with the winds seems to seep into everything, including the horse hides used in nearly everything they make.
-
+- The plains are slightly magical—wind attunement seeps into everything, including the horse hides used in nearly all Ta Minn craftsmanship.
+- Products from Ta Minn carry a faint enchantment of speed and air.
 
 ### Military
 
@@ -5559,41 +6139,50 @@ Tags: state
 
 **Enrollment**: Voluntary
 
-- It is an honor to serve in the military
-
+- It is an honor to serve in the military. Ta Minn cavalry are legendary—fast, skilled, and utterly fearless.
+- The horse warriors of Ta Minn once aggressively expanded across the plains before running into established civilizations.
 
 ### Geography
 
-**Location**: 
+**Location**: Western Middle Sea coast, west of the Crags of Geth (Griselia), south of the Browthiel Hills
 
-**Biomes**: 
+**Biomes**: Grassy steppe, prairie, occasional hills, river valleys
 
-**Named Entities**:
+**Climate**: Continental steppe—harsh winds, hot summers, cold winters
 
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Named Features**: Kanüli Daha Plains (north), Cercesa Plains (southeast)
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Büüli Umén (central plains, site of the great temple)
 
-**Cities**: 
+**Cities**: Büüli Umén, Ta Akikis (west), Toh Hural (north), Avar Sonnon (east), Limoste (southwest coast)
 
-**Towns**: 
+### The Coastline
 
-**Villages**: 
+Ta Minn's southern border is a jagged coastline along the Middle Sea, with several inlets and natural harbors. The Chedwin Strait lies along the southwestern coast. Limoste is the main coastal settlement.
 
+### The Northern Plains
+
+The Kanüli Daha Plains in the north are flat, fertile ground—and contested territory. A river flows from Anarak through a gap in the mountains between the Kharvorn and Griselia, providing a route for Anarak forces to reach Ta Minn. The northern plains are where the two nations clash.
 
 ### Primary Conflicts
 
-- Ta Minn is facing increasingly violent and bloody skirmishes against Anarak, as both try to expand.
+**The Anarak War**
 
+Ta Minn and Anarak are locked in increasingly violent skirmishes over the northern plains. Anarak's forces come through the mountain gap via the river route; Ta Minn cavalry meet them on the open steppe. Neither side has achieved decisive victory, but the fighting grows bloodier each season.
+
+Tepheranos wants Ta Minn's territory. The Ta Minn refuse to yield their ancestral plains. The war will likely escalate.
+
+**Expansion Halted**
+
+The Ta Minn once aggressively expanded across the plains, their cavalry unstoppable in open terrain. They've since run into other civilizations—Griselia to the east, Thespia to the southwest, Anarak to the north—and been forced to pause. The proud horse warriors chafe at the constraint.
 
 ### History
 
-The Ta Minn live on the prairie, a grassy steppe with occasional hills and rivers. They arrived from the West, and speak Ashakri, as do many of the other Western states. The Ta Minn once aggressively expanded, but have since run into other civilizations and have paused due to heavy aggression from their neighbors.
+The Ta Minn arrived from the West, speaking Ashakri like many western peoples. They found the windswept plains and made them home, bonding with the horses and the winds. For generations, they expanded freely, their cavalry sweeping across the steppe.
+
+Then they hit the mountains, the sea, and other nations. The expansion stopped. Now they hold their territory against Anarak's encroachment and dream of the days when the plains had no borders.
 
 ## Tamadrez
 
@@ -5674,27 +6263,151 @@ Gorath has not invaded for the primary reason that its forces are already spread
 
 ## Tarkhon Empire
 
-Tags: state
+Tags: state, empire
 
-The Tarkhon empire is massive, extremely rich empire that controls the sea and land between the Gray Sea and the Shattered Sea. 
+### Government & Peoples
 
-Ruled by King Selron II from Tarkhetan. Holds a tenous grasp on a large number of nearby kingdoms, through promise of fealty in exchange for cheaper trade.
+**Government Type**: Imperial monarchy with tributary states
+
+**Primary Inhabitants**: Humans, Craven, Neferati, Dwarves, Halflings (varies by region)
+
+**Population**: ~2,000,000 (across all territories)
+
+**Stability**: Stable but fragile
+
+**Core Values**: Trade, prosperity, imperial continuity, the eternal flame
+
+- The Tarkhon Empire is ruled by **King Selron II** from the capital of **Tarkhetan** in Nektuna. His authority is absolute in the core territories but dilutes rapidly as distance from the strait increases.
+- The empire holds together through economic incentive rather than military force. Subsidiary states receive preferential trade terms in exchange for fealty, tribute, and open roads. This arrangement is stable as long as Tarkhon remains wealthy—but it means loyalty is always conditional.
+- Tarkhon's diversity is a strength and weakness. The empire contains humans, Craven, Neferati fire-kingdoms, dwarven city-states, and an immortal halfling kingdom. They have little in common except profit.
+
+### Economy
+
+**Size**: Massive
+
+**Tech**: Advanced (maritime, financial)
+
+**Primary Exports**: Everything (as intermediary)
+
+**Primary Imports**: Everything (as intermediary)
+
+- Tarkhon controls the **Tarkhon Strait**—the only sea passage between the Middle Sea and the open western ocean. All maritime trade between the Middle Sea kingdoms and the wider world passes through Tarkhon-controlled waters.
+- The empire doesn't produce much itself. It *taxes* production. Every ship that passes through pays tariffs. Every merchant who uses Tarkhon roads pays tolls. Every trader who wants access to Tarkhon markets pays fees.
+- This makes Tarkhon fabulously wealthy—and deeply dependent on maintaining its chokehold on trade. If an alternative route opened, the empire would collapse within a generation.
+
+### Military
+
+**Size**: Large (navy-focused)
+
+**Quality**: High
+
+**Enrollment**: Professional
+
+- Tarkhon maintains a powerful navy to control the strait. Ships that refuse to pay are sunk. Pirates are hunted relentlessly. The sea lanes are safe—for those who pay.
+- The army is smaller but professional, primarily deployed to protect key assets and project power into tributary states that forget their obligations.
+- Nektuna's fire leyline produces powerful **firemages** who serve as the empire's elite military asset. A single firemage can burn a ship from a mile away.
+
+### Geography
+
+**Location**: Straddles the strait between Clueanda (north) and Rimihuica (south)
+
+**Biomes**: Temperate coastlands (north), arid highlands (south), volcanic mountains, fertile river valleys
+
+**Climate**: Mediterranean to semi-arid
+
+**Named Features**: Tarkhon Strait, Eronia Range, Fleimrut Mountains, Stone Forest, Sea of Merchants
+
+### Political Geography
+
+**Capital**: Tarkhetan (in Nektuna)
+
+**Former Capital**: Tarkha (in Kerwin)
+
+**Core Territories**: Nektuna, Enymu, Kerwin
+
+**Tributary States**: Astrelle, Yaif, Kabir, Gissemari, Wadiyah
+
+**Allied City-States**: Üod, Blvnird, Melaia (First Brotherhood dwarves)
+
+**Other Holdings**: Murth, Yogenfeld, various smaller territories
+
+### The Evertorch
+
+In Tarkhetan's great cathedral burns the **Evertorch**—an eternally burning flame that has never been extinguished since its lighting centuries ago. The torch is Tarkhon's most sacred symbol, representing the empire's eternal dominion and unbroken continuity.
+
+The torch was not always in Tarkhetan. It was lit in Tarkha, the original capital, and burned there for generations before being ceremonially moved when the capital shifted. This transfer remains controversial—some believe the torch should return to Tarkha, that its removal was a spiritual wound the empire has never healed.
+
+Ritual magic of time and fire occurs at the Evertorch shrine. The empire's most important oaths are sworn before it. Emperors are crowned in its light.
 
 ### Subsidiary States
-- Nektuna (home of the Tarkhon Empire)
-- Enymu
-- Kerwin
-- Estrelle (vassal state of Nektuna)
-- Yaif
-- Kabir
-- Gissemari
-- Wadiyah
-- Üod
-- Blvnird
-- Melaia
 
+**Northern Holdings (Clueanda)**
+- **Nektuna**: The imperial heartland. Controls the strait, produces firemages, generates most of the empire's wealth.
+- **Enymu**: Farming state east of Nektuna. Loyal but poor. Ruled by a long line of honorable kings.
+- **Kerwin**: Halfling kingdom ruled by Ulyas the Immortal. Nominally tributary; practically independent.
+- **Astrelle**: Vassal state of Nektuna. Fully integrated into the empire.
 
-Mountains south of Tarkhon were cleared out by Klor, the Blood Lord 200 years ago.
+**The Kingdoms of Fire**
+- **Yaif**, **Kabir**, **Gissemari**, **Wadiyah**: Four Neferati monarchies that act as a bloc. They maintain internal independence but coordinate on external matters.
+
+**Dwarven City-States**
+- **Üod**, **Blvnird**, **Melaia**: Leadership cities of the First Brotherhood. Their relationship with Tarkhon is complex—they're tributary but also exercise influence over dwarves across the world.
+
+**Other Territories**
+- **Murth**: Dual-capital state (Eynmore and Vastilin)
+- **Yogenfeld**, **Chykum**, and various smaller holdings
+
+### Klor the Blood Lord
+
+Two hundred years ago, the **Eronia Range**—the mountains forming Tarkhon's southern boundary—was infested with a massive confederation of mountain clans. Orcs, goblins, and worse had raided Tarkhon's southern territories for generations. Caravans were ambushed. Villages burned. The problem seemed intractable.
+
+**Klor** was a Tarkhon general, brutal and effective. He proposed a solution: systematic extermination. The empire gave him an army and a mandate.
+
+The campaign lasted a decade. Klor earned his title—the Blood Lord—through the sheer scale of slaughter. He didn't negotiate, didn't accept surrenders, didn't distinguish between combatants and civilians. He cleared the mountains the way a farmer clears brush: thoroughly, methodically, without mercy.
+
+When it was done, the Eronia Range was empty. Safe for Tarkhon travelers, at least. Klor died in the final campaign—some say heroically in battle, some say assassinated by his own officers who could no longer stomach the killing.
+
+Tarkhon honors Klor as a necessary monster. The southern territories are safe because of what he did. Whether the cost was justified depends on who you ask—and whether they lived south of the mountains or in them.
+
+### Primary Conflicts
+
+**The Tenuous Grasp**
+
+Tarkhon holds its empire through trade benefits, not loyalty. Every subsidiary state is calculating whether the advantages of membership outweigh the costs. If Tarkhon's wealth falters, if an alternative trade route opens, if the navy weakens—the empire will fragment within a generation.
+
+**The Evertorch Question**
+
+The movement to return the Evertorch to Tarkha is small but persistent. Some view it as harmless nostalgia. Others see it as a genuine threat to imperial unity—an admission that the capital shift was a mistake, that Tarkhetan's legitimacy is incomplete.
+
+**The Immortal Problem**
+
+King Ulyas of Kerwin has outlived every Tarkhon emperor for five centuries. He remembers when Tarkha was the capital, when the Evertorch burned in his city, when Tarkhon was a land empire rather than a maritime one. His continued existence is an embarrassment to imperial narratives of progress and a reminder that some things in the empire are older than the empire itself.
+
+**The Kingdoms of Fire**
+
+The four Neferati monarchies act as a bloc, which makes them powerful enough to negotiate collectively with Tarkhetan. If they ever decided to leave the empire together, Tarkhon would have difficulty stopping them. So far, the trade benefits have kept them loyal. So far.
+
+### History
+
+**The Old Era (~600-400 years ago)**
+
+Tarkhon began as a land empire centered on **Tarkha**, a city built with grand ambitions. The Evertorch was lit there, symbolizing eternal dominion. The empire expanded through conquest and diplomacy, absorbing neighboring territories.
+
+Kerwin was already ruled by Ulyas when Tarkhon expanded. Rather than fight an immortal king, the empire negotiated. Ulyas accepted nominal fealty in exchange for autonomy—an arrangement that has held for five centuries.
+
+**The Trade Ascendancy (~400-200 years ago)**
+
+Maritime trade transformed the region. Control of the strait became more valuable than control of land. Nektuna, perfectly positioned on the chokepoint and blessed with a fire leyline, rose to dominance.
+
+The capital shifted from Tarkha to Tarkhetan. The Evertorch was ceremonially moved. The empire's character changed—from territorial expansion to commercial exploitation.
+
+**The Klor Campaign (~200 years ago)**
+
+Klor's brutal clearing of the Eronia Range secured the empire's southern frontier but left a moral stain that some believe has never washed clean. The mountains are safe now. The price was measured in tens of thousands of lives.
+
+**The Present Day**
+
+King Selron II rules an empire held together by profit rather than loyalty. The system works—for now. Trade flows, taxes are paid, the navy maintains order. But the foundations are fragile, the subsidiaries are calculating, and the immortal halfling in Kerwin remembers when things were different.
 
 ## Tarn
 
@@ -5779,18 +6492,19 @@ Tags: state
 
 ### Government & Peoples
 
-**Government Type**: Absolute monarchy
+**Government Type**: Absolute monarchy (in chaos)
 
-**Primary Inhabitants**: humans
+**Primary Inhabitants**: Humans
 
-**Population**: 
+**Population**: 50,000
 
-**Stability**: Very unstable
+**Stability**: Very Unstable
 
-**Core Values**: 
+**Core Values**: (currently: survival)
 
-- The Thespian king was recenlty overthrown by Akta, the newly instated queen. The kingdom remains in chaos.
-
+- The Thespian king was recently overthrown by **Queen Akta**, a mercenary from the south. She is a powerful magic user and absolutely fucking bonkers.
+- The kingdom is in chaos. Akta's rule is violent and unpredictable. No one knows what she wants or how long she'll last.
+- Before the coup, Thespia was a quiet, underdeveloped agricultural kingdom that kept its head down to avoid angering the dragon to the northwest.
 
 ### Economy
 
@@ -5802,50 +6516,62 @@ Tags: state
 
 **Primary Imports**: Textiles, metals
 
-- Being landlocked and surrounded by mountains, Thespia struggles to establish profitable, long-distance trade routes.
-
+- Thespia is primarily agricultural—rolling farmland between the Salty Hills and the mountains.
+- Trade is difficult. The mountains to the west are dragon territory. The main routes run east toward Stipen and north toward Ta Minn.
+- The current chaos is disrupting what little trade existed.
 
 ### Military
 
 **Size**: Small
 
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
+**Quality**: Low
 
-**Enrollment**: [Voluntary, Mandatory]
+**Enrollment**: Mandatory
 
-- The Thespian army is kept small so as not to upset Morgnar, King of the Mountains, the dragon overlord to the west.
-
+- The Thespian army was historically kept small to avoid provoking Morgnor, King of the Mountains, the dragon overlord to the northwest.
+- Queen Akta is reportedly building up forces, though whether for defense, conquest, or sheer chaos is unclear.
 
 ### Geography
 
-**Location**: 
+**Location**: Western Middle Sea region, east of Morgnor's mountains, north of Glorin, west of Stipen, southwest of Ta Minn
 
-**Biomes**: 
+**Biomes**: Rolling farmland, hills, river valleys
 
-**Named Entities**:
+**Climate**: Temperate—mild seasons, good for agriculture
 
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Named Features**: Salty Hills (running north-south through the center)
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Geordon (center)
 
-**Cities**: 
+**Cities**: Geordon
 
-**Towns**: 
-
-**Villages**: 
-
+**Towns**: Waterrun, Amerstad, Telford, Yunbery, Cricklade (west/northwest); Dadleigh, Syozlus (north); Tutton, Embrulton (east); Ronnymede, Wediton, Everdein (south-center); Camerdon, Lewes, Fellsay (south)
 
 ### Primary Conflicts
 
-- 
+**Queen Akta's Reign**
 
+The kingdom is in chaos. Akta seized power through violence and magic, and rules through the same. She's unpredictable, powerful, and possibly insane. The old nobility are dead, fled, or in hiding. Common people are terrified.
+
+No one knows what Akta wants. She came from the south as a mercenary—her origins and motivations are unclear. Some think she's after something specific in Thespia. Others think she just wanted a kingdom to burn.
+
+**The Dragon Shadow**
+
+Morgnor, King of the Mountains, rules the peaks to the northwest. Thespia has always lived in his shadow, keeping their army small and their ambitions smaller. The previous king paid tribute and caused no trouble.
+
+Akta has not continued the tribute. Whether this is madness, confidence, or simply not caring is unknown. Morgnor has not yet responded. When he does, it may be the end of Thespia—or the end of Akta. Or both.
+
+**Neighbor Relations**
+
+Glorin to the southwest and Stipen to the southeast are watching nervously. A mad queen on their border is bad enough. A mad queen who might provoke a dragon is worse.
 
 ### History
+
+Thespia was always a quiet, unremarkable kingdom—farmers tending fields in the shadow of dragon mountains. They paid their tribute to Morgnor, traded grain for goods, and caused no trouble.
+
+Then Akta came. No one knows exactly how she did it—the coup was fast and brutal. The king and his family are dead. The army capitulated or died. Now Thespia belongs to a madwoman, and everyone waits to see what happens next.
 
 ## Thorum
 
@@ -5924,74 +6650,101 @@ Links: States
 
 Tags: state
 
-Links: States
-
 ### Government & Peoples
 
-**Government Type**:
+**Government Type**: Occupied monarchy
 
-**Primary Inhabitants**: 
+**Primary Inhabitants**: Humans, mixed
 
-**Population**: 
+**Population**: 400,000
 
-**Stability**: [Anarchy, Very Unstable, Unstable, Somewhat Stable, Stable, Very Stable, Eternal] 
+**Stability**: Very Unstable
 
-**Core Values**: 
+**Core Values**: Tradition, wealth, spectacle (pre-occupation); resistance, resentment (current)
 
-- 
-
+- Tornia was ruled by King Aldric, eldest son of the late King of Ofrenia who once held all three kingdoms united. Aldric was more interested in the Gem Crest Races than governance, leaving the state to rot from neglect.
+- Queen Alisandra of Sylke recently invaded in a "fairly bloodless war"—Tornia's hollowed-out military offered little resistance. The king fled or was captured; the situation remains unclear.
+- Sylke's occupation has transformed simmering popular discontent into active rebellion. Alisandra's agents had been stoking revolution for years, but now that she's the occupier, the rebels have turned against her too.
+- The nobility are split—some collaborate with Sylke for survival, others fund resistance cells, and many simply fled to Joswik or the mainland.
 
 ### Economy
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
+**Size**: Large (collapsing)
 
-**Tech**: [None, Very Undeveloped, Undeveloped, Somewhat Developed, Developed, Very Developed, Futuristic] 
+**Tech**: Developed
 
-**Primary Exports**: 
+**Primary Exports**: Timber, ships, luxury goods, preserved fish, temporal services (illicit)
 
-**Primary Imports**: 
+**Primary Imports**: Grain, wine, mercenaries, luxury goods
 
-- 
-
+- The economy was already bleeding from King Aldric's obsession with the Gem Crest Races. Occupation has accelerated the collapse.
+- The races continue—Alisandra hasn't stopped them, recognizing their value as distraction—but gambling houses now operate under Sylke supervision, and profits flow west.
+- Besnoumeru's time-gangs have adapted to occupation with characteristic pragmatism. They're playing both sides, selling information to Sylke authorities while quietly supporting rebels who can pay.
+- Trade routes are disrupted. Merchants avoid Ofrenia entirely when they can, routing through Myastor or the mainland.
 
 ### Military
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
+**Size**: Small (remnant)
 
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
+**Quality**: Low
 
-**Enrollment**: [Voluntary, Mandatory]
+**Enrollment**: Mandatory (under Sylke command)
 
-- 
-
+- What remains of the Tornian military has been absorbed into Sylke's occupation force or disbanded. Loyalist units fled south to Joswik or scattered into the countryside.
+- The navy was captured largely intact—ships are valuable, and Sylke needed them.
+- Resistance cells operate throughout the countryside. They're poorly coordinated but growing, drawing from disaffected soldiers, dispossessed nobles, and common folk who've had enough.
 
 ### Geography
 
-**Location**: 
+**Location**: Northern Ofrenia, the island at the heart of the Middle Sea
 
-**Biomes**: 
+**Biomes**: Temperate forests, coastal lowlands, river deltas, agricultural plains
 
-**Named Entities**:
+**Named Entities**: Glowbud Forest, Shadewood Forest, Gem Crest Bay, Blue Lake
 
-**Rivers & Lakes**: 
+**Rivers & Lakes**: Blue Lake, the Catalina River delta
 
-**Adjacent Waters**: 
-
+**Adjacent Waters**: The Middle Sea, Gem Crest Bay, the Passage (south)
 
 ### Political Geography
 
-**Capital**: 
-**Cities**: 
-**Towns**: 
-**Villages**: 
+**Capital**: Catalina (under occupation)
 
+**Cities**: Catalina (including Besnoumeru), Mithras, Highwater
+
+**Towns**: Port Edott, Northpoint, Ryerton, Bexley, Ylidor, Oakheart, Meadowlea, Gerstown Rapids, Lowwater, Goodlawn, Tall Woods, Blank Point, Thenbury, Minos, Watertown
+
+**Villages**: Numerous fishing villages along the coast
 
 ### Primary Conflicts
 
-- 
+**The Occupation**
 
+Sylke's armies hold Tornia, but holding isn't the same as controlling. Alisandra's troops garrison the major towns and patrol the roads, but the countryside seethes with resistance. Every week brings reports of ambushed supply wagons, assassinated collaborators, and occupation soldiers found dead in ditches.
+
+**The Failed Revolution**
+
+Alisandra spent years stoking revolution in Tornia, planning to sweep in as liberator once the old regime fell. Instead, she invaded before the revolution matured—and now the rebels she cultivated have turned against her. They wanted freedom, not a different queen.
+
+**The Time-Gang Opportunism**
+
+Besnoumeru's time-gangs see opportunity in chaos. They're selling intelligence to everyone, manipulating markets more brazenly than ever, and quietly acquiring the properties of fled nobles. Some suspect they're positioning themselves to emerge from the occupation as the real power in Tornia.
+
+**Glowbud Forest**
+
+The royal menagerie's escaped jaguars have transformed Glowbud Forest into a death trap. The great cats hunt humans now. Occupation forces avoid the forest; rebels use its edges as refuge, accepting the risk.
 
 ### History
+
+Tornia was once the seat of power for all Ofrenia. The previous king—father to Aldric, Alisandra, and their brother in Joswik—united the island through diplomacy, marriage, and occasional war. Under his rule, Ofrenia prospered. The Gem Crest Races were prestigious events, not gambling dens. The time and darkness ley lines that cross Tornia were studied by respected scholars, not exploited by criminals.
+
+When the old king died, he divided Ofrenia among his three children, expecting them to rule in harmony. Instead, they turned on each other within a year.
+
+Tornia received Aldric, the eldest—handsome, charming, and utterly uninterested in governance. He inherited the richest kingdom and the strongest claim to reunification, then squandered both on pleasure and spectacle. The races consumed his attention. The treasury drained. The borders weakened.
+
+Alisandra watched from Sylke, patient as a spider. She sent agents to fan revolutionary sentiment, bribed border commanders, and waited for the perfect moment. When she finally moved, Tornia's military collapsed in weeks. The "bloodless war" was bloodless because there was barely anyone willing to fight for Aldric.
+
+Now Tornia is occupied territory, and Alisandra is learning that conquest is easier than rule. The land remembers better days—ancient roads built by forgotten empires, temples to half-forgotten gods, pre-human ruins beneath Catalina where the time-gangs learned their craft. That history doesn't belong to Sylke, and Tornia's people haven't forgotten it.
 
 ## Trømgar
 
@@ -6072,30 +6825,31 @@ Tags: state
 
 **Government Type**: Democracy
 
-**Primary Inhabitants**: Uline
+**Primary Inhabitants**: Uline (Chain Dwarves)
 
-**Population**: 30,000
+**Population**: 30,000 (and falling)
 
-**Stability**: Very unstable
+**Stability**: Catastrophic
 
 **Core Values**: Wealth, honor, determination, grit
 
-- Class ranking is determined by how much land you own. At the top are the few dwarves who own the majority of land, and at the bottom are the dwarves who own no land, but have to work the land in order to pay off their debts and survive.
-
+- Class ranking determined by land ownership. Wealthy mine-owners at top, landless workers at bottom—trapped in debt, working the mines to survive.
+- Uline are stubborn, pragmatic, and respect authority. The democracy functions through councils of landowners; the landless have no vote.
+- Even before the outbreak, Ubrik was a powder keg—brutal class disparity, cruel working conditions, and simmering resentment.
 
 ### Economy
 
-**Size**: Medium
+**Size**: Medium (collapsing)
 
-**Tech**: Somwhat developed
+**Tech**: Somewhat developed
 
-**Primary Exports**: Metals
+**Primary Exports**: Metals (formerly)
 
 **Primary Imports**: Food, luxury items for the rich
 
-- Ubrik is a member of the Aldriktch Trade Alliance
-- The lifestyles of the rich is vastly different from the poor—while the rich enjoy cushy lives, the peasants live in relative destitution.
-
+- Member of the Aldriktch Trade Alliance, though the alliance is straining under Ubrik's crisis.
+- The wealthy lived in luxury while miners lived in destitution. Now the wealthy are fleeing with their gold while the poor are left to deal with the infected.
+- Most mines have been abandoned or overrun by silvertongues.
 
 ### Military
 
@@ -6105,40 +6859,62 @@ Tags: state
 
 **Enrollment**: Mandatory
 
-- The Ubrik military consists of concripted peasants, enlisted by the nobility. They have very little desire to fight.
-
+- The Ubrik military consists of conscripted peasants with little training and no desire to fight.
+- Completely inadequate to contain the silvertongue outbreak. Military units sent into infected mines rarely return.
 
 ### Geography
 
-**Location**: 
+**Location**: Middle Sea coast, between Camaran (east) and Bestacia (west)
 
-**Biomes**: 
+**Biomes**: Mountainous highlands, mining valleys, sparse forests
 
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Climate**: Temperate continental, cold in the mountain heights
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Grothak (partially evacuated)
 
-**Cities**: 
+**Cities**: Grothak, various mining settlements (many abandoned or overrun)
 
-**Towns**: 
+**Towns**: Refugee camps forming along southern borders
 
-**Villages**: 
+### The Silvertongue Outbreak
 
+**Slick Silver** is a corrupted mineral discovered in Ubrik's deepest mines—a shimmering, mercury-like substance that calls to those who see it. Miners who touched it felt compelled to taste it. Those who consumed it transformed.
+
+The infection spreads through ingestion. Victims' mouths fill with liquid silver that coats their teeth and tongue, eventually spreading through the bloodstream. The silver drives them into cannibalistic madness—they lose all reason, attacking and consuming the living. Their eyes turn metallic, their veins visible as silver threads beneath the skin.
+
+**The silvertongues** retain enough cunning to hunt. They don't just wander—they pursue, ambush, and overwhelm. Worse, they seem driven to spread the infection, forcing Slick Silver down victims' throats.
+
+The outbreak started in the northern mines. Poor miners were exposed first—the wealthy owners didn't go underground. By the time anyone understood what was happening, entire mining communities had turned. Now the silvertongues are spreading beyond the mines, raiding nearby settlements and even crossing into neighboring states.
+
+There is no known cure. Quarantine and extermination are the only containment measures, and they're failing.
 
 ### Primary Conflicts
 
-- Ubrik has been horribly fragmented by the discovery of Slick Silver, which has driven many of the dwarves insane and into cannabilistic rages. The Ubrik have fled south, but the dwarves left behind continue to terrorize the surrounding country side.
-- Gross wealth disparity among the Ubrik, including somewhat cruel work practices, has led to a lot of tension between the upper and lower classes in Ubrik.
+**The Spreading Plague**
 
+Silvertongues have escaped the mines and now terrorize the countryside. Their numbers grow with every settlement they overrun. Ubrik's military cannot contain them. The infected are spreading into Bestacia and threatening Camaran's eastern border.
+
+**The Refugee Crisis**
+
+Thousands of Ubrik dwarves have fled south and west, pouring into Bestacia, Camaran, and other neighboring states. They bring nothing but fear and desperation. Host countries are overwhelmed; some are closing borders. Rumors that any Ubrik dwarf might be infected are causing persecution and violence against refugees.
+
+**Political Fallout**
+
+The Aldriktch Trade Alliance is fracturing. Erasnus is desperately trying to hold it together, but member states blame each other for the crisis. Camaran is using the outbreak to justify further isolationism. Bestacia is dealing with both refugees and silvertongue incursions.
+
+**Internal Collapse**
+
+What remains of Ubrik's government has retreated to the southern regions. The landowners who caused the brutal conditions that made the outbreak worse are now safe behind private guards while the common people suffer. Some refugees are more angry at their own nobility than at the silvertongues.
 
 ### History
+
+Ubrik was founded by Uline dwarves who discovered rich mineral veins in the mountains. For centuries, the mines produced iron, copper, and precious metals that made the landowners wealthy. The workers who actually dug the ore saw little of this wealth—trapped in cycles of debt, they had no path to land ownership and no political voice.
+
+The class system was always brutal, but it was stable. Then prospectors struck something new in the deep northern mines—Slick Silver. It glittered beautifully. It seemed valuable. The first miners who touched it couldn't resist tasting it.
+
+Within months, the northern mines went silent. Rescue parties didn't return. By the time the surface understood what had happened, it was too late. The silvertongues emerged hungry, and Ubrik began to die.
 
 ## Uhionai
 
@@ -6293,27 +7069,15 @@ Tags: state
 
 Tags: state
 
-City beneath massive waterfalls. Climbers hang from the rocks, harvesting the plants that grow in the cliffside mist. Dense rainforest. Ruins of a titan city here.
+Located in the Seyiy region of the Elder Wilds. A city built beneath massive waterfalls where climbers hang from the cliffside rocks, harvesting the plants that grow in the perpetual mist. Dense rainforest surrounds the settlement, and the ruins of an ancient titan city lie beneath the modern structures.
 
-Furhter south lie the Archfalls, the perilous waterfall confluence.
-
-## Vastilin
-
-Tags: city, capital
-
-One of the two capitals of Murth. Less noble/scholarly, but more resources than Eynmore.
+Further south lie the Archfalls, the perilous waterfall confluence.
 
 ## Vetral
 
 Tags: state
 
 Triton theocratic powerhouse. Fled Adron eons ago, abandoning their civilization there. Now are somewhat arrogant, reclusive lords of the Alrock Ocean.
-
-## Vogenfeld
-
-Tags: state
-
-Home to hestrube dwarves. Very limited access to the outside world.
 
 ## Vykus
 
@@ -6400,70 +7164,88 @@ Tags: state
 
 ### Government & Peoples
 
-**Government Type**: 
+**Government Type**: Oligarchy (trading families)
 
-**Primary Inhabitants**: 
+**Primary Inhabitants**: Dwarblin
 
-**Population**: Dwarblin
+**Population**: 40,000
 
-**Stability**: [Anarchy, Very Unstable, Unstable, Somewhat Stable, Stable, Very Stable, Eternal] 
+**Stability**: Stable
 
-**Core Values**: 
+**Core Values**: Commerce, innovation, self-reliance, ambition
 
-- 
-
+- Watar is ruled by an oligarchy of powerful trading families. Three families dominate: the Soleri (capital), the Gravo, and the Madero. Each controls significant territory and competes fiercely for market share.
+- Dwarblin culture is defined by rejection. Hated by both dwarves and goblins, they built their own nation from nothing. This shared experience of being outcasts has forged a scrappy, entrepreneurial people.
+- Very forward-thinking, almost tech-bro energy. They're always looking for the next opportunity, the next innovation, the next market to corner. Some smugness has crept in as they've succeeded, but the scrappy underdog mentality remains.
 
 ### Economy
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
+**Size**: Large
 
-**Tech**: [None, Very Undeveloped, Undeveloped, Somewhat Developed, Developed, Very Developed, Futuristic] 
+**Tech**: Developed
 
-**Primary Exports**: 
+**Primary Exports**: Trade goods (everything—they're middlemen), practical craftsmanship, ships
 
-**Primary Imports**: 
+**Primary Imports**: Raw materials, luxury goods, anything they can flip for profit
 
-- Members of the Aldriktch Trade Alliance. Watar is currently trying to wrest control of the Telphineas strait from Bestacia.
-
+- Members of the Aldriktch Trade Alliance, though they're increasingly aggressive about controlling trade routes.
+- Dwarblin are master traders, bridging markets that would never otherwise interact. A Dwarblin merchant can sell sand to desert dwellers.
+- Their craftsmanship is practical rather than beautiful. Dwarblin-made tools aren't pretty, but they never break.
 
 ### Military
 
-**Size**: [None, Very Small, Small, Medium, Large, Very Large, Collosal]
+**Size**: Medium
 
-**Quality**: [n/a, Very Low, Low, Medium, High, Very High, Extremely High]
+**Quality**: Medium
 
-**Enrollment**: [Voluntary, Mandatory]
+**Enrollment**: Voluntary (mercenary-supplemented)
 
-- 
-
+- Watar has a real navy—merchant vessels that double as warships, plus dedicated military ships protecting trade routes.
+- Ground forces are adequate. They hire mercenaries when needed; why waste Dwarblin on fighting when you can pay someone else?
+- The military exists to protect trade. Period.
 
 ### Geography
 
-**Location**: 
+**Location**: Peninsula in the western Middle Sea, northwest of the Telphineas Strait, south of Erasnus, with Echea at the peninsula's tip
 
-**Biomes**: 
+**Biomes**: Grassland, temperate forest, coastal regions, mountains to the west
 
-**Named Entities**:
-
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Climate**: Mediterranean—mild winters, warm summers, good sailing weather
 
 ### Political Geography
 
-**Capital**: 
-**Cities**: 
-**Towns**: 
-**Villages**: 
+**Capital**: Solera
 
+**Cities**: Solera, Gravo, Madero
+
+**Towns**: Various port towns and trading posts along the coast
 
 ### Primary Conflicts
 
-- 
+**The Telphineas Strait**
 
+Watar wants control of the strait. It's the key to dominating Middle Sea trade—whoever controls passage can set tariffs and squeeze competitors. Bestacia also wants it, but they're on the wrong side of the mountains with no navy.
+
+Watar has the ships and the willingness to use them. Tensions are escalating. The Trade Alliance technically prohibits members from blocking each other's shipping, but Watar is looking for loopholes or reasons to renegotiate.
+
+**Family Politics**
+
+The three great families—Soleri, Gravo, and Madero—cooperate when facing external threats but compete ruthlessly otherwise. Corporate espionage, market manipulation, and occasional "accidents" are all part of doing business. The oligarchy is stable because no single family can dominate the others, but the balance could shift.
+
+**Alliance Strain**
+
+The Aldriktch Trade Alliance is fracturing. Watar joined for the trade benefits but increasingly sees the alliance as a constraint on their ambitions. If they could control the strait independently, why share?
 
 ### History
+
+The Dwarblin came to this peninsula as refugees—rejected by dwarf and goblin societies alike, with nowhere else to go. They found an empty stretch of coast and started trading.
+
+Within a few generations, they'd built a merchant empire. What they lacked in magical aptitude or social acceptance, they made up for in relentless work ethic and shrewd dealing. The trading families emerged from the most successful early merchants, consolidating power through wealth rather than warfare.
+
+Now Watar is an up-and-coming power. They've got ships, money, and ambition. The older powers of the Middle Sea are starting to notice—some with interest, others with concern.
+
+
+Also just to clarify, the atlas files should focus more on high level stuff, interactions between regions, and geography, whereas the state files should be more about the actual inner workings of that state. There's lots of overlap, but the juicy specifics belong in the state file
 
 ## Windor
 
@@ -6664,81 +7446,80 @@ Tags: state
 
 ### Government & Peoples
 
-**Government Type**: Kritarchy
+**Government Type**: Kritarchy (tribal council)
 
-**Primary Inhabitants**: Gozi (Goshwen)
+**Primary Inhabitants**: Gozi (Goshwen variant)
 
-**Population**: 3
+**Population**: 3,000
 
-**Stability**: Very stable
+**Stability**: Very Stable
 
 **Core Values**: Universal goodness, afterlife, kindness
 
-- They fly around on large raptors that hunt the gorges. Tribes are oriented around the upbringing of these birds.
-- The most honored position within society is one as a raptor pilot.
-- Tribal society. Each village is sovereign, but they will frequently come together for celebrations, trade, and diplomacy.
-- No laws, but issues can be brought before tribal council for review and decided by them. Worst punishment is banishment from tribe.
-
+- Tribal society—each village is sovereign, but tribes come together for celebrations, trade, and diplomacy.
+- No formal laws. Issues are brought before a tribal council and decided collectively. The worst punishment is banishment from the tribe.
+- They fly on **large raptors** that hunt the gorges. Tribes are oriented around the breeding and training of these birds.
+- The most honored position in society is **raptor pilot**—those who bond with and ride the great birds.
 
 ### Economy
 
-**Size**: Very small
+**Size**: Very Small
 
-**Tech**: Very undeveloped
+**Tech**: Very Undeveloped
 
 **Primary Exports**: None
 
 **Primary Imports**: None
 
-- Very little trade occurs between Zintacas and its neighbors.
-- The raptors are not for sale, and to hunt them is strictly forbidden.
-
+- Very little trade with the outside world. The Gozi are deeply isolated and prefer it that way.
+- The raptors are sacred—not for sale. To hunt them is strictly forbidden and would bring the wrath of all tribes.
+- Internal trade happens at **Rompur Liko**, the winter bazaar.
 
 ### Military
 
-**Size**: Very small
+**Size**: Very Small
 
 **Quality**: Medium
 
 **Enrollment**: Voluntary
 
-- Although Zintacas lacks a military, the largish birds make for decent cavalry, and are used to defend the gorges from invaders.
-
+- No formal military, but the raptors make for devastating aerial cavalry when the gorges need defending.
+- The terrain itself is the best defense—outsiders who enter the canyons without guides rarely survive.
 
 ### Geography
 
-**Location**: 
+**Location**: South of Stipen, north of Kazül, in a region of deep gorges and stone spires
 
-**Biomes**: 
+**Biomes**: Canyon country—red rock gorges, stone spires, mesas, sparse desert scrubland
 
-**Named Entities**:
+**Climate**: Arid high desert—hot days, cold nights, little rainfall
 
-**Rivers & Lakes**: 
-
-**Adjacent Waters**: 
-
+**Named Features**: Sighing Canyons (central), Clay Hills (east), The Lizard's Back (northern border), Tootby Hills (northwest), Dzobi Lands (southwest)
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: None (tribal—no central authority)
 
-**Cities**: 
+**Cities**: None
 
-**Towns**: 
+**Villages**: Nod, Tilik, Pil, Kilam, Shraz, Fimli, Hechaw, Shyat, and others scattered through the canyons
 
-**Villages**: 
+### Rompur Liko
 
+A temporary winter bazaar where all the tribes of Zintacas gather to trade with one another. The entire fair takes place on a small island cliff connected to its surroundings via long rope bridges. For one week each winter, the isolated tribes become a single community—then scatter back to their gorges until next year.
 
 ### Primary Conflicts
 
-- The country is very isolated, and has massive prejudice against outside cultures and technology, which it doesn't even understand.
+**Isolationism**
 
+Zintacas has massive prejudice against outside cultures and technology. They don't understand the outside world, don't want to understand it, and violently reject attempts to change their ways. Outsiders who enter uninvited are driven out—or worse.
+
+**The Raptors**
+
+Occasionally, outsiders try to capture or kill the great raptors. This unites all tribes in furious retaliation. Several would-be poachers have been dropped from great heights.
 
 ### History
 
-### Romper Liko
+The Gozi have lived in these canyons for as long as anyone remembers. They bonded with the raptors, learned to fly the gorges, and built their society around the birds and the stone. The outside world passed them by, and they were content.
 
-
-A temporary bazaar, that pops up once every winter, all the tribes of Zintacas trade with one another. Entire fair is on a small, island cliff, connected to its surroudnings via long rope bridges.
-
-Hook: someone has ben pushed off to their death. Why?
+They remain content. The canyons provide everything they need. The raptors are their partners, not their property. The tribes are family. Why would anyone want anything else?

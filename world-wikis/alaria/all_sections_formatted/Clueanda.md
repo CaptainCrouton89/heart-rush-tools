@@ -143,53 +143,67 @@ Pavik swallows his victims whole, alive, in a horrifying display that has trauma
 
 Tags: state, nation
 
-TODO
+Adron is the easternmost state on the Middle Sea, a proud Naga kingdom nestled between dramatic mountain ranges. Once the land of dragon riders, it now trades on banking, shipbuilding, and the legendary red gold mined from its peaks. The climate is Mediterranean—warm coastlines, temperate forests in the valleys, and snow-capped mountains framing the horizon.
 
-#### The Salt Moors
+Three major ley lines cross Adron: water (through the capital), time (southwest to northeast across the north), and dark (through the center). The intersections produce an unusually high number of elementally attuned Naga.
 
-A salt marsh region within Adron.
+#### Adrak
 
-#### Majesty Mountains
+The capital city, seat of the monarchy, and home to the Royal Adrak Bank. Sits on or near the water ley line. The nobility here keep domesticated dragons as pets—impressive creatures, but shadows of the war-beasts their ancestors once rode. The city exudes old wealth and older pride.
 
-A mountain range in Adron.
+#### Tenori River
 
-#### Gozwin Mountains
+The economic spine of Adron. Flows from the highlands northeast of Adrak, runs south along the Drakespine Mountains, and empties into the sea at Shipmarsh. Most internal trade moves along this river.
 
-A mountain range on the eastern coast of Adron, along the Denrik Sea.
+#### Shipmarsh
 
-##### Waterdark
+The largest city in Adron after Adrak, built where the Tenori River meets the sea. Massive shipyards produce vessels for the Middle Sea trade. A working city—less refined than Adrak, more prosperous than anywhere else.
 
-Hidden within the Gozwin Mountains lies Waterdark, the fortress where those who overthrew the dragons once lived. The residents were masters of water and darkness magic—secretive, hated, and deadly, but undeniably competent. A secret order still resides in Waterdark, but the fortress appears completely empty unless you know what to look for. The order continues its dark work in the shadows, manipulating water and darkness to pursue goals known only to themselves.
+#### Greyport
 
-#### Shrieking Peaks
-
-A mountain range in Adron.
-
-#### Stillstone
-
-A fortress in Adron.
-
-#### Gemecas
-
-A point of interest in Adron.
-
-#### Wateytrdark
-
-A fortress in Adron.
+A southern port that suffers from the dragon Chavux's raids on nearby shipping. Merchants here would pay well to have the dragon problem "solved," though killing a dragon remains sacrilege in Adron.
 
 #### The Blades
 
-A group of islands near Adron.
+A collection of islands off the southwest coast. Chavux, a green dragon, lairs on one of the northern islands and terrorizes ships passing through the strait.
 
 #### Ámas Kiori
 
-Dragonborn homeland. Sacred basin in Adron. Entire area is a holy land.
+The sacred basin north of Adrak, holy land to all dragonborn. The entire region is considered sacred ground.
 
 #### Stillwater
 
-North of the Ámas Kiori region in the central basin, west of the Majesty Mountains, lies Stillwater—a sacred pool that forms in a river, watched over by Naga priests. The pool exhibits extraordinary temporal properties: in the eddies surrounding the still center, time passes very quickly, while in the perfectly motionless water at the pool's heart, time does not pass at all.
+Within Ámas Kiori, north of Adrak in the central basin. A sacred pool guarded by Naga priests where time bends—eddies where time races, and a still center where it stops entirely. Located near the intersection of the water and time ley lines.
 
-The Naga guard this sacred site with reverence, understanding that Stillwater is a place where the normal flow of time bends and breaks. Those who enter the still center may emerge to find decades have passed in the outside world, while those caught in the swift eddies age in moments.
+#### The Salt Moors
+
+Salt marshes in the lowlands, source of preserving salt for the fishing industry.
+
+#### Mountain Ranges
+
+**Gozwin Mountains**: Eastern coast along the Denrik Sea. Source of red gold and home to Waterdark.
+
+**Majesty Mountains**: Northeastern range. Rich in red gold. The self-styled Dwarf King lurks here, claiming ancestral rights and robbing travelers.
+
+**Shrieking Peaks**: Southern range, named for the wind that howls through the passes.
+
+**Drakespine Mountains**: Central range running north-south, dividing eastern and western Adron. Named for the dragon riders who once patrolled its peaks.
+
+#### Waterdark
+
+Hidden within the Gozwin Mountains. The fortress of the secret order that severed the dragon-bonds four centuries ago. Masters of water and darkness magic. The fortress appears empty unless you know what to look for. The order continues its work in shadow, pursuing goals known only to themselves.
+
+#### Western Lakes
+
+Several towns dot the shores of lakes in western Adron. Beneath the waters lie drowned Triton ruins—remnants of the civilization that inhabited this land before fleeing to the Alrock Ocean eons ago.
+
+#### Stillstone
+
+A fortress in the mountains, exact purpose unclear.
+
+#### Gemecas
+
+A point of interest in eastern Adron, near the Gozwin Mountains.
 
 ### Alacayir
 
@@ -203,15 +217,38 @@ TODO
 
 Tags: state, nation
 
-TODO
+A basin nation ruled by the black dragon Tepheranos, squeezed between the Crags of Geth to the south and Argysis in the Kharvorn Mountains to the north. The population has been brainwashed over a century to see their dragon overlord as a savior rather than a tyrant.
 
-#### Black Hills
+Anarak is militaristic, isolated, and hungry for expansion—but locked in a standoff with Argysis, where Tepheranos's treacherous brother Rothogomos rules.
 
-Hills within Anarak.
+#### Tephrakus
 
-#### Mosoyevo
+The capital city, built at the base of the Black Hills near Tepheranos's lair. A grim, orderly city where loyalty to the dragon is mandatory and dissent is dangerous. Heavy taxation funds the military while most citizens live in poverty.
 
-Home to many naga. Similar to Anarak, less evil though.
+#### Nidzhoni
+
+The other major city, located in the center of the basin. More agricultural than Tephrakus, serving as the breadbasket that feeds the military machine.
+
+#### The Black Hills
+
+A range of dark hills in the northern part of the basin, where Tepheranos makes his lair. The hills are considered the heart of Anarak's power—and its oppression.
+
+#### The Basin
+
+The great basin that forms Anarak's territory—grassland and farmland stretching between the mountains. Good agricultural land, heavily taxed, worked by a population that believes their sacrifices serve a noble cause.
+
+#### Borders
+
+- **North**: Argysis (enemy) in the Kharvorn Mountains
+- **South**: The Crags of Geth (Griselia) — source of goblin raids
+- **West**: Erasnus (barely) — a potential target
+- **East**: Other Kharvorn foothills
+
+#### The Dragon Feud
+
+Tepheranos and Rothogomos were brothers who came to conquer Argysis together. Rothogomos betrayed Tepheranos, taking the dwarven treasure for himself. Tepheranos retreated to Anarak, built it into a regional power, and now both dragons plot each other's destruction.
+
+Neither can strike elsewhere while the other lives. Anarak is stronger but vulnerable; Argysis is weaker but fortified. The standoff has lasted generations.
 
 ### Apketrii
 
@@ -273,7 +310,41 @@ TODO
 
 Tags: state, nation
 
-TODO
+A Goshwen gnome republic on the Middle Sea coast, known for scholarship, invention, and a complete lack of military ambition. Bestacia is one of the happiest places on Alaria—pleasant climate, good food, rewarding intellectual culture. The gnomes here would rather tinker than fight.
+
+Member of the Aldriktch Trade Alliance. Currently dealing with the Ubrik refugee crisis, silvertongue incursions, and escalating tensions with Watar over the Telphineas Strait.
+
+#### Petra
+
+The capital city. A charming, well-organized gnome city full of workshops, academies, and comfortable homes. The government operates through elected councils—debates are lively, decisions are slow, and everyone has opinions.
+
+#### Kisoy
+
+The second major city, located just north of the southern mountains. Kisoy is the gateway to the mountain passes and the closest Bestacia gets to the Telphineas Strait. More militarily minded than Petra (which isn't saying much), it houses what passes for Bestacia's border defenses.
+
+#### Pastrova
+
+A town famous for one of the best law schools in Alaria. Scholars come from across the Middle Sea to study here. Bestacian legal experts are in high demand—they've made careers out of finding loopholes and crafting airtight contracts.
+
+#### The Southern Mountains
+
+The mountain range separating Bestacia from the Telphineas Strait. These peaks are home to a remarkable variety of creatures—some native, some introduced by curious Goshwen naturalists over the centuries. The gnomes have a fondness for exotic fauna, and the mountains have become an informal preserve.
+
+Crossing the mountains is difficult. Bestacia's lack of control over the strait stems partly from this geographic barrier.
+
+#### The Forests
+
+Temperate woodlands cover much of Bestacia's interior. They'd be lovely if not for the ghouls.
+
+The forests are infested with these soulless undead—remnants of ancient wizard experiments, driven by eternal hunger. They hunt travelers, lurk in the deep woods, and occasionally raid isolated settlements. The gnomes can't exterminate them; their military is too weak, and killing ghouls requires elemental magic or overwhelming force.
+
+Most Bestacians simply avoid the deep forests. Ghoul hunters visit occasionally. The problem persists.
+
+#### Telphineas Strait
+
+South of the mountains, this strait is a crucial trade chokepoint connecting different parts of the Middle Sea. Control means tariffs, influence, and economic leverage.
+
+Bestacia wants it. Watar wants it. Bestacia has brains and intrigue; Watar has ships and soldiers. The situation is deteriorating.
 
 ### Black Hills
 
@@ -331,11 +402,29 @@ A city-state in the Bygone Hills.
 
 Tags: state, nation
 
-TODO
+A human republic south of the Kharvorn Mountains, known for its manufacturing economy, anti-magic laws, and rigid bureaucracy. Camaran produces non-magical goods for export across the Middle Sea—tools, textiles, clockwork, precision instruments. The population is industrious, educated, and deeply suspicious of Deoric magic.
+
+Member of the Aldriktch Trade Alliance, though increasingly isolationist. Vetoed Echea's membership. The alliance is strained by Camaran's inward turn.
+
+#### Rathscar
+
+The capital city, seat of the High Camarik Council. A city of orderly streets, imposing civic buildings, and endless paperwork. This is where mages must register for licenses if they wish to practice elemental magic legally. The bureaucracy is legendary—inspectors, forms, annual renewals, restricted zones.
+
+Manufacturing district produces goods shipped across the Middle Sea. The wealthy live in townhouses near the council halls; workers crowd tenements near the factories.
+
+#### Breidlheiss Basin
+
+The giant-inhabited basin east of Camaran, between Camaran and Adron. Camaran runs mining operations in the foothills, encroaching on giant territory while insisting the giants have no legitimate land claims. When giants retaliate, Camaran launches "defensive" expeditions and claims more land as security buffer.
+
+The situation is morally grey: Camaran portrays giants as savage aggressors, but the aggression is largely retaliatory. Some Camarans who've dealt with the Ngül Mountain communities know giants can coexist peacefully with smaller folk—but admitting this would threaten mining interests.
 
 #### Ngül Mountains
 
-Home to Güli mountain giants, as well as thousands of Kimril, who live peacefully alongside the giants.
+Northern mountains home to Güli mountain giants and thousands of Kimril who live peacefully alongside them. This community proves giants aren't inherently hostile—an inconvenient truth for Camaran's official position on the Breidlheiss situation.
+
+#### Foothills and Farmland
+
+Most of Camaran is temperate farmland and rolling hills, fed by rivers flowing down from the Kharvorn. Small towns dot the countryside, supplying food and raw materials to the manufacturing centers. The climate is continental—cold winters, warm summers, reliable rain.
 
 ### Chavux
 
@@ -429,7 +518,35 @@ TODO
 
 Tags: state, nation
 
-TODO
+A tiny gnomish magocracy on a mountainous peninsula at the tip of the Watar peninsula, jutting into the Middle Sea. Echea is essentially two enormous mountains—the Iri Mountains—covered in universities, research facilities, and the workshops that produce some of the finest magitech in Alaria.
+
+Vetoed from the Aldriktch Trade Alliance by Camaran. The Echi don't seem to care much—they're too busy with scholarship to worry about trade politics.
+
+#### Adi Assabehta
+
+The capital city, built into and around the larger of the two Iri peaks. A vertical city of towers, bridges, and carved chambers, home to the greatest universities in Alaria. Paragon-attuned elementalists teach here in every discipline. Students come from across the world to study, and work on magical artifacts part-time to fund their education.
+
+**The Secret:** A mad scholar opened a portal to Zylogmus Eternus, binding the entire city to the flipside of the Material Plane. People are mysteriously dying—slowly, inexplicably. The scholar was the first to die. No one knows about the portal. Most residents don't believe the deaths are connected, attributing them to various causes. Over the coming years, the capital will slowly empty as people flee what they don't understand.
+
+#### Adal
+
+The second city, on the smaller Iri peak. More focused on practical applications of magic—forges, workshops, and the production facilities where university artifacts are manufactured for export.
+
+#### The Iri Mountains
+
+The two massive peaks that make up almost all of Echea's territory. Once, the Echi gnomes and Coghead goblins worked these mountains together—gnomes providing magic, goblins providing machinery. That partnership ended in massacre two centuries ago, and another genocide fifty years ago finished what remained. The Echi don't talk about it.
+
+The mountains are riddled with old tunnels, abandoned Coghead workshops, and sealed chambers that the universities prefer to forget exist.
+
+#### The Universities
+
+Echea's universities are its heart. They function as schools, research institutions, artifact factories, and military academies all at once. Every student learns elemental magic, combat tactics, and practical crafting. The result is a population of highly educated elemental war casters who rarely fight—but when they do, they're terrifying.
+
+The universities compete fiercely for prestige, funding, and the best students. Academic politics in Echea can be as vicious as any court intrigue.
+
+#### Coastal Settlements
+
+Small fishing villages cling to the rocky coastline below the mountains. These communities exist mostly to feed the cities above and provide port access for visiting scholars and trade ships.
 
 ### Eidlsandres
 
@@ -443,13 +560,107 @@ TODO
 
 Tags: state, nation
 
-TODO
+Eloesi occupies the northwestern coast where the landmass connecting Ofrenia to the southern interior meets the sea. It's Eloweir territory—sea elves who've lived here longer than anyone can remember, building curved cities that mirror the tides and harvesting the legendary pearls of Oyster Bay. The coast is rocky and dramatic, the interior rolls into forested hills, and the people are simultaneously laid-back and lethally competent.
+
+#### Kair
+
+The capital city, built around a natural harbor on Elessi Bay. Kair's architecture follows Eloweir tradition—curved lines, circular plazas, buildings that flow into each other like water. The city feels organic, grown rather than constructed, though the engineering behind that appearance is sophisticated.
+
+The council chambers occupy a headland overlooking the harbor, a reminder that in Eloesi, political power answers to the sea. Markets sprawl along the waterfront, trading pearls, fish, poisons, and goods from across the Middle Sea.
+
+#### Oyster Bay
+
+The smaller bay just south of Kair, and the source of Eloesi's famous pearls. The waters here are shallow, warm, and perfect for oyster cultivation. Eloweir pearl divers have refined their techniques over generations, producing gems that command premium prices across Alaria.
+
+The bay is carefully managed—harvesting quotas, seasonal restrictions, protected breeding areas. The councils take the pearl trade seriously, and poaching is punished severely.
+
+#### Elessi Bay
+
+The main bay on Eloesi's western coast, sheltering Kair and several smaller settlements. The waters are deep enough for ocean-going vessels, and the harbor never freezes. Most trade passes through here.
+
+#### Urchin Bay
+
+The large bay south of Oyster Bay, named for the giant urchins that make it treacherous. The waters are deeper, colder, and far more dangerous. Ships that venture in report seeing massive spined shapes in the murky depths—and those are the ships that come back.
+
+Rumors persist of treasure in Urchin Bay—centuries of wrecked ships accumulated on the bottom. Expeditions occasionally form to recover it. Most fail expensively.
+
+#### The Seawatch Mountains
+
+A range of hills and low mountains in south-central Eloesi. "Mountains" is generous—they're more like tall hills—but they provide timber, grazing land, and a natural barrier between the coast and the interior plains. Watchtowers dot the heights, originally built to spot approaching threats from the south.
+
+#### Coastal Settlements
+
+##### Issasmir
+
+A northern port town, smaller than Kair but prosperous. Shipyards here build the sturdy coastal vessels the Eloweir favor.
+
+##### Brachly & Dematir
+
+Twin towns on the eastern edge of Eloweir territory, near where the forest gives way to plains. They serve as trading posts with the goblin tribes—when the goblins feel like trading instead of raiding.
+
+##### Oakdale
+
+An interior town in the forested hills, known for timber and woodworking.
+
+##### Trailsfor
+
+A town at a crossroads in the southern hills, where paths from the coast meet routes heading south toward Old Talaria's ruins.
+
+##### Zessos, Golun, Holckots
+
+Smaller settlements scattered through the interior, mostly agricultural communities supporting the coastal cities.
+
+##### Krakersport
+
+A southern coastal town near the border with the Glass Forest. The people here have learned to live with strangeness drifting across from Old Talaria—trees that move when you're not watching, animals that speak in riddles, weather that doesn't match the sky. It's not safe, exactly, but it's home.
+
+#### The Eastern Border
+
+Eloesi's eastern edge fades into Glidwyn Forest and then the open plains beyond. The border is more ecological than political—where the Eloweir forests end and the goblin grasslands begin. Relations with the Scalawag broods are chaotic but manageable; the goblins raid occasionally, the Eloweir retaliate, and life continues.
+
+#### The Southwestern Border
+
+The Glass Forest marks where Eloesi ends and Old Talaria's ruins begin. The Eloweir maintain watchtowers along this border, keeping an eye on what emerges from the fae-touched wilderness. Most days, nothing happens. Some days, something does.
 
 ### Erasnus
 
 Tags: state, nation
 
-TODO
+A Belenstrope halfling nation in the central Middle Sea region, defined by trade, diplomacy, and a complete inability to fight. Erasnus sits at the crossroads of everything—bordered by Camaran, Ubrik, Myorna, the Hephake mountains, Anarak, and Griselia. They've made fortunes by trading with everyone and fighting no one.
+
+Member and key proponent of the Aldriktch Trade Alliance. The alliance is most profitable for Erasnus, and they are desperately trying to hold it together as tensions between member states escalate.
+
+#### Erdene
+
+The capital city, seat of both the House of Nobles and the House of Commerce. A sprawling trade hub where deals are struck in every tavern, market, and noble house. The architecture reflects centuries of accumulated wealth—ornate but practical, designed to impress clients.
+
+#### Minoz
+
+Major city in the east, near the Camaran border. Hub for overland trade routes heading toward the eastern Middle Sea states.
+
+#### Adnar
+
+Major city in the south, positioned for trade with Ubrik and the southeastern routes. Currently dealing with refugee overflow from the silvertongue crisis.
+
+#### Traduci
+
+Major city in the west, gateway to the Crags of Geth and trade with the Griselian goblin city-states. Site of the most theatrical diplomatic incidents with goblin delegations.
+
+#### Simonsor
+
+Major city in the north, near the Hephake mountain passes. Trade routes through the Kharvorn run through here.
+
+#### Novglim Forest
+
+Northeastern forest, just south of Myorna. Native gnome tribes once lived here; most have been displaced by logging and settlement expansion. The situation is an open wound that Erasnun society prefers not to discuss.
+
+#### The Crags of Geth
+
+Mountain range along the western border, separating Erasnus from Griselia and the goblin city-states beyond. The passes are well-traveled despite (or because of) the goblins' constant theatrical threats of invasion.
+
+#### Trade Roads
+
+Erasnus is crisscrossed with maintained trade roads connecting every major city to its neighbors. The roads are the nation's true infrastructure—better maintained than any military fortification, because trade is what matters.
 
 ### Erdel
 
@@ -539,9 +750,41 @@ TODO
 
 ### Glorin
 
-Tags: region, geography
+Tags: state, nation
 
-TODO
+A secretive Glorindian dwarf nation in the Whistle-Stone Mountains, between Thespia and Kazül. On the surface, a modest mining operation. Below ground, one of the richest gold deposits in Alaria and a civilization that prefers the world doesn't know about it.
+
+The Glorindians can sense gold through solid stone. They've used this gift to carve vast underground chasms full of wealth—and they've learned to keep very, very quiet about it.
+
+#### Gamgara
+
+The capital, a surface settlement above the main mine complex. Modest buildings, unremarkable streets, nothing to suggest the staggering wealth below. The clan elders meet here to coordinate when necessary.
+
+#### Matabono
+
+A town in the eastern part of Glorin, with its own mine entrances and clan territory.
+
+#### Zubaydah
+
+A settlement in the west, closer to the coast and the main trade routes to Kazül.
+
+#### Taufig
+
+Southern town, near the border with Kazül. Handles most of the (deliberately modest) gold exports.
+
+#### The Whistle-Stone Mountains
+
+The mountain range that defines Glorin. Natural caverns and tunnels create an eerie whistling when wind passes through—unsettling to outsiders, sacred to the Glorindians who call it the voice of the mountains.
+
+#### The Underground
+
+The true Glorin lies below. Vast mine shafts, tunnel networks, and underground chasms where generations of Glorindians have extracted gold. Some chambers are enormous—large enough to have their own weather patterns. The deepest workings are clan secrets.
+
+The wealth is staggering. The Glorindians have mined tons of gold over centuries, and their auric sight keeps finding more. They deliberately hide the scale of it.
+
+#### The Dragon Threat
+
+Morgnor, King of the Mountains to the northwest, has noticed Glorin. He knows about the gold. He hasn't acted yet, but dragons are patient. The Glorindians know he's watching and have no good answers for what happens when he decides to take what he wants.
 
 ### Glyn'Qoth
 
@@ -613,39 +856,47 @@ TODO
 
 Tags: state, nation
 
-TODO
+A confederation of eight Scalawag goblin city-states occupying the Crags of Geth—a shallow bowl-shaped mountain range west of Erasnus, east of Ta Minn, and south of Anarak. Chaotic but functional, Griselia runs on brood loyalty, dramatic flair, and an endless appetite for theatrical conflict.
 
-#### Shinishini
+The goblins perpetually threaten to invade Erasnus. They never will. Everyone knows this. Trade continues regardless.
 
-A city-state within Griselia.
+#### The Crags of Geth
 
-#### Codunp
+A bowl-shaped mountain range forming natural walls around a sheltered interior. The rim provides defense; the valleys within provide livable space for goblin settlements. Eight major valleys house eight city-states, each ruled by a brood-father lineage.
 
-A city-state within Griselia.
-
-#### Gor
-
-A city-state within Griselia.
-
-#### Grisel
-
-A city-state within Griselia.
-
-#### Bu
-
-A city-state within Griselia.
-
-#### Aster
-
-A city-state within Griselia.
-
-#### Dygon
-
-A city-state within Griselia.
+North of the Crags lies Anarak. South are the Browthiel Hills and the plains approaching Ta Minn.
 
 #### Pholiki
 
-A city-state within Griselia.
+Easternmost city-state, closest to Erasnus. Primary point of contact for trade and theatrical diplomacy. Pholiki's brood-father typically leads the delegations that travel to Traduci to make grandiose invasion threats before signing trade agreements.
+
+#### Dygon
+
+Central of the three eastern city-states. Known for its philosophers—Scalawag goblins who devote years to elaborate metaphysical arguments that outsiders find incomprehensible but goblins consider profound.
+
+#### Aster
+
+Westernmost of the three eastern city-states. More militant reputation than its neighbors, though "militant" for Griselia still means more posturing than actual fighting.
+
+#### Shinishini
+
+Interior city-state known for its performers. Traveling Shinishini theater troupes occasionally venture into Erasnus and beyond, staging elaborate productions that blend comedy, tragedy, and chaos.
+
+#### Codunp
+
+Interior city-state with a reputation for craftsmanship—when the goblins can focus long enough to finish projects. Codunp goods are either brilliant or baffling, with little middle ground.
+
+#### Gor
+
+Interior city-state. Less is known about Gor than the others; they keep to themselves more than typical Griselian goblins. Some suspect Gor harbors ambitions beyond theater.
+
+#### Grisel
+
+The largest city-state, occupying the deepest valley in the bowl. Grisel's brood-father claims ceremonial precedence over the others, which the other seven city-states politely ignore.
+
+#### Bu
+
+The smallest city-state, tucked into a narrow valley near the northern rim. Bu trades more with Anarak than with Erasnus, and its goblins are quieter than their southern cousins. This is considered suspicious.
 
 ### Gulf of Joswik
 
@@ -735,9 +986,87 @@ Tags: plains, geography
 
 Tags: state, nation
 
-A state on Ofrenia.
+Joswik occupies southern Ofrenia, a land of mountains, fertile valleys, and windswept plateau. It's the largest of the three Ofrenian kingdoms by area, though much of that territory is difficult terrain—the Gnomestone Mountains in the south, the Oshkensi Plateau in the southwest, and the rugged interior hills that have always made centralized rule difficult.
 
-TODO
+Prince Edric governs from Padena, watching his sister's armies occupy the north and waiting for the inevitable. The landscape that makes Joswik hard to govern also makes it hard to conquer—but everyone knows Alisandra will try eventually.
+
+#### Padena
+
+The capital city, nestled in a river valley in the northern interior. Padena grew up around a natural ford—a crossing point that became a market, then a town, then a city. The architecture is practical rather than grand: stone buildings built to last, streets wide enough for cattle drives, and fortifications that show their age.
+
+Prince Edric's palace is the largest structure in the city, but it's modest by royal standards. The old king built for function, not display, and his youngest son has maintained that tradition.
+
+Since the Tornian occupation, Padena has swelled with refugees. Tent cities ring the walls. Markets are crowded and prices are climbing. The city that seemed sleepy a year ago now buzzes with desperate energy.
+
+#### Valeria
+
+The second city, a port on the southeastern coast overlooking the Gulf of Joswik. Valeria handles most of Joswik's maritime trade—what's left of it, now that routes through Tornia are disrupted. The harbor is deep and well-protected, and the city's merchants have profited from the chaos by offering alternative shipping.
+
+The city has a rougher feel than Padena, more cosmopolitan and less concerned with tradition. Some of the wealthier Tornian refugees have settled here, bringing gold and connections that the locals view with mixed feelings.
+
+#### The Gnomestone Mountains
+
+The mountain range that defines Joswik's southern border, named for the gnome communities that supposedly dwelt here before humans arrived. Whether gnomes ever lived here is debatable; the stone formations that look like gnome-carved structures might just be unusual geology.
+
+What's not debatable is the wealth. Iron and copper seams run through these mountains, and mining towns dot the valleys and passes. The mountain lords have always been semi-independent, paying taxes to whoever rules in Padena but governing their own affairs.
+
+##### Mining Towns
+
+Scattered through the mountains, connected by difficult roads that become impassable in winter. Each town clusters around its mine—iron from the deep veins, copper from the surface deposits, stone from quarries that have operated for generations. The miners are tough, insular, and suspicious of lowland politics.
+
+#### The Oshkensi Plateau
+
+A vast grassland plateau in the southwestern interior, rising above the surrounding valleys like a table set for giants. The herders who live here raise sheep and cattle in numbers that feed much of Ofrenia—or did, before the war disrupted everything.
+
+##### Meadow of Laughing
+
+A strange region in the Oshkensi Plateau where the grass grows in patterns that, viewed from the right angle, look like faces frozen in mirth. The herders avoid building here, though they graze their animals through. Local legend claims the meadow marks a mass grave from some ancient conflict, and the dead are laughing at the living.
+
+##### Myrnol's Tower
+
+A ruined wizard's tower on the edge of the plateau, overlooking the southwestern coast. Myrnol was supposedly a sage who withdrew from the world centuries ago to study the stars. The tower is crumbling now, picked over by treasure hunters, but locals claim lights still appear in the upper windows on moonless nights.
+
+#### Northern Settlements
+
+##### Trenton & Greymill
+
+Market towns in the northern valleys, serving the agricultural heartland. Grain from these regions once flowed north to Tornia; now it feeds refugees and fills storehouses against uncertain times.
+
+##### Sculpton
+
+A town in the northern hills known for its stone carvers. Decorative stonework from Sculpton adorns buildings across Ofrenia—or did, when trade flowed freely.
+
+#### Eastern Coast
+
+##### Shardak
+
+A fishing town on the eastern coast, named for the sharp rocks that make its harbor treacherous for unfamiliar sailors. The locals navigate by memory and childhood practice; outsiders hire pilots or risk their hulls.
+
+#### Southern & Southwestern Regions
+
+##### Canfaldo, Banksted, Clifton
+
+A chain of towns along the southern foothills, connecting the mining regions to the coast. Each has its specialty—Canfaldo processes ore, Banksted handles banking and contracts for the mines, Clifton serves as the gateway to the mountain passes.
+
+##### Ellismare
+
+A town in the southwestern interior, at the base of the Oshkensi Plateau. Livestock markets here draw herders from across the plateau for seasonal sales.
+
+##### Osperton & Dagmanton
+
+Coastal towns in the far southwest, looking out toward the open Middle Sea. These are quiet places, more concerned with fishing and local affairs than the great conflicts to the north.
+
+##### Welldale & Pasterton
+
+Southern settlements near the coast, farming communities that have escaped the worst disruption of the war. For now.
+
+#### The Gulf of Joswik
+
+The waters south of Joswik's eastern coast, opening into the Middle Sea. The gulf provides sheltered waters for fishing and coastal trade, though the recent disruptions have reduced traffic. Valeria commands the best harbor, but smaller ports dot the coastline.
+
+#### The Passage
+
+The strait separating Joswik from Tornia to the north, and from Myastor's island to the east. The Passage has always been contested water—whoever controls it controls traffic between Ofrenia's kingdoms. With Alisandra holding Tornia, the Passage has become a flashpoint. Joswik's few naval vessels patrol nervously, waiting for Sylke's fleet to make a move.
 
 ### Kalemeydani
 
@@ -757,7 +1086,61 @@ TODO
 
 Tags: state, nation
 
-TODO
+A desert kingdom on the southern Middle Sea coast, ruled by King Salomor and his legendary summoning ring. Famous for producing the finest glass in Alaria. A rigid caste system keeps the nobility wealthy and the laborers trapped.
+
+South of Glorin, southwest of Zintacas. The interior is the Jahazai Desert—harsh, ancient, and full of buried ruins.
+
+#### Urzahd
+
+The capital, in the northwest where the river from Glorin provides life. Seat of King Salomor's court and home to the finest glass workshops in the world. The nobility live in elegant estates; laborers crowd the outer districts.
+
+#### The River Settlements
+
+Most of Kazül's population lives along the river that flows from Glorin. Settlements stretch up the river valley almost to Glorin's border: Sigiel, Duhkmayas, Shohas, Malki, and others. Without the river, the interior would be uninhabitable.
+
+#### Gulf of Kazül
+
+The western coastline, where fishing villages and small ports connect Kazül to sea trade.
+
+#### Peecked Hills
+
+Western hills between the coast and the desert interior.
+
+#### Jahazai Desert
+
+The vast interior desert. Harsh, beautiful, deadly. Ancient ruins lie buried beneath the sands—remnants of civilizations that existed before the desert claimed the land. Treasure hunters venture in; many don't return.
+
+#### Towers of Ederhi
+
+Ancient spires of fused glass rising from the Jahazai sands. No one knows who built them. The glass is unlike anything modern artisans can produce—harder, clearer, faintly luminescent at night. No entrance has ever been found. The towers remain a mystery.
+
+#### Bhutag
+
+A town in the eastern desert near the coast, built atop millennia-old catacombs. The locals avoid the deeper tunnels. Artifacts occasionally emerge from the depths, sold to collectors who don't ask questions about what else might be down there.
+
+#### Boxwatch
+
+A settlement in the western hills, overlooking the Gulf of Kazül.
+
+#### Dygalva & Seneka
+
+Northern settlements along the river, closer to Glorin.
+
+#### Buffalo Islands
+
+An archipelago offshore to the south, in the waters between Kazül and Okesha's Passage.
+
+#### Okesha's Passage
+
+The waterway on the northwest side of Erpeus Island, connecting different parts of the Middle Sea.
+
+#### Pavik's Cave
+
+A coastal cave system on the western shore, near the Gulf of Kazül. Local legends speak of something living in the depths.
+
+#### Porizzon Island
+
+An island offshore to the southwest.
 
 ### Lier
 
@@ -797,6 +1180,49 @@ TODO
 
 Cursed palace of old king of Mkinti. Extremely valuable treasury, cursed as hell. Gnomes don't dare to go near it.
 
+### Morgnor's Cradle
+
+Tags: state, nation
+
+The domain of Morgnor, an ancient earth-attuned dragon who rules over Etherweaver goblins in the mountains northwest of Thespia. The goblins mine precious metals and enchant them for the dragon's ever-growing hoard.
+
+Very rich. Very greedy. Very dangerous.
+
+#### Morgnor
+
+The dragon's lair and the central settlement that shares his name. Built into the mountainside, the lair contains Morgnor's legendary hoard—generations of mined gold and enchanted items. The goblins live in warrens surrounding the lair, always within call of their master.
+
+#### Morgnor's Cradle
+
+The central mountain region where the dragon makes his home. The peaks here are rich with precious metals, and Morgnor can sense every grain of gold in his domain.
+
+#### Hills of Red Gold
+
+The southern slopes, where most mining occurs. Rich veins of gold give the hills their name—and their value. Etherweaver goblins work the mines constantly, extracting wealth for the dragon's hoard.
+
+#### Mt. Kazlos
+
+A major peak in the eastern part of the domain.
+
+#### Mt. Thryke
+
+A peak in the southwestern part of the domain.
+
+#### Goblin Settlements
+
+Mining and crafting towns scattered through the mountains: Lagunas, Shegaat, Dir, Addis, Norwun, Scuilli, Telleni, Goldir. Each serves the dragon, mining or enchanting as their skills dictate.
+
+#### The Etherweaver Crafters
+
+The goblins here are Etherweavers—born with attunements to time, void, force, light, or dark. They use these abilities to enchant the metals they mine, creating items of considerable power. All of it goes to Morgnor's hoard.
+
+#### Borders
+
+- **East**: Thespia (formerly paid tribute; Queen Akta has stopped)
+- **Southeast**: Glorin (hiding massive gold wealth; Morgnor has noticed)
+- **Northwest**: Deadwalk (wasteland)
+- **North**: Mountains continuing toward the coast
+
 ### Murder Hills
 
 Tags: hills, geography
@@ -809,9 +1235,75 @@ TODO
 
 Tags: state, nation
 
-A state on Paluva Amoti.
+Myastor occupies Paluva Amati, a scrubby island in the Ofrenia Passage between Ofrenia proper and the Middle Sea beyond. The landscape is uninspiring—rocky coasts, thinning forests, and scrubland that never quite becomes grassland. The island exists because ships need somewhere to stop, and Myastor has grudgingly filled that role for generations.
 
-TODO
+Under Queen Alisandra's rule, Myastor has become Sylke's dumping ground. Political prisoners, failed courtiers, and anyone the queen wants forgotten end up here. The population has made the best of it, building a grim economy around human misery and passing trade.
+
+#### Shipton
+
+The capital—if a town of a few thousand can claim that title. Shipton clusters around the best natural harbor on the island, a sheltered bay on the western coast facing Ofrenia. The waterfront is busy with transient ships; the inland streets are quiet and suspicious.
+
+The governor's residence is the largest building in town, a weathered stone structure that once served as a warehouse. Governors come and go—Alisandra rotates them frequently, ensuring no one builds a power base—but the bureaucracy grinds on regardless.
+
+The prison complex sprawls along the northern edge of town, repurposed warehouses surrounded by walls that look impressive but wouldn't stop a determined escape. The prisoners don't try because there's nowhere to go. Swimming to Ofrenia is suicide; stowing away on a ship requires bribing sailors who'd rather collect the reward for turning you in.
+
+#### Telara
+
+A secondary port on the eastern coast, smaller and rougher than Shipton. Ships that want to avoid attention—smugglers, pirates looking to fence goods, merchants carrying questionable cargo—often prefer Telara's lack of oversight. The town's unofficial motto is "we don't ask."
+
+#### Partsmouth
+
+An interior settlement surrounded by what remains of the island's forests. Logging operations here supply timber for ships and construction, though the trees are thinning and no one invests in replanting. The workers are mostly transported criminals serving out sentences; the overseers are mostly locals who've concluded that guarding lumberjacks beats guarding prisoners.
+
+#### Pasterton
+
+A fishing village on the southern coast, as far from Shipton as you can get without swimming. The residents here are the closest thing Myastor has to old families—people whose ancestors settled the island before it became a penal colony. They keep to themselves, sell fish to whoever's buying, and pretend the rest of the island doesn't exist.
+
+#### The Interior
+
+Scrubland and second-growth forest, crisscrossed by rough paths connecting the settlements. Nothing of value grows here naturally; nothing planted survives the poor soil and irregular rainfall. The interior is used for grazing goats, hiding from authority, and burying things that shouldn't be found.
+
+Escaped prisoners occasionally flee into the interior. They're rarely pursued—the island is small enough that they'll emerge eventually, hungry and desperate. The locals have learned to report sightings rather than risk confrontation.
+
+#### The Ofrenia Passage
+
+The strait between Paluva Amati and Ofrenia, connecting the Gulf of Joswik to the open Middle Sea. Control of the Passage has always been contested—now that Alisandra holds both Sylke and Tornia, she effectively controls both ends. Joswik's few ships and the island's fishing boats are the only traffic she doesn't command.
+
+The Passage is dangerous in storms; ships shelter in Shipton's harbor until weather clears. This forced hospitality is Myastor's primary source of legitimate income—provisioning, repairs, and entertainment for bored sailors waiting out bad seas.
+
+### Myorna
+
+Tags: state, nation
+
+A Sivakr (Silver Elf) kingdom in the Grey Mountains, a sub-range of the southern Kharvorn. The Sivakr spent thousands of years underground before emerging fifty years ago to trade with the surface world. It's going poorly.
+
+Borders Camaran (southeast), Erasnus (southwest), and barely touches Hephake (northwest). Member of the Aldriktch Trade Alliance, though neighbors are turning hostile as they discover the truth about Sivakr memory manipulation.
+
+#### Vad Ilghak
+
+The capital city, built into the Grey Mountains. A vertical city of stone, carved chambers, and passages leading deep underground to the old warrens. Home to the royal palace, the great memory libraries, and the massive Deoric library—one of the largest collections of sacrifice-based magical texts in existence.
+
+#### Urkhuk
+
+The second major city, positioned closer to the Erasnun border. More surface-oriented than Vad Ilghak, with Sivakr who've begun assimilating into surface culture. A point of tension between those who want to stay and those who want to return underground.
+
+#### The Forbidden Valley
+
+A massive, impossibly deep valley north of Vad Ilghak. At its bottom, the Sivakr keep a chained giant in perpetual captivity, extracting blood sacrifices to power all Sivakr mind magic. A colossal statue of Tiira overlooks the valley—their patron goddess, cultivated (some say brainwashed) to serve Myornan interests.
+
+Access is forbidden to all but the highest-ranking Sivakr. Outsiders who learn of it rarely live long enough to spread the knowledge.
+
+#### The Stone Slums
+
+Foggy districts of flat, slate-built, short buildings where the poor of Myorna make their homes. Without paper records, the inhabitants slip through the system of control. This is where golems were first discovered and built—and where unsavory characters find refuge from Sivakr society.
+
+#### The Grey Mountains
+
+The sub-range of the Kharvorn where Myorna is situated. The mountains contain extensive underground complexes—remnants of thousands of years of subterranean civilization. Many passages remain unexplored or sealed.
+
+#### The Underground
+
+Most Sivakr still live partially underground, in warrens and complexes connected to the surface cities. The old ways persist. Some want to seal the surface entrances and return to isolation; others see the underground as backwards and want full integration with the surface world.
 
 ### Myrnal's Tower
 
@@ -1013,7 +1505,37 @@ Abandoned fortress of stone. You can't die (you don't age normally) while inside
 
 Tags: state, nation
 
-TODO
+An Ezuri (Tree Gnome) gerontocracy in the forests along the Chedwin Strait. The entire country is ancient woodland where gnomes live in tree-settlements and can survive for 500 years—so long as they never leave.
+
+East of Thespia, north of Zintacas, with coastline along the Chedwin Strait.
+
+#### Atra
+
+The capital, such as it is—the largest tree-settlement in Stipen. Home to the council of elders who govern the forest realm. Built into and around massive ancient trees, with bridges and platforms connecting homes high above the forest floor.
+
+#### Teleriwood
+
+The western forest, bordering Thespia. Older, denser, with the most ancient trees. This is where the deepest parts of Stipen lie—and where the controversial psychedelic flora grows.
+
+#### Schousterwood
+
+The eastern forest, closer to the coast. Slightly younger growth, more connected to the outside world through coastal trade (what little exists).
+
+#### Shamwet
+
+A tree-settlement in the northern part of Stipen, near the Chedwin Strait coast.
+
+#### Kestrel
+
+Another tree-settlement, positioned between the two forests.
+
+#### The Lizard's Back
+
+A geographic feature along the southern border with Zintacas—a ridge or rocky formation marking the edge of Stipen's forests.
+
+#### The Living Forest
+
+The forest itself is Stipen's greatest defense. The Ezuri are so integrated with the trees that the woodland fights for them—roots trip invaders, branches strike, paths shift and confuse. No army has ever successfully invaded Stipen. Most don't try.
 
 ### Straker
 
@@ -1071,9 +1593,65 @@ At the center of the arena stands an ancient altar. Anyone who swears to tell th
 
 Tags: state, nation
 
-A state on Ofrenia.
+Sylke occupies western Ofrenia, a land of dense forests, swift rivers, and a population that has learned to keep its head down. The Gilded Pass ley line runs through the territory—ironic, given how little gilding reaches the common folk. The landscape is beautiful in a dark, brooding way: ancient trees blocking the sun, mist rising from river valleys, and roads that are well-maintained but rarely traveled by choice.
 
-TODO
+Queen Alisandra rules from Helmsbridge with absolute authority. The forests that once made Sylke the poorest of Ofrenia's three kingdoms now fuel an economy of lumber, ships, and darker exports. Since conquering Tornia, Alisandra controls two-thirds of the island—and the remaining third watches in terror.
+
+#### Helmsbridge
+
+The capital city, built where a major river crosses from the interior to the western coast. The bridge that gives the city its name is ancient—pre-dating the current kingdom by centuries—and wide enough for four wagons abreast. The royal palace sits on a bluff overlooking the bridge, positioned to watch everything that crosses.
+
+The city is orderly, clean, and oppressively quiet. Citizens go about their business efficiently and speak to strangers only when necessary. The informant network that keeps Alisandra in power is headquartered here, though no building bears that label.
+
+#### Scarnett
+
+The second city, a logging hub in the southern forests near the Joswik border. Massive timber operations feed sawmills that run day and night. The workers here are rough, practical folk—they care about getting the job done and avoiding the queen's attention.
+
+Since the conquest of Tornia, Scarnett has also become a staging ground for military operations. Troops rotate through on their way to occupation duty in the east.
+
+#### Northern Settlements
+
+##### Shimmercreek Falls
+
+A town built around a dramatic waterfall where a river tumbles off the northern highlands. The falls are genuinely beautiful—one of the few places in Sylke where people might visit for pleasure rather than business. Mills powered by the falls produce flour and lumber.
+
+##### Seavault
+
+A northern coastal town with a natural harbor protected by rocky headlands. The name comes from sea caves in the cliffs where, according to legend, pirates once hid treasure. Whether any treasure remains is anyone's guess.
+
+##### Cat Fell
+
+A highland settlement in the northwestern hills, named for the wildcats that roam the surrounding moors. The population is small and insular, more concerned with their sheep than with politics in distant Helmsbridge.
+
+#### Western Coast
+
+##### Fool's Keep
+
+A crumbling fortress on the western coast, now serving as a minor garrison and watchtower. The name supposedly comes from a lord who tried to hold it against the old king generations ago—a fool's errand that ended predictably.
+
+##### Exralhorn
+
+A coastal town where fishing and shipping combine. Small vessels carry lumber down the coast to larger ports; fishing boats bring in catches that feed the interior towns.
+
+#### Interior & Southern Regions
+
+##### Mapleburg
+
+An interior town surrounded by managed forests, particularly maple groves tapped for syrup. The town has a sweetness to it—literally—that feels incongruous with Sylke's general grimness. The locals take quiet pride in their product.
+
+##### Bridgeton
+
+A town at the junction of Sylke, Tornia, and Joswik—strategically vital and heavily garrisoned even before the current war. Now it serves as the command post for occupation forces moving into Tornia. The civilian population has largely fled or been conscripted into support roles.
+
+#### The Forests
+
+Sylke's interior is dominated by ancient forest—dense canopy, limited undergrowth, and trees that have grown for centuries under careful management. The lumber is Sylke's primary export, and the forestry operations are ruthlessly efficient.
+
+Deeper in the woods, things get stranger. The Gilded Pass ley line creates pockets where reality behaves oddly—time moves differently, directions shift, and travelers find themselves somewhere they didn't intend. The foresters know which areas to avoid. Outsiders learn the hard way.
+
+#### The Tykon Channel
+
+The waters west of Sylke, separating Ofrenia from the mainland. Sylke's growing navy patrols these waters, and Alisandra has ambitions to control all shipping through the channel. For now, she lacks the vessels—but with Tornia's captured fleet, that's changing.
 
 ### Ta Akikis
 
@@ -1085,7 +1663,45 @@ TODO
 
 Tags: state, nation
 
-TODO
+An Oznak horse theocracy on the western Middle Sea coast—vast grassy steppes ruled by the Kazigh, the chief horse shaman. The Ta Minn are proud cavalry warriors who once expanded freely across the plains before running into neighboring civilizations.
+
+West of the Crags of Geth (Griselia), south of the Browthiel Hills, with a jagged coastline along the Middle Sea to the south.
+
+#### Büüli Umén
+
+The capital, located in the central plains. Site of the great temple where the Kazigh rules, attended by servants selected through horse ritual and killed at age 30. The spiritual and political heart of Ta Minn.
+
+#### Ta Akikis
+
+Western city, closer to the coast and the border with Thespia.
+
+#### Toh Hural
+
+Northern city, positioned near the contested border with Anarak. A military staging ground for the ongoing skirmishes over the northern plains.
+
+#### Avar Sonnon
+
+Eastern city, near the Crags of Geth and Griselia. Deals with occasional goblin incursions (theatrical or otherwise).
+
+#### Limoste
+
+Southwestern coastal city on the Chedwin Strait. Ta Minn's main port and connection to sea trade.
+
+#### Kanüli Daha Plains
+
+The northern plains—flat, fertile, windswept, and contested. A river flows from Anarak through a gap between the Kharvorn and Griselia mountains, providing a route for Anarak forces. This is where the two nations fight.
+
+#### Cercesa Plains
+
+The southeastern plains, between Büüli Umén and the coast. Less contested than the north, more pastoral.
+
+#### The Chedwin Strait
+
+The strait along Ta Minn's southwestern coast, separating the mainland from islands and connecting to the broader Middle Sea.
+
+#### The Wind-Touched Plains
+
+The entire steppe is slightly magical. Wind attunement seeps into the land, the horses, and the people. Products made here carry faint enchantments of speed and air. The Ta Minn cavalry seem to ride faster than physics should allow.
 
 ### Telphineas Strait
 
@@ -1127,7 +1743,39 @@ TODO
 
 Tags: state, nation
 
-TODO
+A human agricultural kingdom in chaos. Recently seized by Queen Akta, a mad mercenary sorceress from the south. The kingdom lives in the shadow of Morgnor, King of the Mountains, whose dragon territory lies to the northwest.
+
+East of Morgnor's mountains, north of Glorin, west of Stipen, southwest of Ta Minn.
+
+#### Geordon
+
+The capital, in the center of Thespia. Currently under Akta's erratic rule. The royal palace has become her seat of power—and reportedly a site of strange magical experiments.
+
+#### The Salty Hills
+
+A range of hills running north-south through the center of Thespia, dividing the western farmlands from the eastern settlements closer to Stipen.
+
+#### Western Settlements
+
+Waterrun, Amerstad, Telford, Yunbery, and Cricklade lie in the western part of Thespia, closer to the dragon mountains. These towns live in Morgnor's shadow and have historically been the most cautious about provoking him.
+
+#### Northern Settlements
+
+Dadleigh and Syozlus in the north, near the border with Ta Minn.
+
+#### Eastern Settlements
+
+Tutton and Embrulton in the east, closer to Stipen and the coast. More connected to outside trade.
+
+#### Southern Settlements
+
+Ronnymede, Wediton, Everdein, Camerdon, Lewes, and Fellsay in the south, bordering Glorin.
+
+#### The Dragon Shadow
+
+Northwest of Thespia lies Morgnor's Cradle—the mountain territory of Morgnor, King of the Mountains. The Hills of Red Gold and Mt. Kazlos mark the edge of his domain. Thespia has always paid tribute and kept a small army to avoid his wrath.
+
+Queen Akta has not continued the tribute. The dragon has not yet responded.
 
 ### Tiber's Passage
 
@@ -1145,9 +1793,99 @@ TODO
 
 Tags: state, nation
 
-A state on Ofrenia.
+Tornia occupies the northern portion of Ofrenia, the strategic island at the heart of the Middle Sea. Once the seat of a united island kingdom, it's now occupied territory—conquered by Queen Alisandra of Sylke in a swift, humiliating war. The landscape is gentle—temperate forests, rolling farmland, and a dramatically broken coastline of peninsulas, bays, and sheltered harbors. Time and darkness ley lines cross the territory, and their influence bleeds into everything from the architecture to the local crime.
 
-TODO
+King Aldric, the former ruler, either fled or was captured when Sylke's armies swept through. The countryside now seethes with resistance against the occupation.
+
+#### Catalina
+
+The capital city, built on a river delta where it empties into Gem Crest Bay. Catalina sprawls across multiple islands and riverbanks connected by bridges—some ancient stone, others newer wood that sags and creaks. The old city shows its age in towering spires and weathered temples; the new city is all gambling houses and racing pavilions.
+
+The Gem Crest Races continue under occupation—Alisandra recognizes their value as distraction. On race days, the bay fills with spectator boats, and the city's population doubles with visitors. Sylke soldiers patrol the waterfront, and the atmosphere is carnival, rot, and simmering resentment in equal measure.
+
+##### Besnoumeru
+
+The merchant district of Catalina, technically a city-within-a-city. The architecture here is gorgeous—centuries of accumulated wealth expressed in carved facades, gilded domes, and private gardens visible through wrought-iron gates. Rent is impossibly expensive. The traders who operate here predict market shifts with uncanny accuracy.
+
+Beneath the beauty, time-gangs rule. These criminal organizations use temporal manipulation to maintain iron control over commerce and politics. They emerged from the pre-human ruins beneath the district—tunnels and chambers that predate any known civilization, where temporal magic pools in strange eddies. The gangs have barely scratched the surface of what those ruins contain.
+
+The occupation has barely touched Besnoumeru. The time-gangs play both sides—selling intelligence to Sylke authorities while quietly supporting rebels who can pay. They're positioning themselves to emerge from the chaos as the real power in Tornia, whoever nominally rules.
+
+#### Gem Crest Bay
+
+The bay south of Catalina, site of the famous (and infamous) Gem Crest Races. The water is deep, the currents complex, and the racing course winds through natural obstacles and artificial markers. On race days, water-attuned mages secretly propel favored vessels while betting houses collect fortunes from rigged outcomes.
+
+The bay earned its name from the way sunlight catches mineral deposits in the cliffs—a glittering display at dawn and dusk that looks almost magical.
+
+#### Mithras
+
+A secondary city on the southern peninsula, overlooking the Passage. More honest than Catalina—Mithras still functions as a working port rather than a gambling den. Shipwrights here build vessels for merchants who'd rather avoid the capital's corruption.
+
+The occupation presence is lighter here, and resistance networks operate more openly. Refugees heading to Joswik often depart from Mithras rather than risk Catalina's checkpoints.
+
+#### Northern Coast
+
+The northern reaches of Tornia are wilder and less developed than the south. Occupation forces are thin on the ground here, and the locals largely ignore their nominal rulers—old habit, whether the ruler is Aldric or Alisandra.
+
+##### Northpoint
+
+The northernmost settlement, a fishing town on a rocky promontory. Cold winds off the Middle Sea make winters harsh. The locals are practical folk who viewed King Aldric's southern decadence with contempt and view Alisandra's occupation with the same.
+
+##### Highwater & Lowwater
+
+Twin towns on opposite banks of a tidal estuary. Highwater sits on the bluffs; Lowwater floods at king tides and has adapted accordingly—buildings on stilts, boats tied to second-floor balconies. The rivalry between them is generations old and mostly friendly.
+
+##### Port Edott
+
+A western harbor town, primary departure point for ships heading to the mainland. More traffic passes through here than the town's size would suggest. Sylke maintains a garrison to monitor shipping; the locals resent it but comply.
+
+##### Gerstown Rapids
+
+An inland town where a river tumbles through rocky narrows. Mills and workshops cluster along the rapids, using the water power.
+
+#### Central Settlements
+
+##### Ryerton & Bexley
+
+Market towns in the agricultural heart of Tornia. The farmland here is rich, and these towns serve as collection points for grain and produce—now requisitioned by occupation authorities at "fair" prices that aren't.
+
+##### Ylidor
+
+An eastern town near the broken coastline. Known for its smoked fish and quiet contempt for whoever rules in Catalina.
+
+#### Southern Region
+
+##### Oakheart
+
+A town near Blue Lake, surrounded by old-growth forest. Timber from here once built Ofrenia's united fleet.
+
+##### Blue Lake
+
+A large freshwater lake in southern Tornia, fed by streams from the interior. The water is startlingly clear—you can see the bottom even at considerable depth. Old stories claim things move in the deep water that shouldn't be there.
+
+##### Meadowlea, Goodlawn, Tall Woods
+
+A cluster of towns that were on the Sylke border—now in the interior of occupied territory. These communities saw the invasion firsthand and harbor deep resentments. Resistance cells are active here, drawing on local knowledge of the terrain.
+
+##### Blank Point, Thenbury, Minos
+
+Southern settlements near the Passage. Refugees fleeing to Joswik often pass through here, and the locals have developed a quiet trade in smuggling people past occupation checkpoints.
+
+#### Forests
+
+##### Glowbud Forest
+
+Once a peaceful woodland north of Catalina, now a death trap. Jaguars from the royal menagerie escaped captivity years ago and established themselves here. The great cats have grown bold and dangerous, actively hunting humans who enter. The forest earned its name from bioluminescent fungi that glow faintly at night—a beautiful sight, if you survive long enough to see it.
+
+Occupation forces avoid Glowbud Forest. Rebels sometimes use its edges as refuge, accepting the risk of jaguars over the certainty of Sylke patrols.
+
+##### Shadewood Forest
+
+A darker, older forest in the interior. The tree canopy is dense enough to block most sunlight, leaving the forest floor in perpetual twilight. Local legend claims the darkness ley line surfaces here, and shadow-touched creatures roam the deeper woods.
+
+#### The Western Border
+
+What was once the border with Sylke is now just territory. Stannac Gate and Watertown, formerly fortified crossing points, now serve as administrative centers for the occupation. Sylke troops move freely between the kingdoms, and the border exists only in memory and resentment.
 
 ### Trader's Alley
 
@@ -1169,7 +1907,43 @@ TODO
 
 Tags: state, nation
 
-TODO
+A Uline dwarf nation in the mountains of the Middle Sea coast, between Camaran and Bestacia. Once a prosperous mining state, now a nightmare. The silvertongue outbreak has turned half the population into mercury-mouthed cannibals, and the infection is spreading.
+
+Member of the Aldriktch Trade Alliance, though the alliance is buckling under the crisis. Refugees flood neighboring states. Silvertongues raid across borders. No cure exists.
+
+#### Grothak
+
+The capital, built into a mountainside. Partially evacuated—the wealthy fled south with their gold, leaving the poor to fend for themselves. The lower districts are dangerous; silvertongue incursions happen weekly. What remains of the government operates from fortified upper levels.
+
+#### The Northern Mines
+
+Where the outbreak began. Dozens of mining settlements, now silent or overrun. This is where Slick Silver was first discovered—a shimmering, mercury-like mineral in the deepest tunnels. The mines are considered lost. Anyone who enters doesn't come back.
+
+The silvertongues nest here in growing numbers, emerging to raid the surface when hungry.
+
+#### The Southern Mines
+
+Still operational, barely. Refugees and remaining miners have fortified these settlements, hoping the infection hasn't spread this far. Paranoia is extreme—anyone showing signs of silver in their mouth is killed immediately. Some innocent dwarves have been murdered over dental fillings.
+
+#### Slick Silver
+
+A corrupted mineral, liquid-metallic and shimmering. Those who see it feel compelled to touch it. Those who touch it feel compelled to taste it. Those who taste it transform.
+
+The silver coats the mouth first—teeth and tongue gleaming metallic. Then it spreads through the blood. Veins turn silver beneath the skin. The eyes go mirror-bright. Reason dissolves into hunger.
+
+Silvertongues are cunning hunters. They ambush, overwhelm, and force Slick Silver down their victims' throats to spread the infection. They retain enough intelligence to use tools and set traps.
+
+No cure is known. The infected cannot be reasoned with. Fire works, but silvertongues are fast and travel in packs.
+
+#### The Refugee Camps
+
+Along Ubrik's southern and western borders, desperate camps have formed. Thousands of dwarves with nothing, waiting to be allowed into Bestacia or Camaran. Conditions are terrible. Disease (normal disease, not silvertongue) spreads easily. Some refugees have been stuck in camps for months.
+
+Host countries are hostile. Rumors that any Ubrik dwarf might be secretly infected have led to violence and discrimination.
+
+#### The Border Crisis
+
+Silvertongues don't respect borders. Raiding parties have struck into Bestacia and eastern Camaran. Both countries are fortifying their borders and demanding Ubrik "contain" the problem—but Ubrik's government barely exists anymore. The alliance is fracturing over who bears responsibility and who should commit troops.
 
 ### Ulm
 
@@ -1237,7 +2011,43 @@ Water magically evaporates here—not just because it is hot. It won't last more
 
 Tags: state, nation
 
-TODO
+A Dwarblin merchant state on a peninsula in the western Middle Sea. Northwest of the Telphineas Strait, south of Erasnus, with Echea at the peninsula's tip beyond them. Ruled by an oligarchy of trading families, Watar is scrappy, entrepreneurial, and hungry for more.
+
+Member of the Aldriktch Trade Alliance, though increasingly straining against it. Relations with Bestacia are worsening over control of the Telphineas Strait.
+
+#### Solera
+
+The capital, seat of the Soleri family. A bustling port city where deals are made in every tavern and warehouse. The harbor is crowded with merchant vessels; the streets are crowded with traders, sailors, and opportunists. Wealth is displayed openly—the Dwarblin have nothing to prove to anyone but themselves.
+
+#### Gravo
+
+Major city controlled by the Gravo family, on the eastern coast. More industrial than Solera—shipyards, workshops, and craftsmen producing the practical, unbreakable goods Dwarblin are known for. The Gravo family made their fortune in manufacturing and shipping.
+
+#### Madero
+
+Major city controlled by the Madero family, in the south near the strait. The most strategically positioned of the three cities, and the Madero know it. They've invested heavily in naval power and are the loudest voices pushing for strait control.
+
+#### The Coinspine Mountains
+
+The mountain range along Watar's western border. Named by Dwarblin merchants who saw the peaks as a spine of silver waiting to be mined—and mined it they did. The mountains yield iron, copper, and enough precious metals to fund the trading families' ambitions.
+
+#### Gleiwood Forest
+
+Forest in the east, inland from the coast. Managed for timber—Dwarblin shipyards have an endless appetite for wood.
+
+#### Forest of Durnos
+
+Southeastern forest, wilder than Gleiwood. Less economically developed; the Dwarblin haven't found a good reason to exploit it yet.
+
+#### Seabreach Forest
+
+Southern coastal forest, along the approach to the Telphineas Strait. Strategically important—whoever controls this coastline controls access to the strait from the north.
+
+#### Telphineas Strait
+
+The prize. This narrow passage connects the eastern and western Middle Sea. Watar is positioned northwest of it, Bestacia northeast (but blocked by mountains). Whoever controls the strait controls tariffs on half the sea trade.
+
+Watar has ships. Bestacia has lawyers. The situation is escalating.
 
 ### Wateytrdark
 
@@ -1257,7 +2067,45 @@ TODO
 
 Tags: state, nation
 
-TODO
+A tribal Gozi (Goshwen) nation in the canyon country south of Stipen. Red rock gorges, towering stone spires, mesas, and endless sky. Utah/Arizona vibes—harsh, beautiful, and deadly to outsiders who don't know the terrain.
+
+The Gozi fly on great raptors that hunt the canyons. Tribal society, no central government, deeply isolated, and they like it that way.
+
+#### The Sighing Canyons
+
+The central canyon system that gives Zintacas its character. Deep gorges carved by ancient rivers, now home to raptor nests and Gozi villages built into cliff faces. The wind through the canyons creates an eerie sighing sound—hence the name.
+
+#### The Lizard's Back
+
+A ridge formation along the northern border with Stipen, marking the transition from forest to canyon country.
+
+#### Clay Hills
+
+Rolling hills in the eastern part of Zintacas, less dramatic than the canyons but still harsh terrain.
+
+#### Tootby Hills
+
+Northwestern hills near the border with Thespia.
+
+#### Dzobi Lands
+
+Southwestern territory, bordering Kazül. The most remote part of Zintacas.
+
+#### Rompur Liko
+
+The site of the annual winter bazaar—a small island cliff connected to the surrounding canyon walls by rope bridges. Once a year, all tribes gather here to trade, celebrate, and renew bonds. Then they scatter back to their territories.
+
+#### Villages
+
+Scattered through the canyons: Nod, Tilik, Pil, Kilam, Shraz, Fimli, Hechaw, Shyat, and others. Most are built into cliff faces or perched on mesa tops—accessible primarily by raptor.
+
+#### The Raptors
+
+Great hunting birds, large enough to carry a gnome rider. Sacred to the Gozi, who breed and train them as partners rather than mounts. The raptors hunt the gorges for prey, and the Gozi hunt with them. To harm a raptor is to declare war on all tribes.
+
+#### The Canyon Defense
+
+Outsiders who enter Zintacas without invitation rarely survive. The terrain is lethal without local knowledge, and the Gozi on their raptors can strike from anywhere. No army has ever successfully invaded the canyon country. Most don't try.
 
 ## Kharvorn Mountains
 
@@ -1559,7 +2407,7 @@ Now the temple stands as a haunting reminder, its halls filled with the howling 
 
 #### Zhorheim Mountains
 
-Home to Pythlokravaleci, the dragon guardian of the Einwissel dwarves who traveled back from Celestia. The dragon can travel to Celestia easily as well. The dwarves know its true name, and vice versa—a foundation of enormous trust. Located in a mountain range forming part of the southwest side of the northlands, northeast of Ichneum (forest), marking the northern edge of the forest region.
+Home to Zorheim, the dragon guardian of the Einwissel dwarves who traveled back from Celestia. The dragon can travel to Celestia easily as well. The dwarves know its true name, and vice versa—a foundation of enormous trust. Located in a mountain range forming part of the southwest side of the northlands, northeast of Ichneum, marking the northern edge of the forest region.
 
 ### Chakatann
 
@@ -1927,6 +2775,10 @@ The peninsula and Celedrim Plains create a stepped geography—the plains occupy
 - **Plutochranes Forest**: Lies to the west of the peninsula, north of the Kharvorn sub-range Myorna
 - **Northern Isles**: The peninsula transitions into this archipelago as the land fragments into islands
 
+#### Notable Subregions
+
+- **Twilight Forest**: A vast, supernaturally darkened forest in the southeastern reaches of the peninsula, home to the Spindral (Quill Elves) who dwell in underground warrens beneath the cursed trees
+
 #### Climate
 
 The Frostmarch represents the edge of the arctic world. The northern part remains white and snowy year-round, while the southern edges show signs of brown, thawing terrain in warmer seasons. Ice gives way to earth here, but only barely.
@@ -1999,6 +2851,16 @@ TODO
 
 TODO
 
+### Shykasas
+
+Tags: state, nation
+
+A jungle state in the frozen wastes of the Frostmarch Peninsula—a unique geographical anomaly where tropical vegetation thrives despite the surrounding arctic conditions. Home to the Alekroin, massive alligator-folk whose predatory mindset and rigid traditions have allowed them to dominate this unusual environment for millennia.
+
+The state is ruled by an absolute monarchy, with the King of Shykasas commanding the six noble houses. Royal succession is determined before birth: an egg is selected from the King's brood and kept at a specific temperature, watched separately from its siblings. This chosen heir grows to become more powerful than any other Alekroin.
+
+Shykasas has few allies due to the nonsocial attitudes of its people, and interacts very little with the outside world.
+
 ### Sunglint
 
 A forest in the Frostmarch Peninsula.
@@ -2007,15 +2869,79 @@ TODO
 
 ### Twilight Forest
 
-Tags: forest
+Tags: forest, spindral, elves, darkness
 
-Home to the Spindral elves, as well as Uran of the Third Moon. Filled with terrifying monsters of darkness. Entire area is enchanted with dark—too dark for darkvision. Regular light is 1/4 as effective. No stars. Day time brightest it reaches is a dim-light.
+A vast forest shrouded in supernatural darkness in the southeastern reaches of the Frostmarch Peninsula. The Twilight Forest is one of the most dangerous and forbidding places in all of Clueanda—a realm where light itself has been cursed.
+
+#### Geography
+
+The Twilight Forest occupies the southern portion of the Frostmarch Peninsula, stretching across the southeastern end where the land begins its final descent toward the frigid waters. Unlike the snow-blanketed terrain of northern Frostmarch, the forest floor here is carpeted in black moss and fungal growth that thrives in the perpetual gloom.
+
+The trees themselves are ancient—gnarled pines and twisted oaks that have adapted to the darkness over millennia. Their bark is nearly black, and they grow in dense, suffocating thickets that block what little light manages to penetrate the magical shroud above.
+
+#### The Eternal Twilight
+
+The entire forest is enchanted with an oppressive darkness that defies natural law:
+
+- **Light Suppression**: Regular light sources produce only one-quarter their normal illumination. A torch that should light a 40-foot radius barely reaches 10 feet.
+- **Void-Deep Dark**: The darkness is too profound for darkvision to penetrate—creatures relying on it see nothing but impenetrable black.
+- **Starless Sky**: No stars are visible above the forest, even on the clearest nights. The sky appears as a featureless void.
+- **Perpetual Dusk**: At its brightest—high noon on a cloudless day—the forest reaches only dim-light conditions.
+
+The source of this curse is unknown, though some scholars believe it may be connected to Ural of the Third Moon's presence, while others claim the dragon was drawn here *because* of the existing darkness.
+
+#### The Spindral
+
+The Twilight Forest is home to the Spindral—the Quill Elves who fled underground generations ago to escape the dragon Ural of the Third Moon. Their ancestors sought refuge in the deep cavern systems beneath the forest floor, and over time they became creatures of shadow themselves.
+
+The Spindral have fully adapted to life in perpetual darkness. Their midnight-black quills absorb what little light exists, and they have developed echolocation and Void-touched senses that function where eyes cannot. They venture to the surface only to hunt the forest's monstrous denizens and to maintain watch for signs of their ancient draconic enemy.
+
+Spindral settlements exist entirely underground in carved warrens that honeycomb the bedrock beneath the forest. These communities are fiercely territorial—other underground races have learned that trespassing into Spindral territory is suicide.
+
+#### Monsters of the Dark
+
+The Twilight Forest teems with creatures that have evolved—or been twisted—to thrive in magical darkness:
+
+- Shadow-stalkers that move unseen even by those with supernatural sight
+- Eyeless predators that hunt by sound and tremor
+- Void-touched beasts bleeding darkness from open wounds
+- Things that were once other creatures before the dark changed them
+
+The Spindral are among the few beings capable of surviving here, and even they travel in groups and maintain constant vigilance.
+
+#### Ural of the Third Moon
+
+The dragon Ural of the Third Moon dwells somewhere in or near the Twilight Forest, though its exact lair remains unknown. This creature of darkness drove the Spindral ancestors underground and continues to cast its shadow over the region. The Spindral believe Ural will one day return in force, and they prepare endlessly for that reckoning.
+
+See [Ural of the Third Moon](Ural%20of%20the%20Third%20Moon.md) for more information.
 
 ### Ural of the Third Moon
 
-A dragon of the Frostmarch Peninsula.
+Tags: dragon, frostmarch, twilight forest
 
-TODO
+A dragon of legendary menace that haunts the Twilight Forest in southeastern Frostmarch Peninsula. Ural is a creature of darkness and shadow, and its presence has shaped the history of this region for centuries.
+
+#### The Spindral Exodus
+
+Generations ago, when the ancestors of the Spindral still lived above ground in the Twilight Forest, Ural descended upon them with devastating fury. Unable to face the dragon's power in open battle, the elves fled underground, abandoning their surface settlements and carving out a new existence in the caverns beneath the forest floor.
+
+The Spindral have never forgiven this displacement. They maintain an eternal vigil, watching for signs of Ural's movements, preparing for the day when they might have a chance at vengeance—or when the dragon might seek to finish what it started.
+
+#### Nature and Appearance
+
+Little is confirmed about Ural's true form. The darkness of the Twilight Forest and the dragon's apparent mastery of shadow make reliable accounts scarce. What survivors describe:
+
+- Scales that seem to drink in light rather than reflect it
+- Eyes that glow with a cold, moonlike luminescence
+- An ability to move through the darkness as if it were water
+
+The epithet "of the Third Moon" remains unexplained. Some scholars theorize it refers to an ancient calendar, a cosmic alignment, or perhaps something the dragon consumed or destroyed long ago.
+
+#### Current Status
+
+Ural's exact lair and current activities are unknown. The dragon has not been seen in force for decades, though the Spindral report periodic signs of its presence—strange darkness even by Twilight Forest standards, the distant sound of massive wings, prey animals found drained of something more than blood.
+
+Whether Ural sleeps, schemes, or simply waits is a question that keeps the Spindral ever-watchful.
 
 ### Valley of Thagrund
 
@@ -2208,8 +3134,8 @@ Scattered throughout the Northlands are several Titanwurm mountain ranges—isol
 
 - Melrin Mountains
 - Gwyndolsong Mountains
-- Wurmspine Mountains
-- Sotori Mountains (south of Wurmspine and Jemco, just north of the eastern Krenglelan Range)—composed of the colossal vertebrae of a titanwurm
+- Wurmling Mountains
+- Sotori Mountains (south of Wurmling and Jemco, just north of the eastern Krenglelan Range)—composed of the colossal vertebrae of a titanwurm
 - Jemco Mountains
 
 ### Political Climate
@@ -2228,7 +3154,7 @@ TODO
 
 #### The Northern Plains
 
-The vast frozen grasslands that stretch between the Titanwurm mountain ranges, west of the Wurmspine Mountains and south of the Gwyndolsong Mountains. The Beathamuir River cuts horizontally through the entire Northern Plains, one of the few sources of unfrozen water in this frozen realm.
+The vast frozen grasslands that stretch between the Titanwurm mountain ranges, west of the Wurmling Mountains and south of the Gwyndolsong Mountains. The Beathamuir River cuts horizontally through the entire Northern Plains, one of the few sources of unfrozen water in this frozen realm.
 
 ##### Circle of Stone
 
@@ -2252,13 +3178,13 @@ In the eastern region of the Nysanna Range stands one of the most bizarre landma
 
 The serpent was once a living creature of unimaginable size, turned to stone by an incredibly powerful gorgon in an ancient battle. Over the centuries, miners have hollowed out the serpent's interior, creating a network of tunnels and chambers within the stone body. These carved spaces are now inhabited by the Wydlings—a reclusive people who have made Pyoa Noi their home, living within the belly of the petrified beast and defending it from those who would mine it further.
 
-#### Wurmspine Mountains
+#### Wurmling Mountains
 
-One of the Titanwurm mountain ranges scattered throughout the Northlands, the Wurmspine Mountains divide the frozen plains.
+One of the Titanwurm mountain ranges scattered throughout the Northlands, the Wurmling Mountains divide the frozen plains.
 
 ##### Temple of Zicadia
 
-At the northern tip of the Wurmspine Mountains, where force and air leylines intersect, stands the Temple of Zicadia. This remote institution is dedicated to elemental protection magic—specifically, the art of turning air into solid structures that can deflect attacks.
+At the northern tip of the Wurmling Mountains, where force and air leylines intersect, stands the Temple of Zicadia. This remote institution is dedicated to elemental protection magic—specifically, the art of turning air into solid structures that can deflect attacks.
 
 The temple is run by Master Felwana, a reclusive woman who lost her husband in a distant war and came to the Northlands to learn. She became a master of the art and now teaches others, though the temple is brutal and miserable. Life here is harsh—the temple faces frequent threats from the creatures of the frozen snowplains, and students must be prepared to defend themselves while mastering the difficult discipline of solidifying air itself.
 
@@ -2332,7 +3258,7 @@ Tags: poi
 
 The Plumes are a small region with frequent, intense geysers of fire and steam. Crabs live around the edge of the holes in the ground, feeding off the archea that grow in the hot vents. Docile Magma Snails are throughout.
 
-### Wurmspine Mountains
+### Wurmling Mountains
 
 Tags: mountains
 

@@ -30,7 +30,11 @@ The Seacleft Coast contains a smattering of states, arranged roughly from south 
 - **Iqes**
 - **Enavadi** (northernmost)
 
-Plus several scattered city-states throughout the region.
+Plus several scattered city-states throughout the region, including Rilyn.
+
+#### Petrona Septia Island
+
+A major island in the Seacleft Coast containing the states of Ios and Moigos, as well as the city-state of Rilyn. The Screech Peaks mountain range divides the island, with Ios on the southwestern side and Rilyn in Puma Wood forest on the northeastern slopes.
 
 #### Terrain
 
@@ -118,9 +122,7 @@ The hills are inhospitable not just because of the treacherous terrain, but beca
 
 Tags: state, nation
 
-A state on the Seacleft Coast.
-
-TODO
+A state on Petrona Septia Island in the Seacleft Coast region. Located on the southwestern side of the Screech Peaks, with the city-state of Rilyn on the opposite (northeastern) side of the range.
 
 ### Iqes Sound
 
@@ -194,6 +196,14 @@ Tags: poi
 
 TODO
 
+### Rilyn
+
+Tags: state, citystate, nation
+
+A city-state on Petrona Septia Island in the Seacleft Coast region. Located north/northeast of Ios and southeast of Moigos, Rilyn sits within the forest of Puma Wood on the northeastern side of the Screech Peaks (Ios lies on the southwestern side of the range).
+
+Home to the Splinkreen—woodland people whose souls were transplanted from mighty trees into humanoid forms. Their bark-like skin ranges from smooth birch white to rough oak brown, and the forested environment of Puma Wood suits them perfectly.
+
 ### Ripmaw Sound
 
 Tags: sea, geography
@@ -210,7 +220,7 @@ TODO
 
 Tags: mountains, geography
 
-TODO
+A mountain range on Petrona Septia Island in the Seacleft Coast. The peaks divide the island—Ios lies on the southwestern side, while Rilyn and Puma Wood forest occupy the northeastern slopes.
 
 ### Sculpin Islands
 

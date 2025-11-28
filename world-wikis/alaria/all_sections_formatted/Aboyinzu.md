@@ -173,7 +173,7 @@ TODO
 
 Tags: state, nation
 
-TODO
+A state in Terrenia, located south of the Green Mountains and east of Aal Salma. Inhabited by Scalawags. A huge civil war has recently broken out—total disaster, as the northern region has declared independence from the rest of the state. Total chaos, lots of death. Armies are assembling and marching on each other.
 
 #### Stalking Fields
 
@@ -459,6 +459,12 @@ Tags: forest, geography
 A forest in Central Aboyinzu.
 
 TODO
+
+### M'Svyla
+
+Tags: state, nation
+
+A lizardfolk state located just south of the Crystal Mountains in Central Aboyinzu. Home to the Ix'Lorett—a lizardfolk people who have adapted to the savanna and foothill terrain between the Crystal Mountains and the interior grasslands.
 
 ### M'Syvla
 
@@ -918,6 +924,12 @@ A centrally located hilly region within the Elder Wilds, notable for its dramati
 Moss-covered stone arches span throughout this waterfall-laden region, creating a maze of cascading water and ancient stonework. The slightest misstep sends travelers tumbling toward the abyss below. The water harbors brain-eating amoebae, and water hags lurk in the pools and mists.
 
 The area teems with unusual wildlife—quad-winged dove-like creatures drift through the spray, while pterodactyls nest on the higher arches and hunt in the updrafts. The combination of dangerous fauna, deadly parasites, and treacherous footing makes Archfalls one of the most hazardous locations in the Elder Wilds.
+
+#### Urzula
+
+A city built beneath massive waterfalls in the Seyiy region, north of the Archfalls. Climbers hang from the cliffside rocks, harvesting the plants that grow in the perpetual mist. The city is surrounded by dense rainforest, and the ruins of an ancient titan city lie beneath the modern settlement.
+
+The Archfalls lie further south from Urzula, marking the perilous waterfall confluence.
 
 ### Apelands
 
@@ -2175,7 +2187,7 @@ TODO
 
 Tags: mountains, geography
 
-Mountains within Embylydium.
+Mountain range within Emblydium, located to the north of the state's core territory.
 
 TODO
 
@@ -2191,7 +2203,7 @@ TODO
 
 Tags: mountains, geography
 
-Peaks within Embylydium.
+Mountain range within Emblydium, located to the south of the state's core territory.
 
 TODO
 
@@ -2211,13 +2223,21 @@ A dragon dwelling in the Pindolin Islands.
 
 TODO
 
-### Embylydium
+### Emblydium
 
 Tags: state, nation
 
-A state in the Dragon's Spine Coast region.
+A state in the northwest tip of the Dragon's Spine Mountains, populated by the Nydor. Emblydium is a rugged mountain kingdom carved into some of the most treacherous peaks of the region.
 
-TODO
+#### Geography
+
+- **Devil Peaks**: Mountain range to the south of Emblydium's core territory
+- **Bleeding Mountains**: Mountain range to the north
+- **Haunted Hills**: Lie further north and west of the state
+
+#### Position
+
+Emblydium is located southwest of Shunda and Dhabisa in Dalizi. The state controls the mountain passes connecting the Dragon's Spine Coast to the interior regions.
 
 ### Frostwing Island
 
