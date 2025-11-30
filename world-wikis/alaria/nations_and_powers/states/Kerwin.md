@@ -66,13 +66,13 @@ Tags: state
 
 ### Tarkha
 
-The capital of Kerwin—and once, long ago, the capital of the entire Tarkhon Empire.
+The capital of Kerwin—an ancient city that predates Tarkhon itself.
 
-Tarkha is a quiet city now, its grand avenues too wide for its current population, its ceremonial plazas hosting weekly markets instead of imperial processions. The old palace still stands, and Ulyas rules from it, but much of the building is closed off, dusty halls echoing with centuries of silence.
+Tarkha is a quiet city now, its grand avenues too wide for its current population, its ceremonial plazas hosting weekly markets instead of the festivals they were built for. The old palace still stands, and Ulyas rules from it, but much of the building is closed off, dusty halls echoing with centuries of silence.
 
-The halflings don't seem to mind living in the bones of a fallen capital. They've converted imperial granaries into community halls, turned the old mint into a brewery, and let wildflowers grow in the cracks of the processional way. Tarkha is comfortable, if melancholy.
+The halflings built Tarkha for their own purposes: wide avenues for their festivals, great plazas for their markets, a palace for a king who expected to rule forever. The scale sometimes surprises visitors who expect halflings to build small. Tarkha is comfortable, if oversized.
 
-Visitors from Nektuna sometimes weep when they see what Tarkha has become. The halflings offer them tea and wonder what the fuss is about.
+Visitors from Nektuna find the scale disorienting—everything built for importance, inhabited by people who don't care about importance at all. The halflings offer them tea and wonder what the fuss is about.
 
 ### The Fireknife Mountains
 
@@ -116,16 +116,16 @@ Ulyas is tired. Nine hundred years is a long time to rule, a long time to make t
 
 Kerwin's nominal allegiance to Tarkhon is stable but hollow. Ulyas has outlived every attempt to integrate Kerwin more fully into the empire. But King Selron II is ambitious, and some in Nektuna whisper that it's time to remind Kerwin who's really in charge. Ulyas has heard these whispers before. He's buried everyone who acted on them.
 
-**The Old Capital**
+**The Neferati Memory**
 
-Tarkha was once the heart of Tarkhon. The Evertorch burned here before it was moved to Tarkhetan. Some in Kerwin—and some in the wider empire—believe the torch should return, that Tarkha's decline is a wound that festers. Ulyas finds this sentiment exhausting. He liked Tarkha better when it was quiet.
+Ulyas remembers the Neferati founders—the fire-blooded conquerors who built Tarkhetan and expanded their empire to swallow Kerwin. He remembers their emperors, their court intrigues, their slow dilution into humanity. He watched the Severance from a careful distance, keeping Kerwin neutral while both sides burned. Now humans hold the throne, and they've forgotten most of what Ulyas remembers. He hasn't told them. He hasn't decided if he ever will.
 
 ### History
 
-Kerwin was settled by halflings long before Tarkhon existed as an empire. They farmed, they traded, they lived modest lives. Ulyas became king through means he no longer discusses, and he has ruled ever since.
+Kerwin was settled by halflings long before Tarkhon existed as an empire. They farmed, they traded, they lived modest lives. Ulyas became king through means he no longer discusses, and he has ruled ever since—nearly nine centuries now.
 
-When Tarkhon expanded five centuries ago, Ulyas negotiated rather than fought. He recognized the empire's strength but also its limits—Tarkhon wanted the strait, not the hinterlands. Ulyas offered fealty, tribute, and open roads. In exchange, Tarkhon left Kerwin alone.
+When the Neferati came north and built Tarkhetan, Ulyas watched. When they expanded their empire five centuries ago, he negotiated rather than fought. He recognized the empire's strength but also its limits—Tarkhon wanted the strait, not the hinterlands. Ulyas offered fealty, tribute, and open roads. In exchange, Tarkhon left Kerwin alone.
 
-The arrangement has held. Ulyas has watched Tarkhon's capital move from Tarkha to Tarkhetan, watched the Evertorch carried away, watched his city fade from imperial heart to provincial backwater. He doesn't seem to mind. The halflings certainly don't.
+The arrangement has held through the Neferati dynasty, the Severance, and three centuries of human rule. Ulyas has outlived every emperor and every king. He's seen the empire's character change but its demands stay the same. He pays his tribute, tends his people, and makes his yearly journey to the mountains.
 
 Kerwin endures. Ulyas endures. The shrine in the mountains waits for its yearly offering. Nothing changes, and perhaps nothing ever will.

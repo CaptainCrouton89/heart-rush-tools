@@ -1,6 +1,8 @@
 # States Writing Guide
 
-This directory contains entries for nations, kingdoms, city-states, and other political entities across Alaria.
+This directory contains entries for nations, kingdoms, empires, and other territorial polities across Alaria.
+
+**Note:** City-states belong in `../city_states/` instead. States are territorial—they control regions with borders and govern populations across multiple settlements.
 
 ## Lunar Calendar Context
 

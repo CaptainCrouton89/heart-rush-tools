@@ -45,26 +45,28 @@ Tags: state
 
 ### Geography
 
-**Location**: 
+**Location**: Central-western Ve, north of the Widebarrow Mountains, south of Sestros
 
-**Biomes**: 
+**Biomes**: Temperate grasslands, mixed forests
 
-**Named Entities**:
+**Named Entities**: Goldwood (west), Pathanul (north), Promisewood (south), Shorolyn Forest (east), Honor Moss (central wetland)
 
-**Rivers & Lakes**: 
+**Rivers & Lakes**: Honor River (central), Honor Creek (northeast branch), Pale Run (south)
 
-**Adjacent Waters**: 
+**Adjacent Waters**: Munari Inlet (west coast)
 
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Tarolin (central, on Honor River)
 
-**Cities**: 
+**Cities**: Ismail (west coast, Honor River outlet), Karahoroz (east)
 
-**Towns**: 
+**Major Towns (West to East)**: Mekenk, Micitlar, Orenonu, Zindi, Incebolu, Daralan, Kenzek, Burga, Maral, Sukanli, Yasyan, Taylilar
 
-**Villages**: 
+**Towns (South)**: Makavla, Ayni
+
+**Towns (Northeast)**: Civicvler, Sarihalliler, Kochisar
 
 
 ### Primary Conflicts

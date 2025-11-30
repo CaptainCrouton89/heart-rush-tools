@@ -119,7 +119,7 @@ A moderate-sized island southwest of the strait, technically part of Nektuna. Py
 
 The Pyrisi are farmers and fishers, content with their simple lives. They pay their taxes, send their young to serve in the navy, and try not to attract attention from the capital.
 
-**Fort Tenze**, on the island's eastern coast, guards a secondary chokepoint—not as critical as the Needle, but significant. The fortress has been in ruins for nearly two centuries, and no one has rebuilt it.
+**Fort Tenze**, on the island's eastern coast, guards a secondary chokepoint—not as critical as the Needle, but significant. The fortress has been in ruins for nearly three centuries, ever since the Severance.
 
 ### Fort Tenze: The Cursed Fortress
 
@@ -217,12 +217,12 @@ Duchess Ysmera walks a careful line: loyal enough to keep Tarkhetan happy, indep
 
 **The Founding (~600 years ago)**: Neferati warlords seize the Needle, establishing control over the strait. The Evertorch is lit in what will become Tarkhetan.
 
-**The Golden Age (~600-300 years ago)**: Neferati emperors rule, expanding the empire through trade dominance and military power. The Firemage Corps is established. Besnoumeru rises on its time leyline.
+**The Neferati Era (~600-300 years ago)**: Neferati emperors rule from Tarkhetan, expanding the empire through trade dominance rather than conquest. The Firemage Corps is established. Besnoumeru rises on its time leyline.
 
-**The Dilution (~400-300 years ago)**: Neferati bloodlines mix with human through generations of political marriages. The ruling family becomes increasingly human.
+**The Dilution (~400-300 years ago)**: Neferati bloodlines mix with human through generations of political marriages. The ruling family becomes increasingly human—fire-touched perhaps, but not truly of the flame.
 
-**The Severance (~300 years ago)**: The last fire-blooded emperor dies. Succession war between human and Neferati factions. Humans win. Pure Neferati withdraw to the Kingdoms of Fire. Fort Tenze is destroyed in the conflict.
+**The Severance (~300 years ago)**: The last fire-blooded emperor dies. Succession war between human and Neferati factions. Humans win. Pure Neferati withdraw to the Kingdoms of Fire. Fort Tenze is destroyed in the conflict. The Evertorch stays—too sacred to move, too dangerous to extinguish.
 
-**The Human Era (~300 years ago - present)**: Human dynasties rule, maintaining the traditions and symbols of Neferati founders while slowly forgetting their origins.
+**The Human Era (~300 years ago - present)**: Human dynasties rule, maintaining the traditions and symbols of Neferati founders while slowly forgetting their origins. Emperors become kings. The Kingdoms of Fire remain within the empire, waiting.
 
 **The Present**: King Selron II maintains stability through careful balance. But the old tensions remain—Neferati legacy, naval ambitions, firemage power, and the eternal question of succession.

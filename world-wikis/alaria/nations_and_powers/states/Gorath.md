@@ -80,7 +80,7 @@ But the true engine of Gorathi wealth is labor. The jungle demands workers: logg
 
 #### The Tamadrez Pipeline
 
-The Drasnian dwarves of Tamadrez have become Gorath's primary labor source. Three centuries ago, Gorath established the **Slaver's Coast** on Pesalolo's southern shores, operating with the grudging consent of the northern Tamadrez government. The arrangement is simple: Gorath takes slaves from the south; the north remains independent. Any violation—such as harboring escaped slaves—results in fire from the sky. One northern city learned this lesson permanently.
+The Drasnian dwarves of Tamadrez have become Gorath's primary labor source. Three centuries ago, Gorath occupied the southern coast of Pesalolo by force, establishing the **Slaver's Coast**—a chain of ports for collecting and shipping human cargo. The northern settlements survived because they weren't worth conquering: too mountainous, too poor, and Gorath's military was already stretched thin. The empire's terms are simple: Gorath takes what it wants from the south; the north stays out of the way. Any interference—such as harboring escaped slaves—results in fire from the sky. One northern town learned this lesson permanently.
 
 The slaves flow north through the **Divinity Passage**, Gorath's great maritime highway. At any given time, dozens of slave ships work this route. The passage's name is bitterly ironic to those in chains.
 
@@ -159,7 +159,7 @@ Gorathi cities rise from the jungle like stone fists. Architecture favors massiv
 
 **Nashua**: Active war. The Ix'Vasyla lizardfolk have proven impossible to subjugate, and the conflict has become a bleeding wound for both sides.
 
-**Tamadrez**: Exploitative treaty. Gorath operates freely in the south in exchange for not invading the north. Both sides know this arrangement exists only as long as it benefits Gorath.
+**Tamadrez**: Occupation and extraction. Gorath controls the southern coast; the north survives by staying out of the way. This arrangement exists only as long as it benefits Gorath—and everyone knows it.
 
 **Trømgar**: Cold war turning hot. The dwarven kingdom objects to Gorath's treatment of their distant Drasnian kin. Skirmishes increase yearly.
 

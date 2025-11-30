@@ -47,26 +47,26 @@ Tags: state
 
 ### Geography
 
-**Location**: 
+**Location**: Western Ve, south of Edari, west of Shyona and the Hills of Dolor
 
-**Biomes**: 
+**Biomes**: Savannah plains (central), Red Desert (north), forest (south)
 
-**Named Entities**:
+**Named Entities**: Red Desert, Shepherds' Stones (northern mountains), Tukiwood (southern forest), Glory River
 
-**Rivers & Lakes**: 
+**Rivers & Lakes**: Glory River (central, flows east toward Shyona)
 
-**Adjacent Waters**: 
+**Adjacent Waters**: Nuin Bay (southwest coast)
 
 
 ### Political Geography
 
-**Capital**: 
+**Capital**: Mu (southwest coast, on Nuin Bay)
 
-**Cities**: 
+**Major Towns (Northern Route)**: Eidu, Dangbanr, Kanasra, Hindi Kot, Nao Goth
 
-**Towns**: 
+**Major Towns (Central Route)**: Lolani, Panjizai, Ujato, Phuklean, Wadala Sindhuan, Banda Lamman, Karborai, Jhun Tar, Bel, Wariyah, Dangara, Kothian, Basti Wahni
 
-**Villages**: 
+**Major Towns (Western)**: Philoki, Chirianwala, Kohali, Goth Kilch
 
 
 ### Primary Conflicts

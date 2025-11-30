@@ -58,8 +58,6 @@ Tags: state, empire
 
 **Capital**: Tarkhetan (in Nektuna)
 
-**Former Capital**: Tarkha (in Kerwin)
-
 **Core Territories**: Nektuna, Enymu, Kerwin
 
 **Tributary States**: Astrelle, Yaif, Kabir, Gissemari, Wadiyah
@@ -70,11 +68,11 @@ Tags: state, empire
 
 ### The Evertorch
 
-In Tarkhetan's great cathedral burns the **Evertorch**—an eternally burning flame that has never been extinguished since its lighting centuries ago. The torch is Tarkhon's most sacred symbol, representing the empire's eternal dominion and unbroken continuity.
+In Tarkhetan's great cathedral burns the **Evertorch**—an eternally burning flame that has never been extinguished since its lighting six centuries ago. The torch is Tarkhon's most sacred symbol, representing the empire's eternal dominion and unbroken continuity.
 
-The torch was not always in Tarkhetan. It was lit in Tarkha, the original capital, and burned there for generations before being ceremonially moved when the capital shifted. This transfer remains controversial—some believe the torch should return to Tarkha, that its removal was a spiritual wound the empire has never healed.
+The Neferati founders kindled it from sacred fire brought north from Yaif when they established Tarkhetan. It has burned in the same cathedral ever since—through the Neferati dynasty, through the Severance, through three centuries of human rule. The torch doesn't care who sits on the throne. It just burns.
 
-Ritual magic of time and fire occurs at the Evertorch shrine. The empire's most important oaths are sworn before it. Emperors are crowned in its light.
+Ritual magic of time and fire occurs at the Evertorch shrine. The empire's most important oaths are sworn before it. Emperors—now called kings—are crowned in its light. The Kingdoms of Fire have never forgotten that it burns with their fire.
 
 ### Subsidiary States
 
@@ -113,13 +111,9 @@ Tarkhon honors Klor as a necessary monster. The southern territories are safe be
 
 Tarkhon holds its empire through trade benefits, not loyalty. Every subsidiary state is calculating whether the advantages of membership outweigh the costs. If Tarkhon's wealth falters, if an alternative trade route opens, if the navy weakens—the empire will fragment within a generation.
 
-**The Evertorch Question**
-
-The movement to return the Evertorch to Tarkha is small but persistent. Some view it as harmless nostalgia. Others see it as a genuine threat to imperial unity—an admission that the capital shift was a mistake, that Tarkhetan's legitimacy is incomplete.
-
 **The Immortal Problem**
 
-King Ulyas of Kerwin has outlived every Tarkhon emperor for five centuries. He remembers when Tarkha was the capital, when the Evertorch burned in his city, when Tarkhon was a land empire rather than a maritime one. His continued existence is an embarrassment to imperial narratives of progress and a reminder that some things in the empire are older than the empire itself.
+King Ulyas of Kerwin has outlived every Tarkhon ruler for five centuries. He remembers the Neferati founders, the old bargains, the Severance. He was ancient when Tarkhon was young—his kingdom predates the empire by centuries. His continued existence is an embarrassment to imperial narratives of progress and a reminder that some things in the empire are older than the empire itself. Worse, he knows secrets the current dynasty would prefer stayed buried.
 
 **The Kingdoms of Fire**
 
@@ -127,17 +121,21 @@ The four Neferati monarchies act as a bloc, which makes them powerful enough to 
 
 ### History
 
-**The Old Era (~600-400 years ago)**
+**The Founding (~600 years ago)**
 
-Tarkhon began as a land empire centered on **Tarkha**, a city built with grand ambitions. The Evertorch was lit there, symbolizing eternal dominion. The empire expanded through conquest and diplomacy, absorbing neighboring territories.
+Neferati warlords from Yaif recognized that the Tarkhon Strait could be controlled—and that whoever controlled it would control trade across half the world. They brought sacred fire north, founded Tarkhetan on the Needle, and lit the Evertorch. From the beginning, Tarkhon was built on commerce.
 
-Kerwin was already ruled by Ulyas when Tarkhon expanded. Rather than fight an immortal king, the empire negotiated. Ulyas accepted nominal fealty in exchange for autonomy—an arrangement that has held for five centuries.
+**The Neferati Dynasty (~600-300 years ago)**
 
-**The Trade Ascendancy (~400-200 years ago)**
+For nearly three centuries, Neferati emperors ruled from Tarkhetan. They expanded through trade agreements and tributary arrangements rather than conquest. Kerwin was already ruled by the immortal Ulyas; rather than fight him, the empire negotiated. Ulyas accepted nominal fealty in exchange for autonomy—an arrangement that has held for five centuries.
 
-Maritime trade transformed the region. Control of the strait became more valuable than control of land. Nektuna, perfectly positioned on the chokepoint and blessed with a fire leyline, rose to dominance.
+**The Dilution (~400-300 years ago)**
 
-The capital shifted from Tarkha to Tarkhetan. The Evertorch was ceremonially moved. The empire's character changed—from territorial expansion to commercial exploitation.
+Neferati bloodlines mixed with human through generations of political marriages. The ruling family became increasingly human—fire-touched perhaps, but not truly of the flame.
+
+**The Severance (~300 years ago)**
+
+The last fire-blooded emperor died without legitimate heir. His children by his Neferati mistress were passed over for his fully human nephew. The Neferati faction resisted. The war that followed was brief but vicious. The human faction won. The pure Neferati withdrew to the Kingdoms of Fire. The Evertorch stayed—too sacred to move, too dangerous to extinguish. But its keepers changed.
 
 **The Klor Campaign (~200 years ago)**
 
@@ -145,4 +143,4 @@ Klor's brutal clearing of the Eronia Range secured the empire's southern frontie
 
 **The Present Day**
 
-King Selron II rules an empire held together by profit rather than loyalty. The system works—for now. Trade flows, taxes are paid, the navy maintains order. But the foundations are fragile, the subsidiaries are calculating, and the immortal halfling in Kerwin remembers when things were different.
+King Selron II rules an empire held together by profit rather than loyalty. The system works—for now. Trade flows, taxes are paid, the navy maintains order. But the foundations are fragile, the subsidiaries are calculating, and the immortal halfling in Kerwin remembers everything the current dynasty has forgotten.
