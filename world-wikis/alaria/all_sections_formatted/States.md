@@ -3676,9 +3676,76 @@ This stability is Ethadia's greatest achievement and its greatest vulnerability.
 
 ## Flurin
 
-Tags: state
+Tags: state, kendrel
 
-Inhabited by Kendrel. Member of the Kendrel Kingdoms.
+The northernmost of the three Kendrel Kingdoms, Flurin occupies a chain of barrier islands and submerged reef-cities along the eastern edge of the Agreben Sea. Where its sister kingdoms turn inward, Flurin faces outward—toward Atriik, toward trade, toward the surface world that most Kendrel regard with patient condescension.
+
+### Overview
+
+Flurin stretches roughly 120 miles north to south, a scattered constellation of coral atolls, volcanic islets, and the deeper reef-fortresses where most of its population actually lives. The surface settlements serve as interface points—places where air-breathing traders can do business without drowning. Beneath the waves, Flurin's true cities sprawl across the continental shelf in lattices of cultivated coral and bioluminescent gardens.
+
+The kingdom's position makes it the natural gateway between the Kendrel realms and the surface nations. Atriik's coast lies just thirty miles east; Mueras's Darkened Coast curves along the northern horizon. This geography has shaped Flurin's character: more cosmopolitan than Glador, more commercially-minded than Pelaria, and considerably more tolerant of surface-dweller vulgarity than either.
+
+### Government
+
+**The Tidal Court** governs Flurin from the underwater palace-complex of **Azulora**, a spiral of coral towers that rises from a submerged volcanic cone. The court operates on rotating primacy—three noble houses take turns holding the **Chair of Currents** in eleven-year cycles, ensuring no single lineage accumulates too much influence.
+
+The current Chair-holder is **House Velanith**, known for aggressive expansion of surface trade. Their rivals in House Coralynn advocate for stricter isolation, while House Pelarond (distantly related to Pelaria's ruling family) push for deeper military cooperation with their southern kin.
+
+Unlike the other kingdoms, Flurin grants formal standing to a **Merchant Assembly**—a council of successful traders, both Kendrel and (controversially) surface-born, who advise on commercial matters. Traditional Kendrel find this arrangement distasteful. Flurin's coffers find it profitable.
+
+### Culture
+
+Flurin is Pelaendor territory. The wanderer subrace dominates here, their practical pragmatism better suited to constant dealings with surface folk than the refined sensibilities of Court Kendrel or the secretive nature of the Cendoriln. That said, all three subraces are present—the Court Kendrel run the noble houses, the Cendoriln handle matters that require... discretion.
+
+**Surface Accommodation**: Flurin has developed extensive infrastructure for air-breathers. Floating platforms anchored above the reef-cities. Pressurized guest chambers in the upper levels of coral towers. Specialized guides (called **tide-walkers**) who escort surface visitors through underwater passages via bubble-helms and enchanted breathing apparatus. It's all very expensive, and Flurin likes it that way.
+
+**The Vulgarity Tax**: Violence remains as taboo here as in all Kendrel society, but Flurin has found creative workarounds. Surface traders who cause disruptions—fights, theft, "discourteous commerce"—face the Vulgarity Tax: punitive fines calculated to extract maximum wealth while stopping just short of provoking actual conflict. Repeat offenders find themselves socially exiled from all three kingdoms, their names circulated on the **Tide of Shame**.
+
+**Festival of First Contact**: Every three years, Flurin hosts a grand celebration commemorating the first formal trade agreements with surface nations (roughly 400 years ago). Surface merchants are invited to underwater exhibitions, rare goods are auctioned, and young Kendrel compete in elaborate courtship displays meant to demonstrate their sophistication. It's part trade fair, part mating ritual, part propaganda exercise.
+
+### Economy
+
+**Primary Exports**: Pearls (Flurin's are considered second only to Glador's), coral jewelry, preserved seafood delicacies, navigational charts of the Agreben's underwater topography, and **tideweave**—a fabric woven from specially cultivated kelp that's waterproof, lightweight, and absurdly expensive on surface markets.
+
+**Primary Imports**: Metal goods (Kendrel don't smelt), surface textiles, preserved foods that survive underwater storage, and information. Flurin pays well for news from distant lands.
+
+**The Translation Trade**: Flurin's most lucrative service isn't a good—it's expertise. Kendrel translators, negotiators, and cultural intermediaries hire out to surface merchants attempting to do business anywhere in the Greenwater Isles. A Flurin-trained guide can navigate not just underwater passages but the labyrinthine social expectations of dealing with their more insular southern kin.
+
+### Military
+
+Flurin maintains the smallest military of the three kingdoms—a conscious choice reflecting both their commercial priorities and their philosophical discomfort with organized violence. The **Reef Watch** patrols the kingdom's borders, but their primary function is observation and warning rather than combat.
+
+When genuine threats emerge (primarily Bfaspeen raids from the deeper Agreben), Flurin's response is to retreat to fortified positions and call for aid from Glador and Pelaria. This dependency is a source of ongoing political tension; the southern kingdoms resent playing protector while Flurin profits from surface trade.
+
+**The Quiet Arrangement**: What Flurin lacks in martial strength, it compensates for in intelligence networks. Cendoriln agents throughout the Agreben track Bfaspeen movements, surface fleet positions, and political developments in neighboring nations. This information flows to all three kingdoms, making Flurin indispensable despite its military weakness.
+
+### Relations
+
+**Glador**: Correct but cool. Glador's traditionalists view Flurin as culturally compromised—too willing to accommodate surface vulgarity for profit. Flurin views Glador as ossified and naive about external threats. They cooperate because they must, and compete in everything else.
+
+**Pelaria**: Warmer than with Glador, despite the greater distance. Pelaria respects Flurin's pragmatism, and House Pelarond maintains strong ties to their southern relatives. When Pelaria needs surface goods, they go through Flurin. When Flurin needs military backing, they call Pelaria first.
+
+**Atriik**: The primary surface trading partner. Flurin maintains permanent embassies in three of Atriik's four city-states and has cultivated generations of relationships with Atriik's merchant families. The Atriik see Flurin as exotic but reliable; Flurin sees Atriik as useful but culturally exhausting.
+
+**The Bfaspeen**: Like all Kendrel, Flurin refuses to negotiate with the brood mothers. Unlike the other kingdoms, this refusal costs them—Bfaspeen raids on surface shipping hurt Flurin's commercial interests directly. Some whisper that House Velanith has considered... accommodation. If true, it would be the greatest scandal in Kendrel history.
+
+### Settlements
+
+**Azulora** (capital): The Tidal Court's seat, built into a submerged volcanic cone. Population ~8,000 Kendrel, plus transient surface visitors in the floating districts above.
+
+**Watalina**: Surface-accessible trade port on the northeastern edge, where most commerce with Atriik occurs. Dominated by Pelaendor and foreign merchants.
+
+**Ashenia**: Small fishing village on the northern frontier, notable mainly for its proximity to the Darkened Coast. Residents report strange currents and darker-than-normal waters drifting south from Mueras.
+
+**Voltunis**: Southern border town, serving as the customary crossing point for Kendrel traveling between Flurin and Glador. Features the famous **Passage Gardens**—coral sculptures maintained by both kingdoms as a symbol of unity.
+
+### Player Hooks
+
+- A surface merchant needs escort through Flurin to reach Glador for a rare pearl auction. The journey requires navigating underwater passages, social expectations, and possibly Bfaspeen-infested waters.
+- House Velanith is rumored to be secretly negotiating with a Bfaspeen brood mother. Someone needs to investigate—and decide what to do with the truth.
+- The Tide of Shame has wrongly listed a player's contact. Clearing their name requires navigating Kendrel social politics without resorting to violence.
+- A Festival of First Contact approaches, and a young Kendrel noble has hired surface adventurers to help them win a courtship competition against rivals who are definitely cheating.
 
 ## Free Colonies
 
@@ -3690,9 +3757,97 @@ Only a few hundred people, even in the capital Ashk
 
 ## Glador
 
-Tags: state
+Tags: state, kendrel
 
-Inhabited by Kendrel. Member of the Kendrel Kingdoms.
+The heart of the Kendrel Kingdoms—oldest, largest, and most stubbornly traditional. Glador occupies the central archipelago of the eastern Agreben Sea, a maze of reef-fortresses and coral palaces where the ancient customs of Kendrel society are preserved in amber-like perfection. Here, courtship is war, reputation is currency, and violence remains the one true obscenity.
+
+### Overview
+
+Glador sprawls across roughly 200 miles of the Agreben's eastern waters, from the Flurin border in the north to Pelaria's volcanic reaches in the south. The kingdom encompasses dozens of inhabited islands and reef systems, but its true extent lies beneath the surface—a network of interconnected coral cities housing the largest Kendrel population in existence.
+
+The continental shelf here is broad and shallow, perfect for the cultivated reef architecture that defines Kendrel civilization. Underwater forests of giant kelp alternate with open plains of cultivated coral, while the deep trenches that cut through the shelf provide natural defenses against Bfaspeen incursions. Glador has refined this environment over millennia, shaping it into something halfway between garden and fortress.
+
+Where Flurin compromises with the surface world and Pelaria adapts to volcanic necessity, Glador simply persists. This is Kendrel society as it was meant to be: insular, refined, and utterly convinced of its own superiority.
+
+### Government
+
+**The Abyssal Throne** sits at the heart of Delphran, Glador's capital and the largest Kendrel city anywhere. Unlike Flurin's rotating primacy, Glador practices hereditary monarchy—the **Pearl Crown** passes from parent to chosen heir within the ruling House Delanthos, which has held power for over six hundred years.
+
+The current monarch is **Queen Thessaly Delanthos**, called "the Patient" by admirers and "the Stagnant" by critics. Her reign of ninety-three years has seen no major wars, no significant reforms, and no willingness to acknowledge that the world beyond the Agreben is changing. Thessaly's court operates on traditions codified before humans built their first stone cities, and she sees no reason to update them.
+
+**The Deep Council** serves as advisory body—twelve noble houses that theoretically check royal authority but in practice spend most of their energy competing with each other for favor, marriage alliances, and social position. Council sessions are legendary for their byzantine protocols and devastating understatements.
+
+**The Coral Courts**: Below the central government, Glador divides into seven **Coral Courts**, each governing a cluster of settlements under a hereditary **Reef-Lord**. These courts handle local matters and compete fiercely for prestige, pearl production quotas, and the right to host royal events.
+
+### Culture
+
+Glador is Court Kendrel territory—the iridescent-scaled aristocrats who elevated social manipulation to art form. Pelaendor servants and traders exist in the margins, and Cendoriln handle necessary unpleasantness in the depths, but the Court Kendrel set all standards worth meeting.
+
+**The Courtship Games**: What surfaces dwellers might call politics, Kendrel call courtship. Every interaction is a dance—literal or metaphorical—where participants compete for favor, demonstrate worthiness, and establish social hierarchy. Marriage is merely the most formalized version; the same dynamics govern business negotiations, legal disputes, and diplomatic relations.
+
+**The Three Shames**: Glador society recognizes three cardinal sins:
+1. **Vulgarity** (violence, crude speech, unseemly haste)
+2. **Gracelessness** (poor aesthetics, clumsy movement, failure to maintain appearances)
+3. **Isolation** (refusing to participate in social obligations, hoarding connections, breaking the web)
+
+The punishments are social rather than physical: exclusion from events, withdrawal of favor, subtle signals that mark someone as *beneath notice*. For Kendrel, who live centuries and build their entire existence around social standing, this is worse than death.
+
+**Pearl Culture**: Glador produces the finest pearls in the known world—not merely through better oyster beds (though they have those) but through generations of cultivation technique and jealously guarded trade secrets. A Glador pearl is a status symbol among surface aristocracies from Adron to Ve. The kingdom controls supply with ruthless precision, maintaining scarcity and mystique.
+
+**The Silence on Violence**: Glador doesn't have prisons, executions, or soldiers in any form surface dwellers would recognize. Criminals face social exile—their names added to the **Tide of Shame**, their presence unwelcome everywhere, their descendants marked for generations. For offenses too severe for exile, there are the Cendoriln, and no one asks what happens in the deep trenches.
+
+### Economy
+
+**Primary Exports**: Pearls (the finest anywhere), coral jewelry and art objects, preserved delicacies, trained marine creatures, and **memory coral**—a living material that can be shaped and will hold its form indefinitely, used in architecture and art throughout the Greenwater Isles.
+
+**Primary Imports**: Metals (always metals), surface textiles for the small above-water populations, exotic foods, and intelligence about the wider world. Glador affects disinterest in surface affairs while paying handsomely for information about them.
+
+**The Pearl Monopoly**: Glador's wealth derives from controlling the pearl trade. They don't merely produce pearls—they control the *idea* of pearls. Cheaper alternatives from other sources are dismissed as inferior (sometimes correctly). Forgeries are identified with uncanny accuracy and their sources ruthlessly excluded from Kendrel markets. The seven Coral Courts each have pearl production quotas, and exceeding or falling short both carry consequences.
+
+**Trade with the Surface**: Glador conducts minimal direct trade with surface nations, preferring to work through Flurin intermediaries. This maintains their mystique and allows them to pretend they don't care about surface wealth. They care very much. They just won't admit it.
+
+### Military
+
+Glador maintains the **Coral Guard**—a formal military structure that, by Kendrel standards, constitutes a significant armed force. The Guard's primary mission is defense against Bfaspeen incursions, a task they've performed with mixed success for centuries.
+
+**The Trench Wardens**: Elite fighters stationed at the deep passages where Bfaspeen broods are most likely to attack. These Cendoriln warriors are the closest thing Glador has to professional soldiers, though they're officially classified as "specialized custodians" to preserve the fiction that Kendrel don't do violence.
+
+**The Defensive Theology**: Glador's approach to the Bfaspeen problem is fundamentally defensive. They've fortified the reef-cities, established early warning networks, and cultivated the trenches to channel attacks into kill zones. What they haven't done is take the fight to the brood mothers. Offensive warfare would require admitting that Kendrel society needs warriors, and that's ideologically unacceptable.
+
+**The Flurin Dependency**: When Bfaspeen raids threaten Flurin, Glador sends the Coral Guard. When raids threaten Glador, they handle it themselves. This asymmetry breeds resentment in Flurin and quiet satisfaction in Glador—proof, they believe, of which kingdom truly matters.
+
+### Relations
+
+**Flurin**: Condescending tolerance. Glador views Flurin as a necessary embarrassment—useful for dealing with surfaces dwellers so Glador doesn't have to, but culturally degraded by the contact. Flurin's Merchant Assembly particularly offends; allowing non-nobles (and worse, non-Kendrel) formal political standing violates everything Glador believes about proper society.
+
+**Pelaria**: Complicated respect. The volcanic kingdom's willingness to embrace violence troubles Glador's traditionalists, but their effectiveness against Bfaspeen raids commands grudging admiration. House Delanthos maintains careful diplomatic ties with Pelaria's ruling family, aware that open conflict between the kingdoms would be catastrophic.
+
+**The Surface World**: Officially, Glador affects supreme indifference to surface affairs. Unofficially, they're deeply concerned about changes they don't understand—new nations rising, old powers falling, technologies and magics that might eventually threaten Kendrel isolation. The Deep Council debates whether to engage more actively with the surface world or retreat further into insularity. Queen Thessaly has, characteristically, decided nothing.
+
+**The Bfaspeen**: Eternal enemy, permanent threat, useful boogeyman. The brood mothers have raided Kendrel waters since before recorded history. Glador has never attempted to negotiate, never considered offensive war, and never seriously contemplated that the threat might someday be eliminated. Some cynics suggest the nobility finds the Bfaspeen useful—an external enemy that justifies the Guard, unifies the courts, and provides convenient explanation for any economic difficulties.
+
+### Settlements
+
+**Delphran** (capital): The Abyssal Throne's seat, largest Kendrel city anywhere. A vertical complex descending from surface islands through five distinct depth-layers, each with its own character and social standing. Population ~25,000 Kendrel. Surface visitors are permitted only in the upper tier, and only with proper introductions.
+
+**Aquicada**: Northern gateway town, handling most traffic with Flurin. More relaxed standards than the interior—out of necessity rather than choice.
+
+**Telune**: Small fishing village in the northern waters, notable for its **Oracle Pools**—natural formations where bioluminescent creatures create patterns that some Kendrel interpret as prophetic.
+
+**Liculvia**: Eastern settlement, closest to Atriik's coast. Maintains the pretense that Glador doesn't deal directly with surface nations while quietly handling exactly that.
+
+**Thautias**: Central town, famous for its memory coral cultivation and the artisans who shape it into impossibly delicate works.
+
+**Caecadis**: Southern border town, traditionally the site where Glador and Pelaria resolve disputes through competitive courtship displays rather than negotiation.
+
+**Neptusia**: Deep-water village, Cendoriln-dominated, handling the kingdom's less mentionable necessities.
+
+### Player Hooks
+
+- A surface noble has mortally offended a Glador house. They need someone to navigate Kendrel social customs and somehow repair the damage—without violence, which would make everything worse.
+- Something is organizing the local Bfaspeen into coordinated attacks. Glador's Trench Wardens need outside help to investigate the deep trenches where Kendrel forces cannot easily go.
+- A priceless pearl has been stolen from House Delanthos. The thief must be identified and the pearl recovered, but the investigation must be conducted without anyone learning a theft occurred—the shame would be devastating.
+- Queen Thessaly is finally dying after a century on the throne. The succession is contested, and outsiders might tip the balance—if they can figure out which side to support and how to help without visibly helping.
 
 ## Glivornax
 
@@ -7911,6 +8066,14 @@ For generations, the goblins have mined and enchanted under the dragon's rule. T
 
 Now Akta has disrupted the tribute. Glorin's wealth has caught his attention. Morgnor is greedy, patient, and very, very powerful. Something is going to change.
 
+## Mosoyevo
+
+Tags: state, shacklands
+
+A state in the Shacklands region. Listed among the southern powers near Gorath, Kyagos, and Lethos.
+
+TODO: Develop geography, government, culture, and relations.
+
 ## Movasi
 
 Tags: state, theocracy, pilgrimage, velwey, greenwater-isles
@@ -9164,13 +9327,105 @@ Links: States
 
 ## Pelaria
 
-Tags: state
+Tags: state, kendrel
 
-Inhabited by Kendrel. A member of the Kendrel Kingdoms.
+The volcanic kingdom. The warrior court. The embarrassing cousins the other Kendrel don't discuss in polite company. Pelaria occupies the southern reaches of the eastern Agreben Sea, where underwater volcanic vents have created an environment that would kill ordinary Kendrel—and forged a people adapted to thrive in it.
 
-Huge chunk of population is fire attuned. Steam mages, geysers, etc. 
+### Overview
 
-Underwater volcanic activity dots the area.
+Pelaria stretches across the volcanic ridge that marks the southern edge of the Agreben's continental shelf. Here, the seafloor fractures into a maze of thermal vents, lava tubes, and superheated caverns. The water itself runs warm to scalding depending on proximity to active vents. Mineral-rich plumes color the currents in reds and oranges. The environment is hostile, beautiful, and entirely unlike the cultivated reef-gardens of the northern kingdoms.
+
+The Kendrel who settled here—or were exiled here, depending on which history you believe—adapted over generations. Where most Kendrel require cool, clear water, Pelarians tolerate temperatures that would cook their northern cousins. Where most Kendrel practice violence only through Cendoriln intermediaries, Pelarians have developed a martial tradition that horrifies traditionalists.
+
+The other kingdoms call Pelaria "the Ember Court" with varying degrees of affection and contempt. Pelarians have adopted the name proudly.
+
+### The Fire Attunement
+
+Pelaria's defining characteristic is its population's widespread fire attunement—a phenomenon that shouldn't exist in aquatic beings and that scholars have spent centuries failing to explain adequately.
+
+**The Thermal Adaptation**: Pelarian Kendrel possess internal thermoregulation far beyond their northern kin. They can survive in waters up to near-boiling temperatures, tolerate brief exposure to actual volcanic heat, and maintain comfort in the geothermal chaos of their homeland. This isn't merely physical—it's magical, tied to genuine elemental fire attunement.
+
+**Steam Magic**: Where surface fire mages throw flames, Pelarian mages work with steam and superheated water. They can flash-boil the water around enemies, create scalding pressure blasts, and survive in environments of mixed water and volcanic gas that would kill anything else. The **Steam Shapers** are Pelaria's most formidable magical tradition, and other Kendrel find them deeply unsettling.
+
+**The Price**: Fire attunement in an aquatic species creates physiological tension. Pelarians require more food than other Kendrel, burn hotter when stressed, and sometimes literally steam when agitated. Their scales trend toward darker reds and oranges rather than the iridescent pastels of northern Kendrel. Some traditionalists argue they're not really Kendrel anymore—a claim Pelaria answers with pointed silence and carefully maintained military superiority.
+
+### Government
+
+**The Ember Throne** rules from Saphinia, Pelaria's capital built into and around an ancient volcanic cone. Unlike Glador's hereditary monarchy or Flurin's rotating primacy, Pelaria practices **trial succession**—when the throne falls vacant, qualified candidates compete in a series of challenges testing combat skill, magical ability, political acumen, and (this being Kendrel) social grace.
+
+The current monarch is **King Therros Valakar**, a Steam Shaper who won his crown forty-seven years ago by surviving a trial that killed two competitors and permanently scarred three others. His reign has seen Pelaria's military power reach its historical peak, which makes the northern kingdoms nervous.
+
+**The War Council**: Where other Kendrel kingdoms pretend they don't have military leadership, Pelaria openly maintains a War Council of seven generals who advise the throne on defense, offense, and the ongoing Bfaspeen conflict. The Council's existence scandalized Glador when it was formalized three centuries ago. Glador has since requested Council assistance against Bfaspeen raids on seventeen separate occasions.
+
+**The Heat Houses**: Pelarian nobility organizes around thermal vents rather than coral reefs. The seven **Heat Houses** each control a major vent system, deriving wealth and power from the unique resources each produces. Inter-house competition is fierce—and occasionally violent, though Pelarians maintain elaborate fiction that their "ritual duels" aren't really fighting.
+
+### Culture
+
+Pelaria has diverged significantly from traditional Kendrel culture, though they insist the core values remain intact. Violence is still taboo—but Pelarians define violence more narrowly than their northern kin.
+
+**The Distinction of Intent**: Pelarian ethics distinguish between **aggression** (attacking the unwilling) and **contest** (combat between consenting parties). Aggression remains shameful; contest is honorable, even admirable. This semantic distinction allows Pelarians to maintain standing militaries, conduct ritual duels, and wage defensive war while technically adhering to Kendrel values.
+
+The northern kingdoms consider this sophistry. Pelaria considers it evolution.
+
+**The Forge Tradition**: Pelaria is the only Kendrel kingdom that practices metalwork. Using the volcanic heat of their homeland, Pelarian smiths produce weapons and tools from metals imported through Flurin. The quality is... variable (underwater forging presents challenges surface smiths don't face), but the symbolic significance is enormous. Kendrel with swords. The traditionalists have never recovered.
+
+**Steam Festivals**: Pelaria's major celebrations center on volcanic activity—the **Vent Opening** when new thermal sources emerge, the **Deep Boil** marking the anniversary of Saphinia's founding, and the **Cooling** ceremony honoring those who died defending the kingdom. These festivals incorporate martial displays, Steam Shaper performances, and considerably less courtship ritual than northern equivalents.
+
+**The Exile Memory**: Pelarian oral tradition holds that their ancestors were exiled from ancient Glador for the crime of violence—defending their homes against Bfaspeen when the nobility counseled retreat. Whether historically accurate or not, this narrative shapes Pelarian identity: they are the Kendrel who chose survival over propriety, and they've never apologized.
+
+### Economy
+
+**Primary Exports**: Volcanic minerals (sulfur, rare metals from deep vents), geothermal power crystals (stones charged with thermal energy, used in heating systems throughout the Greenwater Isles), obsidian and volcanic glass, and mercenary services. Yes, Pelaria hires out its warriors. The northern kingdoms officially disapprove while quietly employing them.
+
+**Primary Imports**: Food (the volcanic waters don't support the same agriculture as northern reefs), metals for the forges, and luxury goods. Pelaria is wealthy but harsh; comfort must be imported.
+
+**The Thermal Monopoly**: Just as Glador controls pearls, Pelaria controls geothermal resources. The power crystals that heat noble homes in Glador come from Pelarian vents. The volcanic minerals that surface alchemists prize come through Pelarian hands. This gives Pelaria economic leverage that partially offsets its smaller population and cultural isolation.
+
+**The Mercenary Trade**: Pelaria provides military assistance to parties throughout the Greenwater Isles—escorting merchant convoys, defending settlements against Bfaspeen raids, occasionally handling problems that require violence but can't be officially acknowledged. Payment is good. Discretion is guaranteed. The northern kingdoms pretend not to know where their hired defenders come from.
+
+### Military
+
+Pelaria maintains the only professional military among the Kendrel kingdoms—the **Ember Guard**, a standing force of approximately 2,000 warriors trained from youth in underwater combat. By Kendrel standards, this is an enormous army. By surface standards, it's a modest garrison. But underwater, quality matters more than quantity, and the Ember Guard is very good at what it does.
+
+**The Steam Shapers**: Pelaria's elite magical corps, specializing in thermal warfare. They can superheat water around enemies, create pressure waves that rupture internal organs, and survive environments that would kill any other Kendrel. In defensive operations, they're nearly unstoppable. In offensive operations... well, Pelaria doesn't officially conduct offensive operations.
+
+**The Vent Fortresses**: Pelaria's settlements are built into volcanic formations that serve as natural defensive positions. The superheated waters around active vents create barriers that non-Pelarian Kendrel (and Bfaspeen) cannot easily cross. Attacking Pelaria means fighting through environments that favor the defenders absolutely.
+
+**The Bfaspeen War**: Unlike Glador's purely defensive posture, Pelaria conducts active operations against Bfaspeen broods. Ember Guard units patrol the deep trenches, raid brood-mother lairs, and occasionally exterminate entire populations. This is technically defensive (protecting Kendrel territory from future threats) but walks right up to the line of prohibited offensive warfare. The northern kingdoms officially disapprove and unofficially provide intelligence and logistical support.
+
+### Relations
+
+**Glador**: Mutual wariness masking mutual dependency. Glador needs Pelarian military power; Pelaria needs Glador's trade networks and political legitimacy. Neither wants to acknowledge this, so relations proceed through elaborate diplomatic fiction. Queen Thessaly and King Therros have met exactly twice in forty-seven years, each time briefly, each time surrounded by enough protocol to prevent actual conversation.
+
+**Flurin**: Surprisingly warm. Flurin's pragmatism meshes well with Pelaria's directness, and House Pelarond maintains strong ties between the kingdoms. When Pelaria needs surface goods, they go through Flurin without the pretense that other kingdoms maintain. When Flurin needs protection, they call Pelaria first and pay fairly for the service.
+
+**The Surface World**: Pelaria has more direct contact with surface nations than it admits—mercenary contracts, mineral trade, and occasional diplomatic exchanges. King Therros has expressed interest in formal relations with Atriik, which would bypass Flurin's traditional intermediary role. This hasn't happened yet. The political implications are significant.
+
+**The Bfaspeen**: Active enemies, regularly fought, occasionally negotiated with (another scandal the northern kingdoms pretend not to know about). Pelaria has achieved local truces with specific brood mothers, trading guaranteed safe passage for tributary payments of shiny objects. These arrangements are temporary, transactional, and deeply pragmatic. The Bfaspeen aren't friends. But they can be managed.
+
+### Settlements
+
+**Saphinia** (capital): Built into an ancient volcanic cone, with districts ranging from the warm shallows of the Outer Ring to the near-boiling depths of the Ember Core where only the most heat-adapted Pelarians can survive. Population ~12,000 Kendrel. The Ember Throne sits in a chamber heated by active magma flows, a dramatic setting that doubles as a security measure—assassins would cook before reaching the king.
+
+**Brilina**: Northern border village, relatively cool by Pelarian standards, serving as the transition zone where northern Kendrel can safely visit.
+
+**Osirey**: Western settlement controlling the most productive mineral vents. House Therros (the king's family) holds this territory, making it both wealthy and politically significant.
+
+**Purine**: Eastern village near the deepest and hottest vents, Cendoriln-dominated, handling Pelaria's most dangerous mining and military operations.
+
+**Levirus**: Central town, home to the largest concentration of Steam Shapers and the kingdom's premier magical training facility.
+
+**Naurey**: Southern outpost at the edge of Pelarian territory, facing the open Agreben and the Bfaspeen-infested waters beyond. Heavily fortified, perpetually on alert, and considered a hardship posting even by Pelarian standards.
+
+**Coralona**: Southernmost settlement, existing primarily as an early warning station against Bfaspeen incursions. Small permanent population, large rotating garrison.
+
+### Player Hooks
+
+- The Ember Guard is recruiting surface warriors for a raid on a Bfaspeen brood mother's lair. The pay is excellent. The survival rate is not discussed.
+- A northern Kendrel noble has fled to Pelaria seeking asylum after committing violence in Glador. Extradition negotiations offer opportunities for diplomatic manipulation—or extraction.
+- One of Pelaria's truces with a Bfaspeen brood mother is breaking down. Someone needs to renegotiate, which means diving into brood territory with tribute and hoping the matriarch feels like talking.
+- King Therros seeks surface allies for a potential war with Glador. He's not ready to commit, but he's testing the waters. Literally and figuratively.
+- A Steam Shaper has gone rogue, using thermal magic to attack merchant shipping. Pelaria needs the problem solved quietly—hiring surface adventurers provides deniability.
 
 ## Phiora
 
@@ -13036,105 +13291,6 @@ Links: States
 
 ### History
 
-## Watalina
-
-Tags: state, city
-
-pronounced "wah-tah-LEE-nah"
-
-### Government & Peoples
-
-**Government Type**: Merchant oligarchy (Council of Pearls)
-
-**Primary Inhabitants**: Kendor (primarily Pelaendor wanderers)
-
-**Population**: 3,000 permanent residents, plus transient traders
-
-**Stability**: Very Stable
-
-**Core Values**: Commerce, neutrality, discretion, beauty
-
-- Watalina is governed by the Council of Pearls, seven Kendor merchant-houses who rotate leadership annually
-- The settlement maintains strict neutrality in Atriik's internal politics—they trade with all four city-states equally
-- Violence is not just illegal but socially unthinkable; disputes are resolved through elaborate arbitration rituals
-- Non-Kendor visitors are welcome but expected to conduct themselves with decorum
-
-### Economy
-
-**Size**: Small but influential
-
-**Tech**: Sophisticated (underwater engineering, shipbuilding)
-
-**Primary Exports**: Pearl cultivation, pilotage services, shipbuilding, preserved seafood
-
-**Primary Imports**: Timber (from Sprenwood), freshwater, surface-world luxuries
-
-- Watalina controls all maritime traffic in Shark Bay through their monopoly on pilotage
-- Their shipbuilding combines Kendor design principles with Sprenwood hardwoods
-- Pearl cultivation is a closely guarded secret; Watalina pearls command premium prices across Westrim
-- The settlement serves as the primary interface between Kendor society and the Atriik city-states
-
-### Military
-
-**Size**: None
-
-**Quality**: n/a
-
-**Enrollment**: n/a
-
-- The Kendor consider organized violence vulgar and maintain no military force
-- Defense relies on the settlement's underwater location (inaccessible to land forces), maritime leverage (no one attacks the only pilots who know the channels), and diplomatic relationships with all parties
-- In emergencies, Kendor can summon aquatic creatures or simply withdraw to deeper waters
-
-### Geography
-
-**Location**: Southern Shark Bay, at the interface between coastal shallows and open water
-
-**Biomes**: Submerged coral structures, floating platforms, tidal zones
-
-**Named Entities**: The Pearl Halls (council chambers), the Pilot's Ledge (training center), the Market Platforms
-
-**Rivers & Lakes**: n/a
-
-**Adjacent Waters**: Shark Bay, Agreben Sea approaches
-
-### Physical Structure
-
-Watalina is not a conventional city. The settlement consists of:
-
-- **Submerged Architecture**: Coral-grown buildings in the shallows, accessible only by swimming or diving. This is where most Kendor live and conduct private business.
-- **Floating Platforms**: Moored structures where surface-dwellers can meet with Kendor traders. Markets, hostels, and negotiation chambers for those who cannot breathe water.
-- **Tidal Gardens**: Cultivated oyster beds and pearl-producing mollusk colonies in the bay's shallows, maintained by Kendor aquaculture.
-
-### Political Geography
-
-**Capital**: The Pearl Halls (submerged council chambers)
-
-**Districts**:
-- The Shallows (residential, submerged)
-- The Market Platforms (commercial, floating)
-- The Outer Anchorage (visiting ships)
-
-### Primary Conflicts
-
-- The Kendor's strict neutrality occasionally frustrates Atriik's city-states, who would prefer Watalina to favor their interests
-- Some younger Kendor chafe at the isolation from the wider Kendor fortress-cities to the south
-- Surface traders sometimes resent Kendor price-setting on essential maritime services
-
-### Relations
-
-**Positive**: All Atriik city-states (trading partners), Mueras merchant-kings (distant trade contacts)
-
-**Neutral**: Northern states (limited contact)
-
-**Negative**: None—the Kendor cultivate relationships, not enemies
-
-### History
-
-Watalina was established generations ago when Pelaendor wanderers recognized Shark Bay's strategic value. The settlement grew as Atriik developed, providing maritime services that the land-bound city-states could not supply themselves. The relationship is symbiotic: Atriik needs the sea access; Watalina needs the trade goods.
-
-The Council of Pearls has governed since the settlement's founding, with remarkable consistency in policy despite annual leadership rotations. The Kendor view the surface-dwellers with the patient amusement of beings who measure time in centuries.
-
 ## Watar
 
 Tags: state
@@ -13795,3 +13951,11 @@ Occasionally, outsiders try to capture or kill the great raptors. This unites al
 The Gozi have lived in these canyons for as long as anyone remembers. They bonded with the raptors, learned to fly the gorges, and built their society around the birds and the stone. The outside world passed them by, and they were content.
 
 They remain content. The canyons provide everything they need. The raptors are their partners, not their property. The tribes are family. Why would anyone want anything else?
+
+## Øsmil
+
+Tags: state, shacklands
+
+A state in the Shacklands region. Listed among the southern powers near Gorath, Kyagos, and Lethos.
+
+TODO: Develop geography, government, culture, and relations.

@@ -2,9 +2,9 @@
 
 ## Alekroin
 
-The Alekroin are massive alligator-folk whose imposing presence and predatory mindset have made them both feared and respected throughout the saltwater swamps of Shykasas. These powerfully built beings stand shorter than most humanoids but possess incredible physical strength and an unwavering belief in the fundamental truth that everything in existence falls into two categories: predator or prey. Their culture has remained unchanged for millennia, as rigid and unyielding as the territorial boundaries they enforce.
+The Alekroin are massive alligator-folk whose imposing presence and predatory mindset have made them both feared and respected throughout the frozen wastes of Shykasas. These powerfully built beings stand shorter than most humanoids but possess incredible physical strength and an unwavering belief in the fundamental truth that everything in existence falls into two categories: predator or prey. Their culture has remained unchanged for millennia, as rigid and unyielding as the ice that covers their homeland.
 
-Alekroin society operates on strict hierarchies determined by hunting prowess and the ability to dominate others. They view adaptation and change as signs of weakness, maintaining their ancient traditions even when circumstances might suggest otherwise. This stubborn adherence to "the old ways" has served them well in their swamp environment, where their natural abilities and proven methods continue to ensure survival.
+Alekroin society operates on strict hierarchies determined by hunting prowess and the ability to dominate others. They view adaptation and change as signs of weakness, maintaining their ancient traditions even when circumstances might suggest otherwise. This stubborn adherence to "the old ways" has served them well in their harsh environment, where their natural abilities and proven methods continue to ensure survival.
 
 Despite their fearsome reputation, the Alekroin possess keen intelligence and insatiable curiosity about the world beyond their territory. However, they approach all new experiences through the lens of their predator-prey worldview, constantly evaluating whether something represents a threat to be eliminated, prey to be hunted, or a potential tool for their own advancement.
 
@@ -3504,9 +3504,11 @@ You can breathe underwater and have a swim speed of 30 feet. You suffer no disad
 
 ### Tytheri (Blood Orc)
 
-The Tytheri are musclebound orcs with totally white skin and razor-sharp teeth, capable of smelling blood from miles away. Within their society, Tythmasters—orcs fed a diet rich in magical blood—grow to enormous size, reaching 10 feet in height as they become the leaders of their people.
+The Tytheri are musclebound orcs with bleached-white skin and razor-sharp teeth, capable of smelling blood from miles away. Their pallor comes from generations of consuming a substance they harvest from the Agony Stones—a cursed region in their territory that even other Tytheri approach with caution. The ichor they collect there is the blood of something ancient and dying, and it has transformed them over centuries.
 
-These orcs are constantly at war with the Kadroka, and their entire culture revolves around blood, combat, and the pursuit of ever-greater physical power.
+Within their society, Tythmasters—orcs fed the richest concentrations of this magical blood—grow to enormous size, reaching 10 feet in height as they become the leaders of their people. But the ichor exacts a price: long-term consumption deadens emotion until violence is the only thing that makes them feel alive.
+
+These orcs are constantly at war with neighboring Kadroka, whose dragon-king they have trapped through means they do not fully understand. Their entire culture revolves around blood, combat, and the pursuit of ever-greater physical power—a pursuit that has become an addiction with no cure.
 
 #### Aspects
 

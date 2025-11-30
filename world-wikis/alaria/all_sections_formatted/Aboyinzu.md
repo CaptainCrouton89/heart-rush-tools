@@ -6885,11 +6885,113 @@ TODO
 
 ### Elebria
 
-Tags: dragon, creature
+Tags: dragon, earth, fire, pindolin-islands
 
-A dragon dwelling in the Pindolin Islands.
+A lava dragon who claims the southwestern Pindolin Islands, where the Earth and Fire leylines converge into volcanic fury. Elebria is the most territorial of the archipelago's three dragons and the least interested in conversation. She doesn't negotiate. She doesn't bargain. She burns.
 
-TODO
+#### Appearance
+
+Elebria's scales shift between states depending on her temperature. When cool—a relative term for a creature whose resting temperature would melt iron—she appears almost statuesque: black volcanic stone, rough-textured, with veins of dull orange tracing where magma flows beneath the surface. Her eyes are the only constant brightness, twin points of molten gold that never dim.
+
+When she heats—in anger, in combat, in the simple pleasure of basking on a lava flow—the black scales crack and separate, revealing the churning orange beneath. At full fury, she becomes difficult to look at directly. The heat haze around her body distorts vision. The air itself burns.
+
+She's smaller than Oboros, larger than Findra, and substantially denser than either. Her body retains heat from the leyline convergence the way a forge retains heat from its coals. She doesn't fly often—the energy expenditure costs heat she'd rather conserve—but when she does, she leaves scorched air in her wake.
+
+#### The Territory
+
+Elebria's domain encompasses the volcanic southern Pindolins: a cluster of islands created and continuously reshaped by the Earth-Fire leyline convergence. The geology is violent—thermal vents, lava tubes, calderas that periodically overflow, beaches of black sand that steam when waves touch them.
+
+Nothing lives here that can't survive extreme heat.
+
+The heart of her territory is an active volcano the locals call the Furnace—though "locals" is generous, since no one actually lives within fifty miles of it. The volcano erupts constantly in small ways, producing flows that reshape the coastline annually. Elebria has excavated chambers within the cone itself, creating a lair of liquid stone and superheated air.
+
+**The Throat**: The main chamber, a partially flooded magma lake where Elebria spends most of her time submerged in liquid rock. She finds it comfortable. Visitors who approach the chamber's edge typically combust before reaching it.
+
+**The Vents**: Tunnel networks that connect to thermal vents throughout the southern islands. Elebria can travel through these, swimming through solid stone softened by leyline heat, emerging wherever volcanic activity surfaces.
+
+**The Cooling Pools**: Shallower chambers where lava cools to a merely lethal temperature. This is where Elebria stores things she wants to preserve rather than destroy—not much survives long-term, but some materials actually improve with heat treatment.
+
+#### Temperament
+
+Elebria is not complicated.
+
+She wants to be left alone. She wants her territory respected. She wants heat, stone, fire, and the absence of things that aren't those. Other dragons tolerate visitors, make deals, engage in politics. Elebria considers such behavior exhausting and pointless.
+
+Her response to intrusion is immediate and violent. Ships that enter her waters without invitation—and invitations are never given—are destroyed. Not warned, not threatened, not given opportunity to explain. She surfaces beneath them and melts through their hulls, or she breathes fire from a distance, or she simply heats the water around them until it boils. The method varies; the outcome doesn't.
+
+This isn't cruelty. Elebria doesn't enjoy killing particularly. It's efficiency. Dead intruders don't come back. Survivors might. Survivors might tell others. Others might think the territory is open to negotiation.
+
+The territory is not open to negotiation.
+
+#### The Leyline Convergence
+
+The Earth and Fire leylines intersect directly beneath Elebria's lair—one of the most powerful convergence points in the entire Pindolin archipelago. The combined energies create effects found nowhere else:
+
+**Obsite Formation**: A glass-like volcanic stone that retains heat indefinitely. Objects made from obsite never cool below their forging temperature. A blade quenched in magma stays hot enough to cut through steel without effort.
+
+**Geological Instability**: The convergence destabilizes reality in the immediate area. Stone moves. Islands sink and rise. New volcanic vents open without warning. Elebria has learned to read these shifts instinctively; visitors have no such advantage.
+
+**Elemental Bleed**: Fire elementals occasionally manifest near the strongest convergence points—wisps of living flame, serpents of magma, once something larger that Elebria killed before it could fully form. Earth elementals are rarer but more dangerous, their stone bodies incorporating volcanic heat.
+
+**Amplification**: Elebria's power increases dramatically near the convergence. At the Furnace's heart, she is effectively unstoppable by conventional means. Dragon-hunters have tried. The Furnace has absorbed their remains.
+
+#### History
+
+Elebria came to the Pindolins roughly five centuries ago—the first of the current three dragons to claim territory here.
+
+She doesn't discuss where she came from or why she left. The few scholars who've researched the question found fragmentary references to a "burning terror" that devastated several Dragon's Spine settlements around that time, but whether that was Elebria arriving or something else is unclear.
+
+What's known:
+
+**The Claiming** (~500 years ago): Elebria arrived at the volcanic southern islands and killed everything that resisted her claim. This took approximately two weeks. The local fauna adapted; the local flora burned.
+
+**The Oboros Arrangement** (~400 years ago): When Oboros established himself in the central islands, he approached Elebria with a gift exchange ritual. She accepted because the gifts were acceptable and fighting seemed like more effort than not fighting. She's never entirely sure what she agreed to, but Oboros hasn't violated whatever terms exist, so it doesn't matter.
+
+**The Findra Non-Event** (~300 years ago): When Findra arrived in the northeast, Elebria noticed and didn't care. The Force dragon was nowhere near her territory and showed no interest in approaching. They've never interacted directly.
+
+#### Combat
+
+Elebria doesn't fight—she annihilates.
+
+**Breath Weapon**: Not fire exactly, but superheated magma expelled at pressure. The spray fans across hundreds of feet, clinging to whatever it touches and continuing to burn. Ships struck by her breath don't just catch fire; they melt.
+
+**Heat Aura**: At combat temperature, approaching Elebria causes thermal damage. Unprotected flesh blisters at fifty feet. Metal weapons become too hot to hold. Armor becomes an oven.
+
+**Stone Manipulation**: Through the Earth leyline, Elebria can shift stone—cracking cliffs to bury enemies, opening volcanic vents beneath their feet, collapsing tunnels they're fleeing through.
+
+**Submersion**: She can sink into lava and stone, disappearing completely, then erupting from unexpected directions. Fighting her in her territory means fighting an enemy who can strike from any surface at any time.
+
+**Durability**: Her scales are volcanic stone animated by draconic will. Conventional weapons don't penetrate. Magic has more success, but water magic—the obvious counter—evaporates before reaching her at combat temperature. Cold magic might work theoretically; no one has survived long enough to test it properly.
+
+#### Dealing With Elebria
+
+You don't.
+
+Elebria doesn't bargain. She doesn't trade. She doesn't allow visitors, researchers, or ambassadors. Every attempt at diplomatic contact has ended in violence. Every attempt at negotiation has ended in burning ships.
+
+The closest anyone has come to productive interaction:
+
+**The Harvest Ships**: Some captains have learned to collect obsite from beaches at the edge of her territory—close enough to find the material, far enough to flee before she arrives. Success requires speed, luck, and intimate knowledge of her patrol patterns. The profit margins make the risk worthwhile for desperate people.
+
+**The Tribute Attempts**: Early in her occupation, some mainland lords tried offering tribute in exchange for safety. She burned the tribute and the ships carrying it. The lords stopped trying.
+
+**The Watching**: Elebria seems to tolerate being observed from a distance. Ships that remain at the territorial boundary, clearly not approaching, are sometimes ignored. This has allowed limited study of the volcanic activity and occasional sightings of Elebria herself. The moment those ships cross into her waters, tolerance ends.
+
+#### What Drives Her
+
+Scholars speculate about why Elebria is so violently isolationist. Most dragons are territorial, but most dragons also enjoy displays of power, accumulation of wealth, interaction with lesser beings. Elebria wants none of these things.
+
+The leading theories:
+
+**She's hiding**: Something happened before she came to the Pindolins. Something she doesn't want to face or be found by. The volcanic territory isn't just comfortable—it's defensible. The isolation isn't preference—it's necessity.
+
+**She's healing**: Dragons live long enough to accumulate wounds that take centuries to recover from. Elebria might be injured in ways that aren't visible, using the leyline convergence to slowly regenerate from damage that would have killed anything else.
+
+**She's changed**: Long exposure to the Earth-Fire convergence might have altered her psychology. She's becoming more like the elements she embodies—patient as stone, violent as eruption, incapable of the social complexity that comes naturally to other dragons.
+
+**She's always been like this**: Some creatures are simply antisocial. Elebria might be a dragon who never wanted company, found a place that suited her, and has been content to burn anyone who disturbs that contentment.
+
+The truth might be all of these, or none. Elebria isn't answering questions.
 
 ### Emblydium
 
@@ -7001,19 +7103,145 @@ She shares this information rarely and unpredictably. Sometimes she's generous w
 
 ### Frostwing Island
 
-Tags: island, geography
+Tags: island, geography, wildlife
 
-An island off the Dragon's Spine Coast.
+A large island off the southeastern Dragon's Spine Coast, separated from the mainland by roughly five miles of treacherous water. Frostwing Island earned its name from the vast colonies of seabirds that nest there—white-winged species that look like animated frost when they take flight in their thousands. The island is one of the few places along this coast that remains free of both dragon influence and mermaid threat, making it valuable despite its isolation.
 
-TODO
+#### Geography
+
+Frostwing Island stretches roughly fifteen miles east to west and eight miles north to south, making it substantial enough to support significant settlement if anyone wanted to live there. The terrain is predominantly low hills covered in hardy grass and scrub, with rocky cliffs along most of the coastline. The highest point barely reaches five hundred feet—a gentle landscape compared to the dramatic mainland mountains visible on the northern horizon.
+
+The island has no permanent freshwater sources beyond rainfall and a few small springs. This limitation has historically prevented large-scale habitation, though seasonal camps and small permanent populations have existed at various points.
+
+The surrounding waters are notoriously dangerous. The channel between Frostwing and the mainland is shallow in places, with underwater rocks that have claimed countless vessels. The currents are unpredictable, and the strait funnels wind into concentrated gusts that can capsize boats without warning. Successful crossing requires either deep local knowledge or extraordinary luck.
+
+#### The Bird Colonies
+
+What Frostwing lacks in human appeal, it compensates for in avian abundance. The island hosts the largest seabird colonies on the Dragon's Spine Coast—perhaps the largest in southern Aboyinzu. Several species nest here in staggering numbers:
+
+**Frostwings** (the island's namesake) are large, white-winged gulls that nest in colonies of tens of thousands. When disturbed, they rise in clouds that can blot out portions of the sky. Their calls are loud enough to be heard on the mainland when wind conditions are right.
+
+**Storm petrels** nest in burrows along the cliffs, emerging at night to feed and returning before dawn. Sailors consider them omens—their presence supposedly predicts incoming weather.
+
+**Puffins** occupy the rockier sections of coastline, their colorful beaks providing the only visual relief from the island's predominantly gray and white palette.
+
+**Cormorants** fish the surrounding waters in organized groups, their diving patterns visible from shore as dark patches moving across the surface.
+
+The birds produce vast quantities of guano, which has accumulated over centuries into deposits several feet thick in some areas. This guano is valuable as fertilizer, and its harvest represents the island's primary economic activity.
+
+#### The Guano Trade
+
+Frostwing Island's isolation might have kept it permanently uninhabited if not for the fertilizer potential of seabird waste. Guano from the island commands premium prices in agricultural regions throughout Aboyinzu—it's more concentrated and effective than any other available fertilizer.
+
+The **Frostwing Guano Company** has operated a seasonal harvesting operation on the island for roughly forty years. Workers arrive in late spring after the breeding season ends, spend the summer digging, drying, and bagging guano, and depart before autumn storms make the crossing impossible. The work is unpleasant—the smell alone drives most laborers away—but pays well enough to attract crews willing to endure it.
+
+The Company maintains a small permanent staff on the island year-round: a caretaker, his family, and a few workers who maintain the facilities and guard the accumulated guano stores. This skeleton crew numbers perhaps a dozen people, making them the island's only permanent residents.
+
+The operation has made the Rosensaw Compact wealthy—they own the Company and control access to the guano trade. This monopoly is a significant source of their regional influence.
+
+#### Mermaid-Free Waters
+
+Notably, the Shasalassere mermaids have never been documented in the waters around Frostwing Island. Whether the strait is too shallow, the currents too strong, or some other factor prevents their expansion remains unclear. The result is that Frostwing represents one of the few places in this region where people can safely approach the water's edge.
+
+This safety has made the island valuable for activities impossible on the mainland. Fishing, swimming, and water-based recreation that would be suicidal near the Shasalassere are merely inadvisable here. A few wealthy eccentrics have built seasonal retreats on the island's southern coast, valuing the privacy and the ability to walk the beach without fear of being dragged underwater.
+
+#### Other Features
+
+**The Rookery** is the name given to the island's central plateau, where the densest bird colonies concentrate. The noise is overwhelming, the smell is worse, and the ground is covered in several feet of accumulated waste. No one goes there except guano harvesters.
+
+**Shelter Bay** on the island's western coast provides the only reliable anchorage. The guano Company operates from here, and the handful of buildings that constitute the island's only settlement cluster around the bay.
+
+**The Old Tower** on the northeastern point may predate human habitation of the island. The structure is too weathered to date precisely, but its construction doesn't match any known architectural tradition. It contains nothing—no furnishings, no artifacts, no clues to its purpose. Birds nest in its upper levels now.
+
+#### Hooks
+
+**The Year-Round Crew**: The island's caretaker has missed his scheduled signal for two weeks. The Company wants someone to investigate, but they don't want to wait for the normal resupply run. They'll pay well for a fast, discreet investigation.
+
+**The Old Tower**: A scholar believes the tower on Frostwing may be connected to pre-Sundering history—possibly a watchtower from the titan era, possibly something stranger. She wants to conduct an archaeological investigation but needs protection from both the elements and whatever caused the tower's original builders to abandon it.
+
+**Breeding Season Disruption**: Something has disturbed the bird colonies, and the birds are not returning to their usual nesting grounds. If the disruption continues, there will be no guano harvest this year—a catastrophe for the Company and everyone who depends on their trade. Finding and eliminating the cause is worth a substantial reward.
 
 ### Gaplands
 
-Tags: region, geography
+Tags: region, geography, grassland
 
-A region in the Dragon's Spine Coast.
+A stretch of open terrain west of The Glog where the Dragon's Spine briefly relents, creating the only significant lowland passage along this section of coast. The Gaplands earned their name from the "gaps" in the surrounding mountain barriers—passes and valleys that make this region the natural crossroads of southern Aboyinzu. What passes for civilization on the Dragon's Spine Coast concentrates here.
 
-TODO
+#### Geography
+
+The Gaplands occupy roughly two thousand square miles of rolling grassland and light forest between the Pinnacles of Rosensaw to the south and the western edge of The Glog to the east. The terrain is dramatically more hospitable than surrounding regions—well-drained, relatively flat, and sheltered from the worst coastal winds by the mountain barriers.
+
+The region's defining feature is accessibility. Three major routes converge here:
+
+**The Coastal Road** connects the Gaplands to settlements further west along the Dragon's Spine.
+
+**The Glog Road** leads east through the forest toward The Screech and the eastern coast.
+
+**The Rosensaw Pass** runs south through the Pinnacles, providing access to the Shasalassere region and eventually to the routes leading to the Shrapnel Strait.
+
+This convergence makes the Gaplands strategically important despite their modest size. Whoever controls the crossroads controls movement along the southern Dragon's Spine.
+
+#### Climate
+
+The Gaplands benefit from a microclimate created by their geography. The Pinnacles of Rosensaw block the coldest southern winds; The Glog absorbs moisture before it reaches the grasslands; and the gaps themselves channel air currents that keep temperatures relatively moderate. "Relatively" is key—the region is still cold by most standards, with short growing seasons and harsh winters. But compared to the frozen heights and sodden forests that surround it, the Gaplands feel almost temperate.
+
+The grasslands support limited agriculture—cold-weather grains, root vegetables, and pasturage for hardy livestock. The region can't feed a large population, but it can feed the population it has.
+
+#### Settlement
+
+The Gaplands host the densest permanent population on the Dragon's Spine Coast, which means roughly six thousand people scattered across several settlements:
+
+**Gaptown** is the largest—a market settlement at the junction of the three major roads. The name is uninspired but accurate. Population fluctuates seasonally as traders, loggers, and travelers pass through, ranging from about two thousand permanent residents to three times that during summer trading season.
+
+Gaptown has no formal government. A council of the wealthiest merchants theoretically manages civic affairs, but in practice, whoever controls the roads controls the town. Currently that's the **Rosensaw Compact**, a loose alliance of trading families who've maintained dominance for three generations by ensuring the passes stay open and the roads stay safe.
+
+**Birintine** sits at the southeastern corner of the Gaplands where the Birintine River emerges from the Pinnacles. The settlement serves as a staging point for logging operations in The Glog and fishing on Birintine Lake. Population roughly eight hundred.
+
+**Morgan's Landing** occupies the northern Gaplands near the headwaters of the Erginya River. The settlement trades with the few communities that exist along the northern coast and serves as the last reliable supply point for anyone foolish enough to travel that direction. Population roughly four hundred.
+
+Scattered farmsteads and ranches fill the space between these settlements, supporting perhaps another two thousand people in isolated households.
+
+#### Economy
+
+The Gaplands function as the commercial hub of the Dragon's Spine Coast, not because they produce much themselves but because everything else flows through them:
+
+**Timber** from The Glog moves west through the Gaplands to markets along the coast.
+
+**Fish** from the eastern coastal villages crosses The Screech and The Glog to reach the Gaplands markets.
+
+**Furs and pelts** from trappers throughout the region are bought, sorted, and shipped from Gaptown.
+
+**Manufactured goods** from more populated regions enter the Dragon's Spine through the Gaplands and distribute from there.
+
+The Rosensaw Compact takes a percentage of everything, which makes them wealthy by local standards and despised by everyone who pays their tariffs.
+
+#### Threats
+
+The Gaplands' accessibility cuts both ways. The same routes that bring trade also bring trouble:
+
+**Bandits** work the roads despite the Compact's patrols. The terrain offers too many places to hide, and the traffic offers too many targets. Most bandits are opportunistic locals; some are more organized.
+
+**Pelera** occasionally ranges west from her territory in The Glog. The dragon seems to consider the eastern Gaplands part of her domain, though she doesn't enforce this claim consistently. When she does appear, people take shelter and hope she's not hungry.
+
+**The Shasalassere mermaids** sometimes range north through underground waterways, emerging in streams and small lakes far from their usual territory. Livestock disappears; occasionally people do too.
+
+**Weather** kills more people than any other threat. The region's relative mildness creates complacency; unexpected storms catch travelers between settlements with lethal regularity.
+
+#### The Rosensaw Compact
+
+The trading alliance that dominates Gaplands commerce has controlled the region for roughly eighty years. The Compact maintains the roads, operates the major trading houses, and provides the only organized security force in the region—a private militia of about two hundred that patrols the routes and protects Compact interests.
+
+The Compact's leadership rotates among five families: Rosensaw (the founding family, from whom the Pinnacles take their name), Erginya, Morgan, Birintine, and Gap. Each family controls specific routes and territories within the overall alliance. Disputes are settled by council vote, with each family holding one vote regardless of current wealth or influence.
+
+The system is stable but increasingly resented. The Compact's tariffs have risen steadily; their enforcement has grown more aggressive; and their militia has been accused of activities that blur the line between security and extortion. Reform movements exist but lack the organization to challenge entrenched power.
+
+#### Hooks
+
+**Compact Politics**: One of the five families is maneuvering to break the alliance and seize control of the entire region. They're hiring outsiders for deniable work—sabotage, intimidation, and eventually something worse.
+
+**The Third Road**: A surveyor claims to have found a pass through the Pinnacles that would bypass the existing Rosensaw Pass entirely, allowing traffic to avoid Compact tariffs. Multiple parties want the surveyor's maps—including the Compact, who want them destroyed.
+
+**Dragon Diplomacy**: Pelera has been ranging further west than usual, and the Compact is considering whether to negotiate, fight, or flee. They're looking for people with dragon experience to advise them—or to deliver a message to the dragon herself.
 
 ### Gondurak
 
@@ -7100,6 +7328,77 @@ Tags: hills, geography
 Hills in the Dragon's Spine Coast.
 
 TODO
+
+### Lakes of the Glog Coast
+
+Tags: lakes, rivers, geography, water
+
+The region around The Glog forest contains numerous lakes and rivers, each with distinct character and varying degrees of safety. Understanding these water features is essential for anyone traveling through the area—some are relatively safe; others are death traps for the unwary.
+
+#### Lake Morgan and the Erginya River
+
+**Lake Morgan** sits in the northwestern corner of The Glog, a cold, deep body of water approximately two miles across at its widest point. The lake is surrounded by some of the densest forest in the region, with trees growing down to the waterline and blocking most sight lines.
+
+The lake is notoriously murky despite its depth—sediment from the surrounding forest floor clouds the water year-round. Local legend claims something large lives in the depths, and the legends have enough supporting evidence to be taken seriously. Boats that venture to the lake's center have been known to capsize suddenly, with survivors reporting impacts from below. The Glog's loggers avoid the lake entirely.
+
+The **Erginya River** drains Lake Morgan northward, eventually reaching the sea through marshlands that few have mapped. The river is navigable for its first few miles but becomes increasingly difficult as it approaches the coast—tangled with debris, interrupted by beaver dams, and prone to sudden depth changes.
+
+The Erginya fishing communities near the river mouth are small and insular, trading with few outsiders. They claim to know what lives in Lake Morgan. They don't discuss it.
+
+#### Birintine Lake and River
+
+**Birintine Lake** lies in The Glog's western reaches, fed by the **Birintine River** that flows down from the Pinnacles of Rosensaw. Unlike Lake Morgan, Birintine is relatively shallow and warmed by geothermal activity beneath the lakebed.
+
+The lake is one of the few water features in this region considered safe for swimming and fishing. The thermal heating creates conditions hostile to the Shasalassere mermaids (they prefer cold water), and the lake's shallow depth limits what else might lurk there. Small fishing communities work the lake during summer months.
+
+The sulfurous smell that characterizes much of The Glog likely originates from the same geothermal activity that warms Birintine Lake. Some find the smell unbearable; others claim you stop noticing after the first day.
+
+#### The Lonely Lakes
+
+A chain of small lakes in The Glog's northern forest, the **Lonely Lakes** earned their name because nothing lives in or around them. No fish swim in their waters. No birds nest on their shores. No animals drink from them. The water is clear, cold, and perfectly still.
+
+The phenomenon has never been satisfactorily explained. The water contains no obvious toxins or contaminants—travelers who've drunk from the Lonely Lakes in emergencies suffered no ill effects. Yet every form of wildlife avoids them. Even the omnipresent mosquitoes and flies of The Glog are absent near these waters.
+
+Local superstition holds that the lakes are cursed, that something happened here long ago that the land remembers even if people don't. Scholars prefer theories involving mineral content or subtle magical contamination. Neither group has produced convincing evidence.
+
+Recent reports describe animals found frozen near the Lonely Lakes despite temperatures well above freezing—as if the lakes somehow produce cold rather than merely containing it. These reports remain unconfirmed.
+
+#### Shimmer Lake
+
+**Shimmer Lake** lies at The Glog's eastern edge, marking the boundary between forest and the foothills of The Screech. The lake earns its name from the way light plays across its surface—reflections that seem too bright, too active, as if the water itself generates luminescence.
+
+The phenomenon is probably optical, caused by mineral content refracting sunlight in unusual ways. Or it might be magical. The distinction matters because Shimmer Lake is Pelera's lair.
+
+The green dragon has claimed the lake and surrounding territory as her own. The shimmer may be natural, may be a side effect of draconic presence, or may be something Pelera deliberately cultivates. She doesn't explain, and no one asks. What's known is that the lake's boundaries define the core of her territory—anyone entering without her sufferance is either brave, desperate, or unaware of their danger.
+
+The lake supposedly contains a submerged structure of some kind—glimpsed occasionally when the angle of light is right. Whether this is Pelera's actual lair, a pre-existing ruin she's claimed, or a trick of the shimmer effect is unknown.
+
+#### Cogspit Lakes
+
+The **Cogspit Lakes** dot the narrow coastal strip east of The Screech, a chain of brackish pools connected to the sea by underground channels. The name comes from the distinctive clicking sound the rocks make when waves withdraw—a mechanical noise that sounds like gears turning.
+
+The sound is entirely natural, produced by rock formations in the underground channels. The tidal action creates pressure differentials that force air and water through narrow gaps, producing the clicking. But the first settlers in this area heard only the sound and assumed machinery—hence "Cogspit," supposedly the noise of some vast underground mechanism spitting up water.
+
+The lakes support modest fishing communities that use the brackish water as a natural fish trap. The underground channels allow small marine species to enter but prevent larger predators from following. What emerges is safe to eat and easy to catch.
+
+#### Murky Lakes
+
+South of Cogspit, the **Murky Lakes** occupy depressions where sediment from the Shasalassere Mountains collects. The water here is perpetually clouded—you can't see six inches below the surface. The murk protects the abundant fish population from aerial predators but makes fishing complicated.
+
+The locals have developed specialized techniques involving baited nets and patience. The murk also hides the fish from the Shasalassere mermaids, who hunt primarily by sight and vibration. Whether the mermaids have actually colonized Murky Lakes is unclear—no one has seen them there, but no one can see much of anything there.
+
+Travelers are advised to treat Murky Lakes as potentially mermaid-infested until proven otherwise. The murk that protects fish would equally hide approaching threats.
+
+#### Water Safety Summary
+
+For travelers in this region:
+
+- **Safe**: Birintine Lake (thermal), Birintine River (fast-flowing), Cogspit Lakes (brackish/tidal)
+- **Uncertain**: Murky Lakes (possible mermaid presence), Erginya River (unknown deeper sections)
+- **Avoid**: Lake Morgan (something in the depths), Lonely Lakes (unnatural), Shimmer Lake (dragon territory)
+- **Dangerous**: Any water connected to Shasalassere underground systems
+
+When in doubt, don't drink directly from the source, don't wade, don't swim, and don't assume any body of water is safe. The mermaids' range continues to expand, and water that was safe last year may not be safe now.
 
 ### Midnir
 
@@ -7211,11 +7510,111 @@ See also: [Kanzekill](../../bestiary/dragons/Kanzekill.md)
 
 ### Oboros, the Cunning
 
-Tags: dragon, creature
+Tags: dragon, water, pindolin-islands
 
-A dragon dwelling in the Pindolin Islands.
+A Water dragon who controls the central Pindolin Islands, moving through the Water leyline like a current himself. Oboros is the oldest dragon in the archipelago, the most patient, and the most likely to talk before killing—though talking to Oboros has its own dangers.
 
-TODO
+#### Appearance
+
+Oboros is blue in the way deep water is blue—not the bright azure of tropical shallows but the dark, cold blue of oceanic depth. His scales are smooth and close-fitted, offering no purchase for barnacles despite centuries in salt water. His eyes are luminous, self-illuminating, visible from hundreds of feet away in murky water.
+
+He's large, though smaller than he was. Water dragons don't age the way other dragons do—they don't weaken, but they condense. Oboros at five hundred years is denser than Oboros at two hundred, each scale packed with compressed vitality. He looks merely huge now. He feels like a depth charge waiting to detonate.
+
+When he moves through water, he doesn't displace it—he becomes part of its flow, accelerating along the leyline at speeds that shouldn't be possible for something his size. On the rare occasions he surfaces, the water doesn't fall from him so much as reluctantly release him.
+
+#### The Lair
+
+Oboros lairs in a flooded volcanic caldera in the central Pindolins—a near-perfect circle of sheer cliffs surrounding a deep, dark lake connected to the ocean through underwater tunnels. The Water leyline runs directly through the caldera's heart.
+
+The lake looks empty from above. It isn't.
+
+The caldera extends hundreds of feet below sea level, the volcanic crater continuing downward into a complex of flooded chambers. Oboros has expanded these over centuries, carving with water-pressure and patience, creating a palace of smooth stone and channeled currents.
+
+**The Receiving Chamber**: A partially flooded cavern where Oboros conducts business with surface-dwellers. Air pockets along the ceiling allow breathing; ledges allow standing; the entire space is designed to make visitors feel precisely as small and vulnerable as they are.
+
+**The Current Paths**: A network of tunnels optimized for rapid movement, connecting the caldera to dozens of locations throughout the central Pindolins. Oboros can travel miles in minutes through these channels, emerging anywhere within his territory without warning.
+
+**The Depths**: The lowest chambers, where Oboros keeps things he values. No air-breather has seen these and reported back. Their contents are the subject of extensive speculation.
+
+#### What He Values
+
+Oboros collects debts.
+
+Not gold—gold doesn't interest him. Not magical artifacts—he has enough. What Oboros accumulates is *obligation*. Favors owed. Services promised. Binding agreements etched into his memory and, he claims, into the leyline itself.
+
+Over five centuries, Oboros has bargained with sailors, merchants, pirates, mages, minor nobles, and at least three other dragons. He's traded safe passage for future considerations. He's provided information in exchange for unnamed services. He's rescued drowning crews who then owed him everything.
+
+Most of his debtors are dead, their obligations long since discharged or simply expired. But some aren't. Oboros maintains a mental ledger of outstanding debts, and he calls them in without warning, sometimes generations after the original agreement.
+
+The grandson of a man Oboros saved in 2847 SD might wake to find a blue-scaled head surfacing beside his ship, politely requesting the assistance that was promised.
+
+#### Bargaining With Oboros
+
+Anyone can bargain with Oboros. He encourages it.
+
+The problem is the terms.
+
+Oboros is intelligent, patient, and operates on timescales humans don't naturally consider. A deal that seems favorable today may become catastrophic decades later when circumstances change. He never lies—he considers it inefficient—but he chooses his words with precision that would impress a Deoric practitioner.
+
+**What he offers**:
+- Safe passage through central Pindolin waters
+- Information about the archipelago's dangers and opportunities
+- Access to the Water leyline's enhancement effects for mages
+- Recovery of sunken cargo, vessels, or persons
+- Destruction of your enemies (if they're in his waters)
+
+**What he wants**:
+- Unspecified future services (his favorite)
+- Information about mainland politics, trade, and conflicts
+- Objects of curiosity from the surface world
+- Occasionally, specific targets delivered to him alive
+
+**The trap**: Oboros phrases his requests as options, his terms as suggestions. He never demands. He presents alternatives that all somehow lead to the outcome he wanted. Negotiating with him feels collaborative until you realize you've agreed to exactly what he intended from the start.
+
+#### The Cunning
+
+Oboros earned his epithet through centuries of demonstrated intelligence:
+
+**The Vetralian Treaty**: When triton forces from Vetral attempted to claim the central Pindolins for their oceanic expansion, Oboros negotiated instead of fighting. The resulting agreement—still technically in force—grants Vetral theoretical sovereignty over Pindolin waters in exchange for Oboros having actual control. The tritons get to claim territory on their maps. Oboros gets to do whatever he wants. Both parties consider this a victory.
+
+**The Elebria Arrangement**: When Elebria established herself in the volcanic south, territorial conflict seemed inevitable. Oboros instead proposed a gift exchange—a complicated tradition that established non-aggression without the humiliation of formal treaty. Elebria, who doesn't think in these terms, accepted without fully understanding she'd agreed to anything. They haven't fought since.
+
+**The Information Network**: Oboros maintains contacts among sailors, fishermen, and smugglers throughout the Dragon's Spine Coast. He trades trivial favors for news, assembling a picture of mainland affairs that most surface rulers would envy. He knows about events sometimes before they happen, extrapolating from currents of trade and tension the way he reads currents of water.
+
+#### Combat
+
+Oboros avoids direct combat. Not because he can't win—he can, against most opponents—but because combat is wasteful, unpredictable, and rarely accomplishes goals as efficiently as other methods.
+
+When combat becomes unavoidable:
+
+**Control the water**: In his territory, Oboros commands the currents. He can create whirlpools, reverse tides, and generate focused pressure capable of crushing ships or shattering bone. Fighting him in water is suicide.
+
+**Depth advantage**: He can drag opponents down. Water pressure at depth does his killing for him.
+
+**The leyline**: Near the Water leyline's strongest points, his power amplifies dramatically. Ships have simply *vanished* when they caught him near a convergence—compressed into wreckage, their crews dissolved into the sea.
+
+**Escape**: If somehow outmatched, Oboros can exit through his current paths faster than any pursuer could follow. He's never needed to, but the option exists.
+
+#### Relationships
+
+**Findra**: He finds her interesting. A blind dragon who rebuilt her senses is an achievement worth respecting. They've bargained twice—once for territorial boundaries, once for information about deep-sea creatures Findra killed and Oboros wanted examined. Both exchanges were businesslike. Neither owes the other anything currently, which both find comfortable.
+
+**Elebria**: He considers her simple, which isn't an insult—simplicity makes her predictable, which makes her manageable. She wants to be left alone in her volcanic territory. He has no interest in volcanic territory. The arrangement works.
+
+**Kanzekill**: He knows more about her situation than she realizes. The Force leyline's shifting, Mountainveil's vulnerability, the factions within—Oboros has assembled these pieces over decades. He hasn't decided what to do with the information. Options have value.
+
+#### What He Knows
+
+Oboros has spent five centuries in the Pindolins and centuries before that elsewhere. His knowledge is extensive:
+
+- The complete current system of the southern ocean, including routes that don't appear on any chart
+- The location and migration patterns of every kraken-matriarch within five hundred miles
+- Which mainland ports are most vulnerable to naval attack (theoretical interest only, he claims)
+- The history of several sunken civilizations whose ruins dot the Pindolin seabed
+- Where the Water leyline's power is strongest and how it's shifted over centuries
+- Korvo Maelish's exact location and the nature of his curse (they've met; Oboros found the navigator's situation fascinating)
+
+This information is available, for a price. The price is always reasonable at first.
 
 ### Pale Peaks
 
@@ -7267,11 +7666,13 @@ The Fengruk don't know who built them or why. They don't investigate. Some doors
 
 ### Pelera
 
-Tags: dragon, creature
+Tags: dragon, dark, the-glog
 
-A dragon dwelling in the Dragon's Spine Coast.
+A dark emerald dragon who claims The Glog forest as her domain, laired at Shimmer Lake on the forest's eastern edge. Pelera rules through fear and mystery rather than overt destruction—every shadow in her territory might contain her, every silence might herald her approach.
 
-TODO
+She tolerates human activity at the margins but responds lethally to intrusions into her core territory. The forest's reputation for making travelers feel watched isn't superstition—it's Pelera.
+
+For full details, see the dragon entry: [Pelera](../../bestiary/dragons/Pelera.md)
 
 ### Pindolin Islands
 
@@ -7382,11 +7783,69 @@ The Pindolins have been continuously dangerous for as long as anyone has tried t
 
 ### Pinnacles of Rosensaw
 
-Tags: mountains, geography
+Tags: mountains, geography, trade
 
-A mountain range in the Dragon's Spine Coast.
+A distinctive mountain range between the Gaplands and the Shasalassere Mountains, characterized by needle-sharp spires that rise from gentler slopes like teeth from a jaw. The Pinnacles take their name from the Rosensaw family—traders who first established the passes through these mountains and whose descendants still control regional commerce through the Rosensaw Compact.
 
-TODO
+#### Geography
+
+The Pinnacles run roughly east-west for about forty miles, forming a natural barrier between the relatively hospitable Gaplands to the north and the mermaid-haunted Shasalassere range to the south. The range is notable for its distinctive dual geology: rounded, weathered base mountains topped by sharp granite spires that can reach several hundred feet tall.
+
+Geologists attribute this formation to differential erosion—harder granite cores remaining after softer surrounding stone wore away. Whatever the cause, the visual effect is dramatic. The Pinnacles look artificial from a distance, like fortifications built by giants. Early explorers reportedly spent weeks searching for passages between what they assumed were constructed walls.
+
+The spires make the range appear more impassable than it actually is. The gaps between pinnacles provide natural corridors, and three major passes cut through the range at reasonable elevations:
+
+**Rosensaw Pass** (western) is the most heavily traveled, connecting the Gaplands directly to the northern Shasalassere approaches. The pass was cleared and maintained by the original Rosensaw settlers four generations ago.
+
+**Birintine Gap** (central) follows the river of the same name south toward Birintine Lake and The Glog. The route is less developed than Rosensaw Pass but provides access to the logging regions.
+
+**Eastern Needle** (eastern) offers a secondary route to the Shasalassere Way, useful when the main pass is blocked by weather. The eastern route is steeper and narrower, passing between some of the tallest spires in the range.
+
+#### The Rosensaw Legacy
+
+The Pinnacles bear a family name because a family made them passable. Four generations ago, a trader named Kethren Rosensaw led an expedition to find a southern route through the Dragon's Spine that would avoid both Pelera's territory and the coastal hazards. He found the passes, cleared them, and established waypoints that made reliable travel possible.
+
+Kethren's descendants parlayed this advantage into commercial dominance. The Rosensaw family controls the western pass that bears their name, collecting tolls from every merchant who uses it. When they formed the Rosensaw Compact with four other families, they ensured the Pinnacles remained central to their power—whoever controls the passes controls movement through this entire region.
+
+The Compact maintains the passes, operates supply stations at key waypoints, and provides guides for travelers unfamiliar with the terrain. These services aren't cheap, but they're reliable. Before the Rosensaws, crossing the Pinnacles meant risking unmarked routes, hidden crevasses, and frequent disasters. Now it merely means paying the toll.
+
+#### The Spires
+
+The granite pinnacles that give the range its name serve no practical purpose but attract considerable interest:
+
+**Climbers** come from across Aboyinzu to attempt the tallest spires. The rock is excellent for climbing—hard granite with abundant handholds—and the vertical challenges range from moderate to essentially impossible. A successful ascent of one of the major spires earns recognition among mountaineering circles; a successful ascent of Rosensaw's Needle (the tallest) earns legend status.
+
+**Scholars** study the spires' unusual acoustic properties. Like The Screech to the east, the Pinnacles produce sounds in wind—but where The Screech screams, the Pinnacles sing. The spaces between spires create resonant chambers that produce tones rather than noise. On particularly windy days, the range seems to hum with harmonics.
+
+**Religious seekers** believe the singing indicates divine presence. Several small hermitages exist among the spires, home to contemplatives who listen for meaning in the wind-song. The hermits are generally harmless, though their tendency to build in precarious locations occasionally requires rescue operations.
+
+#### The Birintine River
+
+The Birintine River rises in the central Pinnacles, fed by snowmelt and the numerous springs that emerge from the granite formations. The river flows north through Birintine Gap, passing through the eastern Gaplands before emptying into Birintine Lake at the edge of The Glog.
+
+The river is relatively safe by regional standards—it flows too fast for mermaids, and its course doesn't pass through mermaid-colonized underground systems. Travelers can drink from it, ford it at established crossings, and generally interact with water without the paranoia that characterizes life near the Shasalassere.
+
+The Birintine settlement at the river's emergence from the Gap serves as a transfer point between the Pinnacles routes and The Glog logging operations.
+
+#### Wildlife and Hazards
+
+The Pinnacles support limited wildlife—mountain goats on the lower slopes, raptors nesting on the spires, small rodents and their predators in the rocky terrain between. Nothing particularly dangerous lives here by Dragon's Spine standards, which makes the range feel almost safe.
+
+The real hazards are environmental:
+
+**Rockfall** from the spires is a constant concern. The same weathering that created the pinnacles continues to shed material from them. Travelers learn to watch for fresh debris on trails and to avoid camping directly beneath tall formations.
+
+**Weather** changes rapidly in the Pinnacles, with clear skies becoming dangerous storms in less than an hour. The passes can close without warning, stranding travelers between waypoints.
+
+**Hidden crevasses** exist throughout the range—gaps between formations filled with snow or debris that looks solid but isn't. The maintained trails avoid known crevasse areas, but off-trail travel is risky.
+
+#### Hooks
+
+**The Bypass**: Someone is developing an alternative route through the Pinnacles—one that would avoid Compact-controlled passes entirely. The Rosensaws want to know who's responsible and how far the project has progressed. They're paying for information, but what they'll do with that information remains unspecified.
+
+**The Singing Spire**: One particular pinnacle has begun producing sounds that listeners interpret as words—not the usual wind-harmonics but what seems like speech in an unknown language. A hermit who lived near the spire has disappeared. Scholars and Compact security are both interested in investigating.
+
+**The Climber's Challenge**: A wealthy patron is offering a substantial prize for the first successful ascent of Rosensaw's Needle—but only if accomplished within the next month, before the seasonal weather closes the high routes. Several climbing teams are assembling. Not all of them plan to win through skill alone.
 
 ### Rivers of the Shrapnel Coast
 
@@ -7436,9 +7895,81 @@ TODO
 
 ### Shasalassere Mountains
 
-Tags: poi
+Tags: mountains, geography, mermaids, danger
 
-Home to mermais, living in subterranean, icy lakes in the mountains. Traveled up rivers from the sea, live underground. Totally pale, carnivorous (eat fish). Really terrifying.
+A sprawling mountain range south of The Screech and the Gaplands, forming the backbone of this section of the Dragon's Spine before the land breaks apart into the Shrapnel Strait. The Shasalassere Mountains are forbidding by any standard—high, cold, and perpetually wrapped in mist—but their true horror lies below the surface. The mountains are riddled with subterranean lakes, and the lakes are home to something that should not exist this far from the sea.
+
+#### The Shasalassere Mermaids
+
+Sometime in the distant past—centuries ago at minimum, possibly millennia—mermaids traveled up the rivers that drain the Shasalassere slopes and found their way into the underground lake system that honeycomb the range. There they remain: colonies of pale, eyeless creatures that have adapted to absolute darkness and perpetual cold, feeding on the blind fish that share their waters and, when opportunity presents, on anything warm-blooded foolish enough to approach their lakes.
+
+The Shasalassere mermaids bear little resemblance to the sea-dwelling merfolk of other regions. Generations in darkness have left them completely unpigmented—white skin, white hair, milky eyes that no longer function. They navigate by sound and vibration, detecting prey through the water with precision that makes sight unnecessary. Their teeth have grown sharper, their fingers have developed webbing and claws, and their behavior has lost whatever social complexity merfolk normally possess.
+
+They are not intelligent in any way travelers can negotiate with. They don't speak, don't make tools, don't seem to communicate beyond simple hunting coordination. They emerge from the water with terrifying speed, drag prey under, and tear it apart. Groups that lose members to the mermaids rarely recover bodies.
+
+The mermaids' range has expanded over time. They've colonized every connected lake system in the Shasalassere, and their underground waterways extend north into the foothills of The Screech and west toward the Pinnacles of Rosensaw. Any body of water with underground connections might contain them. Any river flowing from these mountains might carry them.
+
+#### Geography
+
+The Shasalassere Mountains rise to over ten thousand feet at their highest points—taller than The Screech to the north but less dramatic in profile. The slopes are steep but not vertical, covered in permanent snow at higher elevations and scrubby vegetation below the tree line. The rock is predominantly granite, weathered into rounded shapes that contrast with The Screech's sharp spires.
+
+The mountains' most significant feature isn't visible from outside: a vast network of caves, tunnels, and underground lakes carved by water over millions of years. The system connects the Shasalassere range internally and links to underground waterways extending for hundreds of miles in multiple directions. This network made the mermaid colonization possible and makes containment impossible.
+
+Surface water is abundant—streams and rivers drain every slope, fed by snowmelt and rainfall. Most of these waterways connect to the underground system somewhere along their course. The Birintine River flows north through the Pinnacles to the Gaplands; the streams that feed the Murky Lakes drain east through The Screech; countless smaller watercourses eventually reach the sea.
+
+#### Avoiding the Mermaids
+
+Travelers through the Shasalassere have developed rules for survival:
+
+**Never camp near water.** The mermaids can leave the water for short periods—long enough to snatch prey from the shore and drag it back. Any campsite within fifty feet of a lake, river, or stream is a campsite within mermaid range.
+
+**Never wade or swim.** The mermaids are faster in water than anything with legs. Fording rivers requires bridges, boats, or very careful rock-hopping. Swimming is suicide.
+
+**Never drink directly from the source.** Mermaids have been known to lurk in shallows, waiting for animals or people to lower their heads to drink. Fill containers from a distance; drink away from the water's edge.
+
+**Watch for ripples.** Mermaids moving underwater create distinctive patterns—V-shaped wakes that don't match current or wind. Experienced travelers learn to read water surfaces and avoid any body of water showing suspicious movement.
+
+**Listen for clicking.** The mermaids echolocate using a distinctive clicking sound that carries through water and sometimes through air. Hearing clicks near water is a warning to move away immediately.
+
+The rules help. They don't guarantee safety. The mermaids are patient, numerous, and hungry.
+
+#### The Shasalassere Route
+
+Despite the dangers, people travel through the Shasalassere. The mountains contain the most direct route between the Gaplands and the Shrapnel Strait region, and the alternative—going around—adds weeks to any journey.
+
+The **Shasalassere Way** is the established path, maintained by guides who've spent lifetimes learning which water sources are safe (or at least less dangerous) and which routes minimize exposure to mermaid territory. The journey takes roughly eight days on foot. Guides charge substantial fees and refuse to guarantee anything.
+
+Key waypoints include:
+
+**Rosensaw Pass**, where the route enters the mountains from the north. The pass itself is relatively safe—too high and dry for the mermaids.
+
+**Whisper Lake**, a surface lake halfway through the mountains that guides claim has no underground connections. Travelers camp here, though no one sleeps easily.
+
+**The Blind Mile**, a stretch where the route necessarily follows a river valley. Guides insist on traveling this section only during daylight, in groups, with constant water-watching.
+
+**Southern Descent**, where the route drops toward the Shrapnel Strait approaches. The lower elevations are actually safer—the water here flows too fast for the mermaids to ambush effectively.
+
+#### What Lives Here (Besides Mermaids)
+
+The Shasalassere aren't entirely devoid of normal life:
+
+**Mountain goats** graze the higher slopes, having learned to avoid water sources that the mermaids have colonized. Their avoidance behavior serves as a useful indicator—where goats drink is probably safe.
+
+**Raptors** hunt the lower slopes, taking advantage of prey animals concentrated near the few safe water sources. The birds have no reason to fear the mermaids and sometimes nest above mermaid lakes.
+
+**Blind cave fish** populate the underground lakes—the mermaids' primary food source. The fish have never been properly catalogued; no one wants to study the lakes closely enough to do so.
+
+**Rumors persist** of other things in the deeper caves—things the mermaids themselves avoid. The guides don't discuss this. They don't go that deep.
+
+#### Hooks
+
+**The Source**: A scholar believes the Shasalassere mermaids must have come from somewhere—a specific starting point from which they spread. Finding and destroying this source might allow the underground lake system to be reclaimed. The scholar wants to hire an expedition. Most people think he's insane.
+
+**The Safe Lake**: A prospector claims to have found a major underground lake completely free of mermaids—and rich with mineral deposits that would be worth a fortune if they could be extracted. He needs help reaching it, protecting the operation, and getting the extracted minerals out past the mermaids.
+
+**The Mermaid Speaker**: A woman in the Gaplands claims she can communicate with the Shasalassere mermaids—that she's established some form of contact that might allow negotiation. The guides want to know if she's a fraud, a madwoman, or something more dangerous.
+
+**The Winter Crossing**: During the coldest months, some of the underground lakes freeze, potentially trapping or killing the mermaids. A merchant consortium wants to know if winter travel through the Shasalassere might be safer—and they're willing to pay for someone to find out firsthand.
 
 ### Shrapnel Strait
 
@@ -7524,19 +8055,125 @@ For full political, economic, and cultural details, see the city-state entry: [S
 
 ### The Glog
 
-Tags: bay, sound, geography
+Tags: forest, geography, pelera
 
-A sound or bay in the Dragon's Spine Coast.
+A vast expanse of dense, waterlogged forest sprawling across the northern Dragon's Spine coast between the open sea and the mountains. The Glog earned its name from the sound boots make in its perpetually sodden ground—a wet, sucking noise that accompanies every step. The forest is cold, dark, and deeply unwelcoming, but it's also one of the few relatively flat, accessible regions on this stretch of coast.
 
-TODO
+#### Character
+
+The Glog is not a swamp, exactly, but it rarely feels dry. Rainfall is constant, drainage is poor, and the canopy blocks what little sun reaches these southern latitudes. The ground varies from merely damp to ankle-deep in standing water, with scattered patches of genuine bog that can swallow the unwary. The trees are mostly cold-adapted conifers—spruce, fir, and the distinctive blue-needled glogpine that grows nowhere else.
+
+The forest smells of decay, wet wood, and something faintly sulfurous that locals attribute to the mineral content of the groundwater. Sound carries strangely—voices seem muffled while distant noises arrive with startling clarity. Travelers report feeling watched even when nothing visible observes them.
+
+Despite its inhospitable nature, The Glog supports significant wildlife: elk, wolves, bears, and the cold-water fish that spawn in its countless streams. The forest's western edge provides the only timber resources readily accessible along this coast, and logging camps operate there during the drier summer months.
+
+#### The Dragon's Shadow
+
+The Glog lies within the territory of Pelera, a green dragon who lairs at Shimmer Lake on the forest's eastern edge. Pelera doesn't rule The Glog in any formal sense—she simply lives there, and everyone else accommodates her presence.
+
+The dragon's influence manifests in several ways:
+
+**The Logging Limits**: Pelera tolerates harvesting along the western fringe but reacts violently to operations that push deeper into the forest. The boundary isn't marked, but experienced loggers know where it falls. Camps that cross it tend to disappear.
+
+**The Tribute Tradition**: Some logging operations pay informal tribute—a portion of their catch, coins, or occasionally worked goods left at designated clearings. Whether Pelera actually collects this tribute or merely permits those who pay it to continue operating is unclear.
+
+**The Silence**: Animals in The Glog fall quiet when Pelera moves through. Experienced woodsmen listen for these silences—they provide warning to take shelter and avoid drawing attention.
+
+#### Notable Features
+
+**Birintine Lake** lies in the forest's western reaches, fed by the Birintine River that flows down from the Pinnacles of Rosensaw. The lake is relatively shallow and warm by local standards, heated by geothermal activity that also produces the sulfurous smell characteristic of much of The Glog. Small fishing communities work the lake during summer.
+
+**Lake Morgan** sits in the northwestern corner of the forest, drained by the Erginya River that flows north to the sea. The lake is colder, deeper, and surrounded by particularly dense forest. Local legend holds that something besides fish lives in its depths—something large enough to capsize boats that venture too far from shore.
+
+**The Lonely Lakes** dot the northern forest in a chain that may once have been a single larger body of water. They're called "lonely" because nothing seems to live in or around them—no fish, no waterfowl, no animals coming to drink. The water is clear and cold and perfectly still. Most travelers avoid them.
+
+#### Settlement
+
+No permanent settlements exist within The Glog proper. The forest is too wet, too cold, too dangerous, and too close to a dragon to attract permanent residents. What population exists concentrates in seasonal camps:
+
+**Logging camps** operate along the western fringe during summer, harvesting glogpine and fir for the timber trade. Workers rotate through on six-week shifts, and the camps close entirely when winter makes the work impossible.
+
+**Trapping stations** support fur hunters who work the forest in autumn and early winter, when pelts are thickest and Pelera is least active. The trappers know the forest better than anyone—and have the highest casualty rate.
+
+**Way-stations** provide shelter for travelers crossing The Glog on the route between the Gaplands and The Screech. These are simple structures—four walls, a roof, and a firepit—maintained by no one in particular and used by everyone.
+
+#### Crossing The Glog
+
+The forest lies between the Gaplands to the west and The Screech to the east, making it an unavoidable obstacle for overland travel along this coast. Three routes exist:
+
+**The Northern Shore** follows the coastline, avoiding the forest entirely but requiring boats or difficult scrambling across tidal flats. It's the safest route but the longest.
+
+**The Glog Road** cuts directly through the forest, following higher ground that's merely damp rather than flooded. The road is marked with cairns and maintained—barely—by whoever uses it. Travel time is roughly four days on foot. The route passes within twenty miles of Shimmer Lake.
+
+**The Southern Edge** skirts the forest along the foothills of The Screech and Shasalassere Mountains. It's drier but longer, and the mountain approaches have their own hazards.
+
+Most travelers take the Glog Road and hope Pelera isn't hunting that week.
+
+#### Hooks
+
+**The Silent Camp**: A logging operation has gone quiet—no workers have returned, no signals have been sent, and no bodies have been found. Someone is paying well for a party to investigate. The conventional assumption is Pelera, but the pattern doesn't match her usual behavior.
+
+**Lake Morgan's Secret**: A scholar believes something in Lake Morgan is connected to the pre-Sundering history of this coast—possibly a submerged structure, possibly something stranger. They're assembling an expedition and need people who can handle both deep water and The Glog's other dangers.
+
+**The Lonely Lakes**: Animals have been found near the Lonely Lakes—dead, frozen solid, despite temperatures well above freezing. Someone wants to know why. The lakes' reputation for strangeness has attracted interest from parties who might have unsettling uses for whatever's causing the phenomenon.
 
 ### The Screech
 
-Tags: mountains, geography
+Tags: mountains, geography, wind
 
-Mountains in the Dragon's Spine Coast.
+A jagged range of peaks separating The Glog from the eastern coastline, named for the constant, keening sound the wind makes as it tears through the exposed rock formations. The Screech is not particularly tall by Dragon's Spine standards, but its geology is distinctive—countless spires, arches, and wind-carved channels that transform every breeze into an eerie symphony of whistles, moans, and shrieks.
 
-TODO
+#### The Sound
+
+The Screech never falls silent. Even on calm days, some part of the range catches enough wind to produce sound. During storms, the noise becomes overwhelming—a cacophony of frequencies that drowns out speech and makes navigation by sound impossible. Veterans of the range describe learning to "read the screech," using the pitch and rhythm of the wind-sounds to predict weather changes and locate their position.
+
+The acoustic properties vary by location. Some valleys produce deep, resonant tones that can be felt in the chest. Some ridgelines generate high-pitched whistles that set teeth on edge. Some particularly complex formations create sounds that seem almost like words—syllables that repeat with unsettling regularity, as if the mountain is trying to speak.
+
+Local superstition holds that the sounds carry meaning, that the wind speaks prophecy or warning to those who know how to listen. Scholars attribute the phenomenon to natural acoustics. Neither explanation makes the experience less unnerving.
+
+#### Geography
+
+The Screech runs roughly north-south for about sixty miles, bounded by The Glog forest to the west and a narrow coastal strip to the east. The peaks reach six to eight thousand feet at their highest points—lower than the Shasalassere Mountains to the south but steeper and more technically challenging to climb.
+
+The distinctive rock formations result from softer stone eroding around harder cores, leaving pillars, arches, and elaborate natural sculptures that wouldn't survive in a wetter climate. The southern Dragon's Spine is cold but relatively dry; the wind that makes The Screech famous also preserves its dramatic landscape.
+
+Three passes cut through the range:
+
+**Shriek Gap** is the northernmost and most commonly used, connecting The Glog Road to the eastern coastal villages. The passage takes about two days on foot. The wind here produces particularly loud, sustained tones that give the gap its name.
+
+**Whisper Pass** crosses the central range at higher elevation, useful when Shriek Gap is blocked by weather. The wind here is quieter but unpredictable—sudden gusts can knock travelers off narrow ledges.
+
+**The Singer** is the southernmost crossing, rarely used because it passes close to the Shasalassere slopes and the subterranean lakes where the cave mermaids dwell.
+
+#### The Eastern Coast
+
+Beyond The Screech, a narrow strip of land borders the sea—too exposed for significant settlement but useful for fishing and smuggling. **Cogspit Lakes** dot this eastern coastline, a chain of brackish pools connected to the sea by underground channels. The name comes from the mechanical clicking sounds the rocks make when waves withdraw—locals claim it sounds like gears turning, though there's no artificial mechanism involved.
+
+**Murky Lakes** lie further south along this strip, genuinely murky rather than merely named. Sediment from the Shasalassere slopes clouds the water year-round. The lakes support surprisingly abundant fish populations despite the poor visibility—or perhaps because of it, since the murk protects them from airborne predators.
+
+#### Wildlife
+
+The Screech hosts several species adapted to its acoustic environment:
+
+**Screech owls** (locally called "wind-readers") have evolved to hunt despite the constant background noise. They can filter the mountain's sounds and detect prey movement through vibration rather than hearing. Their own calls are pitched to cut through the ambient screech—a distinctive two-tone cry that carries for miles.
+
+**Wind-singers** are small, bat-like creatures that seem to enjoy the mountain's acoustics. They gather at particularly resonant formations and add their voices to the wind-sounds, creating complex harmonic patterns. Whether this serves a purpose or is simply play remains debated.
+
+**Rock drakes** nest in the higher spires—not true dragons but large, winged reptiles that hunt by dropping on prey from above. The wind noise masks their approach. Travelers learn to watch the sky.
+
+#### Settlement
+
+**Shriek Gap Station** is the only permanent habitation within The Screech proper—a fortified way-station that provides shelter and guides for travelers crossing the range. The station's operators have spent generations in the mountains and claim to understand the wind-speech better than anyone. Their guidance doesn't come cheap.
+
+The eastern coastal strip supports a few fishing villages, most notably **Cogwheel** at the northern end of Cogspit Lakes. The village trades fish, salt, and the occasional smuggled good with ships that anchor in the deeper waters offshore. The villagers are insular and suspicious of outsiders—too many visitors mean too much official attention.
+
+#### Hooks
+
+**The Speaking Stone**: A natural formation in the central Screech has begun producing sounds that multiple listeners agree are recognizable words—fragments of an unknown language, repeating in patterns that suggest meaning. Scholars want to study it. The Shriek Gap operators want it destroyed before it attracts worse attention.
+
+**The Wind-Singer Colony**: A particularly large gathering of wind-singers has formed at a formation near Whisper Pass, and their combined song is interfering with the acoustic navigation methods locals rely on. Someone needs to disperse them without killing them all—wind-singers are considered good luck, and harming them invites bad fortune.
+
+**The Silent Gap**: Shriek Gap has gone quiet. Not reduced—completely silent, despite wind conditions that should produce constant sound. The operators at the station have stopped responding to signals. No one knows what could silence a mountain.
 
 ### Thraken Lake
 

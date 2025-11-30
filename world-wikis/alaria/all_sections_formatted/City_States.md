@@ -1,5 +1,139 @@
 # City States
 
+## Al Iwash
+
+Tags: citystate
+
+An independent city-state. The name suggests desert or Neferati cultural influence.
+
+TODO: Determine location, develop government, culture, economy, and notable features.
+
+## Al Maqlubah
+
+Tags: citystate
+
+An independent city-state. The name suggests desert or Neferati cultural influence.
+
+TODO: Determine location, develop government, culture, economy, and notable features.
+
+## Blackport
+
+Tags: citystate, greenwater-isles, pirates, nyolci
+
+A pirate haven on Crab Island in the Agreben Sea, named for the black lavarock bluffs that surround the harbor. What began as a convenient trading stop has grown into a notorious city-state where pirates operate freely under the protection of a retired corsair king.
+
+### Overview
+
+Blackport sprawls across a volcanic hillside, buildings stacked atop one another in haphazard layers rising from the harbor to the island's interior. The black lavarock that gives the city its name creates a dramatic backdrop—dark cliffs streaked with mineral veins, the stone still warm in places from the volcanic activity beneath.
+
+The city serves two populations: legitimate traders from Mueras heading south who need a convenient resupply point, and the pirates who've made Blackport their sanctuary. Both coexist uneasily, their mutual need for the port's services creating an enforced peace within the city walls.
+
+### Government
+
+**Government Type**: Autocracy (the Blackport Baron)
+
+**Ruler**: Bridger Blindeyes, retired Nyolci pirate captain
+
+Bridger Blindeyes controls Blackport absolutely. A Savant—one of the magically gifted who face brutal discrimination in Mueras—he rose to infamy as a pirate captain before retiring to build something more lasting. He took the port, eliminated rivals, and established the simple rule that has made Blackport functional: no violence in the harbor, or you answer to him.
+
+The "Blindeyes" epithet comes from his condition—magical sight that sees things others cannot, paired with mundane blindness. He knows what happens in his city through means that unsettle visitors. Those who've tried to move against him have discovered that his apparent blindness conceals something far more dangerous.
+
+### Economy
+
+**Size**: Medium
+
+**Primary Function**: Port services, pirate haven, grey market trade
+
+Blackport produces nothing. Its economy runs on services: ship repair, resupply, crew hiring, information brokering, and asking no questions. Pirates spend their plunder here. Merchants pay premium prices for safe harbor. Smugglers find willing buyers for goods that can't be sold elsewhere.
+
+The grey market thrives. Stolen cargo is laundered through Blackport merchants, emerging as "legitimately acquired" goods that can be sold in ports that wouldn't accept pirate plunder directly. This service makes Blackport valuable to criminals across the Agreben Sea—and makes enemies of everyone whose goods pass through.
+
+### Relations
+
+**Mueras**: Complicated hatred. Bridger despises Mueras for its treatment of Savants, and he doesn't particularly care that Mueran ships are being destroyed by pirates harboring in his port. Some say he actively encourages attacks on Mueran vessels. The merchant-kings of Mueras would love to see Blackport burned, but the logistics of attacking a volcanic island defended by pirates have stayed their hand.
+
+**Iques**: Hostile. Iques is dealing with trade disruptions caused by pirates believed to operate from Blackport. Diplomatic protests have been ignored; military action is under discussion.
+
+**Pirates**: Protective alliance. The various pirate crews operating in the Agreben Sea treat Blackport as neutral ground. Feuds are suspended within the harbor. Bridger enforces this peace brutally—he needs the pirates spending money, not killing each other.
+
+**Legitimate Traders**: Grudging tolerance. Many merchants hate dealing with Blackport but have no practical alternative for the southern routes. The harbor services are excellent, the prices are fair, and as long as you don't ask questions about the ship anchored next to yours, business proceeds smoothly.
+
+### Military
+
+**Size**: Small but effective
+
+Blackport maintains no formal military. Defense relies on Bridger's personal crew of veterans, the volcanic terrain that makes assault costly, and the implicit threat that attacking Blackport means fighting every pirate crew that shelters there.
+
+The pirates themselves serve as an informal defense force. An attack on Blackport threatens their sanctuary—they'd fight to protect it, at least until they could establish a replacement.
+
+### Culture
+
+Blackport attracts outcasts, criminals, and those who've run out of options elsewhere. The population skews heavily Nyolci—Bridger's own people, drawn by the promise of a port that doesn't discriminate against them. But you'll find every race in Blackport, united by their willingness to overlook each other's pasts.
+
+The city has developed its own code of conduct: pay your debts, don't start fights in the harbor, and never inform on fellow residents to outside authorities. Violations are handled by Bridger's enforcers, usually permanently.
+
+### Notable Locations
+
+**The Black Bluffs**: The volcanic cliffs surrounding the harbor, riddled with caves used for storage, hidden moorings, and less savory purposes.
+
+**The Baron's House**: Bridger's residence overlooking the harbor. He holds court here, settling disputes and receiving visitors who seek his protection or services.
+
+**The Stacks**: The densely packed residential district climbing the hillside. Buildings lean against each other, connected by bridges, ladders, and precarious walkways.
+
+### Player Hooks
+
+- A character's stolen property has been traced to Blackport's grey market
+- Mueras or Iques might hire adventurers to disrupt pirate operations without direct military involvement
+- Bridger Blindeyes possesses information about something the party needs
+- A Savant NPC has fled to Blackport seeking Bridger's protection from Mueran persecution
+- The pirates are organizing for something unusual—what are they planning?
+
+## Blvnird
+
+Tags: citystate, dwarves, first-brotherhood, westrim
+
+One of the three leadership city-states of the First Brotherhood—the ancient dwarven coalition formed when the world was far more dangerous. Along with Üod and Melaia, Blvnird's citizens hold the exclusive right to lead the Brotherhood.
+
+### Overview
+
+Blvnird is a dwarven city-state in Westrim, likely in the Eronia Range that separates the region from the Tarkhon Empire. The city serves as a trading partner for Kura's northern city of Labakh, connecting the desert kingdom to the First Brotherhood's economic networks.
+
+### Government
+
+The city is governed according to First Brotherhood traditions. Only citizens of Üod, Blvnird, or Melaia may hold leadership positions in the Brotherhood's councils. This exclusivity has been a source of tension with dwarven settlements elsewhere, who pay membership fees to a union they can never truly lead.
+
+### Relations
+
+**Tarkhon Empire**: Tributary but influential. The First Brotherhood's relationship with Tarkhon is complex—they accept imperial authority nominally while maintaining independent diplomatic relationships with dwarven communities worldwide.
+
+**Üod and Melaia**: Sister cities. The three leadership city-states coordinate on Brotherhood policy and present a united front to outside powers.
+
+**Kura**: The desert kingdom of Kura trades with Blvnird through the city of Labakh, exchanging desert goods for dwarven metalwork and mountain resources.
+
+**Other Dwarven Nations**: The Brotherhood claims to represent all dwarves, but not all dwarves agree. Some view the First Brotherhood as a relic institution more interested in collecting fees than serving dwarven interests.
+
+### Economy
+
+Blvnird's economy centers on metalwork, mining, and trade with the desert kingdoms to the south. The city's position in the Eronia Range makes it a natural gateway between the mountain-dwelling dwarves and the peoples of Westrim.
+
+TODO: Develop specific cultural details, notable locations, and player hooks.
+
+## Dar Qisu
+
+Tags: citystate
+
+An independent city-state. The name suggests desert or Neferati cultural influence.
+
+TODO: Determine location, develop government, culture, economy, and notable features.
+
+## El Djele
+
+Tags: citystate
+
+An independent city-state. The name suggests desert or Neferati cultural influence.
+
+TODO: Determine location, develop government, culture, economy, and notable features.
+
 ## Iypos
 
 Tags: state
@@ -299,6 +433,34 @@ Below the Chorus, the city operates through a web of guilds, associations, and c
 - **Ghost Hunt**: A scholar from Xi Chin wants to study the Ghost—to determine what it is, who it was, and whether it poses any danger to the School. The Chorus has reluctantly agreed to allow the investigation. The Ghost, however, seems to have opinions about being studied.
 
 - **The Falling Leaf Connection**: Evidence has surfaced suggesting that Maun's founders came from the Order of the Falling Leaf—and that they brought something with them from Shenchen Forest. Something the Order was supposed to destroy. Whatever it is, it's been hidden in the School for centuries, and someone is looking for it.
+
+## Melaia
+
+Tags: citystate, dwarves, first-brotherhood
+
+One of the three leadership city-states of the First Brotherhood—the ancient dwarven coalition formed when the world was far more dangerous. Along with Üod and Blvnird, Melaia's citizens hold the exclusive right to lead the Brotherhood.
+
+### Overview
+
+Melaia is a dwarven city-state, one of the three seats of First Brotherhood power. The city maintains a complex relationship with the Tarkhon Empire—technically tributary, but exercising influence over dwarves across the world through its position in the Brotherhood.
+
+### Government
+
+The city is governed according to First Brotherhood traditions. Only citizens of Üod, Blvnird, or Melaia may hold leadership positions in the Brotherhood's councils. This exclusivity has been a source of tension with dwarven settlements elsewhere, who pay membership fees to a union they can never truly lead.
+
+### Relations
+
+**Tarkhon Empire**: Tributary but influential. The First Brotherhood's relationship with Tarkhon is complex—they accept imperial authority nominally while maintaining independent diplomatic relationships with dwarven communities worldwide.
+
+**Üod and Blvnird**: Sister cities. The three leadership city-states coordinate on Brotherhood policy and present a united front to outside powers.
+
+**Other Dwarven Nations**: The Brotherhood claims to represent all dwarves, but not all dwarves agree. Some view the First Brotherhood as a relic institution more interested in collecting fees than serving dwarven interests.
+
+### Economy
+
+Melaia's economy centers on metalwork, mining, and the administration of First Brotherhood affairs. The city charges membership fees to dwarven communities worldwide, funding Brotherhood operations and maintaining the city's prosperity.
+
+TODO: Develop specific cultural details, notable locations, and player hooks.
 
 ## Rilyn
 
@@ -689,3 +851,31 @@ The dragon is not technically a diplomatic entity, but she might as well be. Any
 ### Hooks
 
 See the full **Zor** entry in the Atlas of Alaria (atlas_of_alaria/wycendeula/Zor.md) for additional hooks and location details.
+
+## Üod
+
+Tags: citystate, dwarves, first-brotherhood
+
+One of the three leadership city-states of the First Brotherhood—the ancient dwarven coalition formed when the world was far more dangerous. Along with Blvnird and Melaia, Üod's citizens hold the exclusive right to lead the Brotherhood.
+
+### Overview
+
+Üod is a dwarven city-state in the Eronia Range, the mountain barrier forming Tarkhon's southern boundary. The city maintains a complex relationship with the Tarkhon Empire—technically tributary, but exercising influence over dwarves across the world through its position in the First Brotherhood.
+
+### Government
+
+The city is governed according to First Brotherhood traditions. Only citizens of Üod, Blvnird, or Melaia may hold leadership positions in the Brotherhood's councils. This exclusivity has been a source of tension with dwarven settlements elsewhere, who pay membership fees to a union they can never truly lead.
+
+### Relations
+
+**Tarkhon Empire**: Tributary but influential. The First Brotherhood's relationship with Tarkhon is complex—they accept imperial authority nominally while maintaining independent diplomatic relationships with dwarven communities worldwide.
+
+**Blvnird and Melaia**: Sister cities. The three leadership city-states coordinate on Brotherhood policy and present a united front to outside powers.
+
+**Other Dwarven Nations**: The Brotherhood claims to represent all dwarves, but not all dwarves agree. Some view the First Brotherhood as a relic institution more interested in collecting fees than serving dwarven interests.
+
+### Economy
+
+Üod's economy centers on metalwork, mining, and the administration of First Brotherhood affairs. The city charges membership fees to dwarven communities worldwide, funding Brotherhood operations and maintaining the city's prosperity.
+
+TODO: Develop specific cultural details, notable locations, and player hooks.

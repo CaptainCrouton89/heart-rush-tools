@@ -14,11 +14,17 @@ The largest landmass in the Greenwater Isles, Urok dominates the center of the r
 
 ### Surrounding Waters (Clockwise from North)
 
-**Agreben Sea** (North): The northern waters of the archipelago, containing several island states:
-- **Crab Island**: Home to the city-state of **Blackport**
-- **Prophecy Island**: North of Crab Island
-- **Smokestack Island**: East of Prophecy Island
-- **Pelaria**, **Glador**, and **Flurin**: Three states in the eastern Agreben Sea
+**Agreben Sea** (North): The northern waters of the archipelago, bounded by Mueras to the north, Atriik to the east, and Urok to the south. Contested between the elegant Kendrel Kingdoms along the eastern shelf and Bfaspeen broods in the deeper waters. See [Agreben Sea](Agreben%20Sea.md) for full details.
+
+The **Kendrel Kingdoms**—three allied states of aquatic Kendrel civilization:
+- **Flurin** (north): Cosmopolitan gateway, handling most surface trade. See [Flurin](Flurin.md).
+- **Glador** (center): Traditional heartland, largest and most insular. See [Glador](Glador.md).
+- **Pelaria** (south): Volcanic kingdom, fire-attuned and militarized. See [Pelaria](Pelaria.md).
+
+Western islands outside Kendrel territory:
+- **Crab Island**: Home to the pirate city-state of **Blackport**
+- **Prophecy Island**: Volcanic island with cursed ruins
+- **Smokestack Island**: Active volcano, pyromancer's domain
 
 **Shriyen Passage** (Northeast): The strait separating Urok from the Ishnit Jungles of Rimihuica.
 
@@ -67,33 +73,65 @@ For two years, the settlement flourished. Then the volcano erupted a second time
 
 ## Agreben Sea
 
-Tags: sea, geography
+Tags: sea, geography, greenwater-isles
 
-Filled with Bfaspeen and the Kendrel of the Kendrel Kingdoms.
+The northern waters of the Greenwater Isles archipelago—a warm, teal-colored sea bounded by Mueras to the north, Atriik to the east, and the great island of Urok to the south. The Agreben is contested territory: the elegant reef-cities of the Kendrel Kingdoms line the eastern continental shelf, while Bfaspeen broods lair in the deeper waters to the west and south.
 
-### Crab Island
+### Geography
 
-An island in the Agreben Sea, home to Blackport.
+The Agreben Sea occupies roughly 400 miles east-to-west and 300 miles north-to-south. The waters are shallow along the eastern edge where the continental shelf supports Kendrel civilization, deepening rapidly toward the center and west into trenches that Bfaspeen favor.
 
-### Prophecy Island
+**North Agreben**: The northern reaches of the sea, where cooler currents from the Darkened Coast meet warmer tropical waters. Mueras's fragmented coastline creates complex navigation.
 
-An island in the Agreben Sea.
+**The Eastern Shelf**: Shallow, warm waters perfect for coral reef cultivation. Home to the three Kendrel Kingdoms—Flurin, Glador, and Pelaria—arranged north to south along the coast.
 
-### Smokestack Island
+**The Central Deep**: Open water too deep for permanent Kendrel settlement, patrolled by Bfaspeen hunting parties. Merchant ships crossing between the western islands and the eastern kingdoms travel in convoys or not at all.
 
-An island in the Agreben Sea.
+**The Volcanic South**: Where Pelaria's thermal vents begin, the water temperature rises sharply. This zone is contested between Pelarian forces and Bfaspeen broods, with neither side holding permanent advantage.
 
-### Flurin
+### The Kendrel Kingdoms
 
-A state in the Agreben Sea region.
+Three Kendrel states occupy the eastern Agreben, collectively known as the Kendrel Kingdoms despite their distinct governments and occasional rivalry:
 
-### Glador
+**Flurin** (north): The cosmopolitan gateway, handling most trade with surface nations. See [Flurin](Flurin.md).
 
-A state in the Agreben Sea region.
+**Glador** (center): The traditional heartland, largest and most insular of the three. See [Glador](Glador.md).
 
-### Pelaria
+**Pelaria** (south): The volcanic kingdom, fire-attuned and militarized. See [Pelaria](Pelaria.md).
 
-A state in the Agreben Sea region.
+The kingdoms maintain formal alliance against external threats (primarily Bfaspeen) while competing fiercely in trade, prestige, and the elaborate courtship-politics that define Kendrel society.
+
+### Western Islands
+
+Several smaller islands dot the central and western Agreben, outside Kendrel territory:
+
+**Crab Island**: Volcanic island hosting the city-state of Blackport—a notorious pirate haven controlled by the retired Nyolci captain Bridger Blindeyes. Black lavarock bluffs give the port its name. Ships seeking to cross the central Agreben often stop here, whatever their opinion of the management. See [Blackport](Blackport.md).
+
+**Prophecy Island**: North of Crab Island, a volcanic island with a grim history. Colonists built a thriving settlement here, believing the island a divine gift. Two years later, the volcano erupted, burying everything. The ruins of Zyquirk village remain visible among hardened lava flows. See [Zyquirk](Zyquirk.md).
+
+**Smokestack Island**: An active volcanic island east of Prophecy Island, wreathed in perpetual steam and smoke. Home to a reclusive pyromancer who has built a dungeon-complex into the volcano itself. Locals give it wide berth.
+
+### The Bfaspeen Threat
+
+The deeper Agreben waters host multiple Bfaspeen broods—eel-bodied monstrosities with mandibles, bulbous eyes, and a pathological lust for gold. They live in strict matriarchal groups, raiding ships for treasure and dragging prey to their underwater lairs.
+
+The Kendrel have fought the Bfaspeen since before recorded history. Glador maintains purely defensive positions. Pelaria conducts active operations against brood-mother lairs. Flurin provides intelligence and tries to stay out of direct fighting. The conflict has no end in sight—but it's also what keeps the three kingdoms cooperating despite their differences.
+
+### Navigation
+
+**The Eastern Route**: Following the continental shelf from Flurin south to Pelaria, this is the safest passage through the Agreben. Kendrel patrols keep Bfaspeen activity suppressed, and the shallow waters make ambush difficult.
+
+**The Central Crossing**: Direct routes between the western islands and eastern kingdoms cross deep water. Bfaspeen hunting parties make this dangerous. Merchant convoys form regularly at Blackport; individual ships take their chances.
+
+**The Northern Passage**: Skirting the Darkened Coast toward Mueras. Avoids Bfaspeen but brings other hazards—the supernatural shadow that shrouds Mueras's eastern waters breeds strange creatures and stranger currents.
+
+### What Travelers Should Know
+
+- Surface vessels are generally safe in Kendrel-controlled waters, but should follow established routes and not anchor in unknown locations overnight.
+- The Kendrel are friendly to trade but have elaborate social protocols. Causing offense—especially through violence—can result in permanent exclusion from all three kingdoms.
+- Blackport asks no questions and offers no guarantees. It's useful, not safe.
+- The central deep is genuinely dangerous. Don't cross alone, don't carry visible treasure, and don't assume help is coming if something goes wrong.
+- Pelarian waters are too hot for normal swimming. Visitors need magical protection or specialized equipment.
 
 ## Bejeweled Sea
 
@@ -137,19 +175,64 @@ TODO
 
 ## Flurin
 
-Tags: state, nation
+Tags: region, kendrel, greenwater-isles
 
-A state in the Agreben Sea region.
+The northernmost of the three Kendrel Kingdoms, occupying a chain of barrier islands and submerged reef-cities along the eastern edge of the Agreben Sea. Where its sister kingdoms turn inward, Flurin faces outward—toward Atriik, toward trade, toward the surface world.
 
-TODO
+### Geography
+
+Flurin stretches roughly 120 miles north to south, a scattered constellation of coral atolls, volcanic islets, and deeper reef-fortresses. The continental shelf here is relatively shallow, allowing the cultivated reef architecture that defines Kendrel civilization. Surface settlements serve as interface points for air-breathing traders; the true cities sprawl beneath the waves in lattices of coral and bioluminescent gardens.
+
+**Northern Waters**: Cool currents from North Agreben create comfortable temperatures for standard Kendrel. The border with Mueras's Darkened Coast brings occasional strange phenomena—darker-than-normal waters and unusual creatures drifting south.
+
+**Eastern Edge**: Just thirty miles from Atriik's coast, making Flurin the natural gateway between Kendrel civilization and surface trade.
+
+**Southern Border**: The Passage Gardens mark the transition to Glador—coral sculptures maintained by both kingdoms as a symbol of unity.
+
+### Major Settlements
+
+- **Azulora** (capital): Spiral of coral towers rising from a submerged volcanic cone. Population ~8,000.
+- **Watalina**: Surface-accessible trade port, primary interface with Atriik.
+- **Ashenia**: Northern fishing village near the Darkened Coast.
+- **Voltunis**: Southern border town at the Passage Gardens.
+
+### Character
+
+More cosmopolitan than Glador, more commercially-minded than Pelaria. Flurin has developed extensive infrastructure for air-breathers and maintains the closest relationships with surface nations. The Pelaendor subrace dominates, their practical pragmatism suited to constant dealings with outsiders.
+
+See [Flurin (State)](../../nations_and_powers/states/Flurin.md) for governance, culture, and political details.
 
 ## Glador
 
-Tags: state, nation
+Tags: region, kendrel, greenwater-isles
 
-A state in the Agreben Sea region.
+The heart of the Kendrel Kingdoms—oldest, largest, and most stubbornly traditional. Glador occupies the central archipelago of the eastern Agreben Sea, a maze of reef-fortresses and coral palaces where the ancient customs of Kendrel society are preserved in amber-like perfection.
 
-TODO
+### Geography
+
+Glador sprawls across roughly 200 miles of the Agreben's eastern waters, from the Flurin border in the north to Pelaria's volcanic reaches in the south. The continental shelf here is broad and shallow, perfect for cultivated reef architecture.
+
+**The Reef Cities**: Underwater forests of giant kelp alternate with open plains of cultivated coral. The reef-cities are vertical complexes, with different depth-layers serving different social functions.
+
+**The Trenches**: Deep channels cut through the shelf, providing natural defenses against Bfaspeen incursions. These have been cultivated over millennia to channel attacks into defensive kill zones.
+
+**The Surface Islands**: Scattered volcanic islets provide the minimal surface presence Glador maintains—mostly for receiving foreign visitors who cannot survive underwater.
+
+### Major Settlements
+
+- **Delphran** (capital): The Abyssal Throne's seat, largest Kendrel city anywhere. Vertical complex descending through five depth-layers. Population ~25,000.
+- **Aquicada**: Northern gateway, handling traffic with Flurin.
+- **Telune**: Northern village with the famous Oracle Pools.
+- **Liculvia**: Eastern settlement, quietly handles surface trade.
+- **Thautias**: Central town, famous for memory coral artisans.
+- **Caecadis**: Southern border town where disputes with Pelaria are resolved.
+- **Neptusia**: Deep-water Cendoriln village.
+
+### Character
+
+Insular, refined, and utterly convinced of its own superiority. Glador is Court Kendrel territory—the iridescent-scaled aristocrats who elevated social manipulation to art form. Violence remains the ultimate obscenity; all conflicts are resolved through social pressure, reputation warfare, and (when necessary) quiet Cendoriln intervention.
+
+See [Glador (State)](../../nations_and_powers/states/Glador.md) for governance, culture, and political details.
 
 ## Gulf of Norag
 
@@ -515,11 +598,35 @@ TODO
 
 ## Pelaria
 
-Tags: state, nation
+Tags: region, kendrel, greenwater-isles
 
-A state in the Agreben Sea region.
+The volcanic kingdom. Pelaria occupies the southern reaches of the eastern Agreben Sea, where underwater volcanic vents have created an environment that would kill ordinary Kendrel—and forged a people adapted to thrive in it.
 
-TODO
+### Geography
+
+Pelaria stretches across the volcanic ridge marking the southern edge of the Agreben's continental shelf. The seafloor fractures into a maze of thermal vents, lava tubes, and superheated caverns.
+
+**The Thermal Waters**: Water temperatures range from warm to scalding depending on proximity to active vents. Mineral-rich plumes color the currents in reds and oranges. Only Pelarian Kendrel—with their fire attunement and thermal adaptation—can survive here comfortably.
+
+**The Vent Fortresses**: Settlements are built into volcanic formations that serve as natural defensive positions. The superheated waters create barriers that enemies cannot easily cross.
+
+**The Southern Edge**: Where Pelarian territory meets the open Agreben and the Bfaspeen-infested waters beyond. Heavily fortified, perpetually contested.
+
+### Major Settlements
+
+- **Saphinia** (capital): Built into an ancient volcanic cone, from warm shallows to near-boiling depths. Population ~12,000.
+- **Brilina**: Northern border village, relatively cool, transition zone for visitors.
+- **Osirey**: Western settlement, most productive mineral vents.
+- **Purine**: Eastern village, deepest and hottest vents, Cendoriln-dominated.
+- **Levirus**: Central town, Steam Shaper training center.
+- **Naurey**: Southern outpost facing the open Agreben.
+- **Coralona**: Southernmost settlement, early warning station.
+
+### Character
+
+Pelaria has diverged significantly from traditional Kendrel culture. The fire-attuned population practices metalwork, maintains a standing military (the Ember Guard), and conducts active operations against Bfaspeen broods. The northern kingdoms find this deeply unsettling. Pelarians find the northern kingdoms naive.
+
+See [Pelaria (State)](../../nations_and_powers/states/Pelaria.md) for governance, culture, and political details.
 
 ## Prophecy Island
 

@@ -4789,15 +4789,25 @@ The Emerald Coast offers:
 
 ### What Will Go Wrong
 
-TODO
+The Crystal Caverns are destabilizing. Centuries of harvesting have removed more force-dampening crystals than can regrow, and the Force/Earth leyline intersection is approaching critical instability. Earthquakes have increased 40% over the past century. Coastlines are subsiding. The Kendor who understand the situation have begun sabotaging Chimeyan harvesting operations, but their warnings go unheard.
+
+If harvesting continues at current rates, the intersection will catastrophically destabilize within two to three centuries—possibly within decades if extraction accelerates. The resulting shockwave will trigger earthquakes along the entire Golus leyline network and force discharges along the Nilus, affecting regions far beyond the Emerald Coast.
+
+Meanwhile, the nations of the Jungles of Godahi remain focused on their petty border disputes, oblivious to the slowly mounting disaster beneath their waters.
 
 ### Notable Locations
 
 #### Crystal Caverns
 
-Deep beneath the coastal waters of the Emerald Coast lie the Crystal Caverns—submarine cave systems filled with brilliant, extraordinarily potent force-attuned crystals. These crystals pulse with concentrated magical energy, glowing with an inner light that illuminates the dark waters.
+Submarine cave systems beneath the coastal waters of New Chimea, located at the intersection of Force and Earth leylines. The caverns contain volatile force-attuned crystals that store immense kinetic potential—highly valuable to mages and artificers, but catastrophically dangerous to harvest. New Chimea controls the primary access points and has built a profitable (and increasingly unsustainable) industry around crystal extraction.
 
-The crystals possess formidable powers of force magic, making them highly valuable to mages and artificers. However, they are also extremely volatile—when shattered, they release their stored energy in a massive explosion capable of collapsing entire cave sections or sinking ships above. Harvesting the crystals requires expert technique and extreme caution, as a single mistake can trigger a cascading chain reaction throughout the cavern system.
+See [Crystal Caverns](./Crystal%20Caverns.md) for full details.
+
+#### Slumber Deep
+
+An abyssal trench forty miles off the coast of Phirexes, where Force and Water leylines intersect to create a zone of absolute stasis. Ships and creatures that drift into the Deep hang frozen forever, preserved but conscious. At its heart lies [Aphoryis](../../bestiary/Aphoryis.md), the fortress of the octopus-lich Mirsalyenar the Cruel.
+
+See [Slumber Deep](./Slumber%20Deep.md) for full details.
 
 #### Cascades of Ygg
 
@@ -4846,6 +4856,84 @@ Along certain stretches of the coast, the tides wash up the remains of the croco
 The Dengar consider the bone beaches sacred in a grim sort of way. Before the queen came, they would make pilgrimages here to honor those taken by the sea. Now, the beaches are where refugees sometimes hold funerals for those who didn't survive the escape attempt—burning effigies when they have no bodies to bury.
 
 Some say the bones whisper at night, adding their voices to the Whispering Mangroves' chorus. Others say that's just the wind through empty skulls. The distinction may not matter.
+
+### Crystal Caverns
+
+Tags: underwater, leyline, caverns, Force, Earth, dungeon
+
+The Crystal Caverns lie beneath the coastal waters of New Chimea, a network of submarine caves that extends for miles beneath the seafloor. They are the only known location where Force and Earth leylines intersect underwater, and this intersection has produced something unique: crystals that grow under magical pressure, storing immense kinetic potential within their lattices.
+
+The crystals are among the most valuable magical resources on the Emerald Coast. They are also keeping the region from tearing itself apart.
+
+#### The Leyline Intersection
+
+Where the Nilus (Force) and Golus (Earth) leylines cross, their energies do not harmonize. They grind.
+
+The Earth leyline seeks stability—stone wants to be stone, unmoved and eternal. The Force leyline is pure kinetic potential, energy seeking release, pressure demanding outlet. Where they meet, these opposing natures create friction at a metaphysical level. Left unchecked, the intersection would destabilize catastrophically, sending shockwaves through both leylines that could trigger earthquakes across the Emerald Coast.
+
+The crystals are the Earth leyline's solution.
+
+Over millennia, the Golus energy has grown crystalline formations that absorb excess Force energy, converting destructive pressure into stored potential. The crystals are pressure valves—safety mechanisms that prevent the intersection from achieving critical instability. They grow slowly, accumulating force magic over centuries, and the older crystals contain proportionally more stored power.
+
+The caverns exist because the crystals carved them. As formations grew, they displaced stone, creating the network of chambers and passages that divers now navigate. The caves continue to expand as new crystals form, though the process is far too slow for human observation.
+
+#### Crystal Properties
+
+The crystals pulse with visible force energy, casting the caverns in shifting blue-white light. Their glow intensifies with size and age—the smallest formations emit a steady luminescence, while the largest ancient crystals flare and dim in slow rhythms, their stored energy ebbing and flowing with the leyline's pulses.
+
+Each crystal contains what scholars call "frozen intent"—not just raw force magic, but force magic shaped by purpose. The crystals don't simply store kinetic energy; they store *directed* kinetic energy. When a crystal shatters, the released force doesn't explode randomly. It executes.
+
+A crystal that formed while absorbing the force of an underwater current might release that force as a horizontal blast when broken. One that grew during an earthquake might discharge its energy downward, into the stone. The oldest and largest crystals have absorbed so many different forces over so many centuries that their release patterns become unpredictable—multiple vectors of destruction firing simultaneously in different directions.
+
+Experienced harvesters learn to read the crystals before cutting. The internal structure reveals the crystal's dominant "intent"—striations that indicate directional force, color variations that suggest magnitude, patterns that experienced eyes can interpret as warnings or opportunities. A skilled crystal reader can identify which formations are relatively safe to harvest and which should be left untouched.
+
+Relatively safe. Never actually safe.
+
+#### The Harvest
+
+New Chimea controls the primary approaches to the Crystal Caverns and has built an industry around their exploitation. Crystal divers are trained from youth—typically Kendor citizens or humans with magical water-breathing—and spend years learning to read formations before they're permitted to harvest.
+
+The standard technique involves specialized chisels that separate crystals from the cavern walls without triggering their stored energy. This requires precise angles, specific rhythms of impact, and an intuitive understanding of the crystal's internal structure. A successful harvest produces intact crystals that can be transported to the surface, where mages and artificers use them in a variety of applications.
+
+Force crystals power siege weapons that strike with impossible momentum. They enable barriers that repel physical attacks. They're used in the construction of astral ships, providing emergency acceleration when conventional aether engines fail. A single large crystal can be worth more than a merchant vessel.
+
+The failure rate among harvesters is approximately one in fifty. The caverns add new bodies regularly.
+
+#### The Stability Crisis
+
+The Emerald Coast nations do not understand what they are doing.
+
+Every crystal removed from the caverns represents stored force energy that is no longer dampening the leyline intersection. In the centuries before systematic harvesting began, the caverns maintained perfect equilibrium—new crystals grew to absorb new pressure, old crystals were compressed into the deepest stone, and the intersection remained stable.
+
+The balance no longer holds. New Chimea's harvesting operations have removed crystals faster than they can regrow. The intersection is destabilizing.
+
+The signs are subtle but accelerating. The Emerald Coast has experienced a 40% increase in minor earthquakes over the past century. Sections of coastline have subsided by measurable amounts. The caverns themselves are becoming more dangerous—pressure differentials that divers once navigated safely now crush the unwary, and previously stable chambers have collapsed without warning.
+
+A few scholars have noticed the correlation between harvesting and seismic activity. Their warnings have been ignored. The crystal trade is too profitable, and the nations of the Jungles of Godahi cannot afford to surrender it.
+
+The intersection will eventually reach a critical point. When it does, the remaining crystals will shatter simultaneously, releasing centuries of accumulated force magic in a single catastrophic event. The resulting shockwave will propagate through both leylines, triggering earthquakes along the entire Golus network and force discharges along the Nilus.
+
+Current estimates suggest this will occur within two to three centuries if harvesting continues at present rates. Accelerated harvesting could trigger it within decades.
+
+#### The Deepest Chambers
+
+The Crystal Caverns extend far beyond the areas that divers can safely reach. The deepest chambers—accessible only through passages too narrow, too pressure-intensive, or too crystal-choked for conventional exploration—contain formations unlike anything seen in the harvested regions.
+
+Rumors persist of crystals the size of houses, pulsing with accumulated force from before humans arrived on the Emerald Coast. Of crystals that have grown together into structures that resemble architecture, as if the Earth leyline were trying to build something. Of chambers where the stored intent in the crystals creates visible distortions in the water, phantom movements and half-seen shapes that suggest the force magic is beginning to achieve something like awareness.
+
+The Kendor who live nearest the caverns refuse to speak of what their ancestors saw in the deepest places. They refer to something called the First Pressure—a crystal or formation or entity that predates the intersection itself, that may have caused the leylines to cross in this specific location.
+
+No verified accounts of the deepest chambers exist. The divers who venture too far don't return, and the crystals keep their secrets in frozen silence.
+
+#### Access and Territorial Claims
+
+New Chimea maintains formal control over Crystal Cavern access, operating harvesting stations from the coastal city of Garum and the offshore platform known as Crystalwatch. All legal crystal trade flows through Chimeyan brokers, and unauthorized diving is punishable by execution.
+
+In practice, the cavern network is too extensive to patrol completely. Smugglers from Vystrilik access secondary entrances along the coastal border. Eoga runs black-market diving operations from hidden coves. Even Da Trang, supposedly allied with New Chimea, has been caught operating unauthorized harvests.
+
+The Kendor communities maintain traditional claims to certain cavern sections, which New Chimea technically recognizes but frequently violates. Relations between surface harvesters and Kendor inhabitants remain tense—the Kendor understand the stabilization function that surface nations ignore, and they have begun sabotaging harvesting operations in the most critical areas.
+
+A quiet war is being fought in the Crystal Caverns. New Chimea assumes it is about profit. The Kendor know it is about survival.
 
 ### Da Trang
 
@@ -5390,6 +5478,64 @@ A small settlement in Oskwatch Valley, in the southwestern part of Qet Yemani. D
 ##### Tel Askati
 
 A settlement in southwestern Qet Yemani, near the Kos Askati river and the approaches to the Myjornis Mountains. Tel Askati marks the edge of jungle civilization, where the lowland forests give way to mountain terrain.
+
+### Slumber Deep
+
+Tags: underwater, leyline, abyss, Force, Water
+
+Slumber Deep is an abyssal trench approximately forty miles off the eastern coast of Phirexes, where the seafloor drops sharply into darkness. The trench plunges over three miles below sea level—far deeper than the surrounding ocean floor—and is the site of a Force and Water leyline intersection that produces one of the most unusual phenomena in Alarian waters.
+
+Nothing moves in Slumber Deep.
+
+#### The Stasis Effect
+
+Where the Nilus (Force) and Pelus (Water) leylines cross, their energies reach a state of perfect opposition. Force presses inward with crushing intensity while Water resists outward with equal pressure. The result is equilibrium so complete that motion itself becomes impossible within the intersection's sphere of influence.
+
+Objects that drift into the stasis zone stop. Not slowly—instantly. Currents terminate at the boundary. Fish that swim too deep hang suspended, gills frozen mid-flutter. Ships that sink toward the trench floor never reach it. They hang in the black water at whatever depth the stasis caught them, perfectly preserved, crews still at their posts.
+
+The stasis is not death. Creatures caught in it do not age, do not decay, do not require food or air. But they cannot move, cannot speak, cannot close their eyes. Sailors trapped in the Deep have been conscious for centuries, watching the darkness, waiting for rescue that cannot reach them.
+
+The zone of absolute stasis occupies roughly a quarter-mile sphere at the leyline intersection's heart. But the effect weakens gradually rather than ending cleanly. The outer regions—called the Drowse by those few who study such things—slow movement to a fraction of normal speed. A swimmer might take an hour to move their arm. Currents crawl. Light propagates sluggishly, creating visual distortions where fast-moving objects appear to stretch and smear.
+
+#### The Suspended Graveyard
+
+Over millennia, Slumber Deep has accumulated a vertical forest of the lost.
+
+Ships hang at every depth, their positions marking the moment they crossed into stasis. A Chimeyan war galley lists forty degrees to port, its ballista still aimed at an enemy no longer present. A Kendor exploration vessel rests perfectly level, its bioluminescent running lights still glowing after three thousand years. Dozens of smaller craft—fishing boats, smuggler skiffs, vessels that simply drifted too far—cluster near the outer boundary where the Drowse begins.
+
+Between and below the ships float the bodies. Not corpses—the stasis preserves them too completely for that. Sailors and passengers, some still reaching toward the surface, some curled in upon themselves, some with expressions of confusion that never had time to become fear. Sea creatures too: whales frozen mid-dive, schools of fish suspended in perfect formation, a kraken that ventured too deep and hangs now with tentacles splayed like a grotesque star.
+
+The deepest objects are the oldest. Near the trench floor, the preserved remains of creatures that no longer exist anywhere else drift in eternal stillness—species that went extinct before humans walked Alaria, caught at the moment of their death and held there ever since.
+
+#### Aphoryis
+
+At the heart of Slumber Deep, where the stasis is absolute and nothing should be able to move, a fortress stands.
+
+Aphoryis was not built so much as assembled. Its walls are ships, stacked and fused into impossible configurations. Its towers are the masts of a hundred vessels, reinforced with bone and coral and materials that resist identification. Its foundations rest on the preserved bodies of leviathans, their flesh hardened by centuries of pressure into something stronger than stone.
+
+The fortress exists because its master found a way to move within the stasis—or perhaps because he predates it, and the stasis formed around him. Mirsalyenar the Cruel has occupied Aphoryis for longer than any surface records indicate. He may have been here when the leylines first intersected. He may have caused that intersection.
+
+Within Aphoryis, the stasis does not apply. Servants move through its corridors—drowned sailors raised as mindless workers, captured Kendor forced into service, creatures from the deep that Mirsalyenar has bound to his will. The fortress maintains itself, grows, reaches outward into the suspended graveyard to harvest new materials from the endless supply of the lost.
+
+The lich's phylactery rests somewhere in the fortress's deepest chamber. It cannot be destroyed there. Nothing can be destroyed in the absolute stasis zone—not by fire, not by force, not by the most powerful magic ever devised. Mirsalyenar chose this location specifically because it renders him truly immortal. Even if his body is destroyed on the surface, his phylactery will regenerate him in a place no enemy can reach.
+
+#### The Crushing Approaches
+
+The stasis zone is dangerous, but it is not the only threat. The outer reaches of Slumber Deep, beyond the Drowse, experience the raw pressure of the Force leyline without Water's counterbalancing resistance.
+
+These regions—the Crushing Approaches—are zones of impossible pressure where the water itself becomes a weapon. Unprotected vessels implode. Bodies are compressed to a fraction of their original size. Sound becomes so intense that it causes physical damage. Some sections of the Approaches contain pressure differentials so extreme that moving from one area to another tears objects apart.
+
+The pressure zones are not consistent. The Force leyline pulses, and the Approaches pulse with it—areas that were merely dangerous become instantly lethal, while lethally compressed zones briefly relax to survivability. Experienced navigators claim to sense a rhythm to the pulses, but no one has successfully charted a reliable safe passage.
+
+#### Who Knows About Slumber Deep
+
+Surface civilizations have fragmentary knowledge of the trench. Phirexes fishermen know to avoid the deep waters east of the swamp. Kendor records mention the Drowse as a forbidden zone, though even their underwater cities maintain no permanent presence nearby. Scholars who study leyline theory recognize that a Force/Water intersection should exist somewhere in the Sea of Seven Snakes, but most believe it lies much farther from shore.
+
+The Chimeyan navy lost a squadron to Slumber Deep during the War of Jade Crowns and has classified all information about the trench. Their admiralty charts show the area as "unsurveyable—extreme currents" and recommend a wide detour. They do not mention the stasis, the fortress, or the lich.
+
+Mirsalyenar prefers this arrangement. He does not seek surface contact, does not raid shipping, does not threaten coastal settlements. Whatever he is doing in Aphoryis, he does it quietly. Some scholars believe he is studying the leyline intersection itself, attempting to understand how two opposing forces can create perfect stillness. Others suspect he is trying to expand the stasis zone—to preserve something larger, or perhaps everything.
+
+The truth may be simpler and more disturbing: he may simply be waiting. In a place where time has no meaning, patience costs nothing.
 
 ### Vystrilik
 

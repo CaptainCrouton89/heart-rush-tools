@@ -118,9 +118,95 @@ Green dragon. No specialty, but growing older and more obnoxious. Has been makin
 
 ## Elebria
 
-Tags: dragon
+Tags: dragon, earth, fire, pindolin-islands, lava
 
-Sad female dragon.
+The Furnace-Dweller. The Burning Silence. Elebria has no epithet because she's killed everyone who tried to give her one.
+
+A lava dragon who claims the volcanic southwestern Pindolin Islands, Elebria is the oldest of the archipelago's three dragons and the least interested in anything resembling interaction. She doesn't negotiate. She doesn't collect tribute. She doesn't permit visitors. She burns.
+
+### The Isolation
+
+Most dragons want *something* from the world. Gold, worship, territory, recognition, revenge. Elebria wants to be left alone with a totality that borders on pathology.
+
+Her response to intrusion is immediate and absolute. Ships that enter her waters are destroyed without warning, negotiation, or opportunity to explain. Not threatened, not driven off—destroyed. She surfaces beneath them and melts through their hulls, or she breathes from a distance, or she simply heats the water until it boils. The method varies. The outcome doesn't.
+
+This isn't cruelty. Elebria doesn't enjoy killing particularly. It's efficiency. Dead intruders don't come back. Survivors might. Survivors might tell others. Others might think her territory is open to discussion.
+
+Her territory is not open to discussion.
+
+### The Leyline Convergence
+
+Elebria lairs where the Earth and Fire leylines intersect—one of the most powerful convergence points in the Pindolin archipelago. The combined energies create effects found nowhere else:
+
+**Obsite**: A glass-like volcanic stone that retains heat indefinitely. Objects made from obsite never cool below their forging temperature. Weapons quenched in magma stay hot enough to cut steel without effort. The only reliable source is Elebria's territory, which makes harvesting it a death sentence for most.
+
+**Geological Instability**: Stone moves. Islands sink and rise. Volcanic vents open without warning. Elebria reads these shifts instinctively. Visitors have no such advantage.
+
+**Elemental Manifestation**: Fire elementals occasionally form near the strongest convergence points—wisps of flame, serpents of magma, once something larger that Elebria killed before it fully coalesced.
+
+**Amplification**: Near the convergence's heart, Elebria is effectively unstoppable. Dragon-hunters have tried. The Furnace has absorbed their remains.
+
+### Appearance
+
+Elebria's scales shift between states depending on temperature. When cool—a relative term for a creature whose resting heat would melt iron—she appears statuesque: black volcanic stone, rough-textured, with veins of dull orange tracing where magma flows beneath. Her eyes are twin points of molten gold that never dim.
+
+When she heats, the black scales crack and separate, revealing churning orange beneath. At full fury, she becomes difficult to look at directly. The heat haze distorts vision. The air itself burns.
+
+She's smaller than Oboros, larger than Findra, and substantially denser than either. Her body retains leyline heat the way a forge retains coals. She doesn't fly often—energy expenditure costs heat she'd rather conserve—but when she does, she leaves scorched air in her wake.
+
+### The Lair
+
+The Furnace is an active volcano in the southwestern Pindolins that erupts constantly in small ways, reshaping coastlines annually. Elebria has excavated chambers within the cone itself:
+
+**The Throat**: A partially flooded magma lake where she spends most of her time submerged in liquid rock. She finds it comfortable.
+
+**The Vents**: Tunnel networks connecting thermal vents throughout the southern islands. She can travel through these, swimming through stone softened by leyline heat.
+
+**The Cooling Pools**: Shallower chambers where lava cools to merely lethal temperatures. Storage for things she wants preserved rather than destroyed.
+
+### Combat
+
+Elebria doesn't fight—she annihilates.
+
+**Breath**: Not fire exactly—superheated magma expelled at pressure. The spray fans across hundreds of feet, clinging to whatever it touches. Ships don't catch fire; they melt.
+
+**Heat Aura**: At combat temperature, approaching causes thermal damage. Unprotected flesh blisters at fifty feet. Metal weapons become too hot to hold.
+
+**Stone Manipulation**: Through the Earth leyline, she shifts stone—cracking cliffs, opening vents beneath feet, collapsing tunnels.
+
+**Submersion**: She sinks into lava and stone, disappearing completely, erupting from unexpected directions. Fighting her in her territory means fighting something that can strike from any surface.
+
+**Durability**: Her scales are volcanic stone animated by draconic will. Conventional weapons don't penetrate. Water magic—the obvious counter—evaporates before reaching her at combat temperature.
+
+### History
+
+Elebria arrived roughly five centuries ago—the first of the Pindolin dragons to claim territory.
+
+She doesn't discuss where she came from. Fragmentary records mention a "burning terror" that devastated Dragon's Spine settlements around that time, but whether that was Elebria is unclear. She killed everything that resisted her claim, adapted the local fauna to extreme heat, and has maintained violent isolation ever since.
+
+### What Drives Her
+
+Scholars speculate about her pathological isolation:
+
+**She's hiding**: Something happened before the Pindolins. Something she doesn't want to face or be found by. The volcanic territory isn't just comfortable—it's defensible.
+
+**She's healing**: Dragons accumulate wounds that take centuries to recover from. She might be using the leyline to regenerate damage that would have killed anything else.
+
+**She's changed**: Long exposure to Earth-Fire convergence might have altered her psychology. She's becoming more like the elements she embodies—patient as stone, violent as eruption.
+
+**She's always been like this**: Some creatures are simply antisocial. She might have found a place that suited her and been content to burn anyone who disturbs it.
+
+The truth might be all of these. Elebria isn't answering questions.
+
+### Hooks
+
+- **The Obsite Run**: A patron wants obsite badly enough to fund an expedition. The margins are extraordinary for anyone who survives. Most don't.
+
+- **The Cooling**: Something is wrong with the Furnace. Volcanic activity is decreasing. Either the leyline is shifting, or Elebria is dying, or something else is drawing off the energy. Any of these scenarios changes the Pindolins' balance of power.
+
+- **What She's Hiding From**: Someone has information about Elebria's past—what she fled, why she hides. This information might be leverage. It might also be a death sentence for everyone who knows it.
+
+- **The Awakening**: One of the fire elementals near the convergence has grown too large for Elebria to dismiss easily. She might—might—tolerate outside help. The price would be steep and the survival odds poor.
 
 ## Ezelmere
 
@@ -209,6 +295,98 @@ Treasure, if it exists, is not gold or gems. Ezra Olkanis collects Riin artifact
 - **The dragon wants to talk.** Word reaches the party that Ezra Olkanis has requested a meeting—specifically with outsiders, specifically those with no connection to Zor. She has never done this before. What she wants, and why now, is unknown. Getting to her lair alive is the first challenge.
 
 - **Zor is pushing boundaries.** A faction within Zor's government believes the dragon is dead, gone, or exaggerated. They've begun planning expeditions into the interior to test the pact's enforcement. The traditionalist faction is horrified and seeking help—either to stop the expeditions or to warn the dragon before she demonstrates exactly how present she still is.
+
+## Findra, the Glassy Eyed
+
+Tags: dragon, force, pindolin-islands, leyline
+
+A Force dragon who lost her eyes three centuries ago and replaced them with something better.
+
+Findra lairs in the northeastern Pindolin Islands, where the Force leyline runs strongest. She sees nothing—no light, no color, no detail. Instead, she feels the world move. Every footfall within two miles registers through the crystalline resonance spheres that sit in her empty sockets. Every heartbeat. Every breath. The rhythm of waves, the settling of stone, the minute tremors of a mouse crossing rock a thousand feet below.
+
+She cannot be surprised. She cannot be hidden from. Illusions have no weight, no vibration—she ignores them entirely.
+
+### The Blinding
+
+Findra doesn't discuss what happened. Those who've asked received silence, then death when they pressed.
+
+What scholars have pieced together: she fought something in the deep water between the Pindolins and the Abyssal shelf. Something that targeted her eyes specifically. She won—probably—but crawled onto her current island blind, bleeding, and furious.
+
+She should have died. Dragons don't recover well from sensory loss. A blind dragon is a dead dragon.
+
+Findra disagreed.
+
+### The Eyes
+
+She spent decades experimenting. The Force leyline gave her raw material—volcanic glass shot through with leyline energy, already half-attuned to kinetic forces. The first attempts failed. The second attempts failed worse. She destroyed miles of coastline in her rages.
+
+The eyes she eventually created aren't eyes at all. They're resonance spheres—fist-sized orbs of Force-crystallized glass that vibrate in response to motion. She doesn't see. She *feels* the world move.
+
+**More than sight**: Hidden creatures register by their heartbeats. Invisible beings displace air. In absolute darkness, in fog thick as clay, in blinding noon, her perception remains unchanged.
+
+**Less than sight**: No color. No fine detail. No reading. Beautiful things and ugly things feel the same. She hasn't seen a sunset in three hundred years.
+
+The tradeoff has made her strange. Other dragons hoard gold for gleam; Findra hoards *movement*. Her lair contains clockwork salvaged from ships, pendulums that never stop swinging, waterfalls diverted through caverns for constant vibration. She keeps prisoners sometimes—not for torture, but because living things move in ways dead things don't, and she finds heartbeat rhythms soothing.
+
+### The Obsession
+
+Findra wants more eyes.
+
+Her current pair works. But she's convinced better crystalline formations exist—purer Force-attuned glass, more sensitive resonance structures. She's interested in the Shattering Stones of Emblydium (the Nydor won't trade), the Chime Crystals of triton deep cities (too far, too wet), and persistent rumors of titan-era constructs that could perceive through solid stone.
+
+She sends servants—rarely willing ones—to investigate. Most don't return. The ones who bring promising samples are rewarded. The ones who waste her time are killed. The ones who try to steal her current eyes are killed slowly.
+
+### Appearance
+
+Findra's scales are gray-white, the color of storm clouds or weathered bone. Her build is lean for a dragon—she relies on precision rather than mass. The empty sockets where her eyes were are filled with the resonance spheres, crystalline orbs that pulse with faint Force energy, catching light in ways that make observers deeply uncomfortable.
+
+She moves with unnatural stillness between bursts of explosive action. When hunting, she settles onto rock and goes completely motionless—no breath, no heartbeat she doesn't suppress. Then she waits, perception extending outward, feeling for anything that moves. When she identifies prey, she strikes in a single motion—stone to sky to kill in seconds.
+
+Victims report she appeared from nowhere, from *nothing*, a shape they'd mistaken for rock suddenly revealing itself as death.
+
+### The Lair
+
+Findra's island is called Glassback by sailors for the obsidian formations ridging its eastern shore. No one lands there by choice.
+
+The lair is a complex of sea-caves and volcanic tubes, entrance underwater at high tide. Inside:
+
+**The Resonance Chamber**: A natural cavern enhanced with hanging crystals, taut cables, and water channels. Everything vibrates, hums, or chimes. She spends most time here, surrounded by motion.
+
+**The Collection**: Hundreds of crystalline samples from across Alaria, organized by resonance properties. Some pulse with leyline energy. Some are just rocks she can't discard.
+
+**The Pen**: Where she keeps living things. Currently empty. Previously held sailors, a scholar who came voluntarily, and something from the Abyssal deep she eventually killed because its irregular heartbeat annoyed her.
+
+### Dealing With Findra
+
+Findra can be bargained with, but the terms are narrow.
+
+**She wants**: Crystalline samples with unusual resonance properties. Information about perception technology. Living prey delivered to her island. News from the surface world in small doses.
+
+**She won't trade**: Her eyes, obviously. Information about what blinded her. Lair access for research.
+
+**Approach carefully**: She knows you're coming before you know you're there. Stealth is pointless and insults her intelligence. Overwhelming force is suicide. Your best approach is visible, respectful, and bearing gifts.
+
+**The vulnerability**: If someone destroyed or stole her resonance spheres, she'd be blind again. Truly blind. She knows this. She's killed fourteen people she believed were thinking about it too seriously.
+
+### Combat
+
+**Stillness hunting**: She goes motionless, perception extending outward, then strikes explosively from unexpected positions.
+
+**Force manipulation**: She can compress air into concussive blasts, accelerate objects to lethal velocities, and create localized gravity anomalies.
+
+**Vibration reading**: Combat opponents telegraph every move through their heartbeat, their breathing, the vibration of their footsteps. She knows what you'll do before you do it.
+
+**The leyline**: Near Force convergences, her power amplifies. In her territory, the leyline responds to her will.
+
+### Hooks
+
+- **The Crystal Trade**: Findra will pay handsomely for the right samples. Finding them requires traveling to dangerous places. Delivering them requires surviving her scrutiny.
+
+- **The Blinding**: Someone claims to know what attacked Findra in the deep water. This information has value—to scholars, to Findra's enemies, possibly to Findra herself if she could be convinced to listen.
+
+- **The Better Eyes**: Rumors surface of a crystalline formation that would give Findra perfect perception—through stone, across miles, perhaps across planes. She would do almost anything to acquire it. So would others who want to control or destroy her.
+
+- **The Pen**: Findra is collecting again. Ships have gone missing near her territory. Someone wants to know why, or wants their crew back, or wants to stop whatever she's planning.
 
 ## Iorsi the Terrible
 
@@ -413,6 +591,173 @@ Unlike many dragons who crave treasure, political power, or worship, Nyinsylys s
 This apparent passivity masks tremendous danger. Nyinsylys has destroyed expeditions that lingered too long, mining operations that cut too deep, and entire Zwaeron caravans that strayed into her hunting grounds. She does not negotiate, does not warn, and does not accept tribute. Those who displease her simply die in a storm of ice and fury.
 
 The Kyth-haunted Nirvanis Mountains to her south seem to hold no terror for her. Some scholars speculate she has some arrangement with the spirits there, or that she is old enough to remember when those mountains were inhabited by the living. Others suggest the Kyth simply recognize her as something more dangerous than themselves.
+
+## Oboros, the Cunning
+
+Tags: dragon, water, pindolin-islands, leyline
+
+A Water dragon who collects debts the way other dragons collect gold.
+
+Oboros controls the central Pindolin Islands, moving through the Water leyline like a current himself. He's the oldest dragon in the archipelago, the most patient, and the most likely to talk before killing—though talking to Oboros has its own dangers. He never lies. He never needs to. He chooses his words with precision that would impress a Deoric practitioner, and by the time you realize what you've agreed to, it's far too late.
+
+### The Collector
+
+What Oboros accumulates is *obligation*. Favors owed. Services promised. Binding agreements etched into his memory and, he claims, into the leyline itself.
+
+Over five centuries, he's bargained with sailors, merchants, pirates, mages, minor nobles, and at least three other dragons. He's traded safe passage for future considerations. He's provided information in exchange for unnamed services. He's rescued drowning crews who then owed him everything.
+
+Most debtors are dead now, their obligations discharged or expired. But some aren't. Oboros maintains a mental ledger of outstanding debts, and he calls them in without warning, sometimes generations after the original agreement.
+
+The grandson of a man Oboros saved in 2847 SD might wake to find a blue-scaled head surfacing beside his ship, politely requesting the assistance that was promised.
+
+### Appearance
+
+Oboros is blue in the way deep water is blue—not bright azure but the dark, cold blue of oceanic depth. His scales are smooth and close-fitted, offering no purchase for barnacles despite centuries in salt water. His eyes are luminous, self-illuminating, visible from hundreds of feet away in murk.
+
+He's large, though smaller than he was. Water dragons don't age the way others do—they don't weaken, but they condense. Oboros at five hundred years is denser than Oboros at two hundred, each scale packed with compressed vitality. He looks merely huge. He feels like a depth charge waiting to detonate.
+
+When he moves through water, he doesn't displace it—he becomes part of its flow, accelerating along the leyline at speeds that shouldn't be possible. When he surfaces, water doesn't fall from him so much as reluctantly release him.
+
+### The Cunning
+
+Oboros earned his epithet through centuries of demonstrated intelligence:
+
+**The Vetralian Treaty**: When triton forces attempted to claim the central Pindolins, Oboros negotiated instead of fighting. The agreement grants Vetral theoretical sovereignty in exchange for Oboros having actual control. Tritons claim territory on their maps. Oboros does whatever he wants. Both consider it victory.
+
+**The Elebria Arrangement**: When the lava dragon established herself in the volcanic south, conflict seemed inevitable. Oboros proposed a gift exchange ritual that established non-aggression without formal treaty. Elebria accepted without fully understanding she'd agreed to anything. They haven't fought since.
+
+**The Information Network**: Oboros maintains contacts among sailors, fishermen, and smugglers throughout the Dragon's Spine Coast. He trades trivial favors for news, assembling a picture of mainland affairs that most rulers would envy. He knows events sometimes before they happen.
+
+### The Lair
+
+A flooded volcanic caldera in the central Pindolins—a perfect circle of sheer cliffs surrounding a deep, dark lake connected to the ocean through underwater tunnels. The Water leyline runs through its heart.
+
+The lake looks empty from above. It isn't.
+
+**The Receiving Chamber**: A partially flooded cavern where Oboros conducts business. Air pockets allow breathing; ledges allow standing; the space is designed to make visitors feel precisely as small and vulnerable as they are.
+
+**The Current Paths**: Tunnels connecting the caldera to dozens of locations throughout the central islands. Oboros can travel miles in minutes, emerging anywhere without warning.
+
+**The Depths**: The lowest chambers, where he keeps things he values. No air-breather has seen these and reported back.
+
+### Bargaining With Oboros
+
+Anyone can bargain with him. He encourages it.
+
+The problem is the terms.
+
+**What he offers**: Safe passage through central Pindolin waters. Information about the archipelago. Access to Water leyline enhancement for mages. Recovery of sunken cargo, vessels, or persons. Destruction of your enemies if they're in his waters.
+
+**What he wants**: Unspecified future services (his favorite). Information about mainland politics. Objects of curiosity. Occasionally, specific targets delivered alive.
+
+**The trap**: Oboros phrases requests as options, terms as suggestions. He never demands. He presents alternatives that all lead to the outcome he wanted. Negotiating feels collaborative until you realize you've agreed to exactly what he intended.
+
+### Combat
+
+Oboros avoids direct combat—not because he can't win, but because it's wasteful and unpredictable.
+
+When unavoidable:
+
+**Water control**: In his territory, he commands currents. Whirlpools, reversed tides, focused pressure capable of crushing ships or shattering bone.
+
+**Depth advantage**: He drags opponents down. Water pressure does his killing.
+
+**The leyline**: Near convergences, his power amplifies dramatically. Ships have simply *vanished*—compressed into wreckage, crews dissolved into sea.
+
+**Escape**: His current paths allow exit faster than any pursuit. He's never needed to flee. The option exists.
+
+### What He Knows
+
+Five centuries in the Pindolins and centuries before that elsewhere:
+
+- Complete current systems of the southern ocean, including routes on no chart
+- Location and migration of every kraken-matriarch within five hundred miles
+- Which mainland ports are most vulnerable to naval attack
+- History of several sunken civilizations whose ruins dot the Pindolin seabed
+- Where the Water leyline is strongest and how it's shifted
+- Korvo Maelish's exact location and the nature of his curse (they've met; Oboros found it fascinating)
+
+This information is available. For a price. The price is always reasonable at first.
+
+### Hooks
+
+- **The Debt Called In**: Someone the party cares about owes Oboros a favor from decades ago—or their ancestor did. The dragon has surfaced to collect. The terms of the original agreement were vague enough to demand almost anything.
+
+- **The Treaty Breach**: Vetral claims Oboros has violated their agreement. Triton forces are mobilizing. Oboros insists he's done nothing wrong—technically true, but tritons don't care about technicalities. War would destabilize the entire region.
+
+- **The Information Broker**: Oboros knows something critical—the location of a sunken artifact, the truth about a historical mystery, the plans of a major power. He'll share it. The price is a favor, details unspecified, to be collected at his discretion.
+
+- **The Succession**: Rumors suggest Oboros is preparing for something—gathering specific debts, moving assets, making arrangements. Dragons don't die of old age, but they do plan. What is he preparing for?
+
+## Pelera
+
+Tags: dragon, dark, dragons-spine-coast, the-glog
+
+A dark emerald dragon who claims The Glog forest and surrounding territory as her domain. Unlike Kanzekill to the south, who barely acknowledges the surface kingdoms in her obsessive hunt for Mountainveil, Pelera actively cultivates her reputation. She rules through fear and mystery—not by destroying settlements, but by making the forest itself feel like her. Every shadow might contain her. Every silence might be her approach. She is the Glog's apex predator, and she ensures no one forgets it.
+
+### The Shadow in the Forest
+
+Pelera is Dark-attuned, and her magic reflects this: concealment, misdirection, and the cold terror of unseen threats. She can move through The Glog's shadows without disturbing them, emerge from darkness that shouldn't contain anything her size, and vanish before witnesses can be certain what they saw. The forest's reputation for making travelers feel watched? That's not superstition. That's Pelera.
+
+She hunts primarily at night, though she can be active during the day when the forest canopy provides sufficient shadow. Her preferred prey is large game—elk and moose—but she takes humans and other travelers often enough to maintain her reputation. The attacks follow a pattern: isolation of the target, a period of psychological terror (rustling sounds, distant glimpses, the knowledge that something is there), and then a strike from an unexpected direction.
+
+Survivors are rare but not nonexistent. Pelera occasionally releases prey after the chase, letting them spread stories. The terror serves her purposes better than corpses would.
+
+### Appearance
+
+Pelera's scales are dark emerald green, so deep they appear almost black in shadow. In direct sunlight—which she avoids—they show iridescent patterns of deeper green that seem to shift with her breathing. Her eyes are pale silver, luminescent in darkness, often the only visible sign of her presence before she strikes.
+
+She's smaller than many ancient dragons—perhaps sixty feet from nose to tail—but her build is optimized for forest hunting: sinuous, flexible, able to weave between trees that would impede larger specimens. Her wings are proportionally reduced; she's a glider rather than a sustained flyer, using height and darkness rather than aerial pursuit.
+
+The air around her is noticeably colder, not from elemental cold but from the absence of light—darkness seems to leak from her, dimming nearby illumination and deepening shadows within several dozen feet.
+
+### Territory
+
+Pelera claims The Glog forest as her core territory, with Shimmer Lake as her lair. Her domain extends west into the eastern Gaplands, east to The Screech's foothills, and south to the northern Shasalassere slopes. This makes her one of the more expansive dragon territories on the Dragon's Spine Coast—and one of the most actively patrolled.
+
+She tolerates human activity at the margins. Logging operations along The Glog's western fringe continue unmolested as long as they stay within understood limits. The Gaplands settlements have learned which directions to avoid. Travelers crossing The Glog Road pass through her territory but rarely draw her attention if they move steadily and don't linger.
+
+What she doesn't tolerate is intrusion into the core territory—the deep forest around Shimmer Lake. Operations that push too far toward the interior, travelers who leave the road, anyone who approaches the lake itself—these attract her direct attention. The response is usually lethal.
+
+### Shimmer Lake
+
+Pelera's lair lies beneath or within Shimmer Lake, though no one has confirmed the precise location. The lake's distinctive shimmer—that too-bright, too-active reflection that doesn't match normal optics—is likely a consequence of her presence. Dark magic contaminating the water, perhaps, or a deliberate effect she cultivates.
+
+The lake supposedly contains a submerged structure—glimpsed occasionally when the light angles just right. Whether this is a natural formation, pre-existing ruins she's claimed, or something she built remains unknown. No one has investigated closely enough to determine the truth. The few who've tried haven't returned.
+
+Local legend holds that the shimmer shows things—visions of other places, glimpses of the future, images of desires that the viewer didn't know they had. Whether this is true or merely the sort of story that accumulates around dragon lairs is unclear. Pelera doesn't confirm or deny anything. She prefers mystery.
+
+### The Tribute Tradition
+
+Unlike Kanzekill, who wants nothing from the surface kingdoms but information about Mountainveil, Pelera accepts tribute. Some logging operations leave offerings at designated clearings—portions of their harvest, coins, occasionally worked goods. The Rosensaw Compact has been known to make larger payments when they need guaranteed safe passage for valuable shipments.
+
+Whether Pelera actually collects this tribute or simply permits those who pay to continue operating is a subject of debate. The offerings disappear, but no one has witnessed her taking them. Some believe lesser creatures—forest predators she's somehow bound to her service—collect on her behalf. Others suspect the tribute is theater, a ritual that satisfies human psychology without meaning anything to the dragon.
+
+What's certain is that operations which pay tribute suffer fewer losses than those that don't. Correlation isn't causation, but it's enough to keep the payments flowing.
+
+### Character
+
+Pelera is cunning, patient, and apparently amused by fear. She doesn't rage like Kanzekill or demand like other dragons. She watches. She waits. She cultivates a reputation that does most of her work for her. Why chase prey when prey can be convinced to avoid your territory entirely? Why destroy settlements when terrorized settlements produce better tribute?
+
+She's intelligent—more intelligent than some give her credit for. She understands the economic relationships of the region, knows which trade routes matter and which don't, and calibrates her predation to take enough to maintain fear without taking enough to collapse the system that feeds her. She's been ruling this territory for roughly two centuries and shows no signs of losing interest.
+
+Communication with Pelera is possible, though difficult. She speaks when she chooses, usually in the moments before a kill—a few words of acknowledgment, perhaps a question, occasionally what might be humor. No one has successfully negotiated with her, but several have received what seemed like warnings or instructions. Those who followed them survived. Those who didn't... didn't.
+
+### The Dragon and the Mermaids
+
+An interesting dynamic exists between Pelera's territory and the Shasalassere mermaids to the south. The mermaids have colonized underground waterways that extend north into The Glog, but they don't seem to have spread into Pelera's core territory. Whether the dragon actively prevents this, whether something about Shimmer Lake is hostile to them, or whether they simply haven't expanded that far yet remains unclear.
+
+Some scholars theorize that Pelera's Dark attunement creates conditions the mermaids avoid—that her shadow-magic contaminates the water in ways that cold-adapted, vibration-hunting predators find uncomfortable. If true, Pelera's presence might be inadvertently protecting the region from a threat worse than herself.
+
+### Hooks
+
+**The Missing Loggers**: A logging operation has gone silent—all hands, no bodies, no signs of violence. The pattern doesn't match Pelera's usual approach, which suggests either something else is responsible or the dragon has changed her methods. Either possibility is concerning.
+
+**The Compact's Request**: The Rosensaw Compact wants to negotiate directly with Pelera—not just pay tribute, but establish formal terms for safe passage through her territory. They need someone to carry the offer to the dragon and, ideally, bring back a response. The pay is excellent because the odds are poor.
+
+**The Shimmer Vision**: A merchant claims the lake showed him something—a vision of an object buried in the deep forest, something valuable enough to be worth any risk. He's assembling an expedition and needs people willing to enter Pelera's territory. The dragon's response to uninvited treasure hunters is well established. The merchant believes his vision makes him special. He's probably wrong.
+
+**Pelera's Question**: A survivor of a Pelera encounter reports that the dragon asked her something: "Where is the door that wasn't there?" The question makes no sense, but Pelera seemed genuinely interested in an answer. Scholars want to know what the question means. Finding out might require asking the dragon directly.
 
 ## Pfustias
 
