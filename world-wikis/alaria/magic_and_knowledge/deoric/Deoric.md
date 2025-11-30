@@ -6,11 +6,25 @@ Deoric is the language of absolute power. Statements spoken in deoric have the p
 
 ### Handmagic
 
-The amount of power required to channel Deoric is immense, let alone wield it in a purposeful way. It is only through the strengthening of the astral thread binding one’s soul and shadow that one can hope to bind the power necessary to use Deoric. With stronger astral thread, one’s hand can be tattooed with more runes in titan blood (or the ground up dust from titan bones, mixed into a paste) which act both as a means of holding the magic as well as channeling it in way described by the Deoric runes. However, inscribing too many runes on one’s hand runs the risk of snapping one’s astral thread, killing the owner instantly. 
+The amount of power required to channel Deoric is immense, let alone wield it in a purposeful way. It is only through the strengthening of the astral and malstaric threads—the bindings between one's soul, spirit, and shadow—that one can hope to channel the power necessary to use Deoric.
 
-Handmagic comes in two main flavors—unique abilities, and skill buffs. Both strain your astral thread, though the skill buffs are generally simpler and cheaper, as the addition in skill is usually a less complicated rune. 
+Handmagic runes are tattooed on the back of one's hands using titan blood (or ground titan bone mixed into a paste). The hands serve a dual purpose: they are the extremities through which the runes are articulated—specific hand movements activate specific runes—and their distance from the spirit's core in the chest provides the leverage needed to control the flow of cosmic power.
 
-For players of Heart Rush, strengthening one’s astral thread takes the form of gaining XP and spending it on handmagic. 
+With stronger threads, one's hands can bear more runes. However, inscribing too many runs the risk of snapping one's threads entirely, killing the owner instantly as their soul, spirit, and shadow fly apart.
+
+#### Why Handmagic Strains the Threads
+
+The astral and malstaric threads were designed to carry essence *inward*—soul-energy from Aurus down through the Ethereal Plane, shadow-energy from Nydus up through the Nethereal Plane, both sustaining the spirit at their center. They are feeding tubes, not power cables.
+
+Handmagic reverses the flow. When you activate a rune, you pull cosmic power *outward* through both threads simultaneously, demanding that reality reshape itself according to the command inscribed on your skin. The threads must carry traffic in both directions at once—a stress they were never meant to bear.
+
+Titan blood acts as a buffer. Because titans were cosmic beings, their blood resonates with the frequencies of Aurus and Nydus in ways mortal blood cannot. It holds Deoric charge without disintegrating, creating stable anchor points for the runes. But "stable" is relative. Every activation stresses both threads at that anchor point. Multiple runes mean multiple stress points, and eventually any single activation can cascade into total thread failure.
+
+#### Flavors of Handmagic
+
+Handmagic comes in two main varieties—unique abilities, and skill buffs. Both strain the threads, though skill buffs are generally simpler and cheaper, as the enhancement is usually a less complicated rune.
+
+For players of Heart Rush, strengthening one's threads takes the form of gaining XP and spending it on handmagic talents. 
 
 ### Ritual Magic
 
