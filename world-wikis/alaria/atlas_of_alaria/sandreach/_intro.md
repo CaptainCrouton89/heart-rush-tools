@@ -20,9 +20,9 @@ Sand Reach is divided into two major desert regions:
 
 ### Major Features
 
-#### Belo Jenari
+#### Belu Jenari
 
-A large volcanic mountain rising from the center of the desert—a dramatic landmark visible for miles across the barren landscape.
+A large volcanic mountain rising from the center of the desert—a dramatic landmark visible for miles across the barren landscape. Site where the legendary Demon Horn of Fire was forged.
 
 #### Salt Flats
 
@@ -31,9 +31,27 @@ Located at the northeastern tip of Luquihn Desert, where the desert meets the co
 ### Surrounding Waters and Regions
 
 - **Greenwater Sea**: To the west, containing the island of Urok
+- **Roule Channel**: The strait separating Roule from the mainland
 - **Roule**: A halfling state north of Urok and north of Sand Reach
+- **Lightning Passage**: Treacherous strait between the Sunshine Coast and the Free Isles, prone to violent electrical storms
 - **Free Isles**: Island cluster to the east
 - **Sequestria (Siquestrya)**: Barren plains to the southeast, between Sand Reach and the coast
+
+### Eastern Coastline
+
+The eastern edge of the Sandreach and Siquestrya regions meets the sea along several distinct coastal zones:
+
+#### Sunshine Coast
+
+The northeastern coastal stretch where the Luquihn Desert meets the sea. Named for the relentless, unbroken sunlight that bakes this shore—there is little cloud cover this far into the desert's rain shadow. The coast is rocky and inhospitable, with few natural harbors. Small communities of salt-harvesters and fishermen eke out an existence here, trading with passing ships from the Free Isles.
+
+#### Geyser Bay
+
+A bay on the eastern coast where Siquestrya meets the sea. The bay takes its name from the thermal vents that dot the coastline and shallow waters, sending plumes of steam and mineral-rich water into the air at irregular intervals. The geysers make navigation treacherous for larger vessels, but the warm waters attract unusual marine life and the mineral deposits have modest value to alchemists. The centaur tribes of Siquestrya generally avoid this coastline, considering the geysers ill-omened.
+
+#### Sandwurm Coast
+
+The southeastern coastal region south of Geyser Bay. This desolate stretch earned its name from the massive burrowing wurms that hunt in the transitional zone where sandy soil meets the sea. The wurms are drawn to vibrations—ships anchoring too close to shore or travelers moving across the beach risk attracting these predators. The few who must travel this coast do so at low tide, moving quickly across wet-packed sand that muffles footfalls.
 
 ## Notable Regions
 
@@ -65,7 +83,7 @@ Sand makes perfect hourglass sand. Magical sand with all sorts of time-related p
 
 ### Breia
 
-A state within the Sandreach desert, notable for its ancient ruins and dangerous magical sites.
+A state within the Drystone Mountains (part of the Sandreach Mountains system), notable for its ancient ruins and dangerous magical sites.
 
 #### Shtaneres
 

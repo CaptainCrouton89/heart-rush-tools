@@ -21,13 +21,13 @@ The landscape has a faded grandeur—roads too wide for their traffic, bridges b
 
 ### Tarkha
 
-The capital of Kerwin and former capital of the entire Tarkhon Empire.
+The capital of Kerwin—an ancient city that predates Tarkhon itself.
 
-Tarkha was built for greatness. Its avenues were designed for imperial processions, its plazas for crowds of thousands, its palace for an emperor who would rule the world. The Evertorch burned here, symbol of eternal Tarkhon dominion.
+Tarkha was already old when the Neferati came north. The halflings had built it for their own purposes: wide avenues for their festivals, great plazas for their markets, a palace for kings who expected to rule forever. When Tarkhon absorbed Kerwin five centuries ago, the empire's architects found a city that needed no improvement.
 
-That was centuries ago. The torch was moved to Tarkhetan. The processions stopped. The crowds dispersed. Now Tarkha is a provincial capital, its grand architecture inhabited by halflings who use the old throne room for village meetings and the imperial gardens for growing vegetables.
+Tarkha is grander than most expect from a halfling city. The halflings built it for a king who expected to rule forever, and the architecture reflects those ambitions. Visitors from Nektuna find the scale disorienting—everything built for importance, inhabited by people who don't care about importance at all.
 
-The palace still functions as seat of government—King Ulyas rules from a modest chamber in one wing while the rest of the building gathers dust. Visitors from Nektuna find Tarkha either heartbreaking or infuriating, depending on their politics. The halflings find it perfectly comfortable.
+The palace still functions as seat of government. King Ulyas rules from a modest chamber in one wing while the rest of the building gathers dust. He's been here longer than the empire has existed. The halflings find Tarkha perfectly comfortable. Ulyas finds it home.
 
 ### The Fireknife Mountains
 
@@ -74,10 +74,10 @@ What it does not mean:
 
 King Ulyas agreed to this arrangement five centuries ago. He has outlived every emperor since. Periodically, ambitious officials in Nektuna suggest bringing Kerwin more firmly under imperial control. These officials tend to have short careers.
 
-### The Evertorch Legacy
+### The Neferati Memory
 
-Tarkha was once home to the Evertorch—the eternally burning flame that symbolizes Tarkhon's eternal dominion. When the capital moved to Tarkhetan, the torch was ceremonially transported to its new home.
+Ulyas remembers the Neferati founders—the fire-blooded conquerors who came north and built Tarkhetan. He remembers when they negotiated Kerwin's entry into the empire, promising autonomy in exchange for tribute. He remembers their emperors, their court intrigues, their slow dilution into humanity.
 
-Some in Kerwin still resent this. They believe the torch belongs in Tarkha, that moving it was a wound to the empire's spiritual heart. A small but persistent movement advocates for the torch's return.
+He also remembers the Severance—the civil war that ended Neferati rule. Kerwin stayed neutral, which is why it still exists. Ulyas watched both sides burn each other while his halflings tended their sheep.
 
-Ulyas finds this exhausting. He preferred Tarkha when no one important cared about it.
+Now humans hold the throne, and they've forgotten most of what Ulyas remembers. He hasn't told them. He hasn't decided if he ever will.

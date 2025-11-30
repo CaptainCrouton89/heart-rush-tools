@@ -1,5 +1,0 @@
-## Ederri
-
-Tags: poi
-
-TODO

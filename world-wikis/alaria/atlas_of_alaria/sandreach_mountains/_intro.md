@@ -26,6 +26,16 @@ The Sand Reach Mountains are an extensive system containing:
 - Several states within the mountain territory
 - Passes connecting the desert north to the forested south
 
+### Major Sub-Ranges
+
+- **Drystone Mountains**: Central east-west range containing the state of Breia
+- **Lyagnadarr Mountains**: Eastern range bordering Siquestrya, home to Svorinthak the dragon
+- **Scarlet Peaks**: Southeastern mountains containing the fortress Viktryapos
+- **Caffas Mountains**: Southern range home to rival force-user and fire-user tribes
+- **Hills of Gezzeri**: Western hills inhabited by the water-starved Gezzerin who hide from giants in cliff dwellings
+- **White Hills**: Home to the Thrygun orcs
+- **Dnykuul**: Hilly region south of Breia, home to the Cendelle
+
 ## Political Climate
 
 TODO

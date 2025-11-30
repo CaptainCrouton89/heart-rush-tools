@@ -36,11 +36,13 @@ The city is divided into districts by elevation and wealth:
 
 ### The Evertorch Cathedral
 
-The great cathedral at Tarkhetan's heart, where the Evertorch has burned without interruption for six centuries. The flame is the empire's holiest symbol—emperors are crowned in its light, the most binding oaths are sworn before it.
+The great cathedral at Tarkhetan's heart, where the Evertorch has burned without interruption for six centuries. The flame is the empire's holiest symbol—rulers are crowned in its light, the most binding oaths are sworn before it.
+
+The Neferati founders brought sacred fire north from Yaif and kindled it here when they established Tarkhetan. It has never moved. The cathedral was built around it, growing grander over centuries as the empire grew wealthy.
 
 The cathedral is also a center of fire magic. Ritual work occurs here, sustained by both the Evertorch's power and the fire leyline running beneath the Old City.
 
-What the human clergy don't like to discuss: the Evertorch is a Neferati creation, lit by Neferati hands, sustained by Neferati traditions. The Kingdoms of Fire haven't forgotten.
+What the human clergy don't like to discuss: the Evertorch is a Neferati creation, lit by Neferati hands, sustained by Neferati traditions. It burns with fire from Yaif. The Kingdoms of Fire haven't forgotten.
 
 ### The Fire Leyline
 
@@ -92,6 +94,6 @@ This chokepoint is everything. Tarkhon's wealth, power, and existence depend on 
 
 **With Enymu**: Loyal tributary to the north. Provides food, conscripts, and access to the Stone Forest border. The honorable kings of Enymu have never given Nektuna trouble.
 
-**With Kerwin**: Distant and nominal. King Ulyas pays tribute but effectively governs himself. He's been ruling longer than Nektuna's current dynasty has existed.
+**With Kerwin**: Distant and nominal. King Ulyas pays tribute but effectively governs himself. He was ancient when Tarkhon was founded—and he remembers things the current dynasty would prefer stayed forgotten.
 
 **With the Kingdoms of Fire**: Complex. They're nominally tributary but act as a bloc. They remember founding the empire the humans now rule. The relationship is stable but fragile.

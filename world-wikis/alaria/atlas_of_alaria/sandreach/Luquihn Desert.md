@@ -2,7 +2,7 @@
 
 Tags: desert, geography
 
-Beneath the desert lies a civilization of nomadic merfolk, known as the Murazi.
+The eastern portion of the Sandreach, extending to the Salt Flats at its northeastern tip. Beneath the desert lies a civilization of nomadic merfolk, known as the Murazi.
 
 ### Dunes of Kalamesh
 
@@ -22,11 +22,7 @@ A city-state in the desert.
 
 ### Belu Jenari
 
-A volcanic mountain where the Demon Horn of Fire was forged.
-
-### Mendari Desert
-
-A sub-region of the Luquihn Desert.
+A volcanic mountain rising from the center of the Sandreach where the Demon Horn of Fire was forged.
 
 ### Ulkevolm
 

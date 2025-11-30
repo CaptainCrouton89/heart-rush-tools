@@ -62,15 +62,25 @@ The Emerald Coast offers:
 
 ## What Will Go Wrong
 
-TODO
+The Crystal Caverns are destabilizing. Centuries of harvesting have removed more force-dampening crystals than can regrow, and the Force/Earth leyline intersection is approaching critical instability. Earthquakes have increased 40% over the past century. Coastlines are subsiding. The Kendor who understand the situation have begun sabotaging Chimeyan harvesting operations, but their warnings go unheard.
+
+If harvesting continues at current rates, the intersection will catastrophically destabilize within two to three centuries—possibly within decades if extraction accelerates. The resulting shockwave will trigger earthquakes along the entire Golus leyline network and force discharges along the Nilus, affecting regions far beyond the Emerald Coast.
+
+Meanwhile, the nations of the Jungles of Godahi remain focused on their petty border disputes, oblivious to the slowly mounting disaster beneath their waters.
 
 ## Notable Locations
 
 ### Crystal Caverns
 
-Deep beneath the coastal waters of the Emerald Coast lie the Crystal Caverns—submarine cave systems filled with brilliant, extraordinarily potent force-attuned crystals. These crystals pulse with concentrated magical energy, glowing with an inner light that illuminates the dark waters.
+Submarine cave systems beneath the coastal waters of New Chimea, located at the intersection of Force and Earth leylines. The caverns contain volatile force-attuned crystals that store immense kinetic potential—highly valuable to mages and artificers, but catastrophically dangerous to harvest. New Chimea controls the primary access points and has built a profitable (and increasingly unsustainable) industry around crystal extraction.
 
-The crystals possess formidable powers of force magic, making them highly valuable to mages and artificers. However, they are also extremely volatile—when shattered, they release their stored energy in a massive explosion capable of collapsing entire cave sections or sinking ships above. Harvesting the crystals requires expert technique and extreme caution, as a single mistake can trigger a cascading chain reaction throughout the cavern system.
+See [Crystal Caverns](./Crystal%20Caverns.md) for full details.
+
+### Slumber Deep
+
+An abyssal trench forty miles off the coast of Phirexes, where Force and Water leylines intersect to create a zone of absolute stasis. Ships and creatures that drift into the Deep hang frozen forever, preserved but conscious. At its heart lies [Aphoryis](../../bestiary/Aphoryis.md), the fortress of the octopus-lich Mirsalyenar the Cruel.
+
+See [Slumber Deep](./Slumber%20Deep.md) for full details.
 
 ### Cascades of Ygg
 

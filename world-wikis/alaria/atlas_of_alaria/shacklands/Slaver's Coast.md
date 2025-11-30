@@ -1,7 +1,7 @@
 ## Slaver's Coast
 
-Tags: coast, geography
+Tags: coast, geography, shacklands
 
-A coast on Pesalolo.
+See [Pesalolo](Pesalolo.md#slavers-coast) for full details.
 
-TODO
+The southern coast of Pesalolo, where Gorath operates its slave extraction operation. Ships run port-to-port collecting Drasnian dwarves for transport through Divinity Passage to Azantir.

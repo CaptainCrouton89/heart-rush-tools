@@ -1,7 +1,7 @@
 ## Eriyen
 
-Tags: poi
+Tags: poi, settlement, gamori
 
-A point of interest in L'Coth D'Hari.
+The primary gathering place of the Gamori republic in L'Coth D'hari. More ceremonial ground than city—where elected leaders convene during significant moments.
 
-TODO
+See: [Elder Wilds - Eriyen](_intro.md#eriyen)

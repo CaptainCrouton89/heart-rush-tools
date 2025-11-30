@@ -13,26 +13,63 @@ The Wanderlands form the long southern peninsula of Aboyinzu—a great curved fi
 
 ### Terrain
 
-The Wanderlands encompass:
-- **Dragonsong**: Mystical region with ancient forests
-- **Grendenheim**: Pastoral meadows
-- **Donclik Peninsula**: Windswept promontory extending into the Donclik Sound
-- **The Troughs**: Deep canyons cutting through the landscape
-- **Krinea Mikea**: Marshland in the lowlands
-- Various hill ranges and moorlands (Karik Hills, Snakefoot Hills, Argum Hills, Eshire Moors)
+The Wanderlands encompass several distinct zones:
+
+**The Cursed North:**
+- **Donclik Peninsula**: A windswept finger of land extending into Donclik Sound, uninhabitable due to Donclik's Curse
+- **Donclik Sound**: Cursed waters that draw the unwary to drown
+- **Grendel Inlet**: A shallow, useless waterway separating the peninsula from the mainland
+- **The Troughs**: Tidal gorges on the peninsula's western edge, rich with shipwreck salvage
+- **Serisa's Palace**: Ruins of a pirate queen's fortress on the northern islands, guarded by kraken spawn
+
+**The Moors and Hills:**
+- **Eshire Moors**: Boggy moorland along the western mainland
+- **Karik Hills**: Barren hills east of Grendel Inlet
+- **Argum Hills**: Low hills on the Donclik Peninsula's eastern bulge
+- **Gray Hills**: Hills in central Grendenheim
+- **Snakefoot Hills**: Prominent range south of Grendenheim
+
+**The Pastoral Heart:**
+- **Grendenheim**: Open meadowlands—the only relatively safe area, wandered by Wispen halfling nomads
+- **Krinea Mikea**: Marshland in the lowlands where Grendel Inlet terminates
+
+**The Dragon's Domain:**
+- **Dragonsong**: Ancient forest region covering the eastern Wanderlands
+- **Mylowach**: Dense forest in northern Dragonsong
+- **Plyrthasnyach**: Highland forest in northeastern Dragonsong
+- **Bysal Emmus**: Southern forest, home of the dragon Ziru
+- **Sonagrev**: Hills containing Dragon's Gate
+- **Dragon's Gate**: A humming stone arch that Ziru guards—possibly a sealed portal
+
+### Why the Wanderlands Are Empty
+
+The Wanderlands have no permanent settlements for good reason:
+
+- **The North** is cursed. Donclik's Curse prevents anyone from staying on the peninsula or its surrounding waters for more than a few days without being drawn to drown.
+- **The West** borders Echem Yiakraxes—Terrogone killing grounds that no sane person crosses.
+- **The East** belongs to Ziru and the ancient Dragonsong forests. The dragon tolerates no intrusion near Dragon's Gate.
+- **The Center** (Grendenheim) is the only area where extended habitation is possible, and even there, the Wispen halflings choose to wander rather than settle.
 
 ### Relationship to the South Sea
 
-The South Sea lies to the west of the Elderwilds and north of the Wanderlands peninsula. This body of water separates the Wanderlands/Elderwilds region from the eastern Shacklands (Kyagos and surrounding areas). The peninsula's position makes it a crucial waypoint for maritime traffic between Aboyinzu and the slave-trading ports to the east.
+The South Sea lies to the west of the Elderwilds and north of the Wanderlands peninsula. This body of water separates the Wanderlands/Elderwilds region from the eastern Shacklands. The peninsula's position could make it a crucial waypoint for maritime traffic—if not for the curse, the dragon, and the Terrogones.
 
 ## Political Climate
 
-TODO
+There is no political structure in the Wanderlands. No nation claims this territory. The Wispen halflings who wander Grendenheim have no government; they simply avoid the dangerous areas and keep moving. The dragon Ziru is the closest thing to a ruler, and she rules only by threat of death.
 
 ## What Makes It Interesting
 
-TODO
+- **Donclik's Curse** creates a ticking clock for any expedition—stay too long and you become part of the sea
+- **Serisa's Palace** offers a flooded dungeon with real treasure and the possibility of breaking the curse
+- **The Troughs** provide accessible danger with tidal mechanics and salvage opportunities
+- **Dragon's Gate** poses mysteries about draconic origins and sealed portals
+- **Ziru** is a dragon who can be negotiated with, for those brave or foolish enough to try
 
 ## What Will Go Wrong
 
-TODO
+- Expeditions that misjudge their timing on the peninsula
+- Treasure hunters who delve too deep into the Troughs and lose track of the tide
+- Adventurers who think they can sneak past Ziru
+- Anyone who tries to settle permanently
+- Scholars who find the contract in Serisa's Palace and try to read it without understanding what they're doing

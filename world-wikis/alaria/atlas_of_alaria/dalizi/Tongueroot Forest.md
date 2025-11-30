@@ -2,6 +2,6 @@
 
 Tags: forest, geography
 
-A forest in the Dalizi Wildlands.
+The northern gateway into the Rootspire Wilds. While geographically adjacent to Dalizi territory, Tongueroot Forest is part of the Rootspire Wilds region and is detailed there.
 
-TODO
+See [Tongueroot Forest](../rootspire_wilds/Tongueroot%20Forest.md) for full entry.

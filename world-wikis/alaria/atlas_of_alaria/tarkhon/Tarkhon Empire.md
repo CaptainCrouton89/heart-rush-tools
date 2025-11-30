@@ -10,7 +10,7 @@ In Tarkhetan's great cathedral burns the **Evertorch**—an eternally burning fl
 
 The flame burns without fuel, without maintenance, without apparent source. Scholars have studied it for generations without understanding how it works. Some believe it's fed by a leyline. Others think it's a divine gift. A few whisper that something was sacrificed to light it, and that sacrifice is what keeps it burning.
 
-The torch was originally lit in Tarkha—now a provincial capital in Kerwin—before being ceremonially moved to Tarkhetan when the seat of power shifted. This transfer remains controversial among those who believe the torch belongs in its original home.
+The Evertorch was lit in Tarkhetan when the Neferati founders established the empire six centuries ago. They brought sacred fire from the Flame of Yaif and kindled it here, at the heart of their new dominion. It has never moved.
 
 ### Tarkhetan
 
@@ -36,8 +36,8 @@ Tarkhon's territory contains several important leylines:
 
 ### The Imperial Legacy
 
-Tarkhon was not always a maritime empire. Centuries ago, it was a land empire centered on Tarkha, expanding through conquest and diplomacy. The Evertorch burned in Tarkha. The emperor ruled from Tarkha. The empire's heart was in Tarkha.
+The Neferati founders understood from the beginning that controlling the strait meant controlling trade. They built Tarkhetan on the Needle, lit the Evertorch, and established an empire based on commerce rather than conquest.
 
-Then maritime trade exploded in importance, and suddenly the strait mattered more than land. Nektuna rose. The capital moved. The torch was transferred. The empire's character changed—from territorial ambition to commercial exploitation.
+For nearly three centuries, Neferati emperors—or their increasingly diluted descendants—ruled from Tarkhetan. They expanded through trade agreements and tributary arrangements, absorbing states like Kerwin through negotiation rather than war.
 
-The old Tarkhon is gone. But its echoes remain in Tarkha's faded grandeur, in the Evertorch controversy, in the immortal king who remembers when things were different.
+Then came the Severance, and human hands took the throne. The new rulers maintained the symbols and traditions of their predecessors while slowly forgetting their origins. The Evertorch still burns. The institutions still function. But the fire that founded them has withdrawn to the Kingdoms of Fire, waiting.

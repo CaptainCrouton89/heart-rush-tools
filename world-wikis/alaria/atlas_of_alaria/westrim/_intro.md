@@ -51,11 +51,27 @@ TODO
 
 #### Husakas
 
-A desert region in the southwest Dunes of Kunagi, roamed by scorpion riders who have adapted to the harsh conditions. Husakas contains one of the few sources of water in this part of the dunes—a network of seasonal streams and creeks that flow during rare rains.
+A desert region in the southwest Dunes of Kunagi, roamed by scorpion riders who have adapted to the harsh conditions. The water here carries a terrible curse—drinking causes complete loss of long-term memory. This has shaped the Husakas people's entire culture around memory preservation and scorpion symbiosis.
 
-However, the water carries a terrible curse: drinking from these streams causes complete loss of long-term memory. Victims forget their past, their identity, everything except the immediate present. The water's power is bound to the region—if transported away from Husakas, it becomes ordinary water. This creates a grim trap: travelers dying of thirst must choose between death and losing themselves entirely.
+See the full [Husakas](Husakas.md) entry for the scorpion rider culture, the Twice-Born, and notable locations.
 
-The scorpion riders who patrol Husakas have developed techniques to survive on minimal water, avoiding the cursed streams except in the direst emergencies.
+#### House of the Scorpion
+
+A half-buried palace in northern Husakas where the Prince of Scorpions dwells—a tragic, transformed figure who maintains all scorpions in the desert. The Husakas make bicentennial pilgrimages here, trading memories for the continued survival of their bonded mounts.
+
+See the full [House of the Scorpion](House%20of%20the%20Scorpion.md) entry for the Prince, the pilgrimage ritual, and why killing him would be catastrophic.
+
+#### Gyerekas
+
+The fossil reef hills marking Husakas's southern boundary—ancient coral formations and the bones of creatures from a vanished sea. The Husakas call it the Bone Garden. It serves as neutral trading ground and contains dangerous cave systems leading into unknown depths.
+
+See the full [Gyerekas](Gyerekas.md) entry for the reef's resources, the Leviathan's Rest, and the Dwellers Below.
+
+#### Spotted Forest
+
+Where the Dunes of Kunagi surrender to the savanna, the land fractures into scattered oases—the Spotted Forest. A patchwork of verdant islands fed by underground springs, home to the Spotted Ones (mixed Husakas-Chule descent) who serve as intermediaries between desert and grassland cultures.
+
+See the full [Spotted Forest](Spotted%20Forest.md) entry for the oasis ecology, trading crossroads, and current tensions.
 
 ### Mueras
 

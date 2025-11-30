@@ -61,13 +61,13 @@ Tarkhon is an empire held together by profit rather than loyalty. Subsidiary sta
 
 The current ruler, **King Selron II**, governs from Tarkhetan. His authority is absolute in the core territories but fades rapidly with distance. The Kingdoms of Fire act as a bloc. The dwarven city-states answer to the First Brotherhood as much as to Tarkhon. And Kerwin's immortal king has outlived every emperor for five centuries.
 
-The empire's great symbol is the **Evertorch**—an eternally burning flame in Tarkhetan's cathedral. The torch was originally lit in Tarkha (now Kerwin's capital) before being moved when the seat of power shifted. This transfer remains controversial.
+The empire's great symbol is the **Evertorch**—an eternally burning flame in Tarkhetan's cathedral. The torch was lit when the Neferati founders established the city six centuries ago, kindled from sacred fire they brought north from Yaif. It has burned there ever since, symbol of an empire that has changed hands but never broken.
 
 ## What Makes It Interesting
 
 - **The Chokepoint Empire**: Tarkhon's entire economy depends on controlling the strait. If an alternative route opened—overland, magical, or otherwise—the empire would collapse. This makes Tarkhon both desperate to maintain control and paranoid about anything that might threaten it.
 
-- **The Immortal Witness**: King Ulyas of Kerwin remembers when Tarkha was the capital, when the Evertorch burned in his city, when Tarkhon was a land empire rather than a naval one. His existence is an embarrassment to imperial narratives and a reminder that some things are older than the empire's current form.
+- **The Immortal Witness**: King Ulyas of Kerwin remembers the Neferati emperors, the founding families, the old bargains that bound the empire together. He was ancient when Tarkhon was young. His existence is an embarrassment to imperial narratives—he knows things the current dynasty would prefer forgotten, and he has no reason to keep their secrets.
 
 - **The Necessary Monster**: Klor the Blood Lord cleared the southern mountains through systematic genocide. Tarkhon honors him as a hero. The descendants of those he killed—scattered across neighboring lands—remember differently.
 
@@ -75,9 +75,7 @@ The empire's great symbol is the **Evertorch**—an eternally burning flame in T
 
 ## What Will Go Wrong
 
-- **The Evertorch Schism**: The movement to return the torch to Tarkha is growing. If it gains enough support, it could split the empire between those who see Tarkhetan as the rightful capital and those who believe the move was illegitimate.
-
-- **The Kingdoms of Fire Departure**: If the four Neferati monarchies decided to leave together, Tarkhon would struggle to stop them. Something might push them over the edge—a new trade deal, an insult from Tarkhetan, a better offer from elsewhere.
+- **The Kingdoms of Fire Departure**: If the four Neferati monarchies decided to leave together, Tarkhon would struggle to stop them. Something might push them over the edge—a new trade deal, an insult from Tarkhetan, a better offer from elsewhere. Queen Khalira of Wadiyah is already preparing for something.
 
 - **The Alternative Route**: Someone could discover (or create) a way around the strait. A canal, a portal, a mountain pass, a magical transport network. The moment trade can bypass Tarkhon, the empire dies.
 
