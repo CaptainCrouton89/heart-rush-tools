@@ -5811,19 +5811,9 @@ TODO
 
 Tags: forest, geography
 
-A large ancient forest region in the Dalizi Wildlands, positioned north of the Dragon's Spine mountains and east of the Dalizi Confederation proper. The forest is known for its dream-attuned magical properties and otherworldly phenomena.
+A dream-warped subregion of the Rootspire Wilds, lying east of Dalizi territory. Known for its reality-bending properties and the dangerous Real Forest within.
 
-#### Real Forest
-
-The Real Forest lies in the northern reaches of Nykotheryx Amberylika, notorious for its reality-warping properties. During fall, the pollen from the trees causes dreams and reality to intermingle—travelers cannot tell if they are awake or asleep. The disorientation is so complete that people can wander for days convinced they are dreaming when they are awake, or vice versa.
-
-The forest is home to the Pine Jester, a wild, mischievous spirit that delights in tormenting confused travelers. The Pine Jester is unkillable so long as the forest itself lives—it is bound to the forest's essence and will regenerate from any harm.
-
-#### Dreamlake
-
-North of the main Nykotheryx Amberylika forest, just south of the Real Forest, lies Dreamlake—a body of water with profound magical properties. Drinking from the lake allows you to interact far more vividly with your dreams, experiencing them with perfect clarity and control. More remarkably, those who drink the water can enter and interact with other people's dreams, creating shared dreamscapes or invading the private dreams of others.
-
-Dream-mages and mystics make pilgrimages to Dreamlake to enhance their oneiromantic abilities, though the power comes with risks—some who drink too deeply find themselves unable to distinguish waking from dreaming even after the water's effects should have faded.
+See [Nykotheryx Amberylika](../rootspire_wilds/Nykotheryx%20Amberylika.md) for full entry, including details on the Real Forest and Dreamlake.
 
 ### Ogre Hills
 
@@ -6359,9 +6349,9 @@ TODO
 
 Tags: forest, geography
 
-A forest in the Dalizi Wildlands.
+The northern gateway into the Rootspire Wilds. While geographically adjacent to Dalizi territory, Tongueroot Forest is part of the Rootspire Wilds region and is detailed there.
 
-TODO
+See [Tongueroot Forest](../rootspire_wilds/Tongueroot%20Forest.md) for full entry.
 
 ### Toothlar Mountains
 
@@ -6699,11 +6689,111 @@ The region's stability is an illusion. Everyone is waiting for the equilibrium t
 
 ### Azanfrain
 
-Tags: fortress, poi
+Tags: fortress, poi, gondurak, frostwatch, military
 
-A fortress within Gondurak.
+The southernmost permanent Fengruk installation, built into a spur of volcanic rock overlooking the northern Shrapnel Strait. Azanfrain exists for one purpose: watching the Pale Peaks and stopping what comes from them. For four thousand years, this fortress has been the first line of defense against frostwalkers, ice wyrms, and the possibility of something worse.
 
-TODO
+The fortress is not comfortable, not welcoming, and not meant to be. It's a military installation in the most literal sense—every design choice prioritizes function over form, defense over aesthetics, survival over anything else.
+
+#### Location and Construction
+
+Azanfrain perches on a promontory at the southeastern edge of the Bellowing Mountains, where the volcanic stone gives way to the frozen approaches of the Shrapnel Strait. The location was chosen for sight lines: from the highest watchtowers, observers can see the entire northern coastline of the Pale Peaks, track ice formation on the strait, and spot movement on the southern slopes.
+
+The fortress is built primarily underground, following Fengruk architectural tradition, but here the reasons are military rather than cultural. Surface structures present targets; underground chambers don't. The visible portions of Azanfrain are limited to watchtowers, weapon emplacements, and the heavily-fortified main gate.
+
+The stone is volcanic basalt, naturally insulated against cold and reinforced with titan-era metalwork salvaged from deeper installations. The walls are fifteen feet thick in most places, angled to deflect both physical impacts and the cold auras of frostwalkers. The architecture assumes hostile conditions and designs around them.
+
+Geothermal vents provide heating—carefully channeled through the fortress's interior to maintain temperatures that Fengruk can work in while remaining cool enough that the outer defenses don't create thermal signatures that attract predators. The balance is precise and constantly monitored.
+
+#### The Frostwatch Garrison
+
+Approximately six hundred Fengruk serve in the Frostwatch at any given time—the professional military force that operates Azanfrain year-round. Garrison duty rotates every six months; longer deployments cause psychological effects the Fengruk call "ice-sight," a progressive detachment and obsessive focus on the southern horizon that makes soldiers unreliable.
+
+The Frostwatch ranks:
+
+**Watchers** form the basic rank—soldiers trained in observation, patrol, and basic frostwalker engagement. Most of the six hundred fall into this category.
+
+**Hunters** specialize in ice wyrm response—harpoon crews, thermal lance operators, and the scouts who track wyrm movement through ice-ripples. Roughly sixty Fengruk hold this rank.
+
+**Priests** maintain the spiritual and psychological health of the garrison, conduct the vigils that monitor for signs of the Cold That Hungers, and perform the memorial rites for fallen soldiers. Twenty priests serve at any time.
+
+**The Commander** holds overall authority, reporting directly to the Council of Embers in Sildraz. The current commander is **Threkk Irontemper** (male, 180 years), a veteran of three major frostwalker incursions who is widely respected but increasingly withdrawn.
+
+Command rotates every three years. Longer terms tend to produce commanders who see threats everywhere and nowhere, who become so focused on the watch that they forget what they're watching for.
+
+#### Defenses
+
+Azanfrain's defensive systems have evolved over millennia, refined by each generation based on what worked and what didn't:
+
+**The Watchtowers** rise from the fortress's highest points, staffed continuously in rotating shifts. Each tower maintains signal fires, observation equipment, and emergency weapons. The towers can communicate with each other and with the main fortress through a system of mirrors, flags, and—in emergencies—the fortress bells.
+
+**The Fire Lines** are trenches filled with alchemical compounds that can be ignited on command, creating barriers of flame across likely approach routes. Frostwalkers avoid fire instinctively; the lines channel them toward killing grounds where the garrison can engage effectively.
+
+**The Harpoon Batteries** line the outer walls—heavy weapons designed to anchor ice wyrms above the ice before they can submerge. Each battery requires a crew of four and can fire three harpoons before reloading. The fortress maintains thirty operational batteries.
+
+**The Thermal Lances** are the garrison's primary anti-frostwalker weapons—devices that project concentrated heat at effective ranges of about fifty feet. Each lance requires expensive alchemical fuel and burns out after roughly ten minutes of continuous use. The fortress maintains several hundred in reserve.
+
+**Vibration Dampening** protects the fortress floors and surrounding ice from transmitting the footfall signatures that attract ice wyrms. The dampening uses a combination of suspended flooring, absorbent materials, and careful movement discipline.
+
+**The Ice-Breaker Stores** contain alchemical compounds designed to prevent the strait from freezing solid or to shatter ice bridges that form despite prevention efforts. These are the garrison's most precious resource—running out means accepting whatever the frozen strait permits to cross.
+
+#### Daily Life
+
+Life in Azanfrain follows rigid routines designed to maintain alertness without exhausting the garrison:
+
+**Watch Rotation** operates on four-hour shifts, ensuring fresh eyes on the approaches at all times. Off-duty soldiers train, maintain equipment, or rest in the barracks. Recreation is limited—the fortress has no tavern, no market, no entertainment beyond what soldiers bring themselves.
+
+**Training** occurs daily, focusing on frostwalker engagement, ice wyrm response, and cold-weather survival. Every soldier must maintain proficiency with multiple weapons and demonstrate ability to function in extreme conditions.
+
+**Maintenance** consumes significant time. The cold degrades equipment; the isolation prevents easy resupply. Soldiers learn to repair their own gear, manage fuel supplies, and improvise when standard materials aren't available.
+
+**The Vigils** are religious observances conducted by the priests—rituals that supposedly detect disturbances in the Pale Peaks' spiritual atmosphere. Whether the vigils actually detect anything is debated; the priests insist they do, and the garrison has no way to prove otherwise.
+
+**Food** comes from Sildraz via the supply route—preserved meats, dried vegetables, and dense breads designed for long storage. Fresh food is rare; hunting near the fortress is forbidden because the activity might attract predators.
+
+#### The Psychological Toll
+
+Service at Azanfrain is difficult in ways that go beyond physical hardship. The isolation, the constant vigilance, the knowledge that something terrible might emerge from the south at any moment—these pressures accumulate.
+
+**Ice-sight** is the most common affliction: soldiers who've served too long begin to see frostwalker movement in every shadow, hear the Cold That Hungers in every wind. They become obsessive, checking the horizon constantly, unable to sleep, certain that the end is coming. Treatment requires removal from the fortress and extended recovery in warmer, more populated environments.
+
+**The Dreams** trouble many soldiers—nightmares of the Pale Peaks, of endless cold, of watching something vast rise from the horizon. The priests say these dreams are normal, a product of anxiety and environment. Some soldiers believe they're something more.
+
+**Casualty Management** adds another burden. When soldiers die—to frostwalker cold, ice wyrm attacks, or accidents in the harsh environment—the garrison handles their own dead. Bodies are cremated in the forge-heated chamber; ashes are eventually returned to family in the forge cities. There's no time for elaborate mourning.
+
+The Frostwatch considers six months the maximum safe deployment before ice-sight risk becomes significant. Some soldiers request extensions anyway, unwilling to leave the watch to others. The command usually refuses.
+
+#### The Warning System
+
+Azanfrain's primary function is observation and warning. When threats are detected, the fortress activates a communication chain that reaches all of Gondurak within hours:
+
+**Signal Fires** on the watchtowers can be seen from relay stations in the Bellowing Mountains proper. Different patterns indicate different threats: single fire for isolated frostwalkers, double fire for group movement, triple fire for ice wyrm activity, and the rarely-used full conflagration signal for mass incursion.
+
+**Runners** carry detailed reports through the mountain passes to Sildraz when signal fires provide insufficient information. The run takes roughly eighteen hours in good conditions; the fortress maintains trained couriers specifically for this purpose.
+
+**The Bells** are a last resort—massive bronze instruments that can be heard for miles, warning anyone in range that something has gone catastrophically wrong. The bells have been rung three times in recorded history.
+
+#### Notable Features
+
+**The Frozen Hall** is a chamber in the fortress's lower levels where captured frostwalkers are contained for study. The chamber is deliberately kept cold, which keeps the frostwalkers dormant. Scholars occasionally visit to examine specimens; the garrison considers the entire arrangement distasteful but useful.
+
+**The Vorukar Chapel** is a small shrine where soldiers pay respects to the titan who died defending this land. The chapel contains no images or relics—just carved stone walls bearing fragments of the stonescripts that describe his final battle. Soldiers visit before and after dangerous deployments.
+
+**The Memorial Wall** bears the names of every Frostwatch soldier killed in the line of duty—over four thousand names spanning four millennia. New names are added with solemn ceremony; the wall has been expanded three times as the list has grown.
+
+**The Commander's Observatory** crowns the highest tower, equipped with Fengruk optical instruments that can resolve detail on the Pale Peaks slopes. The commander maintains personal watch here during critical periods.
+
+#### Hooks
+
+**The Captured Wyrm**: A small ice wyrm has been successfully harpoon-anchored and contained in a specially-constructed ice-pit. The commander wants to use it to study wyrm behavior; some of the garrison want to kill it before it escapes or attracts others.
+
+**The New Commander**: Threkk Irontemper's term ends in three months, and the Council hasn't announced his replacement. Rumors suggest the leading candidate has controversial views about proactive expeditions into the Pale Peaks. The garrison is divided.
+
+**The Broken Seal**: One of the detection stakes has gone silent—not removed, just stopped transmitting vibrations. Something destroyed it under the ice, and no one saw what. The garrison is debating whether to investigate or reinforce.
+
+**Ice-Sight Prophecy**: A soldier deep in ice-sight has begun drawing pictures before her episodes—detailed images of the Pale Peaks that include structures no one has documented. Either she's hallucinating or she's seeing something the watchtowers can't.
+
+**The Smuggler**: Someone in the garrison is selling information to traders—patrol schedules, defense positions, supply inventories. The commander doesn't know who, and the investigation is damaging morale at exactly the wrong time.
 
 ### Barren Hills
 
@@ -6715,11 +6805,59 @@ TODO
 
 ### Bellowing Mountains
 
-Tags: mountains, geography
+Tags: mountains, geography, gondurak, fengruk
 
-Mountains in the Dragon's Spine Coast, containing the state of Gondurak.
+A harsh range of peaks in the eastern Dragon's Spine, rising between the Hills of Sarrow to the north and the Pale Peaks to the south. The Bellowing Mountains are perpetually cold—snow blankets the upper slopes year-round, and the valleys rarely see temperatures above freezing even in summer. This is Gondurak, homeland of the Fengruk dwarves and site of the three great forges.
 
-TODO
+#### The Sound
+
+The mountains earned their name from the noise they make. On still days, a deep rhythmic rumbling echoes through the valleys—not thunder, not earthquakes, but the collective hammering of the Fengruk forges reverberating through the stone. The titans built these mountains hollow, riddling them with forge-chambers and ventilation shafts that carry sound for miles. When the forges are at full operation, the entire range seems to breathe with each hammer stroke.
+
+The effect is disorienting for first-time visitors. The sound comes from everywhere and nowhere, rising and falling in patterns that seem almost musical. Fengruk children learn the rhythms—they can identify which forge is operating, how many smiths are working, sometimes even what they're making, all from the quality of the echoes.
+
+During the rare periods when all three forges fall silent simultaneously—for holy days or emergencies—the quiet is described as oppressive. The mountains feel wrong without their voice.
+
+#### Geography
+
+The Bellowing Mountains are geologically distinct from the surrounding Dragon's Spine. Where the Pale Peaks are ice-wrapped granite and the Silver Slopes are metal-veined sedimentary stone, the Bellowing Mountains are primarily volcanic—ancient basalt and pumice shot through with veins of exotic minerals. The titans chose this location deliberately; the volcanic activity provides natural heat for the deep forges, and the mineral deposits include materials found nowhere else on Alaria.
+
+Three major peaks anchor the range: Sildraz's Crown in the center (where the World Forge burns), Durkarn's Fang to the northwest, and Morgrun's Pillar to the northeast. Between them spread lesser peaks, glacier-filled valleys, and the entrances to the dwarven cities that honeycomb the stone.
+
+The southern slopes descend toward the Shrapnel Strait, cut by numerous streams that eventually feed into the eastern channels. The northern slopes give way to the Hills of Sarrow, a gradual transition from frozen peaks to windswept grassland. The eastern reaches extend toward the Shirik River headwaters before giving way to territories beyond Fengruk control.
+
+#### Climate
+
+The Bellowing Mountains sit far enough south that winter darkness lasts for months, and summer brings only a few hours of twilight rather than true night. The cold is relentless—exposed skin freezes in minutes during deep winter, and even summer temperatures hover near freezing at the lower elevations.
+
+The Fengruk have adapted thoroughly. Their cities are almost entirely underground, warmed by forge-heat and geothermal vents. Surface structures are limited to observation posts, watchtowers, and the heavily-insulated gates that control access to the interior. Visitors who arrive expecting dwarven architecture on display find only ice-crusted rock and carefully hidden doorways.
+
+#### The Forge Cities
+
+**Sildraz** crowns the central peak, built around the World Forge—a titan-constructed facility capable of casting metal in quantities no other forge can match. The city is the largest Fengruk settlement, home to roughly fifteen thousand dwarves and the seat of Gondurak's government.
+
+**Durkarn** occupies the northwestern peak, built on an ancient dragon graveyard. The forges here specialize in incorporating dragon bone and scale into metalwork, producing weapons and armor with properties that pure metal can't achieve. The city is smaller than Sildraz but arguably more influential in martial circles.
+
+**Morgrundar** rises from the northeastern peak, built on massive deposits of Malstaric ash. The forges here work with this otherworldly material, creating items with subtle connections to the shadow plane. The work is dangerous and the results unpredictable, but demand from collectors and practitioners of dark arts keeps the forges busy.
+
+#### Trade Routes
+
+The primary route into Gondurak follows the eastern valleys from the Dalizi lowlands, skirting the Hills of Sarrow before ascending through a series of switchbacks to Sildraz's main gate. This route is passable most of the year, though winter storms can close it for weeks at a time.
+
+A secondary route connects to Sweivyon and the Silver Slopes via mountain passes—shorter but steeper, used primarily by traders bringing raw silver to the Fengruk smiths. This route closes entirely during winter.
+
+No maintained route leads south toward the Pale Peaks. The Fengruk have deliberately not built one.
+
+#### Azanfrain
+
+The fortress of Azanfrain sits at the southern edge of Fengruk territory, built into a spur of rock overlooking the northern Shrapnel Strait. From here, watchers monitor the ice conditions, track creature movements on the Pale Peaks slopes, and coordinate responses when frostwalkers or ice wyrms attempt to migrate north.
+
+Azanfrain is not a comfortable posting. The garrison rotates every six months—longer deployments tend to produce psychological effects the Fengruk euphemistically call "ice-sight." But the work is necessary. Without Azanfrain, threats from the peaks would reach the forge cities unchallenged.
+
+#### What Lies Beneath
+
+The titan-era tunnel systems extend far deeper than the Fengruk currently occupy. The forges themselves are relatively shallow—built for titan convenience rather than dwarven preference—but shafts descend into darkness that no one has fully explored. The Fengruk have sealed most of these lower passages, not from fear of what might be down there, but from respect for whatever the titans were keeping separate from the working levels.
+
+Occasionally, sounds rise from the sealed depths. Not forge-sounds—something else. The Fengruk don't discuss this publicly. The mountains bellow, they say. That's all.
 
 ### Bleeding Mountains
 
@@ -6742,14 +6880,6 @@ TODO
 Tags: mountains, geography
 
 Mountain range within Emblydium, located to the south of the state's core territory.
-
-TODO
-
-### Eindra, the Glassy Eyed
-
-Tags: poi
-
-A point of interest in the Pindolin Islands.
 
 TODO
 
@@ -6777,6 +6907,98 @@ A state in the northwest tip of the Dragon's Spine Mountains, populated by the N
 
 Emblydium is located southwest of Shunda and Dhabisa in Dalizi. The state controls the mountain passes connecting the Dragon's Spine Coast to the interior regions.
 
+### Findra, the Glassy Eyed
+
+Tags: dragon, force, pindolin-islands
+
+A Force dragon who lairs in the northeastern Pindolin Islands, on the small island northwest of Tidewatcher's Perch. Findra lost her eyes three centuries ago and replaced them with something better.
+
+#### The Blinding
+
+Findra doesn't discuss what happened. The few survivors of her encounters who've tried to ask received only silence—and then death, when they pressed further.
+
+What scholars have pieced together: she fought something in the deep water between the Pindolins and the Abyssal shelf. Something that targeted her eyes specifically. She won—probably—but crawled onto her current island blind, bleeding, and furious.
+
+She should have died. Dragons don't recover well from sensory loss; their hunting, their magic, their entire predatory existence depends on perception. A blind dragon is a dead dragon.
+
+Findra disagreed.
+
+#### The Eyes
+
+She spent decades in her lair, experimenting. The Force leyline that runs through the northeastern Pindolins gave her the raw material. She harvested crystalline formations from the island's volcanic glass deposits—obsidian shot through with leyline energy, already half-attuned to kinetic forces.
+
+The first attempts failed. The second attempts failed worse. She destroyed miles of coastline in her rages.
+
+The eyes she eventually created aren't eyes at all. They're resonance spheres—fist-sized orbs of Force-crystallized glass that sit in her empty sockets and vibrate in response to motion. Every footfall within two miles registers. Every heartbeat. Every breath. The rhythm of waves, the settling of stone, the minute tremors of a mouse crossing rock a thousand feet below.
+
+She doesn't see. She *feels* the world move.
+
+#### What She Perceives
+
+Findra's senses are simultaneously more and less than sight:
+
+**More**: She cannot be surprised. Hidden creatures register by their heartbeats. Invisible beings still displace air. Illusions have no weight, no vibration—she ignores them entirely. In absolute darkness, in fog thick as clay, in the blinding light of noon, her perception remains unchanged.
+
+**Less**: She has no color. No fine detail. No reading. The world comes to her as a constant wash of kinetic information—shapes defined by movement, structures revealed by the vibrations they carry. Beautiful things and ugly things feel the same. She hasn't seen a sunset in three hundred years.
+
+The tradeoff has made her strange. Other dragons hoard gold for its gleam; Findra hoards *movement*. Her lair contains clockwork mechanisms salvaged from ships, pendulums that never stop swinging, waterfalls she's diverted through caverns just to feel the constant vibration. She keeps prisoners sometimes—not for torture, but because living things move in ways that dead things don't, and she finds the rhythm of heartbeats soothing.
+
+#### The Obsession
+
+Findra wants more eyes.
+
+Her current pair works. But she's convinced better crystalline formations exist—purer Force-attuned glass, more sensitive resonance structures. She's particularly interested in the Shattering Stones of Emblydium (the Nydor won't trade with her), the Chime Crystals of the Triton deep cities (too far, too wet), and persistent rumors of a titan-era construct somewhere in the Dragon's Spine that could perceive through solid stone.
+
+She sends servants—rarely willing ones—to investigate these leads. Most don't return. The ones who do bring fragments, samples, sometimes just descriptions. She evaluates each with obsessive attention, compares them to her current eyes, and usually finds them wanting.
+
+The servants who bring genuinely promising samples are rewarded. The ones who waste her time are killed. The ones who try to steal her current eyes are killed slowly.
+
+#### Hunting
+
+Findra hunts by stillness.
+
+She settles onto a rocky prominence and goes completely motionless—no breath, no heartbeat that she doesn't suppress, nothing but the slow cooling of stone. Then she waits. Her perception extends outward, feeling for anything that moves: ships passing through the strait, creatures crawling on distant beaches, the vibration patterns of schools of fish.
+
+When she identifies prey worth taking, she moves in a single explosive motion—stone to sky to strike in seconds. Victims report (the few who survived initial contact) that she appeared from nowhere, from *nothing*, a shape they'd mistaken for a rock formation suddenly revealing itself as death.
+
+She prefers prey that struggles. The vibrations of panic are more interesting than the stillness of acceptance.
+
+#### The Lair
+
+Findra's island has no name on any chart. Sailors call it Glassback for the obsidian formations that ridge its eastern shore, but no one lands there by choice.
+
+The lair itself is a complex of sea-caves and volcanic tubes, extensively modified over three centuries. The entrance is underwater at high tide—visitors must time their approach or drown. Inside, the caves branch into:
+
+**The Resonance Chamber**: A natural cavern she's enhanced with hanging crystals, taut cables, and strategic water channels. Everything in here vibrates, hums, or chimes. She spends most of her time here, surrounded by motion.
+
+**The Collection**: A smaller cave containing her crystalline samples—hundreds of fragments from across Alaria, organized by resonance properties. Some still pulse with leyline energy. Some are just pretty rocks she can't bring herself to discard.
+
+**The Pen**: Where she keeps living things. Currently empty. Previously held two sailors, a scholar who came seeking her voluntarily, and something she pulled from the Abyssal deep that she eventually killed because its heartbeat was irregular and the rhythm annoyed her.
+
+#### Dealing With Findra
+
+Findra can be bargained with, but the terms are narrow:
+
+**She wants**: Crystalline samples with unusual resonance properties. Information about titan-era perception technology. Living prey delivered to her island (she's bored of fish). News from the surface world, which she finds entertaining in small doses.
+
+**She won't trade**: Her current eyes, obviously. Information about what blinded her. Access to her lair for "research purposes."
+
+**Approach carefully**: She knows you're coming before you know you're there. Attempting stealth is pointless and insults her intelligence. Attempting overwhelming force is suicide—she's been fighting for eight hundred years and hasn't lost since the blinding. Your best approach is visible, respectful, and bearing gifts.
+
+**The eyes are a weakness**: If someone destroyed or stole her resonance spheres, she'd be blind again. Truly blind. She knows this. She has killed fourteen people who she believed were thinking about it too seriously. Whether she could create new eyes is unknown—she did it once, but she's older now, and the leyline composition has shifted.
+
+#### What She Knows
+
+Findra has lived in the Pindolins for three centuries and perceived more of them than any surface creature alive. She knows:
+
+- Where Oboros, the Cunning lairs (she can feel his movement through the water leyline)
+- Where Elebria sleeps (the constant volcanic tremors are unmistakable)
+- The location of Tidewatcher's Perch and what happens to people who sit too long
+- The migration patterns of kraken-spawn through the deep channels
+- The exact rhythm of the Force leyline's pulse, which has been changing for the past decade in ways she doesn't like
+
+She shares this information rarely and unpredictably. Sometimes she's generous with knowledge; sometimes she kills people for asking. The pattern, if there is one, relates to the resonance of the asker's heartbeat. Calm hearts get answers. Frightened hearts get eaten.
+
 ### Frostwing Island
 
 Tags: island, geography
@@ -6800,6 +7022,46 @@ Tags: state, nation
 A state within the Bellowing Mountains.
 
 TODO
+
+### Hills of Sarrow
+
+Tags: hills, geography, history
+
+Low, windswept hills stretching north of the Bellowing Mountains, marking the transition between Gondurak's territory and the broader Dragon's Spine. The Fengruk call them the Hills of Sarrow—an old word meaning grief-that-endures—and they do not settle there, though the land could support them.
+
+#### The Famine Hills
+
+Before the Sundering, before the Shrapnel Strait existed, the hills were called something else. Fengruk records are unclear on the original name; it was deliberately stricken from the stonescripts. What the records do preserve is the account of what happened when the titans fell.
+
+The World Forge in Sildraz required fuel, labor, and food in quantities that a small dwarven population couldn't provide alone. During the titan era, thousands of workers from other races—humans, halflings, goblinkin, others now forgotten—lived in settlements throughout what are now the Hills of Sarrow, farming the valleys and herding the slopes to feed the forge-workers. The titans organized this system and, in their way, protected it.
+
+When Vorukar fell and the other titans retreated, withdrew, or died, the forge-system collapsed. The Fengruk, never numerous, couldn't maintain the scale of operations the titans had demanded. They retreated to the mountain cities. The support settlements in the hills were abandoned.
+
+What followed was slow starvation. The support populations had been organized around the forge economy—they didn't know how to survive without it. Refugees fled north toward the Dalizi highlands, but the journey was long and the hills offered little sustenance. Thousands died where they walked. The Fengruk, struggling to keep their own cities alive, offered what aid they could. It wasn't enough.
+
+The Fengruk remember this as their great shame. They'd benefited from the titan system; they'd failed those who'd served alongside them when it ended. The name "Sarrow" is their penance—a reminder carved into every map that something unforgivable happened here.
+
+#### The Boneyards
+
+Mass graves dot the hills, most unmarked, some maintained by Fengruk priests who make pilgrimage from Gondurak. The largest concentration lies along the old road to the Dalizi—a route the refugees followed until they couldn't walk anymore. Fengruk tradition forbids disturbing these sites, but enforcement is difficult across such a wide area.
+
+Grave robbers work the hills occasionally, seeking whatever valuables the dead were carrying when they collapsed. They face spiritual rather than legal consequences—the Fengruk consider the hills cursed, and superstition holds that anything taken from the boneyards brings misfortune. Whether this is actual supernatural effect or simply bad luck finding people who make poor decisions is debated.
+
+Undead are rare but not unknown. The concentration of death, the lingering grief, and the proximity to whatever Force energies still pulse beneath the Shrapnel Strait occasionally animate corpses or spawn spectral manifestations. Fengruk patrols from the northern settlements deal with these when reported, though "dealing with" often means containment rather than destruction. The dead, they say, have suffered enough.
+
+#### The Shirik River
+
+The Shirik River rises in the eastern Hills of Sarrow, fed by snowmelt from the Bellowing Mountains. It flows northeast toward territories beyond Gondurak's borders, eventually reaching the sea through lands the Fengruk don't control.
+
+The river is named for Shirik, a Fengruk priestess who walked the hills for forty years after the famine, recording the locations of the dead and performing funeral rites for those she found. Her journals, preserved in Sildraz, contain the most complete account of the disaster's scope. The river she followed during her wanderings took her name after her death.
+
+#### Modern Use
+
+The hills remain largely empty. A few herding families run goats through the western slopes, avoiding the known gravesites. Travelers crossing between Gondurak and the north pass through quickly, camping in designated safe zones that Fengruk patrols maintain. Trade caravans prefer the longer route through the mountain passes rather than risk the hills' reputation.
+
+Occasionally, scholars or treasure hunters petition Gondurak for permission to excavate specific sites—usually seeking artifacts from the titan-era support settlements rather than the later refugees. The Fengruk typically refuse, though exceptions have been made for projects with clear historical value and appropriate ritual observance.
+
+The hills are not forbidden, exactly. They're simply sad. And the Fengruk prefer to let them grieve in peace.
 
 ### Hurly Hills
 
@@ -6849,9 +7111,27 @@ Caves home to the elven oracle of Midnir.
 
 Tags: mountains, geography
 
-Peaks in the Dragon's Spine Coast.
+The westernmost mountains overlooking the Shrapnel Strait, named in an old Vaelish dialect for their commanding views of the sea. The Miramar Peaks lack the mineral wealth of the Silver Slopes to the east or the forges of the Bellowing Mountains, but they control something equally valuable: sight lines.
 
-TODO
+#### The Watchposts
+
+From the highest Miramar summits, observers can see weather systems approaching from the southern ocean, ship movements throughout the western strait, and smoke signals from as far as the Dalizi highlands to the north. Before the fall of Vael, the kingdom maintained a chain of signal towers along the Miramar ridge, capable of relaying messages across hundreds of miles in under an hour.
+
+Most of those towers are ruins now. Kanzekill's rages have knocked down what five centuries of weather didn't, and the surface kingdoms lack the resources—or the desire to attract attention—to rebuild them. But the foundations remain, and a few of the lower towers still function as informal waypoints for travelers crossing the western Dragon's Spine.
+
+The village of Kanzekill, perched in the eastern Miramar foothills, maintains the last operational signal tower. They use it primarily to warn neighboring settlements when the dragon is hunting, though the system has degraded to simple fire signals rather than the complex flag codes the Vaelish once employed.
+
+#### The Slickrun Headwaters
+
+The Slickrun originates high in the Miramar Peaks, fed by glacial melt from the permanent snowfields near the summits. The upper river is too steep and rocky for navigation, but the meltwater pools in several alpine lakes before beginning its descent to the strait. These lakes—cold, clear, and largely inaccessible—support isolated communities of herders and trappers who trade with the lowlands only a few times per year.
+
+The largest of these lakes, Mirror Tarn, sits in a natural amphitheater at about eight thousand feet. Local tradition holds that the tarn's surface can show glimpses of distant places under the right conditions—a claim that has attracted occasional visits from scholars interested in scrying magic. None have documented verifiable results, but the legend persists.
+
+#### Crossing the Miramar
+
+Two viable passes cut through the Miramar range. The Slickrun Gap follows the river valley down to the strait coast, requiring no climbing but considerable care on the polished stone. The High Shoulder crosses the ridge at about six thousand feet, offering a faster route but demanding real mountaineering skill.
+
+Neither route is safe during Kanzekill's active hunting periods. The dragon uses the Miramar thermals for altitude, and she's been known to snatch travelers from exposed positions. Locals time their crossings around her patterns, watching for the warning signals from the towers that still function.
 
 ### Misery Bay
 
@@ -6939,11 +7219,51 @@ TODO
 
 ### Pale Peaks
 
-Tags: mountains, geography
+Tags: mountains, geography, frontier
 
-Peaks in the Dragon's Spine Coast.
+The southernmost mountains of the Dragon's Spine, rising beyond the Shrapnel Strait in a wall of ice-sheathed stone. The Pale Peaks mark the edge of the known world in this region—beyond them lies only the southern polar waste, a frozen expanse that no expedition has successfully crossed. The Fengruk of Azanfrain watch these mountains constantly, because what lives in them occasionally decides to come north.
 
-TODO
+#### The Color of Death
+
+The peaks earned their name from the quality of light that reflects off their ice-fields. The glaciers here are ancient, compressed over millennia into ice so dense it absorbs most color, reflecting back only a cold, gray-white pallor. Even in full sunlight, the Pale Peaks look drained, as if something has leached the warmth from the stone itself.
+
+Fengruk geologists attribute this to the ice composition—high mineral content creates optical effects unlike normal glaciers. Local superstition offers a different explanation: the peaks are pale because they're dead. Whatever vital force animates the rest of the world doesn't reach this far south. The mountains are corpses, and corpses don't hold color.
+
+#### The Frozen Frontier
+
+The Pale Peaks are technically traversable during summer months, when the ice retreats enough to expose passes through the range. Explorers have documented routes leading south, mapped the near glaciers, and catalogued the wildlife—mostly arctic-adapted predators and the herds of ice-dwelling ungulates they hunt.
+
+No one has returned from attempting to cross the polar waste beyond. Expeditions that venture more than a hundred miles south of the peaks simply vanish. The Fengruk stopped sending exploratory parties three centuries ago after losing four in succession. They've concluded that whatever lies beyond the Pale Peaks doesn't want to be found.
+
+#### The Threats
+
+Azanfrain exists because the Pale Peaks occasionally disgorge creatures that don't belong in the warmer north. The Fengruk classify these threats into two broad categories:
+
+**Frostwalkers** are humanoid figures of animated ice and frozen flesh—not undead in the traditional sense, but not alive either. They appear during deep winter, crossing the frozen strait in groups of three to twelve, and seem drawn toward heat sources. A frostwalker that reaches a settlement will attempt to extinguish every fire, kill every warm-blooded creature, and freeze every building before moving on to the next target. They don't communicate, don't negotiate, and don't retreat.
+
+The Fengruk believe frostwalkers are corpses animated by the polar cold itself—bodies of explorers and animals that died in the southern waste, somehow preserved and mobilized by whatever force rules there. This theory is unproven but widely accepted.
+
+**Ice wyrms** are serpentine creatures ranging from twenty to over a hundred feet in length, capable of swimming through ice as easily as fish swim through water. They're not dragons—they have no wings, no breath weapons, no apparent intelligence—but they're large enough and dangerous enough that the distinction matters little when one surfaces beneath a village.
+
+Ice wyrms hunt by vibration, targeting the movement of feet on frozen ground. They surface, strike, and submerge in seconds. Azanfrain's fortifications include vibration-dampening floors and specialized harpoons designed to anchor in ice-wyrm hide before the creature can retreat.
+
+#### What Killed Vorukar
+
+Fengruk mythology holds that the titan Vorukar fell fighting something that emerged from the Pale Peaks during an ancient winter—something far larger and more terrible than the frostwalkers and ice wyrms that occasionally trouble the modern era. The stonescripts don't name this enemy; they describe it only as "the Cold That Hungers."
+
+Whether this entity still exists, whether it's connected to the ongoing threats from the peaks, and whether the Sundering somehow wounded or contained it—these questions have occupied Fengruk scholars for millennia. The priests of Azanfrain maintain vigil partly in case the answer is yes. They watch for signs of something worse than frostwalkers. They hope they never see them.
+
+#### The Ice Bridge
+
+During the coldest winters, the Shrapnel Strait freezes solid enough to walk on. This creates a temporary land bridge between the Pale Peaks and the rest of the Dragon's Spine—a bridge that frostwalkers and occasionally ice wyrms use to migrate north.
+
+Azanfrain's garrison doubles during freeze periods, and the fortress maintains stocks of alchemical fire specifically for breaking ice bridges before they fully form. The goal is to maintain enough open water that creatures from the peaks can't simply walk north. This works most years. Some years, the cold comes too fast.
+
+#### The Bleached Ruins
+
+Several structures dot the northern slopes of the Pale Peaks—walls, foundations, the remains of towers. They're clearly artificial, clearly ancient, and clearly built by something other than Fengruk. The stonework is too large, the architecture too alien. The structures are thoroughly frozen, covered in permanent ice that no summer thaw has ever removed.
+
+The Fengruk don't know who built them or why. They don't investigate. Some doors, they say, are better left frozen shut.
 
 ### Pelera
 
@@ -6955,11 +7275,110 @@ TODO
 
 ### Pindolin Islands
 
-Tags: island, geography
+Tags: island, geography, pindolin-islands
 
-An island chain off the Dragon's Spine Coast.
+A sprawling archipelago stretching roughly 800 miles east-to-west and 500 miles north-to-south off the Dragon's Spine Coast, where the mountain range fragments into the sea and eventually dissolves into the Abyssal Ocean. The Pindolins are cold, misty, dragon-haunted, and almost entirely uninhabited by anything that wants to stay that way.
 
-TODO
+#### Geography
+
+The islands are the drowned peaks of the Dragon's Spine—the same volcanic mountain range that dominates southern Aboyinzu, here broken apart by ancient seismic activity and scattered across hundreds of miles of ocean. Individual islands range from massive (some over a hundred miles long) to barely-rocks poking above the waves.
+
+**The Western Pindolins**: Larger islands, closer to the mainland, connected by relatively navigable straits. This is where the few human settlements attempted to establish themselves before the dragons made that impractical.
+
+**The Central Pindolins**: The densest cluster, a maze of channels, hidden coves, and fog-shrouded passages. Three leylines converge here—Water, Force, and the combined Earth-Fire line that runs south. Navigation is treacherous even without the dragons.
+
+**The Eastern Pindolins (Nazish)**: The far reaches, where islands become sparse and the Abyssal shelf drops away into true oceanic depth. Local sailors call this region "Nazish"—an old word meaning roughly "where the map ends." Few return from deep exploration here.
+
+#### Climate
+
+Cold and wet. The Pindolins sit in a permanent collision zone between the warm Abyssal currents and the cold air masses that sweep down from the Dragon's Spine. The result is fog—thick, persistent fog that can reduce visibility to arm's length for days at a time.
+
+The fog isn't always natural. Near leyline convergences, it thickens into something almost solid, resistant to wind, occasionally dense enough to suffocate. Locals call these patches "choke-banks" and navigate around them by sound and instinct. Visitors blunder in and sometimes don't blunder out.
+
+Rain is constant but rarely heavy—a perpetual drizzle that soaks everything without the drama of actual storms. When real storms do hit, they're violent enough to reshape coastlines. The islands are riddled with sea-caves carved by millennia of wave action.
+
+#### The Three Dragons
+
+The Pindolins are claimed by three dragons who mostly ignore each other's existence:
+
+**Findra, the Glassy Eyed** holds the northeastern islands, near where the Force leyline runs strongest. A blind dragon who sees through crystalline resonance spheres, perceiving motion and vibration rather than light. She's been here three centuries and considers the region her laboratory for sensory experimentation.
+
+**Oboros, the Cunning** lairs in the central islands along the Water leyline. A blue-scaled dragon associated with currents, depths, and the manipulation of liquid. He's the oldest of the three, the most patient, and the most likely to bargain rather than attack—though his bargains tend to favor him significantly.
+
+**Elebria** claims the southwestern islands where the Earth and Fire leylines intersect—a region of volcanic activity, thermal vents, and lava that occasionally reaches the surface. She's a lava dragon, her scales shifting between black stone and molten orange depending on her temperature. The most territorial of the three; entering her claimed waters is effectively suicide.
+
+The dragons have established an informal truce through mutual disinterest. Their territories don't overlap meaningfully, their hunting grounds are distinct, and none of them wants what the others have. This could change if circumstances shifted—a new dragon arriving, a leyline moving, or external pressure forcing cooperation or conflict.
+
+#### The Leylines
+
+Three elemental leylines cross the Pindolins:
+
+**The Force Leyline** enters from the Dragon's Spine mainland and runs through the northeastern islands before dissipating into the Abyssal Ocean. Effects include gravitational anomalies (objects weighing more or less than they should), kinetic storage (things that should fall staying suspended), and occasional spontaneous acceleration of loose objects.
+
+**The Water Leyline** runs roughly north-south through the central islands. Effects include current manipulation (water moving against wind and tide), temperature instability (freezing patches in warm water, boiling spots in cold), and the enhancement of water-based magic. Oboros has learned to ride this leyline like a highway.
+
+**The Earth-Fire Convergence** enters from the south and intensifies as the two leylines approach intersection in Elebria's territory. Effects include volcanic activity, thermal vents, occasional lava flows, and the creation of obsite—a glass-like volcanic stone that holds heat indefinitely.
+
+Where leylines cross or approach each other, effects compound unpredictably. The central Pindolins contain at least three major convergence zones, all of which are considered impassable by sane navigators.
+
+#### Creatures
+
+The Pindolins host an ecosystem adapted to cold, fog, and magical instability:
+
+**Fog-Stalkers**: Colonial organisms that exist as distributed awareness through fog banks. They're not intelligent individually, but a sufficiently large fog-stalker colony can coordinate hunting behavior across miles of mist. Prey enters the fog; the fog notices; tendrils of denser vapor guide the prey toward the colony's digestive core. Most victims never see what kills them.
+
+**Kraken-Spawn**: The Abyssal Ocean hosts kraken-matriarchs in its deepest trenches. Their offspring—smaller, stupider, but still building-sized—drift into Pindolin waters following warm currents. A kraken-spawn can capsize a ship by accident; they can destroy one deliberately when hungry or territorial.
+
+**Thermoclaws**: Crustaceans adapted to the volcanic southern islands, ranging from crab-sized to horse-sized. Their shells incorporate obsite, retaining heat from thermal vents. A large thermoclaw can crack steel with its pincers and survives being submerged in freezing water by simply radiating stored heat until the water around it boils.
+
+**Glass Eels**: Found near Force leyline concentrations, these transparent eels are effectively invisible in water. They hunt by kinetic sense, detecting the vibrations of swimming prey. A school can strip a whale to bones in minutes. Findra considers them pests and kills them when she notices them, which isn't often enough.
+
+**Silt-Singers**: Bottom-dwelling creatures in the deeper channels that produce low-frequency sounds as part of their mating displays. The sounds travel through water and stone, sometimes resonating with leyline energies to produce hallucinations in surface-dwellers. Sailors who hear silt-singers for too long report seeing phantom ships, lost loved ones, or "the thing that waits below."
+
+#### Why Anyone Comes Here
+
+The Pindolins are not a destination. They're a place people end up through desperation, greed, or terrible navigation:
+
+**Hiding**: The islands are effectively lawless and nearly impossible to search systematically. Fugitives, pirates, and people fleeing worse fates than dragons occasionally establish temporary camps. Most don't survive long, but some do, and the Pindolins don't ask questions.
+
+**Hunting**: The three dragons represent enormous bounties to anyone capable of claiming them. Dragon-hunters occasionally mount expeditions, usually funded by mainland lords with more money than sense. Success rate is approximately zero.
+
+**Harvesting**: The islands produce rare materials unavailable anywhere else. Force-crystallized obsidian from Findra's territory. Obsite from the volcanic south. Kraken-bone from spawn that wash up dead. Fog-stalker cores, if you can kill one without being digested. The profit margins are extraordinary for anyone who survives.
+
+**Consulting Korvo**: Tidewatcher's Perch holds a man with perfect navigational knowledge of every sea in Alaria. Reaching him requires surviving the journey. Getting information requires resisting the urge to sit down.
+
+#### Navigation
+
+The Pindolins are not charted in any meaningful sense. The fog makes visual navigation impossible for days at a time. Currents shift with leyline fluctuations. Islands occasionally sink or rise as volcanic activity reshapes the seabed.
+
+Successful navigation requires:
+- **Local knowledge**: Guides who've survived the islands long enough to learn their patterns (rare and expensive)
+- **Magical assistance**: Water mages can read currents; Force mages can sense the leyline; anyone with fog-penetrating senses has an advantage
+- **Luck**: Honestly, mostly luck
+
+The safest approach is to skirt the edges—the western islands are survivable with caution. Going deep into the archipelago is a commitment. Going into Nazish is a death wish unless you have a very specific reason and the means to survive it.
+
+#### Nazish (The Eastern Reaches)
+
+The far eastern Pindolins, where islands become scattered and the Abyssal shelf drops away into true oceanic depth. Local sailors named it "Nazish"—an archaic term for the edge of the known world.
+
+Nazish is where the Pindolins stop pretending to be survivable:
+
+**The Abyssal Shelf**: The ocean floor drops from hundreds of feet to thousands over the span of a few miles. Things live in that depth that don't come up to the shallows. When they do come up, it's rarely good.
+
+**The Fog Wall**: A permanent bank of fog marks the approximate boundary of Nazish, possibly a fog-stalker super-colony or a leyline effect no one has successfully studied. Ships that enter don't always emerge.
+
+**The Empty Islands**: Nazish contains islands. Some are large enough to support ecosystems. All of them are uninhabited by anything visible. Expeditions that land report finding signs of habitation—fire pits, cleared paths, structures—but never occupants. Where the builders went is unclear. That they left quickly is obvious.
+
+#### History
+
+The Pindolins have been continuously dangerous for as long as anyone has tried to settle them:
+
+**The Vaelish Expansion** (~600 years ago): When Vael controlled the Dragon's Spine passes, they attempted to establish trading posts in the western Pindolins. Most failed within a decade. The survivors fled when Kanzekill began her rampage on the mainland.
+
+**The Dragon Settlement** (~300-500 years ago): Elebria was first, claiming the volcanic south. Oboros arrived perhaps a century later, taking the central waters. Findra is the newest, establishing herself after whatever blinded her drove her to these shores.
+
+**The Present**: The Pindolins exist in a stable state of danger. No nations claim them. No powers contest them. The dragons ignore each other, the creatures hunt what they can, and the islands wait for anyone foolish enough to visit.
 
 ### Pinnacles of Rosensaw
 
@@ -6968,6 +7387,44 @@ Tags: mountains, geography
 A mountain range in the Dragon's Spine Coast.
 
 TODO
+
+### Rivers of the Shrapnel Coast
+
+Tags: rivers, geography
+
+Three major rivers drain the central Dragon's Spine into the Shrapnel Strait, each with distinct character shaped by the terrain it traverses. The Fengruk name them collectively the "Three Veins of Vorukar," claiming they follow channels carved by the titan's blood as it poured from the Sundering wound.
+
+#### Slickrun
+
+The westernmost river descends from the Miramar Peaks through a channel of metamorphic stone polished to an almost glassy smoothness by millennia of meltwater. The Slickrun earns its name from this stone—and from the speed of the current, which moves far faster than its placid surface suggests.
+
+Travelers who attempt to ford the Slickrun often don't survive the experience. The smooth riverbed offers no purchase, and what looks like knee-deep water can sweep a person off their feet and carry them half a mile before depositing them against a rock or into the strait. Local guides mark safe crossing points with cairns, but the markers shift seasonally as the river's channel migrates.
+
+The Slickrun's mouth opens into a relatively calm bay on the western edge of the strait, where the fishing village of Polished Stone has grown up around the pilot trade. The villagers have developed a unique method of "skating" the river using flat-bottomed sledges, riding the current down from the mountains in a fraction of the time it takes to climb back up.
+
+#### Sunbeam River
+
+The central river flows down from the Silver Slopes, and its name requires no explanation to anyone who sees it at midday. The riverbed is dense with mica, pyrite, and actual silver flake—runoff from the mining operations around Sweivyon. When the sun hits the water at the right angle, the entire river blazes with reflected light, visible for miles.
+
+Sweivyon has built its economy partly on controlling Sunbeam River access. The city-state operates a series of sluice gates and settling pools upstream, capturing the heavier metals before they wash out to sea. What escapes the sluices supports a secondary economy of "glitter-panners"—independent prospectors who work the lower river and strait-mouth, recovering what Sweivyon's filters miss.
+
+The Sunbeam is navigable for shallow-draft vessels up to about fifteen miles inland, where rapids begin. A portage road connects the navigable lower river to Sweivyon proper, facilitating the silver trade. The river-mouth settlement of Glintwater serves as Sweivyon's de facto port.
+
+#### River of Blades
+
+The easternmost river has earned its grim name honestly. It flows through the Glass Fields—a stretch of volcanic obsidian that the Sundering exposed and subsequent eruptions expanded. The riverbed is littered with natural glass shards ranging from pebble-sized splinters to blade-length fragments, all edges keen enough to slice leather.
+
+No one boats the River of Blades. The glass would shred any hull within minutes. Fording is possible only at specific points where the Fengruk have laid down iron grates, and even then, a fall means cuts that take weeks to fully heal. The river runs red after storms, not from mineral content but from the blood of animals foolish enough to drink from its banks.
+
+Despite—or because of—its dangers, the River of Blades attracts a specific clientele. Weaponsmiths prize volcanic obsidian for certain ritual blades, and the Glass Fields produce some of the finest natural specimens in Alaria. Collection expeditions from Durkarn make the journey several times a year, harvesting glass under the protection of heavily armored handlers. The obsidian trade is small but lucrative.
+
+The river empties into the strait through a delta of black sand—pulverized glass worn down by the current. The delta settlement, if it can be called that, is a seasonal camp of obsidian traders and the few pilots willing to navigate the eastern strait channels. They call the place Blackmouth, and it has no permanent structures.
+
+#### The Confluence Myth
+
+Local legend holds that the three rivers once met underground before emerging as a single waterway, and that the Sundering split them apart along with the mountain. Some Fengruk scholars believe the titans built something at the original confluence point—a structure now buried beneath the strait or hidden in the subterranean channels that still connect the river systems.
+
+Expeditions to find this theoretical "Confluence Hall" have produced nothing conclusive, though cave systems beneath all three river valleys do show signs of ancient worked stone. Whether this represents titan construction or merely Fengruk ancestors remains disputed.
 
 ### Shargon Hills
 
@@ -6985,27 +7442,85 @@ Home to mermais, living in subterranean, icy lakes in the mountains. Traveled up
 
 ### Shrapnel Strait
 
-Tags: strait, geography
+Tags: strait, geography, force-leyline
 
-A strait in the Dragon's Spine Coast.
+A violent gash of water separating the central Dragon's Spine from the Pale Peaks to the south. The strait earned its name from the thousands of rock fragments—some the size of houses, others large enough to support small fishing villages—that litter the waterway like debris from an explosion. Which, according to the Fengruk, is exactly what they are.
 
-TODO
+#### The Sundering
+
+The Fengruk of Gondurak maintain records dating to the Second Eon, when titans still walked the mountains. According to their stonescribes, the Shrapnel Strait didn't exist until the titan Vorukar—a Force-attuned colossus who helped build the World Forge—fell in battle against something that came from the Pale Peaks. The killing blow triggered a catastrophic release of Force energy that shattered the mountain range, punching a wound through the Dragon's Spine that the sea rushed in to fill.
+
+Whether this account is literally true or Fengruk mythology dressed as history, the physical evidence supports a violent origin. The coastline is impossibly jagged, as if the land was broken rather than eroded. The rock fragments throughout the strait show stress fractures consistent with explosive force. And the Force leyline that runs through this region passes directly beneath the deepest point of the strait—a coincidence that seems too precise to be accidental.
+
+#### Navigation
+
+Sailors call the Shrapnel Strait "the Splinter Sea" and approach it with justified caution. The scattered rock formations create a maze of channels, some navigable, many not, and the configuration shifts with storms and tides. Experienced pilots can thread the main passages, but taking a wrong turn can leave a ship trapped in a dead-end cove or gutted on submerged stone teeth.
+
+Three rivers empty into the strait from the north: the Slickrun in the west, the Sunbeam River in the center, and the River of Blades in the east. Each river mouth has developed its own small harbor culture—fisherfolk and traders who know the local channels and guide vessels through for a fee.
+
+The strait freezes in deep winter, creating a temporary land bridge to the Pale Peaks. The Fengruk of Azanfrain watch these freeze-periods carefully. Things cross when the ice is thick enough.
+
+#### The Splinter Villages
+
+Dozens of inhabited rock formations dot the strait, ranging from single-family fishing platforms to settlements of several hundred. These "splinter villages" are technically independent, owing allegiance to no state, though Sweivyon in the Silver Slopes claims loose authority over the northern clusters. The villagers are insular, superstitious, and excellent swimmers—they raise children who can navigate the underwater maze of submerged rock as easily as surface channels.
+
+The largest splinter village, Vorukar's Tooth, sits on a pillar of stone that rises nearly two hundred feet above the waterline. Local tradition holds that this was once the titan's actual tooth, expelled during the Sundering. The stone is unusually dense and resonates faintly when struck—properties the villagers have learned to exploit, using the tooth as a fog-bell that can be heard for miles.
+
+#### What Lies Below
+
+The deepest point of the strait—called the Sundering Hole by pilots, the Wound by the Fengruk—drops over a thousand feet straight down. No one has successfully mapped it. Divers who descend past three hundred feet report hearing sounds: rhythmic pulses that might be water currents or might be something breathing. The Force leyline passes directly through this depth.
+
+The Fengruk believe Vorukar's remains lie at the bottom. They don't mount expeditions to find out. Some things, they say, are better left buried.
 
 ### Silver Slopes
 
-Tags: mountains, geography
+Tags: mountains, geography, mining
 
-Mountain slopes in the Dragon's Spine Coast, home to the city-state of Sweivyon.
+A mineral-rich stretch of the central Dragon's Spine where silver veins run so thick that exposed rock faces gleam in sunlight. The Silver Slopes have attracted miners for as long as anyone can remember, and the city-state of Sweivyon has grown wealthy controlling access to the richest deposits.
 
-TODO
+#### The Silver Seams
+
+The geology here differs from the surrounding Dragon's Spine. Whatever forces created the Shrapnel Strait—the Fengruk blame the titan Vorukar's death—also heaved deep mineral deposits to the surface. Silver is the most abundant, but the slopes also yield lead, zinc, and occasional pockets of raw gemstones. The Sunbeam River carries so much mineral runoff that its bed glitters.
+
+Mining operations dot the slopes at various elevations, from small family claims worked with picks and baskets to industrial excavations employing hundreds. Sweivyon regulates the larger operations through a licensing system, collecting fees and mandating safety standards that are routinely ignored. Smaller claims operate in a legal gray zone—technically requiring permits, practically too numerous and remote to police.
+
+The highest-quality silver comes from the deep mines near Sweivyon itself, where the veins run pure enough to require minimal refining. This "slope silver" commands premium prices in markets across Alaria, prized by jewelers and alchemists for its purity. The city-state guards its reputation jealously, assaying all exports and branding approved ingots with the Sweivyon stamp.
+
+#### Working the Slopes
+
+Mining the Silver Slopes is dangerous work. The rock is unstable—riddled with the same fractures that characterize the Shrapnel Strait coastline—and cave-ins claim lives every season. The altitude brings harsh weather, and the remoter claims can be cut off by snow for months at a time. Bandits prey on ore shipments, and the occasional monster wanders up from the deeper tunnels.
+
+Despite this, the slopes attract a steady stream of fortune-seekers. A good strike can set a family up for generations. A mediocre strike can still fund a comfortable retirement. Even a poor strike usually produces enough to pay off debts and try again somewhere else. The mathematics of hope keeps the camps populated.
+
+The mining camps have developed their own rough culture: claims courts that settle disputes, mutual aid societies that care for injured miners, informal militias that patrol the roads. Sweivyon provides oversight in theory, but the city-state's authority diminishes rapidly with distance from its walls.
+
+#### The Sunbeam Catchment
+
+Sweivyon has constructed an elaborate system of sluices and settling pools along the upper Sunbeam River, capturing mineral wealth that would otherwise wash down to the strait. The catchment system employs hundreds—dredgers, sluice operators, refiners, guards—and produces a significant fraction of the city-state's income.
+
+The catchment also serves a political function. By controlling what reaches the lower river, Sweivyon limits the opportunities for independent prospectors to profit from runoff. This has created tension with the glitter-panners who work the river mouth, and occasional conflicts over water rights have escalated to violence.
+
+#### Relation to Neighbors
+
+The Silver Slopes sit between the Miramar Peaks to the west and the Bellowing Mountains to the east. Sweivyon maintains cordial trade relations with Gondurak—Fengruk metalwork complements slope silver nicely—while keeping a wary distance from the Miramar region and its dragon problems. Kanzekill has never shown interest in the slopes' mineral wealth, but Sweivyon's leaders prefer not to test that indifference.
 
 ### Sweivyon
 
-Tags: city, state, nation
+Tags: city-state, settlement, silver-slopes
 
-A city-state in the Silver Slopes.
+A city-state of approximately twelve thousand occupying a defensible shelf between two peaks in the Silver Slopes. The city controls the region's richest silver deposits and dominates the precious metal trade throughout the southern Dragon's Spine.
 
-TODO
+#### Location
+
+Sweivyon sits at roughly 6,500 feet elevation, accessible only through a handful of mountain passes that ice over completely during winter months. The Sunbeam River originates in glaciers above the city and flows south toward the Shrapnel Strait, carrying mineral runoff that the city captures through an elaborate catchment system.
+
+The city's de facto port is Glintwater, a smaller settlement at the Sunbeam's mouth where the river becomes navigable. A portage road connects the two.
+
+#### Character
+
+Sweivyon smells like money and sulfur—the refineries run constantly, and the wealth shows in silver-inlaid architecture, ostentatious markets, and the calculating demeanor of a population raised to think in terms of investments and returns.
+
+For full political, economic, and cultural details, see the city-state entry: [Sweivyon](../../nations_and_powers/city_states/Sweivyon.md)
 
 ### The Glog
 
@@ -7033,11 +7548,93 @@ TODO
 
 ### Tidewatcher's Perch
 
-Tags: poi
+Tags: poi, pindolin-islands, curse
 
-A point of interest in the Pindolin Islands.
+A wooden platform on the highest point of an unnamed island in the central Pindolins, where a man has been watching the tides for eleven hundred years because he won a bet and can't stop.
 
-TODO
+#### The Wager
+
+His name was Korvo Maelish, and he was a navigator. A good one—possibly the best of his generation, definitely the most arrogant. He could read currents, predict storms, and calculate tidal patterns with uncanny accuracy. He bragged about it constantly.
+
+Something heard him.
+
+The stories don't agree on what. Some say a kraken-matriarch surfaced alongside his ship and spoke in a voice like grinding coral. Others claim it was something older, something that lived in the tidal patterns themselves. One account says it was just a stranger in a port tavern, a woman with eyes like still water who smiled when Korvo boasted.
+
+Whatever it was, it made him an offer: predict the tides correctly for one hundred years, and receive a navigator's perfect knowledge—every current, every storm, every safe passage in every sea. Fail once, and belong to the deep forever.
+
+Korvo accepted. He was that certain.
+
+#### The Victory
+
+He won.
+
+For one hundred years, Korvo sat on this island and predicted every tide. High tide, low tide, neap tide, spring tide—the exact minute, the exact height, accounting for storms and earthquakes and the gravitational pull of both moons. He built the platform himself in the first year. He carved tally marks into the wood. He watched.
+
+By year thirty, his crew had abandoned him. By year fifty, everyone who knew his name was dead. By year eighty, he'd stopped speaking aloud because there was no one to hear. But he kept predicting. He kept *winning*.
+
+On the final day of the hundredth year, the tide came in exactly as he'd said it would: seventeen minutes past the fourth hour, three feet above the median line, carrying the corpse of a whale that had died somewhere in the Abyssal current. The bet was over. He'd won.
+
+The prize never came.
+
+#### The Terms
+
+Korvo had been so focused on winning that he hadn't considered what "navigator's perfect knowledge" actually meant. He'd assumed it was something that would be *given* to him—a gift, a blessing, knowledge poured into his mind.
+
+Instead, he discovered he couldn't stop.
+
+The knowledge was there. He could feel it—every current in every sea, every tide that would ever rise or fall. But accessing it required *watching*. The moment he looked away from the water, the moment he stopped predicting, the knowledge began to fade. And the terms of the bet hadn't included an ending clause.
+
+He'd won the right to perfect knowledge. He hadn't won the right to stop having it.
+
+#### The Perch Today
+
+Korvo Maelish is still there.
+
+He sits on a wooden platform that shouldn't have survived a century of salt air, let alone eleven of them. The wood is gray and smooth, worn by wind rather than rot. The chair is simple—he built it himself, and he's rebuilt it several times when storms took it, always in the same design because changing anything feels wrong now.
+
+He doesn't eat. He doesn't sleep. He doesn't die. These things require looking away from the water, and he can't look away from the water.
+
+Visitors describe him as thin but not skeletal, weathered but not decayed. His eyes are open and focused on the horizon. His lips move constantly, mouthing numbers and predictions in a language that stopped being spoken eight centuries ago. If you get close enough, you can hear him: *"Seven minutes, two feet four inches, eastward current at four knots carrying debris from the Shallows..."*
+
+He's aware of visitors. Sometimes.
+
+#### Interaction
+
+Approaching the Perch is safe. Korvo doesn't attack, doesn't threaten, doesn't even seem to notice most people. He's watching the tides.
+
+Speaking to him occasionally produces responses. He'll answer questions about navigation, currents, and safe passages with perfect accuracy—but only if you can get his attention between predictions, which means waiting for a moment of calm water (rare in the Pindolins) and speaking quickly before the next tide shift captures him.
+
+**The danger is sitting down.**
+
+The chair holds one person. Korvo sits in it. But sometimes, when visitors come, he shifts slightly—just enough to make room. An invitation, or an accident, or a reflex he doesn't control anymore.
+
+People who sit with him start watching the tides. Just for a moment, they tell themselves. Just to see what he sees. The knowledge is *there*, right there, every current in every sea—
+
+Three visitors have sat down in recorded history. None have stood up. They're part of the Perch now, still watching, still predicting, pressed against Korvo on a chair that somehow has room for all of them.
+
+#### What He Knows
+
+Korvo Maelish has perfect navigational knowledge of every sea in Alaria. He knows:
+
+- Safe passages through the Abyssal currents that no living navigator has discovered
+- The movement patterns of every kraken-matriarch in the southern oceans
+- Where the Seafloor Giants walk and when they surface
+- Exactly when and where the next major storm will strike any coastline
+- The location of every ship that's sunk in Pindolin waters for the past eleven centuries
+
+Getting this information out of him is the challenge. He can't write it down—that would require looking away. He can barely speak it—the predictions take priority. The most successful method involves asking very specific questions during the brief calm periods and transcribing his mumbled answers quickly.
+
+Some navigators make the journey specifically to consult him. Most don't survive the Pindolins long enough to reach the Perch. The ones who do, and who resist the urge to sit, sometimes come away with knowledge worth the trip.
+
+#### The Question No One Asks
+
+Whatever made the bet with Korvo is still out there. It got what it wanted—a perfect navigator, watching forever, bound to the tides it perhaps embodies or controls.
+
+But the bet had terms. Korvo won. The prize was promised.
+
+Some scholars theorize that the entity *can't* give the prize until Korvo stops watching—creating an impossible loop. Others suggest the knowledge itself was always the trap, and the entity never intended to offer anything else. A few believe Korvo could break free if he simply chose to look away, accepting the loss of knowledge he's spent eleven centuries accumulating.
+
+Korvo has never tried. He won the bet. He's not giving up now.
 
 ### Windred Bluffs
 
