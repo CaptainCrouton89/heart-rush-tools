@@ -116,9 +116,11 @@ You can breathe underwater and have a swim speed of 30 feet. You suffer no disad
 
 ### Tytheri (Blood Orc)
 
-The Tytheri are musclebound orcs with totally white skin and razor-sharp teeth, capable of smelling blood from miles away. Within their society, Tythmasters—orcs fed a diet rich in magical blood—grow to enormous size, reaching 10 feet in height as they become the leaders of their people.
+The Tytheri are musclebound orcs with bleached-white skin and razor-sharp teeth, capable of smelling blood from miles away. Their pallor comes from generations of consuming a substance they harvest from the Agony Stones—a cursed region in their territory that even other Tytheri approach with caution. The ichor they collect there is the blood of something ancient and dying, and it has transformed them over centuries.
 
-These orcs are constantly at war with the Kadroka, and their entire culture revolves around blood, combat, and the pursuit of ever-greater physical power.
+Within their society, Tythmasters—orcs fed the richest concentrations of this magical blood—grow to enormous size, reaching 10 feet in height as they become the leaders of their people. But the ichor exacts a price: long-term consumption deadens emotion until violence is the only thing that makes them feel alive.
+
+These orcs are constantly at war with neighboring Kadroka, whose dragon-king they have trapped through means they do not fully understand. Their entire culture revolves around blood, combat, and the pursuit of ever-greater physical power—a pursuit that has become an addiction with no cure.
 
 #### Aspects
 
