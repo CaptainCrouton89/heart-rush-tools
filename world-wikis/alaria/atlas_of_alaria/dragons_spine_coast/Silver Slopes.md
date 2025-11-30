@@ -2,6 +2,6 @@
 
 Tags: mountains, geography
 
-Mountain slopes in the Dragon's Spine Coast, home to the city-state of Swevyon.
+Mountain slopes in the Dragon's Spine Coast, home to the city-state of Sweivyon.
 
 TODO
