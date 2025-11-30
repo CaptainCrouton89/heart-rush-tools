@@ -89,6 +89,26 @@ When writing final entries:
 - **Terse delivery** — Understatement lands harder than overwrought prose. "The military doesn't discuss this publicly."
 - **Playable hooks** — Sections should offer something players could pull on.
 
+### Mystery Has Substance
+
+Uncertainty and mystery are welcome—but vague allusions without real answers create GM work.
+
+**The rule:** There must always be a real answer underneath. Mystery lives in how people *engage* with that answer, not in avoiding the question.
+
+**Good mystery:** "Scholars debate whether the Collapse was triggered by a failed ritual or deliberate sabotage. The Archivist faction insists it was an accident—three separate calculations went wrong simultaneously. The Truthseekers point to the timing: exactly seven days before the Empress would have signed the Treaty of Chains. Most locals just avoid the crater."
+
+There's a real answer here (the reader/GM can pick one or decide later), shown through competing perspectives that add texture.
+
+**Bad mystery:** "No one knows what caused the Collapse. Some say it was magic gone wrong. Others whisper darker theories. The truth may never be known."
+
+This is just a placeholder. It creates work—the GM has to invent the real answer anyway.
+
+**When writing mysterious elements:**
+- Decide what actually happened (or offer 2-3 concrete possibilities)
+- Show the mystery through disagreement, partial knowledge, and competing interpretations
+- Let different factions have different pieces of the truth
+- Make the uncertainty itself interesting—why don't people know? Who benefits from the confusion?
+
 ## Creative Techniques
 
 When ideas feel underdeveloped or generic, use these approaches:
@@ -148,7 +168,12 @@ Alaria has an established map—geography, coastlines, mountain ranges, and name
 - Stars are capitals, stars with a circle around them are city states
 - Dark red/brown lines are state borders
 - Purple dots are ruins, red dots are settlements
+  - City State: Circled Star
+  - Capital: Star
+  - City: Square
+  - Towns/villages: small triangles/circles
 - Settlement names are always perfectly horizontal
+- Blue dotted line are shipping lanes, red lines between settlements are roads
 
 ## Core World Systems
 
@@ -176,6 +201,12 @@ Cracks where elemental planes spill closer to the material world, forming arcs a
 - Each element has its own leyline network
 - Leyline intersections create combined/amplified effects (often dangerous)
 - **Plane names**: Yolus (Fire), Sulus (Air), Golus (Earth), Pelus (Water), Vulus (Darkness), Kunus (Light), Nilus (Void), Izzus (Time)
+
+### Astral Currents & Sky Trade
+
+Major trade system—five circular currents at ~2,000 feet altitude carry ships hanging from buoyant astral stones. Aether engines for maneuvering; docking towers for cargo exchange. Gorath/Kyagos dominate (slave trade); Adron/Tornia build ships. Western Isles excluded (northern routes impassable).
+
+See `cosmology_and_religion/alarian_planar_stack/Astral_Currents.md` for full details.
 
 ### Life, Death & The Soul
 

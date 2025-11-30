@@ -37,6 +37,22 @@ The `navigation-categories.json` file defines:
 
 Each markdown file in category subdirectories becomes a navigable page with auto-generated slugs and navigation metadata.
 
+## Key World Systems
+
+### Astral Currents & Sky Trade
+
+The sky trade is one of Alaria's most important economic systems. See `cosmology_and_religion/alarian_planar_stack/Astral_Currents.md` for complete details.
+
+**Quick reference:**
+- Five circular currents sweep across Alaria at 1,500-2,000 feet altitude
+- Ships hang from astral stones (iridescent gray, buoyant) via astral steel chains
+- Aether engines (fuel from aether weaver goblins) enable maneuvering between currents
+- Major trade powers: Gorath, Kyagos (slave trade), Adron, Tornia (shipyards)
+- Docking towers: 100-200 feet tall, charge tariffs, run like high-security airports
+- Western Isles excluded—northern routes too dangerous, so they use ocean shipping
+
+When writing about trade, economics, or travel between major powers, consider whether sky routes are relevant.
+
 ## Writing Guidelines
 
 - **Markdown Format**: Use standard markdown with clear heading hierarchy (H2 for major sections, H3 for subsections)

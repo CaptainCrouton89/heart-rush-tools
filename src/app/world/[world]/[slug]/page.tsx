@@ -22,6 +22,9 @@ async function getAvailableWorlds(): Promise<string[]> {
   }
 }
 
+// Disable dynamic params to prevent fallback for invalid slugs
+export const dynamicParams = false;
+
 // Generate static params for all world content pages
 export async function generateStaticParams() {
   const worlds = await getAvailableWorlds();

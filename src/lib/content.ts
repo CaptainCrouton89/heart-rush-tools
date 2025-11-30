@@ -85,7 +85,7 @@ export async function getAllContent(): Promise<ContentSection[]> {
 // Get navigation tree
 export async function getNavigationTree(): Promise<CategorizedNavigationNode[]> {
   try {
-    const navPath = path.join(CONTENT_DIR, 'navigation.json');
+    const navPath = path.join(CONTENT_DIR, '_navigation.json');
     const navigation = await getCachedOrLoad('navigation:tree', async () => {
       const fileContent = await fs.readFile(navPath, 'utf-8');
       return JSON.parse(fileContent) as CategorizedNavigationNode[];
@@ -360,7 +360,7 @@ export async function getAllGMContentMetadata(): Promise<ContentMetadata[]> {
 // Get GM navigation tree
 export async function getGMNavigationTree(): Promise<CategorizedNavigationNode[]> {
   try {
-    const navPath = path.join(GM_CONTENT_DIR, 'navigation.json');
+    const navPath = path.join(GM_CONTENT_DIR, '_navigation.json');
     const navigation = await getCachedOrLoad('gm-navigation:tree', async () => {
       const fileContent = await fs.readFile(navPath, 'utf-8');
       return JSON.parse(fileContent) as CategorizedNavigationNode[];
@@ -516,7 +516,7 @@ export async function getAllWorldContentMetadata(world: string): Promise<Content
 export async function getWorldNavigationTree(world: string): Promise<CategorizedNavigationNode[]> {
   try {
     const worldContentDir = path.join(process.cwd(), 'content', 'worlds', world);
-    const navPath = path.join(worldContentDir, 'navigation.json');
+    const navPath = path.join(worldContentDir, '_navigation.json');
     const navigation = await getCachedOrLoad(`world-${world}-navigation:tree`, async () => {
       const fileContent = await fs.readFile(navPath, 'utf-8');
       return JSON.parse(fileContent) as CategorizedNavigationNode[];

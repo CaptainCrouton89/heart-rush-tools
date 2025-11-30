@@ -54,7 +54,7 @@ Five other planar stacks exist beyond Alaria. Cross-planar travel is possible bu
 Commands reality through absolute speech. Requires blood sacrifice or titan-blood runes.
 
 **Two forms**:
-- **Handmagic**: Titan blood tattooed as runes on hands. Risk of death from overfilling astral thread.
+- **Handmagic**: Titan blood (or ground titan bone) tattooed as runes on hands; activated through hand articulations. Strains both astral and malstaric threads—too many runes risks snapping both threads and instant death.
 - **Ritual Magic**: Spoken Deoric combined with blood sacrifice warps reality.
 
 **Key constraint**: Daemons cannot cast directly on Celestia. They guide mortal worshippers via Psywinds to channel power across planes.
@@ -123,8 +123,9 @@ Leylines are cracks in the planes where elemental power spills much closer to th
 
 ### Magical Materials
 
-Eight significant materials with special properties:
-- Aether, Sky-stone, Songsilk, Red Gold, Twyl, Diamonds, Honygar (hardstone), Titan blood/bones
+Significant materials with special properties:
+- **Titan blood/bones**: Only materials that can hold Deoric charge. Titans' cosmic resonance with Aurus/Nydus makes them irreplaceable. Deo Esari controls ~95% of supply.
+- Aether, Sky-stone, Songsilk, Red Gold, Twyl, Diamonds, Honygar (hardstone)
 
 **See**: `magic_and_knowledge/materials/`
 

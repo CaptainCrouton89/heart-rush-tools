@@ -202,7 +202,7 @@ export async function writeCompilationOutput(
   // Generate and write categorized navigation
   const categorizedNavigation = createCategorizedNavigation(sections, categories);
   await fs.writeFile(
-    path.join(outputDir, "navigation.json"),
+    path.join(outputDir, "_navigation.json"),
     JSON.stringify(categorizedNavigation, null, 2)
   );
 
