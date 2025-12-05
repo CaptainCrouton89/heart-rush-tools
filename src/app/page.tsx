@@ -40,7 +40,7 @@ export default async function HomePage() {
             </p>
             <div className="flex flex-col items-center gap-4 mt-10">
               <Link
-                href="/heart-rush-ttrpg-overview"
+                href="/a-brief-intro"
                 className="inline-block bg-secondary text-secondary-foreground px-4 py-2 rounded-full hover:bg-secondary/90 transition-colors w-full text-center"
               >
                 Intro to Heart Rush
