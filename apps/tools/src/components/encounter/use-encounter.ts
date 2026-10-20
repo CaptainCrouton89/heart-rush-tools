@@ -2,9 +2,12 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import type { StoredMessage } from '~/encounter/schema'
 import { api, ApiError, postMessage, type EncounterDetail } from './api'
 
-/** A first message typed on the index page, handed to the split view it navigates to. */
-const pendingFirst = new Map<string, string>()
-export const setPendingFirstMessage = (id: string, text: string) => pendingFirst.set(id, text)
+/**
+ * Encounters just created on the index page, whose stored first message this page should run once it loads. The message itself
+ * is saved with the encounter; if this page is reloaded before the run starts, the message shows unanswered with "Send again".
+ */
+const startOnLoad = new Set<string>()
+export const runFirstMessageOnLoad = (id: string) => startOnLoad.add(id)
 
 const POLL_MS = 4000
 
@@ -32,6 +35,9 @@ export function useEncounter(id: string) {
   const [documentVersion, setDocumentVersion] = useState(0)
   const live = useRef(true)
   const lastDocument = useRef<string | undefined>(undefined)
+  /** GETs are numbered as they start; a response older than one already shown (or than a streamed turn) is dropped. */
+  const issued = useRef(0)
+  const shown = useRef(0)
   useEffect(() => {
     live.current = true
     return () => {
@@ -40,9 +46,11 @@ export function useEncounter(id: string) {
   }, [])
 
   const refresh = useCallback(async () => {
+    const seq = ++issued.current
     try {
       const next = await api.get(id)
-      if (!live.current) return next
+      if (!live.current || seq <= shown.current) return next
+      shown.current = seq
       const doc = JSON.stringify(next.document)
       // A document that differs from the one already shown is an update; the first load is not.
       if (lastDocument.current !== undefined && next.document && doc !== lastDocument.current) setDocumentVersion((v) => v + 1)
@@ -51,7 +59,8 @@ export function useEncounter(id: string) {
       setStatus({ kind: 'ready' })
       return next
     } catch (e) {
-      if (!live.current) return null
+      if (!live.current || seq <= shown.current) return null
+      shown.current = seq
       if (e instanceof ApiError && e.status === 404) setStatus({ kind: 'missing' })
       else if (e instanceof ApiError && e.signIn) setStatus({ kind: 'signedOut' })
       else setStatus({ kind: 'failed', message: e instanceof Error ? e.message : 'Could not load the encounter' })
@@ -72,6 +81,7 @@ export function useEncounter(id: string) {
             void refresh() // the server has stored the GM message and, on a first message, the title
           } else if (event.type === 'turn') {
             const message = event.message
+            shown.current = issued.current // a GET started before the turn arrived would show the run as still going
             setDetail((d) => d && { ...d, messages: [...withGm(d.messages, text), message], running: false })
             if (message.step.kind === 'encounter') await refresh()
           } else if (event.type === 'error') {
@@ -115,13 +125,12 @@ export function useEncounter(id: string) {
     void refresh()
   }, [id, refresh])
 
-  // First load, then the first message handed over from the index page.
+  // First load, then the run for the first message of an encounter the index page just created.
   useEffect(() => {
     void refresh().then((loaded) => {
-      const first = pendingFirst.get(id)
-      if (!first || !loaded) return
-      pendingFirst.delete(id)
-      void send(first)
+      if (!startOnLoad.delete(id) || !loaded) return
+      const first = loaded.messages.at(-1)
+      if (loaded.messages.length === 1 && first?.role === 'gm' && !loaded.running) void send(first.text)
     })
   }, [id, refresh, send])
 

@@ -13,7 +13,10 @@ export const Route = createFileRoute('/api/encounters/')({
       POST: async ({ request }) => {
         const who = await requireSession(request)
         if (!who.session) return who.response
-        return Response.json({ id: await createEncounter(who.session.userId) })
+        const body = (await request.json().catch(() => null)) as { text?: unknown } | null
+        const text = typeof body?.text === 'string' ? body.text.trim() : ''
+        if (!text) return Response.json({ error: 'Message text is required' }, { status: 400 })
+        return Response.json({ id: await createEncounter(who.session.userId, text) })
       },
     },
   },

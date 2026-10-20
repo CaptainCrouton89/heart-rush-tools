@@ -16,7 +16,8 @@ export function Composer({
   initial = '',
   sendLabel = 'Send',
 }: {
-  onSend: (text: string) => void | Promise<void>
+  /** Resolving false means the text was not sent, so it is put back. */
+  onSend: (text: string) => void | boolean | Promise<void | boolean>
   disabled?: boolean
   placeholder: string
   label: string
@@ -32,7 +33,9 @@ export function Composer({
     if (!canSend) return
     const value = text.trim()
     setText('')
-    void onSend(value)
+    void Promise.resolve(onSend(value)).then((sent) => {
+      if (sent === false) setText((t) => t || value)
+    })
   }
 
   return (

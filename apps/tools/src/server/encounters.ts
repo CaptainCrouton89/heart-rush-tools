@@ -68,14 +68,19 @@ export async function listEncounters(userId: string) {
   return results.map((r) => ({ ...r, hasDocument: r.hasDocument === 1 }))
 }
 
-export async function createEncounter(userId: string): Promise<string> {
+/** An encounter's title until a finished encounter names it: the first message, shortened. */
+const titleOf = (text: string) => text.replace(/\s+/g, ' ').slice(0, 60)
+
+/** A new encounter holding the GM's first message, so the message is saved before any run starts. */
+export async function createEncounter(userId: string, text: string): Promise<string> {
   const id = crypto.randomUUID()
   const at = now()
+  const messages: StoredMessage[] = [{ role: 'gm', text, at }]
   await env.DB.prepare(
     `INSERT INTO encounter (id, user_id, title, messages, document, created_at, updated_at)
-     VALUES (?, ?, 'New encounter', '[]', NULL, ?, ?)`,
+     VALUES (?, ?, ?, ?, NULL, ?, ?)`,
   )
-    .bind(id, userId, at, at)
+    .bind(id, userId, titleOf(text), JSON.stringify(messages), at, at)
     .run()
   return id
 }
@@ -114,7 +119,7 @@ export async function appendGmMessage(enc: EncounterRecord, token: string, text:
   const last = enc.messages.at(-1)
   const messages: StoredMessage[] =
     last?.role === 'gm' && last.text === text ? enc.messages : [...enc.messages, { role: 'gm', text, at: now() }]
-  const title = enc.messages.length === 0 ? text.replace(/\s+/g, ' ').slice(0, 60) : enc.title
+  const title = enc.messages.length === 0 ? titleOf(text) : enc.title
   const won = changed(
     await env.DB.prepare(
       'UPDATE encounter SET messages = ?, title = ?, updated_at = ? WHERE id = ? AND user_id = ? AND claim = ?',

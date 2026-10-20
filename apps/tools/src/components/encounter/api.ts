@@ -47,7 +47,8 @@ export const api = {
   party: () => call<Party>('/api/party'),
   saveParty: (party: Party) => call<Party>('/api/party', jsonBody('PUT', party)),
   list: () => call<EncounterSummary[]>('/api/encounters'),
-  create: () => call<{ id: string }>('/api/encounters', { method: 'POST' }),
+  /** A new encounter holding the GM's first message; the encounter page then runs it. */
+  create: (text: string) => call<{ id: string }>('/api/encounters', jsonBody('POST', { text })),
   get: (id: string) => call<EncounterDetail>(`/api/encounters/${encodeURIComponent(id)}`),
   remove: (id: string) => call<{ ok: true }>(`/api/encounters/${encodeURIComponent(id)}`, { method: 'DELETE' }),
   /** 200 `{ok: true}` once the run is confirmed cancelled; 202 `{ok: false, stopping: true}` while it is still starting (poll `get`). A 502 throws. */

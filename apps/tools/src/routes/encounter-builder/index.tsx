@@ -1,13 +1,13 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { createFileRoute, getRouteApi, Link, useNavigate } from '@tanstack/react-router'
 import { Button } from '@heartrush/ui/components/button'
 import { Alert, AlertDescription } from '@heartrush/ui/components/alert'
 import { PageShell } from '~/components/page-shell'
 import { api, type EncounterSummary } from '~/components/encounter/api'
 import { Composer } from '~/components/encounter/composer'
-import { PartyLine } from '~/components/encounter/party-line'
+import { PartyLine, type PartyLineHandle } from '~/components/encounter/party-line'
 import { SignInPrompt } from '~/components/encounter/sign-in-prompt'
-import { setPendingFirstMessage } from '~/components/encounter/use-encounter'
+import { runFirstMessageOnLoad } from '~/components/encounter/use-encounter'
 
 const rootRoute = getRouteApi('__root__')
 
@@ -38,6 +38,7 @@ function EncounterBuilderIndex() {
   const [encounters, setEncounters] = useState<EncounterSummary[] | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [creating, setCreating] = useState(false)
+  const party = useRef<PartyLineHandle>(null)
 
   const load = useCallback(() => {
     api
@@ -49,16 +50,20 @@ function EncounterBuilderIndex() {
     if (signedIn) load()
   }, [signedIn, load])
 
-  async function start(text: string) {
+  async function start(text: string): Promise<boolean> {
     setCreating(true)
     setError(null)
     try {
-      const { id } = await api.create()
-      setPendingFirstMessage(id, text)
+      // The run reads the stored party, so the values on screen must be saved first. A failed save shows on the party line.
+      if (party.current && !(await party.current.save())) throw new Error('Save the party before starting.')
+      const { id } = await api.create(text)
+      runFirstMessageOnLoad(id)
       await navigate({ to: '/encounter-builder/$id', params: { id } })
+      return true
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Could not start the encounter')
       setCreating(false)
+      return false
     }
   }
 
@@ -83,7 +88,7 @@ function EncounterBuilderIndex() {
           <SignInPrompt returnTo="/encounter-builder" />
         ) : (
           <>
-            <PartyLine />
+            <PartyLine ref={party} />
             <section aria-labelledby="new-heading" className="space-y-3">
               <h2 id="new-heading" className="font-serif text-h4 font-semibold">
                 New encounter

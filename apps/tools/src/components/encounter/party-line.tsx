@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useImperativeHandle, useRef, useState, type Ref } from 'react'
 import { Input } from '@heartrush/ui/components/input'
 import { cn } from '@heartrush/ui/lib/utils'
 import { DEFAULT_PARTY, partySchema, type Party } from '~/encounter/schema'
@@ -9,22 +9,29 @@ const toDraft = (p: Party): Draft => ({ characters: String(p.characters), bloodm
 const fromDraft = (d: Draft) =>
   partySchema.safeParse({ characters: Number(d.characters), bloodmarks: Number(d.bloodmarks), note: d.note.trim() })
 
+export type PartyLineHandle = { save: () => Promise<boolean> }
+
 /**
  * The GM's remembered party: number of characters, bloodmarks and a free-text note. Edited inline and saved when a
  * field loses focus. Every run receives it; the chat never asks for it.
  */
-export function PartyLine({ onSignIn }: { onSignIn?: () => void }) {
-  const [saved, setSaved] = useState<Party | null>(null)
+export function PartyLine({ ref, onSignIn }: { ref?: Ref<PartyLineHandle>; onSignIn?: () => void }) {
+  const [loaded, setLoaded] = useState(false)
   const [draft, setDraft] = useState<Draft>(toDraft(DEFAULT_PARTY))
   const [status, setStatus] = useState<{ kind: 'idle' | 'saving' | 'saved' | 'error'; text?: string }>({ kind: 'idle' })
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined)
   useEffect(() => () => clearTimeout(timer.current), [])
+  /** The party the server holds, as last loaded or saved. */
+  const saved = useRef<Party | null>(null)
+  /** Saves run one after another, so a save always compares against what the one before it stored. */
+  const queue = useRef<Promise<boolean>>(Promise.resolve(true))
 
   useEffect(() => {
     api
       .party()
       .then((p) => {
-        setSaved(p)
+        saved.current = p
+        setLoaded(true)
         setDraft(toDraft(p))
       })
       .catch((e: unknown) => {
@@ -36,24 +43,32 @@ export function PartyLine({ onSignIn }: { onSignIn?: () => void }) {
   const parsed = fromDraft(draft)
   const invalid = !parsed.success
 
-  async function save() {
-    if (!saved || !parsed.success) {
-      if (!parsed.success) setStatus({ kind: 'error', text: 'Characters must be 1–10 and bloodmarks 0–50.' })
-      return
+  /** Save the values on screen. Resolves true once the server holds them, false when they are invalid or the save failed. */
+  function save(): Promise<boolean> {
+    if (!parsed.success) {
+      setStatus({ kind: 'error', text: 'Characters must be 1–10 and bloodmarks 0–50.' })
+      return Promise.resolve(false)
     }
     const next = parsed.data
-    if (next.characters === saved.characters && next.bloodmarks === saved.bloodmarks && next.note === saved.note) return
-    setStatus({ kind: 'saving' })
-    try {
-      const stored = await api.saveParty(next)
-      setSaved(stored)
-      setStatus({ kind: 'saved' })
-      clearTimeout(timer.current)
-      timer.current = setTimeout(() => setStatus({ kind: 'idle' }), 2000)
-    } catch (e) {
-      setStatus({ kind: 'error', text: e instanceof Error ? e.message : 'Could not save the party' })
-    }
+    queue.current = queue.current.then(async () => {
+      const prev = saved.current
+      if (!prev) return false // never loaded: the load error is already shown
+      if (next.characters === prev.characters && next.bloodmarks === prev.bloodmarks && next.note === prev.note) return true
+      setStatus({ kind: 'saving' })
+      try {
+        saved.current = await api.saveParty(next)
+        setStatus({ kind: 'saved' })
+        clearTimeout(timer.current)
+        timer.current = setTimeout(() => setStatus({ kind: 'idle' }), 2000)
+        return true
+      } catch (e) {
+        setStatus({ kind: 'error', text: e instanceof Error ? e.message : 'Could not save the party' })
+        return false
+      }
+    })
+    return queue.current
   }
+  useImperativeHandle(ref, () => ({ save }))
 
   const number = 'h-9 w-16 px-2 text-center tabular-nums'
   return (
@@ -82,7 +97,7 @@ export function PartyLine({ onSignIn }: { onSignIn?: () => void }) {
             onChange={(e) => setDraft({ ...draft, characters: e.target.value })}
             className={number}
             aria-invalid={!Number.isInteger(Number(draft.characters)) || Number(draft.characters) < 1 || Number(draft.characters) > 10}
-            disabled={!saved}
+            disabled={!loaded}
           />
           characters
         </label>
@@ -96,7 +111,7 @@ export function PartyLine({ onSignIn }: { onSignIn?: () => void }) {
             onChange={(e) => setDraft({ ...draft, bloodmarks: e.target.value })}
             className={number}
             aria-invalid={!Number.isInteger(Number(draft.bloodmarks)) || Number(draft.bloodmarks) < 0 || Number(draft.bloodmarks) > 50}
-            disabled={!saved}
+            disabled={!loaded}
           />
           bloodmarks
         </label>
@@ -108,7 +123,7 @@ export function PartyLine({ onSignIn }: { onSignIn?: () => void }) {
             onChange={(e) => setDraft({ ...draft, note: e.target.value })}
             placeholder="Note, e.g. “two healers, nobody ranged”"
             className="h-9"
-            disabled={!saved}
+            disabled={!loaded}
           />
         </label>
         <button type="submit" hidden tabIndex={-1} />
