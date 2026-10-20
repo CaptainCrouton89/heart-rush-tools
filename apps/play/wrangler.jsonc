@@ -3,7 +3,32 @@
   "name": "heartrush-play",
   "account_id": "8c13ab7fc53dc5dfb06c42c05a0e58eb",
   "compatibility_date": "2026-05-01",
-  "compatibility_flags": ["nodejs_compat"],
-  "main": "@tanstack/react-start/server-entry",
+  "compatibility_flags": ["nodejs_compat", "enable_request_signal"],
+  "main": "src/server.ts",
+  "d1_databases": [
+    {
+      // Play's own tables: game rows, OAuth pending rows, the fenced connection store.
+      "binding": "DB",
+      "database_name": "heartrush-play",
+      "database_id": "fdaf4ace-b3bd-4208-82b0-f63dd4617c40",
+      "migrations_dir": "migrations"
+    },
+    {
+      // Tools' database, used only for the shared user/session rows (AUTH_DB.session is the one session authority).
+      // Its migrations belong to tools; they are listed here only so local test databases match production.
+      "binding": "AUTH_DB",
+      "database_name": "heartrush-tools",
+      "database_id": "d5577aa4-3893-4912-b73b-6974e34dd73f",
+      "migrations_dir": "../tools/migrations"
+    }
+  ],
+  "triggers": { "crons": ["0 4 * * *"] },
+  "vars": {
+    "CROUTER_CLIENT_ID": "w5p61c34rt3p",
+    "CROUTER_ISSUER": "https://account.northlight.ai",
+    "APP_HOST": "play.heartrush.party"
+  },
+  "workers_dev": false,
+  "preview_urls": true,
   "routes": [{ "pattern": "play.heartrush.party", "custom_domain": true }]
 }

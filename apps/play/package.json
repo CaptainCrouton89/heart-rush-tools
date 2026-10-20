@@ -5,17 +5,26 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3912 --strictPort",
-    "build": "vite build && tsc --noEmit",
+    "build": "pnpm --filter @heartrush/content build && wrangler types && vite build && tsc --noEmit",
     "preview": "vite preview",
-    "deploy": "pnpm run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "test": "wrangler types && tsx --test test/*.test.ts",
+    "deploy": "pnpm run test && pnpm run build && pnpm run db:migrate && wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "db:migrate": "wrangler d1 migrations apply heartrush-play --remote",
+    "db:migrate:local": "wrangler d1 migrations apply heartrush-play --local"
   },
   "dependencies": {
+    "@heartrush/content": "workspace:*",
+    "@heartrush/northlight": "workspace:*",
+    "@heartrush/rules-engine": "workspace:*",
     "@heartrush/ui": "workspace:*",
+    "@north-light/sdk": "0.3.504",
     "@tanstack/react-router": "^1.170.45",
     "@tanstack/react-start": "^1.169.3",
     "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "react-dom": "^19.3.0",
+    "ulid": "^3.0.2",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.64.0",
@@ -25,6 +34,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.3",
     "vite": "^8.3.4",
     "wrangler": "^4.151.2"
