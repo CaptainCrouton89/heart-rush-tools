@@ -122,6 +122,17 @@ for (const r of records) {
 }
 const wr = await index.writeFiles({ outputPath: join(DIST, 'search') })
 if (wr.errors.length) throw new Error(`pagefind write: ${wr.errors.join('; ')}`)
+// Pagefind's _loadGenericChunk logs a failed index/filter chunk fetch and carries on, so search() resolves with
+// partial or empty results. Make it rethrow so the UI can report "Search unavailable". The code is in both the
+// main-thread bundle and the web worker that actually runs searches. Fail the build if a Pagefind upgrade changes
+// it, so the patch cannot silently stop applying.
+const chunkCatch = 'console.error(`Failed to load the index chunk ${url}:\n${e?.toString()}`);'
+for (const file of ['pagefind.js', 'pagefind-worker.js']) {
+  const path = join(DIST, 'search', file)
+  const src = readFileSync(path, 'utf8')
+  if (src.split(chunkCatch).length !== 2) throw new Error(`${file}: expected exactly one _loadGenericChunk catch to patch; Pagefind changed, update the patch in build.ts`)
+  writeFileSync(path, src.replace(chunkCatch, () => `${chunkCatch}throw e;`))
+}
 await pagefind.close()
 writeFileSync(join(PKG, '.search-records-count'), String(records.length))
 
