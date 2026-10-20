@@ -85,7 +85,7 @@ const catalogues = (['talents', 'spells', 'kin-culture'] as const).map((k) => bu
 for (const cat of catalogues) w(`catalogues/${cat.kind}.json`, cat)
 const playFile = <T,>(entries: T[]) => ({ schemaVersion: SCHEMA_VERSION, contentVersion, entries })
 w('catalogues/play/talents.json', playFile(buildPlayTalents(drafts)))
-w('catalogues/play/races.json', playFile(buildPlayRaces(drafts)))
+w('catalogues/play/races.json', playFile(buildPlayRaces(drafts, (message) => diag({ level: 'warn', code: 'play-grant-unresolved', message }))))
 w('catalogues/play/conditions.json', playFile(buildPlayConditions(drafts)))
 
 // Previews: every page, plus every cross-reference target and every H2/H3 of player/GM rules.

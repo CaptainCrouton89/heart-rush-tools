@@ -6,7 +6,8 @@
   "exports": {
     "./types": "./src/types.ts",
     "./runtime": "./src/runtime.ts",
-    "./manifest": "./dist/manifest.json"
+    "./manifest": "./dist/manifest.json",
+    "./play/*": "./dist/catalogues/play/*.json"
   },
   "scripts": {
     "build": "tsx src/build.ts && tsx src/check.ts",

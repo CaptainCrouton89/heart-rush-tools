@@ -1,11 +1,11 @@
 // Derived artifacts: catalogues, play catalogues, previews, glossary, search records.
 import type { Draft } from './collect.ts'
-import { RACE_EFFECTS } from './race-effects.ts'
+import { RACE_EFFECTS, type ChoiceSpec } from './race-effects.ts'
 import { blockText, inlineText, wordCount } from './md.ts'
 import { excerptWords, firstSentence } from './util.ts'
 import { targetIdOf } from './link.ts'
 import type {
-  Block, CatalogueEntry, CatalogueFile, CatalogueKind, Crumb, Facet, FilterKind, GlossaryTarget, Page, PlayCondition, PlayRace, PlayTalent,
+  Block, CatalogueEntry, CatalogueFile, CatalogueKind, Crumb, Facet, FilterKind, GlossaryTarget, Page, PlayAbility, PlayChoice, PlayCondition, PlayRace, PlayTalent,
   PreviewFile, RaceFacets, SearchRecord, TalentFacets,
 } from './types.ts'
 import { SCHEMA_VERSION } from './types.ts'
@@ -160,16 +160,21 @@ export function buildPlayTalents(drafts: Draft[]): PlayTalent[] {
       id: d.page.id, path: d.page.path, title: d.page.title,
       category: f.collection === 'spells' ? 'elemental' : f.collection,
       frequency: f.abilityTypes[0] ? lcFirst(f.abilityTypes[0]) : null,
+      tradition: (f.traditions[0] as PlayTalent['tradition']) ?? null,
+      elements: f.elements,
       body: blockText(bodyBlocks).trim(),
       destiny: destiny ? blockText(sectionBlocks(d.page, destiny.id)).trim() || null : null,
     }
-    if (f.elements.length) { t.element = f.elements[0]; (t as PlayTalent & { elements?: string[] }).elements = f.elements }
     return t
   }).sort((a, b) => a.title.localeCompare(b.title))
 }
 
 const abilityMarker = /^(\w+) ability/i
-function abilityOf(page: Page, headingId: string, title: string): { title: string; frequency: string | null; body: string } | null {
+const grantPattern = /you gain the _?(.+?)_? talent(?: targeting [^.]*?)? as a racial ability(.*?)(?:\.|$)/is
+const talentKey = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+
+type Warn = (message: string) => void
+function abilityOf(page: Page, headingId: string, title: string, talentIds: Map<string, string>, warn: Warn): PlayAbility | null {
   const blocks = sectionBlocks(page, headingId)
   const first = blocks.find((b) => b.type === 'paragraph')
   if (!first || first.type !== 'paragraph') return null
@@ -178,7 +183,14 @@ function abilityOf(page: Page, headingId: string, title: string): { title: strin
   const m = abilityMarker.exec(inlineText(lead.children))
   if (!m) return null
   const text = blockText(blocks.filter((b) => b.type !== 'heading')).replace(/^[^\n]*?ability\.?\*?\*?\s*/i, '').trim()
-  return { title, frequency: m[1].toLowerCase(), body: text }
+  let grants: PlayAbility['grants'] = null
+  const g = grantPattern.exec(text.replace(/\s+/g, ' '))
+  if (g) {
+    const talentId = talentIds.get(talentKey(g[1]))
+    if (talentId) grants = { talentId, destiny: /along with its destiny level/i.test(g[2]) }
+    else warn(`${page.id} ability "${title}" grants talent "${g[1]}", which is not in the talents catalogue`)
+  }
+  return { title, frequency: m[1].toLowerCase(), body: text, grants }
 }
 
 function aspectsOf(page: Page, headingId: string): string[] {
@@ -187,11 +199,32 @@ function aspectsOf(page: Page, headingId: string): string[] {
   return out
 }
 
-export function buildPlayRaces(drafts: Draft[]): PlayRace[] {
+/** Builds the emitted choices; an option's `abilities` titles are taken out of `abilities` (they apply only when chosen). */
+function choicesOf(specs: ChoiceSpec[] | undefined, abilities: PlayAbility[], where: string): PlayChoice[] {
+  return (specs ?? []).map((c): PlayChoice => {
+    if (c.kind === 'talent') return c
+    return {
+      ...c,
+      options: c.options.map((o) => ({
+        id: o.id, title: o.title, effects: o.effects ?? [],
+        abilities: (o.abilities ?? []).map((t) => {
+          const i = abilities.findIndex((a) => a.title === t)
+          if (i < 0) throw new Error(`race-effects: ${where} choice ${c.id} option ${o.id} names ability "${t}", which the source does not have`)
+          return abilities.splice(i, 1)[0]
+        }),
+      })),
+    }
+  })
+}
+
+export function buildPlayRaces(drafts: Draft[], warn: Warn = () => {}): PlayRace[] {
+  const talentIds = new Map(buildPlayTalents(drafts).map((t) => [talentKey(t.title), t.id]))
   return drafts.filter((d) => d.page.kind === 'race').map((d): PlayRace => {
     const p = d.page
     const hs = p.headings
-    const race: PlayRace = { id: p.id, path: p.path, title: p.title, size: (p.facets as RaceFacets).size, image: p.image?.src ?? null, aspects: [], abilities: [], subraces: [], effects: RACE_EFFECTS[d.race!.stem] ?? [] }
+    const configured = RACE_EFFECTS[d.race!.stem]
+    const race: PlayRace = { id: p.id, path: p.path, title: p.title, size: (p.facets as RaceFacets).size, image: p.image?.src ?? null, aspects: [], abilities: [], subraces: [], choices: [], effects: configured?.effects ?? [] }
+    if (configured?.baseMaxHp !== undefined) race.baseMaxHp = configured.baseMaxHp
     for (const h of hs.filter((x) => x.depth === 2)) {
       const kids = hs.filter((x) => x.parentId === h.id)
       const isSubrace = kids.some((k) => k.text === 'Aspects')
@@ -199,13 +232,18 @@ export function buildPlayRaces(drafts: Draft[]): PlayRace[] {
       if (h.text === 'Vitals') continue
       if (isSubrace) {
         const aspectsH = kids.find((k) => k.text === 'Aspects')!
-        const abilities = kids.filter((k) => k.text !== 'Aspects').map((k) => abilityOf(p, k.id, k.text)).filter((x): x is NonNullable<typeof x> => !!x)
-        race.subraces.push({ id: `${p.id}~${h.id}`, title: h.text, aspects: aspectsOf(p, aspectsH.id), abilities })
+        const abilities = kids.filter((k) => k.text !== 'Aspects').map((k) => abilityOf(p, k.id, k.text, talentIds, warn)).filter((x): x is NonNullable<typeof x> => !!x)
+        const config = configured?.subraces?.[h.id]
+        const choices = choicesOf(config?.choices, abilities, `${p.id}~${h.id}`)
+        const subrace: PlayRace['subraces'][number] = { id: `${p.id}~${h.id}`, title: h.text, aspects: aspectsOf(p, aspectsH.id), abilities, choices, effects: config?.effects ?? [] }
+        if (config?.baseMaxHp !== undefined) subrace.baseMaxHp = config.baseMaxHp
+        race.subraces.push(subrace)
         continue
       }
-      const a = abilityOf(p, h.id, h.text)
+      const a = abilityOf(p, h.id, h.text, talentIds, warn)
       if (a) race.abilities.push(a)
     }
+    race.choices = choicesOf(configured?.choices, race.abilities, p.id)
     return race
   }).sort((a, b) => a.title.localeCompare(b.title))
 }
@@ -218,7 +256,7 @@ export function buildPlayConditions(drafts: Draft[]): PlayCondition[] {
   const d = drafts.find((x) => x.page.path === '/player/conditions')
   if (!d) throw new Error('Conditions chapter missing')
   const out: PlayCondition[] = []
-  for (const h of d.page.headings.filter((x) => x.depth === 3)) {
+  for (const h of d.page.headings.filter((x) => x.depth === 3 && !['leveled', 'fading', 'ongoing'].includes(x.id))) {
     const blocks = sectionBlocks(d.page, h.id)
     const tagBlock = blocks[0]
     const tag = tagBlock?.type === 'paragraph' && tagBlock.children[0]?.type === 'emphasis' ? inlineText(tagBlock.children).toLowerCase() : ''

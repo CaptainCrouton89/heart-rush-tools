@@ -162,18 +162,28 @@ export type SearchRecord = {
 
 // ---- Play catalogues (consumed by play.heartrush.party) ---------------------------
 export type RaceEffect =
-  | { kind: 'cost'; purchase: string; delta: number; where?: { tradition?: string; honor?: true; ability?: string } }
-  | { kind: 'dieCap'; ability: string; max: number }
+  | { kind: 'cost'; purchase: 'aspect:new' | 'aspect:rank' | 'hp' | 'die' | 'talent:combat' | 'talent:noncombat' | 'talent:elemental' | 'talent:*' | 'destiny' | 'path' | 'path:tier'; delta: number; where?: { tradition?: 'Martial' | 'Cognitive' | 'Handmagic' | 'Gaeic melody'; honor?: true; ability?: 'might' | 'agility' | 'cunning' | 'presence' } }
+  | { kind: 'dieCap'; ability: 'might' | 'agility' | 'cunning' | 'presence'; max: 4 | 6 | 8 | 10 | 12 }
   | { kind: 'aspectRankCap'; max: number }
   | { kind: 'awardBonus'; per: number; bonus: number }
+  /** Exactly one element. A race that offers a pick (Nuun) expresses it as a choice. */
+  | { kind: 'attunement'; elements: [string]; level: 'basic' }
   | { kind: 'manual'; text: string }
 
-export type PlayAbility = { title: string; frequency: string | null; body: string }
+/** A racial ability that hands out a catalogue talent ("you gain the <Title> talent as a racial ability"); null when it grants none. */
+export type PlayGrant = { talentId: string; destiny: boolean }
+export type PlayAbility = { title: string; frequency: string | null; body: string; grants: PlayGrant | null }
+export type PlayChoiceOption = { id: string; title: string; abilities: PlayAbility[]; effects: RaceEffect[] }
+/** A choice the race text requires at character creation. `options`: pick one option. `talent`: pick one catalogue talent (narrowed by `tradition`). */
+export type PlayChoice =
+  | { id: string; title: string; text: string; kind: 'options'; options: PlayChoiceOption[] }
+  | { id: string; title: string; text: string; kind: 'talent'; tradition: 'Martial' | 'Cognitive' | 'Handmagic' | 'Gaeic melody' | null }
 export type PlayTalent = {
   id: string; path: string; title: string
   category: 'combat' | 'noncombat' | 'elemental'
   frequency: string | null
-  element?: string
+  tradition: 'Martial' | 'Cognitive' | 'Handmagic' | 'Gaeic melody' | null
+  elements: string[]
   attunementLevel?: 'basic' | 'advanced' | 'paragon'
   body: string; destiny: string | null
 }
@@ -182,7 +192,8 @@ export type PlayRace = {
   baseMaxHp?: number
   aspects: string[]
   abilities: PlayAbility[]
-  subraces: Array<{ id: string; title: string; aspects: string[]; abilities: PlayAbility[] }>
+  subraces: Array<{ id: string; title: string; aspects: string[]; abilities: PlayAbility[]; choices: PlayChoice[]; effects: RaceEffect[]; baseMaxHp?: number }>
+  choices: PlayChoice[]
   effects: RaceEffect[]
 }
 export type PlayCondition = {

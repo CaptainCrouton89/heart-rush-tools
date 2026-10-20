@@ -1,29 +1,105 @@
-// Hand-maintained, typed race effects for the play site. Keep in step with heart_rush/races/*.md:
-// the compiler reports any race in this map whose file no longer exists, and every race not listed here
-// gets an empty list ("no racial effects" on the sheet). Anything the kinds cannot express is `manual`.
+// Typed effects and creation-time choices for play, keyed by race file stem and optionally by subrace heading id.
+// Rules source: heart_rush/races/*.md. Anything these kinds cannot express stays `manual`; a choice the race text
+// requires at creation is a `choice`, and only the selected option's abilities and effects apply (kin-choices-contract).
 import type { RaceEffect } from './types.ts'
 
-const talentAll = (delta: number, where: { tradition: string }): RaceEffect[] =>
-  (['talent:combat', 'talent:noncombat', 'talent:elemental'] as const).map((purchase) => ({ kind: 'cost', purchase, delta, where }))
+/** `abilities` are titles of abilities in the same race or subrace; they move out of its `abilities` into this option. */
+export type OptionSpec = { id: string; title: string; abilities?: string[]; effects?: RaceEffect[] }
+export type ChoiceSpec =
+  | { id: string; title: string; text: string; kind: 'options'; options: OptionSpec[] }
+  | { id: string; title: string; text: string; kind: 'talent'; tradition: 'Martial' | 'Cognitive' | 'Handmagic' | 'Gaeic melody' | null }
+type Entry = { effects?: RaceEffect[]; baseMaxHp?: number; choices?: ChoiceSpec[] }
+type Config = Entry & { subraces?: Record<string, Entry> }
 
-// Keyed by race file stem.
-export const RACE_EFFECTS: Record<string, RaceEffect[]> = {
-  Craven: [{ kind: 'awardBonus', per: 7, bonus: 1 }],
-  Dwarf: [{ kind: 'cost', purchase: 'hp', delta: -1 }],
-  Elf: [
-    { kind: 'cost', purchase: 'aspect:rank', delta: -2 },
-    { kind: 'aspectRankCap', max: 8 },
-    { kind: 'manual', text: 'Gaining or upgrading aspects costs 2 less XP, for a minimum of 1.' },
-  ],
-  Gnome: [
-    ...talentAll(-2, { tradition: 'Handmagic' }),
-    { kind: 'cost', purchase: 'destiny', delta: -2, where: { tradition: 'Handmagic' } },
-    { kind: 'cost', purchase: 'hp', delta: 1 },
-    { kind: 'manual', text: 'Whiteling (Oracle\'s Burden): maximum hit points start at 25, increasing them costs 1 additional XP, and your might die can never exceed d6.' },
-  ],
-  Deva: [{ kind: 'cost', purchase: 'die', delta: -2, where: { ability: 'presence' } }],
-  Ghoul: [{ kind: 'manual', text: 'Oath talents and their destiny levels cost 2 XP less.' }],
-  Mira: [{ kind: 'manual', text: 'Female: elemental talents cost 2 less XP.' }],
-  Trollkin: [{ kind: 'cost', purchase: 'hp', delta: -2 }],
-  Human: [{ kind: 'manual', text: 'Shontobi (Honor Bound): upgrading honor-related aspects costs 1 less XP.' }],
+const traditionCosts = (tradition: 'Martial' | 'Cognitive'): RaceEffect[] => [
+  { kind: 'cost', purchase: 'talent:*', delta: -2, where: { tradition } },
+  { kind: 'cost', purchase: 'destiny', delta: -2, where: { tradition } },
+]
+
+export const RACE_EFFECTS: Record<string, Config> = {
+  Craven: { effects: [{ kind: 'awardBonus', per: 7, bonus: 1 }] },
+  Dwarf: { effects: [{ kind: 'cost', purchase: 'hp', delta: -1 }] },
+  Elf: {
+    effects: [
+      { kind: 'cost', purchase: 'aspect:rank', delta: -2 },
+      { kind: 'aspectRankCap', max: 8 },
+    ],
+    subraces: {
+      'amverela-high-elf': {
+        choices: [{
+          id: 'expertise', title: 'Expertise', kind: 'options', text: 'Choose one:',
+          options: [
+            { id: 'martial', title: 'Martial talents', effects: traditionCosts('Martial') },
+            { id: 'cognitive', title: 'Cognitive talents', effects: traditionCosts('Cognitive') },
+          ],
+        }],
+      },
+    },
+  },
+  Elnir: {
+    choices: [{
+      id: 'augmentation', title: 'Biological Augmentation', kind: 'options', text: 'Choose one augmentation at character creation:',
+      options: [
+        { id: 'venomous', title: 'Venomous' },
+        { id: 'wall-climber', title: 'Wall-Climber' },
+        { id: 'armored-hide', title: 'Armored Hide' },
+        { id: 'enhanced-senses', title: 'Enhanced Senses' },
+      ],
+    }],
+  },
+  Gnome: {
+    effects: [
+      { kind: 'cost', purchase: 'talent:*', delta: -2, where: { tradition: 'Handmagic' } },
+      { kind: 'cost', purchase: 'destiny', delta: -2, where: { tradition: 'Handmagic' } },
+      { kind: 'cost', purchase: 'hp', delta: 1 },
+    ],
+    subraces: {
+      'whiteling-prophet-gnome': {
+        baseMaxHp: 25,
+        effects: [
+          { kind: 'cost', purchase: 'hp', delta: 1 },
+          { kind: 'dieCap', ability: 'might', max: 6 },
+        ],
+      },
+    },
+  },
+  Deva: { effects: [{ kind: 'cost', purchase: 'die', delta: -2, where: { ability: 'presence' } }] },
+  Ghoul: { effects: [{ kind: 'manual', text: 'Oath talents and their destiny levels cost 2 XP less.' }] },
+  Mira: {
+    choices: [{
+      id: 'caste', title: 'Caste', kind: 'options', text: 'Choose your caste at character creation:',
+      options: [
+        { id: 'male', title: 'Male' },
+        { id: 'female', title: 'Female', effects: [{ kind: 'cost', purchase: 'talent:elemental', delta: -2 }] },
+        { id: 'common', title: 'Common' },
+      ],
+    }],
+  },
+  Trollkin: { effects: [{ kind: 'cost', purchase: 'hp', delta: -2 }] },
+  Human: {
+    choices: [{ id: 'resilience-talent', title: 'Human Resilience and Diversity', kind: 'talent', tradition: null, text: 'When you gain this ability, choose one talent.' }],
+    subraces: {
+      husakas: {
+        choices: [{ id: 'dust-talent', title: 'Dust Dependency', kind: 'talent', tradition: 'Handmagic', text: 'Choose any handmagic talent.' }],
+      },
+      shontobi: {
+        choices: [{
+          id: 'path', title: 'Eagle Companion or Honor Bound', kind: 'options', text: 'Choose One:',
+          options: [
+            { id: 'eagle-companion', title: 'Eagle Companion', abilities: ['Eagle Companion'] },
+            { id: 'honor-bound', title: 'Honor Bound', abilities: ['Honor Bound'], effects: [{ kind: 'cost', purchase: 'aspect:rank', delta: -1, where: { honor: true } }] },
+          ],
+        }],
+      },
+      nuun: {
+        choices: [{
+          id: 'element', title: 'Elemental Heritage', kind: 'options', text: 'Choose fire or water.',
+          options: [
+            { id: 'fire', title: 'Fire', effects: [{ kind: 'attunement', elements: ['fire'], level: 'basic' }] },
+            { id: 'water', title: 'Water', effects: [{ kind: 'attunement', elements: ['water'], level: 'basic' }] },
+          ],
+        }],
+      },
+    },
+  },
 }
