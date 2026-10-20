@@ -45,7 +45,7 @@ export function DamagePad({ dispatch, maxHp }: { dispatch: (action: ActionDraft)
 
   return (
     <section aria-label="Damage and healing" className="flex flex-col gap-2">
-      <label htmlFor={DAMAGE_AMOUNT_ID} className="eyebrow">
+      <label htmlFor={DAMAGE_AMOUNT_ID} className="eyebrow section-name">
         Damage or heal
       </label>
       <div className="flex items-center gap-2">
@@ -63,7 +63,7 @@ export function DamagePad({ dispatch, maxHp }: { dispatch: (action: ActionDraft)
           onKeyDown={(e) => {
             if (e.key === 'Enter') damage()
           }}
-          className="h-9 w-16 shrink-0 px-2 text-center font-semibold tabular-nums md:text-control"
+          className="h-9 w-[58px] shrink-0 text-center [--field-size:22px]"
         />
         <Button size="compact-icon" type="button" variant="line" aria-label="One more" onClick={() => step(1)}>
           +
@@ -80,7 +80,7 @@ export function DamagePad({ dispatch, maxHp }: { dispatch: (action: ActionDraft)
         <div className="reveal">
           <form onSubmit={mark} className="flex flex-col gap-1.5 border-l-[1.5px] border-primary py-1 pl-3">
             <p className="text-ui">
-              <span className="font-semibold text-wound">{wound.amount}</span> damage leaves a wound of rank {wound.amount}. Max HP {maxHp} →{' '}
+              <span className="font-hand text-[19px] text-wound">{wound.amount}</span> damage leaves a wound of rank {wound.amount}. Max HP {maxHp} →{' '}
               {maxHp - wound.amount} until it heals.
             </p>
             <div className="flex items-center gap-2.5">

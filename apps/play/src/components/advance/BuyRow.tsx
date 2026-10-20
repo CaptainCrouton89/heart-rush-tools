@@ -30,7 +30,7 @@ export function BuyButton({ q, onBuy, label = 'Buy', disabled }: { q: Quote; onB
   return (
     <Button size="compact" variant="line-primary" type="button" className="shrink-0 tabular-nums" disabled={blocked} onClick={onBuy}>
       {label}
-      {q.cost !== null && <span aria-hidden="true">· {q.cost} XP</span>}
+      {q.cost !== null && <span aria-hidden="true">· <span className="font-hand text-[16px] font-normal">{q.cost}</span> XP</span>}
       {q.cost !== null && <span className="sr-only">for {q.cost} XP</span>}
     </Button>
   )
@@ -50,7 +50,7 @@ export function BuyRow({ title, detail, q, onBuy, label, disabled, children }: {
     <li className="flex flex-col gap-1 border-b border-border py-3 last:border-b-0">
       <div className="flex min-h-11 flex-wrap items-center justify-between gap-x-3 gap-y-2">
         <div className="min-w-0">
-          <div className="font-sans text-control font-semibold">{title}</div>
+          <div className="font-serif text-[18px] leading-6 font-semibold">{title}</div>
           {detail && <div className="text-ui text-muted-foreground">{detail}</div>}
         </div>
         <BuyButton q={q} onBuy={onBuy} label={label} disabled={disabled} />

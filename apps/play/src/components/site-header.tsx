@@ -84,11 +84,11 @@ export function SiteHeader({ session }: { session: Session | null }) {
   const link =
     'flex min-h-11 items-center rounded-sm text-ui text-muted-foreground transition-colors hover:text-foreground aria-[current=page]:font-semibold aria-[current=page]:text-foreground'
   return (
-    <header className="print-hidden sticky top-0 z-40 border-b border-border bg-surface">
+    <header className="print-hidden sticky top-0 z-40 border-b border-border bg-background">
       <div className="mx-auto flex h-14 w-full max-w-6xl items-center gap-3 px-5 max-[359px]:px-4 sm:gap-6 md:h-16 md:px-8">
         <div className="flex items-center gap-2">
           <a href="https://heartrush.party/" className="flex min-h-11 items-center rounded-sm" aria-label="Heart Rush home">
-            <Wordmark />
+            <Wordmark className="font-label text-[18px] font-normal normal-case" />
           </a>
           <Link to="/" className="flex min-h-11 items-center rounded-sm text-ui text-muted-foreground hover:text-foreground max-[359px]:hidden">
             <span className="border-l border-border pl-2">Play</span>

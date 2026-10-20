@@ -20,7 +20,7 @@ export function AspectsSection({ character, dispatch, canEdit }: SectionProps) {
         <ul className="flex flex-col">
           {character.aspects.map((a) => (
             <li key={a.id} className="flex min-h-11 items-center gap-3 border-b border-border py-1 last:border-b-0">
-              <span className="w-6 shrink-0 text-center font-sans text-control font-semibold tabular-nums" aria-label={`Rank ${a.rank}`}>
+              <span className="w-6 shrink-0 text-center font-hand text-[19px]" aria-label={`Rank ${a.rank}`}>
                 {a.rank}
               </span>
               <div className="min-w-0 flex-1">

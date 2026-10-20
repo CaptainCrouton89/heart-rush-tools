@@ -1,14 +1,197 @@
 @import '@heartrush/ui/styles.css';
 @source '../../../../packages/ui/src';
 
-/* Play's two colours (design, Visual identity). HP above half its effective max is green; wound ranks use the primary red. */
+/* ---------------------------------------------------------------- play theme
+   Play's sheet is handwritten paper with ember ink (play design, Visual identity). This block only overrides the
+   values of @heartrush/ui's tokens, so every shared component picks them up; rules and tools keep their own look.
+   Contrast against the page and cards: ink 13.5–15.4 : 1, pencil 5.5–7.5, ember 5.5–7.3, HP green 5.3–9.1,
+   warning 5.7–10.3, control edges 3.0–3.9. */
 :root {
-  --hp: #2e7d4f;
+  --background: #f6f4ee;
+  --surface: #fbfaf6;
+  --surface-muted: #ece8dd;
+  --foreground: #1c2035;
+  --muted-foreground: #575b6b;
+  --primary: #a03b1d;
+  --primary-foreground: #ffffff;
+  --accent: #f4e2d8;
+  --accent-foreground: #7d2c13;
+  --border: #bdb6a6;
+  --ring: #a03b1d;
+  --edge: #8a8c98;
+  --warning: #7a5119;
+  /* HP above half its effective max is green; wound ranks use the primary ember. */
+  --hp: #2c6a42;
+  /* Glows, only on the value that just changed: ember after damage or a new mark, green after a heal. */
+  --glow: rgb(160 59 29 / 0.42);
+  --hpglow: rgb(44 106 66 / 0.38);
 }
 .dark {
-  --hp: #7ccb9a;
+  --background: #14151b;
+  --surface: #1b1d25;
+  --surface-muted: #252833;
+  --foreground: #ece6d6;
+  --muted-foreground: #aaa698;
+  --primary: #e58e5c;
+  --primary-foreground: #1a0e07;
+  --accent: #3a2a24;
+  --accent-foreground: #f2b896;
+  --border: #3a3c49;
+  --ring: #e58e5c;
+  --edge: #70737f;
+  --warning: #d8c27a;
+  --hp: #8fc39c;
+  --glow: rgb(229 142 92 / 0.55);
+  --hpglow: rgb(143 195 156 / 0.5);
 }
 @theme inline {
   --color-hp: var(--hp);
   --color-wound: var(--primary);
+}
+
+/* Fonts (latin subsets, 145 KB together): EB Garamond for printed names and rules text, Kalam for every number the
+   player changes and everything they write, IM Fell English SC for section names. IBM Plex Sans (from the shared
+   styles) stays for buttons and short notes. */
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('./fonts/eb-garamond-latin-wght-normal.woff2') format('woff2');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kalam';
+  src: url('./fonts/kalam-latin-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kalam';
+  src: url('./fonts/kalam-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IM Fell English SC';
+  src: url('./fonts/im-fell-english-sc-latin-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@theme {
+  --font-serif: 'EB Garamond', Georgia, serif;
+  --font-hand: 'Kalam', cursive;
+  --font-label: 'IM Fell English SC', Georgia, serif;
+}
+
+@layer components {
+  /* Labels and section names: old small capitals. */
+  .eyebrow {
+    font-family: var(--font-label);
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-transform: none;
+    color: var(--muted-foreground);
+  }
+  /* A section's name: ink, behind a small ember diamond. */
+  .section-name {
+    color: var(--foreground);
+  }
+  .section-name::before {
+    content: '◆';
+    color: var(--primary);
+    font-size: 8px;
+    margin-right: 8px;
+    vertical-align: 3px;
+  }
+  /* A heavy ink rule with a hairline under it. */
+  .inkrule {
+    border-bottom: 1.5px solid var(--foreground);
+    box-shadow:
+      0 2.5px 0 -1px var(--background),
+      0 3px 0 -1px var(--border);
+  }
+  /* Rules text: printed, 16/22. */
+  .rules-text {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    line-height: 22px;
+  }
+  /* A wound's rank inside a pen-drawn ember ring. */
+  .wound-ring {
+    position: relative;
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-hand);
+    font-size: 18px;
+    color: var(--primary);
+  }
+  .wound-ring > svg {
+    position: absolute;
+    inset: 0;
+    overflow: visible;
+  }
+  .wound-ring circle {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 1.5;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    transform: rotate(-110deg);
+    transform-origin: center;
+    transform-box: fill-box;
+    filter: url(#inkedge);
+  }
+  /* An inline strip or row: grows from zero height when it opens (see the motion block). */
+  .reveal {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .reveal > * {
+    min-height: 0;
+  }
+}
+
+/* Text fields are blanks to fill in by hand: a single underline that turns ember on focus, the writing in Kalam.
+   Unlayered so it wins over the shared components' boxed utilities. Multi-line fields keep their box (a page of
+   underlines is the ruled background the design rules out) but take the same ink and hand. Being unlayered, these
+   beat utility classes; a field that needs a bigger hand sets `--field-size`. */
+[data-slot='input'] {
+  border-width: 0 0 1.5px;
+  border-radius: 0;
+  border-color: var(--muted-foreground);
+  background: transparent;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-family: var(--font-hand);
+  font-size: var(--field-size, 17px);
+  caret-color: var(--primary);
+  transition: border-color 300ms;
+}
+/* Focus: the blank's line turns ember and thickens (a 1 px shadow under it, so nothing moves). */
+[data-slot='input']:focus,
+[data-slot='input']:focus-visible {
+  border-color: var(--primary);
+  box-shadow: 0 1px 0 var(--primary);
+  outline: none;
+}
+[data-slot='input']::placeholder,
+[data-slot='textarea']::placeholder {
+  color: var(--muted-foreground);
+}
+[data-slot='textarea'] {
+  background: transparent;
+  border-radius: 3px;
+  font-family: var(--font-hand);
+  font-size: 17px;
+  line-height: 24px;
+  caret-color: var(--primary);
 }

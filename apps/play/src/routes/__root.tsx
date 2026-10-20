@@ -57,6 +57,13 @@ function RootDocument({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        {/* A slight irregular edge for rings, strike lines and marks, so they look drawn with a pen (`filter: url(#inkedge)`). */}
+        <svg width="0" height="0" className="absolute" aria-hidden="true" focusable="false">
+          <filter id="inkedge" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves={2} seed={4} result="t" />
+            <feDisplacementMap in="SourceGraphic" in2="t" scale={1.3} xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </svg>
         {children}
         <Scripts />
       </body>

@@ -39,7 +39,7 @@ export function StepTalents({ draft }: { draft: UseDraft }) {
         You start with 0 talents and {awarded} XP. Spend some now or later.
       </p>
       <p className="text-ui" aria-live="polite">
-        <span className="font-serif text-h2-sm font-semibold tabular-nums">{xpRemaining(character)}</span>{' '}
+        <span className="font-hand text-[30px] leading-none">{xpRemaining(character)}</span>{' '}
         <span className="text-muted-foreground">XP left to spend</span>
       </p>
 

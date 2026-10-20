@@ -72,16 +72,20 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
                 {canEdit ? (
                   <button
                     type="button"
-                    className="relative min-w-9 shrink-0 rounded-sm text-center font-sans text-control font-semibold tabular-nums text-wound after:absolute after:top-1/2 after:left-1/2 after:size-11 after:-translate-1/2 after:content-[''] hover:bg-surface-muted"
+                    className="wound-ring rounded-full after:absolute after:top-1/2 after:left-1/2 after:size-11 after:-translate-1/2 after:content-[''] hover:bg-surface-muted"
                     aria-label={`Edit wound of rank ${w.rank}`}
                     onClick={() => setOpen({ kind: 'edit', id: w.id })}
                   >
-                    {w.rank}
+                    <WoundRing />
+                    <span>{w.rank}</span>
                   </button>
                 ) : (
-                  <span className="min-w-9 shrink-0 text-center font-sans text-control font-semibold tabular-nums text-wound">{w.rank}</span>
+                  <span className="wound-ring">
+                    <WoundRing />
+                    <span>{w.rank}</span>
+                  </span>
                 )}
-                <span className="min-w-0 flex-1 truncate text-ui">{w.description || <span className="text-muted-foreground">No description</span>}</span>
+                <span className="min-w-0 flex-1 truncate font-hand text-[17px]">{w.description || <span className="font-sans text-meta text-muted-foreground">No description</span>}</span>
                 {w.treated ? (
                   <span className="shrink-0 text-meta text-muted-foreground">treated ✓</span>
                 ) : (
@@ -107,6 +111,15 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
         </ul>
       )}
     </Section>
+  )
+}
+
+/** The pen circle drawn around a wound's rank. */
+function WoundRing() {
+  return (
+    <svg viewBox="0 0 36 36" aria-hidden="true">
+      <circle pathLength={100} cx={18} cy={18} r={16.2} />
+    </svg>
   )
 }
 
@@ -147,7 +160,7 @@ function WoundForm({
           autoComplete="off"
           value={rank}
           onChange={(e) => setRank(digits(e.target.value))}
-          className="h-9 w-14 shrink-0 px-1 text-center tabular-nums"
+          className="h-9 w-[52px] shrink-0 text-center"
         />
         <Input aria-label="Description" placeholder="Describe it" value={description} onChange={(e) => setDescription(e.target.value)} className="h-9 min-w-0 flex-1" />
         <Button size="compact" variant="line-primary" type="submit" disabled={!valid}>
@@ -190,7 +203,7 @@ function TreatRow({ wound, onCancel, onTreat }: { wound: Wound; onCancel: () => 
         placeholder="0"
         value={roll}
         onChange={(e) => setRoll(digits(e.target.value))}
-        className="h-9 w-14 px-1 text-center tabular-nums"
+        className="h-9 w-14 text-center"
       />
       <Button size="compact" variant="line-primary" type="submit" disabled={n === null}>
         Treat

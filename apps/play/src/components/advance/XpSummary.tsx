@@ -20,7 +20,7 @@ export function XpSummary({ xp }: { xp: Derived['xp'] }) {
   return (
     <section aria-label="Experience" className="flex flex-col gap-2 rounded-md border border-border bg-surface p-4">
       <p className="flex items-baseline gap-2">
-        <span className="font-serif text-h2-sm font-semibold tabular-nums">{xp.remaining}</span>
+        <span className="font-hand text-[30px] leading-none">{xp.remaining}</span>
         <span className="text-ui text-muted-foreground">XP remaining</span>
       </p>
       <p className="text-ui text-muted-foreground tabular-nums">

@@ -58,9 +58,9 @@ export function AbilityRow({
     <li className="flex flex-col gap-1 border-b border-border py-2 last:border-b-0">
       <div className="flex min-h-12 items-center gap-3">
         <div className="min-w-0 flex-1">
-          <p className="flex flex-wrap items-baseline gap-x-2 font-medium text-ui">
+          <p className="flex flex-wrap items-baseline gap-x-2 font-serif text-[18px] leading-6 font-semibold">
             <span className="min-w-0">{title}</span>
-            {talent.destiny && <span className="text-meta font-semibold text-primary">destiny</span>}
+            {talent.destiny && <span className="font-sans text-meta font-semibold text-primary">destiny</span>}
           </p>
           <p className="flex flex-wrap gap-x-2 text-meta text-muted-foreground tabular-nums">
             <span>{FREQUENCY_LABEL[talent.frequency]}</span>
@@ -108,9 +108,9 @@ export function AbilityRow({
             <span aria-hidden>{expanded ? '▾' : '▸'}</span> {expanded ? 'Hide text' : 'Rules text'}
           </button>
           <div id={textId} className={`${expanded ? 'flex' : 'hidden'} flex-col gap-2 pb-1 lg:flex`}>
-            {body && <p className="text-ui whitespace-pre-line text-foreground/90">{body}</p>}
+            {body && <p className="rules-text whitespace-pre-line">{body}</p>}
             {destiny && (
-              <p className="text-ui whitespace-pre-line text-foreground/90">
+              <p className="rules-text whitespace-pre-line">
                 <span className="font-semibold">Destiny: </span>
                 {destiny}
               </p>

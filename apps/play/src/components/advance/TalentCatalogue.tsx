@@ -126,16 +126,16 @@ function TalentCard({ talent, character, known, onBuy }: { talent: PlayTalent; c
     .join(' · ')
 
   return (
-    <li className="flex flex-col gap-2 rounded-md border border-border bg-surface p-4">
+    <li className="flex flex-col gap-2 rounded-sm border border-border border-t-2 border-t-primary bg-surface p-4">
       <div className="flex items-baseline justify-between gap-3">
-        <h3 className="font-serif text-h4 font-semibold">{talent.title}</h3>
+        <h3 className="font-serif text-[21px] leading-7 font-semibold">{talent.title}</h3>
         {known && <span className="shrink-0 text-meta text-muted-foreground">Known</span>}
         <ExplainButtonForRoute talentId={talent.id} title={talent.title} />
       </div>
       {facts && <p className="text-meta text-muted-foreground capitalize">{facts}</p>}
       <details className="text-ui">
-        <summary className="flex min-h-11 cursor-pointer items-center">{firstSentence(talent.body)}</summary>
-        <p className="whitespace-pre-line text-muted-foreground">{talent.body}</p>
+        <summary className="flex min-h-11 cursor-pointer items-center rules-text">{firstSentence(talent.body)}</summary>
+        <p className="rules-text whitespace-pre-line text-muted-foreground">{talent.body}</p>
         {talent.destiny && (
           <p className="mt-2 whitespace-pre-line text-muted-foreground">
             <span className="font-semibold text-foreground">Destiny: </span>

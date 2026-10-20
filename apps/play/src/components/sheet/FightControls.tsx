@@ -63,16 +63,16 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
   const dpStep = play.dpPerComplication
 
   return (
-    <section aria-label="Fight controls" className="flex flex-col gap-3 font-sans text-control tabular-nums">
+    <section aria-label="Fight controls" className="flex flex-col gap-1 font-sans text-control">
       {/* Heart die and rush */}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <div className="flex min-h-11 flex-wrap items-center gap-x-4 gap-y-1.5">
         <div className="flex items-center gap-2">
           <span className="eyebrow">Heart die</span>
           {canEdit ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button size="compact" variant="line" className="px-3 font-semibold" aria-label={`Heart die d${hp.heartDieCurrent}. Set it by hand`}>
-                  d{hp.heartDieCurrent} <span aria-hidden="true">▾</span>
+                <Button size="compact" variant="line" className="px-2.5" aria-label={`Heart die d${hp.heartDieCurrent}. Set it by hand`}>
+                  <span className="font-hand text-[17px] font-normal">d{hp.heartDieCurrent}</span> <span aria-hidden="true">▾</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">
@@ -85,7 +85,7 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            <span className="font-semibold">d{hp.heartDieCurrent}</span>
+            <span className="font-hand text-[19px]">d{hp.heartDieCurrent}</span>
           )}
           {canEdit && (
             <Button
@@ -133,10 +133,10 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
       )}
 
       {/* Round */}
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex min-h-11 flex-wrap items-center gap-2">
         <span className="mr-1">
           <span className="eyebrow mr-2">Round</span>
-          <span className="font-semibold">{play.round}</span>
+          <span className="inline-block min-w-[22px] text-center font-hand text-[20px]">{play.round}</span>
         </span>
         {canEdit && (
           <>
@@ -151,7 +151,7 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
       </div>
 
       {/* DP */}
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex min-h-11 flex-wrap items-center gap-2">
         <Stepper label="DP" value={play.dp} canEdit={canEdit} min={0} max={10} onChange={(value) => void dispatch({ kind: 'dp:set', value })} />
         {canEdit && dpStep === 2 && (
           <Button size="compact" variant="line" className="px-3" disabled={play.dp >= 10} onClick={() => void dispatch({ kind: 'dp:set', value: Math.min(10, play.dp + 2) })}>
@@ -185,7 +185,7 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
               placeholder="0"
               value={burning?.amount ?? ''}
               onChange={(e) => setBurning((b) => (b ? { ...b, amount: e.target.value.replace(/\D/g, '').slice(0, 3) } : b))}
-              className="h-12 w-24 text-center font-semibold tabular-nums"
+              className="h-11 w-24 text-center [--field-size:22px]"
             />
             {burnAmount >= WOUND_AT && (
               <label className="flex flex-col gap-1 text-ui">
@@ -194,7 +194,7 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
                   placeholder="e.g. burned arm"
                   value={burning?.description ?? ''}
                   onChange={(e) => setBurning((b) => (b ? { ...b, description: e.target.value } : b))}
-                  className="h-12"
+                  className="h-11"
                 />
               </label>
             )}
@@ -225,7 +225,7 @@ function Stepper({
           −
         </Button>
       )}
-      <span className="min-w-6 text-center font-semibold" aria-label={`${label} ${value}`}>
+      <span className="min-w-[22px] text-center font-hand text-[20px]" aria-label={`${label} ${value}`}>
         {value}
       </span>
       {canEdit && (

@@ -29,12 +29,12 @@ export type SectionProps = {
   canEdit: boolean
 }
 
-/** A titled block of the sheet: the heading is the small uppercase label the design's wireframes show. */
+/** A titled block of the sheet: the section name in old small capitals behind an ember diamond, over a heavy ink rule. */
 export function Section({ title, action, children }: { title: string; action?: ReactNode; children: ReactNode }) {
   return (
     <section className="flex flex-col gap-2">
-      <div className="flex min-h-11 items-center justify-between gap-3 border-b border-border">
-        <h2 className="eyebrow">{title}</h2>
+      <div className="inkrule flex min-h-10 items-center justify-between gap-3">
+        <h2 className="eyebrow section-name">{title}</h2>
         {action}
       </div>
       {children}
@@ -124,7 +124,7 @@ export function SheetLayout({
           </TabsContent>
         </div>
 
-        <div className="fixed inset-x-0 bottom-0 z-30 border-t border-border bg-surface pb-[env(safe-area-inset-bottom)] lg:hidden">
+        <div className="fixed inset-x-0 bottom-0 z-30 border-t border-border bg-background pb-[env(safe-area-inset-bottom)] lg:hidden">
           <TabsList aria-label="Sheet sections" className="mx-auto max-w-xl border-b-0">
             {TABS.map((t) => (
               <TabsTrigger

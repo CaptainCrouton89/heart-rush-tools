@@ -15,7 +15,7 @@ export function IdentityHeader({ character, catalogue }: { character: Character;
         <img src={image} alt="" width={48} height={48} className="size-12 shrink-0 rounded-md border border-border bg-surface-muted object-cover" />
       )}
       <div className="min-w-0">
-        <h1 className="truncate font-serif text-h2-sm font-semibold">{name || 'Unnamed character'}</h1>
+        <h1 className="truncate font-serif text-[30px] leading-9 font-semibold">{name || 'Unnamed character'}</h1>
         <p className="truncate text-ui text-muted-foreground">
           {character.kin.titleSnapshot}
           {pronouns && <> · {pronouns}</>}
