@@ -1,8 +1,10 @@
 import { useId, useMemo, useState } from 'react'
 import type { PlayAbility, PlayChoice, PlayRace, PlaySubrace } from '@heartrush/rules-engine/catalogue'
+import type { Character } from '@heartrush/rules-engine/types'
 import { Input } from '@heartrush/ui/components/input'
 import { cn } from '@heartrush/ui/lib/utils'
 import { getCatalogue, raceImageUrl, rulebookUrl } from '~/catalogue'
+import { ExplainButton } from '~/components/ai/ExplainButton'
 import { Section } from '~/components/sheet/SheetLayout'
 import { labelClass, type UseDraft } from './use-draft'
 
@@ -37,6 +39,8 @@ export function StepKin({ draft }: { draft: UseDraft }) {
     update({ subraceId: next.id, kinChoices: Object.fromEntries(Object.entries(builder.kinChoices).filter(([k]) => keep.has(k))) })
   }
   const answer = (choiceId: string, value: string) => update((b) => ({ ...b, kinChoices: { ...b.kinChoices, [choiceId]: value } }))
+  // Only while the screen matches the stored draft, which is what the server explains.
+  const explain: ExplainFor = { characterId: draft.id, character: draft.status.kind === 'saved' ? draft.preview.character : null }
 
   return (
     <div className="flex flex-col gap-8">
@@ -48,7 +52,7 @@ export function StepKin({ draft }: { draft: UseDraft }) {
       {race && (
         <div className="flex flex-col gap-6">
           <RaceHeader race={race} />
-          <Abilities title={`${race.title} abilities`} abilities={race.abilities} />
+          <Abilities title={`${race.title} abilities`} abilities={race.abilities} explain={explain} />
           {race.choices.map((c) => (
             <Choice key={c.id} choice={c} value={builder.kinChoices[c.id] ?? ''} onChange={(v) => answer(c.id, v)} />
           ))}
@@ -80,7 +84,7 @@ export function StepKin({ draft }: { draft: UseDraft }) {
 
           {subrace && (
             <>
-              <Abilities title={`${subrace.title} abilities`} abilities={subrace.abilities} />
+              <Abilities title={`${subrace.title} abilities`} abilities={subrace.abilities} explain={explain} />
               {subrace.choices.map((c) => (
                 <Choice key={c.id} choice={c} value={builder.kinChoices[c.id] ?? ''} onChange={(v) => answer(c.id, v)} />
               ))}
@@ -149,25 +153,40 @@ function RaceHeader({ race }: { race: PlayRace }) {
   )
 }
 
-function Ability({ ability }: { ability: PlayAbility }) {
+/**
+ * What an ability row needs for **Explain** (ruling 13): the draft's id and the character the engine builds from it.
+ * The server explains the stored draft through `previewDraft`, which refuses a builder whose steps 1–5 are not all
+ * done, so the button shows only once the preview exists and the draft on screen is saved. The row's racial talent record id (`<builder.id>:<n>`) is
+ * taken from that preview, so it is the id the server's own preview gives the same row.
+ */
+type ExplainFor = { characterId: string; character: Character | null }
+
+const racialTalentId = (character: Character | null, ability: PlayAbility) =>
+  character?.talents.find((t) => t.category === 'racial' && t.catalogueId === null && t.titleSnapshot === ability.title && t.customText === ability.body)?.id ?? null
+
+function Ability({ ability, explain }: { ability: PlayAbility; explain: ExplainFor }) {
+  const talentId = racialTalentId(explain.character, ability)
   return (
     <li className="flex flex-col gap-1">
-      <span className="text-control font-medium">
-        {ability.title}
-        {ability.frequency && <span className="ml-2 text-meta font-normal text-muted-foreground">{FREQUENCY[ability.frequency]}</span>}
+      <span className="flex items-center justify-between gap-3">
+        <span className="text-control font-medium">
+          {ability.title}
+          {ability.frequency && <span className="ml-2 text-meta font-normal text-muted-foreground">{FREQUENCY[ability.frequency]}</span>}
+        </span>
+        {talentId && <ExplainButton characterId={explain.characterId} talentId={talentId} title={ability.title} />}
       </span>
       <p className="text-body-sm whitespace-pre-line text-muted-foreground">{ability.body}</p>
     </li>
   )
 }
 
-function Abilities({ title, abilities }: { title: string; abilities: PlayAbility[] }) {
+function Abilities({ title, abilities, explain }: { title: string; abilities: PlayAbility[]; explain: ExplainFor }) {
   if (abilities.length === 0) return null
   return (
     <Section title={title}>
       <ul className="flex flex-col gap-4">
         {abilities.map((a) => (
-          <Ability key={a.title} ability={a} />
+          <Ability key={a.title} ability={a} explain={explain} />
         ))}
       </ul>
     </Section>

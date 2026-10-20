@@ -8,16 +8,21 @@ import { NO_CONNECTION_TEXT, refusalReason } from '~/components/sheet/refusal-te
 import type { UseDraft } from './use-draft'
 
 /**
- * **Finish** on step 7: saves the draft, then `finishDraft` writes the character and its pending actions, and the
- * sheet opens. Disabled while the builder is incomplete or any pending action is refused (ruling 8). B1b replaces this
- * stub with the full Finish bar.
+ * **Finish** on step 7: saves the draft, then `finishDraft` writes the character and one event per pending action, and
+ * the sheet opens. Disabled, with the reason beside it, while the builder is incomplete or any pending action is
+ * refused (ruling 8; the refused rows and their Remove buttons are listed above the step).
  */
 export function FinishBar({ draft }: { draft: UseDraft }) {
   const finish = useServerFn(finishDraftFn)
   const navigate = useNavigate()
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const blocked = draft.preview.builderError !== null || draft.preview.invalid.length > 0
+  const { builderError, invalid } = draft.preview
+  const blockedBy = builderError
+    ? `An earlier step is incomplete: ${refusalReason(builderError.code, builderError.message)}`
+    : invalid.length > 0
+      ? `Remove the ${invalid.length === 1 ? 'change' : `${invalid.length} changes`} no longer allowed (listed at the top) to finish.`
+      : null
 
   async function onFinish() {
     setBusy(true)
@@ -45,9 +50,16 @@ export function FinishBar({ draft }: { draft: UseDraft }) {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-      <Button type="button" size="lg" className="self-start" disabled={blocked || busy} onClick={onFinish}>
-        {busy ? 'Finishing…' : 'Finish'}
-      </Button>
+      <div className="flex flex-wrap items-center gap-3">
+        <Button type="button" size="lg" disabled={blockedBy !== null || busy} onClick={onFinish}>
+          {busy ? 'Finishing…' : 'Finish'}
+        </Button>
+        {blockedBy && (
+          <p className="text-ui text-muted-foreground" aria-live="polite">
+            {blockedBy}
+          </p>
+        )}
+      </div>
     </div>
   )
 }

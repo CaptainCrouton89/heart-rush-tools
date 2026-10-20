@@ -1,5 +1,6 @@
 import { Input } from '@heartrush/ui/components/input'
 import { rulebookUrl } from '~/catalogue'
+import { ExplainAspectButton } from '~/components/ai/ExplainButton'
 import { Section } from '~/components/sheet/SheetLayout'
 import { sketchCharacter, type UseDraft } from './use-draft'
 
@@ -7,10 +8,16 @@ const GOOD_ASPECT_PATH = '/player/building-your-character#what-makes-a-good-aspe
 
 /**
  * Step 5 (Creating your Aspects): the aspects the character already has from race and age, locked, and the two the
- * player writes, with the rulebook's "What Makes a Good Aspect" guidance inline.
+ * player writes, with the rulebook's "What Makes a Good Aspect" guidance inline. **Explain this aspect** (ruling 14) sits on
+ * each row once the draft builds (`preview.character`) and is saved: the server explains the stored draft through `previewDraft`,
+ * and the aspect ids come from that same preview. A written aspect's button is keyed by its text, so editing the text
+ * drops an explanation of the old wording.
  */
 export function StepAspects({ draft }: { draft: UseDraft }) {
   const { builder, update } = draft
+  // Only while the screen matches the stored draft, which is what the server explains.
+  const built = draft.status.kind === 'saved' ? (draft.preview.character?.aspects ?? null) : null
+  const written = built?.filter((a) => a.source === 'created') ?? []
   const granted = (sketchCharacter(builder)?.aspects ?? []).filter((a) => a.source !== 'created')
   const write = (i: 0 | 1, text: string) =>
     update((b) => ({ ...b, createdAspects: i === 0 ? [text, b.createdAspects[1]] : [b.createdAspects[0], text] }))
@@ -25,8 +32,9 @@ export function StepAspects({ draft }: { draft: UseDraft }) {
             {granted.map((a) => (
               <li key={a.id} className="flex min-h-11 items-center justify-between gap-3 border-b border-border text-control">
                 <span>{a.text}</span>
-                <span className="shrink-0 text-meta text-muted-foreground">
+                <span className="flex shrink-0 items-center gap-1 text-meta text-muted-foreground">
                   {a.source === 'race' ? 'Race' : 'Age'} · rank {a.rank} · locked
+                  {built?.some((b) => b.id === a.id && b.text === a.text) && <ExplainAspectButton characterId={draft.id} aspectId={a.id} text={a.text} />}
                 </span>
               </li>
             ))}
@@ -36,16 +44,21 @@ export function StepAspects({ draft }: { draft: UseDraft }) {
 
       <Section title="Two aspects you write">
         <div className="flex flex-col gap-3">
-          {([0, 1] as const).map((i) => (
-            <Input
-              key={i}
-              aria-label={`Aspect ${i + 1}`}
-              className="h-11"
-              placeholder={i === 0 ? 'Chronic insomniac' : 'Kleptomaniac'}
-              value={builder.createdAspects[i]}
-              onChange={(e) => write(i, e.target.value)}
-            />
-          ))}
+          {([0, 1] as const).map((i) => {
+            const aspect = written[i]
+            return (
+              <div key={i} className="flex items-center gap-1">
+                <Input
+                  aria-label={`Aspect ${i + 1}`}
+                  className="h-11"
+                  placeholder={i === 0 ? 'Chronic insomniac' : 'Kleptomaniac'}
+                  value={builder.createdAspects[i]}
+                  onChange={(e) => write(i, e.target.value)}
+                />
+                {aspect && <ExplainAspectButton key={`${aspect.id}:${aspect.text}`} characterId={draft.id} aspectId={aspect.id} text={aspect.text} />}
+              </div>
+            )
+          })}
           <p className="text-meta text-muted-foreground">Each starts at rank 1.</p>
         </div>
       </Section>
