@@ -94,3 +94,8 @@ heart_rush/talents/spells/notes.md
 /apps/*/dist
 /apps/*/.wrangler
 /packages/*/local/
+
+# packages/content build output and its copies in the rules app
+/packages/content/dist
+/apps/rules/public/races
+/apps/rules/public/_content
