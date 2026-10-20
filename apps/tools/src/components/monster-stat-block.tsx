@@ -169,13 +169,13 @@ export function MonsterStatBlock({
   return (
     <article
       aria-labelledby={nameId}
-      data-print-keep={components.length === 0 ? '' : undefined}
+      data-print-keep={components.length === 0 ? true : undefined}
       className={cn(
         'rounded-md border border-border bg-surface px-5 py-5 font-serif text-body-sm text-foreground sm:px-6 print:border-0 print:px-0',
         className,
       )}
     >
-      <header className="flex items-start justify-between gap-4 border-b-2 border-primary pb-3">
+      <header className="flex flex-col items-start gap-3 border-b-2 border-primary pb-3 sm:flex-row sm:justify-between sm:gap-4">
         <div className="min-w-0">
           <H id={nameId} className="font-serif text-h3 font-semibold text-balance">
             {monster.name}
@@ -186,17 +186,12 @@ export function MonsterStatBlock({
       </header>
 
       <div className="mt-3 space-y-4">
-        {components.length === 0 ? (
-          <>
-            <MetaLine size={monster.size} movement={monster.movement} extra={extra} />
-            <div className="border-b border-border pb-3">
-              <StatLines m={monster} />
-            </div>
-            <AbilityList items={monster.specialAbilities} />
-          </>
-        ) : (
-          <MetaLine size={monster.size} movement={monster.movement} extra={extra} />
-        )}
+        {/* A multi-part monster's top-level fields are required by the schema and describe its main body. */}
+        <MetaLine size={monster.size} movement={monster.movement} extra={extra} />
+        <div className="border-b border-border pb-3">
+          <StatLines m={monster} />
+        </div>
+        <AbilityList items={monster.specialAbilities} />
 
         {auras.length > 0 && (
           <Section title="Environmental effects" level={sub}>
@@ -226,7 +221,7 @@ export function MonsterStatBlock({
             <ul className="list-disc space-y-1.5 pl-5 marker:text-muted-foreground">
               {phases.map((p, i) => (
                 <li key={i}>
-                  <em>{p.trigger}:</em> {withDice(p.changes.join('; '))}
+                  <em>{p.trigger.replace(/[.:]+$/, '')}:</em> {withDice(p.changes.join('; '))}
                 </li>
               ))}
             </ul>
