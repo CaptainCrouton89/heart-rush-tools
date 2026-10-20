@@ -8,6 +8,7 @@ import {
 } from '@heartrush/ui/components/dropdown-menu'
 import { Input } from '@heartrush/ui/components/input'
 import type { SectionProps } from './SheetLayout'
+import { Written } from '~/components/motion'
 
 const HEART_DICE: readonly HeartDie[] = [4, 6, 8, 10, 12, 20]
 const WOUND_AT = 10
@@ -72,7 +73,7 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button size="compact" variant="line" className="px-2.5" aria-label={`Heart die d${hp.heartDieCurrent}. Set it by hand`}>
-                  <span className="font-hand text-[17px] font-normal">d{hp.heartDieCurrent}</span> <span aria-hidden="true">▾</span>
+                  <span className="font-hand text-[17px] font-normal">d<Written value={hp.heartDieCurrent} /></span> <span aria-hidden="true">▾</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">
@@ -85,7 +86,7 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            <span className="font-hand text-[19px]">d{hp.heartDieCurrent}</span>
+            <span className="font-hand text-[19px]">d<Written value={hp.heartDieCurrent} /></span>
           )}
           {canEdit && (
             <Button
@@ -136,7 +137,7 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
       <div className="flex min-h-11 flex-wrap items-center gap-2">
         <span className="mr-1">
           <span className="eyebrow mr-2">Round</span>
-          <span className="inline-block min-w-[22px] text-center font-hand text-[20px]">{play.round}</span>
+          <span className="inline-block min-w-[22px] text-center font-hand text-[20px]"><Written value={play.round} /></span>
         </span>
         {canEdit && (
           <>
@@ -226,7 +227,7 @@ function Stepper({
         </Button>
       )}
       <span className="min-w-[22px] text-center font-hand text-[20px]" aria-label={`${label} ${value}`}>
-        {value}
+        <Written value={value} />
       </span>
       {canEdit && (
         <Button size="compact-icon"

@@ -1,6 +1,7 @@
 import type { Aspect } from '@heartrush/rules-engine/types'
 import type { SectionProps } from './SheetLayout'
 import { Section } from './SheetLayout'
+import { Written } from '~/components/motion'
 
 const SOURCE: Record<Aspect['source'], string> = { race: 'kin', age: 'age', created: 'created', purchased: 'bought', growth: 'growth' }
 
@@ -21,7 +22,7 @@ export function AspectsSection({ character, dispatch, canEdit }: SectionProps) {
           {character.aspects.map((a) => (
             <li key={a.id} className="flex min-h-11 items-center gap-3 border-b border-border py-1 last:border-b-0">
               <span className="w-6 shrink-0 text-center font-hand text-[19px]" aria-label={`Rank ${a.rank}`}>
-                {a.rank}
+                <Written value={a.rank} />
               </span>
               <div className="min-w-0 flex-1">
                 <p className="text-ui break-words">{a.text || <span className="text-muted-foreground">Unnamed aspect</span>}</p>

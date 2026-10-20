@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 import { HeadContent, Outlet, Scripts, createRootRoute } from '@tanstack/react-router'
-import type { ReactNode } from 'react'
+import { useEffect, type ReactNode } from 'react'
 import { appearanceScript } from '@heartrush/ui/appearance'
 import appCss from '~/styles/app.css?url'
 import { createServerFn } from '@tanstack/react-start'
@@ -31,8 +31,31 @@ export const Route = createRootRoute({
   shellComponent: RootDocument,
 })
 
+/**
+ * The press bloom (play design, Motion): on pointer down a button gets `data-pressed` and the touch point as `--px` /
+ * `--py`, which the stylesheet turns into a faint ember bloom from that point; it is removed on release.
+ */
+function usePressBloom() {
+  useEffect(() => {
+    const down = (e: PointerEvent) => {
+      const b = e.target instanceof Element ? e.target.closest<HTMLElement>('[data-slot="button"]') : null
+      if (!b || b.matches(':disabled')) return
+      const r = b.getBoundingClientRect()
+      b.style.setProperty('--px', `${((e.clientX - r.left) / r.width) * 100}%`)
+      b.style.setProperty('--py', `${((e.clientY - r.top) / r.height) * 100}%`)
+      b.setAttribute('data-pressed', '')
+      const up = () => (b.removeAttribute('data-pressed'), window.removeEventListener('pointerup', up), window.removeEventListener('pointercancel', up))
+      window.addEventListener('pointerup', up)
+      window.addEventListener('pointercancel', up)
+    }
+    document.addEventListener('pointerdown', down)
+    return () => document.removeEventListener('pointerdown', down)
+  }, [])
+}
+
 function RootLayout() {
   const { session } = Route.useRouteContext()
+  usePressBloom()
   return (
     <div className="flex min-h-dvh flex-col">
       <a

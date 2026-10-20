@@ -9,6 +9,7 @@ import { describeAction } from '~/components/sheet/HistoryList'
 import { Section } from '~/components/sheet/SheetLayout'
 import { BloodmarkPanel } from './BloodmarkPanel'
 import type { UseDraft } from './use-draft'
+import { Written } from '~/components/motion'
 
 /** The pending actions step 6 makes; step 7's are `gear:*`. */
 const isStep6 = (a: ClientAction) => a.kind === 'xp:buy' || a.kind === 'bloodmark:pick'
@@ -39,7 +40,7 @@ export function StepTalents({ draft }: { draft: UseDraft }) {
         You start with 0 talents and {awarded} XP. Spend some now or later.
       </p>
       <p className="text-ui" aria-live="polite">
-        <span className="font-hand text-[30px] leading-none">{xpRemaining(character)}</span>{' '}
+        <span className="font-hand text-[30px] leading-none"><Written value={xpRemaining(character)} /></span>{' '}
         <span className="text-muted-foreground">XP left to spend</span>
       </p>
 

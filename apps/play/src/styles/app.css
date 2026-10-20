@@ -247,3 +247,329 @@
   line-height: 24px;
   caret-color: var(--primary);
 }
+
+/* ---------------------------------------------------------------- motion
+   Only the thing that just changed moves or glows, and it settles within about three seconds; nothing bounces,
+   counts up or shifts the layout (play design, Motion). `.fresh` marks the changed element: components add it only
+   when a value changes after the page has loaded (`~/components/motion.tsx`). */
+@property --bloom {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+@layer components {
+  /* A number or word is written in left to right, arrives in ember with a soft glow and settles to its own colour.
+     `good` (a heal, a treated wound) arrives green; `bad` (damage, a wound) ember, held a little longer. */
+  .written {
+    display: inline-block;
+  }
+  .written.fresh {
+    animation:
+      write var(--write, 420ms) var(--write-delay, 0ms) cubic-bezier(0.4, 0.1, 0.3, 1) both,
+      settle 2600ms var(--write-delay, 0ms) ease-out both;
+  }
+  .written.fresh.bad {
+    animation-name: write, settle-bad;
+    animation-duration: var(--write, 420ms), 3200ms;
+  }
+  .written.fresh.good {
+    animation-name: write, settle-good;
+    animation-duration: var(--write, 420ms), 3200ms;
+  }
+  /* The old value, with a pen line drawn through it; it fades after the Undo window. */
+  .struck {
+    position: relative;
+    display: inline-block;
+    margin-right: 4px;
+    font-family: var(--font-hand);
+    font-size: 0.65em;
+    font-weight: 400;
+    color: var(--muted-foreground);
+    text-decoration: none;
+    transition: opacity 1200ms;
+  }
+  .struck.fading {
+    opacity: 0;
+  }
+  .struck svg {
+    position: absolute;
+    left: -3px;
+    top: 20%;
+    width: calc(100% + 6px);
+    height: 60%;
+    overflow: visible;
+  }
+  .struck path {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 100;
+    filter: url(#inkedge);
+    animation: draw 380ms cubic-bezier(0.4, 0.2, 0.3, 1) both;
+  }
+  .struck.good path {
+    stroke: var(--hp);
+  }
+  /* A new wound: the ring is drawn round the rank like a pen circle, then the rank and the description are written. */
+  .wound-ring.fresh circle {
+    animation:
+      draw 700ms cubic-bezier(0.5, 0.1, 0.3, 1) both,
+      ring-glow 2600ms ease-out both;
+  }
+  .wound-ring.fresh > .written {
+    --write-delay: 450ms;
+  }
+  .wound-description.fresh {
+    --write: calc(var(--len, 12) * 55ms);
+    --write-delay: 650ms;
+  }
+  /* A fully healed wound is crossed out and fades. */
+  .wound-healed .wound-description {
+    text-decoration: line-through 2px var(--primary);
+  }
+  .wound-healed {
+    animation: healed 1400ms 300ms ease-in both;
+  }
+  /* Marks fill from the centre with a brief glow; several in a row follow one another (`--d`). */
+  .ink-mark.fresh .fl {
+    animation: ink-in 650ms var(--d, 0ms) cubic-bezier(0.25, 0.8, 0.3, 1) both;
+  }
+  .ink-mark.fresh svg {
+    animation: mark-glow 2200ms var(--d, 0ms) ease-out both;
+  }
+  .ink-mark.fade .fl {
+    animation: ink-out 700ms var(--d, 0ms) ease-in both;
+  }
+  .tally path.fresh {
+    stroke: var(--primary);
+    animation:
+      draw 420ms cubic-bezier(0.4, 0.2, 0.3, 1) both,
+      ring-glow 2200ms ease-out both;
+  }
+  /* A button that has just become available (Advance) glows once. */
+  .glow-once:not(:disabled) {
+    animation: button-glow 2200ms ease-out both;
+  }
+  /* Inline strips and rows grow from zero height when they open. */
+  .reveal {
+    animation: grow-rows 360ms cubic-bezier(0.3, 0.6, 0.3, 1) both;
+  }
+  .reveal [data-slot='input'] {
+    animation: blank-in 520ms 120ms ease-out both;
+  }
+  /* The ♥ beats slowly at half HP or less, faster below a quarter: the only motion that repeats. */
+  .heart {
+    display: inline-block;
+    transform-origin: 50% 60%;
+  }
+  .low-hp .heart {
+    animation: beat 2400ms ease-in-out infinite;
+  }
+  .crit-hp .heart {
+    animation-duration: 1500ms;
+  }
+  /* Under the sticky bar: HP as a share of its max, easing to the new value. */
+  .hp-line {
+    position: absolute;
+    left: 0;
+    bottom: -1.5px;
+    height: 2px;
+    background: var(--primary);
+    opacity: 0.8;
+    transition: width 900ms cubic-bezier(0.3, 0.7, 0.2, 1);
+  }
+  /* Pressing a button: a faint ember bloom spreads from the touch point and the outline glows; never a solid fill.
+     `data-pressed` and the touch point (`--px`, `--py`) are set by the listener in the root layout. */
+  [data-slot='button'] {
+    position: relative;
+    isolation: isolate;
+    transition:
+      color 200ms 80ms,
+      box-shadow 900ms ease-out;
+  }
+  [data-slot='button']::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(
+      circle at var(--px, 50%) var(--py, 50%),
+      color-mix(in srgb, var(--primary) 18%, transparent) 0,
+      transparent var(--bloom)
+    );
+    transition:
+      opacity 800ms ease-out,
+      --bloom 0s 800ms;
+  }
+  [data-slot='button'][data-pressed]::before {
+    opacity: 1;
+    --bloom: 110%;
+    transition:
+      --bloom 520ms cubic-bezier(0.25, 0.6, 0.3, 1),
+      opacity 0s;
+  }
+  [data-slot='button'][data-pressed] {
+    box-shadow: 0 0 12px var(--glow);
+    transition: box-shadow 200ms;
+  }
+}
+@keyframes write {
+  from {
+    clip-path: inset(-20% 100% -20% 0);
+  }
+  to {
+    clip-path: inset(-20% -20% -20% 0);
+  }
+}
+@keyframes settle {
+  0%,
+  20% {
+    color: var(--primary);
+    text-shadow: 0 0 14px var(--glow), 0 0 3px var(--glow);
+    filter: blur(0.4px);
+  }
+  35% {
+    filter: blur(0);
+  }
+  100% {
+    text-shadow: 0 0 0 transparent;
+  }
+}
+@keyframes settle-bad {
+  0% {
+    color: var(--primary);
+    text-shadow: 0 0 14px var(--glow), 0 0 3px var(--glow);
+    filter: blur(0.4px);
+  }
+  20% {
+    filter: blur(0);
+  }
+  45% {
+    color: var(--primary);
+    text-shadow: 0 0 14px var(--glow), 0 0 3px var(--glow);
+  }
+  100% {
+    text-shadow: 0 0 0 transparent;
+  }
+}
+@keyframes settle-good {
+  0% {
+    color: var(--hp);
+    text-shadow: 0 0 14px var(--hpglow), 0 0 3px var(--hpglow);
+    filter: blur(0.4px);
+  }
+  20% {
+    filter: blur(0);
+  }
+  45% {
+    color: var(--hp);
+    text-shadow: 0 0 14px var(--hpglow), 0 0 3px var(--hpglow);
+  }
+  100% {
+    text-shadow: 0 0 0 transparent;
+  }
+}
+@keyframes draw {
+  from {
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes ring-glow {
+  0%,
+  30% {
+    filter: url(#inkedge) drop-shadow(0 0 4px var(--glow));
+  }
+  100% {
+    filter: url(#inkedge) drop-shadow(0 0 0 transparent);
+  }
+}
+@keyframes ink-in {
+  from {
+    transform: scale(0.2);
+    opacity: 0.2;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes ink-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+}
+@keyframes mark-glow {
+  0%,
+  25% {
+    filter: drop-shadow(0 0 3px var(--glow));
+  }
+  100% {
+    filter: drop-shadow(0 0 0 transparent);
+  }
+}
+@keyframes healed {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes button-glow {
+  0%,
+  25% {
+    box-shadow: 0 0 10px var(--glow);
+  }
+  100% {
+    box-shadow: 0 0 0 transparent;
+  }
+}
+@keyframes grow-rows {
+  from {
+    grid-template-rows: 0fr;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  to {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+}
+@keyframes blank-in {
+  from {
+    border-bottom-color: transparent;
+  }
+}
+@keyframes beat {
+  0%,
+  30%,
+  100% {
+    transform: scale(1);
+  }
+  8% {
+    transform: scale(1.16);
+  }
+  16% {
+    transform: scale(1);
+  }
+  22% {
+    transform: scale(1.08);
+  }
+}
+/* Reduce motion: every final state at once (no write-in delays, no beat, no bloom). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

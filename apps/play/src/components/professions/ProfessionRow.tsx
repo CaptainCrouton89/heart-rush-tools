@@ -1,7 +1,8 @@
 import { professionProgress } from '@heartrush/rules-engine/professions'
 import type { Character, Profession } from '@heartrush/rules-engine/types'
 import { Button } from '@heartrush/ui/components/button'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
+import { useChange, useMarkChange, Written } from '~/components/motion'
 import type { ActionDraft } from '~/components/sheet/use-character'
 
 /** "2 Apprentice → Journeyman"; rank 0 has no name, and the table names nothing past Legendary. */
@@ -45,6 +46,8 @@ export function ProfessionRow({
   const missionDone = profession.missions >= 1
   const name = profession.name || 'Unnamed profession'
 
+  // Advance glows once when it becomes available.
+  const ready = useChange(p.canAdvance)
   const left: string[] = []
   if (!p.highest) {
     const challenges = p.challengesNeeded - profession.challenges
@@ -60,7 +63,9 @@ export function ProfessionRow({
         <h3 className="font-serif text-[19px] leading-6 font-semibold">{name}</h3>
         <span className="inline-flex items-baseline gap-1.5" aria-label={`Rank ${p.rank}, added to ${name} rolls`}>
           <small className="text-meta text-muted-foreground">rank</small>
-          <span className="font-hand text-[30px] leading-none">+{p.rank}</span>
+          <span className="font-hand text-[30px] leading-none">
+            +<Written value={p.rank} />
+          </span>
         </span>
       </div>
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 text-ui">
@@ -110,7 +115,13 @@ export function ProfessionRow({
           {canEdit && (
             <div className="mt-1.5 flex items-center justify-end gap-3">
               <span className="mr-auto text-meta text-muted-foreground">{stillOwed(left)}</span>
-              <Button size="compact" variant="line-primary" type="button" disabled={!p.canAdvance} onClick={() => void dispatch({ kind: 'profession:advance', professionId })}>
+              <Button
+                key={ready.n}
+                size="compact"
+                variant="line-primary"
+                type="button"
+                className={ready.n > 0 && p.canAdvance ? 'glow-once' : undefined}
+                disabled={!p.canAdvance} onClick={() => void dispatch({ kind: 'profession:advance', professionId })}>
                 Advance to rank {p.rank + 1}
               </Button>
             </div>
@@ -151,11 +162,12 @@ function Marks({
   onMark?: () => void
 }) {
   const shown = Math.max(needed, done)
+  const change = useMarkChange(done)
   const marks =
     shown > 9 ? (
-      <Tally done={done} />
+      <Tally done={done} fresh={(i) => change(i).fresh} />
     ) : (
-      Array.from({ length: shown }, (_, i) => <Diamond key={i} on={i < done} next={i === done} />)
+      Array.from({ length: shown }, (_, i) => <Diamond key={i} on={i < done} next={i === done} change={change(i)} />)
     )
   const body = (
     <>
@@ -177,9 +189,13 @@ function Marks({
   )
 }
 
-function Diamond({ on, next }: { on: boolean; next: boolean }) {
+function Diamond({ on, next, change }: { on: boolean; next: boolean; change: { fresh: boolean; fading: boolean; delay: number } }) {
   return (
-    <span className={`ink-mark${on ? ' on' : ''}${next ? ' next' : ''}`} aria-hidden="true">
+    <span
+      className={`ink-mark${on ? ' on' : ''}${next ? ' next' : ''}${change.fresh ? ' fresh' : ''}${change.fading ? ' fade' : ''}`}
+      style={change.delay ? ({ '--d': `${change.delay}ms` } as CSSProperties) : undefined}
+      aria-hidden="true"
+    >
       <svg viewBox="0 0 16 16" width={15} height={15}>
         <path className="ol" d="M8 1.6 14.4 8 8 14.4 1.6 8Z" />
         <path className="fl" d="M8 4 12 8 8 12 4 8Z" />
@@ -188,14 +204,19 @@ function Diamond({ on, next }: { on: boolean; next: boolean }) {
   )
 }
 
-function Tally({ done }: { done: number }) {
+function Tally({ done, fresh }: { done: number; fresh: (i: number) => boolean }) {
   if (done === 0) return <span className="text-meta text-muted-foreground">none yet</span>
   const groups = Array.from({ length: Math.ceil(done / 5) }, (_, g) => {
     const strokes = Math.min(5, done - g * 5)
     return (
       <svg key={g} width={20} height={18} viewBox="0 0 20 18">
         {Array.from({ length: strokes }, (_, k) =>
-          k < 4 ? <path key={k} pathLength={100} d={`M${2 + k * 5} 2.5 L${2.6 + k * 5} 15.5`} /> : <path key={k} pathLength={100} d="M-1 12.5 L19.5 4" />,
+          <path
+            key={k}
+            pathLength={100}
+            className={fresh(g * 5 + k) ? 'fresh' : undefined}
+            d={k < 4 ? `M${2 + k * 5} 2.5 L${2.6 + k * 5} 15.5` : 'M-1 12.5 L19.5 4'}
+          />,
         )}
       </svg>
     )

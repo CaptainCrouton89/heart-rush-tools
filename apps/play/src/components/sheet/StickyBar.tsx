@@ -1,6 +1,7 @@
 import type { Character } from '@heartrush/rules-engine/types'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@heartrush/ui/components/dropdown-menu'
 import type { Derived } from '~/server/characters'
+import { Written } from '~/components/motion'
 
 /** A page the sheet's header links to: Advance, Edit, Campaign (design, "Sheet, desktop"). */
 export type SheetLink = { label: string; href: string }
@@ -24,16 +25,24 @@ export function hpColorClass(current: number, effectiveMax: number): string {
 export function StickyBar({ character, derived, onHp, links = [] }: { character: Character; derived: Derived; onHp?: () => void; links?: SheetLink[] }) {
   const { current } = character.hp
   const name = character.identity.name || 'Unnamed character'
+  const max = derived.effectiveMaxHp
+  // The ♥ beats at half HP or less, faster below a quarter (the HP colour rule's thresholds).
+  const beat = current <= max / 2 ? (current <= 0 || current < max / 4 ? 'low-hp crit-hp' : 'low-hp') : ''
+  const share = max > 0 ? Math.min(100, Math.max(0, (current / max) * 100)) : 0
   const nameClass = 'min-w-0 truncate font-serif text-[22px] leading-7 font-semibold'
   const hp = (
     <>
-      <span className={`font-hand text-[28px] leading-none font-bold ${hpColorClass(current, derived.effectiveMaxHp)}`}>{current}</span>
-      <span className="font-hand text-[17px] text-muted-foreground">/ {derived.effectiveMaxHp}</span>
+      <span className={`font-hand text-[28px] leading-none font-bold ${hpColorClass(current, derived.effectiveMaxHp)}`}>
+        <Written value={current} goodWhen="higher" strike className="[--write-delay:300ms]" />
+      </span>
+      <span className="font-hand text-[17px] text-muted-foreground">
+        / <Written value={derived.effectiveMaxHp} goodWhen="higher" />
+      </span>
       <span className="text-meta text-muted-foreground">HP</span>
     </>
   )
   return (
-    <div className="inkrule sticky top-14 z-20 bg-background/95 backdrop-blur md:top-16">
+    <div className={`inkrule sticky top-14 z-20 bg-background/95 backdrop-blur md:top-16 ${beat}`}>
       <div className="mx-auto flex min-h-12 w-full max-w-6xl items-center gap-3 px-5 md:px-8">
         <span className="flex min-w-0 flex-1">
           {links.length === 0 ? (
@@ -61,7 +70,7 @@ export function StickyBar({ character, derived, onHp, links = [] }: { character:
           )}
         </span>
         <span className="shrink-0 font-hand text-[19px]" aria-label={`Heart die d${character.hp.heartDieCurrent}`}>
-          d{character.hp.heartDieCurrent} <span aria-hidden="true" className="text-primary">♥</span>
+          d<Written value={character.hp.heartDieCurrent} strike /> <span aria-hidden="true" className="heart text-primary">♥</span>
         </span>
         {onHp ? (
           <button
@@ -87,6 +96,8 @@ export function StickyBar({ character, derived, onHp, links = [] }: { character:
           </nav>
         )}
       </div>
+      {/* HP as a share of max, easing to the new value. */}
+      <span aria-hidden="true" className="hp-line" style={{ width: `${share}%` }} />
     </div>
   )
 }

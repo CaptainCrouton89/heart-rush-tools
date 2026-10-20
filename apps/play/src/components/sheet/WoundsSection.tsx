@@ -1,4 +1,5 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useState, type CSSProperties, type FormEvent } from 'react'
+import { useArrivals, Written } from '~/components/motion'
 import type { Wound } from '@heartrush/rules-engine/types'
 import { Button } from '@heartrush/ui/components/button'
 import { Input } from '@heartrush/ui/components/input'
@@ -23,6 +24,8 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
   const heading = derived.woundPenalty > 0 ? `Wounds (−${derived.woundPenalty} max HP)` : 'Wounds'
   const fastHealer = character.identity.ageBenefits.includes('fast-healer')
   const adding = open?.kind === 'add'
+  const arrived = useArrivals(character.wounds.map((w) => w.id))
+  const rows = useDeparted(character.wounds)
 
   return (
     <Section
@@ -36,7 +39,7 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
       }
     >
       {fastHealer && <p className="text-ui text-muted-foreground">Fast Healer: wounds heal twice as fast.</p>}
-      {character.wounds.length === 0 && !adding ? (
+      {rows.length === 0 && !adding ? (
         <p className="text-ui text-muted-foreground">No wounds.</p>
       ) : (
         <ul className="flex flex-col">
@@ -50,7 +53,20 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
               />
             </li>
           )}
-          {character.wounds.map((w) => {
+          {rows.map(({ wound: w, gone }) => {
+            if (gone) {
+              return (
+                <li key={w.id} aria-hidden="true" className="wound-healed flex min-h-12 items-center gap-x-3 border-b border-border last:border-b-0">
+                  <span className="wound-ring">
+                    <WoundRing />
+                    <span>{w.rank}</span>
+                  </span>
+                  <span className="wound-description min-w-0 flex-1 truncate font-hand text-[17px]">{w.description}</span>
+                </li>
+              )
+            }
+            const fresh = arrived.has(w.id)
+            const rank = fresh ? <span className="written fresh">{w.rank}</span> : <Written value={w.rank} goodWhen="lower" strike />
             const editing = open?.kind === 'edit' && open.id === w.id
             const treating = open?.kind === 'treat' && open.id === w.id
             if (editing) {
@@ -72,20 +88,29 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
                 {canEdit ? (
                   <button
                     type="button"
-                    className="wound-ring rounded-full after:absolute after:top-1/2 after:left-1/2 after:size-11 after:-translate-1/2 after:content-[''] hover:bg-surface-muted"
+                    className={`wound-ring${fresh ? ' fresh' : ''} rounded-full after:absolute after:top-1/2 after:left-1/2 after:size-11 after:-translate-1/2 after:content-[''] hover:bg-surface-muted`}
                     aria-label={`Edit wound of rank ${w.rank}`}
                     onClick={() => setOpen({ kind: 'edit', id: w.id })}
                   >
                     <WoundRing />
-                    <span>{w.rank}</span>
+                    {rank}
                   </button>
                 ) : (
-                  <span className="wound-ring">
+                  <span className={`wound-ring${fresh ? ' fresh' : ''}`}>
                     <WoundRing />
-                    <span>{w.rank}</span>
+                    {rank}
                   </span>
                 )}
-                <span className="min-w-0 flex-1 truncate font-hand text-[17px]">{w.description || <span className="font-sans text-meta text-muted-foreground">No description</span>}</span>
+                {w.description ? (
+                  <span
+                    className={`min-w-0 flex-1 truncate font-hand text-[17px]${fresh ? ' wound-description written fresh' : ''}`}
+                    style={fresh ? ({ '--len': w.description.length } as CSSProperties) : undefined}
+                  >
+                    {w.description}
+                  </span>
+                ) : (
+                  <span className="min-w-0 flex-1 text-meta text-muted-foreground">No description</span>
+                )}
                 {w.treated ? (
                   <span className="shrink-0 text-meta text-muted-foreground">treated ✓</span>
                 ) : (
@@ -112,6 +137,30 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
       )}
     </Section>
   )
+}
+
+/**
+ * The wounds to list: the current ones, plus each wound that has just left the list (healed by treatment, or removed)
+ * kept at its old place for 1.7 s so it can be crossed out and fade.
+ */
+function useDeparted(wounds: readonly Wound[]): { wound: Wound; gone: boolean }[] {
+  const [s, setS] = useState<{ last: readonly Wound[]; gone: { wound: Wound; index: number }[] }>({ last: wounds, gone: [] })
+  let state = s
+  if (s.last !== wounds) {
+    const ids = new Set(wounds.map((w) => w.id))
+    const left = s.last.flatMap((wound, index) => (ids.has(wound.id) ? [] : [{ wound, index }]))
+    state = { last: wounds, gone: [...s.gone.filter((g) => !ids.has(g.wound.id)), ...left] }
+    setS(state)
+  }
+  const goneCount = state.gone.length
+  useEffect(() => {
+    if (goneCount === 0) return
+    const t = setTimeout(() => setS((x) => ({ ...x, gone: [] })), 1700)
+    return () => clearTimeout(t)
+  }, [goneCount])
+  const rows = wounds.map((wound) => ({ wound, gone: false }))
+  for (const g of [...state.gone].sort((a, b) => a.index - b.index)) rows.splice(Math.min(g.index, rows.length), 0, { wound: g.wound, gone: true })
+  return rows
 }
 
 /** The pen circle drawn around a wound's rank. */

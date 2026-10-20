@@ -4,6 +4,7 @@ import type { Talent } from '@heartrush/rules-engine/types'
 import { Button } from '@heartrush/ui/components/button'
 import { resolveRef, rulebookUrl, type PlayCatalogue } from '~/catalogue'
 import type { SectionProps } from '../SheetLayout'
+import { Written } from '~/components/motion'
 
 const FREQUENCY_LABEL: Record<Talent['frequency'], string> = {
   minor: 'minor',
@@ -66,7 +67,12 @@ export function AbilityRow({
             <span>{FREQUENCY_LABEL[talent.frequency]}</span>
             {minor && (
               <span className={cost > rushPoints ? 'text-primary' : undefined}>
-                · cost {cost} rush{talent.usesThisFight > 0 && ` (used ${talent.usesThisFight}× this fight)`}
+                · cost {cost} rush{talent.usesThisFight > 0 && (
+                  <>
+                    {' '}
+                    (used <Written value={talent.usesThisFight} className="font-hand text-[15px]" />× this fight)
+                  </>
+                )}
               </span>
             )}
             {used && (
