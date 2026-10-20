@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { monsterSchema } from '~/monster/schema'
+import { generatedMonsterSchema } from '~/monster/schema'
 
 export const roleSchema = z.enum(['minion', 'standard', 'elite', 'boss', 'legendary'])
 export type Role = z.infer<typeof roleSchema>
@@ -41,7 +41,7 @@ export const encounterSchema = z.object({
       z.object({
         count: z.number().int().min(1),
         role: roleSchema,
-        statBlock: monsterSchema,
+        statBlock: generatedMonsterSchema,
       }),
     )
     .min(1),

@@ -54,7 +54,7 @@ const attackDefenseSchema = z.union([
 
 const baseMonsterSchema = z.object({
   name: z.string().describe("The monster's name"),
-  subtitle: z.string().optional().describe("Optional subtitle or description"),
+  subtitle: z.string().optional().describe("Optional subtitle, such as an epithet or title"),
   size: z
     .string()
     .regex(/^(S|M|L[0-9]*)$/)
@@ -130,12 +130,29 @@ const componentSchema = baseMonsterSchema.extend({
     .describe("Whether damage is shared across all instances"),
 });
 
-export const monsterSchema = baseMonsterSchema.extend({
+const { name, subtitle, ...stats } = baseMonsterSchema.shape;
+
+/** What the model writes. `description` comes right after the name so it is written before the numbers. */
+export const monsterSchema = z.object({
+  name,
+  subtitle,
+  // Optional so encounters saved before descriptions existed still parse; the prompts ask for it every time.
+  description: z
+    .string()
+    .optional()
+    .describe(
+      "2-4 sentences for the GM to read aloud or paraphrase: what the creature looks like, how it behaves, and how it fights"
+    ),
+  ...stats,
+  image: z.string().optional().describe("Stored illustration URL added by the app; preserve existing URLs but never invent one"),
   components: z
     .array(componentSchema)
     .optional()
     .describe("For multi-part monsters like The Skittering Horror"),
 });
+
+/** What a model run writes: a required description and no app-assigned image URL. Stored monsters keep both fields optional. */
+export const generatedMonsterSchema = monsterSchema.omit({ image: true }).required({ description: true });
 
 export const analysisSchema = z.object({
   analysis: z

@@ -142,19 +142,58 @@ function CopyMarkdownButton({ monster }: { monster: Monster }) {
   )
 }
 
+/** Image generation is still running, or it failed without affecting the stat block. */
+export type MonsterImageStatus = 'pending' | 'unavailable'
+
+/** The illustration and its generation status are omitted from print. */
+function MonsterImage({ name, url, status }: { name: string; url?: string; status?: MonsterImageStatus }) {
+  const frame = 'aspect-[3/4] w-full rounded-md border border-border'
+  if (url) {
+    return (
+      <figure className="print-hidden w-full max-w-72 space-y-1.5">
+        <img src={url} alt={`Illustration of ${name}`} className={cn(frame, 'bg-surface-muted object-cover')} />
+        <a
+          href={url}
+          download={`${name.replace(/[^\w -]+/g, '').trim() || 'monster'}.${url.split(/[?#]/)[0].split('.').pop()}`}
+          className="print-hidden block font-sans text-meta text-primary underline underline-offset-2"
+        >
+          Download image
+        </a>
+      </figure>
+    )
+  }
+  if (!status) return null
+  return (
+    <div
+      role="status"
+      className={cn(
+        frame,
+        'print-hidden flex max-w-72 items-center justify-center bg-surface-muted px-3 text-center font-sans text-meta text-muted-foreground',
+        status === 'pending' && 'motion-safe:animate-pulse',
+      )}
+    >
+      {status === 'pending' ? 'Generating image…' : 'Image unavailable'}
+    </div>
+  )
+}
+
 /**
  * One monster laid out as a printed Heart Rush stat block (Monster Creation Guide,
  * "Understanding the Monster Statblock"). Self-contained, so a page can render several:
  * each block owns its copy button and heading ids. `headingLevel` is the level of the
  * monster's name (default h2); its sections and components sit one level below.
+ * The description shows under the subtitle; `monster.image` shows beside the stats, and `imageStatus`
+ * shows a placeholder while there is no image yet.
  */
 export function MonsterStatBlock({
   monster,
   headingLevel = 2,
+  imageStatus,
   className,
 }: {
   monster: Monster
   headingLevel?: HeadingLevel
+  imageStatus?: MonsterImageStatus
   className?: string
 }) {
   const nameId = useId()
@@ -171,7 +210,7 @@ export function MonsterStatBlock({
       aria-labelledby={nameId}
       data-print-keep={components.length === 0 ? true : undefined}
       className={cn(
-        'rounded-md border border-border bg-surface px-5 py-5 font-serif text-body-sm text-foreground sm:px-6 print:border-0 print:px-0',
+        '@container rounded-md border border-border bg-surface px-5 py-5 font-serif text-body-sm text-foreground sm:px-6 print:border-0 print:px-0',
         className,
       )}
     >
@@ -181,11 +220,13 @@ export function MonsterStatBlock({
             {monster.name}
           </H>
           {monster.subtitle && <p className="italic text-muted-foreground">{monster.subtitle}</p>}
+          {monster.description && <p className="mt-2 text-pretty">{monster.description}</p>}
         </div>
         <CopyMarkdownButton monster={monster} />
       </header>
 
-      <div className="mt-3 space-y-4">
+      <div className={cn('mt-3 grid items-start gap-6', (monster.image || imageStatus) && '@[48rem]:grid-cols-[minmax(0,1fr)_14rem] print:!grid-cols-1')}>
+      <div className="min-w-0 space-y-4">
         {/* A multi-part monster's top-level fields are required by the schema and describe its main body. */}
         <MetaLine size={monster.size} movement={monster.movement} extra={extra} />
         <div className="border-b border-border pb-3">
@@ -234,6 +275,8 @@ export function MonsterStatBlock({
             <p>{withDice(monster.notes)}</p>
           </aside>
         )}
+      </div>
+      <MonsterImage name={monster.name} url={monster.image} status={imageStatus} />
       </div>
     </article>
   )

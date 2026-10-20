@@ -8,6 +8,7 @@ export const generateMarkdown = (monster: MonsterStatBlock): string => {
     // Multi-part monster
     markdown = `### ${monster.name}\n`;
     if (monster.subtitle) markdown += `*${monster.subtitle}*\n\n`;
+    if (monster.description) markdown += `${monster.description}\n\n`;
 
     if (monster.notes) markdown += `${monster.notes}\n\n`;
 
@@ -70,6 +71,7 @@ export const generateMarkdown = (monster: MonsterStatBlock): string => {
     // Single monster
     markdown = `#### ${monster.name}\n`;
     if (monster.subtitle) markdown += `*${monster.subtitle}*\n`;
+    if (monster.description) markdown += `\n${monster.description}\n\n`;
 
     markdown += `**Size**: ${monster.size}`;
     if (monster.movement?.cannotBePushed) {

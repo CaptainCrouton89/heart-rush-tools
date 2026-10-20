@@ -50,6 +50,7 @@ export const MONSTER_RULES = `# Heart Rush Monster Creation Guidelines
 ### Basic Template
 **Name**: [Monster Name]
 *[Optional Subtitle]*
+[Description: 2-4 sentences on what the creature looks like, how it behaves, and how it fights. Always write one.]
 **Size**: [S/M/L/L2/L3/etc.]
 [Might]/[Agility]/[Cunning]/[Presence] **HD** [d4-d20] **HP** [Number] **w** [Threshold or /]
 **A** +[Bonus] **D** +[Bonus]
@@ -248,4 +249,13 @@ Generate a complete Heart Rush monster statblock based on this concept:
 Concept: ${concept}
 ${enhancedConcept}
 
-Create a monster that matches the complexity of the concept. Include appropriate special abilities that reflect the thematic elements and tactical role described, if any.`
+Create a monster that matches the complexity of the concept. Include appropriate special abilities that reflect the thematic elements and tactical role described, if any.
+
+Always fill in "description": 2-4 sentences on what the creature looks like, how it behaves, and how it fights, written so a GM can read it aloud or paraphrase it at the table.`
+
+/** The fixed style for every monster illustration: the rulebook's warm-paper look. */
+const IMAGE_STYLE =
+  'Style: an ink-and-wash fantasy bestiary illustration, as in an old naturalist\'s field guide. Loose sepia and black ink linework with soft watercolour washes in muted earth tones and a touch of deep red, on warm cream paper. The creature alone, full body, on a plain paper background. No text, no lettering, no border, no frame.'
+
+/** The image model's prompt: the monster's description plus the fixed style. */
+export const monsterImagePrompt = (description: string) => `${description}\n\n${IMAGE_STYLE}`

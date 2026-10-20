@@ -3,7 +3,8 @@ import { createFileRoute, getRouteApi } from '@tanstack/react-router'
 import { Button } from '@heartrush/ui/components/button'
 import { Textarea } from '@heartrush/ui/components/textarea'
 import { Alert, AlertDescription, AlertTitle } from '@heartrush/ui/components/alert'
-import { MonsterStatBlock } from '~/components/monster-stat-block'
+import { cn } from '@heartrush/ui/lib/utils'
+import { MonsterStatBlock, type MonsterImageStatus } from '~/components/monster-stat-block'
 import { PageShell } from '~/components/page-shell'
 import { monsterSchema, type MonsterStatBlock as Monster } from '~/monster/schema'
 import type { MonsterEvent } from '~/routes/api/monster'
@@ -33,9 +34,12 @@ function MonsterGeneratorPage() {
   const [stage, setStage] = useState<keyof typeof STAGE_LABEL | null>(null)
   const [elapsed, setElapsed] = useState(0)
   const [monster, setMonster] = useState<Monster | null>(null)
+  const [withImage, setWithImage] = useState(false)
+  const [imageStatus, setImageStatus] = useState<MonsterImageStatus | undefined>(undefined)
   const [error, setError] = useState<{ message: string; signIn?: boolean } | null>(null)
-  const loading = stage !== null
+  const [loading, setLoading] = useState(false)
   const controllerRef = useRef<AbortController | null>(null)
+  const hasImage = Boolean(monster && (monster.image || imageStatus))
 
   // Leaving the page aborts the request, which stops the runs on the server.
   useEffect(() => () => controllerRef.current?.abort(), [])
@@ -48,18 +52,22 @@ function MonsterGeneratorPage() {
   }, [loading])
 
   async function generate() {
+    if (controllerRef.current) return
     if (!concept.trim()) return setError({ message: 'Please enter a monster concept' })
     setError(null)
     setMonster(null)
+    setImageStatus(undefined)
     setStage('analyzing')
+    setLoading(true)
     const controller = new AbortController()
     controllerRef.current = controller
+    let receivedMonster = false
     try {
       const response = await fetch('/api/monster', {
         signal: controller.signal,
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ concept }),
+        body: JSON.stringify({ concept, image: withImage }),
       })
       if (!response.ok || !response.body) {
         const body = (await response.json().catch(() => null)) as { error?: string } | null
@@ -77,15 +85,34 @@ function MonsterGeneratorPage() {
         for (const line of lines.filter(Boolean)) {
           const event = JSON.parse(line) as MonsterEvent
           if (event.type === 'stage') setStage(event.stage)
-          else if (event.type === 'result') setMonster(monsterSchema.parse(event.monster))
+          else if (event.type === 'result') {
+            setMonster(monsterSchema.parse(event.monster))
+            receivedMonster = true
+            // The stat block is done; what is left of the stream is the illustration.
+            setStage(null)
+            if (withImage) setImageStatus('pending')
+          } else if (event.type === 'image') {
+            if (event.url) {
+              const image = event.url
+              setMonster((m) => (m ? { ...m, image } : m))
+              setImageStatus(undefined)
+            } else setImageStatus('unavailable')
+          } else if (receivedMonster) setImageStatus('unavailable')
           else setError({ message: event.message, signIn: event.signIn })
         }
       }
     } catch (e) {
       if (controller.signal.aborted) return
-      setError({ message: e instanceof Error ? e.message : 'Failed to generate monster' })
+      if (receivedMonster) setImageStatus('unavailable')
+      else setError({ message: e instanceof Error ? e.message : 'Failed to generate monster' })
     } finally {
-      if (!controller.signal.aborted) setStage(null)
+      if (!controller.signal.aborted) {
+        controllerRef.current = null
+        setLoading(false)
+        setStage(null)
+        // A stream that ended without an image event (dropped connection) leaves no image to wait for.
+        setImageStatus((s) => (s === 'pending' ? 'unavailable' : s))
+      }
     }
   }
 
@@ -96,7 +123,7 @@ function MonsterGeneratorPage() {
       description="Describe a creature and get a Heart Rush stat block, from a single minion to a multi-part boss."
     >
       {/* DOM order is form, result, examples: on a phone the result lands right under the button. */}
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:grid-rows-[auto_1fr] lg:gap-x-12">
+      <div className={cn('grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-x-12', !hasImage && 'lg:grid-rows-[auto_1fr]')}>
         <div className="print-hidden space-y-8 lg:col-start-1 lg:row-start-1">
           {!signedIn && (
             <Alert>
@@ -154,6 +181,41 @@ function MonsterGeneratorPage() {
                 </AlertDescription>
               </Alert>
             )}
+            <div className="flex items-center justify-between gap-4 py-1">
+              <span className="space-y-0.5">
+                <span id="image-toggle-label" className="block text-ui font-semibold">
+                  Generate image
+                </span>
+                <span id="image-toggle-hint" className="block text-meta text-muted-foreground">
+                  Generates an illustration after the stat block is ready.
+                </span>
+              </span>
+              <button
+                type="button"
+                role="switch"
+                aria-checked={withImage}
+                aria-labelledby="image-toggle-label"
+                aria-describedby="image-toggle-hint"
+                onClick={() => setWithImage((v) => !v)}
+                disabled={loading}
+                className="inline-flex size-11 shrink-0 items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    'inline-flex h-6 w-full items-center rounded-md border transition-colors',
+                    withImage ? 'border-primary bg-primary' : 'border-input bg-surface-muted',
+                  )}
+                >
+                  <span
+                    className={cn(
+                      'inline-block size-4 rounded-sm transition-transform',
+                      withImage ? 'translate-x-6 bg-primary-foreground' : 'translate-x-1 bg-muted-foreground',
+                    )}
+                  />
+                </span>
+              </button>
+            </div>
             <Button type="submit" className="w-full" disabled={loading || !signedIn || !concept.trim()}>
               {loading ? 'Generating…' : 'Generate monster'}
             </Button>
@@ -171,10 +233,15 @@ function MonsterGeneratorPage() {
 
         <section
           aria-label="Generated monster"
-          className="min-w-0 lg:sticky lg:top-24 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start"
+          className={cn(
+            'min-w-0',
+            hasImage
+              ? 'lg:col-span-2 lg:row-start-2'
+              : 'lg:sticky lg:top-24 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start',
+          )}
         >
           {monster ? (
-            <MonsterStatBlock monster={monster} />
+            <MonsterStatBlock monster={monster} imageStatus={imageStatus} />
           ) : (
             <div className="print-hidden flex min-h-40 items-center justify-center rounded-md border border-dashed border-border px-6 py-10 text-center">
               <p className="text-ui text-muted-foreground">
@@ -184,7 +251,7 @@ function MonsterGeneratorPage() {
           )}
         </section>
 
-        <div className="print-hidden space-y-8 lg:col-start-1 lg:row-start-2">
+        <div className={cn('print-hidden space-y-8', hasImage ? 'lg:col-start-2 lg:row-start-1' : 'lg:col-start-1 lg:row-start-2')}>
           <section aria-labelledby="examples-heading" className="space-y-2">
             <h2 id="examples-heading" className="eyebrow">
               Example concepts

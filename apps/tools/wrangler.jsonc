@@ -13,11 +13,13 @@
       "migrations_dir": "migrations"
     }
   ],
+  "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "heartrush-tools-images" }],
   "triggers": { "crons": ["0 4 * * *"] },
   "vars": {
     "CROUTER_CLIENT_ID": "w5p61c34rt3p",
     "CROUTER_ISSUER": "https://account.northlight.ai",
-    "APP_HOST": "tools.heartrush.party"
+    "APP_HOST": "tools.heartrush.party",
+    "IMAGE_MODEL": "fal-ai/flux-pro/v1.1"
   },
   "routes": [{ "pattern": "tools.heartrush.party", "custom_domain": true }]
 }
