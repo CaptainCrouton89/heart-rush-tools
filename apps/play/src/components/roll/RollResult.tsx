@@ -114,7 +114,7 @@ export function RollResultView({ outcome, onChange, compact = false }: { outcome
 const signed = (n: number) => (n >= 0 ? `+${n}` : `−${-n}`)
 
 /** One die: its type and value; a dropped die is struck through; a rerolled die shows "1 → new". */
-function DieChip({ die }: { die: RolledDie }) {
+export function DieChip({ die }: { die: RolledDie }) {
   const name = `${die.role === 'heart' ? 'heart ' : ''}d${die.sides}`
   const value = die.rerolled !== undefined ? `1 → ${die.value}` : String(die.value)
   const label = `${name} ${value}${die.dropped ? ', dropped' : ''}${die.rerolled !== undefined ? ', rerolled' : ''}`
