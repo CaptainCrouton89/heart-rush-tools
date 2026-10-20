@@ -22,8 +22,8 @@ describe('criterion 8: prices', () => {
     assert.equal(cost(withHp(5), 'hp'), 10)
     assert.equal(Array.from({ length: 6 }, (_, n) => cost(withHp(n), 'hp')).reduce((a, b) => a + b), 45)
     assert.equal(cost(makeCharacter({ raceEffects: [{ kind: 'cost', purchase: 'hp', delta: -1 }] }), 'hp'), 4)
-    const whiteling = makeCharacter({ hp: { baseMax: 25, current: 25, heartDieCurrent: 8 }, raceEffects: [{ kind: 'cost', purchase: 'hp', delta: 1 }, { kind: 'cost', purchase: 'hp', delta: 1 }] })
-    assert.equal(cost(whiteling, 'hp'), 5.5) // The rulebook gives current max HP / 10 + 1 with no rounding rule.
+    const whiteling = makeCharacter({ hp: { baseMax: 30, current: 30, heartDieCurrent: 8 }, raceEffects: [{ kind: 'cost', purchase: 'hp', delta: 1 }, { kind: 'cost', purchase: 'hp', delta: 1 }] })
+    assert.equal(cost(whiteling, 'hp'), 6) // Current max HP / 10 + 1, plus 1 for each of the Gnome and Whiteling penalties.
     assert.equal(cost(makeCharacter({ raceEffects: whiteling.raceEffects }), 'hp'), 7)
   })
   test('aspects cost one new, ranks cost current + 1, cap and race modifiers apply', () => {

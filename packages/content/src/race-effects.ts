@@ -55,7 +55,7 @@ export const RACE_EFFECTS: Record<string, Config> = {
     ],
     subraces: {
       'whiteling-prophet-gnome': {
-        baseMaxHp: 25,
+        baseMaxHp: 30,
         effects: [
           { kind: 'cost', purchase: 'hp', delta: 1 },
           { kind: 'dieCap', ability: 'might', max: 6 },

@@ -85,11 +85,11 @@ describe('criterion 9: xp:buy', () => {
     assert.equal(maxHp(c), 60)
     assert.equal(c.hp.current, 40)
   })
-  test('hp: the price E2 returns is stored unrounded (Whiteling 5.5)', () => {
-    const whiteling = withXp(100, makeCharacter({ hp: { baseMax: 25, current: 25, heartDieCurrent: 8 }, raceEffects: [{ kind: 'cost', purchase: 'hp', delta: 1 }, { kind: 'cost', purchase: 'hp', delta: 1 }] }))
-    const c = r.xpBuy(whiteling, act({ kind: 'xp:buy', purchase: 'hp' }))
-    assert.equal(c.xp.purchases[0]!.cost, 5.5)
-    assert.equal(xpRemaining(c), 94.5)
+  test('hp: the price E2 returns is stored unrounded (25 max HP → 3.5)', () => {
+    const odd = withXp(100, makeCharacter({ hp: { baseMax: 25, current: 25, heartDieCurrent: 8 } }))
+    const c = r.xpBuy(odd, act({ kind: 'xp:buy', purchase: 'hp' }))
+    assert.equal(c.xp.purchases[0]!.cost, 3.5)
+    assert.equal(xpRemaining(c), 96.5)
   })
   test('aspect:new needs text, costs 1 and appends a purchased rank-1 aspect <id>:1; blank text is refused', () => {
     const c = r.xpBuy(withXp(5), act({ kind: 'xp:buy', purchase: 'aspect:new', aspectText: 'Haunted by the sea' }, 'N1'))

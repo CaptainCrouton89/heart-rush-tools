@@ -12,7 +12,7 @@ const ability = (title: string, over: Partial<PlayAbility> = {}): PlayAbility =>
 const race = (title: string, over: Partial<PlayRace> = {}): PlayRace => ({ id: `race:${title}`, path: `/races/${title}`, title, size: 'Medium', image: null, aspects: [], abilities: [], choices: [], subraces: [], effects: [], ...over })
 const subrace = (id: string, over: Partial<PlaySubrace> = {}): PlaySubrace => ({ id, title: id, aspects: [], abilities: [], choices: [], effects: [], ...over })
 const centaur = race('Centaur', { aspects: ['Fury of the herd', 'Trample the weak'], abilities: [ability('Thundering Charge', { frequency: 'major' }), ability('Hoof Strike')] })
-const gnome = race('Gnome', { effects: [{ kind: 'cost', purchase: 'hp', delta: 1 }], subraces: [subrace('whiteling', { aspects: ['Fragile as glass'], abilities: [ability("Oracle's Burden", { grants: { talentId: 'player.talents.oracle', destiny: true } })], baseMaxHp: 25, effects: [{ kind: 'cost', purchase: 'hp', delta: 1 }, { kind: 'dieCap', ability: 'might', max: 6 }] })] })
+const gnome = race('Gnome', { effects: [{ kind: 'cost', purchase: 'hp', delta: 1 }], subraces: [subrace('whiteling', { aspects: ['Fragile as glass'], abilities: [ability("Oracle's Burden", { grants: { talentId: 'player.talents.oracle', destiny: true } })], baseMaxHp: 30, effects: [{ kind: 'cost', purchase: 'hp', delta: 1 }, { kind: 'dieCap', ability: 'might', max: 6 }] })] })
 const martialDiscount: RaceEffect[] = [{ kind: 'cost', purchase: 'talent:*', delta: -2, where: { tradition: 'Martial' } }, { kind: 'cost', purchase: 'destiny', delta: -2, where: { tradition: 'Martial' } }]
 const cognitiveDiscount: RaceEffect[] = [{ kind: 'cost', purchase: 'talent:*', delta: -2, where: { tradition: 'Cognitive' } }, { kind: 'cost', purchase: 'destiny', delta: -2, where: { tradition: 'Cognitive' } }]
 const expertise: PlayChoice = { id: 'expertise', title: 'Expertise', text: 'Choose one:', kind: 'options', options: [{ id: 'martial', title: 'Martial', abilities: [], effects: martialDiscount }, { id: 'cognitive', title: 'Cognitive', abilities: [], effects: cognitiveDiscount }] }
@@ -94,8 +94,8 @@ describe('criterion 16: createCharacter', () => {
   })
   test('race and subrace effects and base HP are copied', () => {
     const w = createCharacter(input({ raceId: gnome.id, subraceId: 'whiteling' }), catalogue)
-    assert.equal(w.hp.baseMax, 25)
-    assert.equal(w.hp.current, 25)
+    assert.equal(w.hp.baseMax, 30)
+    assert.equal(w.hp.current, 30)
     assert.equal(w.raceEffects.length, 3)
     assert.equal(w.raceEffects.filter(e => e.kind === 'cost' && e.purchase === 'hp').length, 2)
   })

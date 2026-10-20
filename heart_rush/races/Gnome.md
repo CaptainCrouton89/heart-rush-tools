@@ -164,7 +164,7 @@ Their extreme rarity and prophetic abilities make Whitelings objects of obsessio
 #### Oracle's Burden
 
 **Passive ability.**
-You gain the Oracle talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level. However, your connection to the threads of fate has left your body withered: your maximum hit points start at 25 instead of 40, and increasing your maximum hit points costs 1 additional XP (stacking with the gnomish penalty for 2 total). Additionally, your might die can never be increased above a d6.
+You gain the Oracle talent as a racial ability (it does not count towards the number of talents you have), along with its destiny level. However, your connection to the threads of fate has left your body withered: your maximum hit points start at 30 instead of 40, and increasing your maximum hit points costs 1 additional XP (stacking with the gnomish penalty for 2 total). Additionally, your might die can never be increased above a d6.
 
 ### Ansari (Sea Gnome)
 

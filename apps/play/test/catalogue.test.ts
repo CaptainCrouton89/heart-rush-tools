@@ -37,7 +37,7 @@ test('player.conditions~restrained resolves', () => {
 test("Gnome's Whiteling subrace carries its effects", () => {
   const whiteling = raceByTitle('Gnome').subraces.find((s) => s.title.startsWith('Whiteling'))
   assert.ok(whiteling)
-  assert.equal(whiteling.baseMaxHp, 25)
+  assert.equal(whiteling.baseMaxHp, 30)
   assert.deepEqual(whiteling.effects, [
     { kind: 'cost', purchase: 'hp', delta: 1 },
     { kind: 'dieCap', ability: 'might', max: 6 },
@@ -152,7 +152,7 @@ test('the engine applies a real grant, a real choice option and a real subrace b
   const gnome = raceByTitle('Gnome')
   const whiteling = gnome.subraces.find((s) => s.title.startsWith('Whiteling'))!
   const c = createCharacter(base(gnome.id, whiteling.id, {}), cat)
-  assert.equal(c.hp.baseMax, 25)
+  assert.equal(c.hp.baseMax, 30)
   assert.ok(c.talents.some((t) => t.catalogueId === 'player.talents.oracle' && t.destiny))
   const nuun = raceByTitle('Human').subraces.find((s) => s.title === 'Nuun')!
   const fire = createCharacter(base('player.kin-culture.human', nuun.id, { 'resilience-talent': 'player.talents.action-surge', element: 'fire' }), cat)
