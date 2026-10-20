@@ -58,7 +58,7 @@ function DialogContent({
         {children}
         {showClose && (
           <DialogPrimitive.Close
-            className="absolute top-3 right-3 inline-flex size-10 items-center justify-center rounded-sm text-muted-foreground hover:bg-surface-muted hover:text-foreground"
+            className="absolute top-3 right-3 inline-flex size-11 items-center justify-center rounded-sm text-muted-foreground hover:bg-surface-muted hover:text-foreground"
           >
             <X aria-hidden="true" />
             <span className="sr-only">{closeLabel}</span>
