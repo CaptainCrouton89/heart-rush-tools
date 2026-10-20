@@ -72,6 +72,7 @@ A complication doesn't affect your success—it creates an additional problem re
 
 - Additional 1s after re-rolling don't cause more complications
 - Two 1s on initial roll = automatic failure + complication
+- With advantage or disadvantage, only the dice you keep count. A 1 on a dropped die never triggers this rule.
 
 **Complication Examples**:
 
@@ -118,17 +119,13 @@ Combat brings its own specialized rolls that handle the deadly dance of weapons 
 
 ### 4. Stratagem Rolls
 
-Sometimes your ambitions extend beyond what any single action can accomplish. When you're commanding fleets, building merchant empires, or pursuing grand schemes that unfold over weeks or months, stratagem rolls let you resolve these complex endeavors without getting bogged down in details. They represent a "zoom out" mechanic that keeps epic-scale actions manageable.
+Some goals are too big for one action: taking a fortress, building a trade route, winning a council's votes. A stratagem runs such a goal as a series of rolls, each covering a stretch of time, with scenes you play out in between.
 
-**When to Use**: Complex endeavors involving multiple coordinated actions over time—from naval battles to political campaigns.
+**When to Use**: A goal reached through several objectives, or a repeating operation, where you want to roll the parts nobody wants to play. The time per roll runs from minutes (quick combat) and hours (a rescue before dawn) to seasons and years.
 
-**Key Differences**:
+**Basic Roll**: Heart die (at its current size) + ability die + the usual modifiers vs Challenge Number
 
-- Uses flat d8 instead of heart die (unaffected by stamina)
-- Cannot be helped by others
-- Cannot use standard skill check modifiers
-
-**Basic Roll**: d8 + ability die + profession + aspect (if applicable) vs Challenge Number
+A stratagem roll is a normal skill check. Helping, advantage and disadvantage, professions, aspects and the complication rule work as they do for any skill check.
 
 _See the Stratagem System section for complete rules._
 
@@ -330,13 +327,6 @@ Not all challenges come from the environment—sometimes you're the one creating
 
 ### Stratagem CNs
 
-Large-scale endeavors use the same difficulty scale but with additional considerations. Your forces' advantages and disadvantages modify the base CN—preparation and circumstances matter as much as raw ability.
-
-Use the same scale as skill checks, modified by:
-
-- **Assets**: Advantages that reduce Challenge Number
-- **Hindrances**: Disadvantages that increase Challenge Number
-
-The GM weighs assets against hindrances to set final Challenge Number.
+Stratagems use the same difficulty scale as skill checks. The GM sets the starting CN for the goal as the situation stands, with everything the players already have counted in. After that, each asset lowers the CN by 3 and each hindrance raises it by 3.
 
 _For complete stratagem rules, examples, and guidance, see the Stratagem System section._
