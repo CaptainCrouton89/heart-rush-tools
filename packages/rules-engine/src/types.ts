@@ -48,7 +48,7 @@ export type Identity = {
 /** INV-CATREF: a catalogue reference keeps its title; an unresolved id renders the snapshot. */
 export type Kin = { raceId: string; subraceId: string | null; titleSnapshot: string; spelltouched: boolean }
 
-export type Attunement = { element: string; level: AttunementLevel; source: 'race' | string }
+export type Attunement = { id: string; element: string; level: AttunementLevel; source: 'race' | string }
 
 export type BloodmarkKind = 'specialization' | 'signature' | 'mastery' | 'paragon'
 export type BloodmarkAbility = { id: string; kind: BloodmarkKind; title: string; text: string; grantedAtLevel: number }
