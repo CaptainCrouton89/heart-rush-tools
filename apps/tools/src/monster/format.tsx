@@ -1,59 +1,79 @@
-import React from "react";
+import { Fragment, type ReactNode } from "react";
 import type { AttackDefense, SpecialAbility } from "./schema";
 
-export const formatAttackDefense = (
-  value: number | AttackDefense,
-  prefix: string
-): React.JSX.Element => {
-  if (typeof value === "number") {
+/** Signed bonus as printed in a stat block: +6, −2, +0. */
+const signed = (n: number) => (n < 0 ? `−${Math.abs(n)}` : `+${n}`);
+
+/** The parts after the A/D label: "+6", or "+8(s/p) +4(b)". Mirrors formatAttackDefenseMarkdown. */
+const attackDefenseParts = (value: number | AttackDefense): string[] => {
+  if (typeof value === "number") return [signed(value)];
+  const parts: string[] = [];
+  if (value.base !== undefined) parts.push(signed(value.base));
+  const types = value.byDamageType;
+  if (types?.slashingPiercing !== undefined) parts.push(`${signed(types.slashingPiercing)}(s/p)`);
+  if (types?.bludgeoning !== undefined) parts.push(`${signed(types.bludgeoning)}(b)`);
+  if (types?.other) {
+    for (const [type, bonus] of Object.entries(types.other)) parts.push(`${signed(bonus)}(${type})`);
+  }
+  return parts.length > 0 ? parts : ["+0"];
+};
+
+/** "A +6" / "D +8(s/p) +4(b)" with the label bold and the numbers in tabular figures. */
+export const formatAttackDefense = (value: number | AttackDefense, prefix: "A" | "D"): ReactNode => (
+  <span className="whitespace-nowrap">
+    <abbr title={prefix === "A" ? "Attack" : "Defense"} className="font-semibold no-underline">
+      {prefix}
+    </abbr>{" "}
+    <span className="tabular-nums">{attackDefenseParts(value).join(" ")}</span>
+  </span>
+);
+
+const DICE = /(?<![\w])(\d*d(?:4|6|8|10|12|20|100)(?:\s?[+−-]\s?\d+)?)(?![\w])/g;
+
+/** Text with every dice expression ("1d6", "2d8+3", "d10") set in the `.dice` style. */
+export const withDice = (text: string): ReactNode => {
+  const pieces = text.split(DICE);
+  if (pieces.length === 1) return text;
+  return pieces.map((piece, i) =>
+    i % 2 === 1 ? (
+      <span key={i} className="dice">
+        {piece}
+      </span>
+    ) : (
+      <Fragment key={i}>{piece}</Fragment>
+    )
+  );
+};
+
+/** One special ability as a stat-block line: bold name, then the same details formatAbility writes. */
+export const AbilityText = ({ ability }: { ability: string | SpecialAbility }) => {
+  if (typeof ability === "string") {
+    // "Fade: 1/combat, …" — a short leading name before a colon is bolded like a structured ability's name.
+    const named = /^([^:]{1,40}):\s(.+)$/s.exec(ability);
+    if (!named) return <>{withDice(ability)}</>;
     return (
-      <span key={`${prefix}-${value}`}>
-        <strong>{prefix}</strong> +{value}
-      </span>
+      <>
+        <strong className="font-semibold">{named[1]}</strong>: {withDice(named[2]!)}
+      </>
     );
   }
-
-  const parts: React.JSX.Element[] = [];
-
-  if (value.base !== undefined) {
-    parts.push(
-      <span key={`${prefix}-${value.base}`}>
-        <strong>{prefix}</strong> +{value.base}
-      </span>
-    );
-  }
-
-  if (value.byDamageType) {
-    const typeParts = [];
-    if (value.byDamageType.slashingPiercing !== undefined) {
-      typeParts.push(`+${value.byDamageType.slashingPiercing}(s/p)`);
-    }
-    if (value.byDamageType.bludgeoning !== undefined) {
-      typeParts.push(`+${value.byDamageType.bludgeoning}(b)`);
-    }
-    if (value.byDamageType.other) {
-      Object.entries(value.byDamageType.other).forEach(([type, bonus]) => {
-        typeParts.push(`+${bonus}(${type})`);
-      });
-    }
-    if (typeParts.length > 0) {
-      if (parts.length === 0) {
-        parts.push(
-          <span key={`${prefix}-types`}>
-            <strong>{prefix}</strong> {typeParts.join(" ")}
-          </span>
-        );
-      } else {
-        parts.push(<span key={`${prefix}-types`}> {typeParts.join(" ")}</span>);
-      }
-    }
-  }
-
-  return parts.length > 0 ? (
-    <>{parts}</>
-  ) : (
+  const desc = ability.description || ability.effect || "";
+  return (
     <>
-      <strong>{prefix}</strong> +0
+      <strong className="font-semibold">{ability.name}</strong>
+      {ability.uses && ` (${ability.uses})`}
+      {ability.range && ` [${ability.range}]`}
+      {desc && <>: {withDice(desc)}</>}
+      {ability.save && (
+        <span className="whitespace-nowrap">{` (${ability.save.type}${ability.save.dc})`}</span>
+      )}
+      {ability.damage && (
+        <>
+          {" ["}
+          {withDice(ability.damage)}
+          {" damage]"}
+        </>
+      )}
     </>
   );
 };
