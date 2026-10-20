@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-10-20T05:59:41.735Z",
+  "deleted_at": null,
+  "extensions": null,
+  "id": "3zl47w7d-mvg9x38n-37d09e3c",
+  "kind": "knowledge",
+  "lint_ignore": null,
+  "name": "app-context",
+  "preview": "When changing app routes or navigation components, read this because world selection takes priority over GM mode and each context must load matching navigation and content.",
+  "privacy": "public",
+  "revisions": [
+    {
+      "author": "3zl47w7d-mvg8jbku-fbb69e47",
+      "body": "# Rulebook app context\n\nThe app serves player rules, GM material, and world wikis from separately compiled content. Navigation, breadcrumbs, search, and links must agree on which context is active.\n\n**Routing priority is world, then GM, then player.** World links use `/world/{world}/{slug}`, GM links use `/gm/{slug}`, and player links use `/{slug}`. A selected world takes precedence over GM mode; the sidebar disables its GM toggle while in world context. Use the matching navigation and breadcrumb endpoints rather than mixing player data into a world page.\n\nWhen touching layouts, preserve the root provider relationship: theme outside GM outside world. Theme state depends on the client and persisted browser state; account for hydration rather than moving browser-only access into server rendering. Content pages consume compiled JSON and generate known static routes where possible, while interactive navigation and search remain client-side.\n\nThe sidebar is fixed on mobile with an overlay when open and static on desktop at the `lg` breakpoint. Navigation must expand parents of the active page and handle both categorized and flat node shapes. These behaviors apply across all three content contexts, not only the player rulebook.\n\nFor content missing from an otherwise working layout, inspect the publishing stages in [[heart-rush-tools/content-pipeline]] before changing routing or rendering.\n",
+      "body_hash": "36b0622486334e867ec010472df23a6894b83b5af78d736fb89b1452b7a9745c",
+      "created_at": "2026-10-20T05:59:41.736Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvg9vhf4-ba856437",
+          "written_as": "heart-rush-tools/content-pipeline"
+        }
+      ],
+      "number": 1,
+      "parents": [],
+      "rationale": null,
+      "rev_id": "f0c4e390-bcc3-4ef8-89a6-c2e41867e121"
+    }
+  ],
+  "rules": [
+    {
+      "deliver": "preview",
+      "if": null,
+      "match": [
+        "**/src/app/**",
+        "**/src/components/layout/**"
+      ],
+      "match_frontmatter": null,
+      "on": "file-read",
+      "position": 0
+    }
+  ],
+  "summary": null,
+  "unlisted": false,
+  "why_it_exists": null
+}

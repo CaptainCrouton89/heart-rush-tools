@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-20T05:59:41.416Z",
+  "deleted_at": null,
+  "extensions": null,
+  "id": "3zl47w7d-mvg9x2zs-d28e14c8",
+  "kind": "knowledge",
+  "lint_ignore": null,
+  "name": "authoring/atlas",
+  "preview": "When editing Alaria geography, read this because regional consolidation and local exceptions determine whether a place needs a file or a subsection.",
+  "privacy": "public",
+  "revisions": [
+    {
+      "author": "3zl47w7d-mvg8jbku-fbb69e47",
+      "body": "# Alaria atlas authoring\n\n## Consolidate geography\n\nUse a regional `_intro.md` for the overview and consolidated locations. H2 names the region, H3 major areas or cities, and H4 landmarks, dungeons, or other points of interest. Add minor places to their parent region instead of making hundreds of tiny files.\n\nSeparate a major nation or extensive subregion when it has at least five locations of its own or would make the parent exceed roughly 500 lines. Local exceptions below refine that general convention. These are authoring boundaries, not automatic publishing rules; the combiner and navigation configs still determine books.\n\nKeep NPCs in `history_and_lore/dramatis_personae/`, political organizations in `nations_and_powers/`, magic schools in `magic_and_knowledge/schools/`, and planes in `cosmology_and_religion/alarian_planar_stack/planes/`. Geography can briefly describe and link them without duplicating their full entries. Check `bestiary/` and `heart_rush/races/` for established inhabitants and homelands before adding regional lore.\n\nUse concrete terrain, climate, sounds, travel hazards, opportunities, and navigation information. Link other regions with relative paths and related creatures, nations, religion, or history with paths to their category source. Tags such as `Tags: plains, tundra` can identify terrain and type.\n\n## Regional conventions\n\n- **Celedrim Plains:** individual files represent major geographic areas, with H3 subareas and H4 landmarks. Ground atmosphere in practical travel details; preserve the regional `_intro.md` overview.\n- **Kharvorn Mountains:** consolidate peaks and underground features within regional or named mountain-range files. Named peaks are subsections, not standalone points of interest. Link dragons to `bestiary/dragons/` and deep features to the appropriate Underrealms or Zylogmus Eternus entry.\n- **Middle Sea:** major nation or settlement files describe geography, culture, history, government, economy, and internal locations. `_intro.md` owns regional trade networks and inter-nation dynamics. Link detailed governance and military material to state entries and rulers to character entries. Morgnor's Cradle is a mountain dragon domain rather than a maritime power; do not force every entry into maritime lore.\n- **Northern Isles:** keep smaller locations inside island files; a major island can have its own file when its content exceeds roughly 200 lines. Maintain the contrast between pack ice/frozen tundra and volcanic warmth. Bzulakar's influence from Potalaptuk is not a unified island government; check character and regional sources before describing local authority.\n- **Tarkhon:** `_intro.md` remains the primary regional overview. Minor cities, landmarks, and material under roughly 200 lines stay as subsections. Major imperial cities or territories with roughly 300+ lines or extensive cross-references can be separate files. Link empire-level government and history to the Tarkhon Empire state entry.\n- **Western Isles:** significant nations, archipelagos, geographic features, and cultural centers may have individual files, as may substantial independent content over roughly 300 lines. Use an H2 location, tags, introduction, H3 major features, and H4 details. Preserve the geographic focus while linking detailed factions and characters elsewhere.\n- **Westwilds:** keep related places in their regional or terrain-feature file; use H3 cities and H4 landmarks rather than new tiny files.\n\nFor political, creature, calendar, and cosmological conventions read [[heart-rush-tools/authoring/alaria]]. For new regional exports read [[heart-rush-tools/content-pipeline]] before changing navigation.\n",
+      "body_hash": "6670440a29e5e42b2ebedc0918f8a50d29b1920a43d87ebc7b01d69fa99410f0",
+      "created_at": "2026-10-20T05:59:41.416Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvg9x1wm-86bbf0a0",
+          "written_as": "heart-rush-tools/authoring/alaria"
+        },
+        {
+          "dst": "3zl47w7d-mvg9vhf4-ba856437",
+          "written_as": "heart-rush-tools/content-pipeline"
+        }
+      ],
+      "number": 1,
+      "parents": [],
+      "rationale": null,
+      "rev_id": "f50677ca-291c-40b5-9c60-030e3729e9ce"
+    }
+  ],
+  "rules": [
+    {
+      "deliver": "preview",
+      "if": null,
+      "match": [
+        "**/world-wikis/alaria/atlas_of_alaria/**"
+      ],
+      "match_frontmatter": null,
+      "on": "file-read",
+      "position": 0
+    }
+  ],
+  "summary": null,
+  "unlisted": false,
+  "why_it_exists": null
+}

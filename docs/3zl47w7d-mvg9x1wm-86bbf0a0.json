@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-20T05:59:40.006Z",
+  "deleted_at": null,
+  "extensions": null,
+  "id": "3zl47w7d-mvg9x1wm-86bbf0a0",
+  "kind": "knowledge",
+  "lint_ignore": null,
+  "name": "authoring/alaria",
+  "preview": "When writing Alaria lore, read this because geography, politics, peoples, and cosmology have distinct homes and established sources that must agree.",
+  "privacy": "public",
+  "revisions": [
+    {
+      "author": "3zl47w7d-mvg8jbku-fbb69e47",
+      "body": "# Alaria lore authoring\n\nAuthor in the category source trees, not `all_sections_formatted/`; compilation replaces those aggregates. Use descriptive filenames, clear headings, and relative Markdown links with spaces URL-encoded. YAML frontmatter is not required. Publication depends on configured books and navigation, not simply on creating a file; see [[heart-rush-tools/content-pipeline]].\n\n## Check existing lore before adding it\n\nConsult geography in `atlas_of_alaria/`, chronology in `history_and_lore/`, cosmology in `cosmology_and_religion/`, and racial cultures in `heart_rush/races/`. Write concrete details useful to someone visiting the place: food, customs, dangers, resources, and what visitors notice. Preserve existing lore rather than deriving it from generic fantasy assumptions.\n\nFor sky travel and trade, read `cosmology_and_religion/alarian_planar_stack/Astral_Currents.md`. Astral currents, buoyant astral stones, aether engines, docking towers, and their tariffs affect trade between major powers; Western Isles shipping instead uses the ocean because northern sky routes are dangerous. Keep economic claims consistent with the route source.\n\n## Political entities\n\n- `nations_and_powers/states/` holds territorial polities governing regions and multiple settlements.\n- `nations_and_powers/city_states/` holds urban polities whose authority ends at the city and immediate hinterland; wealth or influence alone does not make one a state.\n- `nations_and_powers/factions/` holds cross-border organizations, guilds, and orders; `nations_and_powers/daemons/` holds divine powers and their cults.\n\nFor a state cover overview, government and succession, culture, economy, military, relations, history, notable locations, and player hooks as its importance warrants. For a city-state use government, economy, culture, defenses, relations, notable features, and hooks. Link geography and character details instead of duplicating them; notable people belong in `history_and_lore/dramatis_personae/`.\n\nFor calendars and holidays, consult `cosmology_and_religion/alarian_planar_stack/Time_and_Seasons.md` before inventing a local date. The established references describe Auris's 11-day cycle, Nyxara's 23-day cycle, Brightnight at double full moons, Hollownight at double new moons, and Merrynight at the bright moon's mid-week full phase. The year is 200 days with eight 25-day quarters; cultures weight lunar and solar observances differently.\n\n## Bestiary and peoples\n\nBestiary entries are world lore, not stat blocks. Use a short opening description and H3 sections appropriate to the creature: Society/Culture/Relations/Homeland for intelligent peoples, Behavior/Habitat/Threats/Notable Specimens for monsters, or Origin/Nature/Manifestation/Interactions for supernatural entities. Give intelligent peoples perspective and agency, and describe ecology and cultural significance.\n\nNamed dragons belong in `bestiary/dragons/`; include personality, appearance, history, lair, unique threats, and relations to powers or other dragons. Diseases belong in `bestiary/diseases/`. Inline tags can identify type and region, for example `Tags: dragon, ancient, kharvorn`. Link lairs to atlas entries and affiliations to political entries.\n\nThe race-format conventions are in [[heart-rush-tools/authoring/rules]]. The parallel `world-wikis/alaria/races/` tree is not the player's compiled race source; edit `heart_rush/races/` for player mechanics, and do not assume edits in the world race tree publish automatically.\n\n## Planar and celestial lore\n\nRead `Stars_Suns_Moons.md` and `Time_and_Seasons.md` under `cosmology_and_religion/alarian_planar_stack/` for the established cosmology. Bryn is the awakened Material sun, Aurus the Astral white titan-god, and Nydus the Malstaris black titan-god. The 25,300-year Great Cycle runs forward then backward.\n\nWhen describing a plane, give its position and relationship to the Material Plane, overlays, and celestial bodies. Connect astronomical events to planar and divine effects, preserve the role of prayers in Bryn's path and seasons, and cross-reference religion, daemons, and magical systems. Individual planar descriptions belong under `alarian_planar_stack/planes/`.\n",
+      "body_hash": "ddc60f886cf709e14313858815c0110a75cbd443697f55ed2bf508881d6cdaf4",
+      "created_at": "2026-10-20T05:59:40.008Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvg9vhna-b16e9207",
+          "written_as": "heart-rush-tools/authoring/rules"
+        },
+        {
+          "dst": "3zl47w7d-mvg9vhf4-ba856437",
+          "written_as": "heart-rush-tools/content-pipeline"
+        }
+      ],
+      "number": 1,
+      "parents": [],
+      "rationale": null,
+      "rev_id": "ee3361f5-c4b8-4e2f-8008-d0d7c9fcc534"
+    }
+  ],
+  "rules": [
+    {
+      "deliver": "preview",
+      "if": null,
+      "match": [
+        "**/world-wikis/alaria/**"
+      ],
+      "match_frontmatter": null,
+      "on": "file-read",
+      "position": 0
+    }
+  ],
+  "summary": null,
+  "unlisted": false,
+  "why_it_exists": null
+}
