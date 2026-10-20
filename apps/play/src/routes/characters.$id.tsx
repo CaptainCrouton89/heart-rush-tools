@@ -104,7 +104,7 @@ function SheetPage() {
             <IdentityHeader character={character} catalogue={catalogue} />
             <AbilityRows character={character} derived={derived} />
             <SpeedLine character={character} derived={derived} />
-            {canEdit && <DamagePad dispatch={send} />}
+            {canEdit && <DamagePad dispatch={send} maxHp={derived.effectiveMaxHp} />}
           </>
         }
         history={

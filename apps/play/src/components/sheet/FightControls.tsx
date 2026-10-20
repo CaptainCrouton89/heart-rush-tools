@@ -27,13 +27,14 @@ export function burningLevels(conditions: SectionProps['character']['conditions'
 }
 
 /**
- * The fight controls under the damage pad: the heart die (Spend ▾ Endure / Focus / Surge, greyed after one spend this
- * round or at d4; the die's ▾ sets it by hand up to the largest heart die), rush points, the round with **Next round**
+ * The fight controls under the damage pad: the heart die (Spend ▾ lists Endure / Focus / Surge under the row, greyed
+ * after one spend this round or at d4; the die's ▾ sets it by hand up to the largest heart die), rush points, the round with **Next round**
  * (asking for Burning damage first) and **End fight**, and DP with **Start session** and the complication button.
  * Without `canEdit` the values show and the controls do not.
  */
 export function FightControls({ character, derived, dispatch, canEdit }: SectionProps) {
   const { play, hp } = character
+  const [spending, setSpending] = useState(false)
   const [burning, setBurning] = useState<{ levels: number; amount: string; description: string } | null>(null)
 
   const spentThisRound = play.staminaSpentRound === play.round
@@ -87,22 +88,16 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
             <span className="font-semibold">d{hp.heartDieCurrent}</span>
           )}
           {canEdit && (
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button size="compact" variant="line" className="px-3" disabled={spendBlocked !== null}>
-                  Spend <span aria-hidden="true">▾</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start">
-                <DropdownMenuLabel>Drop the heart die one size to…</DropdownMenuLabel>
-                {SPEND.map((s) => (
-                  <DropdownMenuItem key={s.effect} className={`${ITEM} flex-col items-start gap-0`} onSelect={() => void dispatch({ kind: 'heartDie:spend', effect: s.effect })}>
-                    <span className="font-medium">{s.label}</span>
-                    <span className="text-meta text-muted-foreground">{s.text}</span>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Button
+              size="compact"
+              variant="line"
+              className="px-3"
+              disabled={spendBlocked !== null}
+              aria-expanded={spending && spendBlocked === null}
+              onClick={() => setSpending((o) => !o)}
+            >
+              Spend <span aria-hidden="true">{spending && spendBlocked === null ? '▴' : '▾'}</span>
+            </Button>
           )}
           {canEdit && spendBlocked && <span className="text-meta text-muted-foreground">{spendBlocked}</span>}
         </div>
@@ -115,6 +110,27 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
           onChange={(value) => void dispatch({ kind: 'rush:set', value })}
         />
       </div>
+
+      {canEdit && spending && spendBlocked === null && (
+        <div className="reveal">
+          <div>
+            <ul aria-label="Drop the heart die one size to…" className="-mt-1 ml-0.5 flex flex-col border-l-[1.5px] border-primary">
+              {SPEND.map((s) => (
+                <li key={s.effect}>
+                  <button
+                    type="button"
+                    className="group flex min-h-11 w-full items-baseline gap-2.5 px-3 py-2.5 text-left"
+                    onClick={() => (setSpending(false), void dispatch({ kind: 'heartDie:spend', effect: s.effect }))}
+                  >
+                    <span className="min-w-14 font-semibold group-hover:text-primary">{s.label}</span>
+                    <span className="text-meta text-muted-foreground">{s.text}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
 
       {/* Round */}
       <div className="flex flex-wrap items-center gap-2">

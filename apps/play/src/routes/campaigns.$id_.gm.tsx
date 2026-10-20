@@ -129,7 +129,7 @@ function GmSheet({ initial }: { initial: CharacterDoc }) {
             <IdentityHeader character={character} catalogue={catalogue} />
             <AbilityRows character={character} derived={derived} />
             <SpeedLine character={character} derived={derived} />
-            {canEdit && <DamagePad dispatch={send} />}
+            {canEdit && <DamagePad dispatch={send} maxHp={derived.effectiveMaxHp} />}
           </>
         }
         history={<HistoryList key={document.id} characterId={document.id} refreshKey={`${document.revision}:${pending}`} canEdit={canEdit} onUndo={undoEvent} />}
