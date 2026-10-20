@@ -152,7 +152,7 @@ function BloodmarkLevel({ value, onChange }: { value: number; onChange: (value: 
       </span>
       <p className="text-meta text-muted-foreground">The bloodmark level your table starts at; 0 unless your GM says otherwise.</p>
       <div role="group" aria-labelledby={`${ids}-label`} className="flex items-center gap-2">
-        <Button type="button" variant="outline" size="lg" aria-label="One fewer bloodmark" disabled={value <= 0} onClick={() => onChange(value - 1)}>
+        <Button size="compact-icon" type="button" variant="line" aria-label="One fewer bloodmark" disabled={value <= 0} onClick={() => onChange(value - 1)}>
           −
         </Button>
         <Input
@@ -166,7 +166,7 @@ function BloodmarkLevel({ value, onChange }: { value: number; onChange: (value: 
             onChange(Math.min(n, 20))
           }}
         />
-        <Button type="button" variant="outline" size="lg" aria-label="One more bloodmark" disabled={value >= 20} onClick={() => onChange(value + 1)}>
+        <Button size="compact-icon" type="button" variant="line" aria-label="One more bloodmark" disabled={value >= 20} onClick={() => onChange(value + 1)}>
           +
         </Button>
         <span className="text-ui text-muted-foreground">Starting XP {startingXp(value)}</span>

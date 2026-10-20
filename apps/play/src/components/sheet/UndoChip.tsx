@@ -42,14 +42,14 @@ export function UndoChip({
       >
         <span className="min-w-0 flex-1 py-2">{notice ? notice.text : offer!.text}</span>
         {notice ? (
-          <Button type="button" variant="ghost" className="min-h-11 shrink-0 text-background hover:bg-background/15 hover:text-background" onClick={onDismissNotice}>
+          <Button size="compact" type="button" variant="ghost" className="shrink-0 text-background hover:bg-background/15 hover:text-background" onClick={onDismissNotice}>
             Dismiss
           </Button>
         ) : (
-          <Button
+          <Button size="compact"
             type="button"
             variant="ghost"
-            className="min-h-11 shrink-0 font-semibold text-background underline underline-offset-4 hover:bg-background/15 hover:text-background"
+            className="shrink-0 font-semibold text-background underline underline-offset-4 hover:bg-background/15 hover:text-background"
             onClick={() => onUndo(offer!.eventId)}
           >
             Undo

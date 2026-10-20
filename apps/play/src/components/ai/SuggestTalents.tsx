@@ -38,7 +38,7 @@ export function SuggestTalents({ characterId, character, catalogue, onBuy }: Sug
     <section aria-label="Suggested talents" className="flex flex-col gap-3 rounded-md border border-border bg-surface-muted p-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="eyebrow">Suggestions for this character</h2>
-        <Button type="button" variant={suggestions ? 'outline' : 'default'} size="lg" className="min-h-11" disabled={state.status === 'loading'} onClick={ask}>
+        <Button size="compact" type="button" variant={suggestions ? 'line' : 'line-primary'} disabled={state.status === 'loading'} onClick={ask}>
           {suggestions ? 'Suggest again' : 'Suggest talents for my concept'}
         </Button>
       </div>
@@ -121,9 +121,9 @@ function SuggestionCard({
           Read in rulebook ↗
         </a>
         {talent ? (
-          <Button
+          <Button size="compact" variant="line-primary"
             type="button"
-            className="min-h-11"
+           
             disabled={added || (needsElement && !element)}
             onClick={() => onAdd(talentBuyAction(talent, needsElement ? element : undefined))}
           >

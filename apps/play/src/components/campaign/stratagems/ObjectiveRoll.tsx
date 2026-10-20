@@ -46,7 +46,7 @@ export function ObjectiveRoll({ characterId, stratagemId, index, label, cn }: Ob
 
   return (
     <>
-      <Button ref={anchor} type="button" size="lg" aria-haspopup="dialog" disabled={busy} onClick={() => void open()}>
+      <Button size="compact" variant="line-primary" ref={anchor} type="button" aria-haspopup="dialog" disabled={busy} onClick={() => void open()}>
         {busy ? 'Opening…' : 'Roll'}
       </Button>
       {error && (

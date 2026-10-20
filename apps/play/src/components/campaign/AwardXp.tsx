@@ -61,16 +61,16 @@ export function AwardXp({ campaignId, characters }: { campaignId: string; charac
               onKeyDown={(e) => e.key === 'Escape' && close()}
               className="h-11 w-24 text-center tabular-nums"
             />
-            <Button type="submit" size="lg" disabled={busy || amount < 1}>
+            <Button size="compact" variant="line-primary" type="submit" disabled={busy || amount < 1}>
               {busy ? 'Awarding…' : 'Award'}
             </Button>
-            <Button type="button" size="lg" variant="ghost" onClick={close}>
+            <Button size="compact" type="button" variant="ghost" onClick={close}>
               Cancel
             </Button>
           </div>
         </form>
       ) : (
-        <Button type="button" size="lg" variant="outline" className="self-start" disabled={characters.length === 0} onClick={() => setOpen(true)}>
+        <Button size="compact" type="button" variant="line" className="self-start" disabled={characters.length === 0} onClick={() => setOpen(true)}>
           Award XP
         </Button>
       )}

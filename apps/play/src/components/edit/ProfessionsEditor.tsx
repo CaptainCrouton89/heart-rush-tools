@@ -40,7 +40,7 @@ export function ProfessionsEditor({ value, onChange }: { value: Profession[]; on
               </div>
               <div className="flex min-h-11 items-center justify-between gap-3">
                 {p.rerollOnes ? <span className="text-meta text-muted-foreground">Wisdom of Experience: reroll 1s</span> : <span />}
-                <Button type="button" variant="outline" className="h-11" aria-label={`Remove ${p.name || 'profession'}`} onClick={() => onChange({ kind: 'profession:remove', professionId: p.id })}>
+                <Button size="compact" type="button" variant="line" aria-label={`Remove ${p.name || 'profession'}`} onClick={() => onChange({ kind: 'profession:remove', professionId: p.id })}>
                   Remove
                 </Button>
               </div>
@@ -52,7 +52,7 @@ export function ProfessionsEditor({ value, onChange }: { value: Profession[]; on
         <Field label="New profession" className="flex-1">
           {(id) => <Input id={id} value={name} placeholder="Blacksmith" onChange={(e) => setName(e.target.value)} className="h-11" />}
         </Field>
-        <Button type="submit" variant="outline" className="h-11" disabled={!name.trim()}>
+        <Button size="compact" type="submit" variant="line" disabled={!name.trim()}>
           Add
         </Button>
       </form>

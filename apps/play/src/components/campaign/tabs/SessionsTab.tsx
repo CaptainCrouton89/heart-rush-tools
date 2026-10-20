@@ -84,11 +84,11 @@ function SessionControls({ campaignId, open }: { campaignId: string; open: Sessi
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-wrap gap-2">
-        <Button type="button" size="lg" disabled={busy} onClick={() => void run(() => start({ data: { campaignId, realDate: localToday() } }))}>
+        <Button size="compact" variant="line-primary" type="button" disabled={busy} onClick={() => void run(() => start({ data: { campaignId, realDate: localToday() } }))}>
           Start session
         </Button>
         {open && (
-          <Button type="button" size="lg" variant="outline" disabled={busy} onClick={() => void run(() => end({ data: { campaignId, sessionId: open.id } }))}>
+          <Button size="compact" type="button" variant="line" disabled={busy} onClick={() => void run(() => end({ data: { campaignId, sessionId: open.id } }))}>
             End session {open.number}
           </Button>
         )}

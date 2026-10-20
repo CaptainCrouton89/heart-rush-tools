@@ -52,7 +52,7 @@ export function ConditionsSection({ character, catalogue, dispatch, canEdit }: S
       title="Conditions"
       action={
         canEdit && (
-          <Button variant="ghost" className="size-11 text-h4" aria-label="Add a condition" onClick={() => setAdding(true)}>
+          <Button size="compact-icon" variant="ghost" aria-label="Add a condition" onClick={() => setAdding(true)}>
             +
           </Button>
         )
@@ -157,18 +157,18 @@ function Row({
         {dots}
         <span className="flex shrink-0 items-center">
           {permanent && (
-            <Button
+            <Button size="compact"
               variant="ghost"
               aria-pressed={permanent.on}
               aria-label={`${title}: ${permanent.on ? 'permanent. Remove permanent status' : 'make permanent'}`}
-              className={`h-11 px-2 text-meta ${permanent.on ? 'text-foreground' : 'text-muted-foreground'}`}
+              className={`px-2 text-meta ${permanent.on ? 'text-foreground' : 'text-muted-foreground'}`}
               onClick={permanent.toggle}
             >
               {permanent.on ? 'Permanent ✓' : 'Permanent'}
             </Button>
           )}
           {onRemove && (
-            <Button variant="ghost" className="size-11" aria-label={`Remove ${title}`} onClick={onRemove}>
+            <Button size="compact-icon" variant="ghost" aria-label={`Remove ${title}`} onClick={onRemove}>
               ✕
             </Button>
           )}

@@ -28,6 +28,8 @@
   --accent-foreground: #76242a;
   --border: #d6d0c4;
   --ring: #9c2f36;
+  /* Edge of an outline-only control (Button `line`): 3:1 against the page, the minimum for a control's boundary. */
+  --edge: #8c877c;
   --note: #365d68;
   --warning: #80551e;
   --overlay-shadow: 0 12px 40px #24242326;
@@ -46,6 +48,7 @@
   --accent-foreground: #f3b5b1;
   --border: #44484a;
   --ring: #f09391;
+  --edge: #74787a;
   --note: #96c4ce;
   --warning: #dfbd7a;
   --overlay-shadow: 0 12px 40px #00000066;
@@ -64,6 +67,7 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
+  --color-edge: var(--edge);
   --color-note: var(--note);
   --color-warning: var(--warning);
   --shadow-overlay: var(--overlay-shadow);

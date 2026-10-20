@@ -96,7 +96,7 @@ export function GmAssistantPanel({ assistant }: { assistant: GmAssistant }) {
           }}
           className="min-h-20"
         />
-        <Button type="submit" size="lg" className="self-end" disabled={loading || !question.trim()}>
+        <Button size="compact" variant="line-primary" type="submit" className="self-end" disabled={loading || !question.trim()}>
           Ask
         </Button>
       </form>

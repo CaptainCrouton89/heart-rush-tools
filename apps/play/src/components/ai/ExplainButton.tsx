@@ -91,7 +91,7 @@ function ExplainPopover<V extends ExplainValue | ExplainAspectValue>({
   return (
     <Popover open={open} onOpenChange={onOpenChange}>
       <PopoverTrigger asChild>
-        <Button type="button" variant="ghost" size="icon" className="size-11 shrink-0 text-muted-foreground hover:text-foreground" aria-label={label}>
+        <Button size="compact-icon" type="button" variant="ghost" className="shrink-0 text-muted-foreground hover:text-foreground" aria-label={label}>
           <ExplainIcon />
         </Button>
       </PopoverTrigger>
@@ -109,7 +109,7 @@ function ExplainPopover<V extends ExplainValue | ExplainAspectValue>({
             ))}
           </dl>
         )}
-        <Button type="button" variant="outline" size="lg" className="min-h-11 self-end" onClick={() => onOpenChange(false)}>
+        <Button size="compact" type="button" variant="line" className="self-end" onClick={() => onOpenChange(false)}>
           Close
         </Button>
       </PopoverContent>

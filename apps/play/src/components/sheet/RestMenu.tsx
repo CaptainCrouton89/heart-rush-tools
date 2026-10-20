@@ -44,7 +44,7 @@ export function RestMenu({ character, dispatch, canEdit }: SectionProps) {
     <div className="flex items-center gap-3">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="h-11 px-4">
+          <Button size="compact" variant="line">
             Rest <span aria-hidden="true">▾</span>
           </Button>
         </DropdownMenuTrigger>
@@ -103,7 +103,7 @@ export function RestMenu({ character, dispatch, canEdit }: SectionProps) {
               <span className="mr-auto self-center text-meta text-muted-foreground">
                 {picked.length} of {rolls} ticked
               </span>
-              <Button type="submit" className="min-h-12 px-6" disabled={picked.length !== rolls}>
+              <Button size="compact" variant="line-primary" type="submit" disabled={picked.length !== rolls}>
                 Rest
               </Button>
             </DialogFooter>

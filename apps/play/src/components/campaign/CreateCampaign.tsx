@@ -37,7 +37,7 @@ export function CreateCampaign() {
 
   if (!open) {
     return (
-      <Button type="button" size="lg" className="self-start" onClick={() => setOpen(true)}>
+      <Button size="compact" variant="line-primary" type="button" className="self-start" onClick={() => setOpen(true)}>
         Create campaign
       </Button>
     )
@@ -57,10 +57,10 @@ export function CreateCampaign() {
           onKeyDown={(e) => e.key === 'Escape' && close()}
           className="h-11 min-w-0 flex-1 basis-56"
         />
-        <Button type="submit" size="lg" disabled={busy || !name.trim()}>
+        <Button size="compact" variant="line-primary" type="submit" disabled={busy || !name.trim()}>
           {busy ? 'Creating…' : 'Create'}
         </Button>
-        <Button type="button" size="lg" variant="ghost" onClick={close}>
+        <Button size="compact" type="button" variant="ghost" onClick={close}>
           Cancel
         </Button>
       </div>

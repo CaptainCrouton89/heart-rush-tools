@@ -91,10 +91,10 @@ export function JournalEntryItem({
               </div>
             )}
             <div className="ml-auto flex gap-2">
-              <Button type="button" variant="outline" className="min-h-11" disabled={busy} onClick={() => { setError(null); setEditing(true) }}>
+              <Button size="compact" type="button" variant="line" disabled={busy} onClick={() => { setError(null); setEditing(true) }}>
                 Edit
               </Button>
-              <Button type="button" variant="outline" className="min-h-11" disabled={busy} onClick={() => { setError(null); setConfirming(true) }}>
+              <Button size="compact" type="button" variant="line" disabled={busy} onClick={() => { setError(null); setConfirming(true) }}>
                 Delete
               </Button>
             </div>
@@ -113,10 +113,10 @@ export function JournalEntryItem({
           </DialogHeader>
           {error && <p role="alert" className="text-ui text-destructive">{error}</p>}
           <DialogFooter>
-            <Button type="button" variant="outline" className="min-h-11" disabled={busy} onClick={() => setConfirming(false)}>
+            <Button size="compact" type="button" variant="line" disabled={busy} onClick={() => setConfirming(false)}>
               Keep it
             </Button>
-            <Button type="button" className="min-h-11" disabled={busy} onClick={() => void remove()}>
+            <Button size="compact" variant="line-primary" type="button" disabled={busy} onClick={() => void remove()}>
               {busy ? 'Deleting…' : 'Delete'}
             </Button>
           </DialogFooter>

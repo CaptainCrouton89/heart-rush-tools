@@ -41,16 +41,15 @@ export function StepProfessions({ draft }: { draft: UseDraft }) {
               onChange={(e) => edit(i, { name: e.target.value })}
             />
             <div role="group" aria-label={`${p.name.trim() || `Profession ${i + 1}`} rank`} className="flex items-center gap-1">
-              <Button type="button" variant="outline" size="lg" aria-label="One rank fewer" disabled={p.rank <= 1} onClick={() => edit(i, { rank: p.rank - 1 })}>
+              <Button size="compact-icon" type="button" variant="line" aria-label="One rank fewer" disabled={p.rank <= 1} onClick={() => edit(i, { rank: p.rank - 1 })}>
                 −
               </Button>
               <span className="w-10 text-center text-control font-semibold tabular-nums" aria-live="polite">
                 {p.rank}
               </span>
-              <Button
+              <Button size="compact-icon"
                 type="button"
-                variant="outline"
-                size="lg"
+                variant="line"
                 aria-label="One rank more"
                 disabled={remaining <= 0 || p.rank >= age.cap}
                 onClick={() => edit(i, { rank: p.rank + 1 })}
@@ -58,14 +57,14 @@ export function StepProfessions({ draft }: { draft: UseDraft }) {
                 +
               </Button>
             </div>
-            <Button type="button" variant="ghost" size="lg" onClick={() => setRows(rows.filter((_, j) => j !== i))}>
+            <Button size="compact" type="button" variant="ghost" onClick={() => setRows(rows.filter((_, j) => j !== i))}>
               Remove
             </Button>
           </li>
         ))}
       </ul>
       {rows.length < MAX_PROFESSIONS && (
-        <Button type="button" variant="outline" size="lg" className="self-start" disabled={remaining <= 0} onClick={() => setRows([...rows, { name: '', rank: 1 }])}>
+        <Button size="compact" type="button" variant="line" className="self-start" disabled={remaining <= 0} onClick={() => setRows([...rows, { name: '', rank: 1 }])}>
           Add a profession
         </Button>
       )}

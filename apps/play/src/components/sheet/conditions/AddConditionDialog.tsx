@@ -127,12 +127,12 @@ export function AddConditionDialog({
                   {ABILITIES.map((a) => {
                     const on = affects.includes(a.id)
                     return (
-                      <Button
+                      <Button size="compact"
                         key={a.id}
                         type="button"
-                        variant={on ? 'secondary' : 'outline'}
+                        variant={on ? 'secondary' : 'line'}
                         aria-pressed={on}
-                        className={`h-11 px-3 ${on ? 'bg-accent text-accent-foreground' : ''}`}
+                        className={`px-3 ${on ? 'bg-accent text-accent-foreground' : ''}`}
                         onClick={() => setAffects((list) => (on ? list.filter((x) => x !== a.id) : [...list, a.id]))}
                       >
                         {a.label}
@@ -143,11 +143,11 @@ export function AddConditionDialog({
               </fieldset>
               <div className="flex items-center gap-2 text-ui">
                 Level
-                <Button type="button" variant="outline" className="size-11" aria-label="Level one less" disabled={level <= 1} onClick={() => setLevel(level - 1)}>
+                <Button size="compact-icon" type="button" variant="line" aria-label="Level one less" disabled={level <= 1} onClick={() => setLevel(level - 1)}>
                   −
                 </Button>
                 <span className="w-6 text-center font-semibold tabular-nums">{level}</span>
-                <Button type="button" variant="outline" className="size-11" aria-label="Level one more" disabled={level >= 5} onClick={() => setLevel(level + 1)}>
+                <Button size="compact-icon" type="button" variant="line" aria-label="Level one more" disabled={level >= 5} onClick={() => setLevel(level + 1)}>
                   +
                 </Button>
               </div>
@@ -155,7 +155,7 @@ export function AddConditionDialog({
                 <input type="checkbox" className="size-5 accent-primary" checked={permanent} onChange={(e) => setPermanent(e.target.checked)} />
                 Permanent
               </label>
-              <Button type="submit" className="h-11" disabled={!name.trim()}>
+              <Button size="compact" variant="line-primary" type="submit" disabled={!name.trim()}>
                 Add {name.trim() || 'condition'}
               </Button>
             </form>

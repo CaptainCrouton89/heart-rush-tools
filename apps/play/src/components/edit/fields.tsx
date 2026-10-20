@@ -172,13 +172,13 @@ export function Picker<T extends string>({
 /** An on/off button that reads as a checkbox ("✓ Worn"). */
 export function Check({ checked, onChange, children, label }: { checked: boolean; onChange: (next: boolean) => void; children: ReactNode; label?: string }) {
   return (
-    <Button
+    <Button size="compact"
       type="button"
       role="checkbox"
       aria-checked={checked}
       aria-label={label}
-      variant={checked ? 'secondary' : 'outline'}
-      className="h-11 min-w-11 px-3"
+      variant={checked ? 'secondary' : 'line'}
+      className="px-3"
       onClick={() => onChange(!checked)}
     >
       {checked ? '✓ ' : ''}

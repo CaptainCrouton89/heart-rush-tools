@@ -49,7 +49,7 @@ export function StratagemsTab({ campaign, stratagems }: StratagemsTabProps) {
             }}
           />
         ) : (
-          <Button type="button" size="lg" className="self-start" onClick={() => setAdding(true)}>
+          <Button size="compact" variant="line-primary" type="button" className="self-start" onClick={() => setAdding(true)}>
             New stratagem
           </Button>
         ))}

@@ -85,10 +85,10 @@ export function RollResultView({ outcome, onChange, compact = false }: { outcome
         <div className="flex flex-col gap-2">
           <p className="text-ui font-medium">A kept die shows 1. Fail, or reroll that die and take a complication.</p>
           <div className="flex flex-wrap gap-2">
-            <Button type="button" variant="outline" className="h-11 flex-1" disabled={busy} onClick={() => void choose('fail')}>
+            <Button size="compact" type="button" variant="line" className="flex-1" disabled={busy} onClick={() => void choose('fail')}>
               Fail
             </Button>
-            <Button type="button" className="h-11 flex-1" disabled={busy} onClick={() => void choose('reroll')}>
+            <Button size="compact" variant="line-primary" type="button" className="flex-1" disabled={busy} onClick={() => void choose('reroll')}>
               Reroll and take a complication
             </Button>
           </div>

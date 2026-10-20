@@ -45,10 +45,9 @@ export function AddMyCharacter({ campaignId, candidates }: { campaignId: string;
           <ul className="flex flex-col gap-1">
             {candidates.map((c) => (
               <li key={c.id}>
-                <Button
+                <Button size="compact"
                   type="button"
                   variant="ghost"
-                  size="lg"
                   className="w-full justify-between"
                   disabled={busy !== null}
                   onClick={() => add(c.id)}
@@ -59,12 +58,12 @@ export function AddMyCharacter({ campaignId, candidates }: { campaignId: string;
               </li>
             ))}
           </ul>
-          <Button type="button" variant="ghost" size="lg" className="self-start" onClick={() => setOpen(false)}>
+          <Button size="compact" type="button" variant="ghost" className="self-start" onClick={() => setOpen(false)}>
             Cancel
           </Button>
         </div>
       ) : (
-        <Button type="button" size="lg" variant="outline" className="self-start" onClick={() => setOpen(true)}>
+        <Button size="compact" type="button" variant="line" className="self-start" onClick={() => setOpen(true)}>
           Add my character to this campaign
         </Button>
       )}

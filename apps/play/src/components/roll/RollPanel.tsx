@@ -103,7 +103,7 @@ export function RollPanel(props: RollPanelProps) {
               <h2 className="font-sans text-control font-semibold">{title}</h2>
               <p className="text-ui text-muted-foreground">{description}</p>
             </div>
-            <Button type="button" variant="ghost" className="size-11 shrink-0" aria-label="Close" onClick={onClose}>
+            <Button size="compact-icon" type="button" variant="ghost" className="shrink-0" aria-label="Close" onClick={onClose}>
               ×
             </Button>
           </div>
@@ -245,13 +245,13 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
 
       <Field label="Advantage / disadvantage">
         <div className="flex items-center gap-2">
-          <Button type="button" variant="outline" className="size-11 text-h4" aria-label="One more disadvantage" disabled={net <= -MAX_NET} onClick={() => setNet(net - 1)}>
+          <Button size="compact-icon" type="button" variant="line" aria-label="One more disadvantage" disabled={net <= -MAX_NET} onClick={() => setNet(net - 1)}>
             −
           </Button>
           <output className="min-w-16 text-center font-semibold tabular-nums" aria-live="polite">
             {net > 0 ? `A${net}` : net < 0 ? `D${-net}` : 'None'}
           </output>
-          <Button type="button" variant="outline" className="size-11 text-h4" aria-label="One more advantage" disabled={net >= MAX_NET} onClick={() => setNet(net + 1)}>
+          <Button size="compact-icon" type="button" variant="line" aria-label="One more advantage" disabled={net >= MAX_NET} onClick={() => setNet(net + 1)}>
             +
           </Button>
           {defaultNet !== 0 && (
@@ -264,7 +264,7 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
 
       <Field label="Modifier" htmlFor={`${ids}-mod`}>
         <div className="flex items-center gap-2">
-          <Button type="button" variant="outline" className="size-11 text-h4" aria-label="Modifier one less" onClick={() => setModifier(modifier - 1)}>
+          <Button size="compact-icon" type="button" variant="line" aria-label="Modifier one less" onClick={() => setModifier(modifier - 1)}>
             −
           </Button>
           <Input
@@ -277,13 +277,13 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
             onChange={(e) => setModifierText(e.target.value.replace(/[^\d\-−]/g, '').slice(0, 5))}
             className="h-11 w-16 shrink-0 px-2 text-center font-semibold tabular-nums md:text-control"
           />
-          <Button type="button" variant="outline" className="size-11 text-h4" aria-label="Modifier one more" onClick={() => setModifier(modifier + 1)}>
+          <Button size="compact-icon" type="button" variant="line" aria-label="Modifier one more" onClick={() => setModifier(modifier + 1)}>
             +
           </Button>
           {character.professions.length > 0 && (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button type="button" variant="outline" className="h-11 min-w-0 flex-1 px-3">
+                <Button size="compact" type="button" variant="line" className="min-w-0 flex-1 px-3">
                   Profession ▾
                 </Button>
               </DropdownMenuTrigger>
@@ -307,7 +307,7 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
         </div>
       </Field>
 
-      <Button type="button" className="h-12 text-control" disabled={busy || modifierInvalid} onClick={() => void submit()}>
+      <Button size="compact" variant="line-primary" type="button" disabled={busy || modifierInvalid} onClick={() => void submit()}>
         {busy ? 'Rolling…' : `Roll ${abilityLabel(ability)} ${typeLabel(rollType)}`}
       </Button>
 

@@ -77,7 +77,7 @@ function NewCharacter() {
               ))}
             </ul>
           )}
-          <Button type="submit" size="lg" className="self-start" disabled={problems.length > 0 || busy}>
+          <Button size="compact" variant="line-primary" type="submit" className="self-start" disabled={problems.length > 0 || busy}>
             {busy ? 'Saving…' : 'Continue'}
           </Button>
         </div>

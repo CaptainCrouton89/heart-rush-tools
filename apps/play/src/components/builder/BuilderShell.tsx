@@ -89,12 +89,12 @@ export function BuilderShell({ draft, step, onStep }: { draft: UseDraft; step: S
         )}
         <div className="flex flex-wrap items-center gap-3">
           {step > 1 && (
-            <Button type="button" variant="outline" size="lg" onClick={() => go((step - 1) as StepNumber)}>
+            <Button size="compact" type="button" variant="line" onClick={() => go((step - 1) as StepNumber)}>
               Back
             </Button>
           )}
           {step < STEPS.length ? (
-            <Button type="button" size="lg" disabled={problems.length > 0} onClick={() => go((step + 1) as StepNumber)}>
+            <Button size="compact" variant="line-primary" type="button" disabled={problems.length > 0} onClick={() => go((step + 1) as StepNumber)}>
               Continue
             </Button>
           ) : (
@@ -139,10 +139,10 @@ function Leaving({ draft }: { draft: UseDraft }) {
       <AlertDescription>
         <p>{draft.status.kind === 'failed' ? `${draft.status.text}.` : ''} If you leave now, they are lost.</p>
         <div className="mt-2 flex flex-wrap gap-3">
-          <Button type="button" size="lg" onClick={stay}>
+          <Button size="compact" variant="line-primary" type="button" onClick={stay}>
             Stay
           </Button>
-          <Button type="button" variant="outline" size="lg" onClick={leave}>
+          <Button size="compact" type="button" variant="line" onClick={leave}>
             Leave without saving
           </Button>
         </div>
@@ -167,7 +167,7 @@ function InvalidPending({ draft }: { draft: UseDraft }) {
               <span>
                 {describeAction(action)}: {refusalReason(code, message)}
               </span>
-              <Button type="button" variant="outline" size="lg" onClick={() => draft.setPending((p) => p.filter((a) => a.id !== action.id))}>
+              <Button size="compact" type="button" variant="line" onClick={() => draft.setPending((p) => p.filter((a) => a.id !== action.id))}>
                 Remove
               </Button>
             </li>

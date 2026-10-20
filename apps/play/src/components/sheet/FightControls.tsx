@@ -70,7 +70,7 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
           {canEdit ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="h-11 px-3 font-semibold" aria-label={`Heart die d${hp.heartDieCurrent}. Set it by hand`}>
+                <Button size="compact" variant="line" className="px-3 font-semibold" aria-label={`Heart die d${hp.heartDieCurrent}. Set it by hand`}>
                   d{hp.heartDieCurrent} <span aria-hidden="true">▾</span>
                 </Button>
               </DropdownMenuTrigger>
@@ -89,7 +89,7 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
           {canEdit && (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="h-11 px-3" disabled={spendBlocked !== null}>
+                <Button size="compact" variant="line" className="px-3" disabled={spendBlocked !== null}>
                   Spend <span aria-hidden="true">▾</span>
                 </Button>
               </DropdownMenuTrigger>
@@ -124,10 +124,10 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
         </span>
         {canEdit && (
           <>
-            <Button className="h-12 px-4" onClick={nextRound}>
+            <Button size="compact" variant="line-primary" onClick={nextRound}>
               Next round
             </Button>
-            <Button variant="outline" className="h-12 px-4" onClick={() => void dispatch({ kind: 'endFight' })}>
+            <Button size="compact" variant="line" onClick={() => void dispatch({ kind: 'endFight' })}>
               End fight
             </Button>
           </>
@@ -138,12 +138,12 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
       <div className="flex flex-wrap items-center gap-2">
         <Stepper label="DP" value={play.dp} canEdit={canEdit} min={0} max={10} onChange={(value) => void dispatch({ kind: 'dp:set', value })} />
         {canEdit && dpStep === 2 && (
-          <Button variant="outline" className="h-11 px-3" disabled={play.dp >= 10} onClick={() => void dispatch({ kind: 'dp:set', value: Math.min(10, play.dp + 2) })}>
+          <Button size="compact" variant="line" className="px-3" disabled={play.dp >= 10} onClick={() => void dispatch({ kind: 'dp:set', value: Math.min(10, play.dp + 2) })}>
             Complication: +{Math.min(2, 10 - play.dp) || 2} DP
           </Button>
         )}
         {canEdit && (
-          <Button variant="outline" className="h-11 px-3" onClick={() => void dispatch({ kind: 'startSession' })}>
+          <Button size="compact" variant="line" className="px-3" onClick={() => void dispatch({ kind: 'startSession' })}>
             Start session
           </Button>
         )}
@@ -183,10 +183,10 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
               </label>
             )}
             <DialogFooter>
-              <Button type="button" variant="ghost" className="min-h-12" onClick={skipBurn}>
+              <Button size="compact" type="button" variant="ghost" onClick={skipBurn}>
                 Skip
               </Button>
-              <Button type="submit" className="min-h-12 px-6" disabled={burnAmount < 1}>
+              <Button size="compact" variant="line-primary" type="submit" disabled={burnAmount < 1}>
                 Damage
               </Button>
             </DialogFooter>
@@ -205,7 +205,7 @@ function Stepper({
     <div className="flex items-center gap-2">
       <span className="eyebrow">{label}</span>
       {canEdit && (
-        <Button variant="outline" className="size-11 text-h4" aria-label={`${label} one less`} disabled={value <= min} onClick={() => onChange(value - 1)}>
+        <Button size="compact-icon" variant="line" aria-label={`${label} one less`} disabled={value <= min} onClick={() => onChange(value - 1)}>
           −
         </Button>
       )}
@@ -213,9 +213,9 @@ function Stepper({
         {value}
       </span>
       {canEdit && (
-        <Button
-          variant="outline"
-          className="size-11 text-h4"
+        <Button size="compact-icon"
+          variant="line"
+         
           aria-label={`${label} one more`}
           disabled={max !== undefined && value >= max}
           onClick={() => onChange(value + 1)}

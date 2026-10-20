@@ -79,15 +79,15 @@ export function AbilityRow({
         </div>
         {extra}
         {canEdit && canReset && (
-          <Button type="button" variant="ghost" className="min-h-12 shrink-0 px-3" onClick={() => void dispatch({ kind: 'ability:reset', talentId: talent.id })}>
+          <Button size="compact" type="button" variant="ghost" className="shrink-0 px-3" onClick={() => void dispatch({ kind: 'ability:reset', talentId: talent.id })}>
             Reset
           </Button>
         )}
         {canEdit && talent.frequency !== 'passive' && (
-          <Button
+          <Button size="compact-lg"
             type="button"
-            variant={used ? 'outline' : 'default'}
-            className="min-h-12 min-w-16 shrink-0 px-4"
+            variant={used ? 'line' : 'line-primary'}
+            className="shrink-0"
             disabled={used}
             aria-label={`Use ${title}`}
             onClick={() => void dispatch({ kind: 'ability:use', talentId: talent.id })}

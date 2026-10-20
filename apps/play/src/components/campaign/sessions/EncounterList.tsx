@@ -44,15 +44,15 @@ function EncounterItem({ campaignId, sessionId, encounter, isGm }: { campaignId:
         {isGm &&
           (confirming ? (
             <span className="flex items-center gap-2">
-              <Button type="button" variant="outline" className="min-h-11" disabled={busy} onClick={() => void confirm()}>
+              <Button size="compact" type="button" variant="line" disabled={busy} onClick={() => void confirm()}>
                 {busy ? 'Removing…' : 'Remove it'}
               </Button>
-              <Button type="button" variant="ghost" className="min-h-11" disabled={busy} onClick={() => setConfirming(false)}>
+              <Button size="compact" type="button" variant="ghost" disabled={busy} onClick={() => setConfirming(false)}>
                 Keep
               </Button>
             </span>
           ) : (
-            <Button type="button" variant="ghost" className="min-h-11" aria-label={`Remove ${encounter.title}`} onClick={() => setConfirming(true)}>
+            <Button size="compact" type="button" variant="ghost" aria-label={`Remove ${encounter.title}`} onClick={() => setConfirming(true)}>
               Remove
             </Button>
           ))}

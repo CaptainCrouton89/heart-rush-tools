@@ -16,7 +16,7 @@ export function LevelDots({ name, level, floor = 0, onSet }: { name: string; lev
         )
         if (!onSet || n <= floor) {
           return (
-            <span key={n} className={onSet ? 'inline-flex size-11 items-center justify-center' : 'inline-flex size-5 items-center justify-center'}>
+            <span key={n} className={onSet ? 'inline-flex h-8 w-11 items-center justify-center' : 'inline-flex size-5 items-center justify-center'}>
               {dot}
             </span>
           )
@@ -28,7 +28,7 @@ export function LevelDots({ name, level, floor = 0, onSet }: { name: string; lev
             aria-label={`Set ${name} to level ${n}`}
             aria-pressed={filled}
             onClick={() => onSet(n)}
-            className="inline-flex size-11 items-center justify-center rounded-sm hover:bg-surface-muted"
+            className="relative inline-flex h-8 w-11 items-center justify-center rounded-sm after:absolute after:inset-x-0 after:top-1/2 after:h-11 after:-translate-y-1/2 after:content-[''] hover:bg-surface-muted"
           >
             {dot}
           </button>

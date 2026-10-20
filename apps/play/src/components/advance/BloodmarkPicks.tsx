@@ -110,7 +110,7 @@ export function BloodmarkPicks({
               <p className="text-meta text-muted-foreground">Warcaster: elemental talents cost (elemental talents known) + 3 XP.</p>
             </div>
           )}
-          <Button type="submit" className="min-h-11 w-fit" disabled={!ready}>
+          <Button size="compact" variant="line-primary" type="submit" className="w-fit" disabled={!ready}>
             Take ability
           </Button>
         </form>

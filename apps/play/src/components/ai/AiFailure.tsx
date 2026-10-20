@@ -31,11 +31,11 @@ export function AiFailureLine({ problem, verb, onRetry }: { problem: AiProblem; 
         Couldn't {verb}: {problemText(problem)}.
       </p>
       {signIn ? (
-        <Button asChild size="lg" variant="outline" className="min-h-11">
+        <Button size="compact" asChild variant="line">
           <a href={`/auth/login?returnTo=${encodeURIComponent(pathname + searchStr)}`}>Sign in again</a>
         </Button>
       ) : (
-        <Button type="button" size="lg" variant="outline" className="min-h-11" onClick={onRetry}>
+        <Button size="compact" type="button" variant="line" onClick={onRetry}>
           Retry
         </Button>
       )}

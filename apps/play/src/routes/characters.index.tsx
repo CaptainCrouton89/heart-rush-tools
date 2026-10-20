@@ -15,7 +15,7 @@ function CharacterList() {
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-5 pt-8 md:px-8 md:pt-12">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <h1 className="font-serif text-h1-sm font-semibold md:text-h1">Characters</h1>
-        <Button asChild size="lg">
+        <Button size="compact" variant="line-primary" asChild>
           <Link to="/characters/new">New character</Link>
         </Button>
       </div>

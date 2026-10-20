@@ -16,7 +16,7 @@ function Landing() {
         Keep your Heart Rush characters here: build one step by step, track HP, wounds and rush points at the table, spend XP as you
         advance, and share sheets with your campaign&rsquo;s GM.
       </p>
-      <Button asChild size="lg">
+      <Button size="compact" variant="line-primary" asChild>
         <a href={`/auth/login?returnTo=${encodeURIComponent('/characters')}`}>Sign in with Northlight</a>
       </Button>
     </div>

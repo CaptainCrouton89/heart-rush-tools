@@ -76,7 +76,7 @@ function Journal({ characterId, inCampaign }: { characterId: string; inCampaign:
       title="Journal"
       action={
         !writing && entries && (
-          <Button type="button" variant="outline" className="min-h-11" onClick={() => setWriting(true)}>
+          <Button size="compact" type="button" variant="line" onClick={() => setWriting(true)}>
             New entry
           </Button>
         )

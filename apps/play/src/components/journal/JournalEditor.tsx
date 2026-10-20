@@ -46,10 +46,10 @@ export function JournalEditor({
       />
       {error && <p id={`${id}-error`} role="alert" className="text-ui text-destructive">{error}</p>}
       <div className="flex gap-2">
-        <Button type="submit" className="min-h-11" disabled={!body.trim() || saving || body === initial}>
+        <Button size="compact" variant="line-primary" type="submit" disabled={!body.trim() || saving || body === initial}>
           {saving ? 'Saving…' : saveLabel}
         </Button>
-        <Button type="button" variant="outline" className="min-h-11" onClick={onCancel} disabled={saving}>
+        <Button size="compact" type="button" variant="line" onClick={onCancel} disabled={saving}>
           Cancel
         </Button>
       </div>

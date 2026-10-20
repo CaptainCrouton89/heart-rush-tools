@@ -195,10 +195,9 @@ export function StratagemForm({ initial, characters, saveLabel, onSave, onCancel
                       </ToggleGroupItem>
                     ))}
                   </ToggleGroup>
-                  <Button
+                  <Button size="compact"
                     type="button"
                     variant="ghost"
-                    size="lg"
                     aria-label={`Remove objective ${n}`}
                     onClick={() => set({ objectives: draft.objectives.filter((_, j) => j !== i) })}
                   >
@@ -209,10 +208,9 @@ export function StratagemForm({ initial, characters, saveLabel, onSave, onCancel
             )
           })}
         </ol>
-        <Button
+        <Button size="compact"
           type="button"
-          variant="outline"
-          size="lg"
+          variant="line"
           className="self-start"
           disabled={draft.objectives.length >= MAX_OBJECTIVES}
           onClick={() => set({ objectives: [...draft.objectives, { title: '', cn: '', leaderCharacterId: null, state: 'open' }] })}
@@ -245,27 +243,27 @@ export function StratagemForm({ initial, characters, saveLabel, onSave, onCancel
                   </ToggleGroupItem>
                 ))}
               </ToggleGroup>
-              <Button type="button" variant="ghost" size="lg" aria-label={`Remove ${a.name.trim() || `item ${i + 1}`}`} onClick={() => set({ assets: draft.assets.filter((_, j) => j !== i) })}>
+              <Button size="compact" type="button" variant="ghost" aria-label={`Remove ${a.name.trim() || `item ${i + 1}`}`} onClick={() => set({ assets: draft.assets.filter((_, j) => j !== i) })}>
                 Remove
               </Button>
             </li>
           ))}
         </ul>
         <div className="flex flex-wrap gap-2">
-          <Button type="button" variant="outline" size="lg" disabled={draft.assets.length >= MAX_ASSETS} onClick={() => set({ assets: [...draft.assets, { name: '', kind: 'asset' }] })}>
+          <Button size="compact" type="button" variant="line" disabled={draft.assets.length >= MAX_ASSETS} onClick={() => set({ assets: [...draft.assets, { name: '', kind: 'asset' }] })}>
             Add asset
           </Button>
-          <Button type="button" variant="outline" size="lg" disabled={draft.assets.length >= MAX_ASSETS} onClick={() => set({ assets: [...draft.assets, { name: '', kind: 'hindrance' }] })}>
+          <Button size="compact" type="button" variant="line" disabled={draft.assets.length >= MAX_ASSETS} onClick={() => set({ assets: [...draft.assets, { name: '', kind: 'hindrance' }] })}>
             Add hindrance
           </Button>
         </div>
       </fieldset>
 
       <div className="flex flex-wrap items-center gap-2 border-t border-border pt-4">
-        <Button type="submit" size="lg" disabled={busy || problem !== null}>
+        <Button size="compact" variant="line-primary" type="submit" disabled={busy || problem !== null}>
           {busy ? 'Saving…' : saveLabel}
         </Button>
-        <Button type="button" size="lg" variant="ghost" disabled={busy} onClick={onCancel}>
+        <Button size="compact" type="button" variant="ghost" disabled={busy} onClick={onCancel}>
           Cancel
         </Button>
         {problem !== null && <p className="text-ui text-muted-foreground">{problem}</p>}

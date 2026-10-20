@@ -52,20 +52,20 @@ export function ProfessionRow({
           <dl className="flex flex-col text-ui tabular-nums">
             <Counter label="Challenges" value={`${profession.challenges} / ${p.challengesNeeded}`}>
               {canEdit && (
-                <Button type="button" variant="outline" className="h-11 min-w-11 px-3" aria-label={`Add a challenge to ${name}`} onClick={() => void dispatch({ kind: 'profession:challenge', professionId })}>
+                <Button size="compact" type="button" variant="line" className="px-3" aria-label={`Add a challenge to ${name}`} onClick={() => void dispatch({ kind: 'profession:challenge', professionId })}>
                   +1
                 </Button>
               )}
             </Counter>
             <Counter label="Mission" value={p.missionRequired ? (missionDone ? 'done' : 'required') : 'not required'}>
               {canEdit && p.missionRequired && (
-                <Button
+                <Button size="compact"
                   type="button"
-                  variant={missionDone ? 'secondary' : 'outline'}
+                  variant={missionDone ? 'secondary' : 'line'}
                   role="checkbox"
                   aria-checked={missionDone}
                   aria-label={`Mission done for ${name}`}
-                  className="h-11 min-w-11 px-3"
+                  className="px-3"
                   onClick={() => void dispatch({ kind: 'profession:mission', professionId, done: !missionDone })}
                 >
                   {missionDone ? '✓ Done' : 'Done'}
@@ -74,14 +74,14 @@ export function ProfessionRow({
             </Counter>
             <Counter label="Practice" value={`${profession.practiceWeeks} / ${p.practiceNeeded} weeks`}>
               {canEdit && (
-                <Button type="button" variant="outline" className="h-11 min-w-11 px-3" aria-label={`Add a week of practice to ${name}`} onClick={() => void dispatch({ kind: 'profession:practice', professionId })}>
+                <Button size="compact" type="button" variant="line" className="px-3" aria-label={`Add a week of practice to ${name}`} onClick={() => void dispatch({ kind: 'profession:practice', professionId })}>
                   +1 week
                 </Button>
               )}
             </Counter>
           </dl>
           {canEdit && (
-            <Button type="button" className="mt-1 h-11 w-full" disabled={!p.canAdvance} onClick={() => void dispatch({ kind: 'profession:advance', professionId })}>
+            <Button size="compact" variant="line-primary" type="button" className="mt-1 self-end" disabled={!p.canAdvance} onClick={() => void dispatch({ kind: 'profession:advance', professionId })}>
               Advance to rank {p.rank + 1}
             </Button>
           )}

@@ -48,8 +48,8 @@ export function DamagePad({ dispatch }: { dispatch: (action: ActionDraft) => unk
       <label htmlFor={DAMAGE_AMOUNT_ID} className="eyebrow">
         Damage or heal
       </label>
-      <div className="flex items-stretch gap-2">
-        <Button type="button" variant="outline" className="size-12 text-h4" aria-label="One less" onClick={() => step(-1)}>
+      <div className="flex items-center gap-2">
+        <Button size="compact-icon" type="button" variant="line" aria-label="One less" onClick={() => step(-1)}>
           −
         </Button>
         <Input
@@ -63,15 +63,15 @@ export function DamagePad({ dispatch }: { dispatch: (action: ActionDraft) => unk
           onKeyDown={(e) => {
             if (e.key === 'Enter') damage()
           }}
-          className="h-12 w-16 shrink-0 px-2 text-center font-semibold tabular-nums md:text-control"
+          className="h-9 w-16 shrink-0 px-2 text-center font-semibold tabular-nums md:text-control"
         />
-        <Button type="button" variant="outline" className="size-12 text-h4" aria-label="One more" onClick={() => step(1)}>
+        <Button size="compact-icon" type="button" variant="line" aria-label="One more" onClick={() => step(1)}>
           +
         </Button>
-        <Button type="button" className="h-12 min-w-0 flex-1 px-2" disabled={amount < 1} onClick={damage}>
+        <Button size="compact-lg" variant="line-primary" type="button" className="min-w-0 flex-1 px-2" disabled={amount < 1} onClick={damage}>
           Damage
         </Button>
-        <Button type="button" variant="outline" className="h-12 min-w-0 flex-1 px-2" disabled={amount < 1} onClick={heal}>
+        <Button size="compact-lg" type="button" variant="line" className="min-w-0 flex-1 px-2" disabled={amount < 1} onClick={heal}>
           Heal
         </Button>
       </div>
@@ -94,10 +94,10 @@ export function DamagePad({ dispatch }: { dispatch: (action: ActionDraft) => unk
               className="h-12"
             />
             <DialogFooter>
-              <Button type="button" variant="ghost" className="min-h-12" onClick={() => setWound(null)}>
+              <Button size="compact" type="button" variant="ghost" onClick={() => setWound(null)}>
                 Change amount
               </Button>
-              <Button type="submit" className="min-h-12 px-6">
+              <Button size="compact" variant="line-primary" type="submit">
                 Mark
               </Button>
             </DialogFooter>

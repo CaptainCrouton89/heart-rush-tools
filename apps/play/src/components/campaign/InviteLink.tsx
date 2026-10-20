@@ -41,13 +41,13 @@ export function InviteLink({ campaignId }: { campaignId: string }) {
           </label>
           <div className="flex items-center gap-2">
             <Input id="invite-link" readOnly value={link} onFocus={(e) => e.currentTarget.select()} className="h-11 min-w-0 flex-1" />
-            <Button type="button" size="lg" variant="outline" onClick={copy}>
+            <Button size="compact" type="button" variant="line" onClick={copy}>
               {copied ? 'Copied' : 'Copy'}
             </Button>
           </div>
         </>
       ) : (
-        <Button type="button" size="lg" variant="outline" className="self-start" disabled={busy} onClick={make}>
+        <Button size="compact" type="button" variant="line" className="self-start" disabled={busy} onClick={make}>
           {busy ? 'Making link…' : 'Invite link'}
         </Button>
       )}

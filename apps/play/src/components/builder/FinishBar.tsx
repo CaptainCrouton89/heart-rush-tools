@@ -51,7 +51,7 @@ export function FinishBar({ draft }: { draft: UseDraft }) {
         </Alert>
       )}
       <div className="flex flex-wrap items-center gap-3">
-        <Button type="button" size="lg" disabled={blockedBy !== null || busy} onClick={onFinish}>
+        <Button size="compact" variant="line-primary" type="button" disabled={blockedBy !== null || busy} onClick={onFinish}>
           {busy ? 'Finishing…' : 'Finish'}
         </Button>
         {blockedBy && (

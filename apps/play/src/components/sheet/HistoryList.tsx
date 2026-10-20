@@ -116,7 +116,7 @@ export function HistoryList({
                 {time(e.createdAt)}
               </time>
               {canEdit && fetchedFor === refreshKey && e.id === result.topEventId && (
-                <Button type="button" variant="outline" className="min-h-11 shrink-0" onClick={() => onUndo(e.id)}>
+                <Button size="compact" type="button" variant="line" className="shrink-0" onClick={() => onUndo(e.id)}>
                   Undo
                 </Button>
               )}

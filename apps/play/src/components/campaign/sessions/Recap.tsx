@@ -62,10 +62,10 @@ export function Recap({ campaignId, sessionId, recap, isGm, expanded }: { campai
           placeholder="What happened this session? Markdown works: **bold**, *italic*, - lists, # headings."
         />
         <div className="flex gap-2">
-          <Button type="submit" size="lg" disabled={busy || text === recap}>
+          <Button size="compact" variant="line-primary" type="submit" disabled={busy || text === recap}>
             {busy ? 'Saving…' : 'Save'}
           </Button>
-          <Button type="button" size="lg" variant="ghost" disabled={busy} onClick={() => setEditing(false)}>
+          <Button size="compact" type="button" variant="ghost" disabled={busy} onClick={() => setEditing(false)}>
             Cancel
           </Button>
         </div>
@@ -88,12 +88,12 @@ export function Recap({ campaignId, sessionId, recap, isGm, expanded }: { campai
       ) : null}
       <div className="flex flex-wrap gap-2">
         {!empty && (
-          <Button type="button" variant="ghost" className="min-h-11" aria-expanded={shown} onClick={() => setShown((s) => !s)}>
+          <Button size="compact" type="button" variant="ghost" aria-expanded={shown} onClick={() => setShown((s) => !s)}>
             {shown ? 'Hide recap' : 'Show recap'}
           </Button>
         )}
         {isGm && (
-          <Button type="button" variant="outline" className="min-h-11" onClick={start}>
+          <Button size="compact" type="button" variant="line" onClick={start}>
             {empty ? 'Write recap' : 'Edit recap'}
           </Button>
         )}

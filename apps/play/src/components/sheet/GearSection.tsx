@@ -34,13 +34,13 @@ export function GearSection({ character, derived, dispatch, canEdit }: SectionPr
               </p>
             </div>
             {canEdit ? (
-              <Button
+              <Button size="compact"
                 type="button"
-                variant={w.wielded ? 'secondary' : 'outline'}
+                variant={w.wielded ? 'secondary' : 'line'}
                 role="checkbox"
                 aria-checked={w.wielded}
                 aria-label={`Wield ${w.name || 'weapon'}`}
-                className="h-11 shrink-0 px-3"
+                className="shrink-0 px-3"
                 onClick={() => void dispatch({ kind: 'gear:wield', weaponId: w.wielded ? null : w.id })}
               >
                 {w.wielded ? '✓ Wielded' : 'Wield'}

@@ -75,22 +75,22 @@ function GmDayControl({ campaign, children }: DayControlProps & { children: Reac
               onKeyDown={(e) => e.key === 'Escape' && setSetting(false)}
               className="h-11 w-24 text-center tabular-nums"
             />
-            <Button type="submit" size="lg" disabled={busy || !valid}>
+            <Button size="compact" variant="line-primary" type="submit" disabled={busy || !valid}>
               Set
             </Button>
-            <Button type="button" size="lg" variant="ghost" onClick={() => setSetting(false)}>
+            <Button size="compact" type="button" variant="ghost" onClick={() => setSetting(false)}>
               Cancel
             </Button>
           </form>
         ) : (
           <>
-            <Button type="button" size="lg" variant="outline" disabled={busy} onClick={() => void write({ add: 1 })}>
+            <Button size="compact" type="button" variant="line" disabled={busy} onClick={() => void write({ add: 1 })}>
               +1 day
             </Button>
-            <Button type="button" size="lg" variant="outline" disabled={busy} onClick={() => void write({ add: 7 })}>
+            <Button size="compact" type="button" variant="line" disabled={busy} onClick={() => void write({ add: 7 })}>
               +7 days
             </Button>
-            <Button type="button" size="lg" variant="ghost" disabled={busy} onClick={open}>
+            <Button size="compact" type="button" variant="ghost" disabled={busy} onClick={open}>
               Set day
             </Button>
           </>

@@ -29,7 +29,7 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
       title={heading}
       action={
         canEdit && (
-          <Button type="button" variant="ghost" className="min-h-11 min-w-11 px-3 text-h4" aria-label="Add a wound" onClick={() => setOpen({ kind: 'add' })}>
+          <Button size="compact-icon" type="button" variant="ghost" aria-label="Add a wound" onClick={() => setOpen({ kind: 'add' })}>
             +
           </Button>
         )
@@ -59,7 +59,7 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
                 <span className="shrink-0 text-meta text-muted-foreground">treated ✓</span>
               ) : (
                 canEdit && (
-                  <Button type="button" variant="outline" className="min-h-11 shrink-0 px-4" onClick={() => setOpen({ kind: 'treat', wound: w })}>
+                  <Button size="compact" type="button" variant="line" className="shrink-0" onClick={() => setOpen({ kind: 'treat', wound: w })}>
                     Treat
                   </Button>
                 )
@@ -124,10 +124,10 @@ function AddWound({ onCancel, onSave }: { onCancel: () => void; onSave: (wound: 
       <RankField label="Rank" value={rank} onChange={setRank} />
       <DescriptionField value={description} onChange={setDescription} />
       <DialogFooter>
-        <Button type="button" variant="ghost" className="min-h-12" onClick={onCancel}>
+        <Button size="compact" type="button" variant="ghost" onClick={onCancel}>
           Cancel
         </Button>
-        <Button type="submit" className="min-h-12 px-6" disabled={n === null || n < 1}>
+        <Button size="compact" variant="line-primary" type="submit" disabled={n === null || n < 1}>
           Add
         </Button>
       </DialogFooter>
@@ -163,14 +163,14 @@ function EditWound({
       <RankField label="Rank" value={rank} onChange={setRank} />
       <DescriptionField value={description} onChange={setDescription} />
       <DialogFooter className="sm:justify-between">
-        <Button type="button" variant="outline" className="min-h-12 text-primary" onClick={onRemove}>
+        <Button size="compact" type="button" variant="line" className="text-primary" onClick={onRemove}>
           Remove wound
         </Button>
         <div className="flex flex-col-reverse gap-2 sm:flex-row">
-          <Button type="button" variant="ghost" className="min-h-12" onClick={onCancel}>
+          <Button size="compact" type="button" variant="ghost" onClick={onCancel}>
             Cancel
           </Button>
-          <Button type="submit" className="min-h-12 px-6" disabled={n === null || n < 1 || !changed}>
+          <Button size="compact" variant="line-primary" type="submit" disabled={n === null || n < 1 || !changed}>
             Save
           </Button>
         </div>
@@ -201,10 +201,10 @@ function TreatWound({ wound, onCancel, onTreat }: { wound: Wound; onCancel: () =
         {result}
       </p>
       <DialogFooter>
-        <Button type="button" variant="ghost" className="min-h-12" onClick={onCancel}>
+        <Button size="compact" type="button" variant="ghost" onClick={onCancel}>
           Cancel
         </Button>
-        <Button type="submit" className="min-h-12 px-6" disabled={n === null}>
+        <Button size="compact" variant="line-primary" type="submit" disabled={n === null}>
           Treat
         </Button>
       </DialogFooter>

@@ -52,7 +52,7 @@ export function StepTalents({ draft }: { draft: UseDraft }) {
                   {describeAction(a)}
                   {invalid.has(a.id) && <span className="ml-2 text-meta">no longer allowed</span>}
                 </span>
-                <Button type="button" variant="outline" className="min-h-11" onClick={() => setPending((p) => p.filter((x) => x.id !== a.id))}>
+                <Button size="compact" type="button" variant="line" onClick={() => setPending((p) => p.filter((x) => x.id !== a.id))}>
                   Remove
                 </Button>
               </li>

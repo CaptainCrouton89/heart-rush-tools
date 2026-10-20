@@ -101,15 +101,15 @@ function RemoveFromCampaign({ characterId, name }: { characterId: string; name: 
       {asking ? (
         <div className="flex flex-wrap items-center gap-x-2 text-ui">
           <span className="min-w-0">Remove {name} from this campaign?</span>
-          <Button type="button" variant="ghost" size="sm" className="min-h-11 text-primary" disabled={busy} onClick={confirm}>
+          <Button size="compact" type="button" variant="ghost" className="text-primary" disabled={busy} onClick={confirm}>
             {busy ? 'Removing…' : 'Remove'}
           </Button>
-          <Button type="button" variant="ghost" size="sm" className="min-h-11" disabled={busy} onClick={() => setAsking(false)}>
+          <Button size="compact" type="button" variant="ghost" disabled={busy} onClick={() => setAsking(false)}>
             Cancel
           </Button>
         </div>
       ) : (
-        <Button type="button" variant="ghost" size="sm" className="min-h-11 self-start text-muted-foreground" onClick={() => setAsking(true)}>
+        <Button size="compact" type="button" variant="ghost" className="self-start text-muted-foreground" onClick={() => setAsking(true)}>
           Remove from campaign
         </Button>
       )}

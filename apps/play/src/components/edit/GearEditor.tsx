@@ -167,7 +167,7 @@ export function GearEditor({ value, onChange }: { value: Character; catalogue: P
                       <CommitText id={id} value={item.notes} onCommit={(notes) => onChange({ kind: 'gear:item:edit', item: { id: item.id, notes } })} />
                     )}
                   </Field>
-                  <Button type="button" variant="outline" className="h-11" aria-label={`Remove ${item.name || 'item'}`} onClick={() => onChange({ kind: 'gear:item:remove', itemId: item.id })}>
+                  <Button size="compact" type="button" variant="line" aria-label={`Remove ${item.name || 'item'}`} onClick={() => onChange({ kind: 'gear:item:remove', itemId: item.id })}>
                     Remove
                   </Button>
                 </div>
@@ -210,7 +210,7 @@ function WeaponRow({ weapon: w, onChange }: { weapon: Weapon; onChange: (action:
         <Check checked={w.reach} onChange={(reach) => edit({ reach })}>
           Reach
         </Check>
-        <Button type="button" variant="outline" className="ml-auto h-11" aria-label={`Remove ${w.name || 'weapon'}`} onClick={() => onChange({ kind: 'gear:weapon:remove', weaponId: w.id })}>
+        <Button size="compact" type="button" variant="line" className="ml-auto" aria-label={`Remove ${w.name || 'weapon'}`} onClick={() => onChange({ kind: 'gear:weapon:remove', weaponId: w.id })}>
           Remove
         </Button>
       </div>
@@ -225,7 +225,7 @@ function AddWeapon({ onChange }: { onChange: (action: ActionDraft) => unknown })
   const [draft, setDraft] = useState<NewWeapon | null>(null)
   if (!draft) {
     return (
-      <Button type="button" variant="outline" className="h-11 self-start" onClick={() => setDraft(BLANK_WEAPON)}>
+      <Button size="compact" type="button" variant="line" className="self-start" onClick={() => setDraft(BLANK_WEAPON)}>
         Add weapon
       </Button>
     )
@@ -260,10 +260,10 @@ function AddWeapon({ onChange }: { onChange: (action: ActionDraft) => unknown })
         </Check>
       </div>
       <div className="flex gap-2">
-        <Button type="submit" className="h-11" disabled={!draft.name.trim() || misc === null}>
+        <Button size="compact" variant="line-primary" type="submit" disabled={!draft.name.trim() || misc === null}>
           Add
         </Button>
-        <Button type="button" variant="ghost" className="h-11" onClick={() => setDraft(null)}>
+        <Button size="compact" type="button" variant="ghost" onClick={() => setDraft(null)}>
           Cancel
         </Button>
       </div>
@@ -278,7 +278,7 @@ function AddItem({ onChange }: { onChange: (action: ActionDraft) => unknown }) {
   const [draft, setDraft] = useState<NewItem | null>(null)
   if (!draft) {
     return (
-      <Button type="button" variant="outline" className="h-11 self-start" onClick={() => setDraft(BLANK_ITEM)}>
+      <Button size="compact" type="button" variant="line" className="self-start" onClick={() => setDraft(BLANK_ITEM)}>
         Add item
       </Button>
     )
@@ -313,10 +313,10 @@ function AddItem({ onChange }: { onChange: (action: ActionDraft) => unknown }) {
       <Field label="Notes">{(id) => <Input id={id} value={draft.notes} onChange={(e) => set({ notes: e.target.value })} className="h-11" />}</Field>
       <p className="text-meta text-muted-foreground">Slots are per item; the meter counts slots × quantity.</p>
       <div className="flex gap-2">
-        <Button type="submit" className="h-11" disabled={!valid}>
+        <Button size="compact" variant="line-primary" type="submit" disabled={!valid}>
           Add
         </Button>
-        <Button type="button" variant="ghost" className="h-11" onClick={() => setDraft(null)}>
+        <Button size="compact" type="button" variant="ghost" onClick={() => setDraft(null)}>
           Cancel
         </Button>
       </div>

@@ -18,7 +18,7 @@ const isCurrent = (pathname: string, href: string) => pathname === href || pathn
 function SessionControl({ session, returnTo, showName }: { session: Session | null; returnTo: string; showName: boolean }) {
   if (!session) {
     return (
-      <Button asChild size="lg">
+      <Button size="compact" variant="line-primary" asChild>
         <a href={`/auth/login?returnTo=${encodeURIComponent(returnTo)}`}>Sign in</a>
       </Button>
     )
@@ -26,7 +26,7 @@ function SessionControl({ session, returnTo, showName }: { session: Session | nu
   return (
     <form method="post" action="/auth/logout" className="flex items-center gap-3">
       {showName && <span className="hidden max-w-48 truncate text-ui text-muted-foreground md:inline">{session.displayName}</span>}
-      <Button type="submit" variant="outline" size="lg">
+      <Button size="compact" type="submit" variant="line">
         Sign out
       </Button>
     </form>
@@ -49,7 +49,7 @@ function PhoneMenu({ session, returnTo, pathname }: { session: Session | null; r
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="size-11 sm:hidden" aria-label="Menu">
+        <Button size="compact-icon" variant="ghost" className="sm:hidden" aria-label="Menu">
           <MenuIcon />
         </Button>
       </SheetTrigger>

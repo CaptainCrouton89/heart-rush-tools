@@ -112,7 +112,7 @@ export function StratagemCard({ campaignId, stratagem: s, isGm, mine, characters
             {STATUS_LABEL[s.status]}
           </span>
           {isGm && (
-            <Button type="button" variant="outline" size="lg" onClick={() => setOpened(fieldsOf(s))}>
+            <Button size="compact" type="button" variant="line" onClick={() => setOpened(fieldsOf(s))}>
               Edit
             </Button>
           )}
@@ -150,15 +150,15 @@ export function StratagemCard({ campaignId, stratagem: s, isGm, mine, characters
                     {isGm &&
                       (o.state === 'open' ? (
                         <>
-                          <Button type="button" variant="outline" size="lg" disabled={busy} aria-label={`Mark ${title} done`} onClick={() => void setState(i, 'done')}>
+                          <Button size="compact" type="button" variant="line" disabled={busy} aria-label={`Mark ${title} done`} onClick={() => void setState(i, 'done')}>
                             Done
                           </Button>
-                          <Button type="button" variant="ghost" size="lg" disabled={busy} aria-label={`Mark ${title} gone`} onClick={() => void setState(i, 'gone')}>
+                          <Button size="compact" type="button" variant="ghost" disabled={busy} aria-label={`Mark ${title} gone`} onClick={() => void setState(i, 'gone')}>
                             Gone
                           </Button>
                         </>
                       ) : (
-                        <Button type="button" variant="ghost" size="lg" disabled={busy} aria-label={`Reopen ${title}`} onClick={() => void setState(i, 'open')}>
+                        <Button size="compact" type="button" variant="ghost" disabled={busy} aria-label={`Reopen ${title}`} onClick={() => void setState(i, 'open')}>
                           Reopen
                         </Button>
                       ))}

@@ -28,7 +28,7 @@ export function quote(character: Character, kind: PurchaseKind, target?: PriceTa
 export function BuyButton({ q, onBuy, label = 'Buy', disabled }: { q: Quote; onBuy: () => void; label?: string; disabled?: boolean }) {
   const blocked = q.refusal !== null || disabled
   return (
-    <Button type="button" className="min-h-11 shrink-0 tabular-nums" disabled={blocked} onClick={onBuy}>
+    <Button size="compact" variant="line-primary" type="button" className="shrink-0 tabular-nums" disabled={blocked} onClick={onBuy}>
       {label}
       {q.cost !== null && <span aria-hidden="true">· {q.cost} XP</span>}
       {q.cost !== null && <span className="sr-only">for {q.cost} XP</span>}
