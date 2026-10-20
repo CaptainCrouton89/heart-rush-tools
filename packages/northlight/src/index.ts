@@ -19,6 +19,8 @@ export interface NorthlightAuthOptions {
   privateKeyJson: string
   /** This app's D1 database (binding `DB`), with `migrations/` from this package applied. */
   db: D1
+  /** Canonical user profiles and sessions; defaults to `db`. Supply the same D1 on sibling sites to share sign-in while keeping OAuth connections and pending sign-ins local. */
+  sessionDb?: D1
   /** Scopes requested at sign-in. Default `['openid', 'profile', 'crtr:llm', 'crtr:act']`. */
   scopes?: string[]
   /** Session cookie name. Default `hr_session`. */
@@ -56,6 +58,7 @@ const IDLE_CONNECTION_MS = 30 * 24 * 60 * 60 * 1000
 export function createNorthlightAuth(options: NorthlightAuthOptions) {
   const {
     db,
+    sessionDb = db,
     scopes = ['openid', 'profile', 'crtr:llm', 'crtr:act'],
     cookieName = 'hr_session',
     sessionTtlSeconds = 60 * 60 * 24 * 30,
@@ -67,6 +70,7 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
   const secure = origin.startsWith('https:')
 
   const store = new D1ConnectionStore(db)
+  const ownsSessionDb = sessionDb === db
   const oauth = new OAuth2Client({
     clientId: options.clientId,
     issuer: options.issuer,
@@ -144,7 +148,7 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
   const retry = '<a href="/auth/login">Start sign-in again</a>'
 
   async function revokeAllSessions(userId: string): Promise<void> {
-    await db.prepare('DELETE FROM session WHERE user_id = ?').bind(userId).run()
+    await sessionDb.prepare('DELETE FROM session WHERE user_id = ?').bind(userId).run()
   }
 
   return {
@@ -217,23 +221,18 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
           displayName = profileFromClaims(claims).name ?? displayName
           email = claims.email ?? null
         }
-        await db
-          .prepare(
-            `INSERT INTO user (id, display_name, email) VALUES (?, ?, ?)
-             ON CONFLICT (id) DO UPDATE SET display_name = excluded.display_name, email = COALESCE(excluded.email, user.email)`,
-          )
-          .bind(connection.userId, displayName, email)
-          .run()
+        await upsertUser(sessionDb, connection.userId, displayName, email)
+        if (!ownsSessionDb) await upsertUser(db, connection.userId, displayName, email)
         // The SDK's exchangeCode does not save; saving here is what makes oauth.client(userId) work.
         await store.save(connection)
         const sid = randomId(16)
-        await db
+        await sessionDb
           .prepare('INSERT INTO session (id, user_id, expires_at) VALUES (?, ?, ?)')
           .bind(sid, connection.userId, new Date(Date.now() + sessionTtlSeconds * 1000).toISOString())
           .run()
         // Rotate: whatever session this browser held before is retired by the new sign-in.
         const previous = cookieOf(request, cookieName)
-        if (previous) await db.prepare('DELETE FROM session WHERE id = ?').bind(previous).run()
+        if (previous) await sessionDb.prepare('DELETE FROM session WHERE id = ?').bind(previous).run()
         return redirect(pending.next_path, sessionCookie(sid, sessionTtlSeconds), ...clearHostOnlySession, clearTx)
       } catch (e) {
         console.error('northlight sign-in failed', e)
@@ -244,7 +243,7 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
     /** POST /auth/logout — deletes this browser's session and clears the cookie. The stored connection is kept. */
     async logout(request: Request): Promise<Response> {
       const sid = cookieOf(request, cookieName)
-      if (sid) await db.prepare('DELETE FROM session WHERE id = ?').bind(sid).run()
+      if (sid) await sessionDb.prepare('DELETE FROM session WHERE id = ?').bind(sid).run()
       return redirect(homePath, sessionCookie('', 0), ...clearHostOnlySession)
     },
 
@@ -252,35 +251,57 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
     async getSession(request: Request): Promise<Session | null> {
       const sid = cookieOf(request, cookieName)
       if (!sid) return null
-      const row = await db
+      const row = await sessionDb
         .prepare(
-          `SELECT s.user_id, u.display_name FROM session s JOIN user u ON u.id = s.user_id
+          `SELECT s.user_id, u.display_name, u.email FROM session s JOIN user u ON u.id = s.user_id
            WHERE s.id = ? AND s.expires_at > ?`,
         )
         .bind(sid, nowIso())
-        .first<{ user_id: string; display_name: string }>()
-      return row ? { userId: row.user_id, displayName: row.display_name } : null
+        .first<{ user_id: string; display_name: string; email: string | null }>()
+      if (!row) return null
+      // The shared profile is authoritative; materialize it before handing an app a user id it may reference with a local FK.
+      if (!ownsSessionDb) await upsertUser(db, row.user_id, row.display_name, row.email)
+      return { userId: row.user_id, displayName: row.display_name }
     },
 
     /**
-     * Sliding session. When the presented session is valid and has less than 15 days left, sets its `expires_at` to now + `sessionTtlSeconds`
-     * and returns the `Set-Cookie` value to send with the response; otherwise returns null. `getSession` never writes.
-     * The check and the write are one conditional UPDATE, so concurrent requests extend once each at most and an expired session is never revived.
+     * Slide a valid session when it has less than 15 days left. Return each Set-Cookie as a separate header value.
+     * A domain cookie must be reissued even without renewal to replace a pre-cutover host-only cookie, preserving its remaining lifetime.
+     * `getSession` never writes.
      */
-    async touchSession(request: Request): Promise<string | null> {
+    async touchSession(request: Request): Promise<string[] | null> {
       const sid = cookieOf(request, cookieName)
       if (!sid) return null
       const now = Date.now()
-      const result = await db
-        .prepare('UPDATE session SET expires_at = ? WHERE id = ? AND expires_at > ? AND expires_at < ?')
-        .bind(
-          new Date(now + sessionTtlSeconds * 1000).toISOString(),
-          sid,
-          new Date(now).toISOString(),
-          new Date(now + RENEW_BELOW_SECONDS * 1000).toISOString(),
-        )
-        .run()
-      return result.meta.changes > 0 ? sessionCookie(sid, sessionTtlSeconds) : null
+      const row = await sessionDb.prepare('SELECT expires_at FROM session WHERE id = ? AND expires_at > ?')
+        .bind(sid, new Date(now).toISOString()).first<{ expires_at: string }>()
+      if (!row) return null
+      let remainingSeconds = Math.max(1, Math.ceil((Date.parse(row.expires_at) - now) / 1000))
+      let renewed = false
+      if (remainingSeconds < RENEW_BELOW_SECONDS) {
+        const result = await sessionDb
+          .prepare('UPDATE session SET expires_at = ? WHERE id = ? AND expires_at > ? AND expires_at < ?')
+          .bind(
+            new Date(now + sessionTtlSeconds * 1000).toISOString(),
+            sid,
+            new Date(now).toISOString(),
+            new Date(now + RENEW_BELOW_SECONDS * 1000).toISOString(),
+          )
+          .run()
+        if (result.meta.changes > 0) {
+          remainingSeconds = sessionTtlSeconds
+          renewed = true
+        }
+        else {
+          // A concurrent logout or expiry cannot result in a fresh cookie; a concurrent renewal uses its own remaining lifetime.
+          const current = await sessionDb.prepare('SELECT expires_at FROM session WHERE id = ? AND expires_at > ?')
+            .bind(sid, nowIso()).first<{ expires_at: string }>()
+          if (!current) return null
+          remainingSeconds = Math.max(1, Math.ceil((Date.parse(current.expires_at) - Date.now()) / 1000))
+        }
+      }
+      if (cookieDomain) return [sessionCookie(sid, remainingSeconds), ...clearHostOnlySession]
+      return renewed ? [sessionCookie(sid, sessionTtlSeconds)] : null
     },
 
     /** Sign `userId` out everywhere: deletes every session of theirs. The connection is kept. */
@@ -298,7 +319,9 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
      */
     async runMaintenance(): Promise<MaintenanceResult> {
       const now = Date.now()
-      const sessions = await db.prepare('DELETE FROM session WHERE expires_at <= ?').bind(new Date(now).toISOString()).run()
+      const sessions = ownsSessionDb
+        ? await sessionDb.prepare('DELETE FROM session WHERE expires_at <= ?').bind(new Date(now).toISOString()).run()
+        : { meta: { changes: 0 } }
       const pending = await db
         .prepare('DELETE FROM auth_pending WHERE created_at < ?')
         .bind(new Date(now - PENDING_TTL_SECONDS * 1000).toISOString())
@@ -315,6 +338,16 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
 }
 
 export type NorthlightAuth = ReturnType<typeof createNorthlightAuth>
+
+async function upsertUser(db: D1, userId: string, displayName: string, email: string | null): Promise<void> {
+  await db
+    .prepare(
+      `INSERT INTO user (id, display_name, email) VALUES (?, ?, ?)
+       ON CONFLICT (id) DO UPDATE SET display_name = excluded.display_name, email = COALESCE(excluded.email, user.email)`,
+    )
+    .bind(userId, displayName, email)
+    .run()
+}
 
 function escapeHtml(value: string) {
   return value.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`)
