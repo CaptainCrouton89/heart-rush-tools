@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Keeps the name of the Worker it replaced, so a deploy updates the live apex Worker in place.
+  "name": "heartrush-apex-redirect",
+  "account_id": "8c13ab7fc53dc5dfb06c42c05a0e58eb",
+  "compatibility_date": "2026-05-01",
+  "main": "src/index.ts",
+  "routes": [{ "pattern": "heartrush.party", "custom_domain": true }],
+  // The page reads its tokens from @heartrush/ui's stylesheet text and serves the Fontsource files the stylesheet uses.
+  "rules": [
+    { "type": "Text", "globs": ["**/*.css"], "fallthrough": true },
+    { "type": "Data", "globs": ["**/*.woff2"], "fallthrough": true }
+  ]
+}

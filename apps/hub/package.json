@@ -1,10 +1,15 @@
 {
-  "name": "redirect",
+  "name": "hub",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "wrangler deploy --dry-run --outdir dist",
     "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@fontsource-variable/ibm-plex-sans": "^5.3.0",
+    "@fontsource-variable/source-serif-4": "^5.3.1",
+    "@heartrush/ui": "workspace:*"
   },
   "devDependencies": { "wrangler": "^4.151.2" }
 }

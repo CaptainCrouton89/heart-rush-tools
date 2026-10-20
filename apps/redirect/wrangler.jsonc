@@ -1,8 +1,0 @@
-{
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "heartrush-apex-redirect",
-  "account_id": "8c13ab7fc53dc5dfb06c42c05a0e58eb",
-  "compatibility_date": "2026-05-01",
-  "main": "src/index.ts",
-  "routes": [{ "pattern": "heartrush.party", "custom_domain": true }]
-}
