@@ -6,7 +6,7 @@
   "kind": "knowledge",
   "lint_ignore": null,
   "name": "app-context",
-  "preview": "When changing app routes or navigation components, read this because world selection takes priority over GM mode and each context must load matching navigation and content.",
+  "preview": "When reading the old Next.js app during migration, read this because its context and routing conventions describe legacy behavior, not requirements for the replacement.",
   "privacy": "public",
   "revisions": [
     {
@@ -24,6 +24,24 @@
       "parents": [],
       "rationale": null,
       "rev_id": "f0c4e390-bcc3-4ef8-89a6-c2e41867e121"
+    },
+    {
+      "author": "3zl47w7d-mvg8jbku-fbb69e47",
+      "body": "# Legacy Next.js app context\n\nThis document describes the old `src/` application only. The replacement apps under `apps/` are not required to preserve its routes, providers, or navigation UI.\n\nThe old app serves player rules, GM material, and world wikis from separately compiled content. Its routing priority is world, then GM, then player: `/world/{world}/{slug}`, `/gm/{slug}`, and `/{slug}` respectively. A selected world takes precedence over GM mode, and the sidebar disables the GM toggle while in world context.\n\nIts root providers nest theme outside GM outside world. Interactive navigation and search are client-side while content pages consume compiled JSON. The sidebar is fixed on mobile and static at the desktop `lg` breakpoint; categorized and flat navigation nodes share the same tree renderer.\n\nUse this only to understand old behavior or extract content during migration. For publishing-source boundaries read [[heart-rush-tools/content-pipeline]].\n",
+      "body_hash": "8de82d38f411e9dfce6de3acd191b6a123159e01b8432c6c43664f0346fdf21f",
+      "created_at": "2026-10-20T06:02:16.527Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvg9vhf4-ba856437",
+          "written_as": "heart-rush-tools/content-pipeline"
+        }
+      ],
+      "number": 2,
+      "parents": [
+        "f0c4e390-bcc3-4ef8-89a6-c2e41867e121"
+      ],
+      "rationale": "The approved replacement explicitly discards old UI and routes; retain only legacy context, not preservation directives.",
+      "rev_id": "7d040fa0-a3d6-46c1-9b6c-3a6eebb0fdd3"
     }
   ],
   "rules": [

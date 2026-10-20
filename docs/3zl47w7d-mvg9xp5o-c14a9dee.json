@@ -44,6 +44,40 @@
       "parents": [],
       "rationale": null,
       "rev_id": "92d4f668-618a-4b90-bb43-9a3a84ff735c"
+    },
+    {
+      "author": "3zl47w7d-mvg8jbku-fbb69e47",
+      "body": "# Heart Rush workspace\n\nThis repo contains the Heart Rush rule sources, GM content, and Alaria world wiki. The web workspace has TanStack Start apps under `apps/rules`, `apps/tools`, and `apps/play`, with shared packages; the old root Next.js app is being replaced, not preserved.\n\n- For local development or isolation, read [[heart-rush/dev]]; use the development CLI's live help rather than hardcoding ports.\n- Before editing rules, races, talents, or spells, read [[heart-rush-tools/authoring/rules]] because Heart Rush is not D&D and has its own mechanics and balance references.\n- Before changing Alaria lore or geography, read [[heart-rush-tools/authoring/alaria]] and [[heart-rush-tools/authoring/atlas]] because content placement and regional consolidation are deliberate.\n- Before editing combined Markdown or migrating the content compiler, read [[heart-rush-tools/content-pipeline]] because generated books can overwrite hand edits and the old navigation's omissions do not hide books.\n\nPreserve the Markdown sources and race images. The old app's routes, provider arrangement, navigation UI, maps UI, and PDF implementation are not requirements for the new apps. Use the package scripts and live CLI help belonging to the current workspace rather than assuming the old Next.js commands still apply.\n",
+      "body_hash": "cbf6d9db438168ed43c7ab988be9a17145cd886c5aad72b1bbee6d105663d327",
+      "created_at": "2026-10-20T06:02:15.543Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvg9x1wm-86bbf0a0",
+          "written_as": "heart-rush-tools/authoring/alaria"
+        },
+        {
+          "dst": "3zl47w7d-mvg9x2zs-d28e14c8",
+          "written_as": "heart-rush-tools/authoring/atlas"
+        },
+        {
+          "dst": "3zl47w7d-mvg9vhna-b16e9207",
+          "written_as": "heart-rush-tools/authoring/rules"
+        },
+        {
+          "dst": "3zl47w7d-mvg9vhf4-ba856437",
+          "written_as": "heart-rush-tools/content-pipeline"
+        },
+        {
+          "dst": "3zl47w7d-mvg9xozh-88676115",
+          "written_as": "heart-rush/dev"
+        }
+      ],
+      "number": 2,
+      "parents": [
+        "92d4f668-618a-4b90-bb43-9a3a84ff735c"
+      ],
+      "rationale": "The concurrent approved TanStack rebuild replaced the root workspace; do not steer its agents toward preserving the old app.",
+      "rev_id": "411b0895-c04a-48ef-8f94-117a181ce938"
     }
   ],
   "rules": [
