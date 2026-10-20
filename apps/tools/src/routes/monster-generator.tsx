@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { createFileRoute, getRouteApi } from '@tanstack/react-router'
 import { Button } from '@heartrush/ui/components/button'
 import { Textarea } from '@heartrush/ui/components/textarea'
@@ -37,6 +37,10 @@ function MonsterGeneratorPage() {
   const [error, setError] = useState<{ message: string; signIn?: boolean } | null>(null)
   const [copied, setCopied] = useState(false)
   const loading = stage !== null
+  const controllerRef = useRef<AbortController | null>(null)
+
+  // Leaving the page aborts the request, which stops the runs on the server.
+  useEffect(() => () => controllerRef.current?.abort(), [])
 
   useEffect(() => {
     if (!loading) return
@@ -50,8 +54,11 @@ function MonsterGeneratorPage() {
     setError(null)
     setMonster(null)
     setStage('analyzing')
+    const controller = new AbortController()
+    controllerRef.current = controller
     try {
       const response = await fetch('/api/monster', {
+        signal: controller.signal,
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ concept }),
@@ -77,9 +84,10 @@ function MonsterGeneratorPage() {
         }
       }
     } catch (e) {
+      if (controller.signal.aborted) return
       setError({ message: e instanceof Error ? e.message : 'Failed to generate monster' })
     } finally {
-      setStage(null)
+      if (!controller.signal.aborted) setStage(null)
     }
   }
 

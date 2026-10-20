@@ -12,9 +12,8 @@ declare global {
 
 const byOrigin = new Map<string, NorthlightAuth>()
 
-/** The Northlight auth for the origin this request arrived on (prod host, or localhost in dev). */
-export function authFor(request: Request): NorthlightAuth {
-  const origin = new URL(request.url).origin
+/** The Northlight auth for an origin (the prod host, or localhost in dev). */
+export function authForOrigin(origin: string): NorthlightAuth {
   let auth = byOrigin.get(origin)
   if (!auth) {
     auth = createNorthlightAuth({
@@ -22,9 +21,12 @@ export function authFor(request: Request): NorthlightAuth {
       issuer: env.CROUTER_ISSUER,
       redirectUri: `${origin}/auth/callback`,
       privateKeyJson: env.CROUTER_APP_KEY_JSON,
-      kv: env.AUTH_KV,
+      db: env.DB,
     })
     byOrigin.set(origin, auth)
   }
   return auth
 }
+
+/** The Northlight auth for the origin this request arrived on. */
+export const authFor = (request: Request) => authForOrigin(new URL(request.url).origin)

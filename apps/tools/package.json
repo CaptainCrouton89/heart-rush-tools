@@ -8,7 +8,9 @@
     "build": "vite build && tsc --noEmit",
     "preview": "vite preview",
     "deploy": "pnpm run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "db:migrate": "wrangler d1 migrations apply heartrush-tools --remote",
+    "db:migrate:local": "wrangler d1 migrations apply heartrush-tools --local"
   },
   "dependencies": {
     "@heartrush/northlight": "workspace:*",
