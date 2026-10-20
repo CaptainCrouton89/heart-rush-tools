@@ -1,81 +1,518 @@
-/* Shared Heart Rush design system: Tailwind v4 theme, tokens and fonts.
-   Each app imports this file, then adds `@source` for the shared components. */
+/* Heart Rush design system: Tailwind v4 theme, colour tokens, fonts, reading typography and print.
+   Every app imports this one file. The export surface is documented in the canvas doc
+   `heartrush-ui-contract`; change the two together. */
 @import 'tailwindcss';
 @import 'tw-animate-css';
-@import '@fontsource-variable/geist';
-@import '@fontsource-variable/geist-mono';
+@import '@fontsource-variable/source-serif-4/wght.css';
+@import '@fontsource-variable/source-serif-4/wght-italic.css';
+@import '@fontsource-variable/ibm-plex-sans/wght.css';
 
-@custom-variant dark (&:is(.dark *));
+/* Shared components live beside this file; apps need no @source of their own for them. */
+@source '.';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------- colour values
+   One palette. Raw values live here; `@theme inline` below maps them to Tailwind utilities
+   and the shadcn token names. `.dark` swaps values only. */
 :root {
-  --radius: 0.625rem;
-  --background: oklch(0.99 0.004 80);
-  --foreground: oklch(0.2 0.02 30);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.02 30);
-  --primary: oklch(0.5 0.2 25);
-  --primary-foreground: oklch(0.98 0.01 80);
-  --secondary: oklch(0.95 0.01 80);
-  --secondary-foreground: oklch(0.25 0.02 30);
-  --muted: oklch(0.95 0.008 80);
-  --muted-foreground: oklch(0.5 0.02 40);
-  --accent: oklch(0.94 0.02 60);
-  --accent-foreground: oklch(0.25 0.02 30);
-  --destructive: oklch(0.58 0.22 27);
-  --border: oklch(0.9 0.01 80);
-  --input: oklch(0.9 0.01 80);
-  --ring: oklch(0.6 0.15 25);
+  color-scheme: light;
+  --background: #f7f4ed;
+  --surface: #fffdfa;
+  --surface-muted: #eeeae1;
+  --foreground: #242423;
+  --muted-foreground: #62615b;
+  --primary: #9c2f36;
+  --primary-foreground: #ffffff;
+  --accent: #f1dfda;
+  --accent-foreground: #76242a;
+  --border: #d6d0c4;
+  --ring: #9c2f36;
+  --note: #365d68;
+  --warning: #80551e;
+  --overlay-shadow: 0 12px 40px #24242326;
 }
 
 .dark {
-  --background: oklch(0.17 0.01 30);
-  --foreground: oklch(0.96 0.01 80);
-  --card: oklch(0.21 0.012 30);
-  --card-foreground: oklch(0.96 0.01 80);
-  --primary: oklch(0.65 0.2 25);
-  --primary-foreground: oklch(0.15 0.01 30);
-  --secondary: oklch(0.27 0.012 30);
-  --secondary-foreground: oklch(0.96 0.01 80);
-  --muted: oklch(0.27 0.012 30);
-  --muted-foreground: oklch(0.72 0.02 60);
-  --accent: oklch(0.3 0.02 30);
-  --accent-foreground: oklch(0.96 0.01 80);
-  --destructive: oklch(0.65 0.2 25);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.6 0.15 25);
+  color-scheme: dark;
+  --background: #18191a;
+  --surface: #222426;
+  --surface-muted: #2c2f31;
+  --foreground: #eeeae2;
+  --muted-foreground: #b6b4ad;
+  --primary: #f09391;
+  --primary-foreground: #211718;
+  --accent: #3a292b;
+  --accent-foreground: #f3b5b1;
+  --border: #44484a;
+  --ring: #f09391;
+  --note: #96c4ce;
+  --warning: #dfbd7a;
+  --overlay-shadow: 0 12px 40px #00000066;
 }
 
 @theme inline {
-  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  /* Design tokens */
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
+  --color-muted-foreground: var(--muted-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
   --color-border: var(--border);
-  --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-note: var(--note);
+  --color-warning: var(--warning);
+  --shadow-overlay: var(--overlay-shadow);
+
+  /* shadcn token names, resolved to the same palette */
+  --color-card: var(--surface);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--foreground);
+  --color-muted: var(--surface-muted);
+  --color-secondary: var(--surface-muted);
+  --color-secondary-foreground: var(--foreground);
+  /* The design has no separate error colour; error states use the primary red. */
+  --color-destructive: var(--primary);
+  --color-destructive-foreground: var(--primary-foreground);
+  /* Text-field outlines: --border is 1.4–1.9:1 on the page, below the 3:1 a field's only
+     boundary needs (WCAG 1.4.11), so fields use the muted foreground (5.2–8.5:1). */
+  --color-input: var(--muted-foreground);
 }
 
+@theme {
+  --font-serif: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;
+  --font-sans: 'IBM Plex Sans Variable', 'IBM Plex Sans', system-ui, sans-serif;
+
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --spacing: 0.25rem;
+
+  /* Type scale (reading specification). `text-<name>` utilities set size and line height. */
+  --text-body: 18px;
+  --text-body--line-height: 30px;
+  --text-body-sm: 17px;
+  --text-body-sm--line-height: 28px;
+  --text-h1: 44px;
+  --text-h1--line-height: 48px;
+  --text-h1-sm: 34px;
+  --text-h1-sm--line-height: 38px;
+  --text-h2: 30px;
+  --text-h2--line-height: 36px;
+  --text-h2-sm: 26px;
+  --text-h2-sm--line-height: 32px;
+  --text-h3: 23px;
+  --text-h3--line-height: 30px;
+  --text-h4: 19px;
+  --text-h4--line-height: 27px;
+  --text-ui: 14px;
+  --text-ui--line-height: 20px;
+  --text-control: 15px;
+  --text-control--line-height: 20px;
+  --text-meta: 13px;
+  --text-meta--line-height: 18px;
+  --text-table: 15px;
+  --text-table--line-height: 23px;
+  --text-wordmark: 19px;
+  --text-wordmark--line-height: 24px;
+  --text-home-title: 56px;
+  --text-home-title--line-height: 60px;
+}
+
+/* ---------------------------------------------------------------- base */
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
   body {
-    @apply bg-background font-sans text-foreground antialiased;
+    @apply bg-background font-sans text-ui text-foreground antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+  mark {
+    background: var(--accent);
+    color: inherit;
+    border-radius: 2px;
+  }
+  /* Lucide icons: 18px, stroke 1.75. `size-*` utilities still override. */
+  svg.lucide {
+    width: 18px;
+    height: 18px;
+    stroke-width: 1.75;
+    flex-shrink: 0;
+  }
+  [id] {
+    scroll-margin-top: 96px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------------- reading typography
+   `.prose-rules` wraps a rendered article body. Shells own width (max 720px) and padding. */
+@layer components {
+  .prose-rules {
+    font-family: var(--font-serif);
+    font-size: var(--text-body-sm);
+    line-height: var(--text-body-sm--line-height);
+    color: var(--foreground);
+    overflow-wrap: break-word;
+    font-optical-sizing: auto;
+  }
+  @media (min-width: 768px) {
+    .prose-rules {
+      font-size: var(--text-body);
+      line-height: var(--text-body--line-height);
+    }
+  }
+
+  .prose-rules > :first-child {
+    margin-top: 0;
+  }
+  .prose-rules :where(p) {
+    margin: 0 0 16px;
+  }
+
+  /* Headings */
+  .prose-rules :where(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: var(--foreground);
+    text-wrap: balance;
+  }
+  .prose-rules :where(h1) {
+    font-size: var(--text-h1-sm);
+    line-height: var(--text-h1-sm--line-height);
+    margin: 0 0 16px;
+  }
+  .prose-rules :where(h2) {
+    font-size: var(--text-h2-sm);
+    line-height: var(--text-h2-sm--line-height);
+    margin: 48px 0 16px;
+  }
+  .prose-rules :where(h3) {
+    font-size: var(--text-h3);
+    line-height: var(--text-h3--line-height);
+    margin: 32px 0 12px;
+  }
+  .prose-rules :where(h4, h5, h6) {
+    font-size: var(--text-h4);
+    line-height: var(--text-h4--line-height);
+    margin: 24px 0 8px;
+  }
+  @media (min-width: 768px) {
+    .prose-rules :where(h1) {
+      font-size: var(--text-h1);
+      line-height: var(--text-h1--line-height);
+    }
+    .prose-rules :where(h2) {
+      font-size: var(--text-h2);
+      line-height: var(--text-h2--line-height);
+    }
+  }
+  .prose-rules :where(h1, h2, h3, h4, h5, h6) + :where(h2, h3, h4, h5, h6) {
+    margin-top: 16px;
+  }
+
+  /* Heading copy-link control: hidden until the heading is hovered or the control is focused. */
+  .prose-rules .heading-anchor {
+    margin-left: 8px;
+    color: var(--muted-foreground);
+    opacity: 0;
+    vertical-align: middle;
+  }
+  .prose-rules :is(h1, h2, h3, h4, h5, h6):hover .heading-anchor,
+  .prose-rules .heading-anchor:focus-visible {
+    opacity: 1;
+  }
+  @media (hover: none) {
+    .prose-rules .heading-anchor {
+      opacity: 1;
+    }
+  }
+
+  /* Inline */
+  .prose-rules :where(strong, b) {
+    font-weight: 600;
+  }
+  .prose-rules :where(code) {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: var(--surface-muted);
+    border-radius: var(--radius-sm);
+    padding: 0.1em 0.3em;
+  }
+  .prose-rules :where(pre) {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 22px;
+    background: var(--surface-muted);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    margin: 0 0 16px;
+    overflow-x: auto;
+  }
+  .prose-rules :where(pre code) {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  /* Links: underlined at rest; cross-references (`data-xref`) dotted; solid on hover/focus. */
+  .prose-rules :where(a) {
+    color: var(--primary);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+  .prose-rules :where(a[data-xref]) {
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+  }
+  .prose-rules :where(a:hover, a:focus-visible) {
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+  }
+
+  /* Lists: authored numbering kept; each nesting level adds 20px. */
+  .prose-rules :where(ul, ol) {
+    margin: 0 0 16px;
+    padding-left: 24px;
+  }
+  .prose-rules :where(ul) {
+    list-style-type: disc;
+  }
+  .prose-rules :where(ol) {
+    list-style-type: decimal;
+  }
+  .prose-rules :where(ul ul) {
+    list-style-type: circle;
+  }
+  .prose-rules :where(li) {
+    margin: 4px 0;
+    padding-left: 4px;
+  }
+  .prose-rules :where(li > ul, li > ol) {
+    margin: 4px 0 0;
+    padding-left: 20px;
+  }
+  .prose-rules :where(li > p) {
+    margin-bottom: 8px;
+  }
+
+  .prose-rules :where(blockquote) {
+    margin: 0 0 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--border);
+    font-style: italic;
+  }
+  .prose-rules :where(hr) {
+    margin: 32px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+  }
+  .prose-rules :where(img) {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 16px;
+  }
+
+  /* Tables */
+  .prose-rules :where(table) {
+    width: 100%;
+    margin: 0 0 24px;
+    border-collapse: collapse;
+    font-family: var(--font-sans);
+    font-size: var(--text-table);
+    line-height: var(--text-table--line-height);
+    font-variant-numeric: tabular-nums;
+  }
+  .prose-rules :where(caption) {
+    caption-side: top;
+    text-align: left;
+    font-size: var(--text-meta);
+    line-height: var(--text-meta--line-height);
+    color: var(--muted-foreground);
+    padding-bottom: 8px;
+  }
+  .prose-rules :where(th, td) {
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+  }
+  .prose-rules :where(thead th) {
+    font-weight: 600;
+    border-bottom-color: var(--foreground);
+    vertical-align: bottom;
+  }
+  .prose-rules :where(tbody tr:nth-child(even)) {
+    background: color-mix(in srgb, var(--surface-muted) 55%, transparent);
+  }
+  /* Numeric and dice cells never wrap. */
+  .prose-rules :where(th, td)[data-numeric] {
+    white-space: nowrap;
+  }
+  /* Labelled horizontal scroll region the renderer wraps around a wide table. */
+  .prose-rules .table-scroll {
+    overflow-x: auto;
+    margin: 0 0 24px;
+  }
+  .prose-rules .table-scroll > table {
+    margin-bottom: 0;
+  }
+  .prose-rules .table-scroll-cue {
+    font-family: var(--font-sans);
+    font-size: var(--text-meta);
+    line-height: var(--text-meta--line-height);
+    color: var(--muted-foreground);
+    margin: -16px 0 24px;
+  }
+
+  /* Callouts: <aside class="callout" data-kind="example|note|warning">
+       <p class="callout-label">Example</p> … </aside> */
+  .callout {
+    --callout-color: var(--muted-foreground);
+    margin: 0 0 16px;
+    padding: 16px;
+    border-left: 3px solid var(--callout-color);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    background: var(--surface-muted);
+  }
+  .callout[data-kind='note'] {
+    --callout-color: var(--note);
+  }
+  .callout[data-kind='warning'] {
+    --callout-color: var(--warning);
+  }
+  .callout > :last-child {
+    margin-bottom: 0;
+  }
+  .callout-label {
+    margin: 0 0 4px;
+    font-family: var(--font-sans);
+    font-size: var(--text-meta);
+    line-height: var(--text-meta--line-height);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--callout-color);
+  }
+  .prose-rules .callout .callout-label {
+    margin-bottom: 4px;
+  }
+
+  /* Dice notation: <span class="dice" aria-label="…">2d6+3</span> */
+  .dice {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.92em;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  /* Small uppercase eyebrow above a page title (category name). */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: var(--text-meta);
+    line-height: var(--text-meta--line-height);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+}
+
+/* ---------------------------------------------------------------- print
+   `.print-hidden` removes shell/controls; `.print-only` shows the title/URL block on paper only. */
+.print-only {
+  display: none;
+}
+
+@media print {
+  :root,
+  .dark {
+    color-scheme: light;
+    --background: #ffffff;
+    --surface: #ffffff;
+    --surface-muted: #f2f2f2;
+    --foreground: #000000;
+    --muted-foreground: #333333;
+    --primary: #000000;
+    --accent: #e6e6e6;
+    --accent-foreground: #000000;
+    --border: #999999;
+    --note: #000000;
+    --warning: #000000;
+    --overlay-shadow: none;
+  }
+  @page {
+    margin: 16mm;
+  }
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .print-hidden {
+    display: none !important;
+  }
+  .print-only {
+    display: block;
+  }
+  .prose-rules {
+    font-size: 11pt;
+    line-height: 1.5;
+    max-width: none;
+  }
+  .prose-rules .table-scroll {
+    overflow: visible !important;
+  }
+  .prose-rules .table-scroll-cue,
+  .prose-rules .heading-anchor {
+    display: none !important;
+  }
+  .prose-rules :where(table) {
+    font-size: 9.5pt;
+    line-height: 1.35;
+  }
+  .prose-rules :where(thead) {
+    display: table-header-group;
+  }
+  .prose-rules :where(tr, img, pre, blockquote, li),
+  .callout,
+  [data-print-keep] {
+    break-inside: avoid;
+  }
+  .prose-rules :where(h1, h2, h3, h4, h5, h6) {
+    break-after: avoid;
+  }
+  .prose-rules :where(details) > * {
+    display: block !important;
   }
 }
