@@ -2,7 +2,16 @@
   "name": "@heartrush/northlight",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit"
+  },
   "dependencies": {
     "@north-light/sdk": "0.3.504"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }
