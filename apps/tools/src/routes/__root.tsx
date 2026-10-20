@@ -1,7 +1,9 @@
 /// <reference types="vite/client" />
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import { HeadContent, Scripts, createRootRoute, Outlet } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
 import appCss from '~/styles/app.css?url'
+import { getSessionFn } from '~/server/session'
+import { SiteHeader } from '~/components/site-header'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -12,8 +14,20 @@ export const Route = createRootRoute({
     ],
     links: [{ rel: 'stylesheet', href: appCss }],
   }),
+  loader: () => getSessionFn(),
+  component: RootLayout,
   shellComponent: RootDocument,
 })
+
+function RootLayout() {
+  const session = Route.useLoaderData()
+  return (
+    <>
+      <SiteHeader session={session} />
+      <Outlet />
+    </>
+  )
+}
 
 function RootDocument({ children }: { children: ReactNode }) {
   return (

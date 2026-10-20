@@ -5,5 +5,10 @@
   "compatibility_date": "2026-05-01",
   "compatibility_flags": ["nodejs_compat"],
   "main": "@tanstack/react-start/server-entry",
+  "kv_namespaces": [{ "binding": "AUTH_KV", "id": "48d193d29f3045eea1d3576633ae3032" }],
+  "vars": {
+    "CROUTER_CLIENT_ID": "w5p61c34rt3p",
+    "CROUTER_ISSUER": "https://account.northlight.ai"
+  },
   "routes": [{ "pattern": "tools.heartrush.party", "custom_domain": true }]
 }
