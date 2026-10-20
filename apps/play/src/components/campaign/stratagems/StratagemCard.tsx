@@ -5,10 +5,15 @@ import { Button } from '@heartrush/ui/components/button'
 import { cn } from '@heartrush/ui/lib/utils'
 import { campaignWrite } from '~/components/campaign/write'
 import type { CampaignCharacterCard } from '~/server/campaigns'
-import { updateStratagemFn, type ObjectiveState, type StratagemView } from '~/server/campaign-play'
+import { listStratagemsFn, updateStratagemFn, type CreateStratagemInput, type ObjectiveState, type StratagemView } from '~/server/campaign-play'
 import { objectiveInputs, objectiveLabel, objectiveTitle, STATE_LABEL, STATUS_LABEL } from './model'
 import { ObjectiveRoll } from './ObjectiveRoll'
 import { StratagemForm } from './StratagemForm'
+
+const FIELD_KEYS = ['goal', 'timePerRoll', 'setupCn', 'status', 'objectives', 'assets'] as const
+const FIELD_LABEL: Record<(typeof FIELD_KEYS)[number], string> = { goal: 'goal', timePerRoll: 'time per roll', setupCn: 'setup CN', status: 'status', objectives: 'objectives', assets: 'assets and hindrances' }
+const fieldsOf = (s: StratagemView): Required<CreateStratagemInput> => ({ goal: s.goal, timePerRoll: s.timePerRoll, setupCn: s.setupCn, status: s.status, objectives: objectiveInputs(s), assets: s.assets })
+const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b)
 
 export type StratagemCardProps = {
   campaignId: string
@@ -27,32 +32,62 @@ export type StratagemCardProps = {
  */
 export function StratagemCard({ campaignId, stratagem: s, isGm, mine, characters }: StratagemCardProps) {
   const update = useServerFn(updateStratagemFn)
+  const list = useServerFn(listStratagemsFn)
   const router = useRouter()
-  const [editing, setEditing] = useState(false)
+  // The fields as they were when the GM opened the form; null while the card shows.
+  const [opened, setOpened] = useState<Required<CreateStratagemInput> | null>(null)
   const [busy, setBusy] = useState(false)
   const [line, setLine] = useState<string | null>(null)
+
+  // The stratagem as stored now, read just before a write so the write starts from the current fields, not this page's
+  // last fetch (another tab of the GM may have changed them since).
+  const current = async (): Promise<StratagemView | string> => {
+    const r = await campaignWrite('read the stratagem', () => list({ data: { campaignId } }))
+    if (!r.ok) return r.text
+    return r.value.stratagems.find((x) => x.id === s.id) ?? "Couldn't change the stratagem: it no longer exists."
+  }
 
   const setState = async (index: number, state: ObjectiveState) => {
     setBusy(true)
     setLine(null)
-    const objectives = objectiveInputs(s).map((o, i) => (i === index ? { ...o, state } : o))
-    const result = await campaignWrite('change the objective', () => update({ data: { campaignId, stratagemId: s.id, objectives } }))
+    const text = await (async () => {
+      const now = await current()
+      if (typeof now === 'string') return now
+      const clicked = s.objectives[index]
+      const there = now.objectives[index]
+      if (!there || there.title !== clicked.title || there.leaderCharacterId !== clicked.leaderCharacterId)
+        return "Couldn't change the objective: the objectives changed since this page loaded. Check the list and try again."
+      const objectives = objectiveInputs(now).map((o, i) => (i === index ? { ...o, state } : o))
+      const result = await campaignWrite('change the objective', () => update({ data: { campaignId, stratagemId: s.id, objectives } }))
+      return result.ok ? null : result.text
+    })()
     setBusy(false)
-    if (!result.ok) return setLine(result.text)
+    setLine(text)
     void router.invalidate()
   }
 
-  if (editing) {
+  if (opened) {
     return (
       <StratagemForm
-        initial={{ goal: s.goal, timePerRoll: s.timePerRoll, setupCn: s.setupCn, status: s.status, objectives: objectiveInputs(s), assets: s.assets }}
+        initial={opened}
         characters={characters}
         saveLabel="Save"
-        onCancel={() => setEditing(false)}
+        onCancel={() => setOpened(null)}
         onSave={async (fields) => {
-          const result = await campaignWrite('save the stratagem', () => update({ data: { campaignId, stratagemId: s.id, ...fields } }))
-          if (!result.ok) return result.text
-          setEditing(false)
+          // Write only what the GM changed, and refuse when one of those fields was changed elsewhere (the GM's other tab)
+          // since the form opened: a field the GM did not touch is never overwritten, and a field they did is never lost.
+          const keys = FIELD_KEYS.filter((k) => !same(fields[k], opened[k]))
+          const fresh = keys.length > 0 ? await current() : s
+          if (typeof fresh === 'string') return fresh
+          const now = fieldsOf(fresh)
+          const clash = keys.filter((k) => !same(now[k], opened[k]))
+          if (clash.length > 0) return `The ${clash.map((k) => FIELD_LABEL[k]).join(' and ')} changed since you opened the form. Cancel and edit again to see the change.`
+          if (keys.length > 0) {
+            const patch = Object.fromEntries(keys.map((k) => [k, fields[k]]))
+            const result = await campaignWrite('save the stratagem', () => update({ data: { campaignId, stratagemId: s.id, ...patch } }))
+            if (!result.ok) return result.text
+          }
+          setOpened(null)
           void router.invalidate()
           return null
         }}
@@ -77,7 +112,7 @@ export function StratagemCard({ campaignId, stratagem: s, isGm, mine, characters
             {STATUS_LABEL[s.status]}
           </span>
           {isGm && (
-            <Button type="button" variant="outline" size="lg" onClick={() => setEditing(true)}>
+            <Button type="button" variant="outline" size="lg" onClick={() => setOpened(fieldsOf(s))}>
               Edit
             </Button>
           )}
@@ -94,7 +129,9 @@ export function StratagemCard({ campaignId, stratagem: s, isGm, mine, characters
               const title = objectiveTitle(o.title)
               const leads = o.state === 'open' && o.leaderCharacterId !== null && mine.has(o.leaderCharacterId) && o.currentCn !== null
               return (
-                <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-border py-2 last:border-b-0">
+                // Keyed by what the roll panel shows and who may roll, not the index alone: when the GM removes, renames or
+                // reassigns the objective at this index, an open roll panel closes instead of rolling the new occupant under the old label.
+                <li key={`${i}:${objectiveLabel(s.goal, o.title)}:${o.leaderCharacterId ?? ''}`} className="flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-border py-2 last:border-b-0">
                   <div className="flex min-w-0 flex-1 basis-56 flex-col">
                     <span className={cn('text-body-sm', o.state === 'gone' && 'text-muted-foreground line-through', !o.title.trim() && 'italic')}>
                       <span className="text-muted-foreground tabular-nums">{i + 1}.</span> {title}
