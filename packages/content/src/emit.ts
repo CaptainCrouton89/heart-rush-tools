@@ -219,7 +219,7 @@ function choicesOf(specs: ChoiceSpec[] | undefined, abilities: PlayAbility[], wh
 
 export function buildPlayRaces(drafts: Draft[], warn: Warn = () => {}): PlayRace[] {
   const talentIds = new Map(buildPlayTalents(drafts).map((t) => [talentKey(t.title), t.id]))
-  return drafts.filter((d) => d.page.kind === 'race').map((d): PlayRace => {
+  return drafts.filter((d) => d.race).map((d): PlayRace => {
     const p = d.page
     const hs = p.headings
     const configured = RACE_EFFECTS[d.race!.stem]

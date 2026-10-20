@@ -3,7 +3,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { join, posix } from 'node:path'
 import {
   ALARIA_DIR, ALARIA_HOME, ALIASES, GENERATED_PLAYER, GM_DIR, GM_GROUPS, PLAYER_DIR, PLAYER_GROUPS, RACES_DIR, RACE_IMAGES_DIR,
-  TALENTS_DIR, WORLD_CATEGORIES, type Group, type Leaf,
+  RACE_INDEX_STEMS, TALENTS_DIR, WORLD_CATEGORIES, type Group, type Leaf,
 } from './sources.ts'
 import { REPO, firstSentence, kebab, listMd, readText, stem } from './util.ts'
 import { blockText, finalize, legacySlug, parseMarkdown, wordCount, inlineText } from './md.ts'
@@ -197,7 +197,7 @@ export function collect(): Collected {
           parentId: parent.page.id, categoryId: kind === 'race' ? 'kin-culture' : kind === 'spell' ? 'spells' : 'talents', order: order++, breadcrumbs: crumbs,
           transform: kind === 'race' ? undefined : talentTransform,
         })
-        if (kind === 'race') d.race = { stem: stem(f) }
+        if (kind === 'race' && !RACE_INDEX_STEMS.includes(stem(f))) d.race = { stem: stem(f) }
         else d.talent = { stem: stem(f), collection: collection!, text }
         parent.page.children.push(d.page.id)
         seen.push({ file: rel, d })

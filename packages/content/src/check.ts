@@ -1,7 +1,7 @@
 // Validation over dist/ and the source tree. Exits non-zero on any failure; unresolved links are reported, not failed.
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
-import { GM_DIR, PLAYER_DIR, PLAYER_GROUPS, GM_GROUPS, GENERATED_PLAYER, RACES_DIR, TALENTS_DIR, WORLD_CATEGORIES } from './sources.ts'
+import { GM_DIR, PLAYER_DIR, RACE_INDEX_STEMS, PLAYER_GROUPS, GM_GROUPS, GENERATED_PLAYER, RACES_DIR, TALENTS_DIR, WORLD_CATEGORIES } from './sources.ts'
 import { REPO, listMd } from './util.ts'
 import type { CatalogueFile, Manifest, PageFile, Block } from './types.ts'
 
@@ -65,6 +65,15 @@ const cat = (k: string) => rd<CatalogueFile>(`catalogues/${k}.json`)
 ok(cat('talents').entries.length === actual.combat + actual.noncombat, 'talents catalogue size')
 ok(cat('spells').entries.length === actual.spells, 'spells catalogue size')
 ok(cat('kin-culture').entries.length === actual.races, 'kin catalogue size')
+
+// The play races catalogue is exactly the authored race files: no index page, no entity-escaped titles.
+const playRaceIds = rd<any>('catalogues/play/races.json').entries.map((e: any) => e.id as string).sort()
+const authoredRaceIds = listMd(RACES_DIR).map((f) => f.replace(/\.md$/, '')).filter((s) => !s.startsWith('_') && !RACE_INDEX_STEMS.includes(s))
+ok(playRaceIds.length === authoredRaceIds.length, `play races: ${playRaceIds.length} entries != ${authoredRaceIds.length} authored race files`)
+for (const k of ['talents', 'races', 'conditions']) for (const e of rd<any>(`catalogues/play/${k}.json`).entries) ok(!/&(?:amp|lt|gt|quot|#\d+);/.test(e.title), `play ${k} title has an HTML entity: ${e.title}`)
+
+// YAML front matter is not content: no page carries it as text or as a heading.
+for (const p of pages) ok(!p.headings.some((h) => /^title-/.test(h.id)), `${p.id}: front matter parsed as a heading (${p.headings.find((h) => /^title-/.test(h.id))?.id})`)
 
 // Heading ids unique per page; every internal link, preview target, search/glossary target resolves
 const bad: string[] = []

@@ -15,8 +15,18 @@ export function kebab(s: string): string {
 
 export const sha = (s: string) => createHash('sha256').update(s).digest('hex')
 
+/** A leading YAML front-matter block (first line exactly `---`, closed by a later `---` line) is not content. Its lines are
+ *  blanked, not removed, so every source line number downstream stays true to the file on disk. */
+export function blankFrontMatter(text: string): string {
+  const lines = text.split('\n')
+  if (lines[0] !== '---') return text
+  const close = lines.indexOf('---', 1)
+  if (close < 0) return text
+  return [...lines.slice(0, close + 1).map(() => ''), ...lines.slice(close + 1)].join('\n')
+}
+
 export function readText(rel: string): string {
-  return readFileSync(join(REPO, rel), 'utf8').replace(/\r\n/g, '\n')
+  return blankFrontMatter(readFileSync(join(REPO, rel), 'utf8').replace(/\r\n/g, '\n'))
 }
 
 export function listMd(rel: string): string[] {

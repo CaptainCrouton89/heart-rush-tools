@@ -55,6 +55,9 @@ export const GM_GROUPS: Group[] = [
   group('Travel', [f('Travel guide', 'Travel_Guide'), f('Weather & events', 'Weather_&_Events_Tables')]),
 ]
 
+/** Files in RACES_DIR that are the Kin & culture overview, not a race: a page, but never a play catalogue entry. */
+export const RACE_INDEX_STEMS = ['RACE_INDEX']
+
 /** Generated aggregates that must never be indexed in addition to their originals. */
 export const GENERATED_PLAYER = ['Kin_&_Culture', 'Talents']
 
