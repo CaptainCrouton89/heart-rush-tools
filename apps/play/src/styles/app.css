@@ -1,2 +1,14 @@
 @import '@heartrush/ui/styles.css';
 @source '../../../../packages/ui/src';
+
+/* Play's two colours (design, Visual identity). HP above half its effective max is green; wound ranks use the primary red. */
+:root {
+  --hp: #2e7d4f;
+}
+.dark {
+  --hp: #7ccb9a;
+}
+@theme inline {
+  --color-hp: var(--hp);
+  --color-wound: var(--primary);
+}
