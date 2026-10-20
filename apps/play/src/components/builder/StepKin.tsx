@@ -54,7 +54,7 @@ export function StepKin({ draft }: { draft: UseDraft }) {
           <RaceHeader race={race} />
           <Abilities title={`${race.title} abilities`} abilities={race.abilities} explain={explain} />
           {race.choices.map((c) => (
-            <Choice key={c.id} choice={c} value={builder.kinChoices[c.id] ?? ''} onChange={(v) => answer(c.id, v)} />
+            <Choice key={c.id} choice={c} value={builder.kinChoices[c.id] ?? ''} onChange={(v) => answer(c.id, v)} explain={explain} />
           ))}
 
           {race.subraces.length > 0 && (
@@ -86,7 +86,7 @@ export function StepKin({ draft }: { draft: UseDraft }) {
             <>
               <Abilities title={`${subrace.title} abilities`} abilities={subrace.abilities} explain={explain} />
               {subrace.choices.map((c) => (
-                <Choice key={c.id} choice={c} value={builder.kinChoices[c.id] ?? ''} onChange={(v) => answer(c.id, v)} />
+                <Choice key={c.id} choice={c} value={builder.kinChoices[c.id] ?? ''} onChange={(v) => answer(c.id, v)} explain={explain} />
               ))}
             </>
           )}
@@ -193,29 +193,43 @@ function Abilities({ title, abilities, explain }: { title: string; abilities: Pl
   )
 }
 
-/** One creation-time choice: `options` as a radio group with each option's abilities; `talent` as a searchable picker. */
-function Choice({ choice, value, onChange }: { choice: PlayChoice; value: string; onChange: (value: string) => void }) {
+/**
+ * One creation-time choice: `options` as a radio group with each option's abilities; `talent` as a searchable picker.
+ * The chosen option's abilities are ability rows like the race's, with **Explain** once the draft is previewable.
+ */
+function Choice({ choice, value, onChange, explain }: { choice: PlayChoice; value: string; onChange: (value: string) => void; explain: ExplainFor }) {
   if (choice.kind === 'talent') return <TalentChoice choice={choice} value={value} onChange={onChange} />
   return (
     <fieldset className="flex flex-col gap-3">
       <legend className={cn(labelClass, 'mb-1')}>{choice.title}</legend>
       <p className="text-meta text-muted-foreground">{choice.text}</p>
       <ul className="flex flex-col gap-2">
-        {choice.options.map((o) => (
-          <li key={o.id}>
-            <label className={cn(optionClass(o.id === value), 'items-start')}>
-              <input type="radio" name={`choice-${choice.id}`} className="mt-0.5 size-5 shrink-0 accent-primary" checked={o.id === value} onChange={() => onChange(o.id)} />
-              <span className="flex flex-col gap-1">
-                <span className="text-control font-medium">{o.title}</span>
-                {o.abilities.map((a) => (
-                  <span key={a.title} className="text-meta text-muted-foreground">
-                    <span className="font-medium text-foreground">{a.title}.</span> {a.body}
-                  </span>
-                ))}
-              </span>
-            </label>
-          </li>
-        ))}
+        {choice.options.map((o) => {
+          const selected = o.id === value
+          return (
+            <li key={o.id} className={cn(optionClass(selected), 'flex-col items-stretch gap-3')}>
+              <label className="flex cursor-pointer items-start gap-3">
+                <input type="radio" name={`choice-${choice.id}`} className="mt-0.5 size-5 shrink-0 accent-primary" checked={selected} onChange={() => onChange(o.id)} />
+                <span className="flex flex-col gap-1">
+                  <span className="text-control font-medium">{o.title}</span>
+                  {!selected &&
+                    o.abilities.map((a) => (
+                      <span key={a.title} className="text-meta text-muted-foreground">
+                        <span className="font-medium text-foreground">{a.title}.</span> {a.body}
+                      </span>
+                    ))}
+                </span>
+              </label>
+              {selected && o.abilities.length > 0 && (
+                <ul className="flex flex-col gap-4 pl-8">
+                  {o.abilities.map((a) => (
+                    <Ability key={a.title} ability={a} explain={explain} />
+                  ))}
+                </ul>
+              )}
+            </li>
+          )
+        })}
       </ul>
     </fieldset>
   )

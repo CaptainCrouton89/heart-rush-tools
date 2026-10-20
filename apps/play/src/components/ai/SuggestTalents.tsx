@@ -1,7 +1,9 @@
 // AI feature 2, "Suggest talents for my concept" (`/advance` and builder step 6): 3–5 cards with the title, the price the
 // server quoted (`price()` at the time of the run; the UI computes no price), the model's reason, **Add** and
 // **Read in rulebook ↗**. **Add** hands one ordinary `xp:buy` to `onBuy`, built exactly as the catalogue's **Buy** builds it.
-// Nothing from the run is saved (INV-AI): only the tap on **Add** creates an action.
+// Nothing from the run is saved (INV-AI): only the tap on **Add** creates an action. A card reads **Added** while
+// `character` (the caller's document with its unsaved or pending purchases applied) knows the talent, so removing the
+// purchase, or a refused or unsaved buy, makes it addable again.
 import { useId, useState } from 'react'
 import type { Character } from '@heartrush/rules-engine/types'
 import { Button } from '@heartrush/ui/components/button'
@@ -24,13 +26,9 @@ export type SuggestTalentsProps = {
 const ELEMENTAL_AFFINITY = 'player.talents.elemental-affinity'
 
 export function SuggestTalents({ characterId, character, catalogue, onBuy }: SuggestTalentsProps) {
-  const { state, run } = useAi<SuggestValue>({ feature: 'suggest', characterId })
-  // Talent ids added from the current list, so one card adds once.
-  const [added, setAdded] = useState<ReadonlySet<string>>(new Set())
-  const ask = () => {
-    setAdded(new Set())
-    run()
-  }
+  const { state, run: ask } = useAi<SuggestValue>({ feature: 'suggest', characterId })
+  // The server suggests only talents the character does not know, so a known one was added from this list.
+  const known = new Set(character.talents.map((t) => t.catalogueId))
 
   const problem: AiProblem | null =
     state.status === 'unreachable' ? { kind: 'unreachable' } : state.status === 'done' && state.outcome.kind !== 'result' ? state.outcome : null
@@ -57,25 +55,14 @@ export function SuggestTalents({ characterId, character, catalogue, onBuy }: Sug
               suggestion={s}
               character={character}
               catalogue={catalogue}
-              added={added.has(s.talentId)}
-              onAdd={async (action) => {
-                setAdded((prev) => new Set(prev).add(s.talentId))
-                // `/advance` answers with the dispatcher's outcome: a refused or unsaved buy makes the card addable again
-                // (the sheet's chip says why). The builder's `onBuy` answers nothing; the pending list shows the row.
-                const outcome = await onBuy(action)
-                if (wasNotSaved(outcome)) setAdded((prev) => { const next = new Set(prev); next.delete(s.talentId); return next })
-              }}
+              added={known.has(s.talentId)}
+              onAdd={onBuy}
             />
           ))}
         </ul>
       )}
     </section>
   )
-}
-
-const wasNotSaved = (outcome: unknown): boolean => {
-  const status = typeof outcome === 'object' && outcome !== null ? (outcome as { status?: unknown }).status : undefined
-  return status === 'refused' || status === 'unsaved'
 }
 
 function SuggestionCard({

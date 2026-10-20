@@ -19,7 +19,8 @@ const STATUS_TEXT: Record<Exclude<SaveStatus['kind'], 'failed'>, string> = { sav
 /**
  * The builder around one draft: the step bar, the current step, Back / Continue (Continue is refused while the step
  * has problems, which are listed), the draft's save status, and the pending step 6–7 actions the rules now refuse
- * (ruling 8) with a Remove for each. Step 7 ends with Finish instead of Continue.
+ * (ruling 8) with a Remove for each. Step 7 ends with Finish instead of Continue. A navigation away from the builder
+ * that is held because the last changes did not save asks, in place, whether to stay or leave without them.
  */
 export function BuilderShell({ draft, step, onStep }: { draft: UseDraft; step: StepNumber; onStep: (step: StepNumber) => void }) {
   const reachable = reachableStep(draft.builder)
@@ -68,6 +69,7 @@ export function BuilderShell({ draft, step, onStep }: { draft: UseDraft; step: S
         <p className="eyebrow">{draft.builder.name.trim() || 'New character'}</p>
         <SaveLine status={draft.status} onRetry={() => void draft.flush()} />
       </div>
+      <Leaving draft={draft} />
       <StepBar step={step} reachable={reachable} onStep={go} />
       <h1 ref={heading} tabIndex={-1} className="font-serif text-h1-sm font-semibold outline-none md:text-h1">
         {step}. {STEPS[step - 1]}
@@ -119,6 +121,33 @@ function SaveLine({ status, onRetry }: { status: SaveStatus; onRetry: () => void
         Retry
       </Button>
     </p>
+  )
+}
+
+/** A held navigation away from the builder (`draft.leaving`): the changes on screen did not save. */
+function Leaving({ draft }: { draft: UseDraft }) {
+  const alert = useRef<HTMLDivElement>(null)
+  const held = draft.leaving !== null
+  useEffect(() => {
+    if (held) alert.current?.scrollIntoView({ block: 'center' })
+  }, [held])
+  if (!draft.leaving) return null
+  const { stay, leave } = draft.leaving
+  return (
+    <Alert ref={alert} variant="destructive" role="alert">
+      <AlertTitle>Your latest changes are not saved</AlertTitle>
+      <AlertDescription>
+        <p>{draft.status.kind === 'failed' ? `${draft.status.text}.` : ''} If you leave now, they are lost.</p>
+        <div className="mt-2 flex flex-wrap gap-3">
+          <Button type="button" size="lg" onClick={stay}>
+            Stay
+          </Button>
+          <Button type="button" variant="outline" size="lg" onClick={leave}>
+            Leave without saving
+          </Button>
+        </div>
+      </AlertDescription>
+    </Alert>
   )
 }
 
