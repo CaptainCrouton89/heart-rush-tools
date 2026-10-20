@@ -55,6 +55,8 @@ describe('criterion 16: createCharacter', () => {
     error('invalid_professions', () => createCharacter(input({ professions: [{ name: 'Scholar', rank: 4 }] }), catalogue))
     error('unknown_race', () => createCharacter(input({ raceId: 'missing' }), catalogue))
     error('unknown_subrace', () => createCharacter(input({ subraceId: 'missing' }), catalogue))
+    error('unknown_subrace', () => createCharacter(input({ raceId: gnome.id }), catalogue))
+    error('bad_action', () => createCharacter(input({ createdAspects: ['Brave', ' '] }), catalogue))
   })
   test('race and subrace effects, base HP and racial attunement are copied', () => {
     const w = createCharacter(input({ raceId: gnome.id, subraceId: 'whiteling' }), catalogue)

@@ -27,8 +27,9 @@ export function createCharacter(input: BuilderInput, catalogue: Catalogue): Char
   const race = catalogue.races.get(input.raceId)
   if (!race) throw new RuleError('unknown_race')
   const subrace = input.subraceId === null ? null : race.subraces.find(s => s.id === input.subraceId)
-  if (input.subraceId !== null && !subrace) throw new RuleError('unknown_subrace')
+  if ((input.subraceId !== null && !subrace) || (input.subraceId === null && race.subraces.length > 0)) throw new RuleError('unknown_subrace')
   validate(input)
+  if (input.createdAspects.some(text => !text.trim())) throw new RuleError('bad_action', 'created aspects must not be empty')
 
   let next = 0
   const id = () => `${input.id}:${next++}`
