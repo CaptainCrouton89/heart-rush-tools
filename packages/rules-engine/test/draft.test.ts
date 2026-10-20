@@ -19,7 +19,7 @@ const catalogue: Catalogue = { races: indexById([gnome, centaur]), talents: inde
 
 const builder = (over: Partial<BuilderInput> = {}): BuilderInput => ({
   id: '01DRAFT', at: AT, name: 'Pip', pronouns: '', dream: '', description: '', motivation: '', portrait: null,
-  raceId: gnome.id, subraceId: null, kinChoices: {}, spelltouched: false, dice: { might: 6, agility: 4, cunning: 6, presence: 4 },
+  raceId: gnome.id, subraceId: null, kinChoices: {}, dice: { might: 6, agility: 4, cunning: 6, presence: 4 },
   ageCategory: 'adult', ageBenefits: [], createdAspects: ['Brave', 'Curious'],
   professions: [{ name: 'Scout', rank: 3 }, { name: 'Herbalist', rank: 1 }], bloodmarkLevel: 0, ...over,
 })

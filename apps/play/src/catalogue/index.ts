@@ -11,12 +11,9 @@ import { conditionsFileSchema, racesFileSchema, talentsFileSchema } from './sche
 export { PATHS, PATHS_BY_ID, type PlayPath }
 export type { Catalogue, PlayCondition, PlayRace, PlayTalent }
 
-/** A race as the loader returns it: ruling 15's `mentionsSpelltouched` is computed here, once. */
-export type CatalogueRace = PlayRace & { mentionsSpelltouched: boolean }
-
 export type PlayCatalogue = Catalogue & {
   contentVersion: string
-  races: ReadonlyMap<string, CatalogueRace>
+  races: ReadonlyMap<string, PlayRace>
 }
 
 /** The rules site; a catalogue entry's `path` and a race's `image` are paths on it (ruling 23). */
@@ -35,19 +32,6 @@ export function resolveRef<T extends { title: string }>(
 ): { entry: T | null; title: string; unresolved: boolean } {
   const entry = ref.catalogueId === null ? undefined : entries.get(ref.catalogueId)
   return entry ? { entry, title: entry.title, unresolved: false } : { entry: null, title: ref.titleSnapshot, unresolved: true }
-}
-
-// Ruling 15: the toggle shows when the race's or a subrace's text mentions "spelltouched".
-const SPELLTOUCHED = 'spelltouched'
-const NON_TEXT_KEYS = new Set(['id', 'path', 'image'])
-/** True when any text in `value` (strings, nested arrays and objects; not ids, paths or image paths) contains `needle`, case-insensitive. */
-export function mentions(value: unknown, needle: string): boolean {
-  if (typeof value === 'string') return value.toLowerCase().includes(needle)
-  if (Array.isArray(value)) return value.some((v) => mentions(v, needle))
-  if (value && typeof value === 'object') {
-    return Object.entries(value).some(([k, v]) => !NON_TEXT_KEYS.has(k) && mentions(v, needle))
-  }
-  return false
 }
 
 function byId<T extends { id: string }>(entries: readonly T[], kind: string): ReadonlyMap<string, T> {
@@ -69,7 +53,7 @@ function load(): PlayCatalogue {
   return {
     contentVersion: talents.contentVersion,
     talents: byId(talents.entries, 'talent'),
-    races: byId(races.entries.map((r) => ({ ...r, mentionsSpelltouched: mentions(r, SPELLTOUCHED) })), 'race'),
+    races: byId(races.entries, 'race'),
     conditions: byId(conditions.entries, 'condition'),
   }
 }

@@ -50,7 +50,6 @@ export type Kin = {
   raceId: string
   subraceId: string | null
   titleSnapshot: string
-  spelltouched: boolean
   /** The creation-time answers: choice id → option id, or talent id for a `talent` choice. */
   choices: Record<string, string>
 }
@@ -173,7 +172,6 @@ export type BuilderInput = {
   subraceId: string | null
   /** Every `PlayChoice` on the race and chosen subrace: choice id → option id, or talent id for a `talent` choice. */
   kinChoices: Record<string, string>
-  spelltouched: boolean
   /** Two d6 and two d4. */
   dice: Record<AbilityId, 4 | 6>
   ageCategory: 'young' | 'adult' | 'elderly'
@@ -240,7 +238,7 @@ export type ActionBody =
   | { kind: 'xp:award'; amount: number }
   | { kind: 'xp:buy'; purchase: PurchaseKind; target?: Target; talent?: BoughtTalent; aspectText?: string }
   | { kind: 'bloodmark:award' }
-  | { kind: 'bloodmark:pick'; ability: { kind: BloodmarkKind; title: string; text: string } }
+  | { kind: 'bloodmark:pick'; ability: { kind: BloodmarkKind; title: string; text: string; element?: string } }
   | { kind: 'gear:weapon:add'; weapon: Omit<Weapon, 'id'> }
   | { kind: 'gear:weapon:edit'; weapon: Partial<Omit<Weapon, 'id'>> & { id: string } }
   | { kind: 'gear:weapon:remove'; weaponId: string }

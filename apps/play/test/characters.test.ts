@@ -33,7 +33,7 @@ function builder(overrides: Partial<BuilderInput> = {}): BuilderInput {
   assert.equal(CENTAUR.subraces.length, 0, 'the fixture race has no subraces')
   return {
     id: ulid(), at: at(), name: 'Ysolde', pronouns: 'she/her', dream: '', description: '', motivation: '', portrait: null,
-    raceId: CENTAUR.id, subraceId: null, kinChoices: {}, spelltouched: false,
+    raceId: CENTAUR.id, subraceId: null, kinChoices: {},
     dice: { might: 6, agility: 6, cunning: 4, presence: 4 },
     ageCategory: 'adult', ageBenefits: [], createdAspects: ['Loyal', 'Stubborn'],
     professions: [{ name: 'Smith', rank: 2 }, { name: 'Cook', rank: 2 }], bloodmarkLevel: 1,

@@ -1,6 +1,11 @@
 import type { BloodmarkKind, Character } from './types'
 import { RuleError } from './types'
 
+/** Building_Your_Character.md, Warcaster (a specialization): elemental talents cost X+3 XP and the first element is attuned. */
+export function hasWarcaster(c: Character): boolean {
+  return c.bloodmarks.abilities.some(a => a.kind === 'specialization' && a.title.trim().toLowerCase() === 'warcaster')
+}
+
 /** Starting Bloodmarks table, Building_Your_Character.md. */
 export function startingXp(level: number): number {
   if (!Number.isInteger(level) || level < 0) throw new RuleError('invalid_amount')

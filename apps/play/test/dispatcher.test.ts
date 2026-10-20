@@ -16,7 +16,7 @@ const ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$/
 
 const builder: BuilderInput = {
   id: ulid(), at: new Date().toISOString(), name: 'Ysolde', pronouns: 'she/her', dream: '', description: '', motivation: '', portrait: null,
-  raceId: CENTAUR.id, subraceId: null, kinChoices: {}, spelltouched: false,
+  raceId: CENTAUR.id, subraceId: null, kinChoices: {},
   dice: { might: 6, agility: 6, cunning: 4, presence: 4 },
   ageCategory: 'adult', ageBenefits: [], createdAspects: ['Loyal', 'Stubborn'],
   professions: [{ name: 'Smith', rank: 2 }, { name: 'Cook', rank: 2 }], bloodmarkLevel: 1,

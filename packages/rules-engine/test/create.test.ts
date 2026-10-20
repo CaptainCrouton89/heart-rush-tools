@@ -49,7 +49,7 @@ const talents = [
   talent('spark', 'Spark', { category: 'elemental', tradition: 'Handmagic', elements: ['Fire'] }),
 ]
 const catalogue: Catalogue = { races: indexById([centaur, gnome, elf, dwarf, human, mira, elnir, craven]), talents: indexById(talents), conditions }
-const input = (over: Partial<BuilderInput> = {}): BuilderInput => ({ id: '01TEST', at: '2026-01-01T00:00:00Z', name: 'Kaelen', pronouns: 'they', dream: 'Explore', description: '', motivation: '', portrait: null, raceId: centaur.id, subraceId: null, kinChoices: {}, spelltouched: false, dice: { might: 6, agility: 4, cunning: 6, presence: 4 }, ageCategory: 'adult', ageBenefits: [], createdAspects: ['Brave', 'Curious'], professions: [{ name: 'Scout', rank: 3 }, { name: 'Herbalist', rank: 1 }], bloodmarkLevel: 0, ...over })
+const input = (over: Partial<BuilderInput> = {}): BuilderInput => ({ id: '01TEST', at: '2026-01-01T00:00:00Z', name: 'Kaelen', pronouns: 'they', dream: 'Explore', description: '', motivation: '', portrait: null, raceId: centaur.id, subraceId: null, kinChoices: {}, dice: { might: 6, agility: 4, cunning: 6, presence: 4 }, ageCategory: 'adult', ageBenefits: [], createdAspects: ['Brave', 'Curious'], professions: [{ name: 'Scout', rank: 3 }, { name: 'Herbalist', rank: 1 }], bloodmarkLevel: 0, ...over })
 const error = (code: string, fn: () => unknown) => assert.throws(fn, (e: any) => e.code === code)
 
 describe('criterion 16: createCharacter', () => {

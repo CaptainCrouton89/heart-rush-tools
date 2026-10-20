@@ -1,7 +1,7 @@
 // Pure XP and bloodmark reducers. The action supplies every new row's id and timestamp (ruling 6).
 // `xp:buy` creates in this order: the purchase `<id>:0`, then the aspect or talent it appends `<id>:1`,
 // then, for Elemental Affinity on a new element, the attunement `<id>:2`.
-import { bloodmarkPicksOwed } from '../bloodmarks'
+import { bloodmarkPicksOwed, hasWarcaster } from '../bloodmarks'
 import { price, xpRemaining } from '../pricing'
 import { RuleError } from '../types'
 import type { Action, Attunement, Character, Die, Purchase, Talent } from '../types'
@@ -17,10 +17,15 @@ export function xpAward(c: Character, a: Of<'xp:award'>): Character {
   return { ...c, xp: { ...c.xp, awarded: c.xp.awarded + a.amount + bonus } }
 }
 
-/** Elemental Affinity (Elemental_Affinity.md): a new element is basic; an element at basic becomes advanced. */
-function attune(c: Character, element: string, id: string): Attunement[] {
+function elementName(element: string): string {
   const name = element.trim().toLowerCase()
   if (!ELEMENTS.includes(name)) throw new RuleError('bad_action', `Unknown element: ${element}`)
+  return name
+}
+
+/** Elemental Affinity (Elemental_Affinity.md): a new element is basic; an element at basic becomes advanced. */
+function attune(c: Character, element: string, id: string): Attunement[] {
+  const name = elementName(element)
   const existing = c.attunements.find(x => x.element.toLowerCase() === name)
   if (!existing) return [...c.attunements, { id, element: name, level: 'basic', source: 'talent' }]
   if (existing.level !== 'basic') throw new RuleError('bad_action', 'Elemental Affinity raises only a basic attunement')
@@ -95,5 +100,11 @@ export function bloodmarkPick(c: Character, a: Of<'bloodmark:pick'>): Character 
   if (!title) throw new RuleError('bad_action', 'Ability title is blank')
   if (bloodmarkPicksOwed(c)[a.ability.kind] <= 0) throw new RuleError('bloodmark_not_owed')
   const ability = { id: `${a.id}:0`, kind: a.ability.kind, title, text: a.ability.text, grantedAtLevel: c.bloodmarks.level }
-  return { ...c, bloodmarks: { ...c.bloodmarks, abilities: [...c.bloodmarks.abilities, ability] } }
+  const picked = { ...c, bloodmarks: { ...c.bloodmarks, abilities: [...c.bloodmarks.abilities, ability] } }
+  // Warcaster grants a basic attunement of the chosen element (Building_Your_Character.md).
+  if (!hasWarcaster({ ...c, bloodmarks: { ...c.bloodmarks, abilities: [ability] } })) return picked
+  if (a.ability.element === undefined) throw new RuleError('bad_action', 'Warcaster needs an element')
+  const element = elementName(a.ability.element)
+  if (c.attunements.some(x => x.element.toLowerCase() === element)) throw new RuleError('bad_action', `Already attuned to ${element}`)
+  return { ...picked, attunements: [...c.attunements, { id: `${a.id}:1`, element, level: 'basic', source: ability.id }] }
 }

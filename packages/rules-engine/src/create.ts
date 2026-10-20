@@ -86,7 +86,7 @@ export function createCharacter(input: BuilderInput, catalogue: Catalogue): Char
   return {
     schemaVersion: SCHEMA_VERSION, draft: false,
     identity: { name: input.name, pronouns: input.pronouns, dream: input.dream, description: input.description, motivation: input.motivation, portrait: input.portrait, ageCategory: input.ageCategory, ageBenefits: [...input.ageBenefits] },
-    kin: { raceId: race.id, subraceId: subrace?.id ?? null, titleSnapshot: subrace ? `${race.title} / ${subrace.title}` : race.title, spelltouched: input.spelltouched, choices },
+    kin: { raceId: race.id, subraceId: subrace?.id ?? null, titleSnapshot: subrace ? `${race.title} / ${subrace.title}` : race.title, choices },
     attunements, path: null, bloodmarks: { level: input.bloodmarkLevel, abilities: [] },
     abilities: { might: { start: input.dice.might, current: input.dice.might }, agility: { start: input.dice.agility, current: input.dice.agility }, cunning: { start: input.dice.cunning, current: input.dice.cunning }, presence: { start: input.dice.presence, current: input.dice.presence } },
     hp: { baseMax, current: baseMax, heartDieCurrent: 8 }, wounds: [], conditions: [], aspects, professions, talents,

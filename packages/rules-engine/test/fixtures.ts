@@ -7,7 +7,7 @@ export function makeCharacter(over: Partial<Character> = {}): Character {
     schemaVersion: 1,
     draft: false,
     identity: { name: 'Test', pronouns: '', dream: '', description: '', motivation: '', portrait: null, ageCategory: 'adult', ageBenefits: [] },
-    kin: { raceId: 'player.kin-culture.centaur', subraceId: null, titleSnapshot: 'Centaur', spelltouched: false, choices: {} },
+    kin: { raceId: 'player.kin-culture.centaur', subraceId: null, titleSnapshot: 'Centaur', choices: {} },
     attunements: [],
     path: null,
     bloodmarks: { level: 0, abilities: [] },

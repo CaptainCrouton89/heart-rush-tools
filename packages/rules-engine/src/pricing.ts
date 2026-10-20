@@ -1,3 +1,4 @@
+import { hasWarcaster } from './bloodmarks'
 import { maxHp } from './derived'
 import type { AbilityId, Character, Die, PurchaseKind, Target } from './types'
 import { RuleError } from './types'
@@ -68,7 +69,7 @@ export function price(c: Character, kind: PurchaseKind, t?: Target): number {
     case 'talent:elemental':
       if (!t?.talent) throw new RuleError('not_attuned')
       requireAttunement(c, t.talent)
-      base = (c.kin.spelltouched ? 1 : 2) * count(c, 'combat') + 3
+      base = hasWarcaster(c) ? count(c, 'elemental') + 3 : 2 * count(c, 'combat') + 3
       break
     case 'destiny': base = destinyLevels(c) + 5; break
     case 'path':

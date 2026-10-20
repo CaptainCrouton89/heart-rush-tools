@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { createCharacter, type BuilderInput } from '@heartrush/rules-engine/create'
 import type { PlayChoice } from '@heartrush/rules-engine/catalogue'
-import { getCatalogue, mentions, PATHS, PATHS_BY_ID, rulebookUrl, raceImageUrl, resolveRef } from '../src/catalogue'
+import { getCatalogue, PATHS, PATHS_BY_ID, rulebookUrl, raceImageUrl, resolveRef } from '../src/catalogue'
 import { racesFileSchema } from '../src/catalogue/schema'
 import racesJson from '@heartrush/content/play/races' with { type: 'json' }
 
@@ -42,21 +42,6 @@ test("Gnome's Whiteling subrace carries its effects", () => {
     { kind: 'cost', purchase: 'hp', delta: 1 },
     { kind: 'dieCap', ability: 'might', max: 6 },
   ])
-})
-
-test('mentionsSpelltouched is false for Centaur, and is true exactly for the races whose compiled text says "spelltouched"', () => {
-  assert.equal(raceByTitle('Centaur').mentionsSpelltouched, false)
-  const expected = racesJson.entries.filter((r) => JSON.stringify({ ...r, id: '', path: '', image: '' }).toLowerCase().includes('spelltouched')).map((r) => r.id)
-  const actual = [...cat.races.values()].filter((r) => r.mentionsSpelltouched).map((r) => r.id)
-  assert.deepEqual(actual.sort(), expected.sort())
-})
-
-test('the spelltouched detector matches case-insensitively in nested text, and ignores ids, paths and images', () => {
-  // The Ghoul sentence as committed at HEAD (heart_rush/races/Ghoul.md line 32).
-  const ghoulSentence = { abilities: [{ body: 'For the next 1d10 days, spelltouched cannot use their action to inflict wounds upon you' }] }
-  assert.equal(mentions(ghoulSentence, 'spelltouched'), true)
-  assert.equal(mentions({ subraces: [{ aspects: ['SpellTouched heir'] }] }, 'spelltouched'), true)
-  assert.equal(mentions({ id: 'spelltouched', path: '/spelltouched', image: '/spelltouched.png', title: 'Centaur' }, 'spelltouched'), false)
 })
 
 test('Shontobi: the path choice resolves two options', () => {
@@ -145,7 +130,6 @@ test('the engine builds a character from every real race and subrace', () => {
         id: 'C1', at: '2026-01-01T00:00:00.000Z', name: 'Test', pronouns: '', dream: '', description: '', motivation: '', portrait: null,
         raceId: race.id, subraceId: subrace?.id ?? null,
         kinChoices: Object.fromEntries(choices.map((c) => [c.id, answer(c)])),
-        spelltouched: false,
         dice: { might: 6, agility: 6, cunning: 4, presence: 4 },
         ageCategory: 'adult', ageBenefits: [], createdAspects: ['One', 'Two'],
         professions: [{ name: 'Smith', rank: 2 }, { name: 'Cook', rank: 2 }], bloodmarkLevel: 1,
@@ -162,7 +146,7 @@ test('the engine builds a character from every real race and subrace', () => {
 test('the engine applies a real grant, a real choice option and a real subrace base HP', () => {
   const base = (raceId: string, subraceId: string | null, kinChoices: Record<string, string>): BuilderInput => ({
     id: 'C2', at: '2026-01-01T00:00:00.000Z', name: 'Test', pronouns: '', dream: '', description: '', motivation: '', portrait: null,
-    raceId, subraceId, kinChoices, spelltouched: false, dice: { might: 6, agility: 6, cunning: 4, presence: 4 },
+    raceId, subraceId, kinChoices, dice: { might: 6, agility: 6, cunning: 4, presence: 4 },
     ageCategory: 'adult', ageBenefits: [], createdAspects: ['One', 'Two'], professions: [{ name: 'Smith', rank: 2 }, { name: 'Cook', rank: 2 }], bloodmarkLevel: 1,
   })
   const gnome = raceByTitle('Gnome')

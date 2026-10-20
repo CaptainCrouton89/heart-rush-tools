@@ -52,14 +52,19 @@ describe('criterion 8: prices', () => {
     error('die_cap', () => cost(gnome, 'die', { ability: 'might' }))
     assert.equal(raceDelta(gnome, 'talent:noncombat', { talent: { tradition: 'Handmagic' } }), -2)
   })
-  test('combat and noncombat counters are independent; elemental follows combat and Spelltouched', () => {
+  test('combat and noncombat counters are independent; elemental follows combat, or elemental with Warcaster', () => {
     for (let n = 0; n < 3; n++) assert.equal(cost(withTalents(Array(n).fill('combat')), 'talent:combat'), n + 3)
     const c = { ...withTalents(['combat', 'combat', 'racial', 'elemental']), attunements: [{ id: 'a0', element: 'fire', level: 'basic' as const, source: 'race' as const }] }
     assert.equal(count(c, 'combat'), 2)
     assert.equal(count(c, 'elemental'), 1)
     assert.equal(cost(c, 'talent:noncombat'), 3)
     assert.equal(cost(c, 'talent:elemental', { talent: { elements: ['fire'] } }), 7)
-    assert.equal(cost({ ...c, kin: { ...c.kin, spelltouched: true } }, 'talent:elemental', { talent: { elements: ['fire'] } }), 5)
+    const fire = { talent: { elements: ['fire'] } }
+    const mark = (kind: 'specialization' | 'signature', title = 'Warcaster') => ({ bloodmarks: { level: 2, abilities: [{ id: 'b0', kind, title, text: '', grantedAtLevel: 1 }] } })
+    const noElemental = { ...c, talents: c.talents.filter(t => t.category !== 'elemental') }
+    assert.equal(cost({ ...noElemental, ...mark('specialization') }, 'talent:elemental', fire), 3)
+    assert.equal(cost({ ...c, ...mark('specialization', '  WARCASTER ') }, 'talent:elemental', fire), 4)
+    assert.equal(cost({ ...noElemental, ...mark('signature') }, 'talent:elemental', fire), 7)
   })
   test('attunement requires one matching element at required level; multi-element accepts either', () => {
     const c = makeCharacter({ attunements: [{ id: 'a0', element: 'Water', level: 'basic', source: 'race' }] })

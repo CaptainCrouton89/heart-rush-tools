@@ -5,6 +5,7 @@ import { xpByKind, xpRemaining, xpSpent } from '../src/pricing'
 import { bloodmarkPicksOwed } from '../src/bloodmarks'
 import { maxHeartDie, maxHp } from '../src/derived'
 import { RuleError, type ActionBody, type BoughtTalent, type Character, type Talent } from '../src/types'
+import { applyAction, applyInverse } from '../src/actions'
 import { makeCharacter } from './fixtures'
 
 const AT = '2026-01-01T00:00:00.000Z'
@@ -112,7 +113,7 @@ describe('criterion 9: xp:buy', () => {
     refuses('bad_action', () => r.xpBuy(withXp(30), act({ kind: 'xp:buy', purchase: 'talent:combat', talent: bought('   ') })))
     refuses('bad_action', () => r.xpBuy(withXp(30), act({ kind: 'xp:buy', purchase: 'hp', talent: bought('Cleave') })))
   })
-  test('elemental talent: refused without attunement, priced (combat × 2) + 3, Spelltouched (combat) + 3', () => {
+  test('elemental talent: refused without attunement, priced (combat × 2) + 3', () => {
     const spell = { tradition: 'Cognitive' as const, elements: ['fire'] }
     const base = withXp(100, makeCharacter({ talents: [talent('combat', { id: 'c1' }), talent('combat', { id: 'c2' })] }))
     refuses('not_attuned', () => r.xpBuy(base, act({ kind: 'xp:buy', purchase: 'talent:elemental', target: { talent: spell }, talent: bought('Fireball') })))
@@ -120,8 +121,6 @@ describe('criterion 9: xp:buy', () => {
     const c = r.xpBuy(attuned, act({ kind: 'xp:buy', purchase: 'talent:elemental', target: { talent: spell }, talent: bought('Fireball') }))
     assert.equal(c.xp.purchases[0]!.cost, 7)
     assert.equal(c.talents.at(-1)!.category, 'elemental')
-    const touched = { ...attuned, kin: { ...attuned.kin, spelltouched: true } }
-    assert.equal(r.xpBuy(touched, act({ kind: 'xp:buy', purchase: 'talent:elemental', target: { talent: spell }, talent: bought('Fireball') })).xp.purchases[0]!.cost, 5)
   })
   test('a Handmagic discount is applied from the talent facts in the target and the stored cost is the discounted price', () => {
     const gnome = withXp(30, makeCharacter({ raceEffects: [{ kind: 'cost', purchase: 'talent:*', delta: -2, where: { tradition: 'Handmagic' } }] }))
@@ -271,6 +270,30 @@ describe('criterion 8b: bloodmarks', () => {
     c = r.bloodmarkPick(c, act({ kind: 'bloodmark:pick', ability: pick('paragon') }, 'K2'))
     assert.deepEqual(c.bloodmarks.abilities.map(a => [a.kind, a.grantedAtLevel]), [['mastery', 5], ['paragon', 5]])
     refuses('bloodmark_not_owed', () => r.bloodmarkPick(c, act({ kind: 'bloodmark:pick', ability: pick('paragon') }, 'K3')))
+  })
+})
+
+describe('Warcaster bloodmark pick', () => {
+  const pick = (element?: string, title = 'Warcaster') => ({ kind: 'specialization' as const, title, text: 'Rules text', ...(element === undefined ? {} : { element }) })
+  const level1 = () => r.bloodmarkAward(makeCharacter(), act({ kind: 'bloodmark:award' }, 'L1'))
+
+  test('with an element it adds a basic attunement whose source is the new ability id, and undo removes it', () => {
+    const before = level1()
+    const { character, inverse } = applyAction(before, act({ kind: 'bloodmark:pick', ability: pick(' Fire ') }, 'K1'), { conditions: new Map() })
+    assert.deepEqual(character.attunements.at(-1), { id: 'K1:1', element: 'fire', level: 'basic', source: 'K1:0' })
+    assert.equal(character.bloodmarks.abilities[0]!.id, 'K1:0')
+    assert.deepEqual(applyInverse(character, inverse).character, before)
+  })
+  test('without an element, with an unknown element, or with an element already attuned it is refused', () => {
+    const c = level1()
+    refuses('bad_action', () => r.bloodmarkPick(c, act({ kind: 'bloodmark:pick', ability: pick() })))
+    refuses('bad_action', () => r.bloodmarkPick(c, act({ kind: 'bloodmark:pick', ability: pick('plasma') })))
+    const attuned = { ...c, attunements: [{ id: 'at1', element: 'fire', level: 'advanced' as const, source: 'race' }] }
+    refuses('bad_action', () => r.bloodmarkPick(attuned, act({ kind: 'bloodmark:pick', ability: pick('Fire') })))
+  })
+  test('a pick that is not Warcaster ignores the element', () => {
+    const c = r.bloodmarkPick(level1(), act({ kind: 'bloodmark:pick', ability: pick('plasma', 'Other') }))
+    assert.deepEqual(c.attunements, [])
   })
 })
 

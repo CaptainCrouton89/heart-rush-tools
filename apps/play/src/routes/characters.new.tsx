@@ -160,7 +160,7 @@ function QuickCreate() {
       const builder: BuilderInput = {
         id, at: new Date().toISOString(),
         name: name.trim(), pronouns: '', dream: '', description: '', motivation: '', portrait: null,
-        raceId, subraceId: subrace ? subrace.id : null, kinChoices, spelltouched: false,
+        raceId, subraceId: subrace ? subrace.id : null, kinChoices,
         dice: dice as Record<AbilityId, 4 | 6>,
         ageCategory: age, ageBenefits: benefits,
         ...(benefits.includes('deep-knowledge') ? { deepKnowledgeAspect: deepKnowledge.trim() } : {}),
