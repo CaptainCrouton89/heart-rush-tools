@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type FormEvent } from 'react'
 import { useArrivals, Written } from '~/components/motion'
 import type { Wound } from '@heartrush/rules-engine/types'
 import { Button } from '@heartrush/ui/components/button'
@@ -17,10 +17,20 @@ const asNumber = (s: string) => (/^\d+$/.test(s) ? Number(s) : null)
  * happens at the table), and each row shows its rank and description. With edit rights everything happens in the
  * list: **+** opens a blank row (rank, description, Add); tapping the rank turns that row into its edit form (with
  * **Remove** as the GM correction); **Treat** opens the medicine roll under the row and sends one `wound:treat`.
+ * Closing a row returns focus to what opened it (the wound's rank or Treat button, else **+**).
  */
 export function WoundsSection({ character, derived, dispatch, canEdit }: SectionProps) {
   const [open, setOpen] = useState<Open>(null)
-  const close = () => setOpen(null)
+  const addRef = useRef<HTMLButtonElement>(null)
+  const close = () => {
+    const from = open
+    setOpen(null)
+    // After the row has closed: the opener if it is still there (a removed or healed wound's is not), else +.
+    requestAnimationFrame(() => {
+      const opener = from && from.kind !== 'add' ? document.querySelector<HTMLElement>(`[data-wound="${from.id}"] [data-opens="${from.kind}"]`) : null
+      ;(opener ?? addRef.current)?.focus()
+    })
+  }
   const heading = derived.woundPenalty > 0 ? `Wounds (−${derived.woundPenalty} max HP)` : 'Wounds'
   const fastHealer = character.identity.ageBenefits.includes('fast-healer')
   const adding = open?.kind === 'add'
@@ -32,7 +42,7 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
       title={heading}
       action={
         canEdit && (
-          <Button size="compact-icon" type="button" variant="ghost" aria-label="Add a wound" aria-expanded={adding} onClick={() => setOpen(adding ? null : { kind: 'add' })}>
+          <Button size="compact-icon" type="button" variant="ghost" aria-label="Add a wound" ref={addRef} aria-expanded={adding} onClick={() => setOpen(adding ? null : { kind: 'add' })}>
             +
           </Button>
         )
@@ -84,10 +94,11 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
               )
             }
             return (
-              <li key={w.id} className="flex min-h-12 flex-wrap items-center gap-x-3 border-b border-border last:border-b-0">
+              <li key={w.id} data-wound={w.id} className="flex min-h-12 flex-wrap items-center gap-x-3 border-b border-border last:border-b-0">
                 {canEdit ? (
                   <button
                     type="button"
+                    data-opens="edit"
                     className={`wound-ring${fresh ? ' fresh' : ''} rounded-full after:absolute after:top-1/2 after:left-1/2 after:size-11 after:-translate-1/2 after:content-[''] hover:bg-surface-muted`}
                     aria-label={`Edit wound of rank ${w.rank}`}
                     onClick={() => setOpen({ kind: 'edit', id: w.id })}
@@ -116,7 +127,7 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
                 ) : (
                   canEdit &&
                   !treating && (
-                    <Button size="compact" type="button" variant="line" className="shrink-0" onClick={() => setOpen({ kind: 'treat', id: w.id })}>
+                    <Button size="compact" type="button" variant="line" className="shrink-0" data-opens="treat" onClick={() => setOpen({ kind: 'treat', id: w.id })}>
                       Treat
                     </Button>
                   )
@@ -139,25 +150,30 @@ export function WoundsSection({ character, derived, dispatch, canEdit }: Section
   )
 }
 
+/** How long a wound that has left the list stays in it, crossed out and fading. */
+const DEPARTED_MS = 1700
+
 /**
  * The wounds to list: the current ones, plus each wound that has just left the list (healed by treatment, or removed)
- * kept at its old place for 1.7 s so it can be crossed out and fade.
+ * kept at its old place for `DEPARTED_MS` from when it left so it can be crossed out and fade.
  */
 function useDeparted(wounds: readonly Wound[]): { wound: Wound; gone: boolean }[] {
-  const [s, setS] = useState<{ last: readonly Wound[]; gone: { wound: Wound; index: number }[] }>({ last: wounds, gone: [] })
+  type Gone = { wound: Wound; index: number; until: number }
+  const [s, setS] = useState<{ last: readonly Wound[]; gone: Gone[] }>({ last: wounds, gone: [] })
   let state = s
   if (s.last !== wounds) {
     const ids = new Set(wounds.map((w) => w.id))
-    const left = s.last.flatMap((wound, index) => (ids.has(wound.id) ? [] : [{ wound, index }]))
+    const until = Date.now() + DEPARTED_MS
+    const left = s.last.flatMap((wound, index) => (ids.has(wound.id) ? [] : [{ wound, index, until }]))
     state = { last: wounds, gone: [...s.gone.filter((g) => !ids.has(g.wound.id)), ...left] }
     setS(state)
   }
-  const goneCount = state.gone.length
+  const next = state.gone.length === 0 ? null : Math.min(...state.gone.map((g) => g.until))
   useEffect(() => {
-    if (goneCount === 0) return
-    const t = setTimeout(() => setS((x) => ({ ...x, gone: [] })), 1700)
+    if (next === null) return
+    const t = setTimeout(() => setS((x) => ({ ...x, gone: x.gone.filter((g) => g.until > Date.now()) })), Math.max(0, next - Date.now()))
     return () => clearTimeout(t)
-  }, [goneCount])
+  }, [next])
   const rows = wounds.map((wound) => ({ wound, gone: false }))
   for (const g of [...state.gone].sort((a, b) => a.index - b.index)) rows.splice(Math.min(g.index, rows.length), 0, { wound: g.wound, gone: true })
   return rows
@@ -209,9 +225,9 @@ function WoundForm({
           autoComplete="off"
           value={rank}
           onChange={(e) => setRank(digits(e.target.value))}
-          className="h-9 w-[52px] shrink-0 text-center"
+          className="h-11 w-[52px] shrink-0 text-center"
         />
-        <Input aria-label="Description" placeholder="Describe it" value={description} onChange={(e) => setDescription(e.target.value)} className="h-9 min-w-0 flex-1" />
+        <Input aria-label="Description" placeholder="Describe it" value={description} onChange={(e) => setDescription(e.target.value)} className="h-11 min-w-0 flex-1" />
         <Button size="compact" variant="line-primary" type="submit" disabled={!valid}>
           {submitLabel}
         </Button>
@@ -252,7 +268,7 @@ function TreatRow({ wound, onCancel, onTreat }: { wound: Wound; onCancel: () => 
         placeholder="0"
         value={roll}
         onChange={(e) => setRoll(digits(e.target.value))}
-        className="h-9 w-14 text-center"
+        className="h-11 w-14 text-center"
       />
       <Button size="compact" variant="line-primary" type="submit" disabled={n === null}>
         Treat

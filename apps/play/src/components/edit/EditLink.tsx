@@ -9,7 +9,7 @@ export function EditLink({ block, label = 'Edit' }: { block: 'identity' | 'gear'
   const id = useMatch({ from: '/characters/$id', shouldThrow: false })?.params.id
   if (!id) return null
   return (
-    <a href={`/characters/${encodeURIComponent(id)}/edit#${block}`} className="inline-flex min-h-11 items-center text-ui text-primary underline underline-offset-4">
+    <a href={`/characters/${encodeURIComponent(id)}/edit#${block}`} className="inline-flex min-h-11 min-w-11 items-center justify-center text-ui text-primary underline underline-offset-4">
       {label}
     </a>
   )

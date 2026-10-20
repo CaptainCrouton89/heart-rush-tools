@@ -33,23 +33,34 @@ export const Route = createRootRoute({
 
 /**
  * The press bloom (play design, Motion): on pointer down a button gets `data-pressed` and the touch point as `--px` /
- * `--py`, which the stylesheet turns into a faint ember bloom from that point; it is removed on release.
+ * `--py`, which the stylesheet turns into a faint ember bloom from that point; it is removed on release, on a
+ * cancelled pointer, when the window loses focus, and on unmount.
  */
 function usePressBloom() {
   useEffect(() => {
+    let pressed: HTMLElement | null = null
+    const release = () => {
+      pressed?.removeAttribute('data-pressed')
+      pressed = null
+    }
     const down = (e: PointerEvent) => {
+      release()
       const b = e.target instanceof Element ? e.target.closest<HTMLElement>('[data-slot="button"]') : null
       if (!b || b.matches(':disabled')) return
       const r = b.getBoundingClientRect()
       b.style.setProperty('--px', `${((e.clientX - r.left) / r.width) * 100}%`)
       b.style.setProperty('--py', `${((e.clientY - r.top) / r.height) * 100}%`)
       b.setAttribute('data-pressed', '')
-      const up = () => (b.removeAttribute('data-pressed'), window.removeEventListener('pointerup', up), window.removeEventListener('pointercancel', up))
-      window.addEventListener('pointerup', up)
-      window.addEventListener('pointercancel', up)
+      pressed = b
     }
+    const releases = ['pointerup', 'pointercancel', 'blur'] as const
     document.addEventListener('pointerdown', down)
-    return () => document.removeEventListener('pointerdown', down)
+    for (const type of releases) window.addEventListener(type, release)
+    return () => {
+      release()
+      document.removeEventListener('pointerdown', down)
+      for (const type of releases) window.removeEventListener(type, release)
+    }
   }, [])
 }
 

@@ -90,7 +90,7 @@ export function SiteHeader({ session }: { session: Session | null }) {
           <a href="https://heartrush.party/" className="flex min-h-11 items-center rounded-sm" aria-label="Heart Rush home">
             <Wordmark className="font-label text-[18px] font-normal normal-case" />
           </a>
-          <Link to="/" className="flex min-h-11 items-center rounded-sm text-ui text-muted-foreground hover:text-foreground max-[359px]:hidden">
+          <Link to="/" className="flex min-h-11 min-w-11 items-center rounded-sm text-ui text-muted-foreground hover:text-foreground max-[359px]:hidden">
             <span className="border-l border-border pl-2">Play</span>
           </Link>
         </div>

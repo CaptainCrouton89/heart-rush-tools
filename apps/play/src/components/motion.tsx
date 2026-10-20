@@ -68,17 +68,25 @@ function Struck({ value, good }: { value: number | string; good: boolean }) {
   )
 }
 
+/** How long an arrival stays marked: longer than every entry animation (the slowest, a long wound description, ends by 3.5 s). */
+const ARRIVAL_MS = 4000
+
 /**
- * The ids that appeared after the first render, kept for the life of the component so a re-render (the server's
- * saved copy replacing the optimistic one) does not cut their entry animation short.
+ * The ids that appeared after the first render. Each stays marked for `ARRIVAL_MS` from the latest arrival, so a
+ * re-render (the server's saved copy replacing the optimistic one) does not cut its entry animation short, and is then
+ * cleared so later changes animate as changes and a remount does not replay the entry.
  */
 export function useArrivals(ids: readonly string[]): ReadonlySet<string> {
   const [s, setS] = useState(() => ({ seen: new Set(ids), fresh: new Set<string>() }))
   const unseen = ids.filter((id) => !s.seen.has(id))
-  if (unseen.length === 0) return s.fresh
-  const next = { seen: new Set([...s.seen, ...unseen]), fresh: new Set([...s.fresh, ...unseen]) }
-  setS(next)
-  return next.fresh
+  const state = unseen.length === 0 ? s : { seen: new Set([...s.seen, ...unseen]), fresh: new Set([...s.fresh, ...unseen]) }
+  if (state !== s) setS(state)
+  useEffect(() => {
+    if (s.fresh.size === 0) return
+    const t = setTimeout(() => setS((x) => ({ ...x, fresh: new Set<string>() })), ARRIVAL_MS)
+    return () => clearTimeout(t)
+  }, [s.fresh])
+  return state.fresh
 }
 
 /**

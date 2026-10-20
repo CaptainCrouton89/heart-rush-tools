@@ -13,8 +13,9 @@ const WOUND_AT = 10
  * HP pad: type an amount (numeric keyboard), then **Damage** or **Heal**; − and + step the amount by one. Damage of
  * 10 or more first opens a strip under the pad asking for the wound's description and applies on **Mark**, as one
  * `damage` action carrying it: the wound itself is not optional, so there is no skip (a blank description is
- * accepted). **Change amount** closes the strip without applying anything. `maxHp` is the effective max HP the strip
- * shows the wound lowering.
+ * accepted). **Change amount** closes the strip without applying anything. While the strip is open the amount is
+ * fixed (the field is read-only and −, +, Damage, Heal and Enter do nothing); closing it returns focus to the amount.
+ * `maxHp` is the effective max HP the strip shows the wound lowering.
  */
 export function DamagePad({ dispatch, maxHp }: { dispatch: (action: ActionDraft) => unknown; maxHp: number }) {
   const [text, setText] = useState('')
@@ -23,9 +24,13 @@ export function DamagePad({ dispatch, maxHp }: { dispatch: (action: ActionDraft)
 
   const step = (by: number) => setText(String(Math.max(0, amount + by) || ''))
   const done = () => setText('')
+  const closeStrip = () => {
+    setWound(null)
+    document.getElementById(DAMAGE_AMOUNT_ID)?.focus()
+  }
 
   const damage = () => {
-    if (amount < 1) return
+    if (amount < 1 || wound) return
     if (amount >= WOUND_AT) return setWound({ amount, description: '' })
     void dispatch({ kind: 'damage', amount })
     done()
@@ -39,7 +44,7 @@ export function DamagePad({ dispatch, maxHp }: { dispatch: (action: ActionDraft)
     e.preventDefault()
     if (!wound) return
     void dispatch({ kind: 'damage', amount: wound.amount, woundDescription: wound.description.trim() })
-    setWound(null)
+    closeStrip()
     done()
   }
 
@@ -49,7 +54,7 @@ export function DamagePad({ dispatch, maxHp }: { dispatch: (action: ActionDraft)
         Damage or heal
       </label>
       <div className="flex items-center gap-2">
-        <Button size="compact-icon" type="button" variant="line" aria-label="One less" onClick={() => step(-1)}>
+        <Button size="compact-icon" type="button" variant="line" aria-label="One less" disabled={wound !== null} onClick={() => step(-1)}>
           −
         </Button>
         <Input
@@ -59,13 +64,14 @@ export function DamagePad({ dispatch, maxHp }: { dispatch: (action: ActionDraft)
           autoComplete="off"
           placeholder="0"
           value={text}
+          readOnly={wound !== null}
           onChange={(e) => setText(e.target.value.replace(/\D/g, '').slice(0, 4))}
           onKeyDown={(e) => {
             if (e.key === 'Enter') damage()
           }}
-          className="h-9 w-[58px] shrink-0 text-center [--field-size:22px]"
+          className="h-11 w-[58px] shrink-0 text-center [--field-size:22px]"
         />
-        <Button size="compact-icon" type="button" variant="line" aria-label="One more" onClick={() => step(1)}>
+        <Button size="compact-icon" type="button" variant="line" aria-label="One more" disabled={wound !== null} onClick={() => step(1)}>
           +
         </Button>
         <Button size="compact-lg" variant="line-primary" type="button" className="min-w-0 flex-1 px-2" disabled={amount < 1 || wound !== null} onClick={damage}>
@@ -96,7 +102,7 @@ export function DamagePad({ dispatch, maxHp }: { dispatch: (action: ActionDraft)
                 Mark
               </Button>
             </div>
-            <Button size="compact" type="button" variant="link" className="self-start px-0 text-meta text-muted-foreground" onClick={() => setWound(null)}>
+            <Button size="compact" type="button" variant="link" className="self-start px-0 text-meta text-muted-foreground" onClick={closeStrip}>
               Change amount
             </Button>
           </form>

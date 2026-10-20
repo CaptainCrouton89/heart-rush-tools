@@ -89,7 +89,7 @@ export function StickyBar({ character, derived, onHp, links = [] }: { character:
         {links.length > 0 && (
           <nav aria-label="Character pages" className="ml-2 hidden shrink-0 items-center border-l border-border pl-2 lg:flex">
             {links.map((l) => (
-              <a key={l.href} href={l.href} className="inline-flex min-h-11 items-center px-2 text-ui font-medium text-primary underline-offset-4 hover:underline">
+              <a key={l.href} href={l.href} className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 text-ui font-medium text-primary underline-offset-4 hover:underline">
                 {l.label}
               </a>
             ))}
