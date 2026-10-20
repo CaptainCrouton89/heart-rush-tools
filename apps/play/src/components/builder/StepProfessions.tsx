@@ -1,7 +1,8 @@
 import { useId } from 'react'
 import { Button } from '@heartrush/ui/components/button'
 import { Input } from '@heartrush/ui/components/input'
-import { AGE, Field, selectClass, type UseDraft } from './use-draft'
+import { AGE } from './draft-rules'
+import { Field, selectClass, type UseDraft } from './use-draft'
 
 const MAX_PROFESSIONS = 3
 

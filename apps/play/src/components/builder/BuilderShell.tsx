@@ -12,7 +12,8 @@ import { StepKin } from './StepKin'
 import { StepProfessions } from './StepProfessions'
 import { StepTalents } from './StepTalents'
 import { StepVitals } from './StepVitals'
-import { STEPS, reachableStep, stepProblems, type SaveStatus, type StepNumber, type UseDraft } from './use-draft'
+import { STEPS, reachableStep, stepProblems, type StepNumber } from './draft-rules'
+import type { SaveStatus, UseDraft } from './use-draft'
 
 const STATUS_TEXT: Record<Exclude<SaveStatus['kind'], 'failed'>, string> = { saved: 'Draft saved', saving: 'Saving…', unsaved: 'Saving…' }
 

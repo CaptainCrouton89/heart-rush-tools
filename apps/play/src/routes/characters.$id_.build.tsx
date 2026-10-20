@@ -2,7 +2,8 @@
 // it until Finish. The current step is in the URL (`?step=`), so reload and Back keep the player's place.
 import { createFileRoute, notFound, redirect, useNavigate } from '@tanstack/react-router'
 import { BuilderShell } from '~/components/builder/BuilderShell'
-import { reachableStep, toStep, useDraft, type StepNumber } from '~/components/builder/use-draft'
+import { reachableStep, toStep, type StepNumber } from '~/components/builder/draft-rules'
+import { useDraft } from '~/components/builder/use-draft'
 import { getCharacterFn, type CharacterDoc } from '~/server/characters'
 
 export const Route = createFileRoute('/characters/$id_/build')({

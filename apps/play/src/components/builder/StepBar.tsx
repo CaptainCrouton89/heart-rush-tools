@@ -1,5 +1,5 @@
 import { cn } from '@heartrush/ui/lib/utils'
-import { STEPS, type StepNumber } from './use-draft'
+import { STEPS, type StepNumber } from './draft-rules'
 
 /**
  * The seven steps in rulebook order. Every step up to `reachable` (the first incomplete one) can be opened, so the

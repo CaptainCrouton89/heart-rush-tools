@@ -2,7 +2,8 @@ import { Input } from '@heartrush/ui/components/input'
 import { rulebookUrl } from '~/catalogue'
 import { ExplainAspectButton } from '~/components/ai/ExplainButton'
 import { Section } from '~/components/sheet/SheetLayout'
-import { sketchCharacter, type UseDraft } from './use-draft'
+import { sketchCharacter } from './draft-rules'
+import type { UseDraft } from './use-draft'
 
 const GOOD_ASPECT_PATH = '/player/building-your-character#what-makes-a-good-aspect'
 

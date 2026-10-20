@@ -8,7 +8,7 @@ import { Alert, AlertDescription } from '@heartrush/ui/components/alert'
 import { Button } from '@heartrush/ui/components/button'
 import { StepBar } from '~/components/builder/StepBar'
 import { StepDream, type DreamFields } from '~/components/builder/StepDream'
-import { newBuilder, stepProblems, STEPS } from '~/components/builder/use-draft'
+import { newBuilder, stepProblems, STEPS } from '~/components/builder/draft-rules'
 import { NO_CONNECTION_TEXT, refusalReason } from '~/components/sheet/refusal-text'
 import { createDraftFn } from '~/server/characters'
 

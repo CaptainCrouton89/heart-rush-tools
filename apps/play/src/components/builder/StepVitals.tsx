@@ -7,7 +7,8 @@ import { Input } from '@heartrush/ui/components/input'
 import { ToggleGroup, ToggleGroupItem } from '@heartrush/ui/components/toggle-group'
 import { cn } from '@heartrush/ui/lib/utils'
 import { Section } from '~/components/sheet/SheetLayout'
-import { ABILITIES, AGE, Field, labelClass, sketchCharacter, type Age, type UseDraft } from './use-draft'
+import { ABILITIES, AGE, sketchCharacter, type Age } from './draft-rules'
+import { Field, labelClass, type UseDraft } from './use-draft'
 
 /**
  * Step 3 (Your Vitals, Your Age and Experience): the four ability tiles take d6, d6, d4, d4; the age category with its
