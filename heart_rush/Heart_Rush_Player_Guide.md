@@ -81,12 +81,12 @@ Players and enemies act freely in real-time logic.
 *   **The One Action Limit:** You get **one** major Action per round (e.g., Dash, Attack outside engagement, Sidestep, Help).
 *   **Free Abilities:** You can use as many Abilities as you want, provided they don't require an Action or have a cooldown (like "Once per round").
 *   **Movement:**
-    *   **Dash:** Uses your Action (exception: the first Dash of a round is usually free). Moves your speed.
+    *   **Dash:** Moves your speed. Your first Dash each round is free; later Dashes use your Action. Your first object interaction each round is also free.
     *   **Sidestep:** Uses your Action (or 1 Rush Point). Moves 5ft safely without provoking attacks.
 
 ### Phase 2: The Engagement
-When combatants move into melee range or commit to an attack exchange, they enter an **Engagement**.
-1.  **Secretly Choose Stance:** Everyone involved picks Might, Agility, Cunning, or Defensive.
+After everyone has acted in the Action Phase, every conscious combatant joins the **Engagement**, including those attacking at range. Attacking in the Engagement uses your Action; only instant abilities can be used during it.
+1.  **Secretly Choose Stance:** Everyone picks Might, Agility, Cunning, or Defensive.
 2.  **Simultaneous Reveal:** Everyone reveals at once.
 3.  **Resolution:** Stances resolve in a specific order (Rock-Paper-Scissors style).
 
@@ -101,16 +101,16 @@ When combatants move into melee range or commit to an attack exchange, they ente
 
 ### Damage, Wounds, and Death
 *   **Hit Points (HP):** Your physical health.
-*   **Heart Die Mitigation:** When you take damage, you can choose to decrease your Heart Die size (e.g., d8 -> d6) to **halve the damage**.
+*   **Spending Stamina:** Once per round, you can drop your Heart Die one size (e.g., d8 -> d6) for one of three effects: **Endure** (halve incoming damage), **Focus** (after rolling, set one die to its maximum), or **Surge** (gain an extra Action). You cannot do this at d4. A short rest restores your Heart Die.
 *   **Wounds:** If you take **10 or more damage** in a single hit, you take a **Wound**.
     *   Record the specific injury (e.g., "Broken Arm").
     *   **Rank = Damage Taken.**
     *   **Effect:** Your Maximum HP is reduced by the sum of your Wound Ranks. Wounds must be treated with Medicine checks to heal.
-*   **Death:** You die if your HP reaches the **negative** equivalent of your max HP.
+*   **Zero HP:** You may choose to fall unconscious. You die only if your HP reaches the **negative** equivalent of your max HP.
 
 ### Rush Points
-You gain Rush Points for momentum in battle (usually by starting rounds engaged or using talents). Spend them to:
-*   Use **Minor Abilities** (special moves from your Bloodmarks).
+At the start of each round, your Rush Points equal the round number if you took part in the last Engagement (1 in round 1, 2 in round 2, and so on). Unspent Rush Points are lost at the end of each round, and you have none outside combat. Spend them to:
+*   Use **Minor Abilities**: 1 Rush Point for the first use in a fight, 2 for the second, and so on.
 *   **Sidestep** instantly without using an Action.
 *   Make **Opportunity Attacks** without using an Action.
 
@@ -183,7 +183,7 @@ Wealth is tracked in tiers: **Iron < Obol < Lire < Ducat < Crown**.
 Heart Rush is an opinionated game. It doesn't try to do everything; it tries to do specific things—dangerous combat, earned heroism, and tangible magic—extremely well. Understanding *why* the rules exist will help you master them.
 
 ### The Heart Die is a Bet, Not a Battery
-In many games, Hit Points are just a gas tank—you drive until it's empty. In Heart Rush, your **Heart Die** represents your physical and mental limit. When you choose to shrink it to halve damage, you aren't just using a resource; you are making a desperate gamble. You are burning the candle at both ends to survive a lethal blow. The game is designed to make you feel that "terrifying cost." You should feel your character tiring, their options narrowing as the fight drags on.
+In many games, Hit Points are just a gas tank—you drive until it's empty. In Heart Rush, your **Heart Die** represents your physical and mental limit. When you choose to shrink it to halve damage, push a roll to its maximum, or act twice, you aren't just using a resource; you are making a desperate gamble. You are burning the candle at both ends to survive a lethal blow. The game is designed to make you feel that "terrifying cost." You should feel your character tiring, their options narrowing as the fight drags on.
 
 ### Combat is a Psychological Mind Game
 If you can autopilot your turn, something has gone wrong. The **Stance System** exists to break the "I hit him, he hits me" cycle. Because resolution is simultaneous, you must read the GM and the narrative. Is the Orc desperate? He might pick *Might* to end it. Is the assassin cautious? She might pick *Cunning*. Every engagement is a split-second read of your opponent's intent.
@@ -192,7 +192,7 @@ If you can autopilot your turn, something has gone wrong. The **Stance System** 
 Elementalism isn't a list of buttons you press to deal damage. It is a craft. An Earth-attuned mage doesn't "cast Stone Wall"—they physically manipulate the minerals in the ground to rise up. Magic follows rules of logic and physics. It is raw, tangible, and limited by your creativity and the environment, not just by spell slots.
 
 ### The Curve of Heroism
-You do not start as a superhero. At Rank 0, the world is lethal. A single bandit can kill you. Basic survival (food, warmth) is a challenge. This is intentional.
+You do not start as a superhero. At bloodmark 0, the world is lethal. A single bandit can kill you. Basic survival (food, warmth) is a challenge. This is intentional.
 As you earn **Bloodmarks** and XP, the game shifts genres. By Bloodmark 4 or 5, you are no longer worried about starving; you are worried about armies and dragons. You transition from gritty survival to epic fantasy, but because you lived through the mud and blood of the early levels, that power feels **earned**.
 
 ### This Game Has Teeth

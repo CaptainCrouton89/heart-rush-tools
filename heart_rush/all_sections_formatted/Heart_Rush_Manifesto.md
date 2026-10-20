@@ -1,5 +1,11 @@
 # The Heart Rush Design Manifesto
 
+## Your Ambitions Drive the Game
+
+Every character starts with a dream: something difficult, self-chosen, and worthy of a legend. There is no goal in Heart Rush besides the ones the players set. Building a merchant network, forging an alliance, or taking a throne can carry a campaign for sessions without a single fight, and that can be the game at its best. Combat is one powerful tool for getting what you want, not the point of play. Avoiding a fight entirely can be a complete success.
+
+When your preparation or a clever use of your abilities makes a problem easy, it is easy. You earned it. And when the world closes the door on your dream for good, you decide what your character fights for next—or how their story ends.
+
 ## Combat Should Tell a Story, Not Repeat One
 
 Heart Rush was born from a simple frustration: why does round 3 of combat feel exactly like round 1? We believe every moment of battle should force new decisions, create new opportunities, and escalate the stakes. Our stance system ensures you can never autopilot through combat—each engagement is a mind game where predictability means death.
@@ -10,11 +16,11 @@ At the core of every mechanic is your heart die—literally and philosophically.
 
 ## Heroes Are Forged, Not Born
 
-You won't feel heroic at rank 0. You'll feel vulnerable, desperate, and very mortal. That's by design. When you finally reach those paragon levels, when you're deflecting blows that would kill lesser warriors, you'll have _earned_ it through blood, clever tactics, and probably more than a few close calls. Victory tastes sweeter when defeat was always one bad decision away.
+You won't feel heroic at bloodmark 0. You'll feel vulnerable, desperate, and very mortal. That's by design. When you finally reach those paragon levels, when you're deflecting blows that would kill lesser warriors, you'll have _earned_ it through blood, clever tactics, and probably more than a few close calls. Victory tastes sweeter when defeat was always one bad decision away.
 
 ## Cooperation Isn't Optional—It's Essential
 
-Classes in Heart Rush don't just work well together; they're incomplete without each other. A Strongheart without a Cleverheart lacks the tactical edge to maximize their defense. A Battleheart without a Strongheart won't survive long enough to land their devastating strikes. This isn't about party balance—it's about creating moments where your success depends on your allies' choices as much as your own.
+Heart Rush has no classes, but your abilities are built to combine. One character knocks an enemy off-balance so another can land the hit. One holds the line so another can reach the archer. A party of characters who each built only for damage can win, but it will feel the gaps: nobody to cover a retreat, nobody to set up the kill. Coordination is what makes a party more than the sum of its characters. Your success depends on your allies' choices as much as your own.
 
 ## Complexity With Purpose
 
@@ -30,11 +36,11 @@ The aspect system ensures your character's personality directly impacts gameplay
 
 ## Momentum Matters
 
-Rush points reward aggression and participation. Hiding in the back lines doesn't just make you less effective—it literally gives you fewer resources. The warrior who charges into every engagement has more options than the one who hangs back. Combat should feel like a rising tide, not a steady state.
+Rush points grow every round you stay in the fight. In round 1 you have one; by round 4 you have four, fueling abilities you couldn't afford when the fight began. Unspent points vanish at the end of the round, so momentum is something you use, not something you save. Combat should feel like a rising tide, not a steady state.
 
-## Death Is Always on the Table
+## Death Is Rare, Fear Is Constant
 
-Healing is slow. Wounds accumulate. That negative HP buffer isn't generous. We want you to feel the weight of violence, to understand that every fight could be your last if you're careless. This isn't about punishing players—it's about making victory meaningful and defeat consequential.
+Healing is slow. Wounds accumulate. Your heart die shrinks as the fight drags on. Characters rarely die, because you can choose to fall unconscious and you only die when your hit points drop to the negative of your maximum. But death is never off the table. Good choices improve your odds; they never guarantee survival, and sometimes the dice simply go against you. We don't soften that. This isn't about punishing players—it's about making victory meaningful and defeat consequential.
 
 ## Build Whatever You Want
 

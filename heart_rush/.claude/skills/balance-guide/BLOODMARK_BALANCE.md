@@ -4,21 +4,15 @@ Bloodmarks represent a character's evolution from a novice to a legendary warrio
 
 ## Progression Tier
 
-| Bloodmark | Title | Reward |
-| :--- | :--- | :--- |
-| **1** | Emerging | 1 Specialization |
-| **2** | Specialized | 1 Specialization + 1 Signature Ability |
-| **3** | Advanced | 2 Specializations + 3 Signature Abilities (Cumulative total?) *Check rules: usually cumulative adds* |
-| **4** | Minor Hero | 1 Combat Mastery |
-| **5+** | Legend | 1 Paragon Ability per mark |
+Source: `all_sections_formatted/Building_Your_Character.md`, "Bloodmark Progression" and "Starting Bloodmarks".
 
-*Note: The text in `Building_Your_Character.md` implies cumulative gains or a specific set at each level. Standard interpretation: You gain specific slots at each level.*
-
-**Clarification from Rules**:
-*   1st: Gain 1 Specialization.
-*   2nd-3rd: Gain Signature Abilities.
-*   4th: Gain 1 Combat Mastery.
-*   5th+: Gain 1 Paragon Ability.
+| Bloodmark | Title | Gained at this bloodmark | Cumulative total |
+| :--- | :--- | :--- | :--- |
+| **1** | Emerging | 1 Specialization | 1 Specialization |
+| **2** | Specialized | 1 Specialization + 1 Signature Ability | 2 Specializations + 1 Signature Ability |
+| **3** | Advanced | 2 Signature Abilities | 2 Specializations + 3 Signature Abilities |
+| **4** | Minor Hero | 1 Combat Mastery | 2 Specializations + 3 Signature Abilities + 1 Combat Mastery |
+| **5+** | Legend | 1 Paragon Ability per bloodmark | All previous + 1 Paragon Ability per bloodmark beyond 4th |
 
 ## Ability Types
 
@@ -33,7 +27,7 @@ Bloodmarks represent a character's evolution from a novice to a legendary warrio
 *   *Examples*: "Remove conditions", "Add weapon die to defense", "Double damage on max roll".
 
 ### 3. Combat Masteries (Major)
-*   **Cost**: Once per day (Daily).
+*   **Cost**: Major ability (once per long rest).
 *   **Effect**: Ultimate moves. Can turn the tide of a boss fight.
 *   *Examples*: "Halve incoming damage for team", "Free opportunity attacks + sidesteps", "Reroll defense dice from a pool".
 
@@ -44,5 +38,5 @@ Bloodmarks represent a character's evolution from a novice to a legendary warrio
 *   **Balance**: These are meant to be "broken" or end-game power levels.
 
 ## Design Philosophy
-*   **Bloodmarks define "Class"**: Heart Rush doesn't have classes. Bloodmarks + Talents build the archetype.
+*   **No classes**: Heart Rush has no classes. Every character picks bloodmark abilities from one shared pool, and bloodmark abilities plus talents build the character's fighting style.
 *   **Synergy**: Bloodmark abilities often reference specific mechanics (Stances, Rush Points, Wounds).

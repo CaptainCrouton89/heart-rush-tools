@@ -82,7 +82,7 @@ Sprint up to your full movement speed (60 feet base, before equipment). **Your f
 Moving more than 5 feet within an enemy's reach or leaving their threat range without sidestepping invites opportunity attacks—you're prioritizing speed over defense.
 
 **Sidestep**
-Uses your action, or spend a rush point instead (see [Abilities](#abilities) for more on rush points).
+Uses your action, or spend a rush point instead (see [Rush Points](#rush-points)).
 
 Carefully move 5 feet or rise from prone without dropping your guard. This defensive movement never provokes opportunity attacks.
 
@@ -107,7 +107,7 @@ Creativity thrives in combat. Propose other actions to your GM—toppling pillar
 
 Opportunity attacks punish tactical errors with devastating consequences. These free strikes occur outside normal combat flow, allowing you to capitalize on enemy mistakes without risking counter-attack.
 
-**Uses your action**, or spend a rush point (see [Abilities](#abilities) for more on rush points). Opportunity attacks resolve instantly—no one acts before you strike. You're exploiting an immediate opening that even faster opponents cannot interrupt.
+**Uses your action**, or spend a rush point (see [Rush Points](#rush-points)). Opportunity attacks resolve instantly—no one acts before you strike. You're exploiting an immediate opening that even faster opponents cannot interrupt.
 
 You earn opportunity attacks when enemies:
 
@@ -314,6 +314,16 @@ Your archer chose cunning as well, and although she can't attack the orc (who ch
 
 _Engagement ends. New round begins—everyone regains their action and can activate abilities freely once more._
 ]]
+
+## Rush Points
+
+Rush points are the momentum of a fight. The longer you stay in it, the more you have. You spend them on minor abilities (see [Abilities](#abilities)), on sidesteps, and on opportunity attacks. Some abilities let you spend extra rush points for a stronger effect.
+
+**At the start of each round, your rush points equal the round number if you took part in the last engagement.** Every combatant starts round 1 with 1 rush point. In round 2 you have 2, in round 3 you have 3, and so on. Every conscious combatant takes part in the engagement, including those attacking at range and those who do not attack, so you miss out only if you were unconscious or had not yet joined the fight. If you did not take part in the last engagement, you start the round with 0 rush points.
+
+**Unspent rush points are lost at the end of each round.** Use your momentum or lose it.
+
+Outside of combat, you have 0 rush points.
 
 ## Taking Damage
 

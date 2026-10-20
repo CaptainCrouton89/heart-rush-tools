@@ -625,7 +625,7 @@ Each bloodmark you earn unlocks new abilities:
 
 **Combat Masteries** represent once-per-day ultimate techniques—abilities so powerful they can single-handedly turn the tide of battle. Whether you're shrugging off lethal damage, inspiring allies beyond their limits, or unleashing devastating combination attacks, these define your heroic moments. Choose from the Combat Masteries list below.
 
-**Paragon Abilities** transcend normal combat entirely—class-specific techniques that mark you as a legendary warrior. From assassinating enemies in a single strike to commanding the battlefield with tactical supremacy, these abilities separate mythic heroes from everyday adventurers. Select from the Paragon Abilities list below when you achieve your fifth bloodmark.
+**Paragon Abilities** transcend normal combat entirely—techniques that mark you as a legendary warrior. From assassinating enemies in a single strike to commanding the battlefield with tactical supremacy, these abilities separate mythic heroes from everyday adventurers. Select from the Paragon Abilities list below when you achieve your fifth bloodmark.
 
 Each ability you select shapes your combat identity. Will you become an untouchable duelist, a battlefield controller who dominates positioning, or a berserker whose fury grows with each wound? Your bloodmarks tell that story.
 

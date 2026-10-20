@@ -12,7 +12,7 @@ Let's cut to the chase. Here's what you're getting:
 - **You probably won't die—but it'll feel like you will.** The system creates genuine fear without constant character death.
 - **Each round is unique.** The mechanics actively promote varying tactics—no spamming the same combo.
 - **Fast, tactical combat.** Everyone decides simultaneously, so complex fights flow while demanding crucial decisions.
-- **Highly cooperative.** Classes aren't balanced—they're designed to make each other shine through devastating combos.
+- **Highly cooperative.** There are no classes, but abilities are built to combine—one character sets up what another finishes.
 
 **Crunchy Without the Crunch**
 

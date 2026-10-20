@@ -1,6 +1,6 @@
 # Talents
 
-Talents represent specific abilities you have learned, been gifted, or know how to perform through religious or magical ritual. Each talent will fall into one of three types of abilities: passive abilities, heart abilities, or major abilities. As with abilities gained from your class, passive abilities can be used whenever and at no cost, and major abilities can be used once per day. Heart abilities, in contrast, can be used again only after you have taken a short or long rest, or if you take a wound.
+Talents represent specific abilities you have learned, been gifted, or know how to perform through religious or magical ritual. Each talent has a frequency tag—passive, minor, major, weekly, or monthly—that sets how often you can use it, exactly as for any other ability. See Frequency Tags in [Abilities](#abilities).
 
 Additionally, talents may also have the instant or full action tag. If it is instant, then you can use the ability at literally any time, even right before you roll. If it has the full action tag, it requires you to use your action.
 
