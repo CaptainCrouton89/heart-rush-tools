@@ -17,7 +17,7 @@ The monster guidelines further down were written for single monsters. Inside an 
 - In the engagement everyone secretly picks a stance: might, agility, cunning or defensive. Cunning beats agility, agility beats might, might beats cunning. Defensive cannot attack but halves damage after defense. The GM locks all enemy stances before the players choose, which is why a group with varied stance leanings is hard to predict.
 - Attack roll = heart die + ability die + weapon. Damage = attack roll minus defense roll. A monster uses a flat weapon bonus as its A (and a flat D). The weapon's damage type matches a stance: slashing/agility, piercing/cunning, bludgeoning/might. A flat weapon bonus effectively doubles when the monster fights in the matching stance, so choose A knowing that.
 - A single hit of 10 or more damage wounds a character. A monster's w is the damage that wounds it ("/" cannot be wounded).
-- Characters fall unconscious at 0 HP and die only at negative maximum HP. Death is rare but real; fear is constant.
+- At 0 HP a character is in bad condition and may choose to go unconscious; if they do not, they fall unconscious after 10 minutes. An unconscious character is usually not attacked, except by things that eat them. Damage taken at or below 0 HP keeps counting into the negative, and a character dies at negative maximum HP. Death is rare but real; fear is constant.
 - Conditions are leveled (dazed, weakened, off-balanced, poisoned, blinded, slowed, confused, frightened, enraged, burning) or status (restrained, stunned, incapacitated, suffocating, crippled, prone, grappled). Use only these names.
 
 ## Party power

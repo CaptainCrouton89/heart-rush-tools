@@ -8,11 +8,10 @@ import {
   type StoredMessage,
   type Turn,
 } from '~/encounter/schema'
-import { cancelRun, resultOf, RunCanceledError } from './runs'
+import { cancelRunConfirmed, findRunByClaim, resultOf, RunCanceledError } from './runs'
 
-/** `active_run_id` while a message is claimed but its run has not started yet. */
-export const STARTING = 'starting'
-const STARTING_STALE_MS = 60_000
+/** How long a claim may stay without a run id before a page load or Stop treats its request as gone. */
+export const STARTING_STALE_MS = 60_000
 
 type Row = {
   id: string
@@ -21,6 +20,8 @@ type Row = {
   messages: string
   document: string | null
   active_run_id: string | null
+  claim: string | null
+  stop_requested: number
   created_at: string
   updated_at: string
 }
@@ -71,8 +72,8 @@ export async function createEncounter(userId: string): Promise<string> {
   const id = crypto.randomUUID()
   const at = now()
   await env.DB.prepare(
-    `INSERT INTO encounter (id, user_id, title, messages, document, active_run_id, created_at, updated_at)
-     VALUES (?, ?, 'New encounter', '[]', NULL, NULL, ?, ?)`,
+    `INSERT INTO encounter (id, user_id, title, messages, document, created_at, updated_at)
+     VALUES (?, ?, 'New encounter', '[]', NULL, ?, ?)`,
   )
     .bind(id, userId, at, at)
     .run()
@@ -91,42 +92,78 @@ export async function deleteEncounter(userId: string, id: string): Promise<void>
 
 const changed = (result: D1Result) => result.meta.changes > 0
 
-/** Take the right to run this encounter: true when no run was active. Atomic, so two sends cannot both start a run. */
-export async function claim(userId: string, id: string): Promise<boolean> {
-  return changed(
+/**
+ * Take the right to run this encounter: a fresh claim token, or null when a run is already claimed. Atomic, so two sends cannot
+ * both start a run. Every later write for the run carries the token, so a request whose claim was released (Stop, delete, stale
+ * recovery) or replaced can no longer change the encounter.
+ */
+export async function claim(userId: string, id: string): Promise<string | null> {
+  const token = crypto.randomUUID()
+  const won = changed(
     await env.DB.prepare(
-      'UPDATE encounter SET active_run_id = ?, updated_at = ? WHERE id = ? AND user_id = ? AND active_run_id IS NULL',
+      'UPDATE encounter SET claim = ?, active_run_id = NULL, stop_requested = 0, updated_at = ? WHERE id = ? AND user_id = ? AND claim IS NULL',
     )
-      .bind(STARTING, now(), id, userId)
+      .bind(token, now(), id, userId)
       .run(),
   )
+  return won ? token : null
 }
 
-/** Append the GM's message to a claimed encounter. A resend of the unanswered message just before it is not stored twice. */
-export async function appendGmMessage(enc: EncounterRecord, text: string): Promise<StoredMessage[]> {
+/** Append the GM's message to an encounter claimed with `token`; null when the claim is gone. A resend of the unanswered message just before it is not stored twice. */
+export async function appendGmMessage(enc: EncounterRecord, token: string, text: string): Promise<StoredMessage[] | null> {
   const last = enc.messages.at(-1)
   const messages: StoredMessage[] =
     last?.role === 'gm' && last.text === text ? enc.messages : [...enc.messages, { role: 'gm', text, at: now() }]
   const title = enc.messages.length === 0 ? text.replace(/\s+/g, ' ').slice(0, 60) : enc.title
-  await env.DB.prepare('UPDATE encounter SET messages = ?, title = ?, updated_at = ? WHERE id = ? AND user_id = ?')
-    .bind(JSON.stringify(messages), title, now(), enc.id, enc.user_id)
-    .run()
-  return messages
+  const won = changed(
+    await env.DB.prepare(
+      'UPDATE encounter SET messages = ?, title = ?, updated_at = ? WHERE id = ? AND user_id = ? AND claim = ?',
+    )
+      .bind(JSON.stringify(messages), title, now(), enc.id, enc.user_id, token)
+      .run(),
+  )
+  return won ? messages : null
 }
 
-/** Record the started run's id on a claimed encounter; false when the claim was released meanwhile (Stop, delete). */
-export async function recordRun(userId: string, id: string, runId: string): Promise<boolean> {
+/**
+ * Record the started run's id on the encounter claimed with `token`. Null when the claim is gone (delete, stale recovery);
+ * otherwise whether a Stop arrived while the run was starting. Succeeds when recovery already recorded this same run.
+ */
+export async function recordRun(userId: string, id: string, token: string, runId: string): Promise<{ stopRequested: boolean } | null> {
+  const row = await env.DB.prepare(
+    `UPDATE encounter SET active_run_id = ? WHERE id = ? AND user_id = ? AND claim = ? AND (active_run_id IS NULL OR active_run_id = ?)
+     RETURNING stop_requested`,
+  )
+    .bind(runId, id, userId, token, runId)
+    .first<{ stop_requested: number }>()
+  return row && { stopRequested: row.stop_requested === 1 }
+}
+
+/** Ask whoever records the run id of the encounter claimed with `token` to cancel it; false when the claim is gone. */
+export async function requestStop(userId: string, id: string, token: string): Promise<boolean> {
   return changed(
-    await env.DB.prepare('UPDATE encounter SET active_run_id = ? WHERE id = ? AND user_id = ? AND active_run_id = ?')
-      .bind(runId, id, userId, STARTING)
+    await env.DB.prepare('UPDATE encounter SET stop_requested = 1 WHERE id = ? AND user_id = ? AND claim = ? AND active_run_id IS NULL')
+      .bind(id, userId, token)
       .run(),
   )
 }
 
-/** Release the run on this encounter if it is still `runId`; the messages stay. */
-export async function release(userId: string, id: string, runId: string): Promise<void> {
-  await env.DB.prepare('UPDATE encounter SET active_run_id = NULL, updated_at = ? WHERE id = ? AND user_id = ? AND active_run_id = ?')
-    .bind(now(), id, userId, runId)
+/**
+ * Cancel the run held under `token` (found by its claim when its id was never recorded), then release the claim. Throws, and
+ * keeps the claim, when the cancellation cannot be confirmed, so the encounter does not read idle while a run is still going.
+ */
+export async function cancelAndRelease(runtime: ConnectedCrouter, userId: string, id: string, token: string, runId: string | null) {
+  const target = runId ?? (await findRunByClaim(runtime, token))?.run_id
+  if (target) await cancelRunConfirmed(runtime, target)
+  await release(userId, id, token)
+}
+
+/** Release the claim `token` and its run id; the messages stay. Does nothing when the claim is already gone or replaced. */
+export async function release(userId: string, id: string, token: string): Promise<void> {
+  await env.DB.prepare(
+    'UPDATE encounter SET claim = NULL, active_run_id = NULL, updated_at = ? WHERE id = ? AND user_id = ? AND claim = ?',
+  )
+    .bind(now(), id, userId, token)
     .run()
 }
 
@@ -145,38 +182,51 @@ const storedAgentMessage = (turn: Turn): Extract<StoredMessage, { role: 'agent' 
 export type Finished = { message: Extract<StoredMessage, { role: 'agent' }>; document: Encounter | null }
 
 /**
- * Store a settled turn and release the run, once. The waiting request and a reloading page's `GET` can both reach a settled
- * run; whichever updates the row first wins, and the other returns what was stored.
+ * Store a settled turn and release the claim, once. The waiting request and a reloading page's `GET` can both reach a settled
+ * run; whichever updates the row first wins, and the other returns what was stored. Null when the claim was released without
+ * this turn being stored (Stop, delete).
  */
-export async function finishRun(enc: EncounterRecord, runId: string, turn: Turn): Promise<Finished> {
+export async function finishRun(enc: EncounterRecord, token: string, turn: Turn): Promise<Finished | null> {
   const message = storedAgentMessage(turn)
   const document = turn.step.kind === 'encounter' ? turn.step.encounter : enc.document
   const title = turn.step.kind === 'encounter' ? turn.step.encounter.title : null // null keeps the title set from the first message
   const won = changed(
     await env.DB.prepare(
-      `UPDATE encounter SET messages = ?, document = ?, title = COALESCE(?, title), active_run_id = NULL, updated_at = ?
-       WHERE id = ? AND user_id = ? AND active_run_id = ?`,
+      `UPDATE encounter SET messages = ?, document = ?, title = COALESCE(?, title), claim = NULL, active_run_id = NULL, updated_at = ?
+       WHERE id = ? AND user_id = ? AND claim = ?`,
     )
-      .bind(JSON.stringify([...enc.messages, message]), document && JSON.stringify(document), title, now(), enc.id, enc.user_id, runId)
+      .bind(JSON.stringify([...enc.messages, message]), document && JSON.stringify(document), title, now(), enc.id, enc.user_id, token)
       .run(),
   )
   if (won) return { message, document: turn.step.kind === 'encounter' ? document : null }
   const stored = await loadEncounter(enc.user_id, enc.id)
   const last = stored?.messages.at(-1)
-  if (last?.role !== 'agent') throw new Error('The run was released before its result was stored')
-  return { message: last, document: turn.step.kind === 'encounter' ? stored!.document : null }
+  // Only the reply to this request's own message counts as "the other side stored it".
+  if (!stored || last?.role !== 'agent' || stored.messages.length !== enc.messages.length + 1) return null
+  return { message: last, document: turn.step.kind === 'encounter' ? stored.document : null }
 }
 
 /**
  * Bring an encounter's run state up to date for a page load. A settled result is stored; a failed, cancelled or deleted run
- * is released; a run still going is reported as running. Returns the refreshed encounter.
+ * is released; a claim whose request died before recording a run is recovered (the run is found by its claim and adopted, or the
+ * claim released); a run still going is reported as running. Returns the refreshed encounter. A run that cannot be confirmed
+ * cancelled keeps the claim, so this throws and the encounter stays running.
  */
 export async function reconcile(runtime: () => Promise<ConnectedCrouter>, enc: EncounterRecord): Promise<EncounterRecord> {
+  const token = enc.claim
+  if (!token) return enc
+  const reload = async () => (await loadEncounter(enc.user_id, enc.id)) ?? enc
   const runId = enc.active_run_id
-  if (!runId) return enc
-  if (runId === STARTING) {
-    if (Date.now() - Date.parse(enc.updated_at) > STARTING_STALE_MS) await release(enc.user_id, enc.id, STARTING)
-    return (await loadEncounter(enc.user_id, enc.id)) ?? enc
+  if (runId && enc.stop_requested) {
+    await cancelAndRelease(await runtime(), enc.user_id, enc.id, token, runId)
+    return reload()
+  }
+  if (!runId) {
+    if (Date.now() - Date.parse(enc.updated_at) <= STARTING_STALE_MS) return enc
+    const run = await findRunByClaim(await runtime(), token)
+    if (!run) await release(enc.user_id, enc.id, token)
+    else if (await recordRun(enc.user_id, enc.id, token, run.run_id)) return reconcile(runtime, await reload())
+    return reload()
   }
   const rt = await runtime()
   let run
@@ -184,16 +234,16 @@ export async function reconcile(runtime: () => Promise<ConnectedCrouter>, enc: E
     run = await rt.runs.get(runId)
   } catch (error) {
     if (!(error instanceof NotFoundError)) throw error
-    await release(enc.user_id, enc.id, runId)
-    return (await loadEncounter(enc.user_id, enc.id)) ?? enc
+    await release(enc.user_id, enc.id, token)
+    return reload()
   }
   if (run.status === 'running') return enc
   try {
-    await finishRun(enc, runId, resultOf(run, turnSchema))
+    await finishRun(enc, token, resultOf(run, turnSchema))
   } catch (error) {
     if (!(error instanceof RunCanceledError)) console.error('encounter run ended without a usable result', runId, error)
-    await cancelRun(rt, runId) // a run at rest (idle, waiting on a question) would otherwise hold the encounter forever
-    await release(enc.user_id, enc.id, runId)
+    await cancelRunConfirmed(rt, runId) // a run at rest (idle, waiting on a question) would otherwise hold the encounter forever
+    await release(enc.user_id, enc.id, token)
   }
-  return (await loadEncounter(enc.user_id, enc.id)) ?? enc
+  return reload()
 }
