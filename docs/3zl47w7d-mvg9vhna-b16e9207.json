@@ -19,6 +19,32 @@
       "parents": [],
       "rationale": null,
       "rev_id": "7c5d5b80-b37e-45c7-8022-7184cc343365"
+    },
+    {
+      "author": "3zl47w7d-mvg999rn-4f50bb34",
+      "body": "# Heart Rush rules authoring\n\nHeart Rush is not D&D. Use the current rulebook for mechanics rather than importing D&D action economy, levels, or dice assumptions.\n\n## System reference\n\n- Checks use Heart Die + Ability Die + modifiers against a Challenge Number (CN).\n- The four abilities are Might, Agility, Cunning, and Presence, using d4 through d12.\n- The Heart Die represents stamina and willpower; once per round, shrinking it buys Endure (halve damage), Focus (max one die) or Surge (extra action).\n- Combat is simultaneous, with Might, Agility, Cunning, and Defensive stances and engagement rules.\n- Advancement spends XP directly on talents, stats, and HP rather than traditional levels. Bloodmarks follow legendary feats.\n- Elemental attunement has nine elements: Fire, Water, Air, Earth, Light, Dark, Force, Void, and Time.\n\nFor design intent read [[heart-rush/vision]]; for where each rule lives and the facts agents most often get wrong, read [[heart-rush/rules-map]]. Before changing mechanical power, read [[heart-rush/balance]], which holds the standards Silas has confirmed. The agent balance guide in `heart_rush/.claude/skills/balance-guide/` (`SKILL.md` plus `TALENT_BALANCE.md`, `RACE_BALANCE.md`, `BLOODMARK_BALANCE.md`, `PROGRESSION_BALANCE.md`) has more examples, but anything there beyond the confirmed standards is advice.\n\n## Source and format\n\nEdit one race per file in `heart_rush/races/`, one talent or spell per file under `heart_rush/talents/`, and ordinary rule sections in `heart_rush/all_sections_formatted/`. The combined `Kin_&_Culture.md` and `Talents.md` are regenerated; edit their constituent sources instead. GM-only material belongs in `heart_rush/gm_guide/`; archive content is not current rules.\n\nUse H2 for major sections and H3/H4 for nested material. Headings become navigation, so keep sections self-contained and link using descriptive text that matches the referenced heading. Keep all costs, ranges, durations, frequencies, Challenge Numbers, and exceptions explicit.\n\n## Race entries\n\nUse an H2 race name and cultural description, then H3 Vitals with Size, Height, and Weight. Put a base race ability after Vitals, before H3 culture/subrace sections. Under a culture use H4 Aspects with bullets and H4 named abilities with bold type designations such as `**Passive ability.**`.\n\nAspects describe personality and culture, not mechanical bonuses. Race identity is expressed through abilities, adaptations, free talents, and XP cost changes rather than generic stat increases. Give numerical effects and frequencies explicitly; balance the base race and its cultures together. The race balance reference carries the detailed targets, including the roughly talent-sized combat benefit benchmark.\n\nName files after the race. Race images live in `heart_rush/races/images/` and use relative image links; compilation copies race assets into the public tree.\n\n## Talent and spell entries\n\nUse one H2 name followed by an italic metadata line, rules text, and a `**Destiny Level:**` block where applicable. Preserve the existing frequency/timing/prerequisite tags rather than reducing every ability to a generic action. Combat talents belong in `combat_talents/`, utility abilities in `noncombat_talents/`, and attunement spells in `spells/`.\n\nA spell metadata line follows `_Major ability. Cognitive talent. Elemental attunement: Fire._` with its actual type and element substituted. Spells are Cognitive rather than Martial talents and specify one of the nine elements. Include their Destiny Level mechanics. Describe resource costs, range, area, duration, roll requirements, and interactions with stances or attunement precisely.\n\nCombat talent language should use the existing terms Heart Die shrink, Rush Points, Challenge Number, simultaneous action, and engagement. Destiny Level upgrades expand potency, frequency, scope, or options while preserving the ability's theme. Use underscores for spaces in new talent filenames and check the compiled heading and metadata after editing.\n",
+      "body_hash": "edb2382fc275d76cadfac1261b13e16c5dccb98e0f1c46ec1a2b0257b2af1c80",
+      "created_at": "2026-10-20T07:11:57.134Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvgchqwn-70660723",
+          "written_as": "heart-rush/balance"
+        },
+        {
+          "dst": "3zl47w7d-mvgchr1i-b6470c03",
+          "written_as": "heart-rush/rules-map"
+        },
+        {
+          "dst": "3zl47w7d-mvgchqrs-a5425ac8",
+          "written_as": "heart-rush/vision"
+        }
+      ],
+      "number": 2,
+      "parents": [
+        "7c5d5b80-b37e-45c7-8022-7184cc343365"
+      ],
+      "rationale": "Point design intent and balance standards at the new heart-rush profile memories; the Player Guide is a summary, not the design philosophy.",
+      "rev_id": "83810529-9aa5-4280-813f-1ff7015e771a"
     }
   ],
   "rules": [
