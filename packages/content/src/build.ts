@@ -1,11 +1,12 @@
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync, existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import * as pagefind from 'pagefind'
+import { buildAgentFiles } from './agent.ts'
 import { collect } from './collect.ts'
 import { buildCatalogue, buildGlossary, buildPlayConditions, buildPlayRaces, buildPlayTalents, buildPreview, buildSearchRecords, filterKindOf } from './emit.ts'
 import { applyTerms, buildTermTargets, resolveLinks, targetIdOf } from './link.ts'
-import { CHARACTER_SHEET_URL, MAP_URL, RACE_IMAGES_DIR } from './sources.ts'
-import { REPO, sha } from './util.ts'
+import { CHARACTER_SHEET_URL, MAP_URL, RACE_IMAGES_DIR, SHEET_URL_PREFIX } from './sources.ts'
+import { REPO, readText, sha } from './util.ts'
 import { SCHEMA_VERSION, type Diagnostic, type Manifest, type PageFile, type SearchRecord } from './types.ts'
 
 const PKG = join(REPO, 'packages/content')
@@ -134,6 +135,15 @@ for (const file of ['pagefind.js', 'pagefind-worker.js']) {
   writeFileSync(path, src.replace(chunkCatch, () => `${chunkCatch}throw e;`))
 }
 await pagefind.close()
+
+// ---- Agent Markdown + search artifacts: /md on the rules Worker ----------------------------------------------------
+const agent = buildAgentFiles(drafts, records, contentVersion, readText, manifest.characterSheetUrl, SHEET_URL_PREFIX)
+w('agent/index.json', agent.index)
+for (const f of agent.files) {
+  const p = join(DIST, f.rel)
+  mkdirSync(join(p, '..'), { recursive: true })
+  writeFileSync(p, f.text)
+}
 writeFileSync(join(PKG, '.search-records-count'), String(records.length))
 
 // ---- Diagnostics + stats ------------------------------------------------------------------------------------------------

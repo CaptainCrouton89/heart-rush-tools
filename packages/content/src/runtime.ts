@@ -1,6 +1,7 @@
 // Runtime read helpers. No filesystem: the manifest is imported into the Worker bundle, everything else is
 // fetched from `/_content/<contentVersion>/…` through an assets-style fetcher (env.ASSETS.fetch on the server,
 // window.fetch in the browser).
+import { agentSourceRel, type AgentIndex } from './agent'
 import type { CatalogueFile, CatalogueKind, GlossaryFile, Manifest, NavNode, PageFile, PreviewFile } from './types.ts'
 
 export type Fetcher = (input: string) => Promise<Response>
@@ -19,6 +20,19 @@ async function getJson<T>(fetcher: Fetcher, manifest: Manifest, rel: string): Pr
     throw new Error(`content version mismatch on ${rel}: ${data.contentVersion} != ${manifest.contentVersion}`)
   }
   return data
+}
+
+export * from './agent'
+
+/** The agent search index, or null when the build did not publish one. */
+export const loadAgentIndex = (manifest: Manifest, fetcher: Fetcher) => getJson<AgentIndex>(fetcher, manifest, 'agent/index.json')
+/** One source part of a served page (line numbers match the file on disk), or null when absent. */
+export async function loadAgentSource(manifest: Manifest, fetcher: Fetcher, pageId: string, part: number): Promise<string | null> {
+  const rel = agentSourceRel(pageId, part)
+  const res = await fetcher(contentUrl(manifest, rel))
+  if (res.status === 404) return null
+  if (!res.ok) throw new Error(`content fetch ${rel} failed: ${res.status}`)
+  return res.text()
 }
 
 /** Pathname → page, or null when the route does not exist (the loader turns that into a 404). */
@@ -43,6 +57,8 @@ export function listPages(manifest: Manifest, audience: Audience, kind?: string)
 
 /** Typed accessors bound to one manifest and fetcher. `getEntry`/`getCatalogue` use catalogue kinds. */
 export function createContent(manifest: Manifest, fetcher: Fetcher) {
+  // The parsed agent index is 1.4 MB: keep it for the life of the isolate. A failed load is not kept, so the next request retries.
+  let agentIndex: Promise<AgentIndex | null> | null = null
   const entryPath = (kind: CatalogueKind, slug: string) => `/player/${kind}/${slug}`
   return {
     manifest,
@@ -58,6 +74,12 @@ export function createContent(manifest: Manifest, fetcher: Fetcher) {
     getPage: (id: string) => loadPage(manifest, fetcher, id),
     getPreview: (targetId: string) => loadPreview(manifest, fetcher, targetId),
     getGlossary: () => loadGlossary(manifest, fetcher),
+    getAgentIndex: () => {
+      const p = (agentIndex ??= loadAgentIndex(manifest, fetcher))
+      p.then((v) => { if (!v) agentIndex = null }, () => { agentIndex = null })
+      return p
+    },
+    getAgentSource: (pageId: string, part: number) => loadAgentSource(manifest, fetcher, pageId, part),
     /** Search is the Pagefind bundle at this URL, loaded in the browser on demand. */
     searchBundleUrl: contentUrl(manifest, 'search/'),
   }
