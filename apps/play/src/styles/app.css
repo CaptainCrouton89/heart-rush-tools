@@ -150,6 +150,58 @@
     transform-box: fill-box;
     filter: url(#inkedge);
   }
+  /* Inked progress marks: a pencil diamond outline that turns ember and fills when done; the next one is dashed. */
+  .ink-mark {
+    width: 15px;
+    height: 15px;
+    flex: none;
+  }
+  .ink-mark svg {
+    display: block;
+    overflow: visible;
+  }
+  .ink-mark .ol {
+    fill: none;
+    stroke: var(--muted-foreground);
+    stroke-width: 1.5;
+    filter: url(#inkedge);
+  }
+  .ink-mark .fl {
+    fill: var(--primary);
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: scale(0);
+  }
+  .ink-mark.on .ol {
+    stroke: var(--primary);
+  }
+  .ink-mark.on .fl {
+    transform: scale(1);
+  }
+  .ink-mark.next .ol {
+    stroke-dasharray: 2.2 2;
+  }
+  /* Tally marks in fives: four upright strokes and a fifth across them. */
+  .tally {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+    max-width: 150px;
+  }
+  .tally svg {
+    display: block;
+    overflow: visible;
+  }
+  .tally path {
+    fill: none;
+    stroke: var(--foreground);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-dasharray: 100;
+    filter: url(#inkedge);
+  }
   /* An inline strip or row: grows from zero height when it opens (see the motion block). */
   .reveal {
     display: grid;
