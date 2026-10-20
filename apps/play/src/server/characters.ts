@@ -89,6 +89,10 @@ export type CharacterSummary = {
   updatedAt: string
   /** The race as written on the finished character; null for a draft (its race is `builder.raceId`). */
   raceTitle: string | null
+  /** Current HP and effective max HP (derived on read); null for a draft. */
+  hp: { current: number; effectiveMax: number } | null
+  /** The campaign's name; null when the character is in no campaign. */
+  campaignName: string | null
 }
 
 export type EventSummary = {
@@ -262,17 +266,23 @@ function committedDoc(row: Row, role: CharacterRole, state: StoredState, name: s
 export async function listCharacters(db: D1Database, userId: string): Promise<ListCharactersResult> {
   const { results } = await db
     .prepare(
-      `SELECT id, name, campaign_id, revision, updated_at,
-              json_extract(state, '$.draft') AS draft, json_extract(state, '$.kin.titleSnapshot') AS race_title
-         FROM character WHERE owner_user_id = ? ORDER BY updated_at DESC, id DESC`,
+      `SELECT ch.id, ch.name, ch.campaign_id, ch.revision, ch.updated_at, ch.state, c.name AS campaign_name
+         FROM character ch LEFT JOIN campaign c ON c.id = ch.campaign_id
+        WHERE ch.owner_user_id = ? ORDER BY ch.updated_at DESC, ch.id DESC`,
     )
     .bind(userId)
-    .all<{ id: string; name: string; campaign_id: string | null; revision: number; updated_at: string; draft: number; race_title: string | null }>()
+    .all<{ id: string; name: string; campaign_id: string | null; revision: number; updated_at: string; state: string; campaign_name: string | null }>()
   return {
     ok: true,
-    characters: results.map((r) => ({
-      id: r.id, name: r.name, draft: r.draft === 1, campaignId: r.campaign_id, revision: r.revision, updatedAt: r.updated_at, raceTitle: r.race_title,
-    })),
+    characters: results.map((r) => {
+      const state = upgradeCharacter(JSON.parse(r.state))
+      return {
+        id: r.id, name: r.name, draft: state.draft, campaignId: r.campaign_id, revision: r.revision, updatedAt: r.updated_at,
+        raceTitle: state.draft ? null : state.kin.titleSnapshot,
+        hp: state.draft ? null : { current: state.hp.current, effectiveMax: effectiveMaxHp(state) },
+        campaignName: r.campaign_name,
+      }
+    }),
   }
 }
 

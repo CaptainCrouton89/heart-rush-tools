@@ -1,14 +1,24 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, redirect } from '@tanstack/react-router'
 import { Button } from '@heartrush/ui/components/button'
 
-export const Route = createFileRoute('/')({ component: Home })
+export const Route = createFileRoute('/')({
+  beforeLoad: ({ context }) => {
+    if (context.session) throw redirect({ to: '/characters' })
+  },
+  component: Landing,
+})
 
-function Home() {
+function Landing() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-xl flex-col items-start justify-center gap-4 p-8">
-      <h1 className="text-4xl font-semibold tracking-tight">Heart Rush Play</h1>
-      <p className="text-muted-foreground">Character sheets and parties. Coming soon.</p>
-      <Button>Placeholder</Button>
-    </main>
+    <div className="mx-auto flex w-full max-w-xl flex-col items-start gap-6 px-5 pt-16 md:pt-24">
+      <h1 className="font-serif text-h1-sm font-semibold md:text-h1">Heart Rush Play</h1>
+      <p className="font-serif text-body-sm md:text-body">
+        Keep your Heart Rush characters here: build one step by step, track HP, wounds and rush points at the table, spend XP as you
+        advance, and share sheets with your campaign&rsquo;s GM.
+      </p>
+      <Button asChild size="lg">
+        <a href={`/auth/login?returnTo=${encodeURIComponent('/characters')}`}>Sign in with Northlight</a>
+      </Button>
+    </div>
   )
 }
