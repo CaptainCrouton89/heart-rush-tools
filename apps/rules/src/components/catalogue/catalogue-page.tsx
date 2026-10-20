@@ -77,6 +77,13 @@ export function CataloguePage({ config, page, catalogue, nav, search }: Catalogu
     void navigate({ to: config.path, search: target as never, resetScroll: false })
   }
 
+  /** Text query and facet selection together: "Clear" in every form returns all records. */
+  const applyFilters = (selection: Selection, nextQuery: string) => {
+    setQuery(nextQuery)
+    go({ query: nextQuery, selection })
+  }
+  const clearAll = () => applyFilters({}, '')
+
   useEffect(() => {
     if (query === lastPushed.current) return
     const timer = setTimeout(() => go({ query }), 250)
@@ -106,7 +113,7 @@ export function CataloguePage({ config, page, catalogue, nav, search }: Catalogu
       <p className="mt-3 font-serif text-body-sm text-foreground md:text-body">{config.lede}</p>
       {hasAbout && (
         <p className="print-hidden mt-2 text-ui">
-          <a href={`#${ABOUT_ID}`} className="inline-flex min-h-11 items-center text-primary underline underline-offset-4 hover:decoration-2 md:min-h-0">
+          <a href={`#${ABOUT_ID}`} className="inline-flex min-h-11 items-center text-primary underline underline-offset-4 hover:decoration-2 lg:min-h-0">
             {config.aboutHeading} <span aria-hidden="true">↓</span>
           </a>
         </p>
@@ -122,22 +129,22 @@ export function CataloguePage({ config, page, catalogue, nav, search }: Catalogu
             onChange={(e) => setQuery(e.target.value)}
             placeholder={`${config.searchLabel}…`}
             autoComplete="off"
-            className="h-11 md:h-10"
+            className="h-11 lg:h-10"
           />
           <div className="hidden flex-wrap items-center gap-2 md:flex">
             {facets.map((facet) => (
               <FacetPopover key={facet.key} facet={facet} picked={state.selection[facet.key] ?? []} onToggle={(v) => go({ selection: toggle(state.selection, facet.key, v) })} />
             ))}
             {selected > 0 && (
-              <Button type="button" variant="ghost" size="sm" onClick={() => go({ selection: {} })}>
+              <Button type="button" variant="ghost" size="sm" className="max-lg:h-11" onClick={clearAll}>
                 Clear filters
               </Button>
             )}
           </div>
           <div className="flex flex-wrap items-center gap-2 md:hidden">
-            <FilterSheet facetsFor={(sel) => compute(items, catalogue, config, query, sel, state.sort)} selection={state.selection} noun={config.noun} onApply={(selection) => go({ selection })} />
+            <FilterSheet facetsFor={(sel, q) => compute(items, catalogue, config, q, sel, state.sort)} selection={state.selection} query={query} noun={config.noun} onApply={applyFilters} />
             {selected > 0 && (
-              <Button type="button" variant="ghost" className="h-11" onClick={() => go({ selection: {} })}>
+              <Button type="button" variant="ghost" className="h-11" onClick={clearAll}>
                 Clear filters
               </Button>
             )}
@@ -165,7 +172,7 @@ export function CataloguePage({ config, page, catalogue, nav, search }: Catalogu
             id="catalogue-sort"
             value={state.sort}
             onChange={(e) => go({ sort: e.target.value as Sort })}
-            className="h-11 rounded-md border border-input bg-surface px-2 font-sans text-base text-foreground md:h-10 md:text-ui"
+            className="h-11 rounded-md border border-input bg-surface px-2 font-sans text-base text-foreground lg:h-10 md:text-ui"
           >
             {SORTS.map((s) => <option key={s.value} value={s.value}>{s.label}</option>)}
           </select>
@@ -176,7 +183,7 @@ export function CataloguePage({ config, page, catalogue, nav, search }: Catalogu
         <div className="py-8 text-ui text-foreground">
           <p>No {config.noun} match{query.trim() ? <> “{query.trim()}”</> : null}{selected > 0 ? ' with these filters' : ''}.</p>
           {(selected > 0 || query) && (
-            <Button type="button" variant="outline" className="mt-3 h-11 md:h-10" onClick={() => { setQuery(''); go({ query: '', selection: {} }) }}>
+            <Button type="button" variant="outline" className="mt-3 h-11 lg:h-10" onClick={clearAll}>
               Clear search and filters
             </Button>
           )}
@@ -262,7 +269,7 @@ function ResultTable({ config, entries }: { config: CatalogueConfig; entries: Ca
         {entries.map((entry) => (
           <TableRow key={entry.id}>
             <TableCell className="min-w-36">
-              <EntryLink config={config} entry={entry} />
+              <EntryLink config={config} entry={entry} className="max-lg:inline-flex max-lg:min-h-11 max-lg:min-w-11 max-lg:items-center" />
             </TableCell>
             {rowMeta(config, entry).map((m) => (
               <TableCell key={m.header} className={cn(!m.value && 'text-muted-foreground')}>
@@ -336,7 +343,7 @@ function FacetPopover({ facet, picked, onToggle }: { facet: FacetView; picked: s
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button type="button" variant="outline" size="sm" className={cn(picked.length > 0 && 'border-primary text-accent-foreground bg-accent')}>
+        <Button type="button" variant="outline" size="sm" className={cn('max-lg:h-11', picked.length > 0 && 'border-primary text-accent-foreground bg-accent')}>
           {facet.label}
           {picked.length > 0 && <span className="tabular-nums">({picked.length}<span className="sr-only"> selected</span>)</span>}
           <span aria-hidden="true">▾</span>
@@ -351,25 +358,32 @@ function FacetPopover({ facet, picked, onToggle }: { facet: FacetView; picked: s
 
 /**
  * Below 768px: a Filters sheet. Changes stay in the sheet until Apply; Cancel, Close or a tap outside discards them.
+ * Clear empties the selection and the text query, matching the page's Clear filters; Apply then shows all records.
  * The button's number is how many values are selected, not an entry count.
  */
 function FilterSheet({
   facetsFor,
   selection,
+  query,
   noun,
   onApply,
 }: {
-  facetsFor: (selection: Selection) => { results: CatalogueEntry[]; facets: FacetView[] }
+  facetsFor: (selection: Selection, query: string) => { results: CatalogueEntry[]; facets: FacetView[] }
   selection: Selection
+  query: string
   noun: string
-  onApply: (selection: Selection) => void
+  onApply: (selection: Selection, query: string) => void
 }) {
   const [open, setOpen] = useState(false)
   const [draft, setDraft] = useState<Selection>(selection)
-  const view = useMemo(() => facetsFor(draft), [facetsFor, draft])
+  const [draftQuery, setDraftQuery] = useState(query)
+  const view = useMemo(() => facetsFor(draft, draftQuery), [facetsFor, draft, draftQuery])
   const count = selectedCount(selection)
   const openSheet = (next: boolean) => {
-    if (next) setDraft(selection)
+    if (next) {
+      setDraft(selection)
+      setDraftQuery(query)
+    }
     setOpen(next)
   }
   return (
@@ -390,13 +404,13 @@ function FilterSheet({
           ))}
         </div>
         <SheetFooter className="flex-wrap">
-          <Button type="button" variant="ghost" className="h-11" onClick={() => setDraft({})} disabled={selectedCount(draft) === 0}>
+          <Button type="button" variant="ghost" className="h-11" onClick={() => { setDraft({}); setDraftQuery('') }} disabled={selectedCount(draft) === 0 && !draftQuery}>
             Clear
           </Button>
           <Button type="button" variant="outline" className="ml-auto h-11" onClick={() => setOpen(false)}>
             Cancel
           </Button>
-          <Button type="button" className="h-11" onClick={() => { onApply(draft); setOpen(false) }}>
+          <Button type="button" className="h-11" onClick={() => { onApply(draft, draftQuery); setOpen(false) }}>
             Apply
           </Button>
         </SheetFooter>

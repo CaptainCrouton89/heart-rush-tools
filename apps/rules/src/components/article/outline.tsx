@@ -7,7 +7,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import type { Heading } from '@heartrush/content/types'
-import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@heartrush/ui/components/sheet'
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@heartrush/ui/components/sheet'
 import { cn } from '@heartrush/ui/lib/utils'
 import { focusHeading, hasOutline, outlineEntries, useActiveHeading, useSectionOf } from '~/lib/outline'
 import { ChevronDownIcon } from './icons'
@@ -80,6 +80,8 @@ export function MobileOutline({ headings }: { headings: Heading[] }) {
   const [sheetOpen, setSheetOpen] = useState(false)
   const [pastDisclosure, setPastDisclosure] = useState(false)
   const disclosureRef = useRef<HTMLDivElement>(null)
+  // Set when an entry was chosen: focus then goes to that heading, not back to the bar's trigger.
+  const chose = useRef(false)
 
   useEffect(() => {
     const el = disclosureRef.current
@@ -107,10 +109,8 @@ export function MobileOutline({ headings }: { headings: Heading[] }) {
         aria-hidden={!pastDisclosure}
       >
         <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
-          <button
-            type="button"
+          <SheetTrigger
             tabIndex={pastDisclosure ? 0 : -1}
-            onClick={() => setSheetOpen(true)}
             className="flex h-11 w-full items-center gap-2 border-b border-border bg-surface px-5 text-left text-ui max-[359px]:px-4 md:px-8 lg:px-4"
           >
             <span className="shrink-0 font-medium text-foreground">On this page</span>
@@ -121,14 +121,31 @@ export function MobileOutline({ headings }: { headings: Heading[] }) {
               </>
             )}
             <ChevronDownIcon className="ml-auto" />
-          </button>
+          </SheetTrigger>
           {/* Only the list scrolls, so the header and its Close button stay in view at any scroll position. */}
-          <SheetContent side="bottom" aria-describedby={undefined} className="overflow-hidden">
+          <SheetContent
+            side="bottom"
+            aria-describedby={undefined}
+            className="overflow-hidden"
+            onCloseAutoFocus={(event) => {
+              if (!chose.current) return
+              chose.current = false
+              event.preventDefault()
+            }}
+          >
             <SheetHeader>
               <SheetTitle>On this page</SheetTitle>
             </SheetHeader>
             <nav aria-label="On this page" className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-2 py-2">
-              <OutlineList headings={headings} active={active} touch onSelect={() => setSheetOpen(false)} />
+              <OutlineList
+                headings={headings}
+                active={active}
+                touch
+                onSelect={() => {
+                  chose.current = true
+                  setSheetOpen(false)
+                }}
+              />
             </nav>
           </SheetContent>
         </Sheet>

@@ -16,7 +16,7 @@ export const Route = createFileRoute('/')({
   component: Home,
 })
 
-const rowLink = 'text-control font-medium text-primary underline underline-offset-4 hover:decoration-2'
+const rowLink = 'max-lg:inline-flex max-lg:min-h-11 max-lg:min-w-11 max-lg:items-center text-control font-medium text-primary underline underline-offset-4 hover:decoration-2'
 
 function Home() {
   const { intro, mapUrl } = Route.useLoaderData()

@@ -2,12 +2,13 @@
 // Copy writes the canonical URL and announces "Link copied". When the clipboard is unavailable it shows the URL in a
 // selected read-only field for manual copying. Print opens the browser's print dialog; print CSS removes the shell
 // and controls, so the browser's PDF destination is the PDF feature.
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Button } from '@heartrush/ui/components/button'
 import { canonicalUrl, copyText } from './canonical'
 import { LinkIcon, PrinterIcon } from './icons'
 
-export function ArticleActions({ path }: { path: string }) {
+/** `children`: extra page-specific actions placed after Print in the same row. */
+export function ArticleActions({ path, children }: { path: string; children?: ReactNode }) {
   const url = canonicalUrl(path)
   const [state, setState] = useState<'idle' | 'copied' | 'manual'>('idle')
   const fieldRef = useRef<HTMLInputElement>(null)
@@ -27,14 +28,15 @@ export function ArticleActions({ path }: { path: string }) {
   return (
     <div className="print-hidden flex flex-col gap-2">
       <div className="flex flex-wrap items-center gap-2">
-        <Button variant="outline" size="sm" className="max-md:h-11" onClick={copy}>
+        <Button variant="outline" size="sm" className="max-lg:h-11" onClick={copy}>
           <LinkIcon />
           Copy link
         </Button>
-        <Button variant="outline" size="sm" className="max-md:h-11" onClick={() => window.print()}>
+        <Button variant="outline" size="sm" className="max-lg:h-11" onClick={() => window.print()}>
           <PrinterIcon />
           Print / Save PDF
         </Button>
+        {children}
         <span role="status" className="text-meta text-muted-foreground">
           {state === 'copied' ? 'Link copied' : ''}
         </span>

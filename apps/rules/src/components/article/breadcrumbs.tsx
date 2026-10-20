@@ -32,7 +32,7 @@ export function ArticleBreadcrumbs({ crumbs, current }: { crumbs: Crumb[]; curre
             <Fragment key={crumb.path}>
               {i > 0 && <BreadcrumbSeparator className={isMiddle && collapsed ? 'max-md:hidden' : undefined} />}
               <BreadcrumbItem className={isMiddle ? hideNarrow : undefined}>
-                <BreadcrumbLink asChild>
+                <BreadcrumbLink asChild className="inline-flex min-h-11 min-w-11 items-center lg:min-h-0 lg:min-w-0">
                   <Link to={crumb.path} activeOptions={{ exact: true }}>{crumb.title}</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -49,7 +49,7 @@ export function ArticleBreadcrumbs({ crumbs, current }: { crumbs: Crumb[]; curre
                         // The button disappears; keep focus on the first revealed ancestor.
                         requestAnimationFrame(() => listRef.current?.querySelectorAll('a')[1]?.focus())
                       }}
-                      className="-my-3 inline-flex size-11 items-center justify-center rounded-sm text-muted-foreground hover:text-foreground"
+                      className="inline-flex size-11 items-center justify-center rounded-sm text-muted-foreground hover:text-foreground"
                     >
                       <BreadcrumbEllipsis />
                     </button>

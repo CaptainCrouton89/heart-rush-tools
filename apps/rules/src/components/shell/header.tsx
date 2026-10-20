@@ -27,7 +27,7 @@ export function SiteHeader({ nav, activePath, localNav }: { nav: NavNode | null;
   return (
     <header className="print-hidden sticky top-0 z-40 h-14 border-b border-border bg-surface lg:h-16">
       <div className="mx-auto flex h-full w-full max-w-[1440px] items-center gap-2 px-5 max-[359px]:px-4 md:px-8 lg:gap-8">
-        <Link to="/" className="mr-auto flex items-center rounded-sm lg:mr-0" aria-label="Heart Rush home">
+        <Link to="/" className="mr-auto flex items-center rounded-sm max-lg:min-h-11 lg:mr-0" aria-label="Heart Rush home">
           <Wordmark />
         </Link>
 

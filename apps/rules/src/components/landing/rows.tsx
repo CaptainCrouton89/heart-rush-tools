@@ -40,7 +40,7 @@ export function RowGroup({ title, path, children }: { title: string; path?: stri
     <section className="mt-12 first:mt-0">
       <h2 className="mb-3 font-sans text-meta font-semibold tracking-[0.06em] text-muted-foreground uppercase">
         {path ? (
-          <Link to={path} className="hover:text-foreground hover:underline hover:underline-offset-4">
+          <Link to={path} className="max-lg:inline-flex max-lg:min-h-11 max-lg:min-w-11 max-lg:items-center hover:text-foreground hover:underline hover:underline-offset-4">
             {title}
           </Link>
         ) : (

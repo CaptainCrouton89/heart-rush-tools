@@ -33,7 +33,7 @@ export function Crumbs({ crumbs, current }: { crumbs: Crumb[]; current: string }
                       aria-expanded={false}
                       aria-label={`Show ${middle.length} more ${middle.length === 1 ? 'level' : 'levels'}: ${middle.map((m) => m.title).join(', ')}`}
                       onClick={() => setExpanded(true)}
-                      className="-my-2 inline-flex size-11 items-center justify-center rounded-sm hover:bg-surface-muted hover:text-foreground md:size-6"
+                      className="inline-flex size-11 items-center justify-center rounded-sm hover:bg-surface-muted hover:text-foreground"
                     >
                       <BreadcrumbEllipsis />
                     </button>
@@ -42,7 +42,7 @@ export function Crumbs({ crumbs, current }: { crumbs: Crumb[]; current: string }
                 </>
               )}
               <BreadcrumbItem className={cn(isMiddle && collapsed && 'max-md:hidden')}>
-                <BreadcrumbLink asChild className="inline-flex min-h-11 min-w-11 items-center md:min-h-0 md:min-w-0">
+                <BreadcrumbLink asChild className="inline-flex min-h-11 min-w-11 items-center lg:min-h-0 lg:min-w-0">
                   <Link to={crumb.path}>{crumb.title}</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>

@@ -19,7 +19,7 @@ export function PageTitle({ page, aside }: { page: PageFile; aside?: ReactNode }
 /** The external Alaria world map link shown beside the Alaria home title and on the Atlas landing. */
 export function WorldMapLink({ href }: { href: string }) {
   return (
-    <ExternalLink href={href} className="print-hidden text-control font-medium text-primary underline underline-offset-4 hover:decoration-2">
+    <ExternalLink href={href} className="print-hidden max-lg:inline-flex max-lg:min-h-11 max-lg:min-w-11 max-lg:items-center text-control font-medium text-primary underline underline-offset-4 hover:decoration-2">
       World map
     </ExternalLink>
   )

@@ -3,6 +3,7 @@
 // The /player/$chapter and /gm/$chapter routes load the data and render this.
 import { Link } from '@tanstack/react-router'
 import type { NavNode, PageFile } from '@heartrush/content/types'
+import { ExternalLink } from '~/components/shell/links'
 import { SiteShell } from '~/components/shell/site-shell'
 import { hasOutline } from '~/lib/outline'
 import type { ReadingLink } from '~/server/content'
@@ -19,6 +20,10 @@ export type ChapterData = {
   previous: ReadingLink | null
   next: ReadingLink | null
 }
+
+/** The design's one chapter-specific action: Monster creation links to the monster generator on the tools site. */
+const MONSTER_CREATION_ID = 'gm.monster-creation'
+const MONSTER_TOOLS_URL = 'https://tools.heartrush.party/monster-generator'
 
 export function ChapterPage({ page, nav, previous, next }: ChapterData) {
   // The eyebrow names the category (the immediate parent landing); suppressed when it repeats the title.
@@ -47,7 +52,16 @@ export function ChapterPage({ page, nav, previous, next }: ChapterData) {
             {page.title}
           </h1>
           <div className="mt-4">
-            <ArticleActions path={page.path} />
+            <ArticleActions path={page.path}>
+              {page.id === MONSTER_CREATION_ID && (
+                <ExternalLink
+                  href={MONSTER_TOOLS_URL}
+                  className="inline-flex h-11 items-center px-1 text-ui font-medium text-primary underline underline-offset-4 hover:decoration-2 lg:h-8"
+                >
+                  Open monster tools
+                </ExternalLink>
+              )}
+            </ArticleActions>
           </div>
         </header>
         <MobileOutline headings={page.headings} />

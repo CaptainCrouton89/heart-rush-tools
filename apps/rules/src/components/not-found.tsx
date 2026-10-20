@@ -22,8 +22,8 @@ export function NotFound() {
           moved when the rulebook was reorganised. Search for it, or start from one of the books.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Button onClick={openSearch}>Search the rules</Button>
-          <Button variant="outline" asChild>
+          <Button onClick={openSearch} className="max-lg:h-11">Search the rules</Button>
+          <Button variant="outline" className="max-lg:h-11" asChild>
             <a href="/search">Open the search page</a>
           </Button>
         </div>
