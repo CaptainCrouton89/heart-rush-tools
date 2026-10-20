@@ -1,4 +1,5 @@
 # Pull requests to main: type-check and build every app, and run the package tests. Nothing is deployed.
+# Run one package at a time: the rules and play builds both rewrite packages/content/dist, so parallel builds race.
 name: CI
 
 on:
@@ -24,5 +25,5 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm --filter tools run cf-typegen
-      - run: pnpm -r build
-      - run: pnpm -r --if-present test
+      - run: pnpm -r --workspace-concurrency=1 build
+      - run: pnpm -r --workspace-concurrency=1 --if-present test
