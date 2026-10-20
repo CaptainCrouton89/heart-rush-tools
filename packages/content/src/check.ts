@@ -1,7 +1,7 @@
 // Validation over dist/ and the source tree. Exits non-zero on any failure; unresolved links are reported, not failed.
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
-import { GM_DIR, PLAYER_DIR, PLAYER_GROUPS, GM_GROUPS, GENERATED_PLAYER, RACES_DIR, TALENTS_DIR, ALARIA_COMBINED_DIR } from './sources.ts'
+import { GM_DIR, PLAYER_DIR, PLAYER_GROUPS, GM_GROUPS, GENERATED_PLAYER, RACES_DIR, TALENTS_DIR, WORLD_CATEGORIES } from './sources.ts'
 import { REPO, listMd } from './util.ts'
 import type { CatalogueFile, Manifest, PageFile, Block } from './types.ts'
 
@@ -36,14 +36,15 @@ const actual = {
 for (const k of Object.keys(expected) as Array<keyof typeof expected>) ok(expected[k] === actual[k], `count ${k}: source files ${expected[k]} != pages ${actual[k]}`)
 ok(PLAYER_GROUPS.length > 0 && GM_GROUPS.length > 0, 'empty navigation manifest')
 
-// Alaria: the legacy combined books each have a reachable topic; Overview is the home.
-const legacy = listMd(ALARIA_COMBINED_DIR).map((f) => f.replace(/\.md$/, ''))
+// Alaria: every declared topic (one per legacy combined book) has a reachable landing page; Overview is the home.
+// The declared list is the reference, not the all_sections_formatted directory: two of those generated books are gitignored.
+const topicStems = WORLD_CATEGORIES.flatMap((c) => c.topics.map((t) => t.stem))
 const worldTopicPaths = new Set(pages.filter((p) => p.scope === 'world:alaria' && p.kind === 'landing').map((p) => p.path))
 const kebabStem = (s: string) => s.normalize('NFKD').toLowerCase().replace(/&/g, ' ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
-const missingBooks = legacy.filter((s) => s !== 'Overview' && !worldTopicPaths.has(`/worlds/alaria/${kebabStem(s)}`))
-ok(missingBooks.length === 0, `Alaria legacy books without a topic page: ${missingBooks.join(', ')}`)
+const missingBooks = topicStems.filter((s) => !worldTopicPaths.has(`/worlds/alaria/${kebabStem(s)}`))
+ok(missingBooks.length === 0, `Alaria topics without a landing page: ${missingBooks.join(', ')}`)
 ok(worldTopicPaths.has('/worlds/alaria'), 'Alaria home missing')
-ok(legacy.length - 1 === 32, `expected 32 Alaria books besides Overview, found ${legacy.length - 1}`)
+ok(topicStems.length === 32, `expected 32 Alaria topics, found ${topicStems.length}`)
 
 // Uniqueness
 const paths = manifest.pages.map((p) => p.path)
@@ -114,7 +115,7 @@ ok(!manifest.pages.some((p) => /claude/i.test(p.id)), 'instruction file indexed'
 const sizes = { pages: 0, search: 0 }
 void sizes
 const unresolved: string[] = report.links.unresolvedList
-console.log(`counts  player ${actual.player}  gm ${actual.gm}  races ${actual.races}  combat ${actual.combat}  noncombat ${actual.noncombat}  spells ${actual.spells}  alaria articles ${report.inventory.alariaArticles}  landings ${report.inventory.alariaLandings}  (legacy books ${legacy.length})`)
+console.log(`counts  player ${actual.player}  gm ${actual.gm}  races ${actual.races}  combat ${actual.combat}  noncombat ${actual.noncombat}  spells ${actual.spells}  alaria articles ${report.inventory.alariaArticles}  landings ${report.inventory.alariaLandings}  (topics ${topicStems.length})`)
 console.log(`links   explicit ${report.links.explicit}  term ${report.termLinks}  character sheet ${report.links.sheet}  unresolved ${unresolved.length}  (rendered internal links checked: ${linkCount})`)
 for (const u of unresolved) console.log(`  unresolved: ${u}`)
 const diagByCode: Record<string, number> = {}

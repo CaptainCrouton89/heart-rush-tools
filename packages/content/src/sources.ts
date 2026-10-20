@@ -8,7 +8,6 @@ export const RACES_DIR = 'heart_rush/races'
 export const TALENTS_DIR = 'heart_rush/talents'
 export const RACE_IMAGES_DIR = 'heart_rush/races/images'
 export const ALARIA_DIR = 'world-wikis/alaria'
-export const ALARIA_COMBINED_DIR = 'world-wikis/alaria/all_sections_formatted'
 
 export const MAP_URL = 'https://world.alariawiki.online/'
 export const SHEET_URL_PREFIX = 'https://docs.google.com/spreadsheets/d/1LaB8VcwgbskMt2Sdh6WKEKal1QRyPspl3WE1eHeL4ZU'
@@ -47,7 +46,7 @@ export const PLAYER_GROUPS: Group[] = [
     f('Journeys', 'Journeys'), f('Basic needs', 'Basic_Needs'), f('Equipment & gear', 'Equipment_&_Gear'),
     f('Wealth', 'Wealth_System'), f('Trading & merchants', 'Trading_&_Merchants'),
   ]),
-  group('Larger-scale play', [f('Stratagem system', 'Strategem_System'), f('Strongholds', 'Strongholds'), f('Paths', 'Paths'), f('Other rules', 'Misc._Other_Rules')]),
+  group('Larger-scale play', [f('Stratagem system', 'Stratagem_System'), f('Strongholds', 'Strongholds'), f('Paths', 'Paths'), f('Other rules', 'Misc._Other_Rules')]),
 ]
 
 export const GM_GROUPS: Group[] = [
@@ -133,7 +132,6 @@ export const TERM_ALIASES: Array<{ terms: string[]; target: [string, string] }> 
 
 /** Explicit synonyms and source spellings, per page path. */
 export const ALIASES: Record<string, string[]> = {
-  '/player/stratagem-system': ['Strategem System'],
   '/player/kin-culture': ['Races', 'Race'],
   '/gm/monstrous-races': ['Monsterous Races'],
 }
