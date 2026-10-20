@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-10-20T05:58:26.800Z",
+  "deleted_at": null,
+  "extensions": null,
+  "id": "3zl47w7d-mvg9vhf4-ba856437",
+  "kind": "knowledge",
+  "lint_ignore": null,
+  "name": "content-pipeline",
+  "preview": "When changing content compilation, navigation, or PDF export, read this because source Markdown, combined books, and published navigation are separate stages.",
+  "privacy": "public",
+  "revisions": [
+    {
+      "author": "3zl47w7d-mvg8jbku-fbb69e47",
+      "body": "# Content compilation and navigation\n\n## Edit the source that survives compilation\n\nThe publishing sequence is source Markdown → combined books in `all_sections_formatted/` → section JSON and navigation in `content/`. A source file's folder is not itself the published navigation contract.\n\n- Player rules: edit individual races in `heart_rush/races/` and talents in `heart_rush/talents/`; compilation replaces `Kin_&_Culture.md` and `Talents.md` in `heart_rush/all_sections_formatted/`. Other rulebook sections there are authored directly. GM sources live in `heart_rush/gm_guide/`.\n- Alaria: edit category sources in `world-wikis/alaria/`. Compilation deletes Markdown in its `all_sections_formatted/` before recreating configured books. Hand edits to those aggregates are lost.\n- World discovery requires `world-wikis/<world>/all_sections_formatted/`; adding a source directory alone does not wire it into the published wiki. The Alaria combiner does not include `world-wikis/alaria/races/`; the player race source is `heart_rush/races/`.\n- Generated JSON belongs in `content/`, `content/gm/`, and `content/worlds/<world>/`. Fix sources or compiler behavior rather than editing JSON.\n\n## Choose books independently of authoring folders\n\nThe configurations in `scripts/lib/file-combiners.ts` determine which source directories become books. A subdirectory with `outputName` becomes a separate book; without it, content merges into the parent. Nested subdirectory configuration supports deep authoring trees without requiring one published book per folder.\n\n`introFile` supplies a human-written preamble and is required to exist when configured. `_intro.md` is not an ordinary entry. The combiner excludes instruction files and supplies headings for files that lack them. Use `headerLevelAdjust` when a merge needs an explicit depth adjustment; verify resulting heading hierarchy rather than inferring it from folder depth.\n\nFor a new content area, configure its export and then its navigation. Prefer individual topic books over unwanted broad aggregates: root-level source Markdown can produce a parent aggregate even when child directories have separate exports. Check the actual output set after compilation.\n\n## Navigation is a separate step\n\nThe player, GM, and world category configs are respectively `navigation-categories.json`, `gm-navigation-categories.json`, and `world-wikis/<world>/navigation-categories.json`. Each category's `sections` values name combined filenames without `.md`, in display order. Headings within each book determine nested sections.\n\n**An unlisted book goes into “Other”; omission does not hide it.** If a book should not publish, keep it out of the compiler's input set. Match exported books and category entries deliberately. Keep heading levels sequential so parent relationships remain predictable.\n\n## Compile and diagnose\n\nUse the repository development CLI's content branch; read its live help for the compile operation. `pnpm run build` also compiles content before building Next.js. The existing `content:watch` package script watches `heart_rush`, not world-wiki edits; compile explicitly after changing Alaria.\n\nFor missing or misplaced content, check in order:\n1. Source inclusion in the combiner configuration and required intro files.\n2. The emitted book and its heading hierarchy in `all_sections_formatted/`.\n3. The book's entry in the appropriate navigation config.\n4. Generated section JSON, navigation, and cross-reference targets.\n\nReview generated tracked-file diffs after compilation. The output may change even when the edit was only in an individual source file.\n\n## PDF export\n\nThe download endpoint consumes compiled player content arranged by player navigation categories. Its implementation uses Pandoc to convert assembled Markdown with pipe tables to HTML, embeds `scripts/pdf-styles.css`, and uses Puppeteer to print A4 PDF. If browser PDF generation fails, it returns downloadable HTML for printing; Pandoc conversion failure returns an error.\n\nPDF work therefore needs compiled content, a working Pandoc executable, and a usable Puppeteer browser. Diagnose content order separately from table/print CSS and browser availability. The old jsPDF/AutoTable description does not describe this endpoint, and build success alone does not verify PDF generation.\n",
+      "body_hash": "97c1ba62788d7b91db8a589948eefb0465002383c2555aa4f04b085a502993aa",
+      "created_at": "2026-10-20T05:58:26.800Z",
+      "links": [],
+      "number": 1,
+      "parents": [],
+      "rationale": null,
+      "rev_id": "7ebd74b2-d9b2-4a93-bdee-5dacf5b688bb"
+    }
+  ],
+  "rules": [
+    {
+      "deliver": "preview",
+      "if": null,
+      "match": [
+        "**/scripts/**",
+        "**/all_sections_formatted/**",
+        "**/navigation-categories.json",
+        "**/gm-navigation-categories.json",
+        "**/src/app/api/pdf-download/**",
+        "**/src/components/PDFDownloadButton.tsx"
+      ],
+      "match_frontmatter": null,
+      "on": "file-read",
+      "position": 0
+    }
+  ],
+  "summary": null,
+  "unlisted": false,
+  "why_it_exists": null
+}

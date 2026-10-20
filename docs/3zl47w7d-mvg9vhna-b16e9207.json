@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-10-20T05:58:27.094Z",
+  "deleted_at": null,
+  "extensions": null,
+  "id": "3zl47w7d-mvg9vhna-b16e9207",
+  "kind": "knowledge",
+  "lint_ignore": null,
+  "name": "authoring/rules",
+  "preview": "When editing Heart Rush rules or abilities, read this because its dice, advancement, and action economy differ from D&D and its content has source-specific formats.",
+  "privacy": "public",
+  "revisions": [
+    {
+      "author": "3zl47w7d-mvg8jbku-fbb69e47",
+      "body": "# Heart Rush rules authoring\n\nHeart Rush is not D&D. Use the current rulebook for mechanics rather than importing D&D action economy, levels, or dice assumptions.\n\n## System reference\n\n- Checks use Heart Die + Ability Die + modifiers against a Challenge Number (CN).\n- The four abilities are Might, Agility, Cunning, and Presence, using d4 through d12.\n- The Heart Die represents stamina and willpower; shrinking it can mitigate damage.\n- Combat is simultaneous, with Might, Agility, Cunning, and Defensive stances and engagement rules.\n- Advancement spends XP directly on talents, stats, and HP rather than traditional levels. Bloodmarks follow legendary feats.\n- Elemental attunement has nine elements: Fire, Water, Air, Earth, Light, Dark, Force, Void, and Time.\n\nFor design philosophy read `heart_rush/Heart_Rush_Player_Guide.md`. Before changing mechanical power, read `heart_rush/.claude/skills/balance-guide/SKILL.md` and the relevant `TALENT_BALANCE.md`, `RACE_BALANCE.md`, `BLOODMARK_BALANCE.md`, or `PROGRESSION_BALANCE.md` beside it. These remain the detailed balance references: earned power, meaningful resource costs, frequency versus impact, and protection of distinct playstyles.\n\n## Source and format\n\nEdit one race per file in `heart_rush/races/`, one talent or spell per file under `heart_rush/talents/`, and ordinary rule sections in `heart_rush/all_sections_formatted/`. The combined `Kin_&_Culture.md` and `Talents.md` are regenerated; edit their constituent sources instead. GM-only material belongs in `heart_rush/gm_guide/`; archive content is not current rules.\n\nUse H2 for major sections and H3/H4 for nested material. Headings become navigation, so keep sections self-contained and link using descriptive text that matches the referenced heading. Keep all costs, ranges, durations, frequencies, Challenge Numbers, and exceptions explicit.\n\n## Race entries\n\nUse an H2 race name and cultural description, then H3 Vitals with Size, Height, and Weight. Put a base race ability after Vitals, before H3 culture/subrace sections. Under a culture use H4 Aspects with bullets and H4 named abilities with bold type designations such as `**Passive ability.**`.\n\nAspects describe personality and culture, not mechanical bonuses. Race identity is expressed through abilities, adaptations, free talents, and XP cost changes rather than generic stat increases. Give numerical effects and frequencies explicitly; balance the base race and its cultures together. The race balance reference carries the detailed targets, including the roughly talent-sized combat benefit benchmark.\n\nName files after the race. Race images live in `heart_rush/races/images/` and use relative image links; compilation copies race assets into the public tree.\n\n## Talent and spell entries\n\nUse one H2 name followed by an italic metadata line, rules text, and a `**Destiny Level:**` block where applicable. Preserve the existing frequency/timing/prerequisite tags rather than reducing every ability to a generic action. Combat talents belong in `combat_talents/`, utility abilities in `noncombat_talents/`, and attunement spells in `spells/`.\n\nA spell metadata line follows `_Major ability. Cognitive talent. Elemental attunement: Fire._` with its actual type and element substituted. Spells are Cognitive rather than Martial talents and specify one of the nine elements. Include their Destiny Level mechanics. Describe resource costs, range, area, duration, roll requirements, and interactions with stances or attunement precisely.\n\nCombat talent language should use the existing terms Heart Die shrink, Rush Points, Challenge Number, simultaneous action, and engagement. Destiny Level upgrades expand potency, frequency, scope, or options while preserving the ability's theme. Use underscores for spaces in new talent filenames and check the compiled heading and metadata after editing.\n",
+      "body_hash": "e8605908195a6337f9798118a53ff2661f428d21995ca042866497ae893c136a",
+      "created_at": "2026-10-20T05:58:27.095Z",
+      "links": [],
+      "number": 1,
+      "parents": [],
+      "rationale": null,
+      "rev_id": "7c5d5b80-b37e-45c7-8022-7184cc343365"
+    }
+  ],
+  "rules": [
+    {
+      "deliver": "preview",
+      "if": null,
+      "match": [
+        "**/heart_rush/**"
+      ],
+      "match_frontmatter": null,
+      "on": "file-read",
+      "position": 0
+    }
+  ],
+  "summary": null,
+  "unlisted": false,
+  "why_it_exists": null
+}
