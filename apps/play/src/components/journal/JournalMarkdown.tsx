@@ -1,6 +1,6 @@
 import { Fragment, type ReactNode } from 'react'
 
-// The Markdown a player types into a journal entry, rendered as React elements (never as HTML, so a body cannot inject
+// The Markdown a player types (journal entries, session recaps, the sheet's notes), rendered as React elements (never as HTML, so a body cannot inject
 // markup): `#` headings, paragraphs with their line breaks kept, `-`/`*` and `1.` lists, `>` quotes, `---` rules, and
 // inline `**bold**`, `*italic*`/`_italic_`, `` `code` `` and `[text](https://…)` links. Anything else shows as typed.
 
@@ -86,7 +86,7 @@ function blocks(source: string): ReactNode[] {
   return out
 }
 
-/** A journal entry body rendered from its Markdown. */
+/** Player-written Markdown (a journal entry, a recap, the sheet's notes) rendered as React elements. */
 export function JournalMarkdown({ source }: { source: string }) {
   return <div className="flex flex-col gap-2 text-ui break-words">{blocks(source)}</div>
 }

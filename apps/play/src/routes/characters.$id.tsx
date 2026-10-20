@@ -3,13 +3,14 @@ import { createFileRoute, notFound, redirect } from '@tanstack/react-router'
 import type { CharacterDoc } from '~/server/characters'
 import { getCharacterFn } from '~/server/characters'
 import { getCatalogue } from '~/catalogue'
+import { LiveStatus } from '~/components/campaign/LiveStatus'
 import { useCampaignLive } from '~/components/live/use-live'
 import { AbilityRows, SpeedLine } from '~/components/sheet/AbilityRows'
 import { DAMAGE_AMOUNT_ID, DamagePad } from '~/components/sheet/DamagePad'
 import { HistoryList, describeAction } from '~/components/sheet/HistoryList'
 import { IdentityHeader } from '~/components/sheet/IdentityHeader'
 import { SheetLayout, type SectionProps } from '~/components/sheet/SheetLayout'
-import { StickyBar } from '~/components/sheet/StickyBar'
+import { StickyBar, type SheetLink } from '~/components/sheet/StickyBar'
 import { UndoChip, type UndoOffer } from '~/components/sheet/UndoChip'
 import { useCharacter, type ActionDraft, type Outcome } from '~/components/sheet/use-character'
 
@@ -40,9 +41,14 @@ function SheetPage() {
   const initial = Route.useLoaderData()
   const { document, character, derived, role, dispatch, undo, pending, notice, dismissNotice } = useCharacter(initial)
   // A campaign character's sheet refetches when anyone in the campaign changes something.
-  useCampaignLive(document.campaignId)
+  const { status } = useCampaignLive(document.campaignId)
   const catalogue = getCatalogue()
   const canEdit = role === 'owner' || role === 'gm'
+  const base = `/characters/${encodeURIComponent(document.id)}`
+  const links: SheetLink[] = [
+    ...(canEdit ? [{ label: 'Advance', href: `${base}/advance` }, { label: 'Edit', href: `${base}/edit` }] : []),
+    ...(document.campaignId ? [{ label: 'Campaign', href: `/campaigns/${encodeURIComponent(document.campaignId)}` }] : []),
+  ]
 
   const [offer, setOffer] = useState<UndoOffer | null>(null)
   const expire = useCallback(() => setOffer(null), [])
@@ -82,13 +88,16 @@ function SheetPage() {
     <>
       <SheetLayout
         props={props}
-        stickyBar={<StickyBar character={character} derived={derived} onHp={canEdit ? openPad : undefined} />}
+        stickyBar={<StickyBar character={character} derived={derived} onHp={canEdit ? openPad : undefined} links={links} />}
         banner={
-          role === 'gm' && (
-            <p role="note" className="border-b border-border bg-surface-muted px-5 py-2 text-center text-ui font-medium md:px-8">
-              GM editing {character.identity.name || 'this character'}
-            </p>
-          )
+          <>
+            <LiveStatus status={status} />
+            {role === 'gm' && (
+              <p role="note" className="border-b border-border bg-surface-muted px-5 py-2 text-center text-ui font-medium md:px-8">
+                GM editing {character.identity.name || 'this character'}
+              </p>
+            )}
+          </>
         }
         top={
           <>

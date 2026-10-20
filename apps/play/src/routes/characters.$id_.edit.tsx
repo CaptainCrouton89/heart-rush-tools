@@ -6,6 +6,7 @@ import { createFileRoute, notFound, redirect } from '@tanstack/react-router'
 import type { CharacterDoc } from '~/server/characters'
 import { getCharacterFn } from '~/server/characters'
 import { getCatalogue } from '~/catalogue'
+import { LiveStatus } from '~/components/campaign/LiveStatus'
 import { useCampaignLive } from '~/components/live/use-live'
 import { GearEditor } from '~/components/edit/GearEditor'
 import { IdentityEditor } from '~/components/edit/IdentityEditor'
@@ -44,10 +45,28 @@ const BLOCKS = [
   { id: 'notes', label: 'Notes' },
 ] as const
 
+/**
+ * What a write on this page changes: its kind, the ids (and armor/shield `piece`) it names and the fields it sets,
+ * without the values. A later saved write with the same target retried or replaced a failed one. An add names no
+ * existing row, so only the same add sent again retries it. `gear:wield` picks one weapon for the whole character, so
+ * any later wield replaces it.
+ */
+function writeTarget(action: ActionDraft): string {
+  if (action.kind === 'gear:wield') return action.kind
+  if (action.kind.endsWith(':add')) return JSON.stringify(action)
+  const shape = (value: unknown, key: string): unknown => {
+    if (/^(kind|id|piece)$|Id$/.test(key)) return value
+    if (value === null || typeof value !== 'object' || Array.isArray(value)) return 0
+    const entries = Object.entries(value as Record<string, unknown>).sort(([a], [b]) => (a < b ? -1 : 1))
+    return Object.fromEntries(entries.map(([k, v]) => [k, shape(v, k)]))
+  }
+  return JSON.stringify(shape(action, ''))
+}
+
 function EditPage() {
   const initial = Route.useLoaderData()
   const { document, character, role, dispatch, undo, pending, notice, dismissNotice } = useCharacter(initial)
-  useCampaignLive(document.campaignId)
+  const { status } = useCampaignLive(document.campaignId)
   const catalogue = getCatalogue()
   const canEdit = role === 'owner' || role === 'gm'
   const sheetHref = `/characters/${encodeURIComponent(document.id)}`
@@ -57,16 +76,26 @@ function EditPage() {
   const expire = useCallback(() => setOffer(null), [])
   // Writes run in order, so the latest one settling means every earlier one has too.
   const latest = useRef<Promise<Outcome> | null>(null)
+  // Every write on this page that did not save and that no later save of the same target has retried or replaced,
+  // keyed by `writeTarget`, with the words saying why. Done stays on the page while any is left.
+  const failed = useRef(new Map<string, string>())
+  const [failures, setFailures] = useState<string[]>([])
+  const failureTexts = () => [...new Set(failed.current.values())]
+  const showFailures = () => setFailures(failureTexts())
   // As on the sheet: every change is one action, and a saved one raises the undo chip.
   const send = useCallback(
     async (action: ActionDraft): Promise<Outcome> => {
       const sent = dispatch(action)
       latest.current = sent
       const outcome = await sent
+      const target = writeTarget(action)
+      if (outcome.status === 'saved') failed.current.delete(target)
+      else failed.current.set(target, outcome.text)
       if (outcome.status === 'saved' && outcome.action) {
         setOffer({ eventId: outcome.action.id, text: describeAction(outcome.action), revision: outcome.character.revision })
       }
       else setOffer(null)
+      setFailures((shown) => (shown.length === 0 ? shown : failureTexts()))
       return outcome
     },
     [dispatch],
@@ -80,16 +109,17 @@ function EditPage() {
   )
   const shownOffer = offer && !pending && offer.revision === document.revision ? offer : null
   // Fields save on blur. Done blurs the focused field (its save starts synchronously), waits for the writes still
-  // running, and stays on the page when one of them did not save, so the undo chip can say why.
+  // running, and stays on the page while any write on it did not save (and was not saved again since), listing why.
   const done = async (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
-    const before = latest.current
     const focused = globalThis.document.activeElement
     if (focused instanceof HTMLElement) focused.blur()
-    if (pending || latest.current !== before) {
-      const outcome = await latest.current
-      if (outcome && outcome.status !== 'saved') return
-    }
+    await latest.current
+    if (failed.current.size > 0) return showFailures()
+    window.location.assign(sheetHref)
+  }
+  const leaveUnsaved = () => {
+    failed.current.clear()
     window.location.assign(sheetHref)
   }
 
@@ -121,7 +151,18 @@ function EditPage() {
             </a>
           ))}
         </nav>
+        {failures.length > 0 && (
+          <div role="alert" className="mx-auto flex w-full max-w-2xl flex-wrap items-center gap-x-3 gap-y-1 border-t border-border px-5 py-2 text-ui md:px-8">
+            <span className="min-w-0 flex-1">
+              {failures.join(' · ')}. Make the change again, or leave without it.
+            </span>
+            <button type="button" onClick={leaveUnsaved} className="inline-flex min-h-11 shrink-0 items-center text-ui font-medium text-primary underline underline-offset-4">
+              Leave anyway
+            </button>
+          </div>
+        )}
       </div>
+      <LiveStatus status={status} />
       {role === 'gm' && (
         <p role="note" className="border-b border-border bg-surface-muted px-5 py-2 text-center text-ui font-medium md:px-8">
           GM editing {name}

@@ -42,6 +42,8 @@ export const Route = createFileRoute('/campaigns/$id')({
       rolls: rolls.rolls,
       // Add my character: the viewer's finished characters that are in no campaign.
       candidates: mine.characters.filter((c) => !c.draft && c.campaignId === null),
+      // The viewer's characters in this campaign: their cards offer Remove from campaign.
+      mineHere: mine.characters.filter((c) => c.campaignId === campaignId).map((c) => c.id),
     }
   },
   head: ({ loaderData }) => ({ meta: [{ title: `${loaderData?.campaign.name ?? 'Campaign'} · Heart Rush Play` }] }),
@@ -79,7 +81,7 @@ function mergeRolls(loaded: RollRecord[], live: RollRecord[]): RollRecord[] {
 }
 
 function CampaignPage() {
-  const { campaign, sessions, betweenSessions, stratagems, rolls: loadedRolls, candidates } = Route.useLoaderData()
+  const { campaign, sessions, betweenSessions, stratagems, rolls: loadedRolls, candidates, mineHere } = Route.useLoaderData()
   const isGm = campaign.role === 'gm'
 
   // A roll arriving on the live channel shows at once; the refetch it also triggers brings the same roll from the server.
@@ -144,7 +146,7 @@ function CampaignPage() {
                   <ul className="grid gap-3 sm:grid-cols-2">
                     {campaign.characters.map((c) => (
                       <li key={c.id}>
-                        <CharacterCard character={c} notes={isGm ? assistant.notesFor(c.name) : []} />
+                        <CharacterCard character={c} notes={isGm ? assistant.notesFor(c.name) : []} mine={mineHere.includes(c.id)} />
                       </li>
                     ))}
                   </ul>

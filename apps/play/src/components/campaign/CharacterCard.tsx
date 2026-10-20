@@ -1,5 +1,10 @@
+import { useState } from 'react'
+import { useRouter } from '@tanstack/react-router'
+import { useServerFn } from '@tanstack/react-start'
+import { Button } from '@heartrush/ui/components/button'
 import { hpColorClass } from '~/components/sheet/StickyBar'
-import type { CampaignCharacterCard } from '~/server/campaigns'
+import { removeCharacterFromCampaignFn, type CampaignCharacterCard } from '~/server/campaigns'
+import { campaignWrite } from './write'
 
 /** The bar's fill for each HP text colour (written out so Tailwind sees every class). */
 const BAR: Record<string, string> = { 'text-hp': 'bg-hp', 'text-warning': 'bg-warning', 'text-primary': 'bg-primary' }
@@ -8,9 +13,10 @@ const BAR: Record<string, string> = { 'text-hp': 'bg-hp', 'text-warning': 'bg-wa
  * One character on the campaign page (design "Campaign page and GM view"): name, player, an HP bar
  * `current/effective max` in the sheet's HP colours, heart die, wound count and the active conditions as chips. The card
  * opens the sheet; the sheet decides who may edit (the owner and the GM). `notes` are the GM assistant's notes for this
- * character, shown under the card.
+ * character, shown under the card. `mine`: the viewer owns it, so the card offers **Remove from campaign** (owner only,
+ * as the server enforces).
  */
-export function CharacterCard({ character: c, notes }: { character: CampaignCharacterCard; notes: string[] }) {
+export function CharacterCard({ character: c, notes, mine }: { character: CampaignCharacterCard; notes: string[]; mine: boolean }) {
   const { current, effectiveMax } = c.hp
   const filled = effectiveMax > 0 ? Math.min(100, Math.max(0, (current / effectiveMax) * 100)) : 0
   const color = hpColorClass(current, effectiveMax)
@@ -58,12 +64,60 @@ export function CharacterCard({ character: c, notes }: { character: CampaignChar
           </span>
         )}
       </a>
+      {mine && <RemoveFromCampaign characterId={c.id} name={c.name || 'this character'} />}
       {notes.map((note, i) => (
         <p key={i} className="border-l-2 border-primary pl-3 text-ui whitespace-pre-line">
           <span className="eyebrow mr-2">GM assistant</span>
           {note}
         </p>
       ))}
+    </div>
+  )
+}
+
+/**
+ * Takes the viewer's character out of the campaign, in place: the first tap asks, the second removes. The server
+ * publishes the change, so every open page of the campaign drops the card.
+ */
+function RemoveFromCampaign({ characterId, name }: { characterId: string; name: string }) {
+  const remove = useServerFn(removeCharacterFromCampaignFn)
+  const router = useRouter()
+  const [asking, setAsking] = useState(false)
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const confirm = async () => {
+    setBusy(true)
+    setError(null)
+    const result = await campaignWrite('remove the character', () => remove({ data: { characterId } }))
+    setBusy(false)
+    if (!result.ok) return setError(result.text)
+    setAsking(false)
+    await router.invalidate()
+  }
+
+  return (
+    <div className="flex flex-col gap-1">
+      {asking ? (
+        <div className="flex flex-wrap items-center gap-x-2 text-ui">
+          <span className="min-w-0">Remove {name} from this campaign?</span>
+          <Button type="button" variant="ghost" size="sm" className="min-h-11 text-primary" disabled={busy} onClick={confirm}>
+            {busy ? 'Removing…' : 'Remove'}
+          </Button>
+          <Button type="button" variant="ghost" size="sm" className="min-h-11" disabled={busy} onClick={() => setAsking(false)}>
+            Cancel
+          </Button>
+        </div>
+      ) : (
+        <Button type="button" variant="ghost" size="sm" className="min-h-11 self-start text-muted-foreground" onClick={() => setAsking(true)}>
+          Remove from campaign
+        </Button>
+      )}
+      {error && (
+        <p role="alert" className="text-ui text-muted-foreground">
+          {error}
+        </p>
+      )}
     </div>
   )
 }

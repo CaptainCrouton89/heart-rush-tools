@@ -9,6 +9,7 @@ import { AspectsTab, DestinyTab, DieTab, HpTab, PathTab, type PurchaseTabProps }
 import { TalentCatalogue, type XpBuyAction } from '~/components/advance/TalentCatalogue'
 import { XpSummary } from '~/components/advance/XpSummary'
 import { SuggestTalents } from '~/components/ai/SuggestTalents'
+import { LiveStatus } from '~/components/campaign/LiveStatus'
 import { useCampaignLive } from '~/components/live/use-live'
 import { HistoryList, describeAction } from '~/components/sheet/HistoryList'
 import { UndoChip, type UndoOffer } from '~/components/sheet/UndoChip'
@@ -43,7 +44,7 @@ type Tab = 'talents' | 'die' | 'hp' | 'aspects' | 'destiny' | 'path' | 'bloodmar
 function AdvancePage() {
   const initial = Route.useLoaderData()
   const { document, character, derived, role, dispatch, undo, pending, notice, dismissNotice } = useCharacter(initial)
-  useCampaignLive(document.campaignId)
+  const { status } = useCampaignLive(document.campaignId)
   const catalogue = getCatalogue()
   const canEdit = role === 'owner' || role === 'gm'
   const [tab, setTab] = useState<Tab>('talents')
@@ -86,53 +87,56 @@ function AdvancePage() {
   ]
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-5 pt-6 pb-24 md:px-8 md:pt-10">
-      <div className="flex flex-wrap items-end justify-between gap-4">
-        <div className="min-w-0">
-          <p className="eyebrow">Spend XP</p>
-          <h1 className="truncate font-serif text-h1-sm font-semibold">{character.identity.name || 'Unnamed character'}</h1>
-        </div>
-        <Link to="/characters/$id" params={{ id: document.id }} className="inline-flex min-h-11 items-center text-ui text-primary underline underline-offset-4">
-          Back to the sheet
-        </Link>
-      </div>
-
-      <XpSummary xp={derived.xp} />
-
-      {!canEdit ? (
-        <p className="text-ui text-muted-foreground">Only the character's owner or the campaign's GM can spend its XP.</p>
-      ) : (
-        <Tabs value={tab} onValueChange={(v) => setTab(v as Tab)}>
-          <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0">
-            <TabsList aria-label="What to buy" className="w-max min-w-full">
-              {tabs.map((t) => (
-                <TabsTrigger key={t.value} value={t.value}>
-                  {t.label}
-                  {t.badge ? (
-                    <span className="rounded-sm bg-primary px-1.5 text-meta font-semibold text-primary-foreground tabular-nums" aria-label={`${t.badge} owed`}>
-                      {t.badge}
-                    </span>
-                  ) : null}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+    <>
+      <LiveStatus status={status} />
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-5 pt-6 pb-24 md:px-8 md:pt-10">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div className="min-w-0">
+            <p className="eyebrow">Spend XP</p>
+            <h1 className="truncate font-serif text-h1-sm font-semibold">{character.identity.name || 'Unnamed character'}</h1>
           </div>
-          <TabsContent value="talents">
-            <TalentCatalogue character={character} catalogue={catalogue} onBuy={buyTalent} header={<SuggestTalents characterId={document.id} character={character} catalogue={catalogue} onBuy={buyTalent} />} />
-          </TabsContent>
-          <TabsContent value="die"><DieTab {...tabProps} /></TabsContent>
-          <TabsContent value="hp"><HpTab {...tabProps} /></TabsContent>
-          <TabsContent value="aspects"><AspectsTab {...tabProps} /></TabsContent>
-          <TabsContent value="destiny"><DestinyTab {...tabProps} /></TabsContent>
-          <TabsContent value="path"><PathTab {...tabProps} /></TabsContent>
-          <TabsContent value="bloodmarks">
-            <BloodmarkPicks character={character} owed={owed} dispatch={send} />
-          </TabsContent>
-        </Tabs>
-      )}
+          <Link to="/characters/$id" params={{ id: document.id }} className="inline-flex min-h-11 items-center text-ui text-primary underline underline-offset-4">
+            Back to the sheet
+          </Link>
+        </div>
 
-      <HistoryList key={document.id} characterId={document.id} refreshKey={`${document.revision}:${pending}`} canEdit={canEdit} onUndo={undoEvent} />
-      <UndoChip offer={shownOffer} notice={notice} onUndo={undoEvent} onExpire={expire} onDismissNotice={dismissNotice} />
-    </div>
+        <XpSummary xp={derived.xp} />
+
+        {!canEdit ? (
+          <p className="text-ui text-muted-foreground">Only the character's owner or the campaign's GM can spend its XP.</p>
+        ) : (
+          <Tabs value={tab} onValueChange={(v) => setTab(v as Tab)}>
+            <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0">
+              <TabsList aria-label="What to buy" className="w-max min-w-full">
+                {tabs.map((t) => (
+                  <TabsTrigger key={t.value} value={t.value}>
+                    {t.label}
+                    {t.badge ? (
+                      <span className="rounded-sm bg-primary px-1.5 text-meta font-semibold text-primary-foreground tabular-nums" aria-label={`${t.badge} owed`}>
+                        {t.badge}
+                      </span>
+                    ) : null}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
+            <TabsContent value="talents">
+              <TalentCatalogue character={character} catalogue={catalogue} onBuy={buyTalent} header={<SuggestTalents characterId={document.id} character={character} catalogue={catalogue} onBuy={buyTalent} />} />
+            </TabsContent>
+            <TabsContent value="die"><DieTab {...tabProps} /></TabsContent>
+            <TabsContent value="hp"><HpTab {...tabProps} /></TabsContent>
+            <TabsContent value="aspects"><AspectsTab {...tabProps} /></TabsContent>
+            <TabsContent value="destiny"><DestinyTab {...tabProps} /></TabsContent>
+            <TabsContent value="path"><PathTab {...tabProps} /></TabsContent>
+            <TabsContent value="bloodmarks">
+              <BloodmarkPicks character={character} owed={owed} dispatch={send} />
+            </TabsContent>
+          </Tabs>
+        )}
+
+        <HistoryList key={document.id} characterId={document.id} refreshKey={`${document.revision}:${pending}`} canEdit={canEdit} onUndo={undoEvent} />
+        <UndoChip offer={shownOffer} notice={notice} onUndo={undoEvent} onExpire={expire} onDismissNotice={dismissNotice} />
+      </div>
+    </>
   )
 }

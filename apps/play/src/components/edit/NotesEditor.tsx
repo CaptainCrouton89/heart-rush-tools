@@ -1,4 +1,4 @@
-import { NotesText } from '~/components/sheet/NotesSection'
+import { JournalMarkdown } from '~/components/journal/JournalMarkdown'
 import type { ActionDraft } from '~/components/sheet/use-character'
 import { CommitText, Field } from './fields'
 
@@ -12,7 +12,7 @@ export function NotesEditor({ value, onChange }: { value: string; onChange: (act
       {value.trim() && (
         <div className="flex flex-col gap-1">
           <span className="eyebrow">As the sheet shows it</span>
-          <NotesText markdown={value} />
+          <JournalMarkdown source={value} />
         </div>
       )}
     </div>
