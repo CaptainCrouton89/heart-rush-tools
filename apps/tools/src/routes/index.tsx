@@ -15,6 +15,13 @@ type Tool = {
 /** Every tool on this site. Adding a tool is one entry here plus its route. */
 const TOOLS: Tool[] = [
   {
+    to: '/encounter-builder',
+    title: 'Encounter builder',
+    description:
+      'Describe a fight in chat and get a finished encounter: stat blocks with counts, terrain, hooks and scaling notes, sized to your party.',
+    needsSignIn: true,
+  },
+  {
     to: '/monster-generator',
     title: 'Monster generator',
     description:
