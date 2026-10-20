@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "transport": {
+    "kind": "exec",
+    "executable": ".grove/dev.ts"
+  },
+  "mounts": [
+    {
+      "parent": [],
+      "node": {
+        "kind": "branch",
+        "name": "service",
+        "description": "the local Vite dev servers for the rules, tools, and play apps in this checkout.",
+        "whenToUse": "you need one of the Heart Rush sites running locally, need to know whether it is up, or need its logs.",
+        "summary": "the local Vite dev servers for the rules, tools, and play apps in this checkout",
+        "model": "Three processes, one per app: `vite dev` in apps/<app> on this checkout's port for that app (source: rules 3910, tools 3911, play 3912; a Grove instance adds slot * 100). Each runs the app's Worker locally through the Cloudflare Vite plugin. Every leaf takes --app to act on one app; the default is all three. Northlight sign-in only works on the source ports, because only localhost:3911 and :3912 are registered redirect URIs.",
+        "children": [
+          {
+            "kind": "leaf",
+            "name": "status",
+            "description": "report whether this checkout's dev servers are running.",
+            "whenToUse": "before starting, testing against, or debugging a local site.",
+            "summary": "report whether this checkout's dev servers are running",
+            "params": [
+              {
+                "kind": "flag",
+                "name": "app",
+                "required": false,
+                "constraint": "Which app to act on: rules, tools, play, or all three.",
+                "type": "enum",
+                "choices": [
+                  "all",
+                  "rules",
+                  "tools",
+                  "play"
+                ],
+                "default": "all"
+              }
+            ],
+            "output": [
+              {
+                "name": "state",
+                "type": "string",
+                "required": true,
+                "constraint": "running, starting, stopped, or foreign (port held by a process this checkout did not start) when every selected app agrees; mixed otherwise."
+              },
+              {
+                "name": "apps",
+                "type": "object[]",
+                "required": true,
+                "constraint": "One entry per selected app: { app, state, port, url, pid, detail }. port is 3910/3911/3912 (rules/tools/play) in the source and base + slot * 100 in a Grove instance; running means /health answered with this app's name."
+              },
+              {
+                "name": "detail",
+                "type": "string",
+                "required": true,
+                "constraint": "One line summarizing each app's state."
+              }
+            ],
+            "outputKind": "object",
+            "effects": [
+              "None. Read-only."
+            ]
+          },
+          {
+            "kind": "leaf",
+            "name": "start",
+            "description": "start vite dev in the background for the selected apps and wait until each answers /health.",
+            "whenToUse": "a site must be running to view or test a change.",
+            "summary": "start vite dev in the background for the selected apps and wait until each answers /health",
+            "params": [
+              {
+                "kind": "flag",
+                "name": "app",
+                "required": false,
+                "constraint": "Which app to act on: rules, tools, play, or all three.",
+                "type": "enum",
+                "choices": [
+                  "all",
+                  "rules",
+                  "tools",
+                  "play"
+                ],
+                "default": "all"
+              }
+            ],
+            "output": [
+              {
+                "name": "state",
+                "type": "string",
+                "required": true,
+                "constraint": "running, starting, stopped, or foreign (port held by a process this checkout did not start) when every selected app agrees; mixed otherwise."
+              },
+              {
+                "name": "apps",
+                "type": "object[]",
+                "required": true,
+                "constraint": "One entry per selected app: { app, state, port, url, pid, detail }. port is 3910/3911/3912 (rules/tools/play) in the source and base + slot * 100 in a Grove instance; running means /health answered with this app's name."
+              },
+              {
+                "name": "detail",
+                "type": "string",
+                "required": true,
+                "constraint": "One line summarizing each app's state."
+              }
+            ],
+            "outputKind": "object",
+            "effects": [
+              "Starts a detached vite dev process per selected app; pid in .grove/run/<app>.pid, output in .grove/run/<app>.log.",
+              "Leaves an app alone when this checkout's server for it is already running or its port is held by another process."
+            ]
+          },
+          {
+            "kind": "leaf",
+            "name": "stop",
+            "description": "stop the dev servers this checkout started.",
+            "whenToUse": "a local site is no longer needed, or before a clean restart.",
+            "summary": "stop the dev servers this checkout started",
+            "params": [
+              {
+                "kind": "flag",
+                "name": "app",
+                "required": false,
+                "constraint": "Which app to act on: rules, tools, play, or all three.",
+                "type": "enum",
+                "choices": [
+                  "all",
+                  "rules",
+                  "tools",
+                  "play"
+                ],
+                "default": "all"
+              }
+            ],
+            "output": [
+              {
+                "name": "state",
+                "type": "string",
+                "required": true,
+                "constraint": "running, starting, stopped, or foreign (port held by a process this checkout did not start) when every selected app agrees; mixed otherwise."
+              },
+              {
+                "name": "apps",
+                "type": "object[]",
+                "required": true,
+                "constraint": "One entry per selected app: { app, state, port, url, pid, detail }. port is 3910/3911/3912 (rules/tools/play) in the source and base + slot * 100 in a Grove instance; running means /health answered with this app's name."
+              },
+              {
+                "name": "detail",
+                "type": "string",
+                "required": true,
+                "constraint": "One line summarizing each app's state."
+              }
+            ],
+            "outputKind": "object",
+            "effects": [
+              "Sends SIGTERM (then SIGKILL after 10s) to each selected vite process group this checkout started.",
+              "Never touches a process it did not start."
+            ]
+          },
+          {
+            "kind": "leaf",
+            "name": "restart",
+            "description": "stop, then start the selected dev servers.",
+            "whenToUse": "a server is wedged or must pick up a change Vite does not hot-reload, such as vite.config.ts or wrangler.jsonc.",
+            "summary": "stop, then start the selected dev servers",
+            "params": [
+              {
+                "kind": "flag",
+                "name": "app",
+                "required": false,
+                "constraint": "Which app to act on: rules, tools, play, or all three.",
+                "type": "enum",
+                "choices": [
+                  "all",
+                  "rules",
+                  "tools",
+                  "play"
+                ],
+                "default": "all"
+              }
+            ],
+            "output": [
+              {
+                "name": "state",
+                "type": "string",
+                "required": true,
+                "constraint": "running, starting, stopped, or foreign (port held by a process this checkout did not start) when every selected app agrees; mixed otherwise."
+              },
+              {
+                "name": "apps",
+                "type": "object[]",
+                "required": true,
+                "constraint": "One entry per selected app: { app, state, port, url, pid, detail }. port is 3910/3911/3912 (rules/tools/play) in the source and base + slot * 100 in a Grove instance; running means /health answered with this app's name."
+              },
+              {
+                "name": "detail",
+                "type": "string",
+                "required": true,
+                "constraint": "One line summarizing each app's state."
+              }
+            ],
+            "outputKind": "object",
+            "effects": [
+              "Same as stop followed by start."
+            ]
+          },
+          {
+            "kind": "leaf",
+            "name": "logs",
+            "description": "read recent output from one app's dev server.",
+            "whenToUse": "a page errors, a server will not start, or you need build or request output.",
+            "summary": "read recent output from one app's dev server",
+            "params": [
+              {
+                "kind": "flag",
+                "name": "app",
+                "required": true,
+                "constraint": "Which app's log to read: rules, tools, or play.",
+                "type": "enum",
+                "choices": [
+                  "rules",
+                  "tools",
+                  "play"
+                ]
+              },
+              {
+                "kind": "flag",
+                "name": "tail",
+                "required": false,
+                "constraint": "Number of most recent lines to return. Must be >= 1.",
+                "type": "int",
+                "default": 60
+              }
+            ],
+            "output": [
+              {
+                "name": "path",
+                "type": "string",
+                "required": true,
+                "constraint": "Absolute path of the log file."
+              },
+              {
+                "name": "lines",
+                "type": "string[]",
+                "required": true,
+                "constraint": "The most recent log lines, oldest first."
+              }
+            ],
+            "outputKind": "object",
+            "effects": [
+              "None. Read-only."
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

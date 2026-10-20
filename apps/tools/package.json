@@ -4,7 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "dev": "vite dev --port 3911",
+    "dev": "vite dev --port 3911 --strictPort",
     "build": "vite build && tsc --noEmit",
     "preview": "vite preview",
     "deploy": "pnpm run build && wrangler deploy",

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "name": "heart-rush",
+  "devCommand": ".grove/dev.ts",
+  "ports": {
+    "rules": { "base": 3910, "offset": 100 },
+    "tools": { "base": 3911, "offset": 100 },
+    "play": { "base": 3912, "offset": 100 }
+  },
+  "lifecycle": {
+    "start": ["service", "start"],
+    "stop": ["service", "stop"],
+    "status": ["service", "status", "--json"]
+  },
+  "install": [
+    { "dir": ".", "cmds": ["pnpm install --frozen-lockfile"] }
+  ],
+  "excludes": [
+    "node_modules",
+    "dist",
+    ".wrangler",
+    ".tanstack",
+    "*.tsbuildinfo",
+    "/.next",
+    "/content",
+    "/map",
+    "/public/tiles",
+    "/public/tiles-webp",
+    "/.grove/run"
+  ]
+}
