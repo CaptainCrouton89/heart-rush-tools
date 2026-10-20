@@ -6,6 +6,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   resolve: { tsconfigPaths: true },
+  // SSR fetches compiled content through env.ASSETS with host assets.invalid; in dev that request reaches Vite.
+  server: { allowedHosts: ['assets.invalid'] },
   plugins: [
     tailwindcss(),
     cloudflare({ viteEnvironment: { name: 'ssr' } }),
