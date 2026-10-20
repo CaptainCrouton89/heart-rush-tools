@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getRouteApi } from '@tanstack/react-router'
+import { useMatch } from '@tanstack/react-router'
 import { useServerFn } from '@tanstack/react-start'
 import { Button } from '@heartrush/ui/components/button'
 import {
@@ -11,7 +11,6 @@ import { JournalEntryItem } from '../journal/JournalEntryItem'
 import type { SectionProps } from './SheetLayout'
 import { Section } from './SheetLayout'
 
-const sheetRoute = getRouteApi('/characters/$id')
 
 const NO_CONNECTION = 'Not saved — no connection'
 const FAILED = 'Not saved — something went wrong. Try again.'
@@ -39,8 +38,10 @@ async function attempt<R extends { ok: true }>(write: () => Promise<R | JournalR
  * state: nothing here goes through `dispatch`, so no event, revision change or undo follows a write.
  */
 export function JournalSection(_props: SectionProps) {
-  const { id: characterId, role, campaignId } = sheetRoute.useLoaderData()
-  if (role !== 'owner') return null
+  // Off the sheet route (the GM view reuses the sheet sections) there is no journal: it is its owner's alone.
+  const doc = useMatch({ from: '/characters/$id', shouldThrow: false })?.loaderData
+  if (!doc || doc.role !== 'owner') return null
+  const { id: characterId, campaignId } = doc
   return <Journal key={characterId} characterId={characterId} inCampaign={campaignId !== null} />
 }
 
