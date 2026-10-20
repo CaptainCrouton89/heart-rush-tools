@@ -152,7 +152,7 @@ export function useEncounter(id: string) {
   // The message being sent shows at once, before the server has stored it.
   const messages = detail ? (sending ? withGm(detail.messages, sending.text) : detail.messages) : []
 
-  return { status, detail, messages, running, runSince, runError, stopped, stopping, documentVersion, send, stop }
+  return { status, detail, messages, running, runSince, runError, stopped, stopping, documentVersion, send, stop, refresh }
 }
 
 /** The messages with the GM's just-sent text appended, unless the server already stored it (resend de-dupe). */

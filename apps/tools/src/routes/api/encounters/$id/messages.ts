@@ -4,6 +4,7 @@ import { turnPrompt } from '~/encounter/prompt'
 import { turnSchema, type StoredMessage } from '~/encounter/schema'
 import { notFound, requireSession } from '~/server/api'
 import { appendGmMessage, cancelAndRelease, claim, finishRun, getParty, loadEncounter, recordRun, release } from '~/server/encounters'
+import { getCampaignForEncounter, PlayError } from '~/server/play'
 import { needsSignIn, ndjsonResponse, resultOf, RunCanceledError, startRun } from '~/server/runs'
 
 /** Events streamed to the browser as newline-delimited JSON. */
@@ -40,12 +41,14 @@ export const Route = createFileRoute('/api/encounters/$id/messages')({
           let runId: string | null = null
           let runtime: ConnectedCrouter | undefined
           try {
+            // A campaign's characters are read from play as each run starts; a refusal fails this turn before any run exists.
+            const campaign = enc.campaign_id ? await getCampaignForEncounter(userId, enc.campaign_id) : null
             runtime = await who.auth.runtimeFor(userId)
             const party = await getParty(userId)
             send({ type: 'started' })
             // The start is not tied to the browser's abort signal: an abort cannot leave a run that was created but never recorded.
             // The claim is the run's idempotency key and metadata, so a run whose id was lost is found again by it.
-            runId = await startRun(runtime, turnPrompt({ party, messages, document: enc.document }), turnSchema, undefined, {
+            runId = await startRun(runtime, turnPrompt({ party, campaign, messages, document: enc.document }), turnSchema, undefined, {
               key: token,
               metadata: { encounter: enc.id, claim: token },
             })
@@ -79,6 +82,10 @@ export const Route = createFileRoute('/api/encounters/$id/messages')({
             if (signal.aborted) return
             if (error instanceof RunCanceledError) {
               send({ type: 'error', message: 'Stopped', stopped: true })
+              return
+            }
+            if (error instanceof PlayError) {
+              send({ type: 'error', message: `${error.message} Choose another party for this encounter and send again.` })
               return
             }
             console.error('encounter turn failed', error)

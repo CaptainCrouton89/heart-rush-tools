@@ -5,7 +5,9 @@ import { Button } from '@heartrush/ui/components/button'
 import { cn } from '@heartrush/ui/lib/utils'
 import type { StoredMessage } from '~/encounter/schema'
 import { ChatText } from '~/components/encounter/chat-text'
+import { AddToCampaign, PartySourceSelect, useCampaigns, type CampaignList } from '~/components/encounter/campaigns'
 import { Composer } from '~/components/encounter/composer'
+import { api } from '~/components/encounter/api'
 import { DocumentActions, EncounterDocument } from '~/components/encounter/encounter-document'
 import { SignInPrompt } from '~/components/encounter/sign-in-prompt'
 import { Chip, OutlineView, QuestionsStep, QuickReplies } from '~/components/encounter/steps'
@@ -36,6 +38,8 @@ function EncounterPage() {
 
 function SplitView({ id }: { id: string }) {
   const enc = useEncounter(id)
+  const campaigns = useCampaigns()
+  const campaignList = campaigns.kind === 'ready' && campaigns.campaigns.length > 0 ? campaigns.campaigns : null
   const [tab, setTab] = useState<Tab>('chat')
   const [seenVersion, setSeenVersion] = useState(0)
   const { detail, status } = enc
@@ -81,7 +85,9 @@ function SplitView({ id }: { id: string }) {
           >
             ← <span className="max-sm:sr-only">Encounters</span>
           </Link>
-          <h1 className="min-w-0 truncate font-serif text-h4 font-semibold">{title}</h1>
+          <h1 className="min-w-0 flex-1 truncate font-serif text-h4 font-semibold">{title}</h1>
+          {/* Also shown when play could not be read but a campaign is stored, so the GM can switch back to the typed party. */}
+          {(campaignList || (detail.campaignId && campaigns.kind !== 'loading')) && <EncounterParty enc={enc} campaigns={campaignList ?? []} />}
         </div>
         <div role="tablist" aria-label="View" className="flex px-5 max-[359px]:px-4 md:px-8 lg:hidden">
           {(['chat', 'encounter'] as const).map((t) => (
@@ -126,7 +132,7 @@ function SplitView({ id }: { id: string }) {
           aria-label="Encounter"
           className={cn('min-h-0 lg:block lg:overflow-y-auto print:block print:overflow-visible', tab === 'encounter' ? 'block' : 'hidden')}
         >
-          <DocumentPanel enc={enc} />
+          <DocumentPanel enc={enc} campaigns={campaignList} />
         </section>
       </div>
     </div>
@@ -139,7 +145,49 @@ function Centered({ children }: { children: React.ReactNode }) {
 
 type Enc = ReturnType<typeof useEncounter>
 
-function DocumentPanel({ enc }: { enc: Enc }) {
+/** Which party this encounter's next runs read: the typed party line or one of the GM's campaigns. Saved on change. */
+function EncounterParty({ enc, campaigns }: { enc: Enc; campaigns: CampaignList }) {
+  const detail = enc.detail
+  /** The choice being saved; the saved encounter's campaign otherwise. */
+  const [pending, setPending] = useState<string | null | undefined>(undefined)
+  const [error, setError] = useState<string | null>(null)
+  if (!detail) return null
+  const value = pending !== undefined ? pending : detail.campaignId
+  async function change(next: string | null) {
+    setPending(next)
+    setError(null)
+    try {
+      await api.setCampaign(detail!.id, next)
+      await enc.refresh()
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Could not change the party')
+    } finally {
+      setPending(undefined)
+    }
+  }
+  return (
+    <div className="flex shrink-0 items-center gap-2">
+      <label htmlFor="encounter-party" className="text-meta text-muted-foreground max-sm:sr-only">
+        Party
+      </label>
+      <PartySourceSelect
+        id="encounter-party"
+        campaigns={campaigns}
+        value={value}
+        onChange={(next) => void change(next)}
+        disabled={pending !== undefined || enc.running}
+        className="max-w-36 sm:max-w-56"
+      />
+      {error && (
+        <p role="alert" title={error} className="text-meta text-warning">
+          Not saved<span className="sr-only">: {error}</span>
+        </p>
+      )}
+    </div>
+  )
+}
+
+function DocumentPanel({ enc, campaigns }: { enc: Enc; campaigns: CampaignList | null }) {
   const doc = enc.detail?.document
   if (!doc) {
     return (
@@ -156,7 +204,12 @@ function DocumentPanel({ enc }: { enc: Enc }) {
     <div className="px-5 pt-5 pb-16 max-[359px]:px-4 md:px-8 lg:pt-6 print:p-0">
       <div className="print-hidden mb-5 flex items-center justify-end gap-3 sm:justify-between">
         <p className="eyebrow max-sm:sr-only">Current encounter</p>
-        <DocumentActions encounter={doc} />
+        <div className="flex flex-wrap items-center justify-end gap-2">
+          {campaigns && enc.detail && (
+            <AddToCampaign encounterId={enc.detail.id} campaigns={campaigns} preferred={enc.detail.campaignId} />
+          )}
+          <DocumentActions encounter={doc} />
+        </div>
       </div>
       <EncounterDocument encounter={doc} />
     </div>

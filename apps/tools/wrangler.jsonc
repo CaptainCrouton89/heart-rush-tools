@@ -15,6 +15,7 @@
   ],
   "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "heartrush-tools-images" }],
   "triggers": { "crons": ["0 4 * * *"] },
+  "observability": { "enabled": true },
   "vars": {
     "CROUTER_CLIENT_ID": "w5p61c34rt3p",
     "CROUTER_ISSUER": "https://account.northlight.ai",

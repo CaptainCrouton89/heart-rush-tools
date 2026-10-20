@@ -8,7 +8,16 @@ export type EncounterDetail = {
   messages: StoredMessage[]
   document: Encounter | null
   running: boolean
+  /** The play.heartrush.party campaign this encounter's runs read; null = the typed party line. */
+  campaignId: string | null
 }
+
+/** `GET /api/campaigns`: unavailable while tools has no `PLAY` binding. `current` is the campaign of the GM's newest encounter. */
+export type Campaigns =
+  | { available: false }
+  | { available: true; campaigns: { id: string; name: string }[]; current: string | null }
+
+export type CampaignSession = { id: string; number: number; open: boolean }
 
 /** One row of `GET /api/encounters`. */
 export type EncounterSummary = { id: string; title: string; updated_at: string; hasDocument: boolean }
@@ -48,7 +57,16 @@ export const api = {
   saveParty: (party: Party) => call<Party>('/api/party', jsonBody('PUT', party)),
   list: () => call<EncounterSummary[]>('/api/encounters'),
   /** A new encounter holding the GM's first message; the encounter page then runs it. */
-  create: (text: string) => call<{ id: string }>('/api/encounters', jsonBody('POST', { text })),
+  create: (text: string, campaignId: string | null) =>
+    call<{ id: string }>('/api/encounters', jsonBody('POST', { text, campaignId })),
+  /** Change which party the encounter's next runs read. */
+  setCampaign: (id: string, campaignId: string | null) =>
+    call<{ ok: true }>(`/api/encounters/${encodeURIComponent(id)}`, jsonBody('PATCH', { campaignId })),
+  campaigns: () => call<Campaigns>('/api/campaigns'),
+  sessions: (campaignId: string) => call<CampaignSession[]>(`/api/campaigns/${encodeURIComponent(campaignId)}/sessions`),
+  /** Add to campaign: play attaches the encounter's id and title to the session. */
+  attach: (id: string, campaignId: string, sessionId: string) =>
+    call<{ ok: true }>(`/api/encounters/${encodeURIComponent(id)}/attach`, jsonBody('POST', { campaignId, sessionId })),
   get: (id: string) => call<EncounterDetail>(`/api/encounters/${encodeURIComponent(id)}`),
   remove: (id: string) => call<{ ok: true }>(`/api/encounters/${encodeURIComponent(id)}`, { method: 'DELETE' }),
   /** 200 `{ok: true}` once the run is confirmed cancelled; 202 `{ok: false, stopping: true}` while it is still starting (poll `get`). A 502 throws. */

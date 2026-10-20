@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { notFound, requireSession } from '~/server/api'
-import { deleteEncounter, loadEncounter, reconcile } from '~/server/encounters'
+import { campaignIdOf, notFound, requireSession } from '~/server/api'
+import { deleteEncounter, loadEncounter, reconcile, setEncounterCampaign } from '~/server/encounters'
+import { assertGmOf, PlayError, playErrorResponse } from '~/server/play'
 import { cancelRunConfirmed } from '~/server/runs'
 
 export const Route = createFileRoute('/api/encounters/$id/')({
@@ -23,7 +24,30 @@ export const Route = createFileRoute('/api/encounters/$id/')({
           messages: enc.messages,
           document: enc.document,
           running: enc.claim !== null,
+          campaignId: enc.campaign_id,
         })
+      },
+      /** `{campaignId}`: a play campaign the user is GM of, which the next runs read, or null for the typed party. */
+      PATCH: async ({ request, params }) => {
+        const who = await requireSession(request)
+        if (!who.session) return who.response
+        const { userId } = who.session
+        const body = (await request.json().catch(() => null)) as { campaignId?: unknown } | null
+        const campaignId = campaignIdOf(body?.campaignId)
+        if (campaignId === undefined) {
+          return Response.json({ error: 'campaignId must be a campaign id or null' }, { status: 400 })
+        }
+        if (!(await loadEncounter(userId, params.id))) return notFound()
+        if (campaignId) {
+          try {
+            await assertGmOf(userId, campaignId)
+          } catch (error) {
+            if (error instanceof PlayError) return playErrorResponse(error)
+            throw error
+          }
+        }
+        if (!(await setEncounterCampaign(userId, params.id, campaignId))) return notFound()
+        return Response.json({ ok: true })
       },
       DELETE: async ({ request, params }) => {
         const who = await requireSession(request)

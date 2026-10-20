@@ -4,6 +4,7 @@ import { Button } from '@heartrush/ui/components/button'
 import { Alert, AlertDescription } from '@heartrush/ui/components/alert'
 import { PageShell } from '~/components/page-shell'
 import { api, type EncounterSummary } from '~/components/encounter/api'
+import { useCampaigns } from '~/components/encounter/campaigns'
 import { Composer } from '~/components/encounter/composer'
 import { PartyLine, type PartyLineHandle } from '~/components/encounter/party-line'
 import { SignInPrompt } from '~/components/encounter/sign-in-prompt'
@@ -39,6 +40,12 @@ function EncounterBuilderIndex() {
   const [error, setError] = useState<string | null>(null)
   const [creating, setCreating] = useState(false)
   const party = useRef<PartyLineHandle>(null)
+  const campaigns = useCampaigns(signedIn)
+  /** The new encounter's party: a play campaign, or null for the typed party. Starts at the newest encounter's choice. */
+  const [campaignId, setCampaignId] = useState<string | null>(null)
+  useEffect(() => {
+    if (campaigns.kind === 'ready') setCampaignId(campaigns.current)
+  }, [campaigns])
 
   const load = useCallback(() => {
     api
@@ -56,7 +63,7 @@ function EncounterBuilderIndex() {
     try {
       // The run reads the stored party, so the values on screen must be saved first. A failed save shows on the party line.
       if (party.current && !(await party.current.save())) throw new Error('Save the party before starting.')
-      const { id } = await api.create(text)
+      const { id } = await api.create(text, campaignId)
       runFirstMessageOnLoad(id)
       await navigate({ to: '/encounter-builder/$id', params: { id } })
       return true
@@ -88,7 +95,7 @@ function EncounterBuilderIndex() {
           <SignInPrompt returnTo="/encounter-builder" />
         ) : (
           <>
-            <PartyLine ref={party} />
+            <PartyLine ref={party} campaigns={campaigns} campaignId={campaignId} onCampaignChange={setCampaignId} />
             <section aria-labelledby="new-heading" className="space-y-3">
               <h2 id="new-heading" className="font-serif text-h4 font-semibold">
                 New encounter

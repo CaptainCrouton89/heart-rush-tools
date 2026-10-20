@@ -22,6 +22,8 @@ type Row = {
   active_run_id: string | null
   claim: string | null
   stop_requested: number
+  /** play.heartrush.party campaign whose characters the runs read; null = the typed party line. */
+  campaign_id: string | null
   created_at: string
   updated_at: string
 }
@@ -72,23 +74,39 @@ export async function listEncounters(userId: string) {
 const titleOf = (text: string) => text.replace(/\s+/g, ' ').slice(0, 60)
 
 /** A new encounter holding the GM's first message, so the message is saved before any run starts. */
-export async function createEncounter(userId: string, text: string): Promise<string> {
+export async function createEncounter(userId: string, text: string, campaignId: string | null): Promise<string> {
   const id = crypto.randomUUID()
   const at = now()
   const messages: StoredMessage[] = [{ role: 'gm', text, at }]
   await env.DB.prepare(
-    `INSERT INTO encounter (id, user_id, title, messages, document, created_at, updated_at)
-     VALUES (?, ?, ?, ?, NULL, ?, ?)`,
+    `INSERT INTO encounter (id, user_id, title, messages, document, campaign_id, created_at, updated_at)
+     VALUES (?, ?, ?, ?, NULL, ?, ?, ?)`,
   )
-    .bind(id, userId, titleOf(text), JSON.stringify(messages), at, at)
+    .bind(id, userId, titleOf(text), JSON.stringify(messages), campaignId, at, at)
     .run()
   return id
+}
+
+/** The campaign of this GM's newest encounter (null for the typed party, or no encounter yet): the picker's starting choice. */
+export async function newestCampaignId(userId: string): Promise<string | null> {
+  const row = await env.DB.prepare('SELECT campaign_id FROM encounter WHERE user_id = ? ORDER BY created_at DESC LIMIT 1')
+    .bind(userId)
+    .first<{ campaign_id: string | null }>()
+  return row?.campaign_id ?? null
 }
 
 /** One of this GM's encounters, or null (another GM's id is indistinguishable from a missing one). */
 export async function loadEncounter(userId: string, id: string): Promise<EncounterRecord | null> {
   const row = await env.DB.prepare('SELECT * FROM encounter WHERE id = ? AND user_id = ?').bind(id, userId).first<Row>()
   return row ? parse(row) : null
+}
+
+/** Set which party this GM's encounter's next runs read: a play campaign id, or null for the typed party. False when not found. */
+export async function setEncounterCampaign(userId: string, id: string, campaignId: string | null): Promise<boolean> {
+  const result = await env.DB.prepare('UPDATE encounter SET campaign_id = ? WHERE id = ? AND user_id = ?')
+    .bind(campaignId, id, userId)
+    .run()
+  return result.meta.changes > 0
 }
 
 export async function deleteEncounter(userId: string, id: string): Promise<void> {

@@ -90,10 +90,14 @@ export function SiteHeader({ session }: { session: Session }) {
   return (
     <header className="print-hidden sticky top-0 z-40 border-b border-border bg-surface">
       <div className="mx-auto flex h-14 w-full max-w-6xl items-center gap-3 px-5 max-[359px]:px-4 sm:gap-6 md:h-16 md:px-8">
-        <Link to="/" className="flex items-baseline gap-2 rounded-sm" aria-label="Heart Rush Tools home">
-          <Wordmark />
-          <span className="border-l border-border pl-2 text-ui text-muted-foreground max-[359px]:hidden">Tools</span>
-        </Link>
+        <div className="flex items-baseline gap-2">
+          <a href="https://heartrush.party/" className="rounded-sm" aria-label="Heart Rush home">
+            <Wordmark />
+          </a>
+          <Link to="/" className="rounded-sm border-l border-border pl-2 text-ui text-muted-foreground hover:text-foreground max-[359px]:hidden">
+            Tools
+          </Link>
+        </div>
         <nav aria-label="Heart Rush sites" className="hidden items-center gap-5 sm:flex">
           {SIBLING_SITES.map((site) => (
             <SiteLink
