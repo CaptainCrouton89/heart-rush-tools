@@ -1,0 +1,8 @@
+{
+  "name": "@heartrush/northlight",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@north-light/sdk": "0.3.504"
+  }
+}

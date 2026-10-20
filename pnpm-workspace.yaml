@@ -8,3 +8,6 @@ allowBuilds:
 minimumReleaseAgeExclude:
   - miniflare@5.20261019.0-beta
   - wrangler@4.151.2
+  - '@north-light/api@0.3.504'
+  - '@north-light/identity@0.3.504'
+  - '@north-light/sdk@0.3.504'
