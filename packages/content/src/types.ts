@@ -40,6 +40,8 @@ export type Crumb = { title: string; path: string }
 export type SourceRef = { path: string; startLine: number; endLine: number }
 export type CrossRef = { sourceNodeId: string; targetId: string; path: string; anchor: string | null; label: string; previewId: string; origin: 'explicit' | 'term' }
 
+export type ChildSummary = { id: string; path: string; title: string; description: string | null; readingMinutes: number; kind: PageKind }
+
 export type Page = {
   id: string
   slug: string
@@ -65,6 +67,8 @@ export type Page = {
   wordCount: number
   readingMinutes: number
   children: string[]
+  /** Row data for each child, in `children` order, so a landing never fetches child bodies. */
+  childSummaries: ChildSummary[]
   previous: string | null
   next: string | null
   image: { src: string; alt: string; width: number; height: number } | null

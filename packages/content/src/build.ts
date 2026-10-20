@@ -71,6 +71,14 @@ const w = (rel: string, data: unknown) => {
   writeFileSync(p, JSON.stringify(data))
 }
 w('manifest.json', manifest)
+const pageById = new Map(drafts.map((d) => [d.page.id, d.page]))
+for (const d of drafts) {
+  d.page.childSummaries = d.page.children.map((id) => {
+    const c = pageById.get(id)
+    if (!c) throw new Error(`${d.page.id} lists unknown child ${id}`)
+    return { id: c.id, path: c.path, title: c.title, description: c.description, readingMinutes: c.readingMinutes, kind: c.kind }
+  })
+}
 for (const d of drafts) w(`pages/${d.page.id}.json`, { schemaVersion: SCHEMA_VERSION, contentVersion, ...d.page } satisfies PageFile)
 
 const catalogues = (['talents', 'spells', 'kin-culture'] as const).map((k) => buildCatalogue(k, drafts, contentVersion))

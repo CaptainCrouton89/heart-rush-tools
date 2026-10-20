@@ -88,7 +88,7 @@ export function collect(): Collected {
       source: o.parts.length ? sourceParts[0] : null, sourceParts: sourceParts.length > 1 ? sourceParts : [],
       body: fin.body, headings: fin.headings, crossRefs: [], aliases: [...new Set([...(ALIASES[o.path] ?? []), ...(o.navTitle !== title && o.kind !== 'landing' ? [o.navTitle] : [])])], tags: [...new Set(tags)],
       wordCount: words, readingMinutes: words ? Math.ceil(words / 220) : 0,
-      children: [], previous: null, next: null, image: null, facets: null, rawMetadata: meta,
+      children: [], childSummaries: [], previous: null, next: null, image: null, facets: null, rawMetadata: meta,
     }
     return add({ page, files: o.parts.map((p) => p.file), legacySlug: legacySlug(title) })
   }
