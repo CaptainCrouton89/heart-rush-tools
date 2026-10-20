@@ -4,6 +4,8 @@ import { authForOrigin } from '~/server/auth'
 
 // A Durable Object class must be a named export of the Worker's entry module.
 export { CampaignChannel } from '~/server/campaign-channel'
+// The tools Worker's service-binding entrypoint (spec §7.4); no route reaches it.
+export { ToolsApi } from '~/server/tools-api-entrypoint'
 
 /** The Worker's entry: TanStack Start's fetch handler plus the daily Northlight maintenance cron. */
 export default {
