@@ -1,107 +1,83 @@
+# A push to main deploys each Worker whose inputs changed since that Worker's last successful deploy.
+# "Last successful deploy" is the tag deployed/<app>, moved by the job after it succeeds. Diffing against that tag
+# instead of the push's previous commit means a deploy that is skipped, cancelled or fails is picked up by the next push.
+# Each app runs its own package `deploy` script; play's script owns its tests, migrations, 0% preview checks and promotion.
 name: Deploy
 
-# Every push to main deploys the apps whose inputs changed. "Run workflow" deploys all four.
 on:
   push:
     branches: [main]
-  workflow_dispatch:
+  workflow_dispatch: # deploys every app
 
 permissions:
-  contents: read
+  contents: write # moves the deployed/<app> tags
 
 env:
-  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  NODE_VERSION: '26'
 
 jobs:
   changes:
     runs-on: ubuntu-latest
     outputs:
-      rules: ${{ github.event_name == 'workflow_dispatch' || steps.filter.outputs.rules == 'true' }}
-      tools: ${{ github.event_name == 'workflow_dispatch' || steps.filter.outputs.tools == 'true' }}
-      hub: ${{ github.event_name == 'workflow_dispatch' || steps.filter.outputs.hub == 'true' }}
-      play: ${{ github.event_name == 'workflow_dispatch' || steps.filter.outputs.play == 'true' }}
+      apps: ${{ steps.diff.outputs.apps }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: dorny/paths-filter@v3
-        id: filter
+      - uses: actions/checkout@v7
         with:
-          filters: |
-            rules:
-              - apps/rules/**
-              - packages/content/**
-              - packages/ui/**
-              - heart_rush/**
-              - world-wikis/**
-              - navigation-categories.json
-              - gm-navigation-categories.json
-              - pnpm-lock.yaml
-              - .github/**
-            tools:
-              - apps/tools/**
-              - packages/northlight/**
-              - packages/ui/**
-              - pnpm-lock.yaml
-              - .github/**
-            hub:
-              - apps/hub/**
-              - packages/ui/**
-              - pnpm-lock.yaml
-              - .github/**
-            play:
-              - apps/play/**
-              - apps/tools/migrations/**
-              - packages/content/**
-              - packages/northlight/**
-              - packages/rules-engine/**
-              - packages/ui/**
-              - heart_rush/**
-              - world-wikis/**
-              - navigation-categories.json
-              - gm-navigation-categories.json
-              - pnpm-lock.yaml
-              - .github/**
+          fetch-depth: 0
+          fetch-tags: true
+      - id: diff
+        run: |
+          declare -A inputs=(
+            [hub]="apps/hub packages/ui"
+            [rules]="apps/rules packages/content packages/ui heart_rush world-wikis"
+            [tools]="apps/tools packages/northlight packages/ui"
+            [play]="apps/play apps/tools/migrations packages/content packages/northlight packages/rules-engine packages/ui heart_rush world-wikis"
+          )
+          apps=()
+          for app in hub rules tools play; do
+            tag="refs/tags/deployed/$app"
+            if [ "${{ github.event_name }}" = workflow_dispatch ] || ! git rev-parse -q --verify "$tag" >/dev/null; then
+              apps+=("$app"); continue
+            fi
+            # Dependency and workspace changes affect every app.
+            if ! git diff --quiet "$tag" "$GITHUB_SHA" -- ${inputs[$app]} pnpm-lock.yaml pnpm-workspace.yaml package.json .github/workflows/deploy.yml; then
+              apps+=("$app")
+            fi
+          done
+          json=$(printf '%s\n' "${apps[@]}" | jq -R . | jq -sc 'map(select(length>0))')
+          echo "apps=$json" | tee -a "$GITHUB_OUTPUT"
 
-  # Each job deploys the commit it checked out, which contains every earlier push, so a queued job replaced by a newer one loses nothing.
-  rules:
+  deploy:
     needs: changes
-    if: needs.changes.outputs.rules == 'true'
+    if: needs.changes.outputs.apps != '[]'
     runs-on: ubuntu-latest
-    concurrency: deploy-rules
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJSON(needs.changes.outputs.apps) }}
+    # One deploy of an app at a time; a later push waits for the running one instead of racing it.
+    concurrency:
+      group: deploy-${{ matrix.app }}
+      cancel-in-progress: false
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup
-      - run: pnpm --filter rules run deploy
-
-  tools:
-    needs: changes
-    if: needs.changes.outputs.tools == 'true'
-    runs-on: ubuntu-latest
-    concurrency: deploy-tools
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup
-      - run: pnpm --filter tools run db:migrate
-      - run: pnpm --filter tools run deploy
-
-  hub:
-    needs: changes
-    if: needs.changes.outputs.hub == 'true'
-    runs-on: ubuntu-latest
-    concurrency: deploy-hub
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup
-      - run: pnpm --filter hub run deploy
-
-  # apps/play/scripts/deploy.ts: tests, build, remote D1 migrations, upload, checks at 0%, promote.
-  # Its checks write a short-lived session row into the heartrush-tools D1 database, which the token's D1 Edit permission covers.
-  play:
-    needs: changes
-    if: needs.changes.outputs.play == 'true'
-    runs-on: ubuntu-latest
-    concurrency: deploy-play
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup
-      - run: pnpm --filter play run deploy
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6 # version comes from package.json packageManager
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Apply tools D1 migrations and generate Worker types
+        if: matrix.app == 'tools'
+        run: |
+          pnpm --filter tools run cf-typegen
+          pnpm --filter tools run db:migrate
+      - name: Deploy ${{ matrix.app }}
+        run: pnpm --filter ${{ matrix.app }} run deploy
+      - name: Record deployed commit
+        run: |
+          git tag -f "deployed/${{ matrix.app }}" "$GITHUB_SHA"
+          git push -f origin "refs/tags/deployed/${{ matrix.app }}"
