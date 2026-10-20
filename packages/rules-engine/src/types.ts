@@ -244,8 +244,7 @@ export type ActionBody =
   | { kind: 'gear:item:edit'; item: Partial<Omit<GearItem, 'id'>> & { id: string } }
   | { kind: 'gear:item:remove'; itemId: string }
   | { kind: 'gear:coins:set'; coins: Partial<Coins> }
-  /** The rank changes only through `xp:buy`. */
-  | { kind: 'aspect:add'; aspect: { text: string; honor?: boolean } }
+  /** New aspects and rank changes come only through `xp:buy`; these two edit text and honor or delete. */
   | { kind: 'aspect:edit'; aspect: { id: string; text?: string; honor?: boolean } }
   | { kind: 'aspect:remove'; aspectId: string }
   | { kind: 'profession:add'; profession: Partial<Omit<Profession, 'id'>> & { name: string } }
@@ -256,7 +255,8 @@ export type ActionBody =
   | { kind: 'profession:practice'; professionId: string }
   | { kind: 'profession:mission'; professionId: string; done: boolean }
   | { kind: 'profession:advance'; professionId: string }
-  | { kind: 'identity:set'; identity: Partial<Identity> }
+  /** Descriptive fields only: age category and benefits are fixed once the builder finishes. */
+  | { kind: 'identity:set'; identity: Partial<Pick<Identity, 'name' | 'pronouns' | 'dream' | 'description' | 'motivation' | 'portrait'>> }
   | { kind: 'notes:set'; notes: string }
   | { kind: 'raceEffects:set'; effects: RaceEffect[] }
   | { kind: 'attunement:set'; attunements: Attunement[] }
