@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "heartrush-tools",
+  "account_id": "8c13ab7fc53dc5dfb06c42c05a0e58eb",
+  "compatibility_date": "2026-05-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  "routes": [{ "pattern": "tools.heartrush.party", "custom_domain": true }]
+}

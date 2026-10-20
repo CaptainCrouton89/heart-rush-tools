@@ -87,3 +87,10 @@ world-wikis/**/Bestiary.md
 
 # Scratch notes and temporary content
 heart_rush/talents/spells/notes.md
+# Grove dev server runtime (pid, log)
+/.grove/run/
+
+# pnpm workspace apps/packages
+/apps/*/dist
+/apps/*/.wrangler
+/packages/*/local/
