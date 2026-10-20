@@ -11,8 +11,9 @@ import { SiteHeader } from '~/components/site-header'
  * server function that imports it on the server (the pattern `~/server/characters` uses).
  */
 const rootSessionFn = createServerFn({ method: 'GET' }).handler(async () => {
-  const { getSessionFn } = await import('~/server/session')
-  return getSessionFn()
+  // A plain function: a server function called from inside another one is not in the built server-function manifest.
+  const { currentSession } = await import('~/server/session')
+  return currentSession()
 })
 
 export const Route = createRootRoute({

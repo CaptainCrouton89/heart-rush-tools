@@ -41,4 +41,5 @@ export async function requireUser(request: Request = getRequest()): Promise<Sess
 }
 
 /** The signed-in person for the current request, or null. The root loader calls it on every page load. */
-export const getSessionFn = createServerFn({ method: 'GET' }).handler(() => sessionOf(getRequest()))
+export const currentSession = () => sessionOf(getRequest())
+export const getSessionFn = createServerFn({ method: 'GET' }).handler(currentSession)
