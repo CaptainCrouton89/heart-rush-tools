@@ -132,7 +132,6 @@ export function PartyLine({ ref, onSignIn }: { ref?: Ref<PartyLineHandle>; onSig
           className={cn(
             'w-full text-meta',
             status.kind === 'error' || invalid ? 'text-warning' : 'text-muted-foreground',
-            status.kind === 'idle' && !invalid && 'sr-only',
           )}
         >
           {invalid
