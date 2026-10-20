@@ -154,8 +154,8 @@ function DocumentPanel({ enc }: { enc: Enc }) {
   }
   return (
     <div className="px-5 pt-5 pb-16 max-[359px]:px-4 md:px-8 lg:pt-6 print:p-0">
-      <div className="print-hidden mb-5 flex items-center justify-between gap-3">
-        <p className="eyebrow">Current encounter</p>
+      <div className="print-hidden mb-5 flex items-center justify-end gap-3 sm:justify-between">
+        <p className="eyebrow max-sm:sr-only">Current encounter</p>
         <DocumentActions encounter={doc} />
       </div>
       <EncounterDocument encounter={doc} />

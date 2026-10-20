@@ -76,7 +76,7 @@ export function EncounterDocument({ encounter }: { encounter: Encounter }) {
         <div className="space-y-6">
           {encounter.enemies.map((enemy, i) => (
             <div key={i} className="space-y-2">
-              <p className="font-sans text-ui text-muted-foreground">
+              <p className="font-sans text-ui text-muted-foreground print:break-after-avoid">
                 <span className="font-semibold text-foreground tabular-nums">{enemy.count} ×</span>{' '}
                 <span className="capitalize">{enemy.role}</span>
               </p>
