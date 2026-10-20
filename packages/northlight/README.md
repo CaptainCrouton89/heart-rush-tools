@@ -14,7 +14,9 @@ const auth = createNorthlightAuth({
   privateKeyJson,  // Worker secret CROUTER_APP_KEY_JSON (JSON text of the app key)
   db,              // this app's D1 binding (`env.DB`) with the package migrations applied
   // optional: scopes (default openid, profile, crtr:llm, crtr:act — a run cannot start without crtr:act on the grant), cookieName (hr_session),
-  //           sessionTtlSeconds (30 days), homePath ('/')
+  //           sessionTtlSeconds (30 days), homePath ('/'),
+  //           cookieDomain (e.g. '.heartrush.party'; shared sign-in across sibling hosts — see below),
+  //           fetch (transport for directory requests; default global fetch — tests pass the fake directory's)
 })
 ```
 
@@ -26,6 +28,7 @@ Returned object:
 | `callback(request)` | `GET /auth/callback` | Requires the transaction cookie to equal `state` (else a 400 "not started in this browser" page), then deletes the pending row (single use, 10 min), exchanges the code, upserts the `user` row, saves the connection, creates a session, **deletes the session the browser presented before** (rotation), clears the transaction cookie and 303s to the stored path. `app_in_testing` renders a 403 page; every other failure (denied, expired, replayed code, bad ID token, database error) renders a 400 page with a retry link. |
 | `logout(request)` | `POST /auth/logout` | Deletes this browser's session row, clears the cookie, 303 to `homePath`. The stored connection is kept (the person stays connected). |
 | `getSession(request)` | — | `Promise<{userId, displayName} \| null>`. Joins `session` and `user`; expired rows do not match. |
+| `touchSession(request)` | — | Sliding session. `Promise<string \| null>`. When the presented session is valid and has less than 15 days left, one conditional `UPDATE` sets `expires_at` to now + `sessionTtlSeconds` and the call returns the `Set-Cookie` value to append to the response; otherwise null (no cookie, unknown, expired — an expired session is never revived — or 15+ days left). `getSession` never writes. |
 | `revokeAllSessions(userId)` | — | Deletes every session of that user (use after an account change or a suspected stolen cookie). |
 | `disconnect(userId)` | — | Deletes the user's sessions and their Northlight connection. The next AI call needs a fresh sign-in. Does not delete the `user` row (app data references it). |
 | `runMaintenance()` | — | For the daily cron: deletes expired sessions and `auth_pending` rows older than 10 min, then `oauth.refreshIdleConnections({olderThanMs: 30 days})`. Returns counts and any refresh failures. |
@@ -33,6 +36,14 @@ Returned object:
 | `oauth` | — | The underlying `OAuth2Client` (e.g. `accountAppUrl`). Its `onRefusal` deletes the user's sessions when the person removed the app (`removed`); `paused`/`reconnect` refusals keep sessions and the next AI call returns `not_connected`. |
 
 Session cookie: `hr_session`, `HttpOnly; SameSite=Lax; Path=/; Max-Age=30d`, plus `Secure` on https (omitted on `http://localhost` so dev works).
+
+### Shared sign-in (`cookieDomain`)
+
+With `cookieDomain: '.heartrush.party'` the session cookie (callback, logout, `touchSession`) is written and cleared with `Domain=.heartrush.party`, so tools and play receive the same `hr_session`. Both apps must bind the same D1 database so the `session` and `connection` tables are shared: there is one `connection` row per user, and the latest sign-in on either app replaces it. The transaction cookie `hr_session_tx` stays host-only on `/auth`. Callback and logout also send a host-only `hr_session=; Max-Age=0` so a browser that signed in before the domain was set does not send two `hr_session` cookies. Leave `cookieDomain` unset on `localhost`; the cookies are then exactly as before (host-only).
+
+## Tests
+
+`test/fake-directory.ts` is a stand-in Northlight directory served through the `fetch` option (discovery, a JWKS from a WebCrypto key, the token endpoint with signed ID tokens with or without `email`, refresh refusals via `refuseRefresh('grant_removed' | 'grant_suspended' | …)`), plus `openTestDb()` (local workerd D1 with the migration applied). Play's tests reuse both.
 
 ## Storage
 

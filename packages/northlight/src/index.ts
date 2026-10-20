@@ -25,6 +25,13 @@ export interface NorthlightAuthOptions {
   cookieName?: string
   /** Session lifetime in seconds. Default 30 days. */
   sessionTtlSeconds?: number
+  /**
+   * Share the session cookie across sibling hosts, e.g. `.heartrush.party`: the session cookie is written and cleared with `Domain=<cookieDomain>`.
+   * The sign-in transaction cookie stays host-only. Unset (localhost) the cookies are host-only. Every app sharing the cookie must share the `session` table.
+   */
+  cookieDomain?: string
+  /** The transport for directory requests (discovery, JWKS, token), passed to the SDK's `OAuth2Client`. Default: global `fetch`. Tests stand in for the Northlight directory with it. */
+  fetch?: typeof fetch
   /** Where `/auth/login` returns to when no valid `returnTo` is given, and where `/auth/logout` goes. Default `/`. */
   homePath?: string
 }
@@ -43,6 +50,7 @@ export interface MaintenanceResult {
 }
 
 const PENDING_TTL_SECONDS = 600
+const RENEW_BELOW_SECONDS = 15 * 24 * 60 * 60
 const IDLE_CONNECTION_MS = 30 * 24 * 60 * 60 * 1000
 
 export function createNorthlightAuth(options: NorthlightAuthOptions) {
@@ -52,6 +60,7 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
     cookieName = 'hr_session',
     sessionTtlSeconds = 60 * 60 * 24 * 30,
     homePath = '/',
+    cookieDomain,
   } = options
   const txCookieName = `${cookieName}_tx`
   const origin = new URL(options.redirectUri).origin
@@ -64,6 +73,7 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
     redirectUri: options.redirectUri,
     privateKey: JSON.parse(options.privateKeyJson),
     store,
+    ...(options.fetch ? { fetch: options.fetch } : {}),
     // The person removed the app or their account: their sessions here are dead. Other refusals keep sessions.
     onRefusal: async (refusal) => {
       if (refusal.kind === 'removed') await revokeAllSessions(refusal.userId)
@@ -87,8 +97,24 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
     }
   }
 
-  const cookie = (name: string, value: string, maxAge: number, path: string) =>
-    [`${name}=${value}`, `Path=${path}`, 'HttpOnly', 'SameSite=Lax', `Max-Age=${maxAge}`, ...(secure ? ['Secure'] : [])].join('; ')
+  const cookie = (name: string, value: string, maxAge: number, path: string, domain?: string) =>
+    [
+      `${name}=${value}`,
+      `Path=${path}`,
+      ...(domain ? [`Domain=${domain}`] : []),
+      'HttpOnly',
+      'SameSite=Lax',
+      `Max-Age=${maxAge}`,
+      ...(secure ? ['Secure'] : []),
+    ].join('; ')
+
+  /** The session cookie as this app writes it: on `cookieDomain` when set, else host-only. */
+  const sessionCookie = (value: string, maxAge: number) => cookie(cookieName, value, maxAge, '/', cookieDomain)
+  /**
+   * With a shared `cookieDomain`, a browser that signed in before it was set holds a host-only `hr_session` too; the browser would send both.
+   * Clearing the host-only one (a `Set-Cookie` with no `Domain`) leaves only the shared cookie.
+   */
+  const clearHostOnlySession = cookieDomain ? [cookie(cookieName, '', 0, '/')] : []
 
   const redirect = (location: string, ...setCookies: string[]) => {
     const headers = new Headers({ location })
@@ -208,7 +234,7 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
         // Rotate: whatever session this browser held before is retired by the new sign-in.
         const previous = cookieOf(request, cookieName)
         if (previous) await db.prepare('DELETE FROM session WHERE id = ?').bind(previous).run()
-        return redirect(pending.next_path, cookie(cookieName, sid, sessionTtlSeconds, '/'), clearTx)
+        return redirect(pending.next_path, sessionCookie(sid, sessionTtlSeconds), ...clearHostOnlySession, clearTx)
       } catch (e) {
         console.error('northlight sign-in failed', e)
         return page(400, 'Sign-in failed', `<p>Northlight could not complete this sign-in. ${retry}.</p>`, clearTx)
@@ -219,7 +245,7 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
     async logout(request: Request): Promise<Response> {
       const sid = cookieOf(request, cookieName)
       if (sid) await db.prepare('DELETE FROM session WHERE id = ?').bind(sid).run()
-      return redirect(homePath, cookie(cookieName, '', 0, '/'))
+      return redirect(homePath, sessionCookie('', 0), ...clearHostOnlySession)
     },
 
     /** The signed-in person, or null. */
@@ -234,6 +260,27 @@ export function createNorthlightAuth(options: NorthlightAuthOptions) {
         .bind(sid, nowIso())
         .first<{ user_id: string; display_name: string }>()
       return row ? { userId: row.user_id, displayName: row.display_name } : null
+    },
+
+    /**
+     * Sliding session. When the presented session is valid and has less than 15 days left, sets its `expires_at` to now + `sessionTtlSeconds`
+     * and returns the `Set-Cookie` value to send with the response; otherwise returns null. `getSession` never writes.
+     * The check and the write are one conditional UPDATE, so concurrent requests extend once each at most and an expired session is never revived.
+     */
+    async touchSession(request: Request): Promise<string | null> {
+      const sid = cookieOf(request, cookieName)
+      if (!sid) return null
+      const now = Date.now()
+      const result = await db
+        .prepare('UPDATE session SET expires_at = ? WHERE id = ? AND expires_at > ? AND expires_at < ?')
+        .bind(
+          new Date(now + sessionTtlSeconds * 1000).toISOString(),
+          sid,
+          new Date(now).toISOString(),
+          new Date(now + RENEW_BELOW_SECONDS * 1000).toISOString(),
+        )
+        .run()
+      return result.meta.changes > 0 ? sessionCookie(sid, sessionTtlSeconds) : null
     },
 
     /** Sign `userId` out everywhere: deletes every session of theirs. The connection is kept. */

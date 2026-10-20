@@ -16,12 +16,15 @@ const byOrigin = new Map<string, NorthlightAuth>()
 export function authForOrigin(origin: string): NorthlightAuth {
   let auth = byOrigin.get(origin)
   if (!auth) {
+    const { hostname } = new URL(origin)
     auth = createNorthlightAuth({
       clientId: env.CROUTER_CLIENT_ID,
       issuer: env.CROUTER_ISSUER,
       redirectUri: `${origin}/auth/callback`,
       privateKeyJson: env.CROUTER_APP_KEY_JSON,
       db: env.DB,
+      // One sign-in across tools.heartrush.party and play.heartrush.party (host-only on localhost).
+      ...(hostname === 'heartrush.party' || hostname.endsWith('.heartrush.party') ? { cookieDomain: '.heartrush.party' } : {}),
     })
     byOrigin.set(origin, auth)
   }
