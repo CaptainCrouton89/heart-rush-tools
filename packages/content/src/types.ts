@@ -68,7 +68,7 @@ export type Page = {
   previous: string | null
   next: string | null
   image: { src: string; alt: string; width: number; height: number } | null
-  facets: Record<string, unknown> | null
+  facets: TalentFacets | RaceFacets | null
   rawMetadata: string | null
 }
 
