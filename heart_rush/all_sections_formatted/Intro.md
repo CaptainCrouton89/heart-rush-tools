@@ -22,7 +22,7 @@ Let's cut to the chase. Here's what you're getting:
 
 **Scale Without the Spreadsheets**
 
-- **Zoom in for tactics, zoom out for strategy.** One flexible system handles everything from bar brawls to kingdom management.
+- **Play out a bar brawl and roll a kingdom's year.** Both use the same dice.
 - **Start desperate, end legendary.** Begin counting copper as struggling mercenaries, end as rulers shaping nations.
 - **You'll feel heroic eventually—but you'll earn it.** Power comes from surviving impossible odds, not from prescribed build paths.
 

@@ -6,7 +6,7 @@ Journeys, trade routes, profession missions and several other rules in this book
 
 ## What a Stratagem Is
 
-A stratagem has a goal, a list of objectives that reach it, and a length of time that each roll covers. Each roll is a normal check against a Challenge Number (CN), and one success finishes one objective.
+A stratagem takes one of three shapes: a list of objectives to finish a goal, a menu of preparations before an event, or a repeating operation with no end. Each roll covers a length of time and is a normal check against a Challenge Number (CN).
 
 You are never forced to roll. Before any roll you can play the objective out as a scene instead, so a roll covers only the parts nobody at the table wants to play.
 
@@ -19,13 +19,14 @@ You are never forced to roll. Before any roll you can play the objective out as 
 
 ## Setting Up
 
-Before the first roll, the GM and players settle five things:
+Before the first roll, the GM and players settle six things:
 
 1. **The goal.** Be specific: "capture the fortress island" works, "defeat the pirates" does not.
 2. **The objectives.** See below.
 3. **The time each roll covers.** Hours for a rescue before dawn, a week for a siege, a season for a trade route. A longer period means fewer rolls, so choose it to match how often you want to roll.
 4. **The setup CN.** See below.
-5. **The known threats.** The GM names any threat the players already know about, such as "the Duke of Vell may send relief." A threat is not in the CN; it becomes a hindrance if it arrives.
+5. **The known threats.** The GM names any threat the players already know about, such as "the Duke of Vell may send relief." A threat is not in the CN. If it arrives, the GM decides from the fiction whether it becomes a hindrance or starts a scene or a fight (see Ending in a Fight).
+6. **The deadline, if any.** When it passes, the stratagem ends and the event it guards happens with whatever the players have finished; unfinished objectives are not finished.
 
 ### Objectives
 
@@ -44,6 +45,8 @@ An obstacle in the way is a hindrance (see Assets and Hindrances), not an object
 ### Breaking a Goal Down
 
 If you cannot see the objectives, ask four questions: who must agree, where must it take hold, what must exist, and what stands in the way. Plan only the next one or two objectives and leave the rest as blank slots. An objective too big for one roll becomes a stratagem of its own, and finishing it finishes the objective.
+
+An asset or hindrance applies to every later roll it bears on, at any level, and is never added twice to one roll. The outer objective takes as long as its inner stratagem took, not an extra outer period, and other leaders keep rolling on the outer schedule meanwhile. A profession mission counts objectives at the level where the mission was set up.
 
 ### The Setup CN
 
@@ -64,7 +67,7 @@ The GM may set a CN above 21 for a goal that is impossible until the players cha
 
 The stratagem roll is a normal check: **Heart die + one ability die + modifiers against the CN.** Use your Heart die at its current size. Pick the ability die that fits your approach (Cunning for a plan, Presence for a council, Might for an assault), and add the usual modifiers: profession, aspects, advantage and disadvantage. A short rest returns your Heart die to its maximum, so rolls for long stratagems are almost always made with a full Heart die.
 
-A total at or above the CN succeeds and finishes the objective. A total below it fails. How far above or below makes no difference.
+A total at or above the CN succeeds and finishes the objective (in a repeating operation, it succeeds for that period). A total below it fails. How far above or below makes no difference.
 
 If either die shows a 1, make the usual complication choice (see Dice Mechanics): fail, or reroll that die and take a complication.
 
@@ -80,49 +83,56 @@ The GM does not announce what failure will cost.
 
 ### Who Rolls
 
-Each objective has a leader, who makes its roll. Several objectives can be pursued in the same period, each with its own leader, and acting in parallel carries no automatic penalty. If the fiction says a split costs something, the GM names it as a hindrance, such as "Divided forces."
+Each objective has a leader, who makes its roll. Several objectives can be pursued in the same period, each with its own leader, and acting in parallel carries no automatic penalty. If the fiction says a split costs something, the GM names it as a hindrance, such as "Divided forces," which lasts only while the forces are split.
 
-Everyone else helps under the normal help rules or plays a scene.
+Nobody helps on a stratagem roll: the leader's roll stands alone, with the normal help rules set aside. A character's period goes to one objective, leading its roll; any character may also play a scene, including a leader (see Intervene before a roll). Quick combat is the exception to one objective per period (see Misc. Other Rules): its four outcomes happen in one stretch of minutes, so every character may lead any outcome.
 
 ### Failure
 
 A failed roll always costs the time it covered, and usually more. The GM decides the cost when it happens, as with any failed skill check. Sometimes time is the whole cost: a student who fails a month of study has lost a month.
 
-A failed objective stays open, and you can attempt it again in the next period. If the failure closes a route, such as a rival winning over a guildmaster, the GM replaces the objective only when another route plausibly exists. Otherwise the objective is gone.
+A failed objective stays open, and you can attempt it again in the next period. If the failure closes a route, such as a rival winning over a guildmaster, the GM replaces the objective only when another route plausibly exists. If it was required and no replacement exists, the goal cannot be won as stated.
+
+If the GM set a count from several possible routes, the count stays the same while the number of available routes shrinks.
 
 ## Playing It Out
 
 Scenes are how players change the odds. There is no cap on how many you play, and each uses the normal rules for skill checks, combat and conversation. There are three ways in.
 
-**Play the objective instead of rolling it.** Before any roll, or after a failed one, you may play the objective as a scene that takes the same time the roll would have. If it goes well, the objective is finished with no roll. If it goes badly, it costs what such a scene normally would.
+**Play the objective instead of rolling it.** Before any roll, you may play the objective as a scene that takes the same time the roll would have. The scene faces the same situation the objective does: the GM sets the checks in it from that situation, and the GM names the concrete fact each asset and hindrance in play becomes (the fouled well means the defenders are sick; the alerted guards mean doubled patrols). If what happened in the scene would plausibly finish the objective, it is finished with no roll; if it goes badly, it costs what such a scene normally would.
 
-**Intervene before a roll.** Do something that makes the roll easier without finishing the objective: sabotage supplies, win an ally, rally the troops. The GM sizes the effect from how the scene actually went, and it takes one of two forms:
+After a failed roll, a scene spends no further period unless it carries on into the next objective, whether the GM offers it from a worse position or the players start it. If it goes well it finishes the objective, and if it goes badly the objective stays open.
 
-- **A modifier to the next roll:** ±3 for a small gain, ±6 for a major one, ±9 for a legendary one.
+**Intervene before a roll.** Do something that makes the roll easier without finishing the objective: sabotage supplies, win an ally, rally the troops. The scene's time is added before the period, so the roll's period starts after the scene, and under a deadline that time comes off the clock. Any character may play it, including the one who leads the next roll, and the GM sizes the effect from how the scene actually went into one of two forms:
+
+- **A modifier to a roll:** ±3 for a small gain, ±6 for a major one, ±9 for a legendary one. If several rolls happen in the same period, the GM names which roll it applies to.
 - **A lasting change in the world,** recorded as an asset or hindrance (see below).
 
 A scene that goes badly can hurt instead: a botched assassination puts the enemy on alert.
 
-**Play out a complication.** When you take a complication, you can play it out as a scene, or the GM can record it as a hindrance.
+**Play out a complication.** When you take a complication, the players may play it out as a scene. If they do not, the GM records it as a hindrance.
 
-### When a Failure Covers Something You Do in Person
+### A Tip: Failure Can Open a Scene
 
-If a roll stands in for something the characters do in person, such as slipping out past the guards, its failure cost is a worse starting position for a scene, not the outcome. "You try to slip out and the guards catch you on the wall; combat begins" is correct. "You are caught and jailed" from a single roll is bad form, because it takes away the scene the players would want to play.
+Any failure cost can come from one roll. But when the roll stood in for something the characters do in person, such as slipping out past the guards, a worse starting position for a scene is usually a better cost than the outcome itself. "You try to slip out and the guards catch you on the wall; combat begins" gives the players a scene to play. "You are caught and jailed" from a single roll takes that scene away. This is advice, not a rule; quick combat and journeys state their failure costs outright.
 
-A stratagem run from a distance, such as a trade route or a course of study, fails with a plain cost instead. If you run a stratagem through agents, you still make the roll, but you cannot play it out in person.
+A stratagem run from a distance, such as a trade route or a course of study, fails with a plain cost. If you run a stratagem through agents, you still make the roll, and you can play an objective out in person only by going yourself for that objective.
 
 ## Assets and Hindrances
 
-An asset or hindrance is a lasting change in the situation after setup. Record it as a name and a modifier of ±3, one step on the CN ladder: an asset lowers the CN by 3 and a hindrance raises it by 3. It applies to every later roll for as long as it lasts, and they stack. A scene or the story can change or remove one.
+An asset or hindrance is a lasting change in the situation after setup. Record it as a name and a modifier of ±3, one step on the CN ladder: an asset lowers the CN by 3 and a hindrance raises it by 3. It applies to later rolls of the stratagem it bears on for as long as it lasts, and they stack.
+
+A scene or the story can change or remove one. When more than one stratagem is open, the GM names which one a new asset or hindrance bears on. When a new stratagem starts, what already exists is counted into its setup CN rather than carried over as an asset or hindrance.
 
 Assets and hindrances apply to stratagem rolls only. At scene scale, advantage and disadvantage do this job.
 
 A hindrance comes only from these places:
 
-- A threat named at setup, once it arrives.
+- A threat named at setup, if the GM makes it a hindrance when it arrives.
 - A failure.
 - A complication.
 - A scene that went badly.
+- A split the GM prices (see Who Rolls).
 - A consequence of success that the GM stated before the roll.
 
 An asset comes from a change after setup, usually a scene that went well. In a menu of preparations (see below), each successful preparation is an asset.
@@ -151,7 +161,9 @@ The goal is reached when the objectives are done.
 
 ### A Menu of Preparations Under a Deadline
 
-An event is coming, and the objectives are optional preparations. The deadline limits how many the group can attempt. Each result, success or failure, becomes an asset or hindrance for the event.
+An event is coming, and the objectives are optional preparations. The deadline limits how many the group can attempt. Each result, success or failure, becomes an asset or hindrance for the event, not for the other preparations' rolls.
+
+For an event that is not a fight, each asset or hindrance becomes advantage or disadvantage on the check it bears on. If a preparation is retried, its new result replaces the old one.
 
 - Fortifying a village before a raid.
 - Preparing for a duel: study the opponent, choose the ground, get a better blade.
@@ -161,10 +173,14 @@ An event is coming, and the objectives are optional preparations. The deadline l
 
 ### A Repeating Operation With No End
 
-There is no list. Roll once per period, and the player picks an approach each time. A hindrance from a bad result can become an adventure of its own, such as going to deal with the bandits who hold the pass.
+There is no list. At setup, the GM states what a successful period yields and names two or three approaches, each of which changes the CN or the yield as a trade route's shipping choice does; the player picks one each period. Roll once per period; running it takes its leader's period like any objective, and its yield is what setup stated.
+
+A repeating operation cannot finish a goal: a goal needs objectives. A hindrance from a bad result can become an adventure of its own, such as going to deal with the bandits who hold the pass. The GM may record one lasting change the operation causes as a single asset, once; the operation does not add a new asset each period.
+
+A stronghold's fixed income (see Strongholds) needs no roll. A repeating operation at a stronghold yields something beyond that income, stated at setup.
 
 - A trade route: one roll per season.
-- Running a stronghold.
+- An operation at a stronghold beyond its fixed income.
 - Running a tavern.
 - Running a spy network.
 - Leading a mercenary company.
@@ -178,15 +194,15 @@ When a stratagem ends in a fight, turn each asset and hindrance into a concrete 
 
 The trail roll succeeds. The habits roll fails, which costs the half day and another villager, but the objective stays open. They try again and succeed: the wyrm strikes from the reeds at dusk. The ground roll succeeds: they stake bait at the drowned chapel, where the water is shallow. The fight begins with these conditions:
 
-- The party waits hidden in the reeds, so the wyrm is surprised and loses its first turn.
+- The party succeeded at a stealth check to hide in the reeds. The wyrm has not met them and does not know they are there, so it is surprised and loses its action for the first round.
 - The party has advantage on defense rolls in round 1, because they know where it will strike from.
-- The water is shallow, so the wyrm moves through difficult terrain and cannot submerge.
+- The water is shallow, so it is difficult terrain for everyone moving through it, and it is too shallow for a wyrm of this size to submerge.
 
 **Example: fortifying Millbrook.** Raiders arrive in five days. The menu has five preparations: build a palisade, train the militia, dig pits at the ford, ride for Lord Ast's help, and evacuate the children. There is time for four, so four players each take one and make one roll for the five days.
 
 The palisade succeeds. The militia roll fails: they break at the first drill, which gives the hindrance "Green militia." The pits succeed and the ride to Lord Ast succeeds. Nobody evacuates the children. The raid begins with these conditions:
 
-- Ranged attacks against defenders behind the palisade have two levels of disadvantage (heavy cover).
+- The defenders stand on the walkway behind the palisade, so ranged attacks against them from the field have two levels of disadvantage (heavy cover).
 - The ford is difficult terrain for the raiders.
 - Ten riders from Lord Ast arrive at the start of round 4.
 - The militia flee when the first of them falls.
@@ -213,8 +229,8 @@ Sarah accepts. She rolls 6 and 5, plus 3: 14 against 12, and the walls fall. The
 These rules run on this one, each with its own settings:
 
 - **Journeys:** segments are the objectives. See Journeys.
-- **Trade routes:** see Trading & Merchants.
-- **Learning a language and quick combat:** see Other Rules.
+- **Trade routes:** see Trade Routes & Merchants.
+- **Learning a language and quick combat:** see Misc. Other Rules.
 - **Profession missions:** see Building Your Character.
 - **Stronghold construction with obstacles:** see Strongholds.
 - **Magical crafting:** see Magical Crafting.

@@ -4,7 +4,7 @@ Not all travel needs rules. Walking between nearby villages on safe roads requir
 
 ## When to Use Journey Rules
 
-The journey system serves three purposes: it creates risk for dangerous travel, it allows players to zoom in on interesting moments while glossing over repetitive ones, and it integrates travel challenges with the rest of the game's mechanics.
+The journey system serves three purposes: it creates risk for dangerous travel, it allows players to play out the interesting moments while the repetitive ones are rolled and summarized, and it integrates travel challenges with the rest of the game's mechanics.
 
 **Skip these rules entirely when:**
 
@@ -37,7 +37,9 @@ The number of segments depends on journey length and danger:
 - **2-3 segments:** Several days to a week
 - **4-6 segments:** Week to month-long expedition
 
-Segment boundaries occur at major transitions: terrain changes, resupply opportunities, or dramatic shifts in danger level. A journey from a port city to mountain ruins might have three segments: coastal roads (safe, no roll needed), foothills (1 segment), and high mountain passes (1 segment).
+Segment boundaries occur at major transitions: terrain changes, resupply opportunities, or dramatic shifts in danger level. A journey from a port city to mountain ruins might have two segments: the foothills and the high mountain passes. The safe coastal roads are narrated and are not a segment, because a segment is an objective that one roll or one scene achieves.
+
+A journey is a stratagem (see the Stratagem System section) and its segments are the objectives, so interventions, scenes that finish a segment, and assets and hindrances apply as they do to any stratagem.
 
 ### Journey Difficulty
 
@@ -53,9 +55,9 @@ Each segment has a Challenge Number based on terrain and conditions:
 
 ## Making Journey Rolls
 
-At the start of each segment, one character makes a journey roll. This is typically whoever is guiding the group—the best navigator, the local guide, or whoever has the most relevant expertise.
+At the start of each segment, one player character leads the journey roll. This is typically the party's best navigator or the character whose approach fits the segment. Nobody helps on a journey roll, as on any stratagem roll. A guide the party already has is counted in the setup CN, and one hired later is an asset; either way the leader may use the guide's knowledge as the reason to roll Cunning.
 
-**The roll:** Heart die + relevant ability die + relevant skill + aspects
+**The roll:** Heart die + relevant ability die + applicable profession + aspects
 
 **Choosing ability die:**
 
@@ -64,7 +66,7 @@ At the start of each segment, one character makes a journey roll. This is typica
 - **Cunning:** Complex navigation, finding safe paths, weather prediction
 - **Presence:** Maintaining group morale, negotiating passage
 
-Other characters can help (granting advantage) if they can provide unique expertise to the journey, beyond things that anyone with eyes, ears, and a brain could do. For example, if they are a sailor and it's a sea voyage, or if they have wilderness knowledge on a mountaineering trip.
+Another character's expertise, such as a sailor on a sea voyage or wilderness knowledge on a mountaineering trip, is a reason for that character to lead the segment, not a help roll.
 
 ### Journey Roll Results
 
@@ -72,13 +74,13 @@ Other characters can help (granting advantage) if they can provide unique expert
 
 **Failure (below CN):** The party fails to achieve their core objective for this segment. They might become lost, make no progress, or find their route impassable. The GM selects one result from the Failure Consequences section.
 
-**Complications (a die shows a 1):** Whether the roll succeeds or fails, an unexpected situation arises requiring immediate attention. Play zooms in to action mode as players deal with the complication. The GM selects from the Complications section.
+**Complications (a die shows a 1):** Make the usual complication choice: fail, or reroll that die and accept a complication. When you accept a complication, an unexpected situation arises requiring immediate attention, whether the roll then succeeds or fails, and you play it out as a scene. The GM selects from the Complications section.
 
 ## Failure Consequences
 
 When a journey roll fails, the party has genuinely failed at their goal for that segment. The GM chooses from one of the options below, selecting one from the list below. They may also choose to offer the players a choice between a few, though they have no obligation to do so.
 
-When they choose an option, the GM should describe exactly what is stopping the party from succeeding. Sometimes, the party will have an idea on how to overcome the failure, in which case they are welcome to try—play should zoom back in.
+When they choose an option, the GM should describe exactly what is stopping the party from succeeding. Sometimes, the party will have an idea on how to overcome the failure, in which case they are welcome to try—play it out as a scene.
 
 ### Lost or Stalled
 
@@ -119,7 +121,7 @@ The party cannot secure proper shelter or safety:
 When time matters, the journey takes far longer than expected:
 
 - **Missed Opportunity**
-  - Arrive too late for time-sensitive goals.
+  - The delay can cost a time-sensitive goal. If the characters can still act on it when they arrive, play it out as a scene from a worse position.
   - GM: "You crest the final hill to see the merchant caravan's dust cloud disappearing over the horizon. The trading post keeper shakes his head—they left at dawn, couldn't wait any longer with winter coming."
   - Party followup: The party might try to catch up by pushing hard, seek alternative transportation, or find another way to accomplish their original goal.
 - **Season Change**
@@ -133,7 +135,7 @@ When time matters, the journey takes far longer than expected:
 
 ## Complications
 
-Complications represent immediate dangers or crises that erupt during travel. They don't prevent progress on their own, but they demand split-second decisions and action. When a complication occurs, play always zooms in to action mode—the situation is happening now, and the players must react.
+Complications represent immediate dangers or crises that erupt during travel. They don't prevent progress on their own, but they demand split-second decisions and action. When you accept a complication, you play it out as a scene—the situation is happening now, and the players must react.
 
 ### Mountain & Arctic Complications
 
@@ -207,7 +209,7 @@ Switch to daily tracking when:
 - A failed journey roll results in "No Safe Camps"
 - Resolving any complication
 - Extreme weather conditions threaten survival
-- Players choose to "zoom in" for any reason
+- Players choose to play out the travel day by day for any reason
 
 During daily tracking:
 
@@ -221,28 +223,29 @@ During daily tracking:
 Journey preparation matters. Well-equipped parties journey more safely:
 
 - **Food/Water Rations:** Without adequate supplies, use starvation and dehydration rules from Basic Needs
-- **Tent:** Provides shelter and +20 to sleeping checks
-- **Bedroll:** Grants +20 to sleeping checks
+- **Tent:** Provides shelter and lowers the CN of sleeping checks by 3
+- **Bedroll:** Lowers the CN of sleeping checks by 3
 - **Healing Kits:** Essential for treating wounds during travel
 - **Rope, Climbing Gear:** May grant advantage on rolls in mountainous terrain
-- **Guide or Map:** May grant advantage on journey rolls
+- **Guide or Map:** A player character guide who leads the roll uses their applicable profession, and is not also counted in the setup CN. A non-player guide, a map, written directions or local knowledge the party already has is counted in the setup CN; a guide hired after setup is an asset (-3).
 
 [[Example Journey
 The party must reach the Storm Crown ruins before the cult completes their ritual—a journey of roughly 100 miles through increasingly dangerous terrain.
 
 **GM Preparation:**
 
-- Segment 1: Farmlands to forest edge (safe, no roll)
-- Segment 2: Through the Darkwood (CN 9)
-- Segment 3: Climbing the Stormpeaks (CN 12)
-- Segment 4: The ruins approach (CN 15)
+- Farmlands to forest edge: safe, narrated, not a segment
+- Segment 1: Through the Darkwood (CN 9)
+- Segment 2: Climbing the Stormpeaks (CN 12)
+- Segment 3: The ruins approach (CN 15)
+- Each roll covers two days, and the cult completes the ritual in ten days
 
 **Play Example:**
-Segment 1 passes in narration. For Segment 2, the party navigator rolls Heart (d8) + Cunning (d8). Rolling 1, 6, they choose to take the complication, rerolling the 1 for a 5. They succeed with their new roll, and take a complication.
+The farmlands pass in narration. For Segment 1, the party navigator rolls Heart (d8) + Cunning (d8). Rolling 1, 6, they choose to take the complication, rerolling the 1 for a 5. They succeed with their new roll, and take a complication.
 
 The GM describes a successful if tense journey through the forest, but the 1 triggers a complication: wildfire spreading from the west. The party must choose: race through on the known path (risking the flames) or detour through giant spider territory.
 
-After resolving the fire escape, Segment 3 begins. The ranger rolls poorly: 5 total against CN 12. The party becomes lost in a blizzard, adding an extra segment to the journey. Will they still arrive in time?]]
+After resolving the fire escape, Segment 2 begins. The ranger rolls poorly: 5 total against CN 12. The party becomes lost in a blizzard, adding an extra segment to the journey. The Stormpeaks stay open, the failed roll cost two days, and the ritual is now six days away. Will they still arrive in time?]]
 
 ## Running Journeys
 
@@ -260,7 +263,7 @@ The journey system creates a framework for travel drama without simulation. Focu
 
 **Match complications to tone:** In a gritty survival game, complications might all threaten resources. In high adventure, they might offer mysterious discoveries or dramatic challenges.
 
-**Know when to zoom out:** Once a complication resolves, return to montage mode unless resources are critically low or players want to continue in detail.
+**Know when to return to montage mode:** Once a complication resolves, go back to narrating the journey unless resources are critically low or players want to continue in detail.
 
 ### For Players
 
@@ -268,7 +271,7 @@ Journeys are opportunities for adventure, not just transitions between locations
 
 **Prepare appropriately:** Equipment matters. A tent and bedroll can mean the difference between recovering from wounds waking up tired and unhealed.
 
-**Consider guides:** Local knowledge grants advantage and might reveal better routes.
+**Consider guides:** A player character guide can lead with an applicable profession, and is not also counted in the setup CN. A non-player guide the party already has is counted in the setup CN, and one hired after setup is an asset (-3); either way the leader can use the guide's knowledge as the reason to roll Cunning. A guide might also reveal better routes.
 
 **Embrace complications:** These moments let you make meaningful choices about your journey. The ancient ruins might hold treasures—or threats.
 

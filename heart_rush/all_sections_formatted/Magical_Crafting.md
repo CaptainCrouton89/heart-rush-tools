@@ -59,9 +59,9 @@ Magical smithing creates permanent items like weapons, armor, tools, and other d
 
 Magical alchemy produces consumable items like potions, oils, bombs, and other temporary effects. This requires a laboratory with a level equal to or greater than the item being crafted, though alchemists can use a laboratory one level lower if they accept disadvantage on all crafting checks.
 
-Alchemy is significantly faster than smithing, requiring only one-fifth the standard crafting time. The material costs are also reduced to half the standard rate. Additionally, alchemists can use "depleted" components salvaged from failed crafting attempts, though these still must meet the level requirements.
+Alchemy is significantly faster than smithing, requiring only one-fifth the standard crafting time. Additionally, alchemists can use "depleted" components salvaged from failed crafting attempts, though these still must meet the level requirements.
 
-The real advantage of alchemy comes in batch production. When crafting potions or oils, a single crafting attempt produces 10 doses. Ammunition like arrows or bolts comes in batches of 20. Bombs and grenades yield 5 per batch. Only unique consumables are limited to single items per attempt.
+The real advantage of alchemy comes in batch production. When crafting potions or oils, a single crafting attempt produces 10 doses. Ammunition like arrows or bolts comes in batches of 20. Bombs and grenades yield 5 per batch. Consumables of level 4 or higher produce a single dose per attempt.
 
 The power of alchemical items scales predictably with level. Level 1 consumables provide basic effects like healing 10 HP, granting +1 to skill checks for an hour, or simple utility effects. Level 2 items heal 20 HP, provide +2 bonuses lasting 4 hours, or create minor status effects. Level 3 consumables heal 40 HP, grant +3 bonuses for 8 hours, or cause significant status changes. Level 4 items heal 80 HP, temporarily increase ability dice, or last 24 hours. Level 5 consumables can fully heal, grant major temporary abilities, or cause permanent minor changes. Level 6 items approach the legendary—raising the dead, creating permanent major changes, or bending reality. Level 7 consumables achieve mythical effects like true resurrection, permanent transformations, or god-tier abilities.
 
@@ -75,37 +75,43 @@ When following procedure, the GM will tell you the level of the item you are cra
 
 ### Inventing
 
-When inventing, you need to work with the GM to determine exactly what you're trying to create. Describe what you want to make, including all the details of what the magical item does, how often it can be used, and any other properties. As the player, it's ultimately up to you to determine the stats of the item you wish to create. The GM should then determine the power level of the described item using the Power Level guidelines. This process should be collaborative.
+When inventing, you need to work with the GM to determine exactly what you're trying to create. Describe what you want to make, including all the details of what the magical item does, how often it can be used, and any other properties. As with following procedure, you must have an aspect related to crafting of rank equal to or greater than the level of the item you are creating. As the player, it's ultimately up to you to determine the stats of the item you wish to create. The GM should then determine the power level of the described item using the Power Level guidelines. This process should be collaborative.
 
 After determining the level, the GM decides what types of components the item requires. An item recipe should require at least one component with a tag relating to each unique effect of the item, and should require a total number of components equal to the level of the item. If the total number of specific types of components don't sum to the level of the item, the remaining components should be neutral components. All components must be of an equal or greater level than the crafted item itself.
 
-For example, if you want to craft a fiery greatsword that gives a creature one level of burning whenever you deal damage with it, the GM would determine this is roughly level 3. It would have the tag "fire" but nothing else, so it would require one level 3 fire component and two level 3 neutral components.
+For example, if you want to craft a fiery greatsword that gives a creature one level of burning whenever you deal damage with it, the GM would determine this is roughly level 3. It would have the tag "fiery" but nothing else, so it would require one level 3 fiery component and two level 3 neutral components.
 
 ### The Crafting Check
 
-Once you have the necessary ingredients, it's time to actually make the item. Successfully crafting an item requires a number of successful crafting skill checks equal to the level of the item you are trying to craft.
+Once you have the necessary ingredients, it's time to actually make the item. Successfully crafting an item requires a successful crafting skill check or a scene for each level of the item you are trying to craft.
 
-Magical smithing must be done in a workshop of appropriate level. After every X days you spend working (where X is the level of the item), make a crafting skill check. Magical alchemy must be done in a laboratory of appropriate level, or one level lower with disadvantage. After every X/5 days you spend working (rounded up), make a crafting skill check.
+Magical smithing must be done in a workshop of appropriate level. Magical alchemy must be done in a laboratory of appropriate level, or one level lower with disadvantage. Use the item's level to find the values for its crafting project.
 
-The Challenge Number equals 8 + (2 × the item's level).
+| Item level | Components | Successful checks | Challenge Number | Smithing days per check | Alchemy days per check |
+| ---------- | ---------- | ----------------- | ---------------- | ----------------------- | ---------------------- |
+| 1          | 1          | 1                 | 10               | 1                       | 1                      |
+| 2          | 2          | 2                 | 12               | 2                       | 1                      |
+| 3          | 3          | 3                 | 14               | 3                       | 1                      |
+| 4          | 4          | 4                 | 16               | 4                       | 1                      |
+| 5          | 5          | 5                 | 18               | 5                       | 1                      |
+| 6          | 6          | 6                 | 20               | 6                       | 2                      |
+| 7          | 7          | 7                 | 22               | 7                       | 2                      |
+
+After each period of work listed in the table, make a crafting skill check against the item's Challenge Number.
+
+Crafting is a stratagem (see the Stratagem System section). One crafter leads an item through its levels in order: each level is one objective, and only one level can be finished per work period, not in parallel with another level.
+
+The days per check in the table are the time per roll, and the table's Challenge Number is the setup CN. The failure costs below are its failure costs, and interventions, scenes, and assets and hindrances apply as they do to any stratagem.
 
 On a failed skill check, the progress for that period of work does not count—you must work another period to make another check. When you fail three consecutive skill checks, the item is ruined. This means all progress is lost, all work up to that point is wasted, and a random component is destroyed in the process. The remaining components can be salvaged, though they may be considered "depleted" and only useful for certain alchemical purposes.
 
-### Unstable Creations
-
-When you fail a crafting check by 5 or less, instead of losing progress, you may choose to create an unstable version of the item. This applies to both smithing and alchemy.
-
-For permanent items, unstable versions function as intended 80% of the time. Each use has a 20% chance to trigger an instability. When instability triggers, roll 1d6 to determine the effect. On a 1, the item overcharges—its effect doubles but it gains 1 Instability Point. On a 2, it fizzles with no effect this use. On a 3, feedback causes the user to take 1d6 damage. On a 4, the item develops a permanent minor quirk chosen by the GM. On a 5, the item burns out and becomes unusable for 24 hours. On a 6, it actually stabilizes and removes 1 Instability Point.
-
-For consumable items like potions, unstable versions have similar unpredictability. When consumed or activated, roll 1d6. On a 1, the effect is doubled—a healing potion heals twice as much, a bomb has twice the radius. On a 2, it's a dud with no effect at all. On a 3, it has the opposite of the intended effect—healing potions deal damage, buff potions apply debuffs. On a 4, it works but with an unintended side effect chosen by the GM. On a 5, it has only half effectiveness. On a 6, it works perfectly as intended.
-
-Unstable permanent items start with 1d4+1 Instability Points. At 5 or more points, they become dangerously unstable with a 40% chance of instability per use. At 10 or more points, the item self-destructs. You can attempt to stabilize an unstable item as another crafting project, with a CN equal to the original item level plus current Instability Points. Success removes all instability.
+A scene played instead of a check takes the work period, and it has the effect of the check. A scene that goes badly counts as a failed period for the three-consecutive-failures rule, and a scene that finishes a level breaks the run, the same as a successful check.
 
 ### Completion
 
-Once you have a number of successful crafting checks equal to the level of the item, the crafting is complete. If you were following a procedure, you've successfully created the item as intended.
+Once every objective is finished, with a successful crafting check or a scene for each level of the item, the crafting is complete. If you were following a procedure, you've successfully created the item as intended.
 
-If you were inventing, make one final crafting skill check upon completing the item, representing your skill as an inventor. On a success, you have crafted the item with the desired effects. If you fail, you have still successfully crafted a magical item, but it does not have the exact intended behavior. The GM determines what properties the magic item actually has—it might be related to what you intended, but with unexpected twists or limitations.
+If you were inventing, make one final crafting skill check upon completing the item, whether the last objective was finished by a roll or by a scene, representing your skill as an inventor. This check uses the same Challenge Number as the crafting checks and takes no further work period. On a success, you have crafted the item with the desired effects. If you fail, you have still successfully crafted a magical item, but it does not have the exact intended behavior. The GM determines what properties the magic item actually has—it might be related to what you intended, but with unexpected twists or limitations.
 
 ## Workspace Requirements
 
@@ -239,7 +245,7 @@ The following examples show magical items designed for Heart Rush's unique comba
 
 ### Level 6 Examples
 
-**Heartforge Circlet** (Smithing): When you would take a wound, roll your heart die - on a 6+, the wound's rank is reduced by half (rounded down). When you heal hitpoints, all allies within 30 feet also heal equal to half the amount, rounded down. Requires one level 6 corporeal components, one level 6 soulful component, one level 6 inert component, and three level 6 neutral components. Takes 36 days with 6 successful checks.
+**Heartforge Circlet** (Smithing): When you would take a wound, roll your heart die - on a 6+, the wound's rank is reduced by half (rounded down). When you heal hitpoints, all allies within 30 feet also heal equal to half the amount, rounded down. Requires one level 6 corporeal component, one level 6 soulful component, one level 6 inert component, and three level 6 neutral components. Takes 36 days with 6 successful checks.
 
 **Essence of Unbinding** (Alchemy): Permanently gain: Opportunity attacks don't cost actions/rush points, you can make unlimited opportunity attacks per round, and creatures cannot avoid your opportunity attacks by sidestepping. Requires one level 6 soulful component, two level 6 forceful components, one level 6 temporal component, and two level 6 neutral components. Produces 1 dose.
 
@@ -249,6 +255,6 @@ The following examples show magical items designed for Heart Rush's unique comba
 
 **The Stancebreaker** (Smithing): Heavy bludgeoning weapon. Choose your stance after everyone else reveals theirs. Your attacks ignore defensive stance damage reduction. Once per combat, force all participants in an engagement to use a stance of your choice. Requires one level 7 psychic component, one level 7 temporal component, one level 7 void component, and four level 7 neutral components. Takes 49 days with 7 successful checks.
 
-**Godslayer's Ichor** (Alchemy): Permanently gain: +100 maximum HP, wounds you take are reduced by 10 ranks, you can survive to negative HP equal to 3x your maximum, and once per day when you would die, instead heal to full HP and remove all wounds. Requires one level 7 soulful components, one level 7 temporal component, one level 7 corporeal component, and four level 7 neutral components. Produces 1 dose.
+**Godslayer's Ichor** (Alchemy): Permanently gain: +100 maximum HP, wounds you take are reduced by 10 ranks, you can survive to negative HP equal to 3x your maximum, and once per day when you would die, instead heal to full HP and remove all wounds. Requires one level 7 soulful component, one level 7 temporal component, one level 7 corporeal component, and four level 7 neutral components. Produces 1 dose.
 
 **The Final Engagement** (Smithing): Artifact armor. When you enter an engagement, creatures within 60 feet of your choice must join it, if able. Once per day, if a creature fails to beat your stance in an engagement, they die. Requires one level 7 void component, one level 7 forceful component, one level 7 psychic component, one level 7 temporal component, and three level 7 neutral components.

@@ -48,19 +48,21 @@ A simple shove might use a basic skill check, but when swords are drawn and batt
 
 ## Scales of Play
 
-Heart Rush's elegant zoom mechanic allows seamless transitions between different scales of action. Like a film director choosing between close-ups and panoramic shots, you'll shift focus based on what serves the story best. Each scale has its own rhythm and rules, but transitions happen naturally through play rather than rigid mechanics.
+Heart Rush runs a single moment and a years-long plan with the same roll. Like a film director choosing between close-ups and panoramic shots, you'll shift focus based on what serves the story best. Each scale has its own rhythm and rules, but transitions happen naturally through play rather than rigid mechanics.
 
 **The Three Scales:**
 
-- **Zoomed In**: Real-time, moment-to-moment action
-- **Montage**: Compressed time for extended activities
-- **Stratagems**: Grand endeavors spanning days to years
+- **Played Out**: Real-time, moment-to-moment action
+- **Rolled**: Compressed time for extended activities
+- **Stratagems**: A list of objectives to finish a goal, a menu of preparations before an event, or a repeating operation with no end; each has a set time per roll and scenes played out between rolls
 
-### Zoomed In: Moment to Moment
+The scales overlap. A stratagem is a kind of rolled play, and a journey is a stratagem.
 
-This is Heart Rush's default mode—experiencing the world through your character's immediate perceptions and choices. When zoomed in, time moves naturally. A five-minute conversation takes roughly five minutes to play out. Every detail matters, from the creak of floorboards to the glint in an opponent's eye.
+### Played Out: Moment to Moment
 
-**When to Use Zoomed-In Play:**
+This is Heart Rush's default mode—experiencing the world through your character's immediate perceptions and choices. When you play something out, time moves naturally. A five-minute conversation takes roughly five minutes to play out. Every detail matters, from the creak of floorboards to the glint in an opponent's eye.
+
+**When to Play Something Out:**
 
 - **Exploration** — Investigating the abandoned tower room by room
 - **Social Encounters** — Negotiating with the crime lord for safe passage
@@ -68,7 +70,7 @@ This is Heart Rush's default mode—experiencing the world through your characte
 - **Problem Solving** — Determining how to bypass magical wards
 - **Dramatic Moments** — Confronting your character's nemesis
 
-**Characteristics of Zoomed-In Play:**
+**Characteristics of Playing Something Out:**
 
 - Specific actions and dialogue
 - Immediate consequences
@@ -76,33 +78,32 @@ This is Heart Rush's default mode—experiencing the world through your characte
 - Individual skill checks for discrete actions
 - Real-time decision making
 
-**Combat as Zoomed-In Resolution**
+**Combat as the Most Detailed Play**
 
-Combat represents the most granular form of zoomed-in play. When violence breaks out, the game zooms in even further to track individual attacks, defensive maneuvers, and split-second tactical decisions. While a tense negotiation might involve several skill checks over ten minutes, a combat encounter tracks every swing, spell, and desperate dodge in six-second rounds. This hyper-focused resolution ensures that life-or-death struggles feel appropriately intense and tactical.
+Combat represents the most detailed way to play something out. When violence breaks out, the game tracks individual attacks, defensive maneuvers, and split-second tactical decisions. While a tense negotiation might involve several skill checks over ten minutes, a combat encounter tracks every swing, spell, and desperate dodge in six-second rounds. This hyper-focused resolution ensures that life-or-death struggles feel appropriately intense and tactical.
 
 **See the Combat section for complete rules on initiative, attack sequences, and tactical options.**
 
-### Montage: Compressed Time
+### Rolled: Compressed Time
 
-When the destination matters more than the journey, play shifts to montage mode. This compressed timeframe handles necessary but potentially tedious activities through abbreviated narration and key decision points. A week of travel might take five minutes to resolve, hitting only the highlights and meaningful choices.
+When the destination matters more than the journey, you roll it instead of playing it out. This compressed timeframe handles necessary but potentially tedious activities through abbreviated narration and key decision points. A week of downtime might take five minutes to resolve, hitting only the highlights and meaningful choices.
 
-**When to Use Montage:**
+**When to Roll It:**
 
-- **Travel** — "Over three days of hard riding, you reach the mountain pass..."
 - **Downtime** — "You spend the week between adventures crafting and gathering information..."
 - **Recovery** — "Ten days of rest in the monastery restore your strength..."
 - **Training** — "After a month of practice, you've mastered the new sword technique..."
 - **Research** — "Scouring the library for clues takes several days..."
 
-**Key Montage Principles:**
+**Key Principles of Rolled Play:**
 
 - Time compression preserves momentum
 - Players still make meaningful choices
-- Complications can trigger zoomed-in scenes
+- Complications can trigger scenes you play out
 - Resources (supplies, money) get consumed appropriately
 - Character development happens between adventures
 
-**See the Journeys section for structured travel montage rules**
+**Rolled play with objectives and a time per roll is one shape of stratagem (see below). Travel is rolled this way: a journey is a stratagem with its own preset. See the Journeys section.**
 
 ### Stratagems: Grand Endeavors
 
@@ -110,15 +111,16 @@ The stratagem scale handles complex undertakings that would bog down play if res
 
 **When to Use Stratagems:**
 
+- **Travel** — "Over three days of hard riding, you reach the mountain pass..." (a journey is a stratagem; see the Journeys section)
 - **Leading Organizations** — Your mercenary company besieges a fortress
 - **Managing from Afar** — Your trading house expands while you adventure
 - **Long-term Projects** — Researching forgotten magic over months
 - **Complex Conflicts** — Naval battles with multiple ships
 - **Political Maneuvering** — Building influence through the royal court
 
-**Core Stratagem Mechanic: Roll d8 + ability die + profession + aspect vs Challenge Number set by assets and hindrances**
+**Core Stratagem Mechanic: Roll Heart die + ability die + modifiers vs a Challenge Number that assets and hindrances raise or lower**
 
-Each stratagem roll represents significant time investment—hours, days, or months depending on scope. Success advances your position or accumulates progress toward victory. Direct intervention through zoomed-in scenes can dramatically shift the odds.
+Each stratagem roll covers a set time, chosen to fit the goal. When the stratagem has a list of objectives, each success finishes one objective on the way to the goal. Scenes you play out between rolls can dramatically shift the odds.
 
 **See the Stratagem System section for complete rules**
 
@@ -243,8 +245,8 @@ The GM calls for specific dice rolls based on your approach and the situation. N
    - Includes: Initiative, positioning, attack sequences, defensive reactions
 
 4. **Stratagem Rolls** — Managing complex endeavors
-   - d8 + ability die + profession + aspect vs Challenge Number
-   - Used for: leading organizations, long-term projects
+   - Heart die + ability die + modifiers vs Challenge Number
+   - Used for: a goal reached through a list of objectives, or a repeating operation, such as a journey, a siege or a trade route
 
 **Knowing When Combat Begins**
 

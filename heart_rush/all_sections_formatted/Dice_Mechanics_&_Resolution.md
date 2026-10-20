@@ -121,7 +121,7 @@ Combat brings its own specialized rolls that handle the deadly dance of weapons 
 
 Some goals are too big for one action: taking a fortress, building a trade route, winning a council's votes. A stratagem runs such a goal as a series of rolls, each covering a stretch of time, with scenes you play out in between.
 
-**When to Use**: A goal reached through several objectives, or a repeating operation, where you want to roll the parts nobody wants to play. The time per roll runs from minutes (quick combat) and hours (a rescue before dawn) to seasons and years.
+**When to Use**: A stratagem takes one of three shapes: a list of objectives to finish a goal, a menu of preparations before an event, or a repeating operation with no end. Roll the parts nobody wants to play. The time per roll runs from minutes (quick combat) and hours (a rescue before dawn) to seasons and years.
 
 **Basic Roll**: Heart die (at its current size) + ability die + the usual modifiers vs Challenge Number
 
@@ -219,6 +219,7 @@ The most interesting characters have flaws, compulsions, and troublesome traits.
   - Accepting a complication that reflects the aspect
 - Must roleplay the aspect causing problems
 - Maximum 5 DP per scene from negative invocations
+- A negative invocation on a stratagem roll earns no DP
 
 **Example**: _"Quick to Draw My Sword" Rank 3_
 

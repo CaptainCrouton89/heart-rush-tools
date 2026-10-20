@@ -175,29 +175,35 @@ Use your profession to overcome a difficult task:
 - Must have a CN ≥ (heart die max + current profession rank)
   - Example: With d8 heart die and rank 2, challenges must be CN 10+
 - Must have meaningful consequences for failure
-- Cannot be immediately retried if failed
+- Cannot be immediately retried if failed. A retry in a later period of a stratagem is not an immediate retry
 
 Mark one challenge completed when you succeed. Challenges completed during missions count toward your advancement—many missions naturally include several challenges along the way.
 
 #### 2. Missions
 
-Complete a significant professional undertaking that pushes your expertise:
+A mission is a significant use of your profession that goes beyond routine work. It runs as a stratagem (see the Stratagem System section): a goal too big for one roll, reached through a list of objectives. Before starting, the player and GM agree on the goal and set it up with these requirements:
 
-A mission is a substantial use of your profession that goes beyond routine work. Before starting, the player and GM should agree on:
+- **The goal applies your profession**: the profession must apply to what you are trying to achieve.
+- **At least 3 objectives**: the GM states how many there are at setup, and unknown ones stay as blank slots until the story reveals them.
+- **Setup CN ≥ (heart die max + current profession rank)**: the same formula as challenges. The setup CN is how hard the goal is as the situation stands, with everything you already have counted in.
+  - Example: With d8 heart die and rank 2, the setup CN must be 10 or higher
+- **Real stakes**: something that matters is at risk, such as reputation, resources, relationships, or lives.
 
-- **The Goal**: What specific achievement are you trying to accomplish?
-- **Why It's a Mission**: Does this represent a significant professional milestone?
+You win the stratagem by finishing its objectives, and winning it completes the mission. You can finish an objective by rolling it or by playing it out as a scene, and a scene-finished objective counts toward the 3.
 
-The mission succeeds when you achieve the agreed-upon goal, regardless of how you get there. You might:
+An objective removed because a success or a scene that went well made it unnecessary counts as finished for the mission. An objective removed for any other reason does not. You might:
 
-- Make multiple profession checks over the course of the mission
-- Make a single crucial check at a key moment
-- Accomplish it without any rolls through clever preparation
-- Use completely different professions than expected to achieve your goal
+- Roll several profession checks, one for each objective
+- Play out the objectives you care about most and roll the rest
+- Use completely different professions than expected to finish an objective
 
-Missions often include multiple challenges within them—a heist might require picking locks (challenge), forging documents (challenge), and evading guards (challenge). Each of these counts as a separate challenge for advancement purposes.
+Each objective you win by a roll at challenge CN also counts as a challenge for advancement. The CN that counts is the roll's own CN at the moment you roll, after assets and hindrances. The challenge goes to the character who led that roll, with their profession. A heist might have the objectives "pick the vault lock", "forge the guard's papers", and "slip out past the patrol". Each one you win by a roll at challenge CN counts as a separate challenge, and winning all three completes the mission.
 
-The key is achieving something significant to your profession, not following a specific mechanical path.
+When several characters lead objectives of one stratagem, it is a mission for each character whose profession applies to the goal, who led at least one objective, and whose own threshold (Heart die max + current profession rank) the setup CN meets. One heist can then complete a mission for the thief and the smuggler at once.
+
+A failed objective you retry and win still counts toward the mission. If you won it by a roll at challenge CN it also counts as a challenge, because a retry in a later period is not an immediate retry. An objective a player adds counts only if the GM agrees it is a real step toward the goal.
+
+A mission counts objectives at the level where the mission was set up, not the objectives of any stratagem inside one of them.
 
 **Guidelines for Missions**:
 
@@ -253,7 +259,8 @@ _"The Moonsilver Masterwork"_ - Create armor from rare moonsilver that bonds wit
 
 - **Goal**: Successfully forge the armor without ruining the irreplaceable materials
 - **Why It's a Mission**: Working with moonsilver is the pinnacle of the craft
-- **Possible Approaches**: Months of careful work, consulting ancient texts, finding the right conditions
+- **Objectives**: Consult ancient texts on working moonsilver; find the right conditions for the forging; forge the armor; bond it to its wearer
+- **Stakes**: The moonsilver is irreplaceable, and ruining it is lost for good
 - **Success**: Completed armor that actually bonds with a wearer
 
 #### Diplomat
@@ -269,7 +276,8 @@ _"The Trade Compact"_ - Negotiate your city's first trade agreement with the dwa
 
 - **Goal**: Signed trade agreement benefiting both parties
 - **Why It's a Mission**: First human to successfully negotiate with these particular holds
-- **Possible Approaches**: Learn dwarven customs, find common interests, leverage personal relationships
+- **Objectives**: Learn dwarven customs; find common interests with the holds; win the support of a dwarf with influence through a personal relationship; get the agreement signed
+- **Stakes**: Your city's standing with the holds, and your reputation as a negotiator
 - **Success**: Agreement signed and trade begins flowing
 
 #### Hunter
@@ -285,7 +293,8 @@ _"The Beast of Millhaven"_ - Track and eliminate the creature terrorizing the vi
 
 - **Goal**: End the threat to the village permanently
 - **Why It's a Mission**: Multiple failed attempts by other hunters, reputation-making hunt
-- **Possible Approaches**: Study attack patterns, set elaborate trap, track to lair, rally villagers
+- **Objectives**: Study the attack patterns; track the creature to its lair; rally the villagers; kill it or drive it off
+- **Stakes**: The villagers' lives, and your reputation as a hunter
 - **Success**: Creature dead or driven off permanently
 
 #### Merchant
@@ -301,7 +310,8 @@ _"The Silk Road Expansion"_ - Establish profitable trade route to distant easter
 
 - **Goal**: Return with signed contracts and first shipment of goods
 - **Why It's a Mission**: Six month journey into unknown markets
-- **Possible Approaches**: Navigate foreign customs, find reliable partners, survive the journey
+- **Objectives**: Survive the journey; navigate foreign customs; find reliable partners; return with signed contracts and the first shipment
+- **Stakes**: The money you invest in the shipment, and your standing with your backers
 - **Success**: Profitable trade route established
 
 #### Scholar
@@ -317,7 +327,8 @@ _"The Lost Theorem"_ - Decipher the incomplete mathematical proofs of an ancient
 
 - **Goal**: Reconstruct the complete theorem and prove it works
 - **Why It's a Mission**: Would revolutionize understanding of magical theory
-- **Possible Approaches**: Research across multiple libraries, find missing fragments, test theories
+- **Objectives**: Research across multiple libraries; find the missing fragments; test the theories; have other scholars verify the proof
+- **Stakes**: Your scholarly reputation
 - **Success**: Working theorem that other scholars can verify
 
 #### Sea Captain
@@ -333,7 +344,8 @@ _"Through the Maelstrom"_ - Navigate your ship through the legendary Storm of So
 
 - **Goal**: Guide ship and crew safely through a supernatural storm to reach port
 - **Why It's a Mission**: The Storm of Sorrows has claimed dozens of ships; surviving it proves mastery
-- **Possible Approaches**: Chart a course using ancient maps, bind wind spirits, ride the eye of the storm, trust pure seamanship
+- **Objectives**: Chart a course using ancient maps; keep the crew from panicking when the storm hits; steer through the storm; reach the other side
+- **Stakes**: The ship and the lives of the crew
 - **Success**: Ship and most of crew survive to reach the other side
 
 #### Smuggler
@@ -349,7 +361,8 @@ _"The Underground Railroad"_ - Establish permanent safe routes for refugees flee
 
 - **Goal**: Create a network that operates reliably without your constant involvement
 - **Why It's a Mission**: Building infrastructure that saves lives for years to come
-- **Possible Approaches**: Bribe officials, establish safe houses, recruit trustworthy operators
+- **Objectives**: Bribe the officials along the routes; establish safe houses; recruit trustworthy operators
+- **Stakes**: The lives of the refugees, and the safety of everyone in the network
 - **Success**: Refugees successfully using your routes independently
 
 #### Thief
@@ -365,7 +378,8 @@ _"The Perfect Score"_ - Steal the Merchant Prince's ledger from his counting hou
 
 - **Goal**: Obtain the ledger that proves his illegal dealings
 - **Why It's a Mission**: Most secure private building in the city, would make your reputation
-- **Possible Approaches**: Elaborate heist, seduce someone with access, forge employment papers, wait for the right opportunity
+- **Objectives**: Get access to the counting house; find and take the ledger; leave without being identified
+- **Stakes**: Your reputation, and the Merchant Prince's revenge if he learns who took it
 - **Success**: Ledger obtained without being identified as the thief
 
 ### Example Professions
@@ -394,14 +408,15 @@ Work with your GM to ensure your profession reflects a realistic life path from 
 
 ### Creating Missions
 
-Missions are defined by their goals, not their methods. When a player proposes a mission:
+A mission is defined by its goal and its objectives, not by one required method. When a player proposes a mission:
 
 1. **Define the Goal**: What specific, measurable achievement are you pursuing?
-2. **Confirm Significance**: Does this feel like a real professional milestone?
-3. **Play It Out**: The mission unfolds through regular gameplay
-4. **Recognize Success**: When the goal is achieved, the mission is complete
+2. **Confirm Significance**: Does this feel like a real professional milestone, with real stakes?
+3. **Set It Up as a Stratagem**: The GM states the number of objectives (at least 3), names the ones already known, and sets the setup CN at heart die max + current profession rank or higher
+4. **Finish the Objectives**: Each one is rolled or played out as a scene, in the order the players choose unless the story requires one
+5. **Recognize Success**: When the stratagem is won, the mission is complete
 
-**Missions and Challenges**: Remember that missions naturally generate challenges. A Sea Captain navigating through a supernatural storm might face challenges like "Navigate by dead reckoning when compasses fail" and "Keep the crew from panicking." These all count as challenges for advancement while also contributing to the mission's success.
+**Missions and Challenges**: An objective you win by a roll at challenge CN also counts as a challenge. A Sea Captain crossing a supernatural storm might have the objectives "Navigate by dead reckoning when compasses fail" and "Keep the crew from panicking". Each one won by a roll at challenge CN counts as a challenge for advancement while also moving the mission forward.
 
 **Examples of Types of Missions**:
 
@@ -414,6 +429,7 @@ Missions are defined by their goals, not their methods. When a player proposes a
 **What Makes a Good Mission**:
 
 - Has a clear end condition that everyone can recognize
+- Breaks down into at least 3 objectives
 - Represents genuine professional achievement
 - Could be accomplished multiple ways
 - Matters to the character's story
@@ -424,7 +440,7 @@ Missions are defined by their goals, not their methods. When a player proposes a
 - Too simple: "Pick a hard lock" (That's a challenge, not a mission)
 - Too mechanical: "Make a CN 20 check" (Missions are about goals, not rolls)
 
-Remember: A clever thief who accomplishes their heist without picking a single lock has still completed their mission. The achievement matters, not the method.
+Remember: A clever thief who gets through the counting house without picking a single lock has still finished that objective. The achievement matters, not the method.
 
 ### Using Professions in Play
 

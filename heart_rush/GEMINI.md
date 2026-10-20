@@ -153,12 +153,12 @@ For dangerous travel, the trip is divided into **Segments**.
 1.  **The Roll:** One player rolls **Heart + Ability** against the Terrain CN.
 2.  **Success:** Progress is made safely.
 3.  **Failure:** A consequence occurs (Lost, Forced March, Ambush).
-4.  **Complication (Rolling a 1):** The game zooms in to a specific scene/encounter the players must resolve.
+4.  **Complication (Rolling a 1):** The players play out a specific scene they must resolve.
 
 ### Stratagems
-Used for resolving massive tasks (battles, politics, business) with a single roll.
-*   **The Roll:** **d8 + Ability + Profession vs CN.**
-*   **Intervention:** Players can "Zoom In" to play out a specific scene (e.g., assassinating the enemy general). Success in the scene lowers the CN for the main Stratagem roll.
+Used for goals with objectives, preparations before an event, or repeating operations, with one roll per objective or period.
+*   **The Roll:** **Heart die + ability die + modifiers vs CN.**
+*   **Intervention:** Players can play out a scene before a roll (e.g., sabotaging supplies). The scene can give that roll a modifier or create a lasting asset or hindrance.
 
 ### Strongholds
 Players can build and upgrade bases (Castles, Libraries, Taverns). Strongholds generate income, provide followers, and grant specific bonuses (e.g., Libraries grant advantage on Lore checks; Fortresses provide soldiers).

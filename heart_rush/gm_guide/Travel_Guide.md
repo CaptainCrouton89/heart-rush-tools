@@ -32,17 +32,20 @@
 | 15  | Uncharted, actively dangerous, no shelter      | Blizzard/Hurricane: +9 |
 | 18+ | Supernatural dangers, reality-warping effects  | Magical storms: +12    |
 
+The weather modifiers apply at setup only, as part of the situation the setup CN describes. Weather that may turn during a journey is a threat named at setup; when it arrives, the GM decides from the fiction whether it becomes a hindrance that adds 3 to the CN (the same as Season Change) or starts a scene.
+
 **Modify CN based on:**
 
-- Party preparation (-3 for excellent supplies/guides)
+- Supplies the party holds when the journey is planned are part of the situation the setup CN describes; only something gained later is an asset (-3)
+- A map, written directions, local knowledge or a guide the party already has is counted in the setup CN; a guide hired after setup is an asset (-3)
+- Equipment that gives advantage on a roll, such as rope and climbing gear, is not also counted in the setup CN
 - Time of year (+3 for winter/monsoon season)
-- Local threats (+3 for war zones/monster territories)
+- Dangers already present on the route (+3 for war zones/monster territories); a danger that may or may not arrive is a threat named at setup, not part of the CN
 - Magical influences (varies wildly)
 
 ## Running Journey Rolls
 
-**Who rolls:** Best navigator/guide, or whoever's leading this segment
-**What helps:** Only unique, relevant expertise grants advantage (not "I help look around")
+**Who rolls:** One player character leads each segment, and nobody helps on the roll, as on any stratagem roll. The leader may roll Cunning using a guide's knowledge, and the character with the most relevant expertise (a sailor at sea, a mountaineer in the peaks) is the natural leader for that segment.
 
 ### Interpreting Results
 
@@ -50,30 +53,27 @@
 
 **Failure:** The party genuinely fails their goal. They don't just have a hard time—they get lost, can't progress, or face serious setbacks. Choose consequences that create new problems, not dead ends.
 
-**Complications:** Whether success or failure, zoom in to a specific challenge requiring immediate player decisions. Run it as a mini-encounter.
+**Complications:** Whether success or failure, play out a specific challenge requiring immediate player decisions as a scene. Run it as a mini-encounter.
 
 ## Failure Consequences (Choose One)
 
 ### Lost/Stalled
 
-- **Completely Lost:** Repeat entire segment (no progress)
-- **Wrong Direction:** Add extra segment to correct course
-- **Impassable:** Must find alternate route (+1 segment) or abandon journey
-- **Circles:** Return to segment start, supplies consumed
+- **Wrong Direction:** Add an extra segment to correct course
+- **Impassable Route:** The way forward is blocked; add an extra segment or repeat the previous one
+- **Circles in the Wilderness:** Return to the start of this segment
 
 ### No Safe Haven
 
-- **Poor Shelter:** Disadvantage on all sleeping checks this segment
-- **Exposure:** Everyone takes 1d6 wound ("exposure")
-- **Forced March:** Everyone gains 2 levels of weakened
-- **Harassment:** Constant minor attacks prevent rest
+- **No Safe Camps:** Everyone takes 1 level of dazed, weakened, and off-balanced that do not fade until they sleep a full night
+- **Exposed Camps:** Everyone takes a rank 1d6 wound labeled "exposure"
+- **Forced March:** Everyone gains 3 levels of weakened
 
 ### Critical Delays (When Time Matters)
 
-- **Missed Deadline:** Arrive after the ritual/meeting/season
-- **Conditions Worsen:** +3 CN to all remaining segments
-- **Pursued:** Whatever's chasing you catches up
-- **Resources Depleted:** Consume double rations getting unstuck
+- **Missed Opportunity:** The delay can cost a time-sensitive goal. If the characters can still act on it when they arrive, play it out as a scene from a worse position
+- **Season Change:** Weather turns against you; increase all remaining segment CNs by 3
+- **Pursued:** Whatever you're fleeing catches up
 
 ## Complications Master Table
 
@@ -292,9 +292,9 @@ Failures should create new adventures, not stop them:
 
 When racing another group:
 
-- Both roll each segment
-- Track relative progress
-- Failures might let rivals pull ahead
+- The rival group does not roll; it acts through failure costs and the consequences you state before a roll
+- A failed segment lets the rivals pull ahead
+- A stated consequence of success can be that they arrive first anyway
 - Complications might affect both groups
 
 ### Exploration Journeys
@@ -306,12 +306,9 @@ When destination is unknown:
 - Failure = dead end/danger
 - Map builds through play
 
-### Pursuit/Chase
+### Pursuit
 
-- Segments are shorter (hours not days)
-- Failure = pursuers gain ground
-- Success = increase distance
-- Complications often involve close calls
+For a pursuit lasting hours or days, run a journey with a deadline: the pursuers arrive when the deadline passes. A failed segment costs time, leaving less time to finish the journey before they arrive. Do not track distance between the party and pursuers. For a pursuit lasting minutes, use the Chase rules instead.
 
 ## Quick Scenario Setups
 
