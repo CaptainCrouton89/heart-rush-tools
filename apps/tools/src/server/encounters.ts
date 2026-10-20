@@ -8,7 +8,7 @@ import {
   type StoredMessage,
   type Turn,
 } from '~/encounter/schema'
-import { cancelRunConfirmed, findRunByClaim, resultOf, RunCanceledError } from './runs'
+import { cancelRunConfirmed, findRunByClaim, resultOf, RunCanceledError } from '@heartrush/northlight/runs'
 
 /** How long a claim may stay without a run id before a page load or Stop treats its request as gone. */
 export const STARTING_STALE_MS = 60_000

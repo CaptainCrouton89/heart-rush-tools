@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { campaignIdOf, notFound, requireSession } from '~/server/api'
 import { deleteEncounter, loadEncounter, reconcile, setEncounterCampaign } from '~/server/encounters'
 import { assertGmOf, PlayError, playErrorResponse } from '~/server/play'
-import { cancelRunConfirmed } from '~/server/runs'
+import { cancelRunConfirmed } from '@heartrush/northlight/runs'
 
 export const Route = createFileRoute('/api/encounters/$id/')({
   server: {

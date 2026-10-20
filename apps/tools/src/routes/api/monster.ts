@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { authFor } from '~/server/auth'
-import { needsSignIn, ndjsonResponse, runSchema } from '~/server/runs'
+import { needsSignIn } from '@heartrush/northlight/runs'
+import { ndjsonResponse, runSchema } from '~/server/runs'
 import { generateImage, storeImage } from '~/server/image'
 import { analysisSchema, generatedMonsterSchema } from '~/monster/schema'
 import { analyzePrompt, generatePrompt, monsterImagePrompt } from '~/monster/prompts'

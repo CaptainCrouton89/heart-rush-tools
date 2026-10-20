@@ -1,18 +1,43 @@
 import { Fragment, type ReactNode } from 'react'
 
-/** `**bold**` inside one line of chat text. */
-function inline(text: string): ReactNode {
+const RULES_SITE = 'https://rules.heartrush.party/'
+
+/** `**bold**` inside a piece of a line. */
+function bold(text: string, key: string): ReactNode {
   const pieces = text.split(/\*\*(.+?)\*\*/g)
   if (pieces.length === 1) return text
   return pieces.map((piece, i) =>
     i % 2 === 1 ? (
-      <strong key={i} className="font-semibold">
+      <strong key={`${key}-${i}`} className="font-semibold">
         {piece}
       </strong>
     ) : (
-      <Fragment key={i}>{piece}</Fragment>
+      <Fragment key={`${key}-${i}`}>{piece}</Fragment>
     ),
   )
+}
+
+/** `**bold**` and `[text](url)` inside one line of chat text. Only links to the rules site are links; any other link is its text. */
+function inline(text: string): ReactNode {
+  const pieces = text.split(/\[([^\]]+)\]\(([^)\s]+)\)/g)
+  if (pieces.length === 1) return bold(text, 'b')
+  const out: ReactNode[] = []
+  for (let i = 0; i < pieces.length; i += 3) {
+    if (pieces[i]) out.push(bold(pieces[i], `t${i}`))
+    if (i + 2 >= pieces.length) break
+    const label = pieces[i + 1]
+    const url = pieces[i + 2]
+    out.push(
+      url.startsWith(RULES_SITE) ? (
+        <a key={`a${i}`} href={url} target="_blank" rel="noreferrer" className="underline underline-offset-2">
+          {bold(label, `l${i}`)}
+        </a>
+      ) : (
+        <Fragment key={`a${i}`}>{bold(label, `l${i}`)}</Fragment>
+      ),
+    )
+  }
+  return out
 }
 
 /**

@@ -6,6 +6,7 @@
   "exports": {
     "./types": "./src/types.ts",
     "./runtime": "./src/runtime.ts",
+    "./agent-lookup": "./src/agent-lookup.ts",
     "./manifest": "./dist/manifest.json",
     "./play/*": "./dist/catalogues/play/*.json"
   },

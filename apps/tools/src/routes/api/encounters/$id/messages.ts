@@ -5,7 +5,8 @@ import { turnSchema, type StoredMessage } from '~/encounter/schema'
 import { notFound, requireSession } from '~/server/api'
 import { appendGmMessage, cancelAndRelease, claim, finishRun, getParty, loadEncounter, recordRun, release } from '~/server/encounters'
 import { getCampaignForEncounter, PlayError } from '~/server/play'
-import { needsSignIn, ndjsonResponse, resultOf, RunCanceledError, startRun } from '~/server/runs'
+import { needsSignIn, resultOf, RunCanceledError, startRun } from '@heartrush/northlight/runs'
+import { ndjsonResponse, RUN_DEADLINE } from '~/server/runs'
 
 /** Events streamed to the browser as newline-delimited JSON. */
 export type EncounterEvent =
@@ -48,7 +49,7 @@ export const Route = createFileRoute('/api/encounters/$id/messages')({
             send({ type: 'started' })
             // The start is not tied to the browser's abort signal: an abort cannot leave a run that was created but never recorded.
             // The claim is the run's idempotency key and metadata, so a run whose id was lost is found again by it.
-            runId = await startRun(runtime, turnPrompt({ party, campaign, messages, document: enc.document }), turnSchema, undefined, {
+            runId = await startRun(runtime, turnPrompt({ party, campaign, messages, document: enc.document }), turnSchema, RUN_DEADLINE, undefined, {
               key: token,
               metadata: { encounter: enc.id, claim: token },
             })

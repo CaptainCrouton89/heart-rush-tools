@@ -1,4 +1,5 @@
-import { MONSTER_RULES, RULES_LOOKUP } from '~/monster/prompts'
+import { RULES_LOOKUP } from '@heartrush/content/agent-lookup'
+import { MONSTER_RULES } from '~/monster/prompts'
 import type { Encounter, Party, StoredMessage } from './schema'
 import type { CampaignForEncounter } from '~/server/play'
 

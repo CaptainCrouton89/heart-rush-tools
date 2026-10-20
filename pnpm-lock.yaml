@@ -306,6 +306,9 @@ importers:
 
   apps/tools:
     dependencies:
+      '@heartrush/content':
+        specifier: workspace:*
+        version: link:../../packages/content
       '@heartrush/northlight':
         specifier: workspace:*
         version: link:../../packages/northlight
@@ -411,6 +414,9 @@ importers:
       wrangler:
         specifier: ^4.151.2
         version: 4.151.2(@types/node@22.20.5)
+      zod:
+        specifier: ^4.6.7
+        version: 4.6.7
 
   packages/rules-engine:
     devDependencies:
