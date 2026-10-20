@@ -46,7 +46,14 @@ export type Identity = {
 }
 
 /** INV-CATREF: a catalogue reference keeps its title; an unresolved id renders the snapshot. */
-export type Kin = { raceId: string; subraceId: string | null; titleSnapshot: string; spelltouched: boolean }
+export type Kin = {
+  raceId: string
+  subraceId: string | null
+  titleSnapshot: string
+  spelltouched: boolean
+  /** The creation-time answers: choice id → option id, or talent id for a `talent` choice. */
+  choices: Record<string, string>
+}
 
 export type Attunement = { id: string; element: string; level: AttunementLevel; source: 'race' | string }
 
@@ -73,7 +80,7 @@ export type Condition = {
 export type AspectSource = 'race' | 'age' | 'created' | 'purchased' | 'growth'
 export type Aspect = { id: string; text: string; rank: number; source: AspectSource; honor: boolean }
 
-export type Profession = { id: string; name: string; rank: number; challenges: number; missions: number; practiceWeeks: number }
+export type Profession = { id: string; name: string; rank: number; challenges: number; missions: number; practiceWeeks: number; rerollOnes: boolean }
 
 export type TalentOrigin = TalentCategory | 'racial' | 'bloodmark' | 'path' | 'item' | 'custom'
 export type Talent = {
@@ -164,8 +171,8 @@ export type BuilderInput = {
   portrait: string | null
   raceId: string
   subraceId: string | null
-  /** Picks the element when a racial `attunement` effect lists two (ruling 16). */
-  attunementChoice?: string
+  /** Every `PlayChoice` on the race and chosen subrace: choice id → option id, or talent id for a `talent` choice. */
+  kinChoices: Record<string, string>
   spelltouched: boolean
   /** Two d6 and two d4. */
   dice: Record<AbilityId, 4 | 6>
@@ -173,6 +180,8 @@ export type BuilderInput = {
   ageBenefits: string[]
   /** The aspect text Deep Knowledge adds at rank 3. */
   deepKnowledgeAspect?: string
+  /** Wisdom of Experience: the starting profession whose skill checks reroll 1s. Must name one of `professions`. */
+  ageBenefitProfession?: string
   /** The two aspects the player writes. */
   createdAspects: [string, string]
   professions: Array<{ name: string; rank: number }>
@@ -280,9 +289,9 @@ export type RuleErrorCode =
   | 'not_found' | 'invalid_amount' | 'not_enough_rush' | 'stamina_spent' | 'heart_die_floor' | 'heart_die_over_max'
   | 'wrong_rolled_count' | 'bloodmark_not_owed' | 'not_ready'
   // createCharacter
-  | 'unknown_race' | 'unknown_subrace' | 'invalid_age_benefits' | 'invalid_dice' | 'invalid_professions' | 'attunement_choice'
+  | 'unknown_race' | 'unknown_subrace' | 'invalid_age_benefits' | 'invalid_dice' | 'invalid_professions' | 'kin_choice'
   // undo and client input
-  | 'not_top_of_stack' | 'bad_action'
+  | 'not_top_of_stack' | 'bad_action' | 'bad_roll'
 
 export class RuleError extends Error {
   readonly code: RuleErrorCode

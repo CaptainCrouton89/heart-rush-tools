@@ -4,7 +4,7 @@ import { makeCharacter } from './fixtures'
 import { professionProgress, reduceProfessionProgress, isProfessionProgressAction } from '../src/professions'
 import { RuleError, type Action, type Character, type Profession } from '../src/types'
 
-const profession: Profession = { id: 'p', name: 'Smith', rank: 2, challenges: 0, missions: 0, practiceWeeks: 0 }
+const profession: Profession = { id: 'p', name: 'Smith', rank: 2, challenges: 0, missions: 0, practiceWeeks: 0, rerollOnes: false }
 const action = (kind: Action['kind'], extras: Record<string, unknown> = {}) => ({ id: 'event', at: '2026-10-20T00:00:00.000Z', kind, professionId: 'p', ...extras }) as Action
 const character = (p: Profession = profession): Character => makeCharacter({ professions: [p] })
 

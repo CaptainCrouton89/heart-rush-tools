@@ -1,6 +1,6 @@
 import type { ConditionCatalogue } from './catalogue'
 import { defenseBonus, disadvantage, weaponDice } from './derived'
-import { RuleError, type AbilityId, type Character, type RuleErrorCode } from './types'
+import { RuleError, type AbilityId, type Character } from './types'
 
 export type RollType = 'check' | 'save' | 'attack' | 'defense'
 export type RollDie = { sides: number; role: 'heart' | 'ability' | 'weapon' }
@@ -26,8 +26,7 @@ export type RollResult = {
 }
 export type RandomDie = (sides: number) => number
 
-// E6 owns types.ts concurrently. Retain the requested runtime error code without changing its union.
-function badRoll(): never { throw new RuleError('bad_roll' as RuleErrorCode) }
+function badRoll(): never { throw new RuleError('bad_roll') }
 
 /** The dice and modifiers to roll, derived from the current character rather than saved on it. */
 export function rollSpec(c: Character, input: { type: RollType; ability: AbilityId }, catalogue: ConditionCatalogue): RollSpec {

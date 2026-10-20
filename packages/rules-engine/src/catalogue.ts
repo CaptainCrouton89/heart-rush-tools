@@ -21,11 +21,23 @@ export type RaceEffect =
   | { kind: 'dieCap'; ability: AbilityId; max: Die }
   | { kind: 'aspectRankCap'; max: number }
   | { kind: 'awardBonus'; per: number; bonus: number }
-  /** Ruling 16: grants one attunement; with two elements `BuilderInput.attunementChoice` picks one. */
-  | { kind: 'attunement'; elements: string[]; level: 'basic' }
+  /** Ruling 16: grants one attunement in exactly one element; a race that offers two elements puts one `attunement` effect in each choice option. */
+  | { kind: 'attunement'; elements: [string]; level: 'basic' }
   | { kind: 'manual'; text: string }
 
-export type PlayAbility = { title: string; frequency: Frequency | null; body: string }
+export type PlayAbility = {
+  title: string
+  frequency: Frequency | null
+  body: string
+  /** "You gain the <Title> talent as a racial ability": that catalogue talent, with its destiny level when the rule says so. */
+  grants: { talentId: string; destiny: boolean } | null
+}
+
+/** A creation-time choice on a race or subrace. `options` picks one option; `talent` picks one catalogue talent, narrowed by `tradition`. */
+export type PlayChoiceOption = { id: string; title: string; abilities: PlayAbility[]; effects: RaceEffect[] }
+export type PlayChoice =
+  | { id: string; title: string; text: string; kind: 'options'; options: PlayChoiceOption[] }
+  | { id: string; title: string; text: string; kind: 'talent'; tradition: Tradition | null }
 
 export type PlayTalent = {
   id: string
@@ -48,6 +60,7 @@ export type PlaySubrace = {
   title: string
   aspects: string[]
   abilities: PlayAbility[]
+  choices: PlayChoice[]
   /** Ruling 16. */
   effects: RaceEffect[]
   baseMaxHp?: number
@@ -62,6 +75,7 @@ export type PlayRace = {
   baseMaxHp?: number
   aspects: string[]
   abilities: PlayAbility[]
+  choices: PlayChoice[]
   subraces: PlaySubrace[]
   effects: RaceEffect[]
 }

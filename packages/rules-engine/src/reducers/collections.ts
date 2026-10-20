@@ -118,7 +118,7 @@ export function reduceCollections(c: Character, a: CollectionAction): Character 
       count('challenges', p.challenges)
       count('missions', p.missions)
       count('practice weeks', p.practiceWeeks)
-      const profession: Profession = { rank: 0, challenges: 0, missions: 0, practiceWeeks: 0, ...p, id: created(a) }
+      const profession: Profession = { rank: 0, challenges: 0, missions: 0, practiceWeeks: 0, rerollOnes: false, ...p, id: created(a) }
       return { ...c, professions: [...c.professions, profession] }
     }
     case 'profession:edit': {

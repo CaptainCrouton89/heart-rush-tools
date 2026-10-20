@@ -1,4 +1,4 @@
-import type { Catalogue, PlayAbility, RaceEffect } from './catalogue'
+import type { Catalogue, PlayAbility, PlayChoice, RaceEffect } from './catalogue'
 import { startingXp } from './bloodmarks'
 import type { Aspect, BuilderInput, Character, Profession, Talent, AbilityId, Attunement } from './types'
 import { RuleError, SCHEMA_VERSION } from './types'
@@ -6,6 +6,8 @@ import { RuleError, SCHEMA_VERSION } from './types'
 const YOUNG = ['natural-learner', 'fast-healer', 'young-and-foolish']
 const ELDERLY = ['wisdom-of-experience', 'deep-knowledge', 'frail-body-sharp-mind']
 const ABILITIES: AbilityId[] = ['might', 'agility', 'cunning', 'presence']
+
+const sameName = (a: string, b: string | undefined) => b !== undefined && a.trim().toLowerCase() === b.trim().toLowerCase()
 
 function validate(input: BuilderInput): void {
   const dice = ABILITIES.map(a => input.dice[a])
@@ -15,6 +17,8 @@ function validate(input: BuilderInput): void {
   const expected = input.ageCategory === 'young' ? 2 : input.ageCategory === 'elderly' ? 1 : 0
   if (benefits.length !== expected || new Set(benefits).size !== benefits.length || benefits.some(b => !allowed.includes(b)) ||
     (benefits.includes('deep-knowledge') && !input.deepKnowledgeAspect?.trim())) throw new RuleError('invalid_age_benefits')
+  // Wisdom of Experience (Building_Your_Character.md: "Choose one of your starting professions").
+  if (benefits.includes('wisdom-of-experience') && !input.professions.some(p => sameName(p.name, input.ageBenefitProfession))) throw new RuleError('invalid_age_benefits', 'wisdom-of-experience needs ageBenefitProfession to name a starting profession')
   const ranks = input.ageCategory === 'young' ? 2 : input.ageCategory === 'elderly' ? 5 : 4
   const cap = input.ageCategory === 'elderly' ? 4 : 3
   if (input.professions.length > 3 || input.professions.reduce((n, p) => n + p.rank, 0) !== ranks ||
@@ -41,23 +45,48 @@ export function createCharacter(input: BuilderInput, catalogue: Catalogue): Char
   if (input.ageBenefits.includes('frail-body-sharp-mind')) aspects.push(aspect('Frail', 3, 'age'))
   for (const text of input.createdAspects) aspects.push(aspect(text, 1, 'created'))
 
-  const professions: Profession[] = input.professions.map(p => ({ id: id(), name: p.name, rank: p.rank, challenges: 0, missions: 0, practiceWeeks: 0 }))
-  const racialTalent = (ability: PlayAbility): Talent => ({ id: id(), catalogueId: null, titleSnapshot: ability.title, category: 'racial', frequency: ability.frequency ?? 'passive', destiny: false, customText: ability.body, usedThisPeriod: false, usesThisFight: 0 })
-  const talents = [...race.abilities, ...(subrace?.abilities ?? [])].map(racialTalent)
+  const wisdom = input.ageBenefits.includes('wisdom-of-experience')
+  const professions: Profession[] = input.professions.map(p => ({ id: id(), name: p.name, rank: p.rank, challenges: 0, missions: 0, practiceWeeks: 0, rerollOnes: wisdom && sameName(p.name, input.ageBenefitProfession) }))
+
+  const talentRow = (catalogueId: string | null, titleSnapshot: string, frequency: Talent['frequency'], destiny: boolean, customText: string | null): Talent =>
+    ({ id: id(), catalogueId, titleSnapshot, category: 'racial', frequency, destiny, customText, usedThisPeriod: false, usesThisFight: 0 })
+  const catalogueTalent = (talentId: string, destiny: boolean): Talent => {
+    const entry = catalogue.talents.get(talentId)
+    if (!entry) throw new RuleError('not_found', `racial talent ${talentId} is not in the catalogue`)
+    return talentRow(entry.id, entry.title, entry.frequency ?? 'passive', destiny, null)
+  }
+  /** An ability, then the talent it grants. */
+  const abilityTalents = (ability: PlayAbility): Talent[] => [
+    talentRow(null, ability.title, ability.frequency ?? 'passive', false, ability.body),
+    ...(ability.grants ? [catalogueTalent(ability.grants.talentId, ability.grants.destiny)] : []),
+  ]
+  const talents = [...race.abilities, ...(subrace?.abilities ?? [])].flatMap(abilityTalents)
   const raceEffects: RaceEffect[] = [...race.effects, ...(subrace?.effects ?? [])]
-  const attunements: Attunement[] = raceEffects.filter(e => e.kind === 'attunement').map(effect => {
-    const elements = effect.elements
-    const element = elements.length === 1 ? elements[0] : input.attunementChoice
-    if (!element || !elements.some(e => e.toLowerCase() === element.toLowerCase())) throw new RuleError('attunement_choice')
-    return { id: id(), element, level: effect.level, source: 'race' }
-  })
+  // Every choice on the race and subrace must be answered; only the answered option's abilities and effects are applied.
+  const choices: Record<string, string> = {}
+  const choose = (choice: PlayChoice): void => {
+    const answer = input.kinChoices[choice.id]
+    if (choice.kind === 'options') {
+      const option = choice.options.find(o => o.id === answer)
+      if (!option) throw new RuleError('kin_choice', `${choice.id}: choose one of ${choice.options.map(o => o.id).join(', ')}`)
+      talents.push(...option.abilities.flatMap(abilityTalents))
+      raceEffects.push(...option.effects)
+    } else {
+      const entry = answer === undefined ? undefined : catalogue.talents.get(answer)
+      if (!entry || (choice.tradition !== null && entry.tradition !== choice.tradition)) throw new RuleError('kin_choice', `${choice.id}: ${answer ?? 'no answer'} is not a${choice.tradition ? ` ${choice.tradition}` : ''} catalogue talent`)
+      talents.push(catalogueTalent(entry.id, false))
+    }
+    choices[choice.id] = answer
+  }
+  for (const choice of [...race.choices, ...(subrace?.choices ?? [])]) choose(choice)
+  const attunements: Attunement[] = raceEffects.flatMap(e => e.kind === 'attunement' ? [{ id: id(), element: e.elements[0], level: e.level, source: 'race' }] : [])
   const xp = startingXp(input.bloodmarkLevel)
   const awarded = xp + raceEffects.reduce((bonus, effect) => effect.kind === 'awardBonus' ? bonus + Math.floor(xp / effect.per) * effect.bonus : bonus, 0)
   const baseMax = subrace?.baseMaxHp ?? race.baseMaxHp ?? 40
   return {
     schemaVersion: SCHEMA_VERSION, draft: false,
     identity: { name: input.name, pronouns: input.pronouns, dream: input.dream, description: input.description, motivation: input.motivation, portrait: input.portrait, ageCategory: input.ageCategory, ageBenefits: [...input.ageBenefits] },
-    kin: { raceId: race.id, subraceId: subrace?.id ?? null, titleSnapshot: subrace ? `${race.title} / ${subrace.title}` : race.title, spelltouched: input.spelltouched },
+    kin: { raceId: race.id, subraceId: subrace?.id ?? null, titleSnapshot: subrace ? `${race.title} / ${subrace.title}` : race.title, spelltouched: input.spelltouched, choices },
     attunements, path: null, bloodmarks: { level: input.bloodmarkLevel, abilities: [] },
     abilities: { might: { start: input.dice.might, current: input.dice.might }, agility: { start: input.dice.agility, current: input.dice.agility }, cunning: { start: input.dice.cunning, current: input.dice.cunning }, presence: { start: input.dice.presence, current: input.dice.presence } },
     hp: { baseMax, current: baseMax, heartDieCurrent: 8 }, wounds: [], conditions: [], aspects, professions, talents,

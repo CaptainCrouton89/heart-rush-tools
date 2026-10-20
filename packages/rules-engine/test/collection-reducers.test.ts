@@ -186,13 +186,13 @@ describe('aspects', () => {
 describe('professions', () => {
   test('an add creates <id>:0 with zeroed progress', () => {
     const c = reduceCollections(makeCharacter(), act('F1', { kind: 'profession:add', profession: { name: 'Smith', rank: 2 } }))
-    assert.deepEqual(c.professions, [{ id: 'F1:0', name: 'Smith', rank: 2, challenges: 0, missions: 0, practiceWeeks: 0 }])
+    assert.deepEqual(c.professions, [{ id: 'F1:0', name: 'Smith', rank: 2, challenges: 0, missions: 0, practiceWeeks: 0, rerollOnes: false }])
   })
 
   test('edit changes named fields; unknown id → not_found; remove by id', () => {
     const base = reduceCollections(makeCharacter(), act('F2', { kind: 'profession:add', profession: { name: 'Smith' } }))
     const c = reduceCollections(base, act('F3', { kind: 'profession:edit', profession: { id: 'F2:0', rank: 3, challenges: 1 } }))
-    assert.deepEqual(c.professions[0], { id: 'F2:0', name: 'Smith', rank: 3, challenges: 1, missions: 0, practiceWeeks: 0 })
+    assert.deepEqual(c.professions[0], { id: 'F2:0', name: 'Smith', rank: 3, challenges: 1, missions: 0, practiceWeeks: 0, rerollOnes: false })
     assert.throws(() => reduceCollections(base, act('F4', { kind: 'profession:edit', profession: { id: 'nope', rank: 1 } })), notFound)
     assert.throws(() => reduceCollections(base, act('F4', { kind: 'profession:remove', professionId: 'nope' })), notFound)
     assert.deepEqual(reduceCollections(base, act('F5', { kind: 'profession:remove', professionId: 'F2:0' })).professions, [])
