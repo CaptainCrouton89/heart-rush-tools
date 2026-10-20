@@ -10,7 +10,7 @@
       "binding": "DB",
       "database_name": "heartrush-tools",
       "database_id": "d5577aa4-3893-4912-b73b-6974e34dd73f",
-      "migrations_dir": "../../packages/northlight/migrations"
+      "migrations_dir": "migrations"
     }
   ],
   "triggers": { "crons": ["0 4 * * *"] },

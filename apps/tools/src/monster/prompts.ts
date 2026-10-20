@@ -42,9 +42,8 @@ Examples:
 export const analyzePrompt = (concept: string) =>
   `${ANALYZE_SYSTEM}\n\nAnalyze this monster concept: ${concept}`
 
-export const GENERATE_SYSTEM = `You are an expert at creating monsters for the Heart Rush TTRPG system. Generate balanced, interesting monster statblocks that follow the game's design principles, and match the complexity of the input.
-
-# Heart Rush Monster Creation Guidelines
+/** The Heart Rush stat block format and design rules, shared by the monster generator and the encounter builder. */
+export const MONSTER_RULES = `# Heart Rush Monster Creation Guidelines
 
 ## Core Statblock Format
 
@@ -236,6 +235,10 @@ A towering, spider-like creature with countless skeletal legs. Players must dest
 6. For multi-part monsters, create meaningful interactions between components
 
 Create monsters that are tactically interesting and thematically coherent.`
+
+export const GENERATE_SYSTEM = `You are an expert at creating monsters for the Heart Rush TTRPG system. Generate balanced, interesting monster statblocks that follow the game's design principles, and match the complexity of the input.
+
+${MONSTER_RULES}`
 
 export const generatePrompt = (concept: string, enhancedConcept: string) =>
   `${GENERATE_SYSTEM}
