@@ -6,6 +6,7 @@ import { Link, useRouter } from '@tanstack/react-router'
 import type { NavNode, PageFile, RaceFacets, TalentFacets } from '@heartrush/content/types'
 import { ArticleActions } from '~/components/article/actions'
 import { ArticleBody } from '~/components/article/body'
+import { canonicalUrl } from '~/components/article/canonical'
 import { SiteShell } from '~/components/shell/site-shell'
 import { metadataLabels, type CatalogueConfig } from './config'
 import { FROM_CATALOGUE } from './catalogue-page'
@@ -30,6 +31,7 @@ export function EntryPage({ config, page, nav }: { config: CatalogueConfig; page
     <SiteShell nav={nav} activePath={page.path}>
       <Crumbs crumbs={page.breadcrumbs} current={page.title} />
       <h1 className="mt-3 font-serif text-h1-sm font-semibold text-foreground md:text-h1">{page.title}</h1>
+      <p className="print-only mt-2 font-sans text-meta">{canonicalUrl(page.path)}</p>
       {(raw || labels.length > 0) && (
         <div className="mt-3 font-sans text-ui text-muted-foreground">
           {labels.length > 0 && (

@@ -6,7 +6,7 @@
 // The preview JSON is fetched only when a preview opens. Without a provider (or inside a preview) this renders
 // the plain link and never fetches.
 import { Link } from '@tanstack/react-router'
-import { Children, isValidElement, useEffect, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import type { LinkTarget } from '@heartrush/content/types'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@heartrush/ui/components/hover-card'
 import { Sheet, SheetClose, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from '@heartrush/ui/components/sheet'
@@ -15,7 +15,8 @@ import { usePreview } from './load-preview'
 import { PreviewProvider, usePreviewContentVersion } from './preview-context'
 import { FullRuleLink, PreviewBreadcrumb, PreviewExcerpt, PreviewStatus } from './preview-content'
 
-export function ReferenceLink({ target, children }: { target: LinkTarget; children: ReactNode }) {
+/** `label` is the link's plain text: it names the touch button ("Preview <label>") and titles its sheet. */
+export function ReferenceLink({ target, label, children }: { target: LinkTarget; label: string; children: ReactNode }) {
   const contentVersion = usePreviewContentVersion()
   // The hover card is attached only where the primary input can hover: Radix's trigger cancels touchstart, and a
   // touch reader previews through the adjacent button instead. Server and hydration render the plain link.
@@ -26,7 +27,6 @@ export function ReferenceLink({ target, children }: { target: LinkTarget; childr
     </Link>
   )
   if (!contentVersion) return link
-  const term = textOf(children).trim() || 'reference'
   // Keep the touch button on the same line as the end of the term while the term itself still wraps: Chrome takes
   // the break rule at the link/button boundary from the link, so the nowrap wrapper also needs a word joiner there.
   return (
@@ -39,7 +39,7 @@ export function ReferenceLink({ target, children }: { target: LinkTarget; childr
         link
       )}
       {'\u2060'}
-      <TouchPreview contentVersion={contentVersion} target={target} term={term} />
+      <TouchPreview contentVersion={contentVersion} target={target} term={label.trim()} />
     </span>
   )
 }
@@ -86,7 +86,7 @@ function TouchPreview({ contentVersion, target, term }: { contentVersion: string
     }}>
       <SheetTrigger
         aria-label={`Preview ${term}`}
-        className="print-hidden relative ml-1 hidden size-5 items-center justify-center rounded-sm align-[-0.2em] text-primary after:absolute after:top-1/2 after:left-0 after:size-11 after:-translate-y-1/2 pointer-coarse:inline-flex"
+        className="print-hidden hidden size-11 items-center justify-center rounded-sm align-middle text-primary pointer-coarse:inline-flex"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false" className="lucide size-4">
           {/* Lucide "info", inlined: lucide-react is a dependency of @heartrush/ui, not of this app. */}
@@ -145,11 +145,4 @@ function useCanHover() {
     return () => query.removeEventListener('change', onChange)
   }, [])
   return canHover
-}
-
-function textOf(node: ReactNode): string {
-  if (typeof node === 'string' || typeof node === 'number') return String(node)
-  if (Array.isArray(node)) return node.map(textOf).join('')
-  if (isValidElement<{ children?: ReactNode }>(node)) return Children.toArray(node.props.children).map(textOf).join('')
-  return ''
 }

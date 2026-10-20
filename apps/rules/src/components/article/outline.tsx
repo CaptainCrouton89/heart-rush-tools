@@ -122,11 +122,12 @@ export function MobileOutline({ headings }: { headings: Heading[] }) {
             )}
             <ChevronDownIcon className="ml-auto" />
           </button>
-          <SheetContent side="bottom" aria-describedby={undefined}>
+          {/* Only the list scrolls, so the header and its Close button stay in view at any scroll position. */}
+          <SheetContent side="bottom" aria-describedby={undefined} className="overflow-hidden">
             <SheetHeader>
               <SheetTitle>On this page</SheetTitle>
             </SheetHeader>
-            <nav aria-label="On this page" className="px-2 py-2">
+            <nav aria-label="On this page" className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-2 py-2">
               <OutlineList headings={headings} active={active} touch onSelect={() => setSheetOpen(false)} />
             </nav>
           </SheetContent>

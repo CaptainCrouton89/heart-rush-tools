@@ -92,7 +92,8 @@ function BlockNode({ block, labelledBy }: { block: Block; labelledBy: string | n
       )
     case 'codeBlock':
       return (
-        <pre id={block.id}>
+        // Authored formulas wrap rather than scroll: only marked table wrappers may scroll horizontally.
+        <pre id={block.id} className="whitespace-pre-wrap wrap-break-word">
           <code data-lang={block.lang ?? undefined}>{block.value}</code>
         </pre>
       )
@@ -278,7 +279,7 @@ function InlineNode({ node }: { node: Inline }): ReactNode {
       return <br />
     case 'link':
       if (node.target) {
-        return <ReferenceLink target={node.target}><Inlines nodes={node.children} /></ReferenceLink>
+        return <ReferenceLink target={node.target} label={plainText(node.children)}><Inlines nodes={node.children} /></ReferenceLink>
       }
       return <a href={node.url}><Inlines nodes={node.children} /></a>
   }
