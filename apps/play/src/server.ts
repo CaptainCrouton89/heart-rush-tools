@@ -2,6 +2,9 @@ import handler from '@tanstack/react-start/server-entry'
 import { env } from 'cloudflare:workers'
 import { authForOrigin } from '~/server/auth'
 
+// A Durable Object class must be a named export of the Worker's entry module.
+export { CampaignChannel } from '~/server/campaign-channel'
+
 /** The Worker's entry: TanStack Start's fetch handler plus the daily Northlight maintenance cron. */
 export default {
   fetch: handler.fetch,

@@ -24,6 +24,7 @@ import {
 import { ulid } from 'ulid'
 import { getCatalogue } from '../catalogue'
 import { characterRole, mayWrite, type CharacterRole } from './authz'
+import { publishCharacterWrite } from './live'
 
 // ---- Types -------------------------------------------------------------------------------------
 
@@ -548,33 +549,32 @@ export const saveDraftFn = createServerFn({ method: 'POST' })
     return saveDraft(db, userId, data) // a draft has no campaign: nothing to publish
   })
 
-// LV (ruling 20, INV-LIVE): in each of the three handlers below, after the write commits and `result.ok` is true, call
-//   publish(env, result.character.campaignId, { type: 'character', characterId: result.character.id, revision: result.character.revision })
-// when `campaignId` is not null. A failed publish is logged and never fails the write. `env` is already in scope.
+// After each write below commits, `publishCharacterWrite` tells the character's campaign channel (ruling 20, INV-LIVE).
+// It is best effort: a failed publish is logged inside and never fails the write. A draft has no campaign, so nothing is sent.
 
 export const finishDraftFn = createServerFn({ method: 'POST' })
   .validator(input<FinishDraftInput>())
   .handler(async ({ data }) => {
-    const { db, userId } = await context()
+    const { env, db, userId } = await context()
     const result = await finishDraft(db, userId, data)
-    // LV: publish here (see the note above).
+    await publishCharacterWrite(env, result)
     return result
   })
 
 export const applyCharacterActionFn = createServerFn({ method: 'POST' })
   .validator(input<ApplyInput>())
   .handler(async ({ data }) => {
-    const { db, userId } = await context()
+    const { env, db, userId } = await context()
     const result = await applyCharacterAction(db, userId, data)
-    // LV: publish here (see the note above).
+    await publishCharacterWrite(env, result)
     return result
   })
 
 export const undoCharacterEventFn = createServerFn({ method: 'POST' })
   .validator(input<UndoInput>())
   .handler(async ({ data }) => {
-    const { db, userId } = await context()
+    const { env, db, userId } = await context()
     const result = await undoCharacterEvent(db, userId, data)
-    // LV: publish here (see the note above).
+    await publishCharacterWrite(env, result)
     return result
   })

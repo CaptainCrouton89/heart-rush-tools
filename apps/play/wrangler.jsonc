@@ -22,6 +22,11 @@
       "migrations_dir": "../tools/migrations"
     }
   ],
+  "durable_objects": {
+    // One CampaignChannel per campaign id: the WebSocket hub for that campaign's live updates (src/server/live.ts).
+    "bindings": [{ "name": "CAMPAIGN_CHANNEL", "class_name": "CampaignChannel" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["CampaignChannel"] }],
   "triggers": { "crons": ["0 4 * * *"] },
   "vars": {
     "CROUTER_CLIENT_ID": "w5p61c34rt3p",
