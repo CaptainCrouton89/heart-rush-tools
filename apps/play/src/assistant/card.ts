@@ -14,7 +14,7 @@ import { RuleError, type AbilityId, type BuilderInput, type Character, type Clie
 import { getCatalogue, RULES_ORIGIN, rulebookUrl, type PlayCatalogue } from '~/catalogue'
 import { AGE, sketchPreview, stepProblems, type DraftContent, type StepNumber } from '~/components/builder/draft-rules'
 import { refusalReason } from '~/components/sheet/refusal-text'
-import type { CardLine, StoredCard, StoredLine, TurnDecision, TurnOption, Turn } from './schema'
+import type { CardLine, Json, StoredCard, StoredLine, TurnDecision, TurnOption, Turn } from './schema'
 
 // ---- Types ----------------------------------------------------------------------------------------
 
@@ -418,7 +418,7 @@ export function settleTurn(turn: Turn, draft: DraftContent, catalogue: PlayCatal
     const lines = turn.card.lines.flatMap((line, i): StoredLine[] => {
       if (!checks[i]!.ok) return []
       const id = newId()
-      return [isBuilderLine(line) ? { ...line, id, before: spec(line).current(draft.builder, line) ?? null } : { ...line, id, at: now }]
+      return [isBuilderLine(line) ? { ...line, id, before: (spec(line).current(draft.builder, line) ?? null) as Json } : { ...line, id, at: now }]
     })
     if (lines.length > 0) card = { lines }
   }

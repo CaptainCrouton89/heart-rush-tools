@@ -224,16 +224,19 @@ const UPDATE_LIVE = 'UPDATE character SET state = ?, name = ?, revision = revisi
 const INSERT_EVENT =
   'INSERT INTO character_event (id, character_id, actor_user_id, seq, action, inverse, undone, created_at) SELECT ?, ?, ?, ?, ?, ?, 0, ? WHERE changes() = 1'
 /** Each statement after the first must run only if the previous one changed a row. */
+/** Archived chats are never read again (`server/assistant.ts` requires `archived = 0`); the claim and run id are cleared so no settle can write. */
+const ARCHIVE_CHAT = 'UPDATE builder_chat SET archived = 1, claim = NULL, active_run_id = NULL, stop_requested = 0 WHERE character_id = ? AND changes() = 1'
 const CHAINED_UNDO_MARK = 'UPDATE character_event SET undone = 1 WHERE id = ? AND undone = 0 AND changes() = 1'
 
 type BatchOutcome = 'committed' | 'conflict' | 'duplicate_action'
 
 /**
- * Runs a conditional batch. The first statement is the revision-checked UPDATE; every later one is chained on
- * `changes() = 1`, so a stale writer inserts nothing. A thrown statement rolls the whole batch back; if an event id
+ * Runs a conditional batch. The first statement is the revision-checked UPDATE; the next `chained` statements are chained on
+ * `changes() = 1`, so a stale writer inserts nothing, and each must change exactly one row. Statements after those (Finish's
+ * chat archive, which changes zero rows when a draft has no chat) are not checked. A thrown statement rolls the whole batch back; if an event id
  * in `eventIds` already exists, that is the primary key refusing a reused action id.
  */
-async function runBatch(db: D1Database, statements: D1PreparedStatement[], eventIds: string[]): Promise<BatchOutcome> {
+async function runBatch(db: D1Database, statements: D1PreparedStatement[], eventIds: string[], chained = statements.length - 1): Promise<BatchOutcome> {
   let results: D1Result[]
   try {
     results = await db.batch(statements)
@@ -246,7 +249,7 @@ async function runBatch(db: D1Database, statements: D1PreparedStatement[], event
   }
   if (results[0].meta.changes === 0) return 'conflict'
   results.forEach((r, i) => {
-    if (i > 0 && r.meta.changes !== 1) throw new Error(`Character batch statement ${i} changed ${r.meta.changes} rows after the revision check passed`)
+    if (i > 0 && i <= chained && r.meta.changes !== 1) throw new Error(`Character batch statement ${i} changed ${r.meta.changes} rows after the revision check passed`)
   })
   return 'committed'
 }
@@ -464,8 +467,10 @@ export async function finishDraft(db: D1Database, userId: string, input: FinishD
     ...events.map((event, i) =>
       db.prepare(INSERT_EVENT).bind(event.id, row.id, userId, i + 2, JSON.stringify(event.action), JSON.stringify(event.inverse), now),
     ),
+    // The creation assistant's chat is archived with the draft: kept, shown to nobody. A draft with no chat changes no row.
+    db.prepare(ARCHIVE_CHAT).bind(row.id),
   ]
-  const outcome = await runBatch(db, statements, events.map((e) => e.id))
+  const outcome = await runBatch(db, statements, events.map((e) => e.id), events.length)
   if (outcome === 'conflict') return conflict(db, userId, row.id)
   if (outcome === 'duplicate_action') return refuse('duplicate_action', 'A pending action id was already used')
   return { ok: true, character: committedDoc(row, role, character, character.identity.name, now, finalRevision) }
@@ -587,11 +592,23 @@ export const saveDraftFn = createServerFn({ method: 'POST' })
 // After each write below commits, `publishCharacterWrite` tells the character's campaign channel (ruling 20, INV-LIVE).
 // It is best effort: a failed publish is logged inside and never fails the write. A draft has no campaign, so nothing is sent.
 
+/** Cancel the assistant's in-flight run after Finish committed. Logged, not awaited by the caller; a run that settles later cannot write, its claim is gone. */
+async function cancelAfterFinish(userId: string, runId: string): Promise<void> {
+  const [{ authFor }, { getRequest }, { cancelRun }] = await Promise.all([import('./auth'), import('@tanstack/react-start/server'), import('@heartrush/northlight/runs')])
+  await cancelRun(await authFor(getRequest()).runtimeFor(userId), runId)
+}
+
 export const finishDraftFn = createServerFn({ method: 'POST' })
   .validator(input<FinishDraftInput>())
   .handler(async ({ data }) => {
     const { env, db, userId } = await context()
+    // The run the chat had in flight, read before the commit clears it: it is cancelled once the draft is finished.
+    const run = await db.prepare('SELECT active_run_id FROM builder_chat WHERE character_id = ? AND archived = 0').bind(data?.characterId).first<{ active_run_id: string | null }>()
     const result = await finishDraft(db, userId, data)
+    if (result.ok && run?.active_run_id) {
+      const { waitUntil } = await import('cloudflare:workers')
+      waitUntil(cancelAfterFinish(userId, run.active_run_id).catch((e) => console.error('could not cancel the assistant run after Finish', e)))
+    }
     await publishCharacterWrite(env, result)
     return result
   })

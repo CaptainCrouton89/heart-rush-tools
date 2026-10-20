@@ -5,7 +5,8 @@
 // and before the runtime is touched. INV-AI: nothing here writes D1, and the GM assistant never reads `journal_entry`.
 // Expected outcomes are values: `result`, `failed` (a run that did not give a result), or `refused` (authorization or input).
 import { createServerFn } from '@tanstack/react-start'
-import { refusalOf, type ConnectedCrouter } from '@north-light/sdk'
+import type { ConnectedCrouter } from '@north-light/sdk'
+import { needsSignIn } from '@heartrush/northlight/runs'
 import { upgradeCharacter } from '@heartrush/rules-engine/actions'
 import { effectiveMaxHp, maxHp } from '@heartrush/rules-engine/derived'
 import { previewDraft } from '@heartrush/rules-engine/draft'
@@ -101,9 +102,6 @@ async function readableCharacter(db: D1Database, userId: string, characterId: un
   if (!role) return refuse('forbidden', 'You cannot see this character')
   return characterOf(row)
 }
-
-/** Whether an error means the person must sign in to Northlight again (tools' `needsSignIn`). */
-const needsSignIn = (error: unknown) => refusalOf(error) !== null || (error as { code?: string } | null)?.code === 'not_connected'
 
 /**
  * Start one run on the person's runtime and wait for its result. Never throws for how a run ends: a refused or missing

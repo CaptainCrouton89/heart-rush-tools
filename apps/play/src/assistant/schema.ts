@@ -157,7 +157,9 @@ export type OptionRef = NonNullable<TurnOption['ref']>
  * the settle time. `before` is the value of the line's field in the stored draft when the card was made (null when empty);
  * absent for talent and gear lines.
  */
-export type StoredLine = CardLine & { id: string; before?: unknown; at?: string }
+/** A JSON value: what `before` holds, so a stored line can cross a server function. */
+export type Json = string | number | boolean | null | Json[] | { [key: string]: Json }
+export type StoredLine = CardLine & { id: string; before?: Json; at?: string }
 export type StoredCard = { lines: StoredLine[] }
 
 export type PlayerMessage = { id: string; role: 'player'; text: string; at: string }

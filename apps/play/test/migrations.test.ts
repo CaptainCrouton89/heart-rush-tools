@@ -15,7 +15,7 @@ after(() => t.dispose())
 const names = async (type: 'table' | 'index') =>
   (await db.prepare('SELECT name FROM sqlite_master WHERE type = ? ORDER BY name').bind(type).all<{ name: string }>()).results.map((r) => r.name)
 
-test('migrations are 0001, 0100, 0101, 0200 and the auth copy is byte-identical to the package', () => {
+test('migrations are 0001, 0100, 0101, 0200, 0201 and the auth copy is byte-identical to the package', () => {
   const pkg = fileURLToPath(new URL('../../../packages/northlight/migrations/0001_northlight_auth.sql', import.meta.url))
   assert.ok(readFileSync(`${PLAY_MIGRATIONS}0001_northlight_auth.sql`).equals(readFileSync(pkg)))
 })
@@ -25,7 +25,7 @@ test('every play table exists', async () => {
   for (const name of [
     'user', 'session', 'auth_pending', 'connection',
     'campaign', 'campaign_member', 'campaign_invite', 'character', 'character_event',
-    'campaign_session', 'session_encounter', 'stratagem', 'roll', 'journal_entry',
+    'campaign_session', 'session_encounter', 'stratagem', 'roll', 'journal_entry', 'builder_chat',
   ]) assert.ok(tables.includes(name), name)
   const indexes = await names('index')
   for (const name of ['campaign_session_number', 'campaign_session_open', 'roll_campaign_time', 'journal_character', 'journal_session_shared', 'character_event_seq'])
