@@ -255,6 +255,31 @@ function eventStatements(db: D1Database, row: Row, userId: string, event: { id: 
   return db.prepare(INSERT_EVENT).bind(event.id, row.id, userId, row.revision + 1, JSON.stringify(event.action), JSON.stringify(event.inverse), now)
 }
 
+/**
+ * The two statements that commit one already-applied action on a character inside a larger batch that must commit whole
+ * (Award XP to a campaign): the revision-checked UPDATE, also guarded on the character still being in `campaignId`, then the
+ * event INSERT. Unlike `eventStatements`, the INSERT does not skip itself when the UPDATE changed nothing: it writes a NULL
+ * `seq`, which violates NOT NULL and rolls the whole batch back, so one stale or departed character cannot leave the others
+ * committed. The caller catches `isBatchAbort` and retries on fresh rows.
+ */
+export function wholeBatchActionStatements(
+  db: D1Database, userId: string, row: { id: string; revision: number }, campaignId: string,
+  event: { id: string; action: Action; inverse: Inverse }, state: Character, now: string,
+): D1PreparedStatement[] {
+  return [
+    db.prepare(`${UPDATE_LIVE} AND campaign_id = ?`).bind(JSON.stringify(state), state.identity.name, now, row.id, row.revision, campaignId),
+    db
+      .prepare(
+        `INSERT INTO character_event (id, character_id, actor_user_id, seq, action, inverse, undone, created_at)
+         VALUES (?, ?, ?, CASE WHEN changes() = 1 THEN ? END, ?, ?, 0, ?)`,
+      )
+      .bind(event.id, row.id, userId, row.revision + 1, JSON.stringify(event.action), JSON.stringify(event.inverse), now),
+  ]
+}
+
+/** Whether `error` is the rollback `wholeBatchActionStatements` causes when a character's UPDATE matched no row. */
+export const isBatchAbort = (error: unknown): boolean => error instanceof Error && error.message.includes('NOT NULL constraint failed: character_event.seq')
+
 /** The document just committed, built from what was written (no re-read). */
 function committedDoc(row: Row, role: CharacterRole, state: StoredState, name: string, now: string, revision: number): CharacterDoc {
   return toDoc({ ...row, state: JSON.stringify(state), name, revision, updated_at: now }, role)

@@ -226,6 +226,23 @@ test('criterion 7: the leader\'s objective roll is stored with the CN and label 
   assert.equal(await count('roll'), 2)
 })
 
+test('a saved objective roll keeps its label and CN when the stratagem is renamed, reordered, rewritten or deleted', async () => {
+  await seedStratagem(ysolde)
+  const { env } = fakeChannel()
+  const rolled = ok(await rollForCharacter(db, env, 'owner', check(ysolde, { objective: { stratagemId: 'strat', index: 0 } }), seq(5, 4)))
+  const expected = { stratagemId: 'strat', index: 0, cn: 15, label: 'Take Thornwall — Cut the supply road' }
+  const feed = async () => ok(await listRolls(db, 'other', { campaignId: 'camp' })).rolls[0]!.objective
+  assert.deepEqual(rolled.roll!.objective, expected)
+
+  const second = JSON.stringify([{ title: 'Burn the granary', cn: 4, leaderCharacterId: null, state: 'open' }, { title: 'Cut the supply road', cn: null, leaderCharacterId: ysolde, state: 'open' }])
+  await db.prepare("UPDATE stratagem SET goal = 'Take Ravenhold', setup_cn = 2, objectives = ? WHERE id = 'strat'").bind(second).run() // renamed, reordered, new CN
+  assert.deepEqual(await feed(), expected)
+  await db.prepare("UPDATE stratagem SET objectives = '[]' WHERE id = 'strat'").run() // objective deleted
+  assert.deepEqual(await feed(), expected)
+  await db.prepare("DELETE FROM stratagem WHERE id = 'strat'").run() // stratagem deleted
+  assert.deepEqual(await feed(), expected)
+})
+
 test('criterion 7: a non-leader\'s objective roll is 403 and stores nothing — another player, the GM, a different character of the leader\'s player', async () => {
   await seedStratagem(ysolde)
   const { env, events } = fakeChannel()

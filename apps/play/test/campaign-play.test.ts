@@ -307,6 +307,28 @@ test('criterion 6: an open objective\'s CN is 15 with no asset, 12 with one asse
   assert.equal(await cnOf(), 9)
 })
 
+test('updateStratagem with expectedRevision: the first of two writes from the same read wins, the second is a conflict and writes nothing', async () => {
+  const { campaignId } = await table()
+  const { env, events } = fakeChannel()
+  const made = ok(await createStratagem(db, env, 'gm', campaignId, { goal: 'Take Thornwall', timePerRoll: '1 week', setupCn: 15, objectives: [objective()] })).stratagem
+  assert.equal(made.revision, 1)
+  const first = ok(await updateStratagem(db, env, 'gm', campaignId, { stratagemId: made.id, expectedRevision: 1, goal: 'Take Ravenhold' })).stratagem
+  assert.equal(first.revision, 2)
+  const published = events.length
+  const second = refused(await updateStratagem(db, env, 'gm', campaignId, { stratagemId: made.id, expectedRevision: 1, objectives: [objective({ state: 'done' })] }), 409, 'conflict')
+  assert.match(second.message, /changed/)
+  assert.equal(events.length, published, 'a refused write publishes nothing')
+  const [now] = ok(await listStratagems(db, 'alice', campaignId)).stratagems
+  assert.equal(now.goal, 'Take Ravenhold')
+  assert.equal(now.objectives[0].state, 'open')
+  assert.equal(now.revision, 2)
+  // A write with the current revision goes through; one without a revision is unconditional (and still moves it).
+  assert.equal(ok(await updateStratagem(db, env, 'gm', campaignId, { stratagemId: made.id, expectedRevision: 2, objectives: [objective({ state: 'done' })] })).stratagem.revision, 3)
+  assert.equal(ok(await updateStratagem(db, env, 'gm', campaignId, { stratagemId: made.id, setupCn: 9 })).stratagem.revision, 4)
+  refused(await updateStratagem(db, env, 'gm', campaignId, { stratagemId: 'nope', expectedRevision: 1, setupCn: 9 }), 404, 'not_found')
+  refused(await updateStratagem(db, env, 'gm', campaignId, { stratagemId: made.id, expectedRevision: 0, setupCn: 9 }), 400, 'bad_input')
+})
+
 test('objective CN: a hindrance adds 3, an own CN replaces the setup CN, done and gone objectives have none, and there is no floor', async () => {
   const { campaignId } = await table()
   const { env } = fakeChannel()

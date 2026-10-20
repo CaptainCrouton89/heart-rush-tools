@@ -4,6 +4,7 @@ import {
   createJournalEntry, deleteJournalEntry, editJournalEntry, listJournal, listSharedJournal, publishJournalWrite, setJournalShared,
   type JournalEntry, type JournalRefusal,
 } from '../src/server/journal'
+import { assignCharacterToCampaign, removeCharacterFromCampaign } from '../src/server/campaigns'
 import type { LiveEvent } from '../src/server/live'
 import { openPlayDbs, type D1 } from './db'
 
@@ -115,6 +116,36 @@ test('a campaign never sees another campaign\'s shared entries', async () => {
   const entry = await write()
   ok(await setJournalShared(db, 'owner', { entryId: entry.id, shared: true }))
   assert.deepEqual(ok(await listSharedJournal(db, 'stranger', { campaignId: 'other' })).entries, [])
+})
+
+test('a share keeps the campaign it was made in: share in A, leave, join B → B\'s members cannot read it, and it is private again', async () => {
+  await db.prepare('INSERT INTO campaign (id, name, gm_user_id) VALUES (?, ?, ?)').bind('b', 'Other Table', 'stranger').run()
+  for (const [user, role] of [['stranger', 'gm'], ['owner', 'player']]) await db.prepare('INSERT INTO campaign_member (campaign_id, user_id, role) VALUES (?, ?, ?)').bind('b', user, role).run()
+  const entry = await write()
+  ok(await setJournalShared(db, 'owner', { entryId: entry.id, shared: true }))
+  assert.deepEqual(await sharedIds('member'), [entry.id])
+
+  ok(await removeCharacterFromCampaign(db, 'owner', { characterId: 'ysolde' }))
+  assert.deepEqual(await sharedIds('member'), [])
+  assert.equal(ok(await listJournal(db, 'owner', { characterId: 'ysolde' })).entries[0].shared, false)
+
+  ok(await assignCharacterToCampaign(db, 'owner', { characterId: 'ysolde', campaignId: 'b' }))
+  assert.deepEqual(ok(await listSharedJournal(db, 'stranger', { campaignId: 'b' })).entries, [])
+  assert.deepEqual(await sharedIds('member'), [])
+  // Only the owner's new choice shares it, with the campaign it is in now.
+  ok(await setJournalShared(db, 'owner', { entryId: entry.id, shared: true }))
+  assert.deepEqual(ok(await listSharedJournal(db, 'stranger', { campaignId: 'b' })).entries.map((e) => e.id), [entry.id])
+  assert.deepEqual(await sharedIds('member'), [])
+})
+
+test('a share left over from a deleted campaign is cleared when the character joins another', async () => {
+  await db.prepare('INSERT INTO campaign (id, name, gm_user_id) VALUES (?, ?, ?)').bind('b', 'Other Table', 'stranger').run()
+  await db.prepare('INSERT INTO campaign_member (campaign_id, user_id, role) VALUES (?, ?, ?)').bind('b', 'owner', 'player').run()
+  const entry = await write()
+  ok(await setJournalShared(db, 'owner', { entryId: entry.id, shared: true }))
+  await db.prepare("DELETE FROM campaign WHERE id = 'camp'").run() // character.campaign_id becomes NULL without removeCharacterFromCampaign
+  ok(await assignCharacterToCampaign(db, 'owner', { characterId: 'ysolde', campaignId: 'b' }))
+  assert.deepEqual(ok(await listSharedJournal(db, 'owner', { campaignId: 'b' })).entries, [])
 })
 
 test('criterion 23: writing, editing, sharing and deleting leave character.revision and state unchanged', async () => {

@@ -52,7 +52,7 @@ export type RollRecord = {
   modifier: number
   total: number
   complication: Complication
-  /** Set for a stratagem objective roll. `label` is "<goal> — <objective title>"; null when the stratagem or objective is gone. */
+  /** Set for a stratagem objective roll. `label` is "<goal> — <objective title>" as it was when the roll was made (null only for a roll that predates the stored label and whose stratagem is gone). */
   objective: { stratagemId: string; index: number; cn: number; label: string | null } | null
   createdAt: string
 }
@@ -157,18 +157,17 @@ const objectiveLabel = (goal: string, title: string): string => `${goal} — ${t
 type RollRow = {
   id: string; campaign_id: string; character_id: string; user_id: string; roll_type: RollType; ability: AbilityId; dice: string
   modifier: number; total: number; complication: Complication; objective_stratagem_id: string | null; objective_index: number | null
-  objective_cn: number | null; created_at: string; character_name: string; player_name: string; goal: string | null; objectives: string | null
+  objective_cn: number | null; objective_label: string | null; created_at: string; character_name: string; player_name: string
 }
 
 const ROLL_SELECT =
-  `SELECT r.*, c.name AS character_name, u.display_name AS player_name, s.goal AS goal, s.objectives AS objectives
-     FROM roll r JOIN character c ON c.id = r.character_id JOIN user u ON u.id = r.user_id LEFT JOIN stratagem s ON s.id = r.objective_stratagem_id`
+  `SELECT r.*, c.name AS character_name, u.display_name AS player_name
+     FROM roll r JOIN character c ON c.id = r.character_id JOIN user u ON u.id = r.user_id`
 
 function toRecord(r: RollRow): RollRecord {
   let objective: RollRecord['objective'] = null
   if (r.objective_stratagem_id !== null && r.objective_index !== null && r.objective_cn !== null) {
-    const title = r.objectives === null ? undefined : (JSON.parse(r.objectives) as StoredObjective[])[r.objective_index]?.title
-    objective = { stratagemId: r.objective_stratagem_id, index: r.objective_index, cn: r.objective_cn, label: r.goal === null || title === undefined ? null : objectiveLabel(r.goal, title) }
+    objective = { stratagemId: r.objective_stratagem_id, index: r.objective_index, cn: r.objective_cn, label: r.objective_label }
   }
   return {
     id: r.id, campaignId: r.campaign_id, characterId: r.character_id, characterName: r.character_name, userId: r.user_id, playerName: r.player_name,
@@ -190,7 +189,7 @@ const asLive = (roll: RollRecord): LiveRoll => roll
 
 /**
  * Makes one roll for a character the user may edit. With `objective`, the user must own the character, the character must
- * lead that open objective of one of its campaign's stratagems, and the roll carries the objective's current CN.
+ * lead that open objective of one of its campaign's stratagems, and the roll carries the objective's current CN and label, stored on the row.
  * A character in a campaign: inserts the `roll` row and deletes the campaign's rows beyond the newest 200 in one batch, then
  * publishes `{type: 'roll', roll}`. A character in no campaign: nothing is stored or published (`roll` is null).
  * `rand` is injectable for tests; the server functions always use the crypto-backed one.
@@ -206,7 +205,7 @@ export async function rollForCharacter(
   if (isRefusal(role)) return role
   if (isDraft(row)) return refuse('is_draft', 'A character still in the builder cannot roll')
 
-  let objective: { stratagemId: string; index: number; cn: number } | null = null
+  let objective: { stratagemId: string; index: number; cn: number; label: string } | null = null
   if (input.objective) {
     if (role !== 'owner') return refuse('forbidden', 'Only the character\'s player rolls its objective')
     if (row.campaign_id === null) return refuse('forbidden', 'This character is in no campaign')
@@ -217,7 +216,7 @@ export async function rollForCharacter(
     if (!target) return refuse('bad_input', 'No such objective')
     if (target.leaderCharacterId !== row.id) return refuse('forbidden', 'This character does not lead that objective')
     if (target.state !== 'open') return refuse('forbidden', 'That objective is not open')
-    objective = { stratagemId: found.id, index: input.objective.index, cn: objectiveCn(stratagem, input.objective.index) }
+    objective = { stratagemId: found.id, index: input.objective.index, cn: objectiveCn(stratagem, input.objective.index), label: objectiveLabel(found.goal, target.title) }
   }
 
   let result: RollResult
@@ -238,12 +237,12 @@ export async function rollForCharacter(
     db
       .prepare(
         `INSERT INTO roll (id, campaign_id, character_id, user_id, roll_type, ability, dice, modifier, total, complication,
-                           objective_stratagem_id, objective_index, objective_cn, created_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                           objective_stratagem_id, objective_index, objective_cn, objective_label, created_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       )
       .bind(
         id, row.campaign_id, row.id, userId, input.type, input.ability, JSON.stringify(result.dice), input.modifier, result.total, view.complication,
-        objective?.stratagemId ?? null, objective?.index ?? null, objective?.cn ?? null, new Date().toISOString(),
+        objective?.stratagemId ?? null, objective?.index ?? null, objective?.cn ?? null, objective?.label ?? null, new Date().toISOString(),
       ),
     db
       .prepare(`DELETE FROM roll WHERE campaign_id = ? AND id NOT IN (SELECT id FROM roll WHERE campaign_id = ? ORDER BY created_at DESC, id DESC LIMIT ${ROLL_LIMIT})`)

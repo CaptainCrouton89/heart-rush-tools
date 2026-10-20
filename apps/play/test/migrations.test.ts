@@ -15,7 +15,7 @@ after(() => t.dispose())
 const names = async (type: 'table' | 'index') =>
   (await db.prepare('SELECT name FROM sqlite_master WHERE type = ? ORDER BY name').bind(type).all<{ name: string }>()).results.map((r) => r.name)
 
-test('migrations are 0001, 0100, 0101 and the auth copy is byte-identical to the package', () => {
+test('migrations are 0001, 0100, 0101, 0200 and the auth copy is byte-identical to the package', () => {
   const pkg = fileURLToPath(new URL('../../../packages/northlight/migrations/0001_northlight_auth.sql', import.meta.url))
   assert.ok(readFileSync(`${PLAY_MIGRATIONS}0001_northlight_auth.sql`).equals(readFileSync(pkg)))
 })
@@ -86,4 +86,36 @@ test('deleting a character cascades to its events and journal; deleting a campai
   await db.prepare("DELETE FROM character WHERE id = 'ch-del'").run()
   assert.equal((await db.prepare("SELECT COUNT(*) AS n FROM character_event WHERE character_id = 'ch-del'").first<{ n: number }>())!.n, 0)
   assert.equal((await db.prepare("SELECT COUNT(*) AS n FROM journal_entry WHERE character_id = 'ch-del'").first<{ n: number }>())!.n, 0)
+})
+
+test('0200 backfills the label of a roll made before it, and a new stratagem starts at revision 1', async () => {
+  const fresh = await openPlayDbs()
+  try {
+    const d = fresh.DB
+    const sql = readFileSync(`${PLAY_MIGRATIONS}0200_snapshots_and_revisions.sql`, 'utf8')
+    assert.ok(sql.includes('objective_label'))
+    // Rebuild the pre-0200 shape of the two tables, then run the 0200 statements over rows that were written before it.
+    await d.prepare('ALTER TABLE roll DROP COLUMN objective_label').run()
+    await d.prepare('ALTER TABLE stratagem DROP COLUMN revision').run()
+    await d.prepare("INSERT INTO user (id, display_name) VALUES ('u', 'U')").run()
+    await d.prepare("INSERT INTO campaign (id, name, gm_user_id) VALUES ('c', 'C', 'u')").run()
+    await d.prepare("INSERT INTO character (id, owner_user_id, campaign_id, name, state) VALUES ('ch', 'u', 'c', 'N', '{}')").run()
+    await d.prepare("INSERT INTO stratagem (id, campaign_id, goal, time_per_roll, setup_cn, position, objectives) VALUES ('s', 'c', 'Take Thornwall', '1 day', 10, 0, ?)")
+      .bind(JSON.stringify([{ title: 'Cut the road', cn: null, leaderCharacterId: null, state: 'open' }, { title: ' ', cn: 3, leaderCharacterId: null, state: 'open' }])).run()
+    const roll = (id: string, strat: string | null, index: number | null) =>
+      d.prepare("INSERT INTO roll (id, campaign_id, character_id, user_id, roll_type, ability, dice, total, objective_stratagem_id, objective_index, objective_cn) VALUES (?, 'c', 'ch', 'u', 'check', 'might', '[]', 1, ?, ?, ?)")
+        .bind(id, strat, index, strat === null ? null : 10).run()
+    await roll('plain', null, null)
+    await roll('r0', 's', 0)
+    await roll('r1', 's', 1)
+    await roll('gone', 'deleted', 0)
+    for (const statement of sql.replace(/--.*$/gm, '').split(';').map((x) => x.trim()).filter(Boolean)) await d.prepare(statement).run()
+    const labels = (await d.prepare('SELECT id, objective_label FROM roll ORDER BY id').all<{ id: string; objective_label: string | null }>()).results
+    assert.deepEqual(labels.map((r) => [r.id, r.objective_label]), [
+      ['gone', null], ['plain', null], ['r0', 'Take Thornwall — Cut the road'], ['r1', 'Take Thornwall — Unknown objective'],
+    ])
+    assert.equal((await d.prepare("SELECT revision FROM stratagem WHERE id = 's'").first<{ revision: number }>())!.revision, 1)
+  } finally {
+    await fresh.dispose()
+  }
 })

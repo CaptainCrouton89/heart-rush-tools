@@ -18,7 +18,7 @@ import { publish } from './live'
 
 // ---- Types -------------------------------------------------------------------------------------
 
-export type CampaignPlayErrorCode = 'forbidden' | 'not_found' | 'bad_input' | 'session_open' | 'session_closed'
+export type CampaignPlayErrorCode = 'forbidden' | 'not_found' | 'bad_input' | 'session_open' | 'session_closed' | 'conflict'
 
 /** An expected refusal. */
 export type CampaignPlayRefusal = { ok: false; status: number; code: CampaignPlayErrorCode; message: string }
@@ -83,6 +83,8 @@ export type StratagemView = {
   position: number
   objectives: ObjectiveView[]
   assets: AssetInput[]
+  /** Moves by one on every update; pass it back as `expectedRevision` to refuse a write that started from an older row. */
+  revision: number
   createdAt: string
 }
 
@@ -98,7 +100,11 @@ export type CreateStratagemInput = {
   assets?: AssetInput[]
   status?: StratagemStatus
 }
-export type UpdateStratagemInput = { stratagemId: string } & Partial<CreateStratagemInput> & { position?: number }
+export type UpdateStratagemInput = { stratagemId: string } & Partial<CreateStratagemInput> & {
+  position?: number
+  /** The `revision` the caller read. When the stored row has moved on the update is refused with `conflict` and writes nothing. */
+  expectedRevision?: number
+}
 export type AttachEncounterInput = { encounterId: string; title: string }
 export type RemoveEncounterInput = { encounterId: string }
 
@@ -113,7 +119,7 @@ export const MAX_ASSETS = 100
 /** Encounter pages live here; the path is the one the encounter builder uses for a saved encounter. */
 export const TOOLS_ORIGIN = 'https://tools.heartrush.party'
 
-const STATUS: Record<CampaignPlayErrorCode, number> = { forbidden: 403, not_found: 404, bad_input: 400, session_open: 409, session_closed: 409 }
+const STATUS: Record<CampaignPlayErrorCode, number> = { forbidden: 403, not_found: 404, bad_input: 400, session_open: 409, session_closed: 409, conflict: 409 }
 const refuse = (code: CampaignPlayErrorCode, message: string): CampaignPlayRefusal => ({ ok: false, status: STATUS[code], code, message })
 
 type ChannelEnv = Parameters<typeof publish>[0]
@@ -373,10 +379,10 @@ export async function removeEncounter(
 
 type StratagemRow = {
   id: string; goal: string; time_per_roll: string; setup_cn: number; status: StratagemStatus; position: number
-  objectives: string; assets: string; created_at: string
+  objectives: string; assets: string; revision: number; created_at: string
 }
 
-const STRATAGEM_COLUMNS = 'id, goal, time_per_roll, setup_cn, status, position, objectives, assets, created_at'
+const STRATAGEM_COLUMNS = 'id, goal, time_per_roll, setup_cn, status, position, objectives, assets, revision, created_at'
 const CREATE_KEYS = ['goal', 'timePerRoll', 'setupCn', 'objectives', 'assets', 'status'] as const
 const OBJECTIVE_KEYS = ['title', 'cn', 'leaderCharacterId', 'state'] as const
 const ASSET_KEYS = ['name', 'kind'] as const
@@ -498,6 +504,7 @@ function toView(row: StratagemRow, leaderNames: Map<string, string>): StratagemV
       currentCn: o.state === 'open' ? objectiveCn(stratagem, i) : null,
     })),
     assets,
+    revision: row.revision,
     createdAt: row.created_at,
   }
 }
@@ -536,7 +543,8 @@ export async function createStratagem(
 /**
  * The GM changes any of a stratagem's fields: goal, time per roll, setup CN, the whole objective list (titles, CNs, leaders,
  * done/gone), the whole asset/hindrance list, status, position. Only the keys given change. A player is refused for every field.
- * `position` sorts the list; it does not renumber the others.
+ * `position` sorts the list; it does not renumber the others. With `expectedRevision` the write applies only to the row at that
+ * revision (one conditional UPDATE, so two GM tabs cannot overwrite each other); a moved row is refused as `conflict`.
  */
 export async function updateStratagem(
   db: D1Database, env: ChannelEnv, userId: string, campaignId: string, input: UpdateStratagemInput,
@@ -547,10 +555,12 @@ export async function updateStratagem(
   const bad = badId(input.stratagemId, 'stratagemId')
   if (bad) return bad
   const { stratagemId, ...patch } = input
-  const extra = unknownKey(patch, [...CREATE_KEYS, 'position'], 'A stratagem')
+  const extra = unknownKey(patch, [...CREATE_KEYS, 'position', 'expectedRevision'], 'A stratagem')
   if (extra) return extra
-  if (Object.keys(patch).length === 0) return refuse('bad_input', 'Nothing to change')
-  const fields = await checkFields(db, campaignId, patch)
+  const { expectedRevision, ...changes } = patch
+  if (expectedRevision !== undefined && !isInt(expectedRevision, 1, Number.MAX_SAFE_INTEGER)) return refuse('bad_input', 'expectedRevision must be a whole number of at least 1')
+  if (Object.keys(changes).length === 0) return refuse('bad_input', 'Nothing to change')
+  const fields = await checkFields(db, campaignId, changes)
   if ('ok' in fields) return fields
   const sets: string[] = []
   const values: unknown[] = []
@@ -561,15 +571,18 @@ export async function updateStratagem(
   if (fields.objectives !== undefined) set('objectives', JSON.stringify(fields.objectives))
   if (fields.assets !== undefined) set('assets', JSON.stringify(fields.assets))
   if (fields.status !== undefined) set('status', fields.status)
-  if ('position' in patch) {
-    if (!isInt(patch.position, 0, 1_000_000)) return refuse('bad_input', 'position must be a whole number')
-    set('position', patch.position)
+  if ('position' in changes) {
+    if (!isInt(changes.position, 0, 1_000_000)) return refuse('bad_input', 'position must be a whole number')
+    set('position', changes.position)
   }
   const row = await db
-    .prepare(`UPDATE stratagem SET ${sets.join(', ')} WHERE id = ? AND campaign_id = ? RETURNING ${STRATAGEM_COLUMNS}`)
-    .bind(...values, stratagemId, campaignId)
+    .prepare(`UPDATE stratagem SET ${sets.join(', ')}, revision = revision + 1 WHERE id = ? AND campaign_id = ? AND (? IS NULL OR revision = ?) RETURNING ${STRATAGEM_COLUMNS}`)
+    .bind(...values, stratagemId, campaignId, expectedRevision ?? null, expectedRevision ?? null)
     .first<StratagemRow>()
-  if (!row) return refuse('not_found', 'No such stratagem')
+  if (!row) {
+    const exists = await db.prepare('SELECT 1 AS found FROM stratagem WHERE id = ? AND campaign_id = ?').bind(stratagemId, campaignId).first()
+    return exists ? refuse('conflict', 'The stratagem changed since you read it; reload and try again') : refuse('not_found', 'No such stratagem')
+  }
   await changed(env, campaignId)
   return { ok: true, stratagem: (await viewsOf(db, campaignId, [row]))[0] }
 }

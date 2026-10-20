@@ -315,6 +315,62 @@ test('spec criterion 4: with an open session the award shows on it; with none no
   assert.deepEqual((JSON.parse(await sessionAwards('s1')) as { amount: number }[]).map((x) => x.amount), [3, 1])
 })
 
+test('Award XP is all or nothing: a character that leaves before the batch rolls it back, and the next read awards exactly the remaining set', async () => {
+  const campaignId = await table()
+  const { a, b, gm } = await withCharacters(campaignId)
+  await db.prepare("INSERT INTO campaign_session (id, campaign_id, number, real_date, start_day) VALUES ('s1', ?, 1, '2026-10-20', 1)").bind(campaignId).run()
+  const before = [await awardedOf(a.id), await awardedOf(b.id), await awardedOf(gm.id)]
+  // The first read (all three) is overtaken: after it, Bob's character is removed. The batch must write nothing for A or the GM.
+  let removed = false
+  const racing = new Proxy(db, {
+    get(target, prop) {
+      if (prop === 'batch') {
+        return async (statements: D1PreparedStatement[]) => {
+          if (!removed) {
+            removed = true
+            ok(await removeCharacterFromCampaign(target, 'bob', { characterId: b.id }))
+          }
+          return target.batch(statements)
+        }
+      }
+      const v = Reflect.get(target, prop)
+      return typeof v === 'function' ? v.bind(target) : v
+    },
+  }) as D1
+  const result = ok(await awardXpToCampaign(racing, 'gm', { campaignId, amount: 3 }))
+  assert.equal(removed, true)
+  assert.deepEqual(result.awarded.map((x) => x.characterId).sort(), [a.id, gm.id].sort())
+  assert.equal(await awardedOf(a.id), before[0] + 3)
+  assert.equal(await awardedOf(gm.id), before[2] + 3)
+  assert.equal(await awardedOf(b.id), before[1], 'the removed character got nothing')
+  assert.equal(await eventCount(b.id), 0)
+  assert.equal(await eventCount(a.id), 1, 'one event, not one from the rolled-back attempt as well')
+  const logged = JSON.parse(await sessionAwards('s1')) as { amount: number }[]
+  assert.equal(logged.length, 1, 'the session records the award once, for the set that received it')
+})
+
+test('Award XP: a batch that cannot commit writes no event and no session record', async () => {
+  const campaignId = await table()
+  const { a, b, gm } = await withCharacters(campaignId)
+  await db.prepare("INSERT INTO campaign_session (id, campaign_id, number, real_date, start_day) VALUES ('s1', ?, 1, '2026-10-20', 1)").bind(campaignId).run()
+  // Every attempt finds Bob's revision moved on, so the batch aborts each time; the award gives up with a conflict.
+  const stale = new Proxy(db, {
+    get(target, prop) {
+      if (prop === 'batch') {
+        return async (statements: D1PreparedStatement[]) => {
+          await target.prepare('UPDATE character SET revision = revision + 1 WHERE id = ?').bind(b.id).run()
+          return target.batch(statements)
+        }
+      }
+      const v = Reflect.get(target, prop)
+      return typeof v === 'function' ? v.bind(target) : v
+    },
+  }) as D1
+  refused(await awardXpToCampaign(stale, 'gm', { campaignId, amount: 3 }), 409, 'conflict')
+  for (const c of [a, b, gm]) assert.equal(await eventCount(c.id), 0)
+  assert.equal(await sessionAwards('s1'), '[]')
+})
+
 test('an award to a campaign with no characters writes no session entry', async () => {
   const campaignId = await table()
   await db.prepare("INSERT INTO campaign_session (id, campaign_id, number, real_date, start_day) VALUES ('s1', ?, 1, '2026-10-20', 1)").bind(campaignId).run()

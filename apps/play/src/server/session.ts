@@ -29,15 +29,16 @@ function returnPath(request: Request): string {
 
 /**
  * The signed-in person for the current request, for route loaders, server functions and API handlers.
- * Signed out: a page navigation or server-function call throws a redirect to `/auth/login?returnTo=<page>` (the router
- * follows it); any other request (an API fetch) throws a 401 JSON response `{error, signIn: true}`.
+ * Signed out: every request throws a redirect to `/auth/login?returnTo=<page>` (the router follows it for a page navigation
+ * or server-function call), except a WebSocket upgrade (the live channel), which throws a 401 JSON response. The choice
+ * never depends on `Accept`: a page loader runs this in-process during server rendering, where a thrown `Response` cannot be
+ * serialized into the page (a 500), and the router accepts `*\/*` as HTML, which curl and fetch send by default.
  */
 export async function requireUser(request: Request = getRequest()): Promise<Session> {
   const session = await sessionOf(request)
   if (session) return session
-  const wantsPage = request.headers.get('x-tsr-serverFn') === 'true' || (request.headers.get('accept') ?? '').includes('text/html')
-  if (wantsPage) throw redirect({ href: `/auth/login?returnTo=${encodeURIComponent(returnPath(request))}` })
-  throw Response.json({ error: 'Sign in to continue.', signIn: true }, { status: 401 })
+  if (request.headers.get('upgrade')?.toLowerCase() === 'websocket') throw Response.json({ error: 'Sign in to continue.', signIn: true }, { status: 401 })
+  throw redirect({ href: `/auth/login?returnTo=${encodeURIComponent(returnPath(request))}` })
 }
 
 /** The signed-in person for the current request, or null. The root loader calls it on every page load. */

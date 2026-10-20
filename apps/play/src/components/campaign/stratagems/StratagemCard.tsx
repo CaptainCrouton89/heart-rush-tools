@@ -58,7 +58,7 @@ export function StratagemCard({ campaignId, stratagem: s, isGm, mine, characters
       if (!there || there.title !== clicked.title || there.leaderCharacterId !== clicked.leaderCharacterId)
         return "Couldn't change the objective: the objectives changed since this page loaded. Check the list and try again."
       const objectives = objectiveInputs(now).map((o, i) => (i === index ? { ...o, state } : o))
-      const result = await campaignWrite('change the objective', () => update({ data: { campaignId, stratagemId: s.id, objectives } }))
+      const result = await campaignWrite('change the objective', () => update({ data: { campaignId, stratagemId: s.id, objectives, expectedRevision: now.revision } }))
       return result.ok ? null : result.text
     })()
     setBusy(false)
@@ -84,7 +84,7 @@ export function StratagemCard({ campaignId, stratagem: s, isGm, mine, characters
           if (clash.length > 0) return `The ${clash.map((k) => FIELD_LABEL[k]).join(' and ')} changed since you opened the form. Cancel and edit again to see the change.`
           if (keys.length > 0) {
             const patch = Object.fromEntries(keys.map((k) => [k, fields[k]]))
-            const result = await campaignWrite('save the stratagem', () => update({ data: { campaignId, stratagemId: s.id, ...patch } }))
+            const result = await campaignWrite('save the stratagem', () => update({ data: { campaignId, stratagemId: s.id, expectedRevision: fresh.revision, ...patch } }))
             if (!result.ok) return result.text
           }
           setOpened(null)

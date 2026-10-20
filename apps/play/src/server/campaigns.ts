@@ -6,22 +6,24 @@
 //
 // INV-AUTHZ: every function resolves its own role check against `campaign_member` / `character.owner_user_id`; nothing the
 // browser sends about roles is trusted. INV-ACTION: this module never writes `character.state` or `character_event`
-// itself; Award XP goes through `applyCharacterAction`. Joining or leaving a campaign changes `character.campaign_id`, which
-// is not character state, so it moves no revision and adds no event.
+// itself; Award XP builds its statements with `wholeBatchActionStatements` (characters.ts). Joining or leaving a campaign
+// changes `character.campaign_id`, which is not character state, so it moves no revision and adds no event. It does end every
+// journal share the character had: an entry is shared with the campaign the character is in, so a character that leaves or
+// joins a campaign starts with all its entries private.
 import { createServerFn } from '@tanstack/react-start'
 import { effectiveMaxHp, maxHeartDie } from '@heartrush/rules-engine/derived'
-import { upgradeCharacter } from '@heartrush/rules-engine/actions'
-import type { HeartDie } from '@heartrush/rules-engine/types'
+import { applyAction, upgradeCharacter } from '@heartrush/rules-engine/actions'
+import { RuleError, type ClientAction, type HeartDie } from '@heartrush/rules-engine/types'
 import { ulid } from 'ulid'
 import { getCatalogue } from '../catalogue'
 import { roleIn, type CampaignRole } from './authz'
-import { applyCharacterAction } from './characters'
+import { isBatchAbort, wholeBatchActionStatements } from './characters'
 import { publish } from './live'
 
 // ---- Types -------------------------------------------------------------------------------------
 
 export type CampaignErrorCode =
-  | 'forbidden' | 'not_found' | 'bad_input' | 'invite_expired' | 'is_draft' | 'already_in_campaign' | 'not_in_campaign'
+  | 'forbidden' | 'not_found' | 'bad_input' | 'invite_expired' | 'is_draft' | 'already_in_campaign' | 'not_in_campaign' | 'conflict'
 
 /** An expected refusal. */
 export type CampaignRefusal = { ok: false; status: number; code: CampaignErrorCode; message: string }
@@ -78,7 +80,7 @@ export type AwardXpOk = {
 // ---- Helpers -----------------------------------------------------------------------------------
 
 const STATUS: Record<CampaignErrorCode, number> = {
-  forbidden: 403, not_found: 404, bad_input: 400, invite_expired: 410, is_draft: 409, already_in_campaign: 409, not_in_campaign: 409,
+  forbidden: 403, not_found: 404, bad_input: 400, invite_expired: 410, is_draft: 409, already_in_campaign: 409, not_in_campaign: 409, conflict: 409,
 }
 
 const refuse = (code: CampaignErrorCode, message: string): CampaignRefusal => ({ ok: false, status: STATUS[code], code, message })
@@ -255,6 +257,10 @@ export async function acceptInvite(db: D1Database, userId: string, input: Accept
 
 type CharacterHead = { owner_user_id: string; campaign_id: string | null; draft: number }
 
+/** Ends every journal share of the character; chained on the character UPDATE before it having changed a row. */
+const UNSHARE_ENTRIES = (db: D1Database, characterId: string) =>
+  db.prepare('UPDATE journal_entry SET shared = 0 WHERE character_id = ? AND shared = 1 AND changes() = 1').bind(characterId)
+
 const headOf = (db: D1Database, characterId: string) =>
   db.prepare("SELECT owner_user_id, campaign_id, json_extract(state, '$.draft') AS draft FROM character WHERE id = ?").bind(characterId).first<CharacterHead>()
 
@@ -265,14 +271,16 @@ const headOf = (db: D1Database, characterId: string) =>
 export async function assignCharacterToCampaign(db: D1Database, userId: string, input: AssignInput): Promise<{ ok: true; campaignId: string } | CampaignRefusal> {
   const bad = badId(input?.characterId, 'characterId') ?? badId(input?.campaignId, 'campaignId')
   if (bad) return bad
-  const result = await db
-    .prepare(
-      `UPDATE character SET campaign_id = ?
-        WHERE id = ? AND owner_user_id = ? AND campaign_id IS NULL AND json_extract(state, '$.draft') = 0
-          AND EXISTS (SELECT 1 FROM campaign_member WHERE campaign_id = ? AND user_id = ?)`,
-    )
-    .bind(input.campaignId, input.characterId, userId, input.campaignId, userId)
-    .run()
+  const [result] = await db.batch([
+    db
+      .prepare(
+        `UPDATE character SET campaign_id = ?
+          WHERE id = ? AND owner_user_id = ? AND campaign_id IS NULL AND json_extract(state, '$.draft') = 0
+            AND EXISTS (SELECT 1 FROM campaign_member WHERE campaign_id = ? AND user_id = ?)`,
+      )
+      .bind(input.campaignId, input.characterId, userId, input.campaignId, userId),
+    UNSHARE_ENTRIES(db, input.characterId),
+  ])
   if (result.meta.changes === 1) return { ok: true, campaignId: input.campaignId }
   const head = await headOf(db, input.characterId)
   if (!head) return refuse('not_found', 'No such character')
@@ -291,10 +299,10 @@ export async function removeCharacterFromCampaign(db: D1Database, userId: string
   if (!head) return refuse('not_found', 'No such character')
   if (head.owner_user_id !== userId) return refuse('forbidden', 'Only the owner can remove a character from a campaign')
   if (head.campaign_id === null) return refuse('not_in_campaign', 'This character is in no campaign')
-  const result = await db
-    .prepare('UPDATE character SET campaign_id = NULL WHERE id = ? AND owner_user_id = ? AND campaign_id = ?')
-    .bind(input.characterId, userId, head.campaign_id)
-    .run()
+  const [result] = await db.batch([
+    db.prepare('UPDATE character SET campaign_id = NULL WHERE id = ? AND owner_user_id = ? AND campaign_id = ?').bind(input.characterId, userId, head.campaign_id),
+    UNSHARE_ENTRIES(db, input.characterId),
+  ])
   if (result.meta.changes !== 1) return refuse('not_in_campaign', 'This character is in no campaign')
   return { ok: true, campaignId: head.campaign_id }
 }
@@ -302,10 +310,12 @@ export async function removeCharacterFromCampaign(db: D1Database, userId: string
 // ---- Award XP ----------------------------------------------------------------------------------
 
 /**
- * The GM awards `amount` XP to every finished character in the campaign: one `xp:award` event each, through C1's
- * `applyCharacterAction` (so Craven's bonus applies and undo works). A revision conflict is retried on the current revision;
- * any other refusal is reported in `failed` and does not stop the others. When the campaign has an open session, `{amount, at}`
- * is appended to its `xp_awards` once, atomically (spec §2.2); with no open session no session changes.
+ * The GM awards `amount` XP to every finished character in the campaign: one `xp:award` event each, through the reducer (so
+ * Craven's bonus applies and undo works). All of it is one D1 batch together with the open session's `{amount, at}` record, so
+ * either every character in the batch has its event and the session records the award once, or nothing changed. A character
+ * the reducer refuses is reported in `failed` and left out of the batch. A character that changed or left the campaign between
+ * the read and the batch rolls the batch back; the award is then read and applied again (up to `AWARD_RETRIES` times), so the
+ * recorded award is exactly the set of characters that received it. With no open session no session changes.
  */
 export async function awardXpToCampaign(db: D1Database, userId: string, input: AwardXpInput): Promise<AwardXpOk | CampaignRefusal> {
   const bad = badId(input?.campaignId, 'campaignId')
@@ -314,43 +324,44 @@ export async function awardXpToCampaign(db: D1Database, userId: string, input: A
   const denied = await gmOf(db, userId, input.campaignId)
   if (denied) return denied
 
-  const { results: rows } = await db
-    .prepare("SELECT id, revision FROM character WHERE campaign_id = ? AND json_extract(state, '$.draft') = 0 ORDER BY created_at, id")
-    .bind(input.campaignId)
-    .all<{ id: string; revision: number }>()
   const at = new Date().toISOString()
-  const awarded: AwardXpOk['awarded'] = []
-  const failed: AwardXpOk['failed'] = []
-  for (const row of rows) {
-    let revision = row.revision
-    for (let attempt = 1; ; attempt++) {
-      const result = await applyCharacterAction(db, userId, {
-        characterId: row.id,
-        revision,
-        action: { kind: 'xp:award', amount: input.amount, id: ulid(), at },
-      })
-      if (result.ok) {
-        awarded.push({ characterId: row.id, revision: result.character.revision })
-        break
+  for (let attempt = 1; attempt <= AWARD_RETRIES; attempt++) {
+    const { results: rows } = await db
+      .prepare("SELECT id, revision, state FROM character WHERE campaign_id = ? AND json_extract(state, '$.draft') = 0 ORDER BY created_at, id")
+      .bind(input.campaignId)
+      .all<{ id: string; revision: number; state: string }>()
+    const failed: AwardXpOk['failed'] = []
+    const awarded: AwardXpOk['awarded'] = []
+    const statements: D1PreparedStatement[] = []
+    for (const row of rows) {
+      const action: ClientAction = { kind: 'xp:award', amount: input.amount, id: ulid(), at }
+      try {
+        const current = upgradeCharacter(JSON.parse(row.state))
+        if (current.draft) throw new Error(`character ${row.id} is a draft in campaign ${input.campaignId}`)
+        const applied = applyAction(current, action, getCatalogue())
+        statements.push(...wholeBatchActionStatements(db, userId, row, input.campaignId, { id: action.id, action, inverse: applied.inverse }, applied.character, at))
+        awarded.push({ characterId: row.id, revision: row.revision + 1 })
+      } catch (error) {
+        if (!(error instanceof RuleError)) throw error
+        failed.push({ characterId: row.id, code: error.code, message: error.message })
       }
-      if (result.code === 'conflict' && result.character && attempt < AWARD_RETRIES) {
-        revision = result.character.revision
-        continue
-      }
-      failed.push({ characterId: row.id, code: result.code, message: result.message })
-      break
     }
+    if (awarded.length === 0) return { ok: true, awarded, failed, sessionId: null }
+    statements.push(
+      db
+        .prepare("UPDATE campaign_session SET xp_awards = json_insert(xp_awards, '$[#]', json(?)) WHERE campaign_id = ? AND end_day IS NULL RETURNING id")
+        .bind(JSON.stringify({ amount: input.amount, at }), input.campaignId),
+    )
+    let results: D1Result[]
+    try {
+      results = await db.batch(statements)
+    } catch (error) {
+      if (isBatchAbort(error)) continue // a character changed or left: nothing was written, read again
+      throw error
+    }
+    return { ok: true, awarded, failed, sessionId: (results[results.length - 1].results[0] as { id: string } | undefined)?.id ?? null }
   }
-
-  let sessionId: string | null = null
-  if (awarded.length > 0) {
-    const session = await db
-      .prepare("UPDATE campaign_session SET xp_awards = json_insert(xp_awards, '$[#]', json(?)) WHERE campaign_id = ? AND end_day IS NULL RETURNING id")
-      .bind(JSON.stringify({ amount: input.amount, at }), input.campaignId)
-      .first<{ id: string }>()
-    sessionId = session?.id ?? null
-  }
-  return { ok: true, awarded, failed, sessionId }
+  return refuse('conflict', 'Characters kept changing while the XP was awarded; nothing was awarded. Try again')
 }
 
 // ---- Live updates (INV-LIVE) -------------------------------------------------------------------
