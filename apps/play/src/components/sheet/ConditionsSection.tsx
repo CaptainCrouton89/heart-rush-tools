@@ -96,7 +96,7 @@ function CatalogueLine({ line, dispatch, canEdit }: LineProps & { line: Extract<
       title={title}
       unresolved={entry === null}
       tag={tag}
-      note={line.sleepRows > 0 ? `${sleepLevels} ${sleepLevels === 1 ? 'level' : 'levels'} from failed sleep; a successful long rest removes ${sleepLevels === 1 ? 'it' : 'them'}` : null}
+      note={line.sleepRows > 0 ? `${sleepLevels} ${sleepLevels === 1 ? 'level' : 'levels'} from failed sleep; a successful long rest removes ${sleepLevels === 1 ? 'it' : 'them'}${entry?.fading ? ', and each new round fades one' : ''}` : null}
       dots={
         leveled ? (
           <LevelDots
@@ -160,7 +160,7 @@ function Row({
             <Button
               variant="ghost"
               aria-pressed={permanent.on}
-              aria-label={`${title}: ${permanent.on ? 'permanent. Make it fade' : 'make permanent'}`}
+              aria-label={`${title}: ${permanent.on ? 'permanent. Remove permanent status' : 'make permanent'}`}
               className={`h-11 px-2 text-meta ${permanent.on ? 'text-foreground' : 'text-muted-foreground'}`}
               onClick={permanent.toggle}
             >

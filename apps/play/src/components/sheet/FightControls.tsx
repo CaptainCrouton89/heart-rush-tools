@@ -139,7 +139,7 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
         <Stepper label="DP" value={play.dp} canEdit={canEdit} min={0} max={10} onChange={(value) => void dispatch({ kind: 'dp:set', value })} />
         {canEdit && dpStep === 2 && (
           <Button variant="outline" className="h-11 px-3" disabled={play.dp >= 10} onClick={() => void dispatch({ kind: 'dp:set', value: Math.min(10, play.dp + 2) })}>
-            Complication: +2 DP
+            Complication: +{Math.min(2, 10 - play.dp) || 2} DP
           </Button>
         )}
         {canEdit && (
