@@ -14,6 +14,7 @@
     }
   ],
   "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "heartrush-tools-images" }],
+  "services": [{ "binding": "PLAY", "service": "heartrush-play", "entrypoint": "ToolsApi" }],
   "triggers": { "crons": ["0 4 * * *"] },
   "observability": { "enabled": true },
   "vars": {
