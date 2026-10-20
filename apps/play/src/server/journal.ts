@@ -31,6 +31,8 @@ export type JournalEntry = {
   inGameDay: number | null
   /** The campaign's open session when the entry was written; null outside a campaign or between sessions. */
   sessionId: string | null
+  /** That session's number ("Session 3"); null when `sessionId` is. */
+  sessionNumber: number | null
   shared: boolean
   createdAt: string
   updatedAt: string
@@ -44,6 +46,7 @@ export type SharedJournalEntry = {
   body: string
   inGameDay: number | null
   sessionId: string | null
+  sessionNumber: number | null
   createdAt: string
   updatedAt: string
 }
@@ -86,10 +89,15 @@ type EntryRow = {
   body: string
   in_game_day: number | null
   session_id: string | null
+  /** From `SESSION_NUMBER`, not a column of `journal_entry`. */
+  session_number: number | null
   shared: number
   created_at: string
   updated_at: string
 }
+
+/** Every query that returns entry rows selects `*, ${SESSION_NUMBER}`, so an entry always carries its session's number. */
+const SESSION_NUMBER = '(SELECT number FROM campaign_session WHERE campaign_session.id = journal_entry.session_id) AS session_number'
 
 const toEntry = (r: EntryRow): JournalEntry => ({
   id: r.id,
@@ -97,6 +105,7 @@ const toEntry = (r: EntryRow): JournalEntry => ({
   body: r.body,
   inGameDay: r.in_game_day,
   sessionId: r.session_id,
+  sessionNumber: r.session_number,
   shared: r.shared === 1,
   createdAt: r.created_at,
   updatedAt: r.updated_at,
@@ -138,7 +147,7 @@ export async function listJournal(db: D1Database, userId: string, input: ListJou
   const character = await ownCharacter(db, userId, input.characterId)
   if (isRefusal(character)) return character
   const { results } = await db
-    .prepare('SELECT * FROM journal_entry WHERE character_id = ? AND author_user_id = ? ORDER BY created_at DESC, id DESC')
+    .prepare(`SELECT *, ${SESSION_NUMBER} FROM journal_entry WHERE character_id = ? AND author_user_id = ? ORDER BY created_at DESC, id DESC`)
     .bind(character.id, userId)
     .all<EntryRow>()
   return { ok: true, entries: results.map(toEntry) }
@@ -159,7 +168,7 @@ export async function createJournalEntry(db: D1Database, userId: string, input: 
        VALUES (?, ?, ?, ?,
          (SELECT current_day FROM campaign WHERE id = ?),
          (SELECT id FROM campaign_session WHERE campaign_id = ? AND end_day IS NULL))
-       RETURNING *`,
+       RETURNING *, ${SESSION_NUMBER}`,
     )
     .bind(ulid(), character.id, userId, input.body, character.campaign_id, character.campaign_id)
     .first<EntryRow>()
@@ -174,7 +183,7 @@ export async function editJournalEntry(db: D1Database, userId: string, input: Ed
   const own = await ownEntry(db, userId, input.entryId)
   if (isRefusal(own)) return own
   const row = await db
-    .prepare("UPDATE journal_entry SET body = ?, updated_at = strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id = ? AND author_user_id = ? RETURNING *")
+    .prepare(`UPDATE journal_entry SET body = ?, updated_at = strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id = ? AND author_user_id = ? RETURNING *, ${SESSION_NUMBER}`)
     .bind(input.body, own.row.id, userId)
     .first<EntryRow>()
   if (!row) return refuse('not_found', 'No such journal entry')
@@ -202,7 +211,7 @@ export async function setJournalShared(db: D1Database, userId: string, input: Se
   if (isRefusal(own)) return own
   if (input.shared && own.campaignId === null) return refuse('not_in_campaign', 'This character is in no campaign to share with')
   const row = await db
-    .prepare("UPDATE journal_entry SET shared = ?, updated_at = strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id = ? AND author_user_id = ? RETURNING *")
+    .prepare(`UPDATE journal_entry SET shared = ?, updated_at = strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id = ? AND author_user_id = ? RETURNING *, ${SESSION_NUMBER}`)
     .bind(input.shared ? 1 : 0, own.row.id, userId)
     .first<EntryRow>()
   if (!row) return refuse('not_found', 'No such journal entry')
@@ -219,10 +228,10 @@ export async function listSharedJournal(db: D1Database, userId: string, input: L
   if ((await roleIn(db, input.campaignId, userId)) === null) return refuse('forbidden', 'You are not in this campaign')
   const { results } = await db
     .prepare(
-      `SELECT j.*, c.name AS character_name
-       FROM journal_entry j JOIN character c ON c.id = j.character_id
-       WHERE c.campaign_id = ? AND j.shared = 1
-       ORDER BY j.created_at DESC, j.id DESC`,
+      `SELECT journal_entry.*, ${SESSION_NUMBER}, c.name AS character_name
+       FROM journal_entry JOIN character c ON c.id = journal_entry.character_id
+       WHERE c.campaign_id = ? AND journal_entry.shared = 1
+       ORDER BY journal_entry.created_at DESC, journal_entry.id DESC`,
     )
     .bind(input.campaignId)
     .all<EntryRow & { character_name: string }>()
@@ -235,6 +244,7 @@ export async function listSharedJournal(db: D1Database, userId: string, input: L
       body: r.body,
       inGameDay: r.in_game_day,
       sessionId: r.session_id,
+      sessionNumber: r.session_number,
       createdAt: r.created_at,
       updatedAt: r.updated_at,
     })),

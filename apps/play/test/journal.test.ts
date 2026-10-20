@@ -133,6 +133,7 @@ test('criterion 23: the day and open session are stamped in a campaign and both 
   const inCampaign = await write('ysolde')
   assert.equal(inCampaign.inGameDay, 5)
   assert.equal(inCampaign.sessionId, 's1')
+  assert.equal(inCampaign.sessionNumber, 1)
   const alone = await write('wanderer')
   assert.equal(alone.inGameDay, null)
   assert.equal(alone.sessionId, null)
