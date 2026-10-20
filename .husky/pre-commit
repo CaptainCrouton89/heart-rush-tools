@@ -1,1 +1,1 @@
-pnpm -r build
+pnpm -r --workspace-concurrency=1 build
