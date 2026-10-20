@@ -8,6 +8,7 @@ import { BloodmarkPicks } from '~/components/advance/BloodmarkPicks'
 import { AspectsTab, DestinyTab, DieTab, HpTab, PathTab, type PurchaseTabProps } from '~/components/advance/PurchaseTabs'
 import { TalentCatalogue, type XpBuyAction } from '~/components/advance/TalentCatalogue'
 import { XpSummary } from '~/components/advance/XpSummary'
+import { SuggestTalents } from '~/components/ai/SuggestTalents'
 import { useCampaignLive } from '~/components/live/use-live'
 import { HistoryList, describeAction } from '~/components/sheet/HistoryList'
 import { UndoChip, type UndoOffer } from '~/components/sheet/UndoChip'
@@ -117,7 +118,7 @@ function AdvancePage() {
             </TabsList>
           </div>
           <TabsContent value="talents">
-            <TalentCatalogue character={character} catalogue={catalogue} onBuy={buyTalent} />
+            <TalentCatalogue character={character} catalogue={catalogue} onBuy={buyTalent} header={<SuggestTalents characterId={document.id} character={character} catalogue={catalogue} onBuy={buyTalent} />} />
           </TabsContent>
           <TabsContent value="die"><DieTab {...tabProps} /></TabsContent>
           <TabsContent value="hp"><HpTab {...tabProps} /></TabsContent>

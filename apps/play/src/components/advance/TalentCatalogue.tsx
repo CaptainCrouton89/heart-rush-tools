@@ -7,6 +7,7 @@ import { ToggleGroup, ToggleGroupItem } from '@heartrush/ui/components/toggle-gr
 import { rulebookUrl, type PlayCatalogue } from '~/catalogue'
 import { BuyButton, quote } from './BuyRow'
 import { ELEMENTS, elementLabel } from './elements'
+import { ExplainButtonForRoute } from '~/components/ai/ExplainButton'
 
 /** The `xp:buy` action a catalogue Buy produces, already stamped with its ULID `id` and ISO `at` (INV-DET). */
 export type XpBuyAction = Extract<ClientAction, { kind: 'xp:buy' }>
@@ -136,6 +137,7 @@ function TalentCard({ talent, character, known, onBuy }: { talent: PlayTalent; c
       <div className="flex items-baseline justify-between gap-3">
         <h3 className="font-serif text-h4 font-semibold">{talent.title}</h3>
         {known && <span className="shrink-0 text-meta text-muted-foreground">Known</span>}
+        <ExplainButtonForRoute talentId={talent.id} title={talent.title} />
       </div>
       {facts && <p className="text-meta text-muted-foreground capitalize">{facts}</p>}
       <details className="text-ui">

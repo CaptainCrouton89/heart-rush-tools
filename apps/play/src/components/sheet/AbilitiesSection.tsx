@@ -4,6 +4,7 @@ import { ToggleGroup, ToggleGroupItem } from '@heartrush/ui/components/toggle-gr
 import type { SectionProps } from './SheetLayout'
 import { Section } from './SheetLayout'
 import { AbilityRow } from './abilities/AbilityRow'
+import { ExplainButtonForRoute } from '~/components/ai/ExplainButton'
 
 const FREQUENCIES: { value: Frequency; label: string }[] = [
   { value: 'minor', label: 'Minor' },
@@ -51,8 +52,7 @@ export function AbilitiesSection({ character, catalogue, dispatch, canEdit }: Se
               ) : (
                 <ul className="flex flex-col">
                   {g.talents.map((t) => (
-                    // I2 mounts Explain here: pass `extra={<ExplainButton … talentId={t.id} />}` (the character id is the route's `$id`).
-                    <AbilityRow key={t.id} talent={t} rushPoints={character.play.rushPoints} catalogue={catalogue} dispatch={dispatch} canEdit={canEdit} />
+                    <AbilityRow key={t.id} talent={t} rushPoints={character.play.rushPoints} catalogue={catalogue} dispatch={dispatch} canEdit={canEdit} extra={<ExplainButtonForRoute talentId={t.id} title={t.titleSnapshot} />} />
                   ))}
                 </ul>
               )}
