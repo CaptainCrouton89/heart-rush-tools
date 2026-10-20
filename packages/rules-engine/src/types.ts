@@ -251,6 +251,11 @@ export type ActionBody =
   | { kind: 'profession:add'; profession: Partial<Omit<Profession, 'id'>> & { name: string } }
   | { kind: 'profession:edit'; profession: Partial<Omit<Profession, 'id'>> & { id: string } }
   | { kind: 'profession:remove'; professionId: string }
+  /** Progress counters (spec §5): +1 challenge, +1 practice week, mission tick, and the rank-up that resets all three. */
+  | { kind: 'profession:challenge'; professionId: string }
+  | { kind: 'profession:practice'; professionId: string }
+  | { kind: 'profession:mission'; professionId: string; done: boolean }
+  | { kind: 'profession:advance'; professionId: string }
   | { kind: 'identity:set'; identity: Partial<Identity> }
   | { kind: 'notes:set'; notes: string }
   | { kind: 'raceEffects:set'; effects: RaceEffect[] }
@@ -273,7 +278,7 @@ export type RuleErrorCode =
   | 'aspect_cap' | 'die_cap' | 'not_attuned' | 'insufficient_xp' | 'path_locked' | 'no_path' | 'tier_cap'
   // reducers
   | 'not_found' | 'invalid_amount' | 'not_enough_rush' | 'stamina_spent' | 'heart_die_floor' | 'heart_die_over_max'
-  | 'wrong_rolled_count' | 'bloodmark_not_owed'
+  | 'wrong_rolled_count' | 'bloodmark_not_owed' | 'not_ready'
   // createCharacter
   | 'unknown_race' | 'unknown_subrace' | 'invalid_age_benefits' | 'invalid_dice' | 'invalid_professions' | 'attunement_choice'
   // undo and client input
