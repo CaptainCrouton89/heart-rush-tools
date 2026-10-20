@@ -1,7 +1,7 @@
 // The dispatcher over every reducer: applyAction, the restore inverse (ruling 7), the undo stack rule and
 // stored-state upgrades. Pure and deterministic (INV-PURE, INV-DET): no Date, no randomness, no I/O.
 // `restore` and `undo` are produced here and by the server, never accepted from a client (INV-INTERNAL).
-import type { ConditionCatalogue } from './catalogue'
+import type { ConditionCatalogue, PlayTalent } from './catalogue'
 import { isProfessionProgressAction, reduceProfessionProgress } from './professions'
 import { isCollectionAction, reduceCollections } from './reducers/collections'
 import * as combat from './reducers/combat'
@@ -9,8 +9,8 @@ import * as xp from './reducers/xp'
 import { RuleError, SCHEMA_VERSION } from './types'
 import type { Action, Character, ClientAction, Inverse, StoredState } from './types'
 
-/** What the dispatcher needs from the catalogue: only `nextRound` reads it (which conditions fade). */
-export type ActionCatalogue = { conditions: ConditionCatalogue }
+/** What the dispatcher needs from the catalogue: `nextRound` reads the conditions (which fade); `xp:buy` prices from the talents. */
+export type ActionCatalogue = { conditions: ConditionCatalogue; talents: ReadonlyMap<string, PlayTalent> }
 
 /** Every top-level key a restore may carry. `schemaVersion` and `draft` are never changed by an action. */
 const RESTORABLE: ReadonlySet<string> = new Set<keyof Character>([
@@ -45,7 +45,7 @@ function reduce(c: Character, a: ClientAction, catalogue: ActionCatalogue): Char
     case 'longRest': return combat.longRest(c, a)
     case 'startSession': return combat.startSession(c, a)
     case 'xp:award': return xp.xpAward(c, a)
-    case 'xp:buy': return xp.xpBuy(c, a)
+    case 'xp:buy': return xp.xpBuy(c, a, catalogue.talents)
     case 'bloodmark:award': return xp.bloodmarkAward(c, a)
     case 'bloodmark:pick': return xp.bloodmarkPick(c, a)
     default: throw new RuleError('bad_action', `Unknown action kind: ${String((a as { kind: unknown }).kind)}`)

@@ -25,8 +25,7 @@ const builder = (over: Partial<BuilderInput> = {}): BuilderInput => ({
 })
 const buy = (id: string): ClientAction => ({
   id, at: AT, kind: 'xp:buy', purchase: 'talent:combat',
-  target: { talent: { tradition: 'Handmagic' } },
-  talent: { catalogueId: talent.id, titleSnapshot: talent.title, frequency: 'major', customText: null },
+  talent: { catalogueId: talent.id },
 })
 const draft = (b: BuilderInput, pending: ClientAction[]): DraftState => ({ schemaVersion: 1, draft: true, builder: b, pending })
 

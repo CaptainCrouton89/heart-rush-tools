@@ -21,15 +21,20 @@ export type PurchaseKind =
   | 'talent:combat' | 'talent:noncombat' | 'talent:elemental'
   | 'destiny' | 'path' | 'path:tier'
 
-/** What a purchase acts on. `talent` carries catalogue facts the engine cannot look up (INV-PURE). */
+/** What a purchase acts on. Only ids: the facts a price depends on come from the catalogue entry, never from the action (INV-DET). */
 export type Target = {
   ability?: AbilityId
   aspectId?: string
   /** Record id of an owned talent receiving a destiny level. */
   talentId?: string
   pathId?: string
-  talent?: { tradition?: Tradition | null; elements?: string[]; attunementLevel?: AttunementLevel }
 }
+
+/** The catalogue facts of a talent that `price()` reads (ruling 9, 11). The engine derives them from the catalogue entry. */
+export type TalentFacts = { tradition?: Tradition | null; elements?: string[]; attunementLevel?: AttunementLevel }
+
+/** What `price()` takes: the action's target plus the facts of the talent it concerns. */
+export type PriceTarget = Target & { talent?: TalentFacts }
 
 // ---- Stored document ------------------------------------------------------------------------
 
@@ -201,13 +206,10 @@ export type StoredState = Character | DraftState
 /** Ruling 6: every action carries a client-stamped ULID `id` and ISO `at`. Created records get `<id>:<n>`. */
 export type ActionBase = { id: string; at: string }
 
-/** What `xp:buy` creates for a talent purchase (catalogue facts are passed, never looked up). */
+/** A talent purchase names the catalogue entry; its title, frequency, category and price come from that entry. */
 export type BoughtTalent = {
-  catalogueId: string | null
-  titleSnapshot: string
-  frequency: Frequency
-  customText: string | null
-  /** Elemental Affinity: the element attuned (basic when new, else one step up). */
+  catalogueId: string
+  /** Elemental Affinity only: the element attuned (basic when new, else one step up). */
   attunementElement?: string
 }
 

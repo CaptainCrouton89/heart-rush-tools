@@ -222,6 +222,42 @@ test('listCharacters flags drafts and lists only the caller’s own', async () =
 
 // ---- Undo ---------------------------------------------------------------------------------------------
 
+test('a talent purchase is priced from the catalogue entry and the stored character, never from fields the client sends; undo refunds the real price', async () => {
+  const gnome = [...getCatalogue().races.values()].find((r) => r.title === 'Gnome')!
+  const martial = [...getCatalogue().talents.values()].find((x) => x.category === 'combat' && x.tradition === 'Martial')!
+  const fire = [...getCatalogue().talents.values()].find((x) => x.category === 'elemental' && x.elements.includes('Fire'))!
+  const b = builder({ raceId: gnome.id, subraceId: gnome.subraces[0]!.id, kinChoices: {}, bloodmarkLevel: 3 })
+  const draft = ok(await createDraft(db, 'owner', { builder: b }))
+  const doc = ok(await finishDraft(db, 'owner', { characterId: draft.id, revision: 1 }))
+  const award = ok(await applyCharacterAction(db, 'owner', { characterId: doc.id, revision: doc.revision, action: { kind: 'xp:award', amount: 30, id: ulid(), at: at() } }))
+
+  // The client claims Handmagic (a Gnome discount) for a Martial talent, and claims an attunement it does not hold.
+  const forged = (id: string, purchase: string, extra: object) => ({ kind: 'xp:buy', purchase, talent: { catalogueId: id }, ...extra, id: ulid(), at: at() }) as unknown as ClientAction
+  const bought = ok(await applyCharacterAction(db, 'owner', { characterId: doc.id, revision: award.revision, action: forged(martial.id, 'talent:combat', { target: { talent: { tradition: 'Handmagic' } } }) }))
+  assert.ok(!bought.state.draft)
+  assert.equal(bought.state.xp.purchases.at(-1)!.cost, 3, 'the Martial talent costs full price')
+  refused(await applyCharacterAction(db, 'owner', { characterId: doc.id, revision: bought.revision, action: forged(fire.id, 'talent:elemental', { target: { talent: { elements: [], attunementLevel: 'basic' } } }) }), 'not_attuned')
+  refused(await applyCharacterAction(db, 'owner', { characterId: doc.id, revision: bought.revision, action: forged('made-up', 'talent:combat', {}) }), 'not_found')
+
+  const eventId = (await db.prepare('SELECT id FROM character_event WHERE character_id = ? ORDER BY seq DESC LIMIT 1').bind(doc.id).first<{ id: string }>())!.id
+  const undone = ok(await undoCharacterEvent(db, 'owner', { characterId: doc.id, eventId }))
+  assert.ok(!undone.state.draft)
+  assert.equal(undone.state.xp.purchases.length, 0)
+  assert.equal(undone.state.talents.filter((x) => x.catalogueId === martial.id).length, 0)
+})
+
+test('a pending draft purchase is priced the same way when the draft is finished', async () => {
+  const gnome = [...getCatalogue().races.values()].find((r) => r.title === 'Gnome')!
+  const martial = [...getCatalogue().talents.values()].find((x) => x.category === 'combat' && x.tradition === 'Martial')!
+  const b = builder({ raceId: gnome.id, subraceId: gnome.subraces[0]!.id, kinChoices: {} })
+  const draft = ok(await createDraft(db, 'owner', { builder: b }))
+  const pending = [{ kind: 'xp:buy', purchase: 'talent:combat', talent: { catalogueId: martial.id }, target: { talent: { tradition: 'Handmagic' } }, id: ulid(), at: at() } as unknown as ClientAction]
+  const saved = ok(await saveDraft(db, 'owner', { characterId: draft.id, revision: 1, builder: b, pending }))
+  const done = ok(await finishDraft(db, 'owner', { characterId: draft.id, revision: saved.revision }))
+  assert.ok(!done.state.draft)
+  assert.equal(done.state.xp.purchases[0]!.cost, 3)
+})
+
 test('undo of the top event works; undo of an older event → not_top_of_stack; an undone event or an undo event is not offered', async () => {
   const { doc } = await finished('owner', 0)
   const a = addItem('A')

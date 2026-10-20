@@ -16,15 +16,52 @@ const traditionCosts = (tradition: 'Martial' | 'Cognitive'): RaceEffect[] => [
   { kind: 'cost', purchase: 'destiny', delta: -2, where: { tradition } },
 ]
 
+const attune = (element: string, level: 'basic' | 'advanced' | 'paragon' = 'basic'): RaceEffect => ({ kind: 'attunement', elements: [element], level })
+
 export const RACE_EFFECTS: Record<string, Config> = {
   Craven: { effects: [{ kind: 'awardBonus', per: 7, bonus: 1 }] },
-  Dwarf: { effects: [{ kind: 'cost', purchase: 'hp', delta: -1 }] },
+  Dwarf: {
+    effects: [{ kind: 'cost', purchase: 'hp', delta: -1 }],
+    subraces: {
+      'uline-chain-dwarf': {
+        choices: [{
+          id: 'element', title: 'Mountain-born', kind: 'options', text: 'You gain your choice of a basic attunement to earth or darkness.',
+          options: [
+            { id: 'earth', title: 'Earth', effects: [attune('earth')] },
+            { id: 'dark', title: 'Darkness', effects: [attune('dark')] },
+          ],
+        }],
+      },
+      verucan: { effects: [attune('fire')] },
+      'yorinthian-winter-dwarves': { effects: [attune('ice')] },
+      'nydor-dark-dwarves': { effects: [attune('dark')] },
+    },
+  },
+  'Fallen_Angels': {
+    subraces: {
+      'sarakiel-light-fallen': { effects: [attune('light')] },
+      'xaphkiel-shadow-fallen': { effects: [attune('dark')] },
+    },
+  },
+  Goblin: {
+    subraces: {
+      darkling: { effects: [attune('dark', 'advanced')] },
+      stravlar: { effects: [attune('fire')] },
+    },
+  },
+  Rhea: { effects: [attune('air', 'advanced')] },
+  Triton: { effects: [attune('water')] },
+  Yngli: { effects: [attune('force', 'paragon')] },
   Elf: {
     effects: [
       { kind: 'cost', purchase: 'aspect:rank', delta: -2 },
       { kind: 'aspectRankCap', max: 8 },
     ],
     subraces: {
+      'eloweir-sea-elf': { effects: [attune('water', 'advanced')] },
+      'kryaaji-sun-elf': { effects: [attune('light')] },
+      'xicrein-island-elf': { effects: [attune('water'), attune('dark')] },
+      'spindral-quill-elf': { effects: [attune('void')] },
       'amverela-high-elf': {
         choices: [{
           id: 'expertise', title: 'Expertise', kind: 'options', text: 'Choose one:',
@@ -54,6 +91,7 @@ export const RACE_EFFECTS: Record<string, Config> = {
       { kind: 'cost', purchase: 'hp', delta: 1 },
     ],
     subraces: {
+      'neka-wild-gnomes': { effects: [attune('fire')] },
       'whiteling-prophet-gnome': {
         baseMaxHp: 30,
         effects: [
@@ -95,8 +133,8 @@ export const RACE_EFFECTS: Record<string, Config> = {
         choices: [{
           id: 'element', title: 'Elemental Heritage', kind: 'options', text: 'Choose fire or water.',
           options: [
-            { id: 'fire', title: 'Fire', effects: [{ kind: 'attunement', elements: ['fire'], level: 'basic' }] },
-            { id: 'water', title: 'Water', effects: [{ kind: 'attunement', elements: ['water'], level: 'basic' }] },
+            { id: 'fire', title: 'Fire', effects: [attune('fire')] },
+            { id: 'water', title: 'Water', effects: [attune('water')] },
           ],
         }],
       },

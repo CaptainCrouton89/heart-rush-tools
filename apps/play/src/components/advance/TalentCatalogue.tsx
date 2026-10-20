@@ -1,7 +1,7 @@
 import { useId, useMemo, useState, type ReactNode } from 'react'
 import { ulid } from 'ulid'
 import type { PlayTalent, TalentCategory } from '@heartrush/rules-engine/catalogue'
-import type { Character, ClientAction, Target } from '@heartrush/rules-engine/types'
+import type { Character, ClientAction, PriceTarget } from '@heartrush/rules-engine/types'
 import { Input } from '@heartrush/ui/components/input'
 import { ToggleGroup, ToggleGroupItem } from '@heartrush/ui/components/toggle-group'
 import { rulebookUrl, type PlayCatalogue } from '~/catalogue'
@@ -38,8 +38,8 @@ const firstSentence = (body: string) => {
   return end === -1 ? line : line.slice(0, end + 1)
 }
 
-/** The catalogue facts the engine prices a talent by (ruling 9, 11): tradition, elements, attunement level. */
-export const talentTarget = (t: PlayTalent): Target => ({
+/** The catalogue facts the sheet quotes a price from; the engine reads the same facts from the catalogue entry when it applies the purchase. */
+export const talentTarget = (t: PlayTalent): PriceTarget => ({
   talent: { tradition: t.tradition, elements: t.elements, ...(t.attunementLevel ? { attunementLevel: t.attunementLevel } : {}) },
 })
 
@@ -48,14 +48,7 @@ export function talentBuyAction(t: PlayTalent, attunementElement?: string): XpBu
   return {
     kind: 'xp:buy',
     purchase: `talent:${t.category}`,
-    target: talentTarget(t),
-    talent: {
-      catalogueId: t.id,
-      titleSnapshot: t.title,
-      frequency: t.frequency ?? 'passive',
-      customText: null,
-      ...(attunementElement !== undefined ? { attunementElement } : {}),
-    },
+    talent: { catalogueId: t.id, ...(attunementElement !== undefined ? { attunementElement } : {}) },
     id: ulid(),
     at: new Date().toISOString(),
   }

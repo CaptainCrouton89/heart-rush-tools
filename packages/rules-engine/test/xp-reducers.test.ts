@@ -1,12 +1,26 @@
 import { describe, test } from 'node:test'
 import assert from 'node:assert/strict'
-import * as r from '../src/reducers/xp'
+import * as xpReducers from '../src/reducers/xp'
+import { ELEMENTAL_AFFINITY_ID, indexById, type PlayTalent } from '../src/catalogue'
 import { xpByKind, xpRemaining, xpSpent } from '../src/pricing'
 import { bloodmarkPicksOwed } from '../src/bloodmarks'
 import { maxHeartDie, maxHp } from '../src/derived'
 import { RuleError, type ActionBody, type BoughtTalent, type Character, type Talent } from '../src/types'
 import { applyAction, applyInverse } from '../src/actions'
 import { makeCharacter } from './fixtures'
+
+/** The reducer prices from this catalogue, never from the action (INV-DET). */
+const entry = (id: string, category: PlayTalent['category'], over: Partial<PlayTalent> = {}): PlayTalent =>
+  ({ id, path: `/t/${id}`, title: id, category, frequency: 'major', tradition: null, elements: [], body: '', destiny: null, ...over })
+const TALENTS = indexById([
+  entry('Cleave', 'combat'), entry('B1', 'combat'), entry('B2', 'combat'), entry('B3', 'combat'), entry('X', 'combat'),
+  entry('Tinker', 'combat', { tradition: 'Handmagic' }),
+  entry('Haggle', 'noncombat'),
+  entry(ELEMENTAL_AFFINITY_ID, 'noncombat', { title: 'Elemental Affinity', frequency: 'passive' }),
+  entry('Fireball', 'elemental', { tradition: 'Cognitive', elements: ['fire'] }),
+  entry('Blizzard', 'elemental', { elements: ['Air', 'Water'] }),
+])
+const r = { ...xpReducers, xpBuy: (c: Character, a: Parameters<typeof xpReducers.xpBuy>[1]) => xpReducers.xpBuy(c, a, TALENTS) }
 
 const AT = '2026-01-01T00:00:00.000Z'
 type BodyOf<K extends ActionBody['kind']> = Extract<ActionBody, { kind: K }>
@@ -18,8 +32,9 @@ const talent = (category: Talent['category'] = 'combat', over: Partial<Talent> =
   id: 't1', catalogueId: 'x', titleSnapshot: 'Talent', category, frequency: 'major', destiny: false,
   customText: null, usedThisPeriod: false, usesThisFight: 0, ...over,
 })
-const bought = (title = 'Bought', over: Partial<BoughtTalent> = {}): BoughtTalent =>
-  ({ catalogueId: `talent:${title}`, titleSnapshot: title, frequency: 'major', customText: null, ...over })
+const bought = (catalogueId: string, over: Partial<BoughtTalent> = {}): BoughtTalent => ({ catalogueId, ...over })
+/** An action as a hostile client could send it: any extra fields. */
+const forged = (body: Record<string, unknown>, id = 'A1') => ({ id, at: AT, ...body }) as Parameters<typeof r.xpBuy>[1]
 const withXp = (awarded: number, c: Character = makeCharacter()): Character => ({ ...c, xp: { ...c.xp, awarded } })
 const deepFreeze = <T>(o: T): T => {
   if (o && typeof o === 'object') { Object.values(o).forEach(deepFreeze); Object.freeze(o) }
@@ -59,7 +74,7 @@ describe('criterion 9: xp:buy', () => {
   test('ids: the purchase is <id>:0 and the appended talent is <id>:1; the purchase targets the talent', () => {
     const c = r.xpBuy(withXp(30), act({ kind: 'xp:buy', purchase: 'talent:combat', talent: bought('Cleave') }, 'B1'))
     assert.deepEqual(c.xp.purchases, [{ id: 'B1:0', kind: 'talent:combat', target: 'B1:1', cost: 3, at: AT }])
-    assert.deepEqual(c.talents, [{ id: 'B1:1', catalogueId: 'talent:Cleave', titleSnapshot: 'Cleave', category: 'combat', frequency: 'major', destiny: false, customText: null, usedThisPeriod: false, usesThisFight: 0 }])
+    assert.deepEqual(c.talents, [{ id: 'B1:1', catalogueId: 'Cleave', titleSnapshot: 'Cleave', category: 'combat', frequency: 'major', destiny: false, customText: null, usedThisPeriod: false, usesThisFight: 0 }])
   })
   test('ability dice step d4→d6→d8→d10→d12 for 6, 8, 10, 12 and stop at d12', () => {
     let c = withXp(100, makeCharacter({ abilities: { ...makeCharacter().abilities, might: { start: 4, current: 4 } } }))
@@ -110,23 +125,42 @@ describe('criterion 9: xp:buy', () => {
   })
   test('talent purchases need the talent fields; they are refused on other kinds', () => {
     refuses('bad_action', () => r.xpBuy(withXp(30), act({ kind: 'xp:buy', purchase: 'talent:combat' })))
-    refuses('bad_action', () => r.xpBuy(withXp(30), act({ kind: 'xp:buy', purchase: 'talent:combat', talent: bought('   ') })))
+    refuses('not_found', () => r.xpBuy(withXp(30), act({ kind: 'xp:buy', purchase: 'talent:combat', talent: bought('nope') })))
     refuses('bad_action', () => r.xpBuy(withXp(30), act({ kind: 'xp:buy', purchase: 'hp', talent: bought('Cleave') })))
   })
   test('elemental talent: refused without attunement, priced (combat × 2) + 3', () => {
-    const spell = { tradition: 'Cognitive' as const, elements: ['fire'] }
     const base = withXp(100, makeCharacter({ talents: [talent('combat', { id: 'c1' }), talent('combat', { id: 'c2' })] }))
-    refuses('not_attuned', () => r.xpBuy(base, act({ kind: 'xp:buy', purchase: 'talent:elemental', target: { talent: spell }, talent: bought('Fireball') })))
+    refuses('not_attuned', () => r.xpBuy(base, act({ kind: 'xp:buy', purchase: 'talent:elemental', talent: bought('Fireball') })))
     const attuned = { ...base, attunements: [{ id: 'at1', element: 'fire', level: 'basic' as const, source: 'race' }] }
-    const c = r.xpBuy(attuned, act({ kind: 'xp:buy', purchase: 'talent:elemental', target: { talent: spell }, talent: bought('Fireball') }))
+    const c = r.xpBuy(attuned, act({ kind: 'xp:buy', purchase: 'talent:elemental', talent: bought('Fireball') }))
     assert.equal(c.xp.purchases[0]!.cost, 7)
     assert.equal(c.talents.at(-1)!.category, 'elemental')
   })
-  test('a Handmagic discount is applied from the talent facts in the target and the stored cost is the discounted price', () => {
+  test('a Handmagic discount is applied from the catalogue tradition and the stored cost is the discounted price', () => {
     const gnome = withXp(30, makeCharacter({ raceEffects: [{ kind: 'cost', purchase: 'talent:*', delta: -2, where: { tradition: 'Handmagic' } }] }))
-    const c = r.xpBuy(gnome, act({ kind: 'xp:buy', purchase: 'talent:combat', target: { talent: { tradition: 'Handmagic' } }, talent: bought('Tinker') }))
+    const c = r.xpBuy(gnome, act({ kind: 'xp:buy', purchase: 'talent:combat', talent: bought('Tinker') }))
     assert.equal(c.xp.purchases[0]!.cost, 1)
     assert.equal(r.xpBuy(gnome, act({ kind: 'xp:buy', purchase: 'talent:combat', talent: bought('Cleave') })).xp.purchases[0]!.cost, 3)
+  })
+  test('a client cannot change the price or the prerequisite: facts sent in the action are ignored, the catalogue entry decides', () => {
+    const gnome = withXp(30, makeCharacter({ raceEffects: [{ kind: 'cost', purchase: 'talent:*', delta: -2, where: { tradition: 'Handmagic' } }] }))
+    // Cleave is not Handmagic; the claimed tradition is dropped, so the Gnome pays full price.
+    const forgedBuy = forged({ kind: 'xp:buy', purchase: 'talent:combat', talent: bought('Cleave'), target: { talent: { tradition: 'Handmagic' } } })
+    assert.equal(r.xpBuy(gnome, forgedBuy).xp.purchases[0]!.cost, 3)
+    // A spell's elements come from the entry: claiming an element the character holds does not satisfy a fire spell.
+    const water = withXp(30, makeCharacter({ attunements: [{ id: 'at0', element: 'water', level: 'basic', source: 'race' }] }))
+    const claimed = forged({ kind: 'xp:buy', purchase: 'talent:elemental', talent: bought('Fireball'), target: { talent: { elements: ['water'] } } })
+    refuses('not_attuned', () => r.xpBuy(water, claimed))
+    // The stored talent is the catalogue entry's, not the client's title or frequency.
+    const t = r.xpBuy(withXp(30), forged({ kind: 'xp:buy', purchase: 'talent:combat', talent: { ...bought('Cleave'), titleSnapshot: 'Free', frequency: 'passive' } })).talents[0]!
+    assert.deepEqual([t.titleSnapshot, t.frequency], ['Cleave', 'major'])
+    // A destiny level on a Handmagic talent is discounted by the owned talent's tradition, not a claimed one.
+    const mixed = withXp(30, makeCharacter({ talents: [talent('combat', { id: 't1', catalogueId: 'Cleave' })], raceEffects: [{ kind: 'cost', purchase: 'destiny', delta: -2, where: { tradition: 'Handmagic' } }] }))
+    assert.equal(r.xpBuy(mixed, forged({ kind: 'xp:buy', purchase: 'destiny', target: { talentId: 't1', talent: { tradition: 'Handmagic' } } })).xp.purchases[0]!.cost, 5)
+  })
+  test('a talent bought as another kind, or an unknown catalogue id, is refused', () => {
+    refuses('bad_action', () => r.xpBuy(withXp(30), act({ kind: 'xp:buy', purchase: 'talent:noncombat', talent: bought('Cleave') })))
+    refuses('not_found', () => r.xpBuy(withXp(30), act({ kind: 'xp:buy', purchase: 'talent:combat', talent: bought('made-up') })))
   })
   test('destiny: marks one owned talent, first costs 5, second 6; a second level on one talent, an unknown talent or none is refused', () => {
     const c0 = withXp(50, makeCharacter({ talents: [talent('combat', { id: 't1' }), talent('noncombat', { id: 't2' })] }))
@@ -139,10 +173,10 @@ describe('criterion 9: xp:buy', () => {
     refuses('not_found', () => r.xpBuy(c0, act({ kind: 'xp:buy', purchase: 'destiny', target: { talentId: 'nope' } })))
     refuses('bad_action', () => r.xpBuy(c0, act({ kind: 'xp:buy', purchase: 'destiny' })))
   })
-  test('a Gnome Handmagic destiny discount needs target.talent.tradition: 3 with it, 5 without', () => {
-    const gnome = withXp(30, makeCharacter({ talents: [talent('combat', { id: 't1' })], raceEffects: [{ kind: 'cost', purchase: 'destiny', delta: -2, where: { tradition: 'Handmagic' } }] }))
-    assert.equal(r.xpBuy(gnome, act({ kind: 'xp:buy', purchase: 'destiny', target: { talentId: 't1', talent: { tradition: 'Handmagic' } } })).xp.purchases[0]!.cost, 3)
-    assert.equal(r.xpBuy(gnome, act({ kind: 'xp:buy', purchase: 'destiny', target: { talentId: 't1' } })).xp.purchases[0]!.cost, 5)
+  test('a Gnome Handmagic destiny discount follows the owned talent\'s catalogue tradition: 3 for Handmagic, 5 otherwise', () => {
+    const gnome = withXp(30, makeCharacter({ talents: [talent('combat', { id: 't1', catalogueId: 'Tinker' }), talent('combat', { id: 't2', catalogueId: 'Cleave' })], raceEffects: [{ kind: 'cost', purchase: 'destiny', delta: -2, where: { tradition: 'Handmagic' } }] }))
+    assert.equal(r.xpBuy(gnome, act({ kind: 'xp:buy', purchase: 'destiny', target: { talentId: 't1' } })).xp.purchases[0]!.cost, 3)
+    assert.equal(r.xpBuy(gnome, act({ kind: 'xp:buy', purchase: 'destiny', target: { talentId: 't2' } })).xp.purchases[0]!.cost, 5)
   })
   test('path: needs 50 awarded XP, costs 20% (min 10), starts at tier 1 and only one is allowed; tiers cost 12, 16, 20', () => {
     refuses('path_locked', () => r.xpBuy(withXp(49), act({ kind: 'xp:buy', purchase: 'path', target: { pathId: 'vampire' } })))
@@ -166,7 +200,7 @@ describe('criterion 9: xp:buy', () => {
 
 describe('criterion 8b: Elemental Affinity', () => {
   const human = () => withXp(100, makeCharacter({ attunements: [{ id: 'at0', element: 'fire', level: 'basic', source: 'race' }] }))
-  const affinity = (element: string, id: string) => act({ kind: 'xp:buy', purchase: 'talent:noncombat', talent: bought('Elemental Affinity', { attunementElement: element }) }, id)
+  const affinity = (element: string, id: string) => act({ kind: 'xp:buy', purchase: 'talent:noncombat', talent: bought(ELEMENTAL_AFFINITY_ID, { attunementElement: element }) }, id)
 
   test('a new element adds {water, basic}, in creation order: purchase :0, talent :1, attunement :2', () => {
     const c = r.xpBuy(human(), affinity('water', 'E1'))
@@ -202,7 +236,7 @@ describe('criterion 8b: Elemental Affinity', () => {
   test('the new attunement lets an elemental talent be bought afterwards', () => {
     const base = withXp(100)
     let c = r.xpBuy(base, affinity('water', 'E1'))
-    c = r.xpBuy(c, act({ kind: 'xp:buy', purchase: 'talent:elemental', target: { talent: { elements: ['Air', 'Water'] } }, talent: bought('Blizzard') }, 'E2'))
+    c = r.xpBuy(c, act({ kind: 'xp:buy', purchase: 'talent:elemental', talent: bought('Blizzard') }, 'E2'))
     assert.equal(c.talents.at(-1)!.category, 'elemental')
   })
 })
@@ -279,7 +313,7 @@ describe('Warcaster bloodmark pick', () => {
 
   test('with an element it adds a basic attunement whose source is the new ability id, and undo removes it', () => {
     const before = level1()
-    const { character, inverse } = applyAction(before, act({ kind: 'bloodmark:pick', ability: pick(' Fire ') }, 'K1'), { conditions: new Map() })
+    const { character, inverse } = applyAction(before, act({ kind: 'bloodmark:pick', ability: pick(' Fire ') }, 'K1'), { conditions: new Map(), talents: TALENTS })
     assert.deepEqual(character.attunements.at(-1), { id: 'K1:1', element: 'fire', level: 'basic', source: 'K1:0' })
     assert.equal(character.bloodmarks.abilities[0]!.id, 'K1:0')
     assert.deepEqual(applyInverse(character, inverse).character, before)
@@ -304,7 +338,7 @@ describe('purity', () => {
       c => r.xpAward(c, act({ kind: 'xp:award', amount: 9 })),
       c => r.xpBuy(c, act({ kind: 'xp:buy', purchase: 'hp' })),
       c => r.xpBuy(c, act({ kind: 'xp:buy', purchase: 'destiny', target: { talentId: 't1' } })),
-      c => r.xpBuy(c, act({ kind: 'xp:buy', purchase: 'talent:noncombat', talent: bought('Elemental Affinity', { attunementElement: 'fire' }) })),
+      c => r.xpBuy(c, act({ kind: 'xp:buy', purchase: 'talent:noncombat', talent: bought(ELEMENTAL_AFFINITY_ID, { attunementElement: 'fire' }) })),
       c => r.bloodmarkAward(c, act({ kind: 'bloodmark:award' })),
     ]
     for (const call of calls) assert.deepEqual(call(c), call(c))

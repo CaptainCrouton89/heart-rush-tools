@@ -108,7 +108,7 @@ test('getCampaignForEncounter: the numbers are the rules engine\'s for a seeded 
   await act(characterId, { id: ulid(), at: at(), kind: 'xp:award', amount: 10 })
   await act(characterId, {
     id: ulid(), at: at(), kind: 'xp:buy', purchase: 'talent:combat',
-    talent: { catalogueId: COMBAT.id, titleSnapshot: COMBAT.title, frequency: COMBAT.frequency ?? 'passive', customText: null },
+    talent: { catalogueId: COMBAT.id },
   })
   await act(characterId, {
     id: ulid(), at: at(), kind: 'gear:weapon:add',

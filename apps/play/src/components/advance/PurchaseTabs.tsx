@@ -134,9 +134,9 @@ export function DestinyTab({ character, catalogue, dispatch }: PurchaseTabProps)
           {talents.map((t) => {
             const ref = resolveRef(catalogue.talents, t)
             const entry = ref.entry
-            // A talent's purchase price may depend on its tradition (Gnome Handmagic destiny).
-            const target: Target = { talentId: t.id, ...(entry ? { talent: { tradition: entry.tradition } } : {}) }
-            const q = quote(character, 'destiny', target)
+            // The price depends on the talent's tradition (Gnome Handmagic destiny); the engine reads it from the catalogue.
+            const target: Target = { talentId: t.id }
+            const q = quote(character, 'destiny', { ...target, ...(entry ? { talent: { tradition: entry.tradition } } : {}) })
             return (
               <BuyRow
                 key={t.id}

@@ -2,9 +2,10 @@
 // `xp:buy` creates in this order: the purchase `<id>:0`, then the aspect or talent it appends `<id>:1`,
 // then, for Elemental Affinity on a new element, the attunement `<id>:2`.
 import { bloodmarkPicksOwed, hasWarcaster } from '../bloodmarks'
+import { ELEMENTAL_AFFINITY_ID, type PlayTalent } from '../catalogue'
 import { price, xpRemaining } from '../pricing'
 import { RuleError } from '../types'
-import type { Action, Attunement, Character, Die, Purchase, Talent } from '../types'
+import type { Action, Attunement, Character, Die, PriceTarget, Purchase, Talent } from '../types'
 
 type Of<K extends Action['kind']> = Extract<Action, { kind: K }>
 
@@ -32,23 +33,37 @@ function attune(c: Character, element: string, id: string): Attunement[] {
   return c.attunements.map(x => x === existing ? { ...x, level: 'advanced' } : x)
 }
 
-export function xpBuy(c: Character, a: Of<'xp:buy'>): Character {
+/** The talent catalogue entry a purchase or destiny level concerns: tradition, elements and category come from here, never from the action. */
+type TalentEntries = ReadonlyMap<string, PlayTalent>
+
+export function xpBuy(c: Character, a: Of<'xp:buy'>, talents: TalentEntries): Character {
   const { purchase: kind, target, talent: bought, aspectText } = a
   const isTalent = kind === 'talent:combat' || kind === 'talent:noncombat' || kind === 'talent:elemental'
   if (isTalent !== (bought !== undefined)) throw new RuleError('bad_action', 'A talent purchase needs talent fields, and only a talent purchase takes them')
-  if (bought && !bought.titleSnapshot.trim()) throw new RuleError('bad_action', 'Talent title is blank')
-  if (bought?.attunementElement !== undefined && kind !== 'talent:noncombat') throw new RuleError('bad_action', 'Only Elemental Affinity attunes')
   if ((kind === 'aspect:new') !== (aspectText !== undefined)) throw new RuleError('bad_action', 'Only a new aspect takes aspectText')
   if (aspectText !== undefined && !aspectText.trim()) throw new RuleError('bad_action', 'Aspect text is blank')
   if (kind === 'path' && !target?.pathId) throw new RuleError('bad_action', 'A path purchase names the path')
+
+  // The price is computed from the stored character and the catalogue entry alone (INV-DET).
+  const priced: PriceTarget = { ability: target?.ability, aspectId: target?.aspectId, talentId: target?.talentId, pathId: target?.pathId }
+  let entry: PlayTalent | undefined
+  if (bought) {
+    entry = talents.get(bought.catalogueId)
+    if (!entry) throw new RuleError('not_found', `No talent ${String(bought.catalogueId)} in the catalogue`)
+    if (`talent:${entry.category}` !== kind) throw new RuleError('bad_action', `${entry.title} is a ${entry.category} talent`)
+    if ((bought.attunementElement !== undefined) !== (entry.id === ELEMENTAL_AFFINITY_ID)) throw new RuleError('bad_action', 'Only Elemental Affinity attunes, and it needs an element')
+    priced.talent = { tradition: entry.tradition, elements: entry.elements, attunementLevel: entry.attunementLevel }
+  }
   if (kind === 'destiny') {
     if (!target?.talentId) throw new RuleError('bad_action', 'Destiny names an owned talent')
     const owned = c.talents.find(t => t.id === target.talentId)
     if (!owned) throw new RuleError('not_found')
     if (owned.destiny) throw new RuleError('bad_action', 'Talent already has its destiny level')
+    const ownedEntry = owned.catalogueId === null ? undefined : talents.get(owned.catalogueId)
+    if (ownedEntry) priced.talent = { tradition: ownedEntry.tradition }
   }
 
-  const cost = price(c, kind, target)
+  const cost = price(c, kind, priced)
   if (cost > xpRemaining(c)) throw new RuleError('insufficient_xp')
 
   const purchaseId = `${a.id}:0`
@@ -81,8 +96,8 @@ export function xpBuy(c: Character, a: Of<'xp:buy'>): Character {
     case 'talent:elemental': {
       const b = bought!
       const talent: Talent = {
-        id: createdId, catalogueId: b.catalogueId, titleSnapshot: b.titleSnapshot.trim(), category: kind.slice('talent:'.length) as Talent['category'],
-        frequency: b.frequency, destiny: false, customText: b.customText, usedThisPeriod: false, usesThisFight: 0,
+        id: createdId, catalogueId: entry!.id, titleSnapshot: entry!.title, category: entry!.category,
+        frequency: entry!.frequency ?? 'passive', destiny: false, customText: null, usedThisPeriod: false, usesThisFight: 0,
       }
       const changes: Partial<Character> = { talents: [...c.talents, talent] }
       if (b.attunementElement !== undefined) changes.attunements = attune(c, b.attunementElement, `${a.id}:2`)

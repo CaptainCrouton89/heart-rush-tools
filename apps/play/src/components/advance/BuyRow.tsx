@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { price, xpRemaining } from '@heartrush/rules-engine/pricing'
-import { RuleError, type Character, type PurchaseKind, type Target } from '@heartrush/rules-engine/types'
+import { RuleError, type Character, type PriceTarget, type PurchaseKind } from '@heartrush/rules-engine/types'
 import { Button } from '@heartrush/ui/components/button'
 import { refusalReason } from '~/components/sheet/refusal-text'
 
@@ -12,7 +12,7 @@ import { refusalReason } from '~/components/sheet/refusal-text'
  */
 export type Quote = { cost: number | null; refusal: string | null }
 
-export function quote(character: Character, kind: PurchaseKind, target?: Target): Quote {
+export function quote(character: Character, kind: PurchaseKind, target?: PriceTarget): Quote {
   let cost: number
   try {
     cost = price(character, kind, target)

@@ -143,6 +143,43 @@ test('the engine builds a character from every real race and subrace', () => {
   assert.ok(built >= cat.races.size)
 })
 
+/** Each racial attunement the race text prints (heart_rush/races/*.md); Goblin Etherweaver and Savant picks stay manual. */
+const PRINTED_ATTUNEMENTS: Array<[race: string, subrace: string | null, choices: Record<string, string>, expected: Array<[string, string]>]> = [
+  ['Elf', 'Kryaaji', {}, [['light', 'basic']]],
+  ['Gnome', 'Neka', {}, [['fire', 'basic']]],
+  ['Triton', null, {}, [['water', 'basic']]],
+  ['Elf', 'Eloweir', {}, [['water', 'advanced']]],
+  ['Elf', 'Xicrein', {}, [['water', 'basic'], ['dark', 'basic']]],
+  ['Elf', 'Spindral', {}, [['void', 'basic']]],
+  ['Fallen Angels', 'Sarakiel', {}, [['light', 'basic']]],
+  ['Fallen Angels', 'Xaphkiel', {}, [['dark', 'basic']]],
+  ['Goblin', 'Darkling', {}, [['dark', 'advanced']]],
+  ['Goblin', 'Stravlar', {}, [['fire', 'basic']]],
+  ['Dwarf', 'Verucan', {}, [['fire', 'basic']]],
+  ['Dwarf', 'Yorinthian', {}, [['ice', 'basic']]],
+  ['Dwarf', 'Nydor', {}, [['dark', 'basic']]],
+  ['Dwarf', 'Uline', { element: 'dark' }, [['dark', 'basic']]],
+  ['Rhea', null, {}, [['air', 'advanced']]],
+  ['Yngli', null, {}, [['force', 'paragon']]],
+]
+
+test('a created character holds every attunement its race text prints', () => {
+  for (const [raceTitle, subraceTitle, picked, expected] of PRINTED_ATTUNEMENTS) {
+    const race = raceByTitle(raceTitle)
+    const subrace = subraceTitle ? race.subraces.find((s) => s.title.startsWith(subraceTitle)) : null
+    assert.ok(subrace !== undefined, `${raceTitle}/${subraceTitle} exists`)
+    const choices = [...race.choices, ...(subrace?.choices ?? [])]
+    const kinChoices = { ...Object.fromEntries(choices.map((c) => [c.id, answer(c)])), ...picked }
+    const character = createCharacter({
+      id: 'C3', at: '2026-01-01T00:00:00.000Z', name: 'Test', pronouns: '', dream: '', description: '', motivation: '', portrait: null,
+      raceId: race.id, subraceId: subrace?.id ?? null, kinChoices, dice: { might: 6, agility: 6, cunning: 4, presence: 4 },
+      ageCategory: 'adult', ageBenefits: [], createdAspects: ['One', 'Two'],
+      professions: [{ name: 'Smith', rank: 2 }, { name: 'Cook', rank: 2 }], bloodmarkLevel: 1,
+    }, cat)
+    assert.deepEqual(character.attunements.map((a) => [a.element, a.level]), expected, `${raceTitle}/${subraceTitle ?? ''}`)
+  }
+})
+
 test('the engine applies a real grant, a real choice option and a real subrace base HP', () => {
   const base = (raceId: string, subraceId: string | null, kinChoices: Record<string, string>): BuilderInput => ({
     id: 'C2', at: '2026-01-01T00:00:00.000Z', name: 'Test', pronouns: '', dream: '', description: '', motivation: '', portrait: null,

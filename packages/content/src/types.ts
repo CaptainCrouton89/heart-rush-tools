@@ -167,7 +167,7 @@ export type RaceEffect =
   | { kind: 'aspectRankCap'; max: number }
   | { kind: 'awardBonus'; per: number; bonus: number }
   /** Exactly one element. A race that offers a pick (Nuun) expresses it as a choice. */
-  | { kind: 'attunement'; elements: [string]; level: 'basic' }
+  | { kind: 'attunement'; elements: [string]; level: 'basic' | 'advanced' | 'paragon' }
   | { kind: 'manual'; text: string }
 
 /** A racial ability that hands out a catalogue talent ("you gain the <Title> talent as a racial ability"); null when it grants none. */

@@ -241,7 +241,7 @@ test('suggest: only affordable, unowned, attuned talents are listed; unknown, un
   const owned = cat.talents.get([...cat.talents.values()].find((x) => x.category === 'combat')!.id)!
   const bought = ok(await applyCharacterAction(db, 'owner', {
     characterId: doc.id, revision: doc.revision,
-    action: { kind: 'xp:buy', purchase: 'talent:combat', talent: { catalogueId: owned.id, titleSnapshot: owned.title, frequency: owned.frequency ?? 'passive', customText: null }, id: ulid(), at: at() },
+    action: { kind: 'xp:buy', purchase: 'talent:combat', talent: { catalogueId: owned.id }, id: ulid(), at: at() },
   }))
   assert.ok(!bought.state.draft)
   const remaining = bought.derived!.xp.remaining

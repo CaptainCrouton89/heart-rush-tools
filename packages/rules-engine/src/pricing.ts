@@ -1,12 +1,12 @@
 import { hasWarcaster } from './bloodmarks'
 import { maxHp } from './derived'
-import type { AbilityId, Character, Die, PurchaseKind, Target } from './types'
+import type { AbilityId, Character, Die, PriceTarget, PurchaseKind, TalentFacts } from './types'
 import { RuleError } from './types'
 import type { AttunementLevel, CostWhere } from './catalogue'
 
 const talentKind = (kind: PurchaseKind) => kind === 'talent:combat' || kind === 'talent:noncombat' || kind === 'talent:elemental'
 
-function matches(c: Character, where: CostWhere | undefined, t: Target | undefined): boolean {
+function matches(c: Character, where: CostWhere | undefined, t: PriceTarget | undefined): boolean {
   if (!where) return true
   if (where.ability && where.ability !== t?.ability) return false
   if (where.tradition && where.tradition !== t?.talent?.tradition) return false
@@ -14,7 +14,7 @@ function matches(c: Character, where: CostWhere | undefined, t: Target | undefin
   return true
 }
 
-export function raceDelta(c: Character, kind: PurchaseKind, t?: Target): number {
+export function raceDelta(c: Character, kind: PurchaseKind, t?: PriceTarget): number {
   return c.raceEffects.reduce((sum, e) => e.kind === 'cost' &&
     (e.purchase === kind || (e.purchase === 'talent:*' && talentKind(kind))) && matches(c, e.where, t)
     ? sum + e.delta : sum, 0)
@@ -30,7 +30,7 @@ export function aspectRankCap(c: Character): number {
 
 const ATTUNEMENT_LEVEL: Record<AttunementLevel, number> = { basic: 0, advanced: 1, paragon: 2 }
 /** Ruling 17: at least one named element is sufficient. A missing level requires basic (ruling 11). */
-export function requireAttunement(c: Character, talent: NonNullable<Target['talent']>): void {
+export function requireAttunement(c: Character, talent: TalentFacts): void {
   const required = ATTUNEMENT_LEVEL[talent.attunementLevel ?? 'basic']
   if (!talent.elements?.some(element => c.attunements.some(a => a.element.toLowerCase() === element.toLowerCase() && ATTUNEMENT_LEVEL[a.level] >= required))) {
     throw new RuleError('not_attuned')
@@ -45,7 +45,7 @@ export function destinyLevels(c: Character): number {
   return c.talents.filter(t => t.destiny).length
 }
 
-export function price(c: Character, kind: PurchaseKind, t?: Target): number {
+export function price(c: Character, kind: PurchaseKind, t?: PriceTarget): number {
   let base: number
   switch (kind) {
     case 'aspect:new': base = 1; break

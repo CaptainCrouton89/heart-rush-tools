@@ -34,7 +34,7 @@ export const raceEffectSchema = z.discriminatedUnion('kind', [
   z.object({ kind: z.literal('dieCap'), ability: abilityId, max: die }),
   z.object({ kind: z.literal('aspectRankCap'), max: z.number() }),
   z.object({ kind: z.literal('awardBonus'), per: z.number(), bonus: z.number() }),
-  z.object({ kind: z.literal('attunement'), elements: z.tuple([z.string()]), level: z.literal('basic') }),
+  z.object({ kind: z.literal('attunement'), elements: z.tuple([z.string()]), level: z.enum(['basic', 'advanced', 'paragon']) }),
   z.object({ kind: z.literal('manual'), text: z.string() }),
 ])
 

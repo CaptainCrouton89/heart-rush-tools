@@ -22,7 +22,7 @@ export type RaceEffect =
   | { kind: 'aspectRankCap'; max: number }
   | { kind: 'awardBonus'; per: number; bonus: number }
   /** Ruling 16: grants one attunement in exactly one element; a race that offers two elements puts one `attunement` effect in each choice option. */
-  | { kind: 'attunement'; elements: [string]; level: 'basic' }
+  | { kind: 'attunement'; elements: [string]; level: AttunementLevel }
   | { kind: 'manual'; text: string }
 
 export type PlayAbility = {
@@ -38,6 +38,9 @@ export type PlayChoiceOption = { id: string; title: string; abilities: PlayAbili
 export type PlayChoice =
   | { id: string; title: string; text: string; kind: 'options'; options: PlayChoiceOption[] }
   | { id: string; title: string; text: string; kind: 'talent'; tradition: Tradition | null }
+
+/** The one talent whose purchase attunes an element (Elemental_Affinity.md). */
+export const ELEMENTAL_AFFINITY_ID = 'player.talents.elemental-affinity'
 
 export type PlayTalent = {
   id: string

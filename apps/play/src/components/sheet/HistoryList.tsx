@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useServerFn } from '@tanstack/react-start'
 import type { Action } from '@heartrush/rules-engine/types'
 import { Button } from '@heartrush/ui/components/button'
+import { getCatalogue } from '~/catalogue'
 import { listEventsFn, type EventSummary, type ListEventsResult } from '~/server/characters'
 import { Section } from './SheetLayout'
 import { refusalReason } from './refusal-text'
@@ -33,7 +34,7 @@ export function describeAction(a: Action): string {
     case 'longRest': return a.successful ? 'Long rest' : 'Long rest (failed)'
     case 'startSession': return 'Started a session'
     case 'xp:award': return `Awarded ${a.amount} XP`
-    case 'xp:buy': return a.target?.ability ? `Bought a larger ${ABILITY[a.target.ability]} die` : a.talent ? `Bought ${a.talent.titleSnapshot}` : 'Spent XP'
+    case 'xp:buy': return a.target?.ability ? `Bought a larger ${ABILITY[a.target.ability]} die` : a.talent ? `Bought ${getCatalogue().talents.get(a.talent.catalogueId)?.title ?? 'a talent'}` : 'Spent XP'
     case 'bloodmark:award': return 'Awarded a bloodmark'
     case 'bloodmark:pick': return `Took ${a.ability.title}`
     case 'gear:weapon:add': return `Added ${a.weapon.name}`

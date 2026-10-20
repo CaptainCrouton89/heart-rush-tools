@@ -4,11 +4,20 @@ import assert from 'node:assert/strict'
 import fc from 'fast-check'
 import { applyAction, applyInverse, canUndo, upgradeCharacter, type UndoableEvent } from '../src/actions'
 import { xpRemaining } from '../src/pricing'
+import { ELEMENTAL_AFFINITY_ID, indexById, type PlayTalent } from '../src/catalogue'
 import { RuleError, type ActionBody, type Character, type ClientAction, type Inverse } from '../src/types'
 import { conditions, makeCharacter } from './fixtures'
 
 const AT = '2026-01-01T00:00:00.000Z'
-const catalogue = { conditions }
+const entry = (id: string, category: PlayTalent['category'], over: Partial<PlayTalent> = {}): PlayTalent =>
+  ({ id, path: `/t/${id}`, title: id, category, frequency: 'major', tradition: null, elements: [], body: '', destiny: null, ...over })
+const TALENTS = {
+  combat: entry('t:combat', 'combat', { tradition: 'Handmagic' }),
+  noncombat: entry('t:noncombat', 'noncombat', { frequency: null }),
+  affinity: entry(ELEMENTAL_AFFINITY_ID, 'noncombat', { frequency: 'passive' }),
+  spell: entry('t:spell', 'elemental', { elements: ['fire'], attunementLevel: 'basic' }),
+}
+const catalogue = { conditions, talents: indexById(Object.values(TALENTS)) }
 type Body = Exclude<ActionBody, { kind: 'restore' | 'undo' }>
 const stamp = (body: Body, id: string): ClientAction => ({ id, at: AT, ...body }) as ClientAction
 
@@ -106,7 +115,6 @@ const characterArb: fc.Arbitrary<Character> = fc.record({
   })
 })
 
-const bought = fc.record({ catalogueId: fc.constant(null), titleSnapshot: fc.constant('Bought'), frequency: pick(['passive', 'major'] as const), customText: fc.constant(null) })
 const WOUND_NAMES = ['weakened', 'off-balanced', 'dazed'] as const
 
 /** One arbitrary per action kind, built from the character so ids resolve; the reducer still refuses some. */
@@ -147,10 +155,10 @@ function bodies(c: Character): Array<fc.Arbitrary<Body>> {
     ability.chain(a => buy('die', fc.constant({ target: { ability: a } }))),
     buy('aspect:new', fc.constant({ aspectText: 'New aspect' })),
     idOf(c.aspects).chain(aspectId => buy('aspect:rank', fc.constant({ target: { aspectId } }))),
-    bought.chain(talent => buy('talent:combat', fc.constant({ talent, target: { talent: { tradition: 'Handmagic' as const } } }))),
-    bought.chain(talent => buy('talent:noncombat', fc.constant({ talent }))),
-    bought.chain(talent => buy('talent:noncombat', fc.constant({ talent: { ...talent, attunementElement: 'fire' } }))),
-    bought.chain(talent => buy('talent:elemental', fc.constant({ talent, target: { talent: { elements: ['fire'], attunementLevel: 'basic' as const } } }))),
+    buy('talent:combat', fc.constant({ talent: { catalogueId: TALENTS.combat.id } })),
+    buy('talent:noncombat', fc.constant({ talent: { catalogueId: TALENTS.noncombat.id } })),
+    buy('talent:noncombat', fc.constant({ talent: { catalogueId: TALENTS.affinity.id, attunementElement: 'fire' } })),
+    buy('talent:elemental', fc.constant({ talent: { catalogueId: TALENTS.spell.id } })),
     idOf(c.talents).chain(talentId => buy('destiny', fc.constant({ target: { talentId } }))),
     buy('path', fc.constant({ target: { pathId: 'path:vampire' } })),
     buy('path:tier'),
