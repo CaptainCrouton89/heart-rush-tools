@@ -30,14 +30,14 @@ function returnPath(request: Request): string {
 /**
  * The signed-in person for the current request, for route loaders, server functions and API handlers.
  * Signed out: every request throws a redirect to `/auth/login?returnTo=<page>` (the router follows it for a page navigation
- * or server-function call), except a WebSocket upgrade (the live channel), which throws a 401 JSON response. The choice
- * never depends on `Accept`: a page loader runs this in-process during server rendering, where a thrown `Response` cannot be
- * serialized into the page (a 500), and the router accepts `*\/*` as HTML, which curl and fetch send by default.
+ * or server-function call). The live channel's WebSocket upgrade never reaches this: the Worker entry answers it before
+ * TanStack Start. The choice never depends on `Accept`: a page loader runs this in-process during server rendering, where
+ * a thrown `Response` cannot be serialized into the page (a 500), and the router accepts `*\/*` as HTML, which curl and
+ * fetch send by default.
  */
 export async function requireUser(request: Request = getRequest()): Promise<Session> {
   const session = await sessionOf(request)
   if (session) return session
-  if (request.headers.get('upgrade')?.toLowerCase() === 'websocket') throw Response.json({ error: 'Sign in to continue.', signIn: true }, { status: 401 })
   throw redirect({ href: `/auth/login?returnTo=${encodeURIComponent(returnPath(request))}` })
 }
 
