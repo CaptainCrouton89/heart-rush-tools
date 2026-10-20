@@ -226,6 +226,8 @@ export type ActionBody =
   /** Custom condition: `rowId` absent creates a row (needs `custom`); level 0 removes. */
   | { kind: 'condition:custom'; rowId?: string; custom?: CustomConditionFields; level: number | null; permanent?: boolean }
   | { kind: 'ability:use'; talentId: string }
+  /** Design D13: weekly and monthly abilities are reset by hand (the app tracks no calendar). Clears `usedThisPeriod`. */
+  | { kind: 'ability:reset'; talentId: string }
   | { kind: 'rush:set' | 'dp:set' | 'round:set'; value: number }
   | { kind: 'heartDie:spend'; effect: 'endure' | 'focus' | 'surge' }
   | { kind: 'heartDie:set'; value: HeartDie }

@@ -21,6 +21,7 @@ export function describeAction(a: Action): string {
     case 'condition:set': return a.level === 0 ? 'Removed a condition' : 'Changed a condition'
     case 'condition:custom': return a.level === 0 ? 'Removed a condition' : 'Changed a custom condition'
     case 'ability:use': return 'Used an ability'
+    case 'ability:reset': return 'Reset an ability'
     case 'rush:set': return `Rush points set to ${a.value}`
     case 'dp:set': return `DP set to ${a.value}`
     case 'round:set': return `Round set to ${a.value}`

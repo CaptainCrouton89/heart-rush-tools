@@ -130,6 +130,7 @@ function bodies(c: Character): Array<fc.Arbitrary<Body>> {
     fc.tuple(int(1, 5), ability).map(([level, a]) => ({ kind: 'condition:custom', custom: { name: 'Hexed', affects: [a] }, level })),
     fc.tuple(idOf(customRows), int(0, 5), fc.boolean()).map(([rowId, level, permanent]) => ({ kind: 'condition:custom', rowId, level, permanent })),
     idOf(c.talents).map(talentId => ({ kind: 'ability:use', talentId })),
+    idOf(c.talents).map(talentId => ({ kind: 'ability:reset', talentId })),
     int(0, 10).map(value => ({ kind: 'rush:set', value })),
     int(-2, 12).map(value => ({ kind: 'dp:set', value })),
     int(1, 9).map(value => ({ kind: 'round:set', value })),
@@ -188,7 +189,7 @@ const actionFor = (c: Character, id: string): fc.Arbitrary<ClientAction> => fc.o
 /** Every client action kind; adding a kind to the union fails the build here until a generator covers it. */
 const ALL_KINDS: Record<Body['kind'], true> = {
   'damage': true, 'heal': true, 'setHp': true, 'wound:add': true, 'wound:edit': true, 'wound:remove': true, 'wound:treat': true,
-  'condition:set': true, 'condition:custom': true, 'ability:use': true, 'rush:set': true, 'dp:set': true, 'round:set': true,
+  'condition:set': true, 'condition:custom': true, 'ability:use': true, 'ability:reset': true, 'rush:set': true, 'dp:set': true, 'round:set': true,
   'heartDie:spend': true, 'heartDie:set': true, 'nextRound': true, 'endFight': true, 'shortRest': true, 'longRest': true, 'startSession': true,
   'xp:award': true, 'xp:buy': true, 'bloodmark:award': true, 'bloodmark:pick': true,
   'gear:weapon:add': true, 'gear:weapon:edit': true, 'gear:weapon:remove': true, 'gear:wield': true, 'gear:armor:set': true,

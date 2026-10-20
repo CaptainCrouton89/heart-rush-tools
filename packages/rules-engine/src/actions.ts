@@ -32,6 +32,7 @@ function reduce(c: Character, a: ClientAction, catalogue: ActionCatalogue): Char
     case 'condition:set': return combat.conditionSet(c, a)
     case 'condition:custom': return combat.conditionCustom(c, a)
     case 'ability:use': return combat.abilityUse(c, a)
+    case 'ability:reset': return combat.abilityReset(c, a)
     // The combat reducers type these three by the literal kind, so the shared-union action is re-tagged.
     case 'rush:set': return combat.rushSet(c, { ...a, kind: 'rush:set' })
     case 'dp:set': return combat.dpSet(c, { ...a, kind: 'dp:set' })

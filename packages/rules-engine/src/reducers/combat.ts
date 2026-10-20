@@ -109,6 +109,13 @@ export function abilityUse(c: Character, a: Of<'ability:use'>): Character {
   if (t.usedThisPeriod) throw new RuleError('bad_action', 'Ability already used this period')
   return { ...c, talents: c.talents.map(row => row.id === t.id ? { ...row, usedThisPeriod: true } : row) }
 }
+export function abilityReset(c: Character, a: Of<'ability:reset'>): Character {
+  const t = c.talents.find(t => t.id === a.talentId)
+  if (!t) throw new RuleError('not_found')
+  if (t.frequency === 'minor' || t.frequency === 'passive') throw new RuleError('bad_action', 'Only a major, weekly or monthly ability is reset')
+  if (!t.usedThisPeriod) throw new RuleError('bad_action', 'Ability is not used')
+  return { ...c, talents: c.talents.map(row => row.id === t.id ? { ...row, usedThisPeriod: false } : row) }
+}
 export function rushSet(c: Character, a: Of<'rush:set'>): Character {
   integer(a.value, 0)
   return updatePlay(c, { rushPoints: a.value })

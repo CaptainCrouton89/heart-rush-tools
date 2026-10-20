@@ -301,6 +301,16 @@ describe('criterion 12: ability:use, endFight, long rest reset', () => {
     refuses('bad_action', () => r.abilityUse(makeCharacter({ talents: [talent({ frequency: 'passive' })] }), act({ kind: 'ability:use', talentId: 't1' })))
     refuses('not_found', () => r.abilityUse(makeCharacter(), act({ kind: 'ability:use', talentId: 'zz' })))
   })
+  test('ability:reset clears usedThisPeriod on a used major, weekly or monthly ability (design D13)', () => {
+    for (const frequency of ['major', 'weekly', 'monthly'] as const) {
+      const c = makeCharacter({ talents: [talent({ frequency, usedThisPeriod: true })] })
+      assert.equal(r.abilityReset(c, act({ kind: 'ability:reset', talentId: 't1' })).talents[0]!.usedThisPeriod, false)
+    }
+    refuses('bad_action', () => r.abilityReset(makeCharacter({ talents: [talent({ frequency: 'weekly' })] }), act({ kind: 'ability:reset', talentId: 't1' })))
+    refuses('bad_action', () => r.abilityReset(makeCharacter({ talents: [talent({ frequency: 'minor', usedThisPeriod: true })] }), act({ kind: 'ability:reset', talentId: 't1' })))
+    refuses('bad_action', () => r.abilityReset(makeCharacter({ talents: [talent({ frequency: 'passive', usedThisPeriod: true })] }), act({ kind: 'ability:reset', talentId: 't1' })))
+    refuses('not_found', () => r.abilityReset(makeCharacter(), act({ kind: 'ability:reset', talentId: 'zz' })))
+  })
   test('endFight → rush 0, uses 0, round 1, staminaSpentRound null; usedThisPeriod is kept', () => {
     const c = withPlay(makeCharacter({ talents: [talent({ usesThisFight: 3, usedThisPeriod: true }), talent({ id: 't2', usesThisFight: 1 })] }), { rushPoints: 4, round: 6, staminaSpentRound: 6 })
     const after = r.endFight(c, act({ kind: 'endFight' }))
@@ -383,7 +393,7 @@ describe('purity', () => {
     const c = deepFreeze(withPlay(makeCharacter({
       wounds: [{ id: 'w', rank: 3, description: '', treated: false, takenAt: AT }],
       conditions: [condition(CONDITION.weakened, 2, { id: 'k' })],
-      talents: [talent(), talent({ id: 'maj', frequency: 'major' })],
+      talents: [talent(), talent({ id: 'maj', frequency: 'major' }), talent({ id: 'wk', frequency: 'weekly', usedThisPeriod: true })],
       hp: { baseMax: 40, current: 20, heartDieCurrent: 8 },
     }), { rushPoints: 5, dp: 2 }))
     const calls: Array<() => Character> = [
@@ -398,6 +408,7 @@ describe('purity', () => {
       () => r.conditionCustom(c, act({ kind: 'condition:custom', custom: { name: 'X', affects: [] }, level: 1 })),
       () => r.abilityUse(c, act({ kind: 'ability:use', talentId: 't1' })),
       () => r.abilityUse(c, act({ kind: 'ability:use', talentId: 'maj' })),
+      () => r.abilityReset(c, act({ kind: 'ability:reset', talentId: 'wk' })),
       () => r.rushSet(c, act({ kind: 'rush:set', value: 1 })),
       () => r.dpSet(c, act({ kind: 'dp:set', value: 9 })),
       () => r.roundSet(c, act({ kind: 'round:set', value: 3 })),
