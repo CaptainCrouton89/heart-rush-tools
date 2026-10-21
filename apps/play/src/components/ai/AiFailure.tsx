@@ -7,28 +7,29 @@ import type { AiFailure as AiFailureReason, AiRefusal } from '~/server/ai'
 /** Why a call gave no result: a run that ended without one, a refusal from the server, or no answer at all. */
 export type AiProblem = { kind: 'failed'; reason: AiFailureReason } | AiRefusal | { kind: 'unreachable' }
 
-const FAILED: Record<AiFailureReason, string> = {
-  declined: 'your Northlight runtime declined the request',
-  deadline_exceeded: 'no answer within 60 seconds',
-  runtime_error: 'the AI run failed',
-  not_connected: 'your Northlight connection has ended',
+const FAILED: Record<AiFailureReason, (deadline: string) => string> = {
+  declined: () => 'your Northlight runtime declined the request',
+  deadline_exceeded: (deadline) => `no answer within ${deadline}`,
+  runtime_error: () => 'the AI run failed',
+  not_connected: () => 'your Northlight connection has ended',
 }
 
-export function problemText(p: AiProblem): string {
-  if (p.kind === 'failed') return FAILED[p.reason]
+/** `deadline` is how long the run had, in words: 60 seconds for `runAi`, 15 minutes for the creation assistant. */
+export function problemText(p: AiProblem, deadline = '60 seconds'): string {
+  if (p.kind === 'failed') return FAILED[p.reason](deadline)
   if (p.kind === 'unreachable') return 'no connection to the server'
   const m = p.message.trim().replace(/\.$/, '')
   return m.charAt(0).toLowerCase() + m.slice(1)
 }
 
-/** `verb` starts the line: "Couldn't explain: …". */
-export function AiFailureLine({ problem, verb, onRetry }: { problem: AiProblem; verb: string; onRetry: () => void }) {
+/** `verb` starts the line: "Couldn't explain: …". `deadline` words the run's time limit (default "60 seconds"). */
+export function AiFailureLine({ problem, verb, onRetry, deadline }: { problem: AiProblem; verb: string; onRetry: () => void; deadline?: string }) {
   const { pathname, searchStr } = useLocation()
   const signIn = problem.kind === 'failed' && problem.reason === 'not_connected'
   return (
     <div role="alert" className="flex flex-wrap items-center gap-x-3 gap-y-1">
       <p className="min-w-0 flex-1 text-ui text-muted-foreground">
-        Couldn't {verb}: {problemText(problem)}.
+        Couldn't {verb}: {problemText(problem, deadline)}.
       </p>
       {signIn ? (
         <Button size="compact" asChild variant="line">
