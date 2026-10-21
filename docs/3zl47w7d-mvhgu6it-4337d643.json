@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-21T02:01:09.509Z",
+  "deleted_at": null,
+  "extensions": null,
+  "id": "3zl47w7d-mvhgu6it-4337d643",
+  "kind": "knowledge",
+  "lint_ignore": null,
+  "name": "dev/shared-checkout",
+  "preview": "When you are about to commit, push, stash, reset or deploy in heart-rush-tools, read this because several agents work in the same checkout at once and a broad git command takes or destroys their uncommitted work.",
+  "privacy": "public",
+  "revisions": [
+    {
+      "author": "3zl47w7d-mvhfwmuj-a16b6656",
+      "body": "# Committing and deploying from the shared checkout\n\nSeveral nodes edit `/Users/silasrhyneer/Code/heart-rush-tools` at the same time, on `main`. The uncommitted changes in `git status` are mostly not yours.\n\n## Committing\n\n- Commit only the files you changed: `git commit --only <path> <path> … --no-verify -m \"…\"`. `--only` commits those paths and leaves everything else in the index and working tree as it was.\n- Never `git add -A`, `git add .`, `git commit -a`, `git stash`, `git reset --hard`, `git checkout -- <file>` or `git restore` on files you did not write. Each of these commits, hides or deletes another agent's work.\n- `--no-verify` is used because the `.husky/pre-commit` hook runs `pnpm -r --workspace-concurrency=1 build` across the whole workspace, which takes minutes and fails on other agents' half-finished files. Run the checks for the packages you touched yourself instead (typecheck, that package's tests — see [[heart-rush-tools/dev/shared-machine]] before running play's).\n\n## When local main is behind origin\n\nDo not pull or rebase in the shared checkout; it rewrites the working tree under other agents. Instead:\n\n1. `git worktree add /tmp/<name> origin/main`, then `git cherry-pick <your commits>` there and resolve any conflict there.\n2. Back in the shared checkout, `git reset --keep origin/main` once your commits are on origin (or `git reset --keep <the rebuilt commit>`). `--keep` moves the branch but refuses to touch a file with uncommitted changes, so other agents' edits survive.\n3. Remove the temporary worktree.\n\n## Pushing and deploying\n\n- Push with `git push --no-verify origin main`. A push to `main` deploys: `.github/workflows/deploy.yml` deploys each Worker whose inputs changed since its `deployed/<app>` tag, and play's own deploy script runs its tests, migrations and preview checks before promoting.\n- Check the run: `gh run list --limit 1` for the id, then `gh run watch <id> --exit-status`. Report a failed run with its log, not as done.\n- `crtr github watch-run` returns not_found for this repo's runs (crouter#324); use `gh` until that is fixed.\n",
+      "body_hash": "35765a56b7b228f7129a183f9040ab72d256201d6af50ab1751108fd6c234b06",
+      "created_at": "2026-10-21T02:01:09.510Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvhgtt7a-1f69ddb8",
+          "written_as": "heart-rush-tools/dev/shared-machine"
+        }
+      ],
+      "number": 1,
+      "parents": [],
+      "rationale": null,
+      "rev_id": "d887fe04-f0a4-4336-a56e-1e5ad5845dcf"
+    }
+  ],
+  "rules": [
+    {
+      "deliver": "content",
+      "if": null,
+      "match": [
+        "git commit *",
+        "git push *",
+        "git stash",
+        "git stash *",
+        "git reset *",
+        "git add -A",
+        "git add -A *",
+        "git add .",
+        "git checkout *",
+        "git restore *"
+      ],
+      "match_frontmatter": null,
+      "on": "pre-command",
+      "position": 0
+    }
+  ],
+  "summary": "Commit only your paths with --no-verify; never add -A, stash, reset --hard or checkout others' files; push to main deploys via CI.",
+  "unlisted": false,
+  "why_it_exists": "Concurrent nodes share one checkout of main; a stash, add -A or reset by one agent would commit or wipe another agent's in-progress files."
+}
