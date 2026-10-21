@@ -36,16 +36,54 @@ test('24: Explain an ability on the sheet → Summary, When to use, Cost, Exampl
 })
 
 test('24: Explain an aspect (builder step 5) → Summary, Spend DP on it when, Earn DP from it when, Example', async ({ page }) => {
-  // The aspect explainer is offered in the builder; the V1 draft from builder.spec.ts is still in the builder.
+  // The aspect explainer is offered in the builder, and step 5 opens only once kin, vitals and professions are done.
+  // Open an unfinished V1 draft (only a draft says "Continue"), or make one when a run on fresh data has none
+  // (builder.spec.ts finishes V1 Hero itself), then take it as far as step 5 and leave it there for the next run.
   await page.goto(`${PLAY}/characters`)
-  // Only an unfinished draft says "Continue"; builder.spec.ts re-runs finish characters named "V1 Hero draft".
   const draft = page.getByRole('link', { name: /^V1 Hero.* Continue Draft$/ }).first()
-  await expect(draft, 'a V1 draft character in the builder').toBeVisible()
-  await draft.click()
-  await page.waitForURL(/\/build/)
+  if ((await draft.count()) > 0) {
+    await draft.click()
+  } else {
+    await page.goto(`${PLAY}/characters/new`)
+    await page.waitForLoadState('networkidle')
+    await page.getByRole('textbox', { name: 'Name' }).fill('V1 Hero draft')
+    await page.getByRole('textbox', { name: 'Dream' }).fill('To be explained')
+    await page.getByRole('button', { name: 'Continue' }).click()
+  }
+  await page.waitForURL(/\/characters\/[0-9A-Z]{26}\/build/)
   await page.waitForLoadState('networkidle').catch(() => {}) // a step click before hydration does nothing
+  const next = page.getByRole('button', { name: 'Continue' })
+  const aspectsStep = page.getByRole('button', { name: '5 Aspects' })
+  if (await page.getByRole('button', { name: '3 Vitals' }).isDisabled()) {
+    await page.getByRole('searchbox', { name: 'Race' }).fill('Centaur')
+    await page.getByRole('button', { name: /^Centaur / }).click()
+    await next.click()
+  }
+  if (await aspectsStep.isDisabled()) {
+    await page.getByRole('button', { name: '3 Vitals' }).click()
+    for (const [ability, die] of [['Might', 'd6'], ['Agility', 'd6'], ['Cunning', 'd4'], ['Presence', 'd4']]) {
+      await page.getByRole('radiogroup', { name: ability }).getByRole('radio', { name: die }).click()
+    }
+    await next.click()
+  }
+  if (await aspectsStep.isDisabled()) {
+    await page.getByRole('button', { name: '4 Professions' }).click()
+    if ((await page.getByRole('textbox', { name: 'Profession 1' }).count()) === 0) await page.getByRole('button', { name: 'Add a profession' }).click()
+    await page.getByRole('textbox', { name: 'Profession 1' }).fill('Smith')
+    const smithMore = page.getByRole('group', { name: 'Smith rank' }).getByRole('button', { name: 'One rank more' })
+    await smithMore.click()
+    await smithMore.click()
+    await page.getByRole('button', { name: 'Add a profession' }).click()
+    await page.getByRole('textbox', { name: 'Profession 2' }).fill('Cook')
+    await expect(page.getByText('0 of 4 ranks left')).toBeVisible()
+  }
   await page.getByRole('button', { name: '5 Aspects' }).click()
   await expect(page.getByRole('heading', { name: '5. Aspects', level: 1 })).toBeVisible()
+  // The Explain buttons appear once the draft is complete enough to build a character, i.e. both written aspects are saved.
+  for (const [i, text] of [['1', 'Chronic insomniac'], ['2', 'Owes the ferryman a favour']]) {
+    const field = page.getByRole('textbox', { name: `Aspect ${i}` })
+    if ((await field.inputValue()) === '') await field.fill(text)
+  }
   await page.getByRole('button', { name: 'Explain the aspect Fury of the herd' }).click()
   const popover = page.getByRole('dialog').filter({ hasText: 'Explain · “Fury of the herd”' })
   await expect(popover.getByRole('definition').first()).toBeVisible({ timeout: AI_TIMEOUT })
