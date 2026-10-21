@@ -19,6 +19,24 @@
       "parents": [],
       "rationale": null,
       "rev_id": "923d30f5-ca57-4f8a-a1b7-a3ca78cfab80"
+    },
+    {
+      "author": "3zl47w7d-mvhfwmuj-a16b6656",
+      "body": "# Tests and dev servers on Silas's Mac\n\nSeveral agents and Silas share one machine. A test run or dev server that leaks processes or sockets breaks his browser and other apps, not just your work.\n\n## Play's test suite\n\n`apps/play`'s `test` script runs `tsx --test --test-concurrency=1 test/*.test.ts` on purpose. Each test file opens its own workerd through wrangler's `getPlatformProxy()` (`apps/play/test/db.ts`), and miniflare's proxy to workerd uses an undici connection pool with no cap. Under CPU contention that pool runs away: one workerd reached 25,000 ESTABLISHED loopback sockets, and 16 workerds in parallel used up the Mac's whole ephemeral port range (49152–65535). Every other program that opens a connection then fails — the browser, 1Password, GitHub.\n\n- Never raise `--test-concurrency` or drop it, and never run test files in parallel by hand.\n- Never run two suites at the same time (play twice, or play beside another app's suite), and never start one while another heavy run — a full `pnpm build`, a Playwright run, another agent's suite — is going. Check with `pgrep -fl workerd` and `pgrep -fl \"tsx --test\"` first.\n- A failure containing `EADDRNOTAVAIL` means the port range is used up. Stop every workerd you started, wait for the sockets to drain (`netstat -an -p tcp | grep -c ESTABLISHED` falls back to the low hundreds), then run once, alone.\n- Observed with wrangler 4.151.2, workerd 1.20261019.1 and miniflare 5.20261019.0-beta. A newer version is not a reason to raise the concurrency without measuring sockets during a full run.\n\nOther suites: `packages/rules-engine` and `packages/northlight` have `test` scripts (plain `tsx --test`, no workerd). `apps/tools` and `apps/rules` have no test directory. Play's `test` script first runs `pnpm --filter @heartrush/content build` and `wrangler types`; see [[heart-rush-tools/play/content-catalogue]] for why that order matters.\n\n## Dev servers\n\n- Before starting one, run `pgrep -fl \"vite dev\"` and `crtr dev service status`. Reuse a server that is already serving your checkout instead of starting a second one.\n- One dev server per agent. Port 3912 (play's source port) is Silas's own; never start on it, never kill what is on it. Pick a free port.\n- Before you finish — `push final` or yielding — kill every `vite dev` you started, the workerd it spawned, and any browser you launched with `crtr capture tab launch` (`crtr capture tab quit`). A finished node's server keeps running and holding ports and memory until someone notices.\n",
+      "body_hash": "bd7383f820ebb09913a5c2cab9f9484bdf6bf04f5864ff50c2a5986c48836d78",
+      "created_at": "2026-10-21T02:03:49.440Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvhguygm-8ae24d6e",
+          "written_as": "heart-rush-tools/play/content-catalogue"
+        }
+      ],
+      "number": 2,
+      "parents": [
+        "923d30f5-ca57-4f8a-a1b7-a3ca78cfab80"
+      ],
+      "rationale": "Name the content build step concretely and re-resolve the catalogue link written before its target existed",
+      "rev_id": "76cad39f-bd43-42c8-8560-f1c06bb47f96"
     }
   ],
   "rules": [
