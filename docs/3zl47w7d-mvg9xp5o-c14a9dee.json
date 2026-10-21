@@ -78,6 +78,64 @@
       ],
       "rationale": "The concurrent approved TanStack rebuild replaced the root workspace; do not steer its agents toward preserving the old app.",
       "rev_id": "411b0895-c04a-48ef-8f94-117a181ce938"
+    },
+    {
+      "author": "3zl47w7d-mvhfwmuj-a16b6656",
+      "body": "# Heart Rush workspace\n\nThis repo contains the Heart Rush rule sources, GM content, and Alaria world wiki. The web workspace has TanStack Start apps under `apps/rules`, `apps/tools`, and `apps/play`, with shared packages; the old root Next.js app is being replaced, not preserved.\n\n- For local development or isolation, read [[heart-rush/dev]]; use the development CLI's live help rather than hardcoding ports.\n- Several agents share this machine and checkout. Before running tests or a dev server read [[heart-rush-tools/dev/shared-machine]] (play's suite can exhaust the Mac's ports); before any commit, push, stash or reset read [[heart-rush-tools/dev/shared-checkout]]; to check a change signed in, read [[heart-rush-tools/dev/acting-as-silas]].\n- Before designing a play feature from a rule, read [[heart-rush-tools/authoring/play-features]]; for play's compiled catalogue read [[heart-rush-tools/play/content-catalogue]]; for AI features that start Northlight runs read [[heart-rush-tools/play/northlight-runs]].\n- Before editing rules, races, talents, or spells, read [[heart-rush-tools/authoring/rules]] because Heart Rush is not D&D and has its own mechanics and balance references.\n- Before changing Alaria lore or geography, read [[heart-rush-tools/authoring/alaria]] and [[heart-rush-tools/authoring/atlas]] because content placement and regional consolidation are deliberate.\n- Before editing combined Markdown or migrating the content compiler, read [[heart-rush-tools/content-pipeline]] because generated books can overwrite hand edits and the old navigation's omissions do not hide books.\n\nPreserve the Markdown sources and race images. The old app's routes, provider arrangement, navigation UI, maps UI, and PDF implementation are not requirements for the new apps. Use the package scripts and live CLI help belonging to the current workspace rather than assuming the old Next.js commands still apply.\n",
+      "body_hash": "db385b7cc3ef0974b4297911f8e83eb38c1d68de432ea9bea14cf7fa588511dc",
+      "created_at": "2026-10-21T02:02:55.214Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvg9x1wm-86bbf0a0",
+          "written_as": "heart-rush-tools/authoring/alaria"
+        },
+        {
+          "dst": "3zl47w7d-mvg9x2zs-d28e14c8",
+          "written_as": "heart-rush-tools/authoring/atlas"
+        },
+        {
+          "dst": "3zl47w7d-mvhgvy2k-52f4b3b4",
+          "written_as": "heart-rush-tools/authoring/play-features"
+        },
+        {
+          "dst": "3zl47w7d-mvg9vhna-b16e9207",
+          "written_as": "heart-rush-tools/authoring/rules"
+        },
+        {
+          "dst": "3zl47w7d-mvg9vhf4-ba856437",
+          "written_as": "heart-rush-tools/content-pipeline"
+        },
+        {
+          "dst": "3zl47w7d-mvhguin0-3b9de5e4",
+          "written_as": "heart-rush-tools/dev/acting-as-silas"
+        },
+        {
+          "dst": "3zl47w7d-mvhgu6it-4337d643",
+          "written_as": "heart-rush-tools/dev/shared-checkout"
+        },
+        {
+          "dst": "3zl47w7d-mvhgtt7a-1f69ddb8",
+          "written_as": "heart-rush-tools/dev/shared-machine"
+        },
+        {
+          "dst": "3zl47w7d-mvhguygm-8ae24d6e",
+          "written_as": "heart-rush-tools/play/content-catalogue"
+        },
+        {
+          "dst": "3zl47w7d-mvhgveqw-d860f889",
+          "written_as": "heart-rush-tools/play/northlight-runs"
+        },
+        {
+          "dst": "3zl47w7d-mvg9xozh-88676115",
+          "written_as": "heart-rush/dev"
+        }
+      ],
+      "number": 3,
+      "parents": [
+        "411b0895-c04a-48ef-8f94-117a181ce938"
+      ],
+      "rationale": "Route agents to the shared-machine, shared-checkout, browser-check, play catalogue, Northlight run and play-feature guidance",
+      "rev_id": "54669596-5193-4a19-b30e-ccda9ac5a5f9"
     }
   ],
   "rules": [
