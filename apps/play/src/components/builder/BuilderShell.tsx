@@ -1,6 +1,9 @@
-import { useEffect, useRef, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Alert, AlertDescription, AlertTitle } from '@heartrush/ui/components/alert'
 import { Button } from '@heartrush/ui/components/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@heartrush/ui/components/tabs'
+import { cn } from '@heartrush/ui/lib/utils'
+import type { AssistantShowing } from '~/components/assistant/use-assistant'
 import { describeAction } from '~/components/sheet/HistoryList'
 import { refusalReason } from '~/components/sheet/refusal-text'
 import { FinishBar } from './FinishBar'
@@ -12,7 +15,7 @@ import { StepKin } from './StepKin'
 import { StepProfessions } from './StepProfessions'
 import { StepTalents } from './StepTalents'
 import { StepVitals } from './StepVitals'
-import { STEPS, reachableStep, stepProblems, type StepNumber } from './draft-rules'
+import { STEPS, stepProblems, type StepNumber } from './draft-rules'
 import type { SaveStatus, UseDraft } from './use-draft'
 
 const STATUS_TEXT: Record<Exclude<SaveStatus['kind'], 'failed'>, string> = { saved: 'Draft saved', saving: 'Saving…', unsaved: 'Saving…' }
@@ -22,17 +25,49 @@ const STATUS_TEXT: Record<Exclude<SaveStatus['kind'], 'failed'>, string> = { sav
  * has problems, which are listed), the draft's save status, and the pending step 6–7 actions the rules now refuse
  * (ruling 8) with a Remove for each. Step 7 ends with Finish instead of Continue. A navigation away from the builder
  * that is held because the last changes did not save asks, in place, whether to stay or leave without them.
+ *
+ * `applied` counts the assistant's Applies on this page. Once the builder is `visible` after one, the step it moved to
+ * is written in with the restyle's write-in motion (`.written.fresh`), the only motion the assistant adds.
  */
-export function BuilderShell({ draft, step, onStep }: { draft: UseDraft; step: StepNumber; onStep: (step: StepNumber) => void }) {
-  const reachable = reachableStep(draft.builder)
+export function BuilderShell({
+  draft,
+  step,
+  onStep,
+  applied = 0,
+  visible = true,
+}: {
+  draft: UseDraft
+  step: StepNumber
+  onStep: (step: StepNumber) => void
+  applied?: number
+  visible?: boolean
+}) {
   const problems = stepProblems(step, draft.builder)
+  const root = useRef<HTMLDivElement>(null)
   const heading = useRef<HTMLHeadingElement>(null)
   const first = useRef(true)
   useEffect(() => {
-    // Moving between steps moves focus to the new step's heading (not on the first render).
+    // Moving between steps moves focus to the new step's heading (not on the first render, and not when the step was
+    // moved from the assistant's column while focus is there: it stays in the chat).
     if (first.current) first.current = false
-    else heading.current?.focus()
+    else {
+      const active = document.activeElement
+      if (!active || active === document.body || root.current?.contains(active)) heading.current?.focus()
+    }
   }, [step])
+  // The Applies already written in. On phone an Apply happens while the Builder tab is hidden, so it is written in
+  // when the tab is next shown, not while nobody can see it.
+  const [written, setWritten] = useState(applied)
+  if (visible && written !== applied) setWritten(applied)
+  // The write-in class is taken off and put back a frame later, so a second Apply plays it again without remounting
+  // the step (which would lose a step's own state, such as a search box).
+  const [fresh, setFresh] = useState(false)
+  useEffect(() => {
+    if (written === 0) return
+    setFresh(false)
+    const frame = requestAnimationFrame(() => setFresh(true))
+    return () => cancelAnimationFrame(frame)
+  }, [written])
 
   const go = (next: StepNumber) => {
     void draft.flush()
@@ -65,20 +100,25 @@ export function BuilderShell({ draft, step, onStep }: { draft: UseDraft; step: S
   }
 
   return (
-    <div className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-5 pt-6 md:px-8 md:pt-10">
+    <div ref={root} className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-5 pt-6 md:px-8 md:pt-10">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <p className="eyebrow">{draft.builder.name.trim() || 'New character'}</p>
         <SaveLine status={draft.status} onRetry={() => void draft.flush()} />
       </div>
       <Leaving draft={draft} />
-      <StepBar step={step} reachable={reachable} onStep={go} />
+      <StepBar step={step} builder={draft.builder} pending={draft.pending} onStep={go} />
       <h1 ref={heading} tabIndex={-1} className="font-serif text-h1-sm font-semibold outline-none md:text-h1">
         {step}. {STEPS[step - 1]}
       </h1>
 
       <InvalidPending draft={draft} />
 
-      {body}
+      <div
+        className={cn(fresh && 'written fresh block')}
+        onAnimationEnd={(e) => e.target === e.currentTarget && e.animationName === 'settle' && setFresh(false)}
+      >
+        {body}
+      </div>
 
       <div className="flex flex-col gap-3 border-t border-border pt-4">
         {problems.length > 0 && (
@@ -176,5 +216,100 @@ function InvalidPending({ draft }: { draft: UseDraft }) {
         </ul>
       </AlertDescription>
     </Alert>
+  )
+}
+
+// ---- The page: builder beside the creation assistant ----------------------------------------------
+
+/** Which side the phone layout shows: the `panel` search parameter of both builder routes. */
+export type Panel = 'builder' | 'assistant'
+
+/** `?panel=`: `assistant`, else the default (the builder), which the URL leaves out. */
+export const toPanel = (value: unknown): Panel | undefined => (value === 'assistant' ? 'assistant' : undefined)
+
+const DESKTOP = '(min-width: 1024px)'
+
+/** True at 1024 px and wider, where builder and assistant are side by side. */
+export function useDesktop(): boolean {
+  // False until mounted, so the first client render matches the server's.
+  const [desktop, setDesktop] = useState(false)
+  useEffect(() => {
+    const query = window.matchMedia(DESKTOP)
+    const onChange = () => setDesktop(query.matches)
+    onChange()
+    query.addEventListener('change', onChange)
+    return () => query.removeEventListener('change', onChange)
+  }, [])
+  return desktop
+}
+
+/** What the assistant hook is told is on screen. */
+export const showingOf = (desktop: boolean, panel: Panel): AssistantShowing => (desktop ? 'both' : panel)
+
+// Phone: one pane at a time. Desktop: both, whatever the tab says (the SheetLayout pattern).
+const PANE = 'data-[state=inactive]:hidden lg:data-[state=inactive]:flex'
+
+/**
+ * The builder page (design "Builder layout"). At 1024 px and wider: the builder on the left and the assistant in a
+ * 400 px column on the right, sticky under the site header, scrolling on its own with its composer at the bottom.
+ * Narrower: the tabs **Builder** and **Assistant** under the header, `panel` choosing the open one, and a dot on a
+ * tab that has something new (`unread`).
+ */
+export function BuilderLayout({
+  panel,
+  onPanel,
+  unread,
+  builder,
+  assistant,
+}: {
+  panel: Panel
+  onPanel: (panel: Panel) => void
+  unread: { builder: boolean; assistant: boolean }
+  builder: ReactNode
+  assistant: ReactNode
+}) {
+  return (
+    <Tabs
+      value={panel}
+      onValueChange={(v) => onPanel(v === 'assistant' ? 'assistant' : 'builder')}
+      // Desktop: the page's bottom padding moves inside the grid, so the sticky column can stay under the header to the end.
+      className="mx-auto w-full max-w-6xl gap-0 lg:-mb-16 lg:grid lg:grid-cols-[minmax(0,1fr)_400px] lg:items-start"
+    >
+      <div className="sticky top-14 z-20 bg-background md:top-16 lg:hidden">
+        <TabsList aria-label="Builder or assistant" className="px-5 md:px-8">
+          <PaneTab value="builder" label="Builder" dot={unread.builder} dotText="changed by the assistant" />
+          <PaneTab value="assistant" label="Assistant" dot={unread.assistant} dotText="new reply" />
+        </TabsList>
+      </div>
+      <TabsContent value="builder" forceMount className={cn('flex min-w-0 flex-col lg:pb-16', PANE)}>
+        {builder}
+      </TabsContent>
+      <TabsContent
+        value="assistant"
+        forceMount
+        className={cn(
+          // Phone: the space under the header and tabs, so the composer sits at the bottom of the screen (the page's
+          // bottom padding is taken back). Desktop: the column's full height under the header.
+          'flex h-[calc(100dvh-6.25rem)] flex-col max-lg:-mb-16 md:h-[calc(100dvh-6.75rem)]',
+          'lg:sticky lg:top-16 lg:h-[calc(100dvh-4rem)] lg:border-l lg:border-border',
+          PANE,
+        )}
+      >
+        {assistant}
+      </TabsContent>
+    </Tabs>
+  )
+}
+
+function PaneTab({ value, label, dot, dotText }: { value: Panel; label: string; dot: boolean; dotText: string }) {
+  return (
+    <TabsTrigger value={value} className="flex-1">
+      {label}
+      {dot && (
+        <span className="size-2 rounded-full bg-primary">
+          <span className="sr-only">({dotText})</span>
+        </span>
+      )}
+    </TabsTrigger>
   )
 }

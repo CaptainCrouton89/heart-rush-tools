@@ -18,13 +18,14 @@ const isStep6 = (a: ClientAction) => a.kind === 'xp:buy' || a.kind === 'bloodmar
  * Step 6 (Talents): "You start with 0 talents and N XP", the talent catalogue with live prices from the draft's preview
  * character, Suggest talents in its header, and the bloodmark picks panel for level ≥ 1. Buying appends the stamped
  * `xp:buy` to the draft's pending list as it is (the draft keeps the catalogue's id and time; ruling 8); it becomes an
- * ordinary event at Finish. The list of what this step added, with Remove, sits above the catalogue.
+ * ordinary event at Finish. The list of what this step added, with Remove, sits above the catalogue. Before steps 1–5
+ * are finished (the assistant may add a talent first) the step works on the sketch character, so prices are this kin's.
  */
 export function StepTalents({ draft }: { draft: UseDraft }) {
   const { preview, pending, setPending } = draft
   const catalogue = getCatalogue()
   const buy = useCallback((action: XpBuyAction) => setPending((p) => [...p, action]), [setPending])
-  const character = preview.character
+  const character = preview.character ?? preview.sketch
 
   if (!character) {
     return <p className="text-ui text-muted-foreground">Finish steps 1–5 first; the talents you can buy depend on them.</p>
@@ -36,6 +37,7 @@ export function StepTalents({ draft }: { draft: UseDraft }) {
 
   return (
     <div className="flex flex-col gap-8">
+      {!preview.character && <SketchLine />}
       <p className="font-serif text-body-sm text-muted-foreground">
         You start with 0 talents and {awarded} XP. Spend some now or later.
       </p>
@@ -69,9 +71,15 @@ export function StepTalents({ draft }: { draft: UseDraft }) {
           character={character}
           catalogue={catalogue}
           onBuy={buy}
-          header={<SuggestTalents characterId={draft.id} character={character} catalogue={catalogue} onBuy={buy} />}
+          // Suggest talents reads the stored draft through previewDraft, which refuses an unfinished one.
+          header={preview.character && <SuggestTalents characterId={draft.id} character={character} catalogue={catalogue} onBuy={buy} />}
         />
       </Section>
     </div>
   )
+}
+
+/** Above step 6 or 7 while it works on the sketch character. */
+export function SketchLine() {
+  return <p className="text-ui text-muted-foreground">Steps 1–5 aren't finished; prices are for this kin.</p>
 }
