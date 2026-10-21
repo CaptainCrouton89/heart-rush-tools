@@ -24,6 +24,28 @@
       "parents": [],
       "rationale": null,
       "rev_id": "d887fe04-f0a4-4336-a56e-1e5ad5845dcf"
+    },
+    {
+      "author": "3zl47w7d-mvhfwmuj-a16b6656",
+      "body": "# Committing and deploying from the shared checkout\n\nSeveral nodes edit `/Users/silasrhyneer/Code/heart-rush-tools` at the same time, on `main`. The uncommitted changes in `git status` are mostly not yours.\n\n## Committing\n\n- Commit only the files you changed: `git commit --only <path> <path> … --no-verify -m \"…\"`. `--only` commits those paths and leaves everything else in the index and working tree as it was.\n- `--only` commits the whole current content of each path, so if another agent has uncommitted edits in a file you also changed, its lines land in your commit. Do not edit a file another running agent is editing; when it happens anyway, tell that agent its edits are now committed.\n- Never `git add -A`, `git add .`, `git commit -a`, `git stash`, `git reset --hard`, `git checkout -- <file>` or `git restore` on files you did not write. Each of these commits, hides or deletes another agent's work.\n- Never `git commit --amend`: HEAD may already be another agent's commit.\n- `--no-verify` is used because the `.husky/pre-commit` hook runs `pnpm -r --workspace-concurrency=1 build` across the whole workspace, which takes minutes and fails on other agents' half-finished files. Run the checks for the packages you touched yourself instead (typecheck, that package's tests — see [[heart-rush-tools/dev/shared-machine]] before running play's).\n\nThe general rules for concurrent checkouts are in [[git/avoid-destructive-in-concurrent-workspaces]]; this page is what they mean in this repo.\n\n## When local main is behind origin\n\nFirst check whether you are behind at all: `git fetch origin && git rev-list --left-right --count origin/main...HEAD`. If the left count is 0, push as below. Do not pull or rebase in the shared checkout; it rewrites the working tree under other agents. Instead:\n\n1. `git worktree add /tmp/<name> origin/main`, then `git cherry-pick <your commits>` there and resolve any conflict there.\n2. Back in the shared checkout, `git reset --keep origin/main` once your commits are on origin (or `git reset --keep <the rebuilt commit>`). `--keep` moves the branch but refuses to touch a file with uncommitted changes, so other agents' edits survive.\n3. Remove the temporary worktree.\n\n## Pushing and deploying\n\n- Push with `git push --no-verify origin main`. A push to `main` deploys: `.github/workflows/deploy.yml` deploys each Worker whose inputs changed since its `deployed/<app>` tag, and play's own deploy script runs its tests, migrations and preview checks before promoting.\n- Check the run: `gh run list --limit 1` for the id, then `gh run watch <id> --exit-status`. Report a failed run with its log, not as done.\n- `crtr github watch-run` returns not_found for this repo's runs (crouter#324); use `gh` until that is fixed.\n",
+      "body_hash": "6a5218c3dd5e8a5af9b34e87f3a49d270222b27dffaafdf57a2901e64791bc8c",
+      "created_at": "2026-10-21T02:03:31.062Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-muislbz1-14a20cc6",
+          "written_as": "git/avoid-destructive-in-concurrent-workspaces"
+        },
+        {
+          "dst": "3zl47w7d-mvhgtt7a-1f69ddb8",
+          "written_as": "heart-rush-tools/dev/shared-machine"
+        }
+      ],
+      "number": 2,
+      "parents": [
+        "d887fe04-f0a4-4336-a56e-1e5ad5845dcf"
+      ],
+      "rationale": "Note that a pathspec commit still takes another agent's edits in a shared file, and point at the general concurrent-git preference",
+      "rev_id": "7cdb533f-0349-4530-a71d-175b064b7ca3"
     }
   ],
   "rules": [
