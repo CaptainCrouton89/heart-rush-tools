@@ -136,6 +136,64 @@
       ],
       "rationale": "Route agents to the shared-machine, shared-checkout, browser-check, play catalogue, Northlight run and play-feature guidance",
       "rev_id": "54669596-5193-4a19-b30e-ccda9ac5a5f9"
+    },
+    {
+      "author": "3zl47w7d-mvhr88ly-6952560f",
+      "body": "# Heart Rush workspace\n\nThis repo contains the Heart Rush rule sources, GM content, and Alaria world wiki. The web workspace has TanStack Start apps under `apps/rules`, `apps/tools`, and `apps/play`, with shared packages; the old root Next.js app (and its scripts, Vercel project and git hooks) has been removed.\n\n- For local development or isolation, read [[heart-rush/dev]]; use the development CLI's live help rather than hardcoding ports.\n- Several agents share this machine and checkout. Before running tests or a dev server read [[heart-rush-tools/dev/shared-machine]] (play's suite can exhaust the Mac's ports); before any commit, push, stash or reset read [[heart-rush-tools/dev/shared-checkout]]; to check a change signed in, read [[heart-rush-tools/dev/acting-as-silas]].\n- Before designing a play feature from a rule, read [[heart-rush-tools/authoring/play-features]]; for play's compiled catalogue read [[heart-rush-tools/play/content-catalogue]]; for AI features that start Northlight runs read [[heart-rush-tools/play/northlight-runs]].\n- Before editing rules, races, talents, or spells, read [[heart-rush-tools/authoring/rules]] because Heart Rush is not D&D and has its own mechanics and balance references.\n- Before changing Alaria lore or geography, read [[heart-rush-tools/authoring/alaria]] and [[heart-rush-tools/authoring/atlas]] because content placement and regional consolidation are deliberate.\n- Before editing combined Markdown or migrating the content compiler, read [[heart-rush-tools/content-pipeline]] because generated books can overwrite hand edits and the old navigation's omissions do not hide books.\n\nPreserve the Markdown sources, the race images in `heart_rush/races/images/` and the Alaria map images in `heart_rush/maps/images/`. Use the package scripts and live CLI help belonging to the current workspace.\n",
+      "body_hash": "efac52e624ade44a647f45b0b15f0a5a3d92e4d6858636eafd572d45af9aac60",
+      "created_at": "2026-10-21T06:55:44.097Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvg9x1wm-86bbf0a0",
+          "written_as": "heart-rush-tools/authoring/alaria"
+        },
+        {
+          "dst": "3zl47w7d-mvg9x2zs-d28e14c8",
+          "written_as": "heart-rush-tools/authoring/atlas"
+        },
+        {
+          "dst": "3zl47w7d-mvhgvy2k-52f4b3b4",
+          "written_as": "heart-rush-tools/authoring/play-features"
+        },
+        {
+          "dst": "3zl47w7d-mvg9vhna-b16e9207",
+          "written_as": "heart-rush-tools/authoring/rules"
+        },
+        {
+          "dst": "3zl47w7d-mvg9vhf4-ba856437",
+          "written_as": "heart-rush-tools/content-pipeline"
+        },
+        {
+          "dst": "3zl47w7d-mvhguin0-3b9de5e4",
+          "written_as": "heart-rush-tools/dev/acting-as-silas"
+        },
+        {
+          "dst": "3zl47w7d-mvhgu6it-4337d643",
+          "written_as": "heart-rush-tools/dev/shared-checkout"
+        },
+        {
+          "dst": "3zl47w7d-mvhgtt7a-1f69ddb8",
+          "written_as": "heart-rush-tools/dev/shared-machine"
+        },
+        {
+          "dst": "3zl47w7d-mvhguygm-8ae24d6e",
+          "written_as": "heart-rush-tools/play/content-catalogue"
+        },
+        {
+          "dst": "3zl47w7d-mvhgveqw-d860f889",
+          "written_as": "heart-rush-tools/play/northlight-runs"
+        },
+        {
+          "dst": "3zl47w7d-mvg9xozh-88676115",
+          "written_as": "heart-rush/dev"
+        }
+      ],
+      "number": 4,
+      "parents": [
+        "54669596-5193-4a19-b30e-ccda9ac5a5f9"
+      ],
+      "rationale": "The old root Next.js app is removed, not being replaced",
+      "rev_id": "42c3c835-82f3-47b7-a101-c62fd5271e96"
     }
   ],
   "rules": [
