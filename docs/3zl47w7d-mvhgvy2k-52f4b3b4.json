@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-10-21T02:02:31.868Z",
+  "deleted_at": null,
+  "extensions": null,
+  "id": "3zl47w7d-mvhgvy2k-52f4b3b4",
+  "kind": "knowledge",
+  "lint_ignore": null,
+  "name": "authoring/play-features",
+  "preview": "When you are designing or building a play-time feature from a Heart Rush rule — a sheet control, a counter, a roll — read this because modelling the number without the rule's verbs ships a dead counter, and the app's recorded rulings override the rulebook where they conflict.",
+  "privacy": "public",
+  "revisions": [
+    {
+      "author": "3zl47w7d-mvhfwmuj-a16b6656",
+      "body": "# Building play features from the rules\n\nRead [[heart-rush-tools/authoring/rules]] and [[heart-rush/rules-map]] for where each rule lives. This page is about turning a rule into something a player uses at the table.\n\n## List the rule's verbs before designing\n\nThe sheet once shipped Destiny Points as a number with + and − buttons. The design had modelled the value without reading the rule that uses it: `Building_Your_Character.md` \"Using your Aspect For Bonuses\" (spend DP up to an aspect's rank to add that much to a check; only the highest applicable aspect counts) and \"Using your Aspect For Destiny Points\" (play against an aspect to gain DP equal to its rank). A player with that sheet still had to do the rule in their head.\n\nBefore designing any sheet feature:\n\n1. Open the rulebook section that governs it and read it whole, including the examples.\n2. List every verb it gives the player — spend, gain, roll, reroll, take a penalty, tick, shrink, heal — each with its numbers and limits (cost, cap, which value it reads, how often).\n3. Make each verb one tap with the number already computed from the sheet (for the example above: \"Spend 2 DP for +2\" next to a rank-2 aspect, \"Gain 2 DP\" beside it).\n4. Use a reminder line instead of a control only when the rule's input is not on the sheet (for example, GM approval that the aspect applies).\n\nPut the list of verbs in the design so a reviewer can check every one has a control.\n\n## Rulings of record win\n\nWhere the rulebook text conflicts with the app, the recorded rulings govern unless Silas changes them: the \"rules-of-record rulings\" table in [[3zl47w7d-mvgajm46-df94d588/play-site-design]] and the creation-time choice rules in [[3zl47w7d-mvg8jc6i-331ad30f/kin-choices-contract]]. Read the ruling before \"fixing\" the app to match the rulebook; if a ruling looks wrong, bring it to Silas rather than changing either side.\n",
+      "body_hash": "10e51ce517b067477aa8a6f8d2cddd30cbf04b5d0a26177b333da1c1c0f09524",
+      "created_at": "2026-10-21T02:02:31.868Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvgjo95d-ac0070c4",
+          "written_as": "3zl47w7d-mvg8jc6i-331ad30f/kin-choices-contract"
+        },
+        {
+          "dst": "3zl47w7d-mvgb1dny-a69edfdb",
+          "written_as": "3zl47w7d-mvgajm46-df94d588/play-site-design"
+        },
+        {
+          "dst": "3zl47w7d-mvg9vhna-b16e9207",
+          "written_as": "heart-rush-tools/authoring/rules"
+        },
+        {
+          "dst": "3zl47w7d-mvgchr1i-b6470c03",
+          "written_as": "heart-rush/rules-map"
+        }
+      ],
+      "number": 1,
+      "parents": [],
+      "rationale": null,
+      "rev_id": "baac258a-90f8-4165-8241-4f649e7146f5"
+    }
+  ],
+  "rules": [
+    {
+      "deliver": "preview",
+      "if": null,
+      "match": [
+        "**/apps/play/src/**/*.tsx",
+        "**/packages/rules-engine/src/**"
+      ],
+      "match_frontmatter": null,
+      "on": "file-read",
+      "position": 0
+    }
+  ],
+  "summary": "Before designing a sheet feature, list every verb its rule gives the player with numbers and make each one tap; rulings of record win over rulebook text.",
+  "unlisted": false,
+  "why_it_exists": "The play sheet shipped Destiny Points as a bare counter because the design modelled the number without reading 'Using your Aspect For Bonuses / For Destiny Points', which say how DP is spent and earned."
+}
