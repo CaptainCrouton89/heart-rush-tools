@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-21T02:02:06.824Z",
+  "deleted_at": null,
+  "extensions": null,
+  "id": "3zl47w7d-mvhgveqw-d860f889",
+  "kind": "knowledge",
+  "lint_ignore": null,
+  "name": "play/northlight-runs",
+  "preview": "When you add or change an AI feature in play or tools that starts a Northlight run, read this because the shared run helpers, the claim-row pattern for chats that outlive a request, and the limits of testing in dev are already worked out.",
+  "privacy": "public",
+  "revisions": [
+    {
+      "author": "3zl47w7d-mvhfwmuj-a16b6656",
+      "body": "# Northlight runs in play and tools\n\nThe AI features start a schema run on the signed-in person's own Northlight runtime. Use the helpers in `packages/northlight/src/runs.ts` (`@heartrush/northlight/runs`) rather than calling the SDK directly.\n\n## Helpers\n\n- `startRun(runtime, prompt, schema, deadline, signal?, tag?)` starts the run and returns its id before anything waits, so the caller can store the id and cancel later. (`runs.parse` starts and waits in one call and never exposes the id.)\n- `resultOf(settled, schema)` reads a settled run's result validated against the schema; it throws `RunCanceledError` for a cancelled run and an error naming the reason for a declined or failed one.\n- `needsSignIn(error)` is true when the error means the person's Northlight connection has ended (a refusal, or `not_connected`). Show sign-in again; do not report it as a server error.\n- `cancelRunConfirmed` throws when a cancel cannot be confirmed (a run that no longer exists counts as cancelled); `cancelRun` only logs.\n\n## Output schemas\n\n`runs.start` on the hosted runtime has been verified on a real run (about 29 s to settle) to accept zod schemas with a nullable object at the root, `z.literal([4, 6])` (a literal union), and unions inside arrays inside nullable objects. Shapes like these do not need flattening or a hand-written JSON Schema.\n\n## A chat that outlives one request\n\nThe play creation assistant (`apps/play/src/server/assistant.ts`) is the pattern to copy when a run must survive the request that started it — a tab reload, a second tab, a dropped connection:\n\n- Before starting, write a claim (a random token) to the chat's D1 row, and start the run with that claim in `tag.metadata.claim` and as the idempotency key.\n- Record the run id on the row once `startRun` returns. Any later reader that finds a claim with no run id (the starting request died) calls `findRunByClaim` and adopts that run, or releases the claim after a stale timeout.\n- Settle with an `UPDATE … WHERE claim = ?`, so whichever reader reaches the settled run first stores the turn and the other one sees it stored.\n\n## Testing\n\nUnit tests use a fake runtime (see `apps/play/test/assistant.test.ts`). The local dev user has no Northlight connection, so a dev server cannot produce a real reply. A real reply is only checked on the live host, signed in as Silas — see [[heart-rush-tools/dev/acting-as-silas]].\n",
+      "body_hash": "32ee03bf67512e599afb1487b1b5677257384d5cfa1031f25e0e93f35784ce8b",
+      "created_at": "2026-10-21T02:02:06.825Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvhguin0-3b9de5e4",
+          "written_as": "heart-rush-tools/dev/acting-as-silas"
+        }
+      ],
+      "number": 1,
+      "parents": [],
+      "rationale": null,
+      "rev_id": "a3126def-a370-437f-8d1e-fe4f56f7545a"
+    }
+  ],
+  "rules": [
+    {
+      "deliver": "preview",
+      "if": null,
+      "match": [
+        "**/packages/northlight/src/runs.ts",
+        "**/apps/play/src/server/ai.ts",
+        "**/apps/play/src/server/assistant.ts",
+        "**/apps/tools/src/server/runs.ts",
+        "**/apps/tools/src/server/encounters.ts"
+      ],
+      "match_frontmatter": null,
+      "on": "file-read",
+      "position": 0
+    }
+  ],
+  "summary": "Start runs with @heartrush/northlight/runs (startRun, resultOf, needsSignIn, findRunByClaim); output schemas that work; real replies only testable on the live host.",
+  "unlisted": false,
+  "why_it_exists": "Agents re-derived run lifecycle handling and guessed which zod schemas runs.start accepts, and tried to verify real AI replies on a dev server whose user has no Northlight connection."
+}
