@@ -65,4 +65,6 @@ export const conditions: ConditionCatalogue = indexById([
   entry('blinded', 'Blinded', { fading: true, situational: 'You have disadvantage on A/D and ability rolls requiring sight.' }),
   entry('aggravated', 'Aggravated', { ongoing: true, situational: 'You have disadvantage on A/D and ability rolls against any other creature besides the source of your aggravation.' }),
   entry('burning', 'Burning', { fading: true, situational: 'take 1d6 damage for each level of burning' }),
+  entry('suffocating', 'Suffocating', { leveled: false, ongoing: true }),
+  entry('unconscious', 'Unconscious', { leveled: false, ongoing: true }),
 ])

@@ -213,6 +213,9 @@ export type BoughtTalent = {
   attunementElement?: string
 }
 
+/** What Suffocating does at the end of a round (`Conditions.md` Suffocating). */
+export type SuffocationStep = { kind: 'drop'; from: HeartDie; to: HeartDie } | { kind: 'unconscious' } | { kind: 'damage'; amount: 10 }
+
 export type CustomConditionFields = { name: string; affects: AbilityId[] }
 
 export type ActionBody =
@@ -233,7 +236,12 @@ export type ActionBody =
   | { kind: 'rush:set' | 'dp:set' | 'round:set'; value: number }
   | { kind: 'heartDie:spend'; effect: 'endure' | 'focus' | 'surge' }
   | { kind: 'heartDie:set'; value: HeartDie }
-  | { kind: 'nextRound' }
+  /**
+   * Rush becomes the new round number (0 while Unconscious); fading conditions drop a level; Suffocating applies its round-end
+   * step. `suffocation` is that step as the client computed it (`suffocationStep`), stored so the history can name it; the
+   * reducer refuses a value that differs from the step it applies.
+   */
+  | { kind: 'nextRound'; suffocation?: SuffocationStep | null }
   | { kind: 'endFight' }
   | { kind: 'shortRest' }
   | { kind: 'longRest'; successful: true }
@@ -293,7 +301,7 @@ export type RuleErrorCode =
   | 'aspect_cap' | 'die_cap' | 'not_attuned' | 'insufficient_xp' | 'path_locked' | 'no_path' | 'tier_cap'
   // reducers
   | 'not_found' | 'invalid_amount' | 'not_enough_rush' | 'stamina_spent' | 'heart_die_floor' | 'heart_die_over_max'
-  | 'wrong_rolled_count' | 'bloodmark_not_owed' | 'not_ready' | 'not_enough_dp'
+  | 'wrong_rolled_count' | 'bloodmark_not_owed' | 'not_ready' | 'not_enough_dp' | 'suffocating'
   // createCharacter
   | 'unknown_race' | 'unknown_subrace' | 'invalid_age_benefits' | 'invalid_dice' | 'invalid_professions' | 'kin_choice'
   // undo and client input

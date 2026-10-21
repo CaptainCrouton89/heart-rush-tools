@@ -12,7 +12,8 @@ export type RollSpec = {
   complicationRule: boolean
   defaultNet: number
 }
-export type RolledDie = RollDie & { value: number; dropped: boolean; rerolled?: number }
+/** `rerolled`: the die was rerolled and this is its new value (the old value was a 1). `focused`: Focus set it to its maximum from this value. */
+export type RolledDie = RollDie & { value: number; dropped: boolean; rerolled?: number; focused?: number }
 export type RollResult = {
   type: RollType
   ability: AbilityId
@@ -97,6 +98,46 @@ export function rerollComplication(result: RollResult, rand: RandomDie): RollRes
   die.rerolled = rerolled
   die.value = rerolled
   return { ...result, dice, total: result.total - 1 + rerolled, complication: 'rerolled' }
+}
+
+/**
+ * Focus (`Combat.md` Spending Stamina): one kept die of the roll becomes its maximum and the total goes up by the difference.
+ * Once per roll. The heart die spend that pays for it is `heartDie:spend` with effect `focus`. A pending complication is
+ * chosen first (`Dice_Mechanics_&_Resolution.md`: a 1 on a skill check means you must choose), so Focus waits for it.
+ */
+export function focusDie(result: RollResult, index: number): RollResult {
+  const target = result.dice[index]
+  if (!Number.isSafeInteger(index) || !target || target.dropped) badRoll()
+  if (result.complication === 'pending' && !result.automaticFailure) badRoll()
+  if (result.dice.some(d => d.focused !== undefined)) badRoll()
+  const dice = result.dice.map((d, i) => i === index ? { ...d, value: d.sides, focused: d.value } : { ...d })
+  return { ...result, dice, total: result.total - target.value + target.sides }
+}
+
+/** The kept dice showing 1 that Wisdom of Experience may reroll: the indices, empty when there is nothing to reroll. */
+export function onesToReroll(result: Pick<RollResult, 'type' | 'dice'>): number[] {
+  if (result.type !== 'check') return []
+  return result.dice.flatMap((d, i) => !d.dropped && d.value === 1 && d.rerolled === undefined ? [i] : [])
+}
+
+/**
+ * Wisdom of Experience (`Building_Your_Character.md` Elderly): on a skill check with the chosen profession, every kept 1 is
+ * rerolled. The rerolls trigger no complication and a 1 on a reroll stands, so the complication becomes `none`.
+ */
+export function rerollOnes(result: RollResult, rand: RandomDie): RollResult {
+  const indices = onesToReroll(result)
+  // A chosen Fail or a complication reroll already settled the 1; two kept 1s (automatic failure) have not been settled.
+  if (!indices.length || (result.complication === 'failed' && !result.automaticFailure) || result.complication === 'rerolled') badRoll()
+  const dice = result.dice.map(d => ({ ...d }))
+  let total = result.total
+  for (const i of indices) {
+    const die = dice[i]!
+    const value = draw(die.sides, rand)
+    die.rerolled = value
+    die.value = value
+    total += value - 1
+  }
+  return { ...result, dice, total, complication: 'none', automaticFailure: false }
 }
 
 /** Plain result line; the UI renders dropped dice with a strike-through using `dice[].dropped`. */

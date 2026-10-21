@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
-import { CONDITION } from '@heartrush/rules-engine/conditions'
+import { CONDITION, hasCondition } from '@heartrush/rules-engine/conditions'
+import { suffocationStep } from '@heartrush/rules-engine/reducers/combat'
 import type { HeartDie } from '@heartrush/rules-engine/types'
 import { Button } from '@heartrush/ui/components/button'
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@heartrush/ui/components/dialog'
@@ -13,9 +14,9 @@ import { Written } from '~/components/motion'
 const HEART_DICE: readonly HeartDie[] = [4, 6, 8, 10, 12, 20]
 const WOUND_AT = 10
 
-const SPEND: { effect: 'endure' | 'focus' | 'surge'; label: string; text: string }[] = [
+// Focus is spent on a roll result (`RollResult`), where the die it sets to its maximum is picked.
+const SPEND: { effect: 'endure' | 'surge'; label: string; text: string }[] = [
   { effect: 'endure', label: 'Endure', text: 'Halve incoming damage (round up)' },
-  { effect: 'focus', label: 'Focus', text: 'Set one die of a roll to its maximum' },
   { effect: 'surge', label: 'Surge', text: 'Gain a full action this action phase' },
 ]
 
@@ -28,10 +29,12 @@ export function burningLevels(conditions: SectionProps['character']['conditions'
 }
 
 /**
- * The fight controls under the damage pad: the heart die (Spend ▾ lists Endure / Focus / Surge under the row, greyed
- * after one spend this round or at d4; the die's ▾ sets it by hand up to the largest heart die), rush points, the round with **Next round**
- * (asking for Burning damage first) and **End fight**, and DP with **Start session** (spending and gaining DP through an aspect is on the Aspects section).
- * Without `canEdit` the values show and the controls do not.
+ * The fight controls under the damage pad. At 0 HP or below (`Combat.md` Zero Hit points): the death threshold and, while
+ * not Unconscious, **Go unconscious** ("or in 10 minutes"). Then the heart die (Spend ▾ lists Endure / Surge under the row,
+ * greyed after one spend this round, at d4 or while Suffocating; Focus is on a roll result; the die's ▾ sets it by hand up to
+ * the largest heart die), rush points, the round with **Next round** (asking for Burning damage first; it sets rush to the
+ * new round and applies Suffocating's round-end step) and **End fight**, and DP with **Start session** (spending and gaining
+ * DP through an aspect is on the Aspects section). Without `canEdit` the values show and the controls do not.
  */
 export function FightControls({ character, derived, dispatch, canEdit }: SectionProps) {
   const { play, hp } = character
@@ -40,12 +43,17 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
 
   const spentThisRound = play.staminaSpentRound === play.round
   const atFloor = hp.heartDieCurrent === 4
-  const spendBlocked = spentThisRound ? 'Spent this round' : atFloor ? 'No stamina left at d4' : null
+  const suffocating = hasCondition(character, CONDITION.suffocating)
+  const unconscious = hasCondition(character, CONDITION.unconscious)
+  const spendBlocked = spentThisRound ? 'Spent this round' : atFloor ? 'No stamina left at d4' : suffocating ? 'No stamina while suffocating' : null
+  const atZero = hp.current <= 0
 
+  // Suffocating's step is computed here so the history line can name it; damage from Burning does not change it.
+  const advance = () => void dispatch({ kind: 'nextRound', suffocation: suffocationStep(character) })
   const nextRound = () => {
     const levels = burningLevels(character.conditions)
     if (levels > 0) return setBurning({ levels, amount: '', description: '' })
-    void dispatch({ kind: 'nextRound' })
+    advance()
   }
   const burnAmount = burning && /^\d+$/.test(burning.amount) ? Number(burning.amount) : 0
   const takeBurn = (e: FormEvent) => {
@@ -53,16 +61,34 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
     if (!burning || burnAmount < 1) return
     const description = burnAmount >= WOUND_AT ? burning.description.trim() : undefined
     void dispatch({ kind: 'damage', amount: burnAmount, ...(description !== undefined ? { woundDescription: description } : {}) })
-    void dispatch({ kind: 'nextRound' })
+    advance()
     setBurning(null)
   }
   const skipBurn = () => {
     setBurning(null)
-    void dispatch({ kind: 'nextRound' })
+    advance()
   }
 
   return (
     <section aria-label="Fight controls" className="flex flex-col gap-1 font-sans text-control">
+      {atZero && (
+        <div className="flex min-h-11 flex-wrap items-center gap-x-3 gap-y-1.5">
+          <span className="font-semibold text-primary">At {hp.current < 0 ? `−${-hp.current}` : 0} HP · dies at −{-derived.deathThreshold}</span>
+          {!unconscious && canEdit && (
+            <>
+              <Button
+                size="compact"
+                variant="line-primary"
+                className="px-3"
+                onClick={() => void dispatch({ kind: 'condition:set', conditionId: CONDITION.unconscious, level: null, permanent: false })}
+              >
+                Go unconscious
+              </Button>
+              <span className="text-meta text-muted-foreground">or in 10 minutes</span>
+            </>
+          )}
+        </div>
+      )}
       {/* Heart die and rush */}
       <div className="flex min-h-11 flex-wrap items-center gap-x-4 gap-y-1.5">
         <div className="flex items-center gap-2">

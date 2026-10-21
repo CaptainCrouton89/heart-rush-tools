@@ -32,6 +32,8 @@ export type RollPanelProps = {
   character: RollCharacter
   /** The ability the panel opens on; Might when absent. */
   ability?: AbilityId
+  /** The roll type the panel opens on; a check when absent (a condition's escape roll opens on a save or a check). */
+  type?: RollType
   /** A stratagem objective roll: a skill check, compared with `cn` and labelled with `label` in the feed. */
   objective?: { stratagemId: string; index: number; label: string; cn: number }
   onClose: () => void
@@ -143,12 +145,12 @@ export function RollPanel(props: RollPanelProps) {
 
 type RollFormProps = Omit<RollPanelProps, 'ability'> & { state: Character; ability: AbilityId; onAbility: (a: AbilityId) => void }
 
-function RollForm({ character: doc, state: character, ability, onAbility: setAbility, objective, onResult }: RollFormProps) {
+function RollForm({ character: doc, state: character, ability, onAbility: setAbility, type: initialType, objective, onResult }: RollFormProps) {
   const roll = useServerFn(rollForCharacterFn)
   const router = useRouter()
   const ids = useId()
 
-  const [type, setType] = useState<RollType>('check')
+  const [type, setType] = useState<RollType>(initialType ?? 'check')
   const defaultNet = rollSpec(character, { type: 'check', ability }, getCatalogue().conditions).defaultNet
   const [net, setNet] = useState(defaultNet)
   // The stepper restarts at the default whenever the ability changes or a live update changes the character's conditions.
@@ -159,6 +161,9 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
     setNet(defaultNet)
   }
   const [modifierText, setModifierText] = useState('')
+  // The modifier was filled from a Wisdom of Experience profession (`Profession.rerollOnes`): a skill check may reroll its
+  // kept 1s. Typing or stepping the modifier by hand clears it.
+  const [wisdomPick, setWisdomPick] = useState(false)
   // The aspect invoked on this roll and the DP spent on it (1…its rank; checks only). Frail may only be invoked against the character.
   const [pick, setPick] = useState<{ aspectId: string; dp: number } | null>(null)
   const invocable = character.aspects.filter((a) => !isFrail(a))
@@ -179,7 +184,10 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
     // Presence has no stance, so no attack or defense.
     if (next === 'presence' && isStanceType(type)) setType('check')
   }
-  const setModifier = (n: number) => setModifierText(n === 0 ? '' : String(Math.max(-MAX_MODIFIER, Math.min(MAX_MODIFIER, n))))
+  const setModifier = (n: number, wisdom = false) => {
+    setModifierText(n === 0 ? '' : String(Math.max(-MAX_MODIFIER, Math.min(MAX_MODIFIER, n))))
+    setWisdomPick(wisdom)
+  }
 
   const show = (next: RollOutcome) => {
     setOutcome(next)
@@ -210,6 +218,7 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
         characterId: doc.id,
         rollId: r.roll?.id ?? null,
         view: r.result,
+        ...(rollType === 'check' && wisdomPick ? { wisdom: true } : {}),
         // The CN the server rolled against (it may have changed since the panel opened); in no campaign there is no objective.
         ...(objective ? { objective: { label: objective.label, cn: r.roll?.objective?.cn ?? objective.cn } } : {}),
       })
@@ -290,7 +299,10 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
             placeholder="0"
             value={modifierText}
             aria-invalid={modifierInvalid || undefined}
-            onChange={(e) => setModifierText(e.target.value.replace(/[^\d\-−]/g, '').slice(0, 5))}
+            onChange={(e) => {
+              setModifierText(e.target.value.replace(/[^\d\-−]/g, '').slice(0, 5))
+              setWisdomPick(false)
+            }}
             className="h-11 w-16 shrink-0 px-2 text-center font-semibold tabular-nums md:text-control"
           />
           <Button size="compact-icon" type="button" variant="line" aria-label="Modifier one more" onClick={() => setModifier(modifier + 1)}>
@@ -307,12 +319,12 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
                 {character.professions.map((p) => (
                   <div key={p.id}>
                     <DropdownMenuLabel className="text-meta text-muted-foreground">
-                      {p.name} · rank {p.rank}
+                      {p.name} · rank {p.rank}{p.rerollOnes ? ' · checks reroll 1s' : ''}
                     </DropdownMenuLabel>
-                    <DropdownMenuItem className="min-h-11" onSelect={() => setModifier(p.rank)}>
+                    <DropdownMenuItem className="min-h-11" onSelect={() => setModifier(p.rank, p.rerollOnes)}>
                       Full rank +{p.rank}
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="min-h-11" onSelect={() => setModifier(Math.floor(p.rank / 2))}>
+                    <DropdownMenuItem className="min-h-11" onSelect={() => setModifier(Math.floor(p.rank / 2), p.rerollOnes)}>
                       Half rank +{Math.floor(p.rank / 2)}
                     </DropdownMenuItem>
                   </div>
@@ -368,7 +380,7 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
       )}
       {outcome && (
         <div className="border-t border-border pt-3">
-          <RollResultView outcome={outcome} onChange={show} />
+          <RollResultView outcome={outcome} character={character} onChange={show} />
         </div>
       )}
     </div>

@@ -14,10 +14,14 @@
 // Completion protocol (ruling 24). A check with exactly one kept 1 is stored with `complication = 'pending'`; its roller then
 // picks once between Fail and Reroll-and-take-a-complication (`resolveComplication`). Two or more kept 1s are stored as
 // `double` (automatic failure plus a complication, nothing to choose). `resolveComplication` is the only change a roll row
-// ever gets, and it is one conditional UPDATE, so two concurrent resolutions cannot both win.
+// ever gets from the complication rule, and it is one conditional UPDATE, so two concurrent resolutions cannot both win.
+//
+// Two more changes a stored roll can get, each once and each guarded on the dice the change was computed from:
+// `focusRoll` (Focus, `Combat.md` Spending Stamina: one die to its maximum, paid with a `heartDie:spend` focus event in the
+// same batch as the roll UPDATE) and `rerollOnesRoll` (Wisdom of Experience: every kept 1 rerolled, no complication).
 import { createServerFn } from '@tanstack/react-start'
 import { monotonicFactory } from 'ulid'
-import { rerollComplication, roll as rollDice, rollSpec, type RandomDie, type RolledDie, type RollResult, type RollType } from '@heartrush/rules-engine/dice'
+import { focusDie, rerollComplication, rerollOnes, roll as rollDice, rollSpec, type RandomDie, type RolledDie, type RollResult, type RollType } from '@heartrush/rules-engine/dice'
 import { objectiveCn, type Stratagem } from '@heartrush/rules-engine/stratagem'
 import { applyAction, upgradeCharacter } from '@heartrush/rules-engine/actions'
 import { RuleError, type AbilityId, type Action, type Character, type ClientAction, type Inverse } from '@heartrush/rules-engine/types'
@@ -28,7 +32,10 @@ import { publish, publishCharacterWrite, type LiveRoll } from './live'
 
 // ---- Types -------------------------------------------------------------------------------------
 
-export type RollErrorCode = 'forbidden' | 'not_found' | 'bad_input' | 'bad_roll' | 'is_draft' | 'already_resolved' | 'in_campaign' | 'not_enough_dp' | 'conflict'
+export type RollErrorCode =
+  | 'forbidden' | 'not_found' | 'bad_input' | 'bad_roll' | 'is_draft' | 'already_resolved' | 'in_campaign' | 'not_enough_dp' | 'conflict'
+  // Focus's heart die spend, refused by the engine (`heartDie:spend`)
+  | 'stamina_spent' | 'heart_die_floor' | 'suffocating'
 
 /** An expected refusal. */
 export type RollRefusal = { ok: false; status: number; code: RollErrorCode; message: string }
@@ -75,6 +82,10 @@ export type RollInput = {
 export type RollOk = { ok: true; result: RollView; roll: RollRecord | null; character: { revision: number; dp: number } | null }
 export type ResolveOk = { ok: true; roll: RollRecord }
 export type RerollDieInput = { characterId: string; sides: number }
+/** Focus on a roll: `rollId` is the stored roll (null for a character in no campaign); `dieIndex` indexes the roll's `dice`. */
+export type FocusInput = { characterId: string; rollId: string | null; dieIndex: number }
+/** `roll` is the focused stored roll (null when nothing is stored: the client applies `focusDie` itself). */
+export type FocusOk = { ok: true; roll: RollRecord | null; character: { revision: number; heartDie: number } }
 export type ListRollsInput = { campaignId: string }
 
 type PublishEnv = Parameters<typeof publish>[0]
@@ -83,6 +94,7 @@ type PublishEnv = Parameters<typeof publish>[0]
 
 const STATUS: Record<RollErrorCode, number> = {
   forbidden: 403, not_found: 404, bad_input: 400, bad_roll: 400, is_draft: 409, already_resolved: 409, in_campaign: 409, not_enough_dp: 409, conflict: 409,
+  stamina_spent: 409, heart_die_floor: 409, suffocating: 409,
 }
 const refuse = (code: RollErrorCode, message: string): RollRefusal => ({ ok: false, status: STATUS[code], code, message })
 const isRefusal = (v: unknown): v is RollRefusal => typeof v === 'object' && v !== null && (v as { ok?: unknown }).ok === false
@@ -219,6 +231,12 @@ async function loadRecord(db: D1Database, rollId: string): Promise<RollRecord | 
 /** The engine reports two kept 1s as `failed` with `automaticFailure`; storage keeps that apart from a chosen Fail. */
 const storedComplication = (r: RollResult): Complication => (r.automaticFailure ? 'double' : r.complication)
 
+/** A stored roll as the engine's result (the reverse of `storedComplication`). `flat` and `net` are not stored and no change reads them. */
+const engineResult = (r: RollRow): RollResult => ({
+  type: r.roll_type, ability: r.ability, dice: JSON.parse(r.dice), flat: 0, modifier: r.modifier, net: 0, total: r.total,
+  complication: r.complication === 'double' ? 'failed' : r.complication, automaticFailure: r.complication === 'double',
+})
+
 const asLive = (roll: RollRecord): LiveRoll => roll
 
 // ---- Operations --------------------------------------------------------------------------------
@@ -346,10 +364,7 @@ export async function resolveComplication(
   let dice = row.dice
   let total = row.total
   if (choice === 'reroll') {
-    const rerolled = rerollComplication(
-      { type: row.roll_type, ability: row.ability, dice: JSON.parse(row.dice), flat: 0, modifier: row.modifier, net: 0, total: row.total, complication: 'pending', automaticFailure: false },
-      rand,
-    )
+    const rerolled = rerollComplication(engineResult(row), rand)
     complication = 'rerolled'
     dice = JSON.stringify(rerolled.dice)
     total = rerolled.total
@@ -359,6 +374,116 @@ export async function resolveComplication(
     .bind(complication, dice, total, rollId, userId)
     .run()
   if (changed.meta.changes === 0) return refuse('already_resolved', 'This roll has no choice open')
+  const record = await loadRecord(db, rollId)
+  if (!record) throw new Error('roll update committed but the row is missing')
+  await publish(env, record.campaignId, { type: 'roll', roll: asLive(record) })
+  return { ok: true, roll: record }
+}
+
+/**
+ * Focus (`Combat.md` Spending Stamina) on a roll the user made: one kept die becomes its maximum, paid for with a
+ * `heartDie:spend` of effect `focus` (refused once stamina was spent this round, at d4, or while Suffocating). Refused on a
+ * pending complication (the choice comes first) and on a roll already focused.
+ *
+ * A stored roll (`rollId`): roller only. One batch — the roll UPDATE guarded on the dice the focus was computed from, then
+ * the character UPDATE guarded on its revision, its campaign and the roll UPDATE having changed a row (`changes() = 1`),
+ * then the event INSERT. Either guard failing rolls the batch back (`isBatchAbort`), so the die is focused exactly when
+ * the heart die is spent. Publishes the character write and the focused roll.
+ * No stored roll (`rollId` null, a character in no campaign): spends the heart die only; the client focuses its die.
+ */
+export async function focusRoll(db: D1Database, env: PublishEnv, userId: string, input: FocusInput): Promise<FocusOk | RollRefusal> {
+  const bad = badId(input?.characterId, 'characterId')
+  if (bad) return bad
+  if (input.rollId !== null && badId(input.rollId, 'rollId')) return refuse('bad_input', 'rollId must be a non-empty string or null')
+  if (!Number.isSafeInteger(input.dieIndex) || input.dieIndex < 0) return refuse('bad_input', 'dieIndex must be a whole number from 0')
+  const row = await loadCharacter(db, input.characterId)
+  if (!row) return refuse('not_found', 'No such character')
+  const role = await writableRole(db, userId, row)
+  if (isRefusal(role)) return role
+  if (isDraft(row)) return refuse('is_draft', 'A character still in the builder cannot roll')
+
+  let stored: RollRow | null = null
+  let focused: RollResult | null = null
+  if (input.rollId === null) {
+    if (row.campaign_id !== null) return refuse('in_campaign', 'A campaign roll is focused by its roll id')
+  } else {
+    stored = await db.prepare('SELECT * FROM roll WHERE id = ?').bind(input.rollId).first<RollRow>()
+    if (!stored || stored.character_id !== row.id) return refuse('not_found', 'No such roll for this character')
+    if (stored.user_id !== userId) return refuse('forbidden', 'Only the roller focuses a roll')
+    try {
+      focused = focusDie(engineResult(stored), input.dieIndex)
+    } catch (error) {
+      if (!(error instanceof RuleError)) throw error
+      if (stored.complication === 'pending') return refuse('bad_roll', 'Choose Fail or Reroll on the 1 first')
+      return refuse(JSON.parse(stored.dice).some((d: RolledDie) => d.focused !== undefined) ? 'already_resolved' : 'bad_roll', 'This roll was already focused, or that die is not a kept die')
+    }
+  }
+
+  const now = new Date().toISOString()
+  const action: ClientAction = { id: newRollId(), at: now, kind: 'heartDie:spend', effect: 'focus' }
+  const state = upgradeCharacter(JSON.parse(row.state))
+  if (state.draft) return refuse('is_draft', 'A character still in the builder cannot roll')
+  let applied: { character: Character; inverse: Inverse }
+  try {
+    applied = applyAction(state, action, getCatalogue())
+  } catch (error) {
+    if (!(error instanceof RuleError)) throw error
+    if (error.code === 'stamina_spent') return refuse('stamina_spent', 'The heart die was already spent this round')
+    if (error.code === 'heart_die_floor') return refuse('heart_die_floor', 'The heart die is d4: no stamina left to spend')
+    if (error.code === 'suffocating') return refuse('suffocating', 'No stamina can be spent while suffocating')
+    return refuse('bad_input', error.message)
+  }
+  const [update, insert] = invokeStatements(db, userId, row, { action, inverse: applied.inverse }, applied.character, now)
+  const statements = stored && focused
+    ? [
+        db.prepare('UPDATE roll SET dice = ?, total = ? WHERE id = ? AND dice = ? AND complication = ?')
+          .bind(JSON.stringify(focused.dice), focused.total, stored.id, stored.dice, stored.complication),
+        db.prepare('UPDATE character SET state = ?, name = ?, revision = revision + 1, updated_at = ? WHERE id = ? AND revision = ? AND campaign_id IS ? AND changes() = 1')
+          .bind(JSON.stringify(applied.character), applied.character.identity.name, now, row.id, row.revision, row.campaign_id),
+        insert!,
+      ]
+    : [update!, insert!]
+  if (!(await commit(db, statements))) return refuse('conflict', 'The roll or the sheet changed at the same moment; nothing was spent. Try again')
+  const character = { revision: row.revision + 1, heartDie: applied.character.hp.heartDieCurrent }
+  await publishCharacterWrite(env, { ok: true, character: { id: row.id, campaignId: row.campaign_id, revision: character.revision } })
+  if (!stored) return { ok: true, roll: null, character }
+  const record = await loadRecord(db, stored.id)
+  if (!record) throw new Error('roll focus committed but the row is missing')
+  await publish(env, record.campaignId, { type: 'roll', roll: asLive(record) })
+  return { ok: true, roll: record, character }
+}
+
+/**
+ * Wisdom of Experience (`Building_Your_Character.md` Elderly) on a stored skill check: every kept 1 is rerolled by the server,
+ * the rerolls trigger no complication and a 1 on a reroll stands, so the roll becomes `none`. Roller only, for a character
+ * with a Wisdom of Experience profession (`rerollOnes`); the roller's profession pick is not stored on the roll, so the
+ * server trusts it as it trusts the modifier. Once: the UPDATE is guarded on the dice and complication it was computed from,
+ * and a rerolled die is never rerolled again. A roll stored nowhere rerolls each 1 with `rerollDie`.
+ */
+export async function rerollOnesRoll(
+  db: D1Database, env: PublishEnv, userId: string, rollId: string, rand: RandomDie = cryptoRand,
+): Promise<ResolveOk | RollRefusal> {
+  const bad = badId(rollId, 'rollId')
+  if (bad) return bad
+  const row = await db.prepare('SELECT * FROM roll WHERE id = ?').bind(rollId).first<RollRow>()
+  if (!row) return refuse('not_found', 'No such roll')
+  if (row.user_id !== userId) return refuse('forbidden', 'Only the roller rerolls a roll')
+  const character = await loadCharacter(db, row.character_id)
+  if (!character) return refuse('not_found', 'No such character')
+  const state = upgradeCharacter(JSON.parse(character.state))
+  if (state.draft || !state.professions.some((p) => p.rerollOnes)) return refuse('forbidden', 'This character has no Wisdom of Experience profession')
+  let rerolled: RollResult
+  try {
+    rerolled = rerollOnes(engineResult(row), rand)
+  } catch (error) {
+    if (!(error instanceof RuleError)) throw error
+    return refuse('already_resolved', 'This roll has no 1 left to reroll')
+  }
+  const changed = await db
+    .prepare("UPDATE roll SET complication = 'none', dice = ?, total = ? WHERE id = ? AND user_id = ? AND dice = ? AND complication = ?")
+    .bind(JSON.stringify(rerolled.dice), rerolled.total, rollId, userId, row.dice, row.complication)
+    .run()
+  if (changed.meta.changes === 0) return refuse('already_resolved', 'This roll changed at the same moment; try again')
   const record = await loadRecord(db, rollId)
   if (!record) throw new Error('roll update committed but the row is missing')
   await publish(env, record.campaignId, { type: 'roll', roll: asLive(record) })
@@ -427,6 +552,20 @@ export const rerollDieFn = createServerFn({ method: 'POST' })
   .handler(async ({ data }) => {
     const { db, userId } = await context()
     return rerollDie(db, userId, data)
+  })
+
+export const focusRollFn = createServerFn({ method: 'POST' })
+  .validator(input<FocusInput>())
+  .handler(async ({ data }) => {
+    const { env, db, userId } = await context()
+    return focusRoll(db, env, userId, data)
+  })
+
+export const rerollOnesRollFn = createServerFn({ method: 'POST' })
+  .validator(input<{ rollId: string }>())
+  .handler(async ({ data }) => {
+    const { env, db, userId } = await context()
+    return rerollOnesRoll(db, env, userId, data.rollId)
   })
 
 export const listRollsFn = createServerFn({ method: 'GET' })

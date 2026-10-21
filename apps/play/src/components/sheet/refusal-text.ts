@@ -41,6 +41,7 @@ const REASON: Record<Code, string> = {
   wrong_rolled_count: 'the wrong number of sleep conditions was picked',
   bloodmark_not_owed: 'no bloodmark ability of that kind is owed at this level',
   not_ready: "that profession hasn't met its advancement requirements",
+  suffocating: "no stamina can be spent while suffocating",
   // createCharacter
   unknown_race: 'that race is not in the rulebook',
   unknown_subrace: 'that subrace is not in the rulebook',

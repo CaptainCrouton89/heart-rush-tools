@@ -1,7 +1,11 @@
-import { useState, type ReactNode } from 'react'
+import { useRef, useState, type ReactNode, type RefObject } from 'react'
+import { useMatch } from '@tanstack/react-router'
 import type { PlayCondition } from '@heartrush/rules-engine/catalogue'
-import type { Condition } from '@heartrush/rules-engine/types'
+import { CONDITION } from '@heartrush/rules-engine/conditions'
+import type { RollType } from '@heartrush/rules-engine/dice'
+import type { AbilityId, Condition } from '@heartrush/rules-engine/types'
 import { Button } from '@heartrush/ui/components/button'
+import { RollPanel } from '../roll/RollPanel'
 import { AddConditionDialog } from './conditions/AddConditionDialog'
 import { LevelDots } from './conditions/LevelDots'
 import type { SectionProps } from './SheetLayout'
@@ -35,17 +39,48 @@ function lines(conditions: Condition[], catalogue: ReadonlyMap<string, PlayCondi
   return out
 }
 
+/** A roll a condition lets its bearer make to end it (`Conditions.md`); the CN comes from the GM and the roller does not resolve it. */
+type EscapeRoll = { label: string; ability: AbilityId; type: RollType }
+
+/**
+ * Grappled: break free with a Might or Agility check (the grapple's own restrained level gives no disadvantage on it; the
+ * catalogue's Restrained penalizes no ability by default, so the roll starts with none from it). Entangled: Wriggle Out
+ * (Agility) or Tear Free (Might). Aggravated and Frightened: a Cunning save. Confused ends with an ally's help: none.
+ */
+const ESCAPES: Record<string, EscapeRoll[]> = {
+  [CONDITION.grappled]: [
+    { label: 'Break free (Might)', ability: 'might', type: 'check' },
+    { label: 'Break free (Agility)', ability: 'agility', type: 'check' },
+  ],
+  [CONDITION.entangled]: [
+    { label: 'Wriggle Out', ability: 'agility', type: 'check' },
+    { label: 'Tear Free', ability: 'might', type: 'check' },
+  ],
+  [CONDITION.aggravated]: [{ label: 'Save (Cunning)', ability: 'cunning', type: 'save' }],
+  [CONDITION.frightened]: [{ label: 'Save (Cunning)', ability: 'cunning', type: 'save' }],
+}
+
 /** INV-CATREF: a condition id no longer in the rulebook shows its id's last part, e.g. "off-balanced". */
 const fallbackTitle = (conditionId: string) => conditionId.split('~').pop() ?? conditionId
 
 /**
  * Conditions: one line per condition with its level dots (tap a dot to set the level), its tags, a **Permanent**
  * toggle and **Remove**, all one tap and undoable. A condition's levels from failed sleep are counted in the dots but
- * only a successful long rest removes them, so those dots are not buttons. [+] opens the picker.
+ * only a successful long rest removes them, so those dots are not buttons. [+] opens the picker. A condition with an
+ * escape roll (`ESCAPES`) shows one button per roll on the sheet route; each opens the roll panel preset to it.
  */
 export function ConditionsSection({ character, catalogue, dispatch, canEdit }: SectionProps) {
   const [adding, setAdding] = useState(false)
   const shown = lines(character.conditions, catalogue.conditions)
+  // The roll panel needs the character's id, which only the sheet route has (the GM view renders this section too).
+  const sheetId = useMatch({ from: '/characters/$id', shouldThrow: false })?.loaderData?.id ?? null
+  const canRoll = canEdit && sheetId !== null
+  const [rolling, setRolling] = useState<EscapeRoll | null>(null)
+  const anchor = useRef<HTMLElement | null>(null)
+  const openRoll = (roll: EscapeRoll, opener: HTMLElement) => {
+    anchor.current = opener
+    setRolling(roll)
+  }
 
   return (
     <Section
@@ -64,7 +99,7 @@ export function ConditionsSection({ character, catalogue, dispatch, canEdit }: S
         <ul className="flex flex-col">
           {shown.map((line) =>
             line.kind === 'catalogue' ? (
-              <CatalogueLine key={line.conditionId} line={line} dispatch={dispatch} canEdit={canEdit} />
+              <CatalogueLine key={line.conditionId} line={line} dispatch={dispatch} canEdit={canEdit} onRoll={canRoll ? openRoll : null} />
             ) : (
               <CustomLine key={line.row.id} row={line.row} dispatch={dispatch} canEdit={canEdit} />
             ),
@@ -74,13 +109,24 @@ export function ConditionsSection({ character, catalogue, dispatch, canEdit }: S
       {canEdit && (
         <AddConditionDialog open={adding} onOpenChange={setAdding} character={character} conditions={catalogue.conditions} dispatch={dispatch} />
       )}
+      {rolling && sheetId !== null && (
+        <RollPanel
+          character={{ id: sheetId, name: character.identity.name, state: character }}
+          ability={rolling.ability}
+          type={rolling.type}
+          anchor={anchor as RefObject<HTMLElement | null>}
+          onClose={() => setRolling(null)}
+        />
+      )}
     </Section>
   )
 }
 
 type LineProps = Pick<SectionProps, 'dispatch' | 'canEdit'>
 
-function CatalogueLine({ line, dispatch, canEdit }: LineProps & { line: Extract<Line, { kind: 'catalogue' }> }) {
+function CatalogueLine({
+  line, dispatch, canEdit, onRoll,
+}: LineProps & { line: Extract<Line, { kind: 'catalogue' }>; onRoll: ((roll: EscapeRoll, opener: HTMLElement) => void) | null }) {
   const { entry, manual, sleepLevels, conditionId } = line
   const title = entry?.title ?? fallbackTitle(conditionId)
   const leveled = entry ? entry.leveled : (manual?.level ?? null) !== null
@@ -109,6 +155,17 @@ function CatalogueLine({ line, dispatch, canEdit }: LineProps & { line: Extract<
       }
       permanent={canEdit && manual ? { on: permanent, toggle: () => set(manual.level, !permanent) } : null}
       onRemove={canEdit && manual ? () => set(0) : null}
+      actions={
+        onRoll && ESCAPES[conditionId] ? (
+          <div className="flex flex-wrap gap-2 pb-1">
+            {ESCAPES[conditionId].map((roll) => (
+              <Button key={roll.label} size="compact" variant="line" className="px-3" aria-haspopup="dialog" onClick={(e) => onRoll(roll, e.currentTarget)}>
+                {roll.label}
+              </Button>
+            ))}
+          </div>
+        ) : null
+      }
     />
   )
 }
@@ -136,7 +193,7 @@ function CustomLine({ row, dispatch, canEdit }: LineProps & { row: Condition }) 
 }
 
 function Row({
-  title, unresolved, tag, note, dots, permanent, onRemove,
+  title, unresolved, tag, note, dots, permanent, onRemove, actions = null,
 }: {
   title: string
   unresolved: boolean
@@ -145,11 +202,13 @@ function Row({
   dots: ReactNode
   permanent: { on: boolean; toggle: () => void } | null
   onRemove: (() => void) | null
+  /** Buttons under the line (a condition's escape rolls). */
+  actions?: ReactNode
 }) {
   return (
     <li className="flex flex-col border-b border-border py-1 last:border-b-0">
       <div className="flex min-h-11 flex-wrap items-center gap-x-2">
-        <span className="min-w-0 flex-1 text-ui font-medium">
+        <span className="flex-1 text-ui font-medium">
           {title}
           {tag && <span className="ml-2 text-meta font-normal text-muted-foreground">{tag}</span>}
           {unresolved && <span className="ml-2 text-meta font-normal text-muted-foreground">no longer in the rulebook</span>}
@@ -175,6 +234,7 @@ function Row({
         </span>
       </div>
       {note && <p className="pb-1 text-meta text-muted-foreground">{note}</p>}
+      {actions}
     </li>
   )
 }

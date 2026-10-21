@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { rollSpec, roll, rerollComplication, formatRoll } from '../src/dice'
+import { rollSpec, roll, rerollComplication, formatRoll, focusDie, rerollOnes, onesToReroll } from '../src/dice'
 import { makeCharacter, conditions, condition, weapon } from './fixtures'
 import { CONDITION } from '../src/conditions'
 
@@ -91,4 +91,51 @@ test('9–13: roll and reroll never mutate the character or roll spec', () => {
 test('combat stance excludes Presence; invalid rolls fail rather than inventing dice', () => {
   assert.throws(() => rollSpec(makeCharacter(), { type: 'attack', ability: 'presence' }, conditions), { name: 'RuleError', code: 'bad_roll' })
   assert.throws(() => roll(basic(), { modifier: 0, net: 0 }, () => 9))
+})
+
+test('Focus: the chosen kept die becomes its maximum and the total follows; once per roll; a dropped die is refused', () => {
+  const rolled = roll(basic(), { modifier: 2, net: 1 }, seeded(3, 2, 1))
+  const focused = focusDie(rolled, 0)
+  assert.deepEqual(focused.dice[0], { sides: 8, role: 'heart', value: 8, dropped: false, focused: 3 })
+  assert.equal(focused.total, rolled.total + 5)
+  assert.equal(rolled.dice[0]?.value, 3)
+  assert.throws(() => focusDie(focused, 1))
+  assert.throws(() => focusDie(rolled, 2))
+  assert.throws(() => focusDie(rolled, 9))
+})
+
+test('Focus waits for a pending complication choice; after Fail or the reroll it applies', () => {
+  const pending = roll(basic(), { modifier: 0, net: 0 }, seeded(1, 4))
+  assert.throws(() => focusDie(pending, 1), { name: 'RuleError', code: 'bad_roll' })
+  const failed = focusDie({ ...pending, complication: 'failed' }, 1)
+  assert.equal(failed.total, 7)
+  assert.equal(failed.complication, 'failed')
+  const rerolled = focusDie(rerollComplication(pending, seeded(2)), 0)
+  assert.equal(rerolled.total, 12)
+  assert.equal(rerolled.complication, 'rerolled')
+})
+
+test('Wisdom of Experience: every kept 1 rerolls, no complication, a 1 on the reroll stands', () => {
+  const double = roll(basic(), { modifier: 0, net: 0 }, seeded(1, 1))
+  assert.equal(double.automaticFailure, true)
+  const rerolled = rerollOnes(double, seeded(1, 5))
+  assert.deepEqual(rerolled.dice.map(d => [d.value, d.rerolled]), [[1, 1], [5, 5]])
+  assert.equal(rerolled.complication, 'none')
+  assert.equal(rerolled.automaticFailure, false)
+  assert.equal(rerolled.total, 6)
+  assert.deepEqual(onesToReroll(rerolled), [])
+  assert.throws(() => rerollOnes(rerolled, seeded(2)))
+  const pending = roll(basic(), { modifier: 1, net: 0 }, seeded(4, 1))
+  const once = rerollOnes(pending, seeded(3))
+  assert.equal(once.complication, 'none')
+  assert.equal(once.total, 8)
+})
+
+test('Wisdom of Experience: only on a check, and not after the 1 was settled by Fail or a complication reroll', () => {
+  const save = roll(rollSpec(makeCharacter(), { type: 'save', ability: 'might' }, conditions), { modifier: 0, net: 0 }, seeded(1, 4))
+  assert.deepEqual(onesToReroll(save), [])
+  assert.throws(() => rerollOnes(save, seeded(2)))
+  const pending = roll(basic(), { modifier: 0, net: 0 }, seeded(1, 4))
+  assert.throws(() => rerollOnes(rerollComplication(pending, seeded(1)), seeded(2)))
+  assert.throws(() => rerollOnes({ ...pending, complication: 'failed' }, seeded(2)))
 })

@@ -93,7 +93,7 @@ export function AbilityRows({ character, derived }: { character: Character; deri
               {result && (
                 <tr className="border-b border-border">
                   <td colSpan={5} className="font-normal normal-case">
-                    <RollResultView compact outcome={result} onChange={(outcome) => setLast({ ability: id, outcome })} />
+                    <RollResultView compact outcome={result} character={character} onChange={(outcome) => setLast({ ability: id, outcome })} />
                   </td>
                 </tr>
               )}

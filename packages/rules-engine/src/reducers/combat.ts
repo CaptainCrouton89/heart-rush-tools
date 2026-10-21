@@ -1,8 +1,8 @@
 // Pure combat, condition and rest reducers. The action supplies every new row's id and timestamp.
 import type { ConditionCatalogue } from '../catalogue'
-import { SLEEP_ROLL_CONDITION } from '../conditions'
+import { CONDITION, SLEEP_ROLL_CONDITION, hasCondition } from '../conditions'
 import { effectiveMaxHp, maxHeartDie, minorUseCost } from '../derived'
-import { RuleError, type Action, type Aspect, type Character, type Condition, type HeartDie, type Wound } from '../types'
+import { RuleError, type Action, type Aspect, type Character, type Condition, type HeartDie, type SuffocationStep, type Wound } from '../types'
 
 type Of<K extends Action['kind']> = Extract<Action, { kind: K }> | (Extract<Action, { kind: 'rush:set' | 'dp:set' | 'round:set' }> & { kind: K })
 
@@ -156,6 +156,7 @@ export function roundSet(c: Character, a: Of<'round:set'>): Character {
 const HEART_STEPS: readonly HeartDie[] = [4, 6, 8, 10, 12, 20]
 export function heartDieSpend(c: Character, a: Of<'heartDie:spend'>): Character {
   if (!['endure', 'focus', 'surge'].includes(a.effect)) throw new RuleError('bad_action')
+  if (hasCondition(c, CONDITION.suffocating)) throw new RuleError('suffocating')
   if (c.play.staminaSpentRound === c.play.round) throw new RuleError('stamina_spent')
   const index = HEART_STEPS.indexOf(c.hp.heartDieCurrent)
   if (index <= 0) throw new RuleError('heart_die_floor')
@@ -166,7 +167,33 @@ export function heartDieSet(c: Character, a: Of<'heartDie:set'>): Character {
   if (a.value > maxHeartDie(c)) throw new RuleError('heart_die_over_max')
   return { ...c, hp: { ...c.hp, heartDieCurrent: a.value } }
 }
-export function nextRound(c: Character, _a: Of<'nextRound'>, catalogue: ConditionCatalogue): Character {
+/**
+ * Suffocating at the end of a round (`Conditions.md`): unconscious → 10 damage, no wound; heart die d4 → falls unconscious;
+ * otherwise the heart die drops one size. Null when the character is not suffocating.
+ */
+export function suffocationStep(c: Character): SuffocationStep | null {
+  if (!hasCondition(c, CONDITION.suffocating)) return null
+  if (hasCondition(c, CONDITION.unconscious)) return { kind: 'damage', amount: 10 }
+  const index = HEART_STEPS.indexOf(c.hp.heartDieCurrent)
+  if (index <= 0) return { kind: 'unconscious' }
+  return { kind: 'drop', from: c.hp.heartDieCurrent, to: HEART_STEPS[index - 1]! }
+}
+function sameStep(a: SuffocationStep | null, b: SuffocationStep | null): boolean {
+  if (a === null || b === null) return a === b
+  return a.kind === b.kind && (a.kind !== 'drop' || (b.kind === 'drop' && a.from === b.from && a.to === b.to))
+}
+function suffocate(c: Character, step: SuffocationStep | null, id: string): Character {
+  if (step === null) return c
+  if (step.kind === 'damage') return updateHp(c, c.hp.current - step.amount)
+  if (step.kind === 'drop') return { ...c, hp: { ...c.hp, heartDieCurrent: step.to } }
+  const row: Condition = { id: `${id}:0`, conditionId: CONDITION.unconscious, name: null, level: null, permanent: false, source: 'manual', affects: [] }
+  return { ...c, conditions: [...c.conditions, row] }
+}
+
+export function nextRound(c: Character, a: Of<'nextRound'>, catalogue: ConditionCatalogue): Character {
+  const step = suffocationStep(c)
+  if (a.suffocation !== undefined && !sameStep(a.suffocation, step)) throw new RuleError('bad_action', 'The sheet changed before the round ended; try Next round again')
+  const round = c.play.round + 1
   const decremented = new Set<string>()
   // Stacked rows contribute one condition total. Remove just one fading level, preferring
   // sleep rows so a later successful rest can still remove only sleep-sourced levels.
@@ -183,7 +210,10 @@ export function nextRound(c: Character, _a: Of<'nextRound'>, catalogue: Conditio
     if (!next) return [k]
     return next === k ? [] : [next]
   })
-  return { ...c, conditions, play: { ...c.play, round: c.play.round + 1 } }
+  const ended = suffocate({ ...c, conditions, play: { ...c.play, round } }, step, a.id)
+  // Combat.md Rush Points: every conscious combatant takes part in the engagement, so rush is the new round number; a
+  // character unconscious as the new round starts (including one suffocation just knocked out) has 0.
+  return { ...ended, play: { ...ended.play, rushPoints: hasCondition(ended, CONDITION.unconscious) ? 0 : round } }
 }
 export function endFight(c: Character, _a: Of<'endFight'>): Character {
   return { ...c, play: { ...c.play, rushPoints: 0, round: 1, staminaSpentRound: null }, talents: c.talents.map(t => ({ ...t, usesThisFight: 0 })) }

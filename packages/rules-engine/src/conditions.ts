@@ -12,6 +12,12 @@ export const CONDITION = {
   slowed: id('slowed'),
   crippled: id('crippled'),
   poisoned: id('poisoned'),
+  unconscious: id('unconscious'),
+  suffocating: id('suffocating'),
+  grappled: id('grappled'),
+  entangled: id('entangled'),
+  aggravated: id('aggravated'),
+  frightened: id('frightened'),
 } as const
 
 /** The three conditions a failed long rest can roll (`longRest.rolled`), as catalogue ids. */

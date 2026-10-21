@@ -7,7 +7,7 @@ import { getCatalogue } from '../src/catalogue'
 import { createDraft, finishDraft } from '../src/server/characters'
 import type { LiveEvent } from '../src/server/live'
 import {
-  cryptoRand, listRolls, rerollDie, resolveComplication, rollForCharacter, ROLL_LIMIT,
+  cryptoRand, focusRoll, listRolls, rerollDie, rerollOnesRoll, resolveComplication, rollForCharacter, ROLL_LIMIT,
   type RollOk, type RollRefusal,
 } from '../src/server/rolls'
 import { openPlayDbs, type D1 } from './db'
@@ -487,4 +487,127 @@ test('leaving the campaign between load and commit aborts the aspect roll: confl
   assert.equal(await count('roll'), 0)
   assert.equal((await invokeEvents(ysolde)).length, 0)
   assert.equal(events.length, 0)
+})
+
+// ---- Focus on a roll (heartDie:spend focus in the roll's batch) -------------------------------------
+
+type Play = { play: { round: number; staminaSpentRound: number | null }; hp: { heartDieCurrent: number }; conditions: unknown[]; professions: { name: string; rerollOnes: boolean }[] }
+const playState = async (id: string) => {
+  const row = (await db.prepare('SELECT state, revision FROM character WHERE id = ?').bind(id).first<{ state: string; revision: number }>())!
+  return { state: JSON.parse(row.state) as Play, revision: row.revision }
+}
+async function editPlay(id: string, edit: (s: Play) => void) {
+  const { state } = await playState(id)
+  edit(state)
+  await db.prepare('UPDATE character SET state = ? WHERE id = ?').bind(JSON.stringify(state), id).run()
+}
+const spendEvents = async (id: string) =>
+  (await db.prepare('SELECT seq, action FROM character_event WHERE character_id = ? ORDER BY seq').bind(id).all<{ seq: number; action: string }>()).results
+    .map((e) => JSON.parse(e.action) as { kind: string; effect?: string })
+    .filter((a) => a.kind === 'heartDie:spend')
+
+test('Focus on a stored roll sets the die to its maximum, spends the heart die once with a focus event, and publishes both', async () => {
+  const { env, events } = fakeChannel()
+  const r = ok(await rollForCharacter(db, env, 'owner', check(ysolde, { modifier: 1 }), seq(3, 2)))
+  const before = await playState(ysolde)
+  const done = ok(await focusRoll(db, env, 'owner', { characterId: ysolde, rollId: r.roll!.id, dieIndex: 1 }))
+  assert.deepEqual(done.roll!.dice[1], { sides: 6, role: 'ability', value: 6, dropped: false, focused: 2 })
+  assert.equal(done.roll!.total, 10)
+  assert.deepEqual(JSON.parse((await rollRow(r.roll!.id))!.dice)[1].focused, 2)
+  const after = await playState(ysolde)
+  assert.equal(after.revision, before.revision + 1)
+  assert.equal(after.state.hp.heartDieCurrent, before.state.hp.heartDieCurrent - 2)
+  assert.equal(after.state.play.staminaSpentRound, after.state.play.round)
+  assert.deepEqual(done.character, { revision: before.revision + 1, heartDie: after.state.hp.heartDieCurrent })
+  assert.deepEqual((await spendEvents(ysolde)).map((a) => a.effect), ['focus'])
+  assert.deepEqual(events.map((e) => e.event.type), ['roll', 'character', 'roll'])
+  // Once per roll, and once per round.
+  refused(await focusRoll(db, env, 'owner', { characterId: ysolde, rollId: r.roll!.id, dieIndex: 0 }), 409, 'already_resolved')
+  const second = ok(await rollForCharacter(db, env, 'owner', check(ysolde), seq(3, 2)))
+  refused(await focusRoll(db, env, 'owner', { characterId: ysolde, rollId: second.roll!.id, dieIndex: 0 }), 409, 'stamina_spent')
+  assert.equal((await rollRow(second.roll!.id))!.total, 5)
+  assert.equal((await spendEvents(ysolde)).length, 1)
+})
+
+test('Focus is refused with nothing spent or changed: pending 1, dropped die, d4, Suffocating, not the roller, wrong character', async () => {
+  const { env } = fakeChannel()
+  const pending = await pendingRoll(env)
+  refused(await focusRoll(db, env, 'owner', { characterId: ysolde, rollId: pending.roll!.id, dieIndex: 1 }), 400, 'bad_roll')
+  const advantage = ok(await rollForCharacter(db, env, 'owner', check(ysolde, { net: 1 }), seq(5, 6, 2)))
+  const dropped = advantage.roll!.dice.findIndex((d) => d.dropped)
+  refused(await focusRoll(db, env, 'owner', { characterId: ysolde, rollId: advantage.roll!.id, dieIndex: dropped }), 400, 'bad_roll')
+  refused(await focusRoll(db, env, 'owner', { characterId: ysolde, rollId: advantage.roll!.id, dieIndex: 9 }), 400, 'bad_roll')
+  refused(await focusRoll(db, env, 'gm', { characterId: ysolde, rollId: advantage.roll!.id, dieIndex: 0 }), 403, 'forbidden')
+  refused(await focusRoll(db, env, 'other', { characterId: bram, rollId: advantage.roll!.id, dieIndex: 0 }), 404, 'not_found')
+  refused(await focusRoll(db, env, 'stranger', { characterId: ysolde, rollId: advantage.roll!.id, dieIndex: 0 }), 403, 'forbidden')
+  await editPlay(ysolde, (s) => { s.hp.heartDieCurrent = 4 })
+  refused(await focusRoll(db, env, 'owner', { characterId: ysolde, rollId: advantage.roll!.id, dieIndex: 0 }), 409, 'heart_die_floor')
+  await editPlay(ysolde, (s) => {
+    s.hp.heartDieCurrent = 8
+    s.conditions.push({ id: 'suff', conditionId: 'player.conditions~suffocating', name: null, level: null, permanent: false, source: 'manual', affects: [] })
+  })
+  refused(await focusRoll(db, env, 'owner', { characterId: ysolde, rollId: advantage.roll!.id, dieIndex: 0 }), 409, 'suffocating')
+  assert.equal((await spendEvents(ysolde)).length, 0)
+  assert.equal(JSON.parse((await rollRow(advantage.roll!.id))!.dice).some((d: { focused?: number }) => d.focused !== undefined), false)
+})
+
+test('Focus for a character in no campaign spends the heart die and stores nothing; a campaign character must name its roll', async () => {
+  const { env, events } = fakeChannel()
+  const before = await playState(wanderer)
+  const done = ok(await focusRoll(db, env, 'owner', { characterId: wanderer, rollId: null, dieIndex: 0 }))
+  assert.equal(done.roll, null)
+  assert.equal((await playState(wanderer)).state.hp.heartDieCurrent, before.state.hp.heartDieCurrent - 2)
+  assert.equal((await spendEvents(wanderer)).length, 1)
+  assert.equal(events.length, 0)
+  refused(await focusRoll(db, env, 'owner', { characterId: ysolde, rollId: null, dieIndex: 0 }), 409, 'in_campaign')
+})
+
+test('a concurrent change aborts Focus whole: a sheet write between load and commit leaves the roll unfocused and the die unspent', async () => {
+  const { env } = fakeChannel()
+  const r = ok(await rollForCharacter(db, env, 'owner', check(ysolde), seq(3, 2)))
+  const before = await playState(ysolde)
+  const racing = racingDb('UPDATE character SET revision = revision + 1 WHERE id = ?', ysolde)
+  refused(await focusRoll(racing, env, 'owner', { characterId: ysolde, rollId: r.roll!.id, dieIndex: 0 }), 409, 'conflict')
+  assert.equal((await rollRow(r.roll!.id))!.total, 5)
+  assert.equal((await playState(ysolde)).state.hp.heartDieCurrent, before.state.hp.heartDieCurrent)
+  assert.equal((await spendEvents(ysolde)).length, 0)
+  // Two Focus requests on one roll at once: exactly one wins.
+  const results = await Promise.all([0, 1].map((dieIndex) => focusRoll(db, env, 'owner', { characterId: ysolde, rollId: r.roll!.id, dieIndex })))
+  assert.equal(results.filter((x) => x.ok).length, 1)
+  assert.equal((await spendEvents(ysolde)).length, 1)
+})
+
+// ---- Wisdom of Experience: reroll 1s -----------------------------------------------------------------
+
+const wise = (id: string) => editPlay(id, (s) => { s.professions[0]!.rerollOnes = true })
+
+test('Wisdom of Experience rerolls every kept 1 on a stored check: no complication, a 1 on the reroll stands, once', async () => {
+  await wise(ysolde)
+  const { env, events } = fakeChannel()
+  const double = ok(await rollForCharacter(db, env, 'owner', check(ysolde), seq(1, 1)))
+  assert.equal(double.roll!.complication, 'double')
+  const done = ok(await rerollOnesRoll(db, env, 'owner', double.roll!.id, seq(1, 5)))
+  assert.equal(done.roll.complication, 'none')
+  assert.deepEqual(done.roll.dice.map((d) => [d.value, d.rerolled]), [[1, 1], [5, 5]])
+  assert.equal(done.roll.total, 6)
+  assert.deepEqual(await rollRow(double.roll!.id), { complication: 'none', total: 6, dice: JSON.stringify(done.roll.dice) })
+  assert.equal(events.length, 2)
+  refused(await rerollOnesRoll(db, env, 'owner', double.roll!.id, seq(6)), 409, 'already_resolved')
+  const pending = await pendingRoll(env)
+  assert.equal(ok(await rerollOnesRoll(db, env, 'owner', pending.roll!.id, seq(6))).roll.total, 10)
+  refused(await resolveComplication(db, env, 'owner', pending.roll!.id, 'reroll'), 409, 'already_resolved')
+})
+
+test('Wisdom of Experience is refused: no such profession, a save, a settled 1, not the roller', async () => {
+  const { env } = fakeChannel()
+  const pending = await pendingRoll(env)
+  refused(await rerollOnesRoll(db, env, 'owner', pending.roll!.id), 403, 'forbidden')
+  await wise(ysolde)
+  refused(await rerollOnesRoll(db, env, 'gm', pending.roll!.id), 403, 'forbidden')
+  const save = ok(await rollForCharacter(db, env, 'owner', { ...check(ysolde), type: 'save' }, seq(1, 4)))
+  refused(await rerollOnesRoll(db, env, 'owner', save.roll!.id), 409, 'already_resolved')
+  ok(await resolveComplication(db, env, 'owner', pending.roll!.id, 'fail'))
+  refused(await rerollOnesRoll(db, env, 'owner', pending.roll!.id), 409, 'already_resolved')
+  assert.equal((await rollRow(pending.roll!.id))!.complication, 'failed')
+  refused(await rerollOnesRoll(db, env, 'owner', 'nope'), 404, 'not_found')
 })
