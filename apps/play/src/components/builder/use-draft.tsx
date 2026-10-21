@@ -59,9 +59,15 @@ export type UseDraft = {
   revision: number
   status: SaveStatus
   preview: DraftPreview
-  /** Changes steps 1–5. Saved after a pause. */
+  /**
+   * Changes the draft's content (steps 1–5 and the step 6–7 actions together). Saved after a pause. `change` is run on
+   * the content on screen now and, after a conflict, again on the other tab's draft: it must compute from the content
+   * it is given, never from a copy taken earlier.
+   */
+  edit(change: Edit): void
+  /** Changes steps 1–5 (an `edit` of the builder only). */
   update(change: Partial<BuilderInput> | ((builder: BuilderInput) => BuilderInput)): void
-  /** Changes the step 6–7 actions (B1b). Saved after a pause. */
+  /** Changes the step 6–7 actions (B1b; an `edit` of the pending list only). */
   setPending(change: ClientAction[] | ((pending: ClientAction[]) => ClientAction[])): void
   /** Saves now. Resolves with the saved document, or null when the save failed (`status` says why). */
   flush(): Promise<CharacterDoc | null>
@@ -74,7 +80,7 @@ const isResult = (r: unknown): r is CharacterResult => typeof r === 'object' && 
 // ---- The saver (pure; the hook below wraps it for React) ------------------------------------------
 
 /** One change made on this screen, kept until it saves so it can be reapplied to another tab's draft after a conflict. */
-type Edit = (content: DraftContent) => DraftContent
+export type Edit = (content: DraftContent) => DraftContent
 
 export type DraftSnapshot = DraftContent & { revision: number; status: SaveStatus }
 
@@ -227,5 +233,5 @@ export function useDraft(initial: CharacterDoc): UseDraft {
 
   const preview = useMemo(() => computePreview(builder, pending), [builder, pending])
 
-  return { id: initial.id, builder, pending, revision, status, preview, update, setPending, flush: saver.flush, leaving }
+  return { id: initial.id, builder, pending, revision, status, preview, edit: saver.edit, update, setPending, flush: saver.flush, leaving }
 }

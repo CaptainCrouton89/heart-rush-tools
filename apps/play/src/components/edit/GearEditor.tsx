@@ -6,6 +6,7 @@ import type {
 import { Button } from '@heartrush/ui/components/button'
 import { Input } from '@heartrush/ui/components/input'
 import type { PlayCatalogue } from '~/catalogue'
+import { WriteIn } from '~/components/builder/write-in'
 import type { ActionDraft } from '~/components/sheet/use-character'
 import { Check, CommitNumber, CommitText, Field, Picker, numberInputProps, parseNumber } from './fields'
 
@@ -102,14 +103,14 @@ export function GearEditor({ value, onChange }: { value: Character; catalogue: P
 
       <div className="flex flex-col gap-3">
         <h3 className="eyebrow">Armor</h3>
-        <div className="grid grid-cols-[minmax(0,1fr)_6rem] gap-3">
+        <WriteIn field="armor" className="grid grid-cols-[minmax(0,1fr)_6rem] gap-3">
           <Field label="Armor name">
             {(id) => <CommitText id={id} value={gear.armor.name} placeholder="Leather" onCommit={(name) => onChange({ kind: 'gear:armor:set', armor: { name } })} />}
           </Field>
           <Field label="Misc">
             {(id) => <CommitNumber id={id} kind="signed" value={gear.armor.misc} onCommit={(misc) => onChange({ kind: 'gear:armor:set', armor: { misc } })} />}
           </Field>
-        </div>
+        </WriteIn>
         <Picker label="Armor weight" value={gear.armor.weight} options={ARMOR_WEIGHTS} onChange={(weight) => onChange({ kind: 'gear:armor:set', armor: { weight } })} />
         <div>
           <Check checked={gear.armor.worn} onChange={(worn) => onChange({ kind: 'gear:wear', piece: 'armor', worn })}>
@@ -120,14 +121,14 @@ export function GearEditor({ value, onChange }: { value: Character; catalogue: P
 
       <div className="flex flex-col gap-3">
         <h3 className="eyebrow">Shield</h3>
-        <div className="grid grid-cols-[minmax(0,1fr)_6rem] gap-3">
+        <WriteIn field="shield" className="grid grid-cols-[minmax(0,1fr)_6rem] gap-3">
           <Field label="Shield name">
             {(id) => <CommitText id={id} value={gear.shield.name} onCommit={(name) => onChange({ kind: 'gear:shield:set', shield: { name } })} />}
           </Field>
           <Field label="Misc">
             {(id) => <CommitNumber id={id} kind="signed" value={gear.shield.misc} onCommit={(misc) => onChange({ kind: 'gear:shield:set', shield: { misc } })} />}
           </Field>
-        </div>
+        </WriteIn>
         <Picker label="Shield weight" value={gear.shield.weight} options={SHIELD_WEIGHTS} onChange={(weight) => onChange({ kind: 'gear:shield:set', shield: { weight } })} />
         <div>
           <Check checked={gear.shield.worn} onChange={(worn) => onChange({ kind: 'gear:wear', piece: 'shield', worn })}>
@@ -144,7 +145,7 @@ export function GearEditor({ value, onChange }: { value: Character; catalogue: P
           <ul className="flex flex-col gap-4">
             {gear.items.map((item) => (
               <li key={item.id} className="flex flex-col gap-2 border-b border-border pb-4 last:border-b-0">
-                <div className="grid grid-cols-[minmax(0,1fr)_4.5rem_4.5rem] items-end gap-2">
+                <WriteIn field={`gear:${item.id}`} className="grid grid-cols-[minmax(0,1fr)_4.5rem_4.5rem] items-end gap-2">
                   <Field label="Item">
                     {(id) => (
                       <CommitText id={id} value={item.name} onCommit={(name) => onChange({ kind: 'gear:item:edit', item: { id: item.id, name } })} />
@@ -160,7 +161,7 @@ export function GearEditor({ value, onChange }: { value: Character; catalogue: P
                       <CommitNumber id={id} value={item.quantity} onCommit={(quantity) => onChange({ kind: 'gear:item:edit', item: { id: item.id, quantity } })} />
                     )}
                   </Field>
-                </div>
+                </WriteIn>
                 <div className="flex items-end gap-2">
                   <Field label="Notes" className="flex-1">
                     {(id) => (
@@ -196,10 +197,10 @@ function WeaponRow({ weapon: w, onChange }: { weapon: Weapon; onChange: (action:
   const edit = (patch: Partial<Omit<Weapon, 'id'>>) => onChange({ kind: 'gear:weapon:edit', weapon: { id: w.id, ...patch } })
   return (
     <li className="flex flex-col gap-3 border-b border-border pb-4 last:border-b-0">
-      <div className="grid grid-cols-[minmax(0,1fr)_6rem] gap-3">
+      <WriteIn field={`gear:${w.id}`} className="grid grid-cols-[minmax(0,1fr)_6rem] gap-3">
         <Field label="Weapon">{(id) => <CommitText id={id} value={w.name} onCommit={(name) => edit({ name })} />}</Field>
         <Field label="Misc">{(id) => <CommitNumber id={id} kind="signed" value={w.misc} onCommit={(misc) => edit({ misc })} />}</Field>
-      </div>
+      </WriteIn>
       <Picker label="Size" value={w.size} options={SIZES} onChange={(size) => edit({ size })} />
       <Picker label="Damage type" value={w.damageType} options={DAMAGE_TYPES} onChange={(damageType) => edit({ damageType })} />
       <Picker label="Attack type" value={w.attackType} options={ATTACK_TYPES} onChange={(attackType) => edit({ attackType })} />

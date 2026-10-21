@@ -7,6 +7,7 @@ import { getCatalogue, raceImageUrl, rulebookUrl } from '~/catalogue'
 import { ExplainButton } from '~/components/ai/ExplainButton'
 import { Section } from '~/components/sheet/SheetLayout'
 import { labelClass, type UseDraft } from './use-draft'
+import { WriteIn } from './write-in'
 
 const FREQUENCY: Record<string, string> = { passive: 'Passive', minor: 'Minor', major: 'Major', weekly: 'Weekly', monthly: 'Monthly' }
 
@@ -51,7 +52,9 @@ export function StepKin({ draft }: { draft: UseDraft }) {
 
       {race && (
         <div className="flex flex-col gap-6">
-          <RaceHeader race={race} />
+          <WriteIn field="kin" className="block">
+            <RaceHeader race={race} />
+          </WriteIn>
           <Abilities title={`${race.title} abilities`} abilities={race.abilities} explain={explain} />
           {race.choices.map((c) => (
             <Choice key={c.id} choice={c} value={builder.kinChoices[c.id] ?? ''} onChange={(v) => answer(c.id, v)} explain={explain} />
@@ -197,7 +200,15 @@ function Abilities({ title, abilities, explain }: { title: string; abilities: Pl
  * One creation-time choice: `options` as a radio group with each option's abilities; `talent` as a searchable picker.
  * The chosen option's abilities are ability rows like the race's, with **Explain** once the draft is previewable.
  */
-function Choice({ choice, value, onChange, explain }: { choice: PlayChoice; value: string; onChange: (value: string) => void; explain: ExplainFor }) {
+function Choice(props: { choice: PlayChoice; value: string; onChange: (value: string) => void; explain: ExplainFor }) {
+  return (
+    <WriteIn field={`kinChoice:${props.choice.id}`} className="block">
+      <ChoiceBody {...props} />
+    </WriteIn>
+  )
+}
+
+function ChoiceBody({ choice, value, onChange, explain }: { choice: PlayChoice; value: string; onChange: (value: string) => void; explain: ExplainFor }) {
   if (choice.kind === 'talent') return <TalentChoice choice={choice} value={value} onChange={onChange} />
   return (
     <fieldset className="flex flex-col gap-3">

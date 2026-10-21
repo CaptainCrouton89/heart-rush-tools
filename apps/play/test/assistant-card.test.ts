@@ -164,7 +164,7 @@ test('gear lines become one gear action each, with misc 0, and need a sketch cha
   assert.equal(sketch.gear.armor.worn, true)
 })
 
-test('settleTurn drops options with non-rules links and unknown refs, fixes catalogue links, and nulls an empty decision', () => {
+test('settleTurn drops options with non-rules links and unknown refs, fixes catalogue links, and nulls a decision left with fewer than two options', () => {
   const draft = ysolde()
   const option = (over: Partial<Turn['decision'] extends infer D ? (D extends { options: (infer O)[] } ? O : never) : never>) =>
     ({ label: 'x', feel: 'f', link: 'https://rules.heartrush.party/player/kin-culture/goblin', ref: null, ...over }) as never
@@ -193,6 +193,10 @@ test('settleTurn drops options with non-rules links and unknown refs, fixes cata
   const none = settleTurn({ ...turn, decision: { ...turn.decision!, options: turn.decision!.options.slice(1, 5) } }, draft, catalogue)
   assert.equal(none.decision, null)
   assert.equal(none.text, 'hi')
+  // One real option and one dropped: a single choice is not a decision; the message still asks.
+  const one = settleTurn({ ...turn, decision: { ...turn.decision!, options: turn.decision!.options.slice(0, 2) } }, draft, catalogue)
+  assert.equal(one.decision, null)
+  assert.equal(one.text, 'hi')
 })
 
 test('settleTurn drops a talent option the draft cannot buy now and keeps one it can', () => {
@@ -212,6 +216,11 @@ test('settleTurn drops a talent option the draft cannot buy now and keeps one it
   }
   const out = settleTurn(turn, draft, catalogue)
   assert.deepEqual(out.decision!.options.map((o) => o.label), ['Action Surge', 'Other'])
+  assert.equal(out.decision!.seeAll, 'talents', 'with a kin, See all talents opens step 6')
+  // Before a kin is chosen, step 6 cannot open: See all talents is dropped and the options stay.
+  const noKin = settleTurn(turn, ysolde(), catalogue)
+  assert.equal(noKin.decision!.seeAll, null)
+  assert.deepEqual(noKin.decision!.options.map((o) => o.label), ['Action Surge', 'Attraction', 'Other'])
 })
 
 test('settleTurn drops refused lines, stamps ids and before values, and nulls an empty card', () => {
@@ -233,22 +242,28 @@ test('turnSchema accepts a turn with both members null and rejects unknown line 
   assert.ok(!turnSchema.safeParse({ message: 'x', decision: { question: 'q', options: [], seeAll: null }, card: null }).success)
 })
 
-test('stepOpen: reachable steps, finished steps 1–5 out of order, and steps 6–7 once they hold an action', () => {
+test('stepOpen: reachable steps, step 2 always, finished steps 1–5 out of order, and steps 6–7 once a kin or an action is there', () => {
   const unnamed = newBuilder('01H', at, { name: '', pronouns: '', dream: '', portrait: null })
   const none: ClientAction[] = []
   const buy: ClientAction = { kind: 'xp:buy', purchase: 'talent:combat', talent: { catalogueId: 'player.talents.action-surge' }, id: 'a', at }
   const gear: ClientAction = { kind: 'gear:item:add', item: { name: 'Rope', slots: 1, quantity: 1, notes: '' }, id: 'b', at }
-  // Nothing finished: only step 1 is open (it is the first unfinished step).
-  assert.deepEqual([1, 2, 3, 4, 5, 6, 7].map((n) => stepOpen(n as 1, unnamed, none)), [true, false, false, false, false, false, false])
+  // Nothing finished: step 1 (the first unfinished step) and step 2 (kin needs nothing before it) are open.
+  assert.deepEqual([1, 2, 3, 4, 5, 6, 7].map((n) => stepOpen(n as 1, unnamed, none)), [true, true, false, false, false, false, false])
   // A written aspect pair finishes step 5 though steps 1–4 are not: step 5 opens out of order.
   const aspects = { ...unnamed, createdAspects: ['Loyal', 'Stubborn'] as [string, string] }
   assert.equal(stepOpen(5, aspects, none), true)
   assert.equal(stepOpen(4, aspects, none), false)
-  // Steps 6 and 7 open on an xp:buy or a gear action.
+  // With no kin, steps 6 and 7 open only on an xp:buy or a gear action.
   assert.equal(stepOpen(6, unnamed, [buy]), true)
   assert.equal(stepOpen(7, unnamed, [buy]), false)
   assert.equal(stepOpen(7, unnamed, [gear]), true)
-  // A complete builder opens everything through the first unfinished step (here step 6 is the next, 7 stays shut).
+  // An unnamed draft with a kin chosen: steps 6 and 7 open on the sketch character (See all talents shows the catalogue).
+  const kin = { ...unnamed, raceId: CENTAUR.id }
+  assert.deepEqual([1, 2, 3, 4, 5, 6, 7].map((n) => stepOpen(n as 1, kin, none)), [true, true, false, false, false, true, true])
+  // A kin whose choices are not made has no sketch yet: steps 6–7 stay shut.
+  const unchosen = [...catalogue.races.values()].find((r) => r.choices.length > 0)!
+  assert.deepEqual([6, 7].map((n) => stepOpen(n as 6, { ...unnamed, raceId: unchosen.id }, none)), [false, false])
+  // A complete builder opens everything.
   const done: BuilderInput = {
     ...unnamed, name: 'Ysolde', raceId: CENTAUR.id, dice: { might: 6, agility: 6, cunning: 4, presence: 4 },
     createdAspects: ['Loyal', 'Stubborn'], professions: [{ name: 'Smith', rank: 2 }, { name: 'Cook', rank: 2 }],

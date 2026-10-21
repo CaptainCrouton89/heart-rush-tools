@@ -14,7 +14,7 @@ import { AiFailureLine } from '~/components/ai/AiFailure'
 import type { StepNumber } from '~/components/builder/draft-rules'
 import type { UseDraft } from '~/components/builder/use-draft'
 import { DecisionView } from './DecisionView'
-import { ProposalCard } from './ProposalCard'
+import { ProposalCard, type Applied } from './ProposalCard'
 import { useElapsed, type UseAssistant } from './use-assistant'
 
 /** Shown above an empty chat; not stored. */
@@ -35,15 +35,18 @@ export function AssistantPanel({
   assistant,
   draft,
   onOpenStep,
+  onApplied,
 }: {
   assistant: UseAssistant
   /** The builder's draft; null on `/characters/new` before the draft exists. */
   draft: UseDraft | null
   /**
    * Moves the builder to a step. `show` is true for See all and a card heading: on phone the route also switches to the
-   * Builder tab. It is false after Apply: the builder moves behind the chat, and the Builder tab gets its dot.
+   * Builder tab.
    */
   onOpenStep: (step: StepNumber, show: boolean) => void
+  /** After a card's Apply saved: the route moves the builder behind the chat and writes the values in. */
+  onApplied: (applied: Applied) => void
 }) {
   const { messages, running } = assistant
   const scroller = useRef<HTMLDivElement>(null)
@@ -85,7 +88,7 @@ export function AssistantPanel({
                 busy={busy}
                 onSend={send}
                 onOpenStep={onOpenStep}
-                onApplied={assistant.noteApplied}
+                onApplied={onApplied}
               />
             </li>
           ))}
@@ -115,7 +118,7 @@ function Message({
   busy: boolean
   onSend: (text: string) => void
   onOpenStep: (step: StepNumber, show: boolean) => void
-  onApplied: () => void
+  onApplied: (applied: Applied) => void
 }) {
   if (message.role === 'player') {
     return (
@@ -142,7 +145,7 @@ function AssistantTurn({
   busy: boolean
   onSend: (text: string) => void
   onOpenStep: (step: StepNumber, show: boolean) => void
-  onApplied: () => void
+  onApplied: (applied: Applied) => void
 }) {
   return (
     <div>

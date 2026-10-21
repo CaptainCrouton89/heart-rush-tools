@@ -9,6 +9,7 @@ import { cn } from '@heartrush/ui/lib/utils'
 import { Section } from '~/components/sheet/SheetLayout'
 import { ABILITIES, AGE, sketchCharacter, type Age } from './draft-rules'
 import { Field, labelClass, type UseDraft } from './use-draft'
+import { WriteIn } from './write-in'
 
 /**
  * Step 3 (Your Vitals, Your Age and Experience): the four ability tiles take d6, d6, d4, d4; the age category with its
@@ -59,7 +60,7 @@ export function StepVitals({ draft }: { draft: UseDraft }) {
           {ABILITIES.map((a) => {
             const die = builder.dice[a.id]
             return (
-              <div key={a.id} className={cn('flex items-center justify-between gap-3 rounded-md border p-3', die ? 'border-primary' : 'border-border')}>
+              <WriteIn key={a.id} field={`die:${a.id}`} className={cn('flex items-center justify-between gap-3 rounded-md border p-3', die ? 'border-primary' : 'border-border')}>
                 <span id={`${ids}-die-${a.id}`} className="text-control font-medium">
                   {a.label}
                 </span>
@@ -76,7 +77,7 @@ export function StepVitals({ draft }: { draft: UseDraft }) {
                     d4
                   </ToggleGroupItem>
                 </ToggleGroup>
-              </div>
+              </WriteIn>
             )
           })}
         </div>
@@ -85,6 +86,7 @@ export function StepVitals({ draft }: { draft: UseDraft }) {
       <fieldset className="flex flex-col gap-3">
         <legend className={cn(labelClass, 'mb-1')}>Age</legend>
         <p className="text-meta text-muted-foreground">Optional; most characters are adults.</p>
+        <WriteIn field="age" className="flex flex-col gap-3">
         <ToggleGroup type="single" aria-label="Age" value={builder.ageCategory} onValueChange={(v) => v && chooseAge(v as Age)} className="w-full">
           {(Object.keys(AGE) as Age[]).map((a) => (
             <ToggleGroupItem key={a} value={a}>
@@ -135,6 +137,7 @@ export function StepVitals({ draft }: { draft: UseDraft }) {
         {builder.ageBenefits.includes('wisdom-of-experience') && (
           <p className="text-meta text-muted-foreground">You choose the profession Wisdom of Experience applies to in the next step.</p>
         )}
+        </WriteIn>
       </fieldset>
 
       <BloodmarkLevel value={builder.bloodmarkLevel} onChange={(bloodmarkLevel) => update({ bloodmarkLevel })} />
@@ -156,6 +159,7 @@ function BloodmarkLevel({ value, onChange }: { value: number; onChange: (value: 
         <Button size="compact-icon" type="button" variant="line" aria-label="One fewer bloodmark" disabled={value <= 0} onClick={() => onChange(value - 1)}>
           −
         </Button>
+        <WriteIn field="bloodmarkLevel">
         <Input
           aria-labelledby={`${ids}-label`}
           className="h-11 w-20 text-center tabular-nums"
@@ -167,6 +171,7 @@ function BloodmarkLevel({ value, onChange }: { value: number; onChange: (value: 
             onChange(Math.min(n, 20))
           }}
         />
+        </WriteIn>
         <Button size="compact-icon" type="button" variant="line" aria-label="One more bloodmark" disabled={value >= 20} onClick={() => onChange(value + 1)}>
           +
         </Button>

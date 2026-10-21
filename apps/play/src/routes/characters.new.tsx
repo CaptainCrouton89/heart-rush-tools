@@ -142,7 +142,7 @@ function NewCharacter() {
           {/* On phone the builder's alert is out of sight: a draft that could not be made shows here too. */}
           {!desktop && panel === 'assistant' && notice && <div className="px-5 pt-4">{notice}</div>}
           <div className="min-h-0 flex-1">
-            <AssistantPanel assistant={panelState} draft={null} onOpenStep={() => {}} />
+            <AssistantPanel assistant={panelState} draft={null} onOpenStep={() => {}} onApplied={() => {}} />
           </div>
         </div>
       }

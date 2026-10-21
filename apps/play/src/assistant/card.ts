@@ -12,7 +12,7 @@ import { price, xpRemaining } from '@heartrush/rules-engine/pricing'
 import type { PlayChoice, PlayTalent } from '@heartrush/rules-engine/catalogue'
 import { RuleError, type AbilityId, type BuilderInput, type Character, type ClientAction, type RuleErrorCode } from '@heartrush/rules-engine/types'
 import { getCatalogue, RULES_ORIGIN, rulebookUrl, type PlayCatalogue } from '~/catalogue'
-import { AGE, sketchPreview, stepProblems, type DraftContent, type StepNumber } from '~/components/builder/draft-rules'
+import { AGE, sketchPreview, stepOpen, stepProblems, type DraftContent, type FieldKey, type StepNumber } from '~/components/builder/draft-rules'
 import { refusalReason } from '~/components/sheet/refusal-text'
 import type { CardLine, Json, StoredCard, StoredLine, TurnDecision, TurnOption, Turn } from './schema'
 
@@ -293,6 +293,20 @@ function checkAction(line: ActionLine, action: ClientAction, working: DraftConte
 
 // ---- The public functions -------------------------------------------------------------------------
 
+/** The value a line writes, as the builder names it to write it in after Apply. */
+export function lineField(line: StoredLine): FieldKey {
+  switch (line.kind) {
+    case 'kinChoice': return `kinChoice:${line.choiceId}`
+    case 'die': return `die:${line.ability}`
+    case 'aspect': return `aspect:${line.slot}`
+    case 'name': case 'pronouns': case 'dream': case 'kin': case 'age': case 'bloodmarkLevel': case 'professions': return line.kind
+    case 'talent': return `action:${line.id}`
+    // The engine gives the weapon or item an added action creates the id `<action id>:0` (ruling 6).
+    case 'weapon': case 'item': return `gear:${line.id}:0`
+    case 'armor': case 'shield': return line.kind
+  }
+}
+
 /** The builder step a line belongs to (a card heading links to it). */
 export const lineStep = (line: LineInput): StepNumber => (isBuilderLine(line) ? spec(line).step : ACTION_STEP[line.kind as ActionKind])
 
@@ -358,6 +372,20 @@ export function applyCard(lines: readonly StoredLine[], draft: DraftContent): Ap
   return { builder: working.builder, pending: working.pending, applied, refused, earliestStep: steps.length ? (Math.min(...steps) as StepNumber) : null }
 }
 
+/**
+ * Apply as one draft change: `applyCard` run on whatever content the change is given. `useDraft` runs it on the draft on
+ * screen and, when the save conflicts, again on the other tab's draft, so every line is checked against the draft it is
+ * actually written to (a line whose field the other tab changed is refused as `changed`). `onResult` gets each run's
+ * outcome; the last one is what was saved.
+ */
+export function cardEdit(lines: readonly StoredLine[], onResult: (result: AppliedCard) => void): (content: DraftContent) => DraftContent {
+  return (content) => {
+    const result = applyCard(lines, content)
+    onResult(result)
+    return { builder: result.builder, pending: result.pending }
+  }
+}
+
 // ---- Settling a turn (server) ---------------------------------------------------------------------
 
 /** `url` is `origin + path` itself or something under it (`#anchor`, `?query`, `/more`). */
@@ -401,7 +429,8 @@ function settleOption(option: TurnOption, draft: DraftContent, catalogue: PlayCa
 /**
  * The turn as the server stores it. Options naming an unknown race, subrace or talent, a talent the draft cannot buy now, or
  * a link outside the rules site are dropped (a catalogue option with a link elsewhere on the site gets its catalogue link);
- * with no option left the decision is null. Lines `checkCard` refuses are dropped; with no line left the card is null. Each
+ * with fewer than two options left the decision is null (the message still asks; the player answers by typing). **See all
+ * talents** is dropped while the builder could not open step 6. Lines `checkCard` refuses are dropped; with no line left the card is null. Each
  * kept line gets an `id` and its field's value in the stored draft as `before`; talent and gear lines get the settle time
  * as `at`, and their `id` becomes the pending action's id on Apply.
  */
@@ -410,7 +439,8 @@ export function settleTurn(turn: Turn, draft: DraftContent, catalogue: PlayCatal
   const now = stamp.now ?? new Date().toISOString()
 
   const options = turn.decision?.options.flatMap((o) => settleOption(o, draft, catalogue) ?? []) ?? []
-  const decision = turn.decision && options.length > 0 ? { ...turn.decision, options } : null
+  const seeAll = turn.decision?.seeAll === 'talents' && !stepOpen(6, draft.builder, draft.pending) ? null : (turn.decision?.seeAll ?? null)
+  const decision = turn.decision && options.length >= 2 ? { ...turn.decision, options, seeAll } : null
 
   let card: StoredCard | null = null
   if (turn.card) {

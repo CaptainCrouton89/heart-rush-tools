@@ -167,15 +167,28 @@ export function sketchPreview(builder: BuilderInput, pending: readonly ClientAct
 }
 
 /**
- * Whether the step bar lets the player open step `n`: every step up to the first unfinished one, any finished step
- * 1–5, and step 6 or 7 once it holds an XP purchase or a gear action.
+ * Whether the step bar lets the player open step `n` (the build route opens `?step=` by the same rule): every step up to
+ * the first unfinished one; step 2 always (kin needs nothing before it); any finished step 1–5; and step 6 or 7 once a
+ * kin is chosen (the step works on the sketch character) or once it holds an XP purchase or a gear action.
  */
 export function stepOpen(n: StepNumber, builder: BuilderInput, pending: readonly ClientAction[]): boolean {
-  if (n <= reachableStep(builder)) return true
+  if (n <= reachableStep(builder) || n === 2) return true
   if (n <= 5) return stepProblems(n, builder).length === 0
-  if (n === 6) return pending.some((a) => a.kind === 'xp:buy')
-  return pending.some((a) => a.kind.startsWith('gear:'))
+  if (pending.some((a) => (n === 6 ? a.kind === 'xp:buy' : a.kind.startsWith('gear:')))) return true
+  return sketchCharacter(builder) !== null
 }
+
+/**
+ * A value the builder shows, named so the creation assistant's Apply can say which ones it just wrote (they are written
+ * in with the restyle's motion, `write-in.tsx`).
+ */
+export type FieldKey =
+  | 'name' | 'pronouns' | 'dream' | 'kin' | 'age' | 'bloodmarkLevel' | 'professions' | 'armor' | 'shield'
+  | `kinChoice:${string}` | `die:${AbilityId}` | `aspect:${1 | 2}`
+  /** A pending XP purchase, by action id. */
+  | `action:${string}`
+  /** A weapon or item, by the id of the record in the character's gear. */
+  | `gear:${string}`
 
 /** What a draft holds besides its id: steps 1–5 and the pending step 6–7 actions. */
 export type DraftContent = { builder: BuilderInput; pending: ClientAction[] }

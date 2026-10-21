@@ -9,6 +9,7 @@ import { describeAction } from '~/components/sheet/HistoryList'
 import { Section } from '~/components/sheet/SheetLayout'
 import { BloodmarkPanel } from './BloodmarkPanel'
 import type { UseDraft } from './use-draft'
+import { WriteIn } from './write-in'
 import { Written } from '~/components/motion'
 
 /** The pending actions step 6 makes; step 7's are `gear:*`. */
@@ -51,10 +52,10 @@ export function StepTalents({ draft }: { draft: UseDraft }) {
           <ul className="flex flex-col">
             {added.map((a) => (
               <li key={a.id} className="flex min-h-11 items-center justify-between gap-3 border-b border-border text-control last:border-b-0">
-                <span className={invalid.has(a.id) ? 'text-destructive' : undefined}>
+                <WriteIn field={`action:${a.id}`} className={invalid.has(a.id) ? 'text-destructive' : undefined}>
                   {describeAction(a)}
                   {invalid.has(a.id) && <span className="ml-2 text-meta">no longer allowed</span>}
-                </span>
+                </WriteIn>
                 <Button size="compact" type="button" variant="line" onClick={() => setPending((p) => p.filter((x) => x.id !== a.id))}>
                   Remove
                 </Button>

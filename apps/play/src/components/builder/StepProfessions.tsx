@@ -3,6 +3,7 @@ import { Button } from '@heartrush/ui/components/button'
 import { Input } from '@heartrush/ui/components/input'
 import { AGE } from './draft-rules'
 import { Field, selectClass, type UseDraft } from './use-draft'
+import { WriteIn } from './write-in'
 
 const MAX_PROFESSIONS = 3
 
@@ -31,6 +32,7 @@ export function StepProfessions({ draft }: { draft: UseDraft }) {
         {remaining >= 0 ? `${remaining} of ${age.ranks} ranks left` : `${-remaining} ranks too many (${total} of ${age.ranks})`}
       </p>
 
+      <WriteIn field="professions" className="block">
       <ul className="flex flex-col gap-3">
         {rows.map((p, i) => (
           <li key={i} className="flex flex-wrap items-center gap-2">
@@ -64,6 +66,7 @@ export function StepProfessions({ draft }: { draft: UseDraft }) {
           </li>
         ))}
       </ul>
+      </WriteIn>
       {rows.length < MAX_PROFESSIONS && (
         <Button size="compact" type="button" variant="line" className="self-start" disabled={remaining <= 0} onClick={() => setRows([...rows, { name: '', rank: 1 }])}>
           Add a profession

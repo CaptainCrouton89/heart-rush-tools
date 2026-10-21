@@ -2,11 +2,14 @@
 // the draft (after step 1, or on the assistant's first message); this route edits it until Finish. The current step is
 // in the URL (`?step=`) and so is the open tab on phone (`?panel=assistant`), so reload and Back keep the player's place.
 import { createFileRoute, notFound, redirect, useNavigate } from '@tanstack/react-router'
+import { useMemo, useState } from 'react'
 import { AssistantPanel } from '~/components/assistant/AssistantPanel'
+import type { Applied } from '~/components/assistant/ProposalCard'
 import { useAssistant } from '~/components/assistant/use-assistant'
 import { BuilderLayout, BuilderShell, showingOf, toPanel, useDesktop, type Panel } from '~/components/builder/BuilderShell'
-import { reachableStep, stepOpen, toStep, type StepNumber } from '~/components/builder/draft-rules'
+import { reachableStep, stepOpen, toStep, type FieldKey, type StepNumber } from '~/components/builder/draft-rules'
 import { useDraft } from '~/components/builder/use-draft'
+import { WrittenInProvider, type WrittenIn } from '~/components/builder/write-in'
 import { getCharacterFn, type CharacterDoc } from '~/server/characters'
 
 function DraftNotFound() {
@@ -62,6 +65,20 @@ function BuildPage() {
   const onOpenStep = (next: StepNumber, show: boolean) =>
     void navigate({ search: (s) => ({ ...s, step: next, panel: show ? undefined : s.panel }) })
 
+  // The values the last Apply wrote, until each has been written in on screen (`write-in.tsx`).
+  const [fields, setFields] = useState<ReadonlySet<FieldKey>>(new Set())
+  const writtenIn = useMemo<WrittenIn>(
+    () => ({ fields, done: (field) => setFields((f) => new Set([...f].filter((x) => x !== field))) }),
+    [fields],
+  )
+  // After Apply saved: the builder moves to the earliest step it changed, behind the chat (on phone the Assistant tab
+  // stays and Builder gets its dot), and the changed values are written in.
+  const onApplied = ({ step: next, fields: wrote }: Applied) => {
+    setFields(new Set(wrote))
+    assistant.noteApplied()
+    onOpenStep(next, false)
+  }
+
   if (assistant.notFound) return <DraftNotFound />
   return (
     <BuilderLayout
@@ -69,9 +86,11 @@ function BuildPage() {
       onPanel={onPanel}
       unread={assistant.unread}
       builder={
-        <BuilderShell key={initial.id} draft={draft} step={step} onStep={onStep} />
+        <WrittenInProvider value={writtenIn}>
+          <BuilderShell key={initial.id} draft={draft} step={step} onStep={onStep} />
+        </WrittenInProvider>
       }
-      assistant={<AssistantPanel assistant={assistant} draft={draft} onOpenStep={onOpenStep} />}
+      assistant={<AssistantPanel assistant={assistant} draft={draft} onOpenStep={onOpenStep} onApplied={onApplied} />}
     />
   )
 }

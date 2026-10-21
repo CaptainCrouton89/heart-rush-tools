@@ -7,6 +7,7 @@ import type { BuilderInput, ClientAction, DraftState } from '@heartrush/rules-en
 import { getCatalogue } from '../src/catalogue'
 import { createDraft, getCharacter, saveDraft, type CharacterDoc, type CharacterResult } from '../src/server/characters'
 import { createDraftSaver, type DraftSaver } from '../src/components/builder/use-draft'
+import { cardEdit, settleTurn, type AppliedCard } from '../src/assistant/card'
 import { NO_CONNECTION_TEXT } from '../src/components/sheet/refusal-text'
 import { openPlayDbs, type D1 } from './db'
 
@@ -114,4 +115,41 @@ test('a failed save keeps the change unsaved on screen and the next flush sends 
   down = false
   assert.ok(await a.flush())
   assert.equal((await stored(doc.id)).builder.dream, 'Kept')
+})
+
+test('Apply after a conflict checks the card against the other tab\'s draft: its d6 survives and the card\'s line is refused as changed', async () => {
+  // Cunning and Presence are not assigned yet; the card was made on this draft (its line's `before` is empty).
+  const start = { ...builder(), dice: { might: 6, agility: 6 } as BuilderInput['dice'] }
+  const doc = ok(await createDraft(db, 'owner', { builder: start }))
+  const card = settleTurn(
+    {
+      message: 'm',
+      decision: null,
+      card: { lines: [{ kind: 'die', ability: 'cunning', die: 4, reason: 'r' }, { kind: 'dream', text: 'Ride the storm', reason: 'r' }] },
+    },
+    { builder: start, pending: [] },
+    getCatalogue(),
+  ).card!.lines
+  const a = tab(doc)
+  const b = tab(doc)
+
+  // Tab B makes Agility d4 and Cunning d6 and saves first.
+  b.edit((d) => ({ ...d, builder: { ...d.builder, dice: { ...d.builder.dice, agility: 4, cunning: 6 } } }))
+  assert.ok(await b.flush())
+
+  // Tab A, still on the draft as first loaded, applies the card. On its own draft the d4 line is open.
+  let result: AppliedCard | null = null
+  a.edit(cardEdit(card, (r) => (result = r)))
+  assert.equal(a.snapshot().builder.dice.cunning, 4, 'on screen before the save, the card applied to the draft this tab held')
+  const saved = await a.flush()
+  assert.ok(saved, 'saved after the conflict')
+
+  const state = await stored(doc.id)
+  assert.equal(state.builder.dice.cunning, 6, "tab B's d6 survives")
+  assert.equal(state.builder.dice.agility, 4, "tab B's d4 survives")
+  assert.equal(state.builder.dream, 'Ride the storm', 'the line nobody else changed is written')
+  const last = result as AppliedCard | null
+  assert.deepEqual(last!.applied.map((l) => l.kind), ['dream'])
+  assert.deepEqual(last!.refused.map((r) => [r.line.kind, r.code]), [['die', 'changed']])
+  assert.equal(a.snapshot().builder.dice.cunning, 6, 'the screen shows what was saved')
 })

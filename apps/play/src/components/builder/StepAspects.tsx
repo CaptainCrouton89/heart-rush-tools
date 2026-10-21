@@ -4,6 +4,7 @@ import { ExplainAspectButton } from '~/components/ai/ExplainButton'
 import { Section } from '~/components/sheet/SheetLayout'
 import { sketchCharacter } from './draft-rules'
 import type { UseDraft } from './use-draft'
+import { WriteIn } from './write-in'
 
 const GOOD_ASPECT_PATH = '/player/building-your-character#what-makes-a-good-aspect'
 
@@ -49,13 +50,15 @@ export function StepAspects({ draft }: { draft: UseDraft }) {
             const aspect = written[i]
             return (
               <div key={i} className="flex items-center gap-1">
-                <Input
-                  aria-label={`Aspect ${i + 1}`}
-                  className="h-11"
-                  placeholder={i === 0 ? 'Chronic insomniac' : 'Kleptomaniac'}
-                  value={builder.createdAspects[i]}
-                  onChange={(e) => write(i, e.target.value)}
-                />
+                <WriteIn field={`aspect:${(i + 1) as 1 | 2}`} className="block flex-1">
+                  <Input
+                    aria-label={`Aspect ${i + 1}`}
+                    className="h-11"
+                    placeholder={i === 0 ? 'Chronic insomniac' : 'Kleptomaniac'}
+                    value={builder.createdAspects[i]}
+                    onChange={(e) => write(i, e.target.value)}
+                  />
+                </WriteIn>
                 {aspect && <ExplainAspectButton key={`${aspect.id}:${aspect.text}`} characterId={draft.id} aspectId={aspect.id} text={aspect.text} />}
               </div>
             )

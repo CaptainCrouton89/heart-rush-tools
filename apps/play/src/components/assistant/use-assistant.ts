@@ -47,7 +47,7 @@ export type UseAssistant = {
   stop(): Promise<void>
   /** Runs the stored last player message again (after a failure or Stop), or resends a message the server never got. */
   retry(): Promise<void>
-  /** Called by the proposal card after Apply wrote to the draft. */
+  /** Called by the route after a card's Apply saved (marks the Builder tab when it is hidden). */
   noteApplied(): void
 }
 

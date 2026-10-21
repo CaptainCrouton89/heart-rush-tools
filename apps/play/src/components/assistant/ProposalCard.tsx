@@ -2,16 +2,18 @@
 // step headings (each heading opens its step), each line's new value with the old one struck through, its reason and a
 // remove control, and **Apply**. Every render re-reads each line against the draft as it is now (`lineState`, then
 // `checkCard` over the lines still on the card): a line already in the draft shows as written, a line the rules refuse
-// or the builder changed shows pencil grey with "Can't apply: ‹reason›". Apply writes through `useDraft` exactly as the
-// builder's controls do (`update` and `setPending` once each, then `flush`) and moves the builder to the earliest step it
-// changed. Which lines were removed is this screen's state only: the stored card is never edited.
+// or the builder changed shows pencil grey with "Can't apply: ‹reason›". Apply is one `useDraft` edit that runs the card
+// on the content it is given (`cardEdit`), then `flush`: after a conflict the card is run again on the other tab's draft,
+// so each line is checked against the draft it is written to. Once saved, the builder moves to the earliest step it
+// changed and writes in the values it changed. Which lines were removed is this screen's state only: the stored card is
+// never edited.
 import { useState } from 'react'
 import { Button } from '@heartrush/ui/components/button'
 import { cn } from '@heartrush/ui/lib/utils'
-import { applyCard, checkCard, lineState, lineStep } from '~/assistant/card'
+import { cardEdit, checkCard, lineField, lineState, lineStep, type AppliedCard } from '~/assistant/card'
 import type { Json, StoredCard, StoredLine } from '~/assistant/schema'
 import { getCatalogue } from '~/catalogue'
-import { ABILITIES, AGE, STEPS, type StepNumber } from '~/components/builder/draft-rules'
+import { ABILITIES, AGE, STEPS, type FieldKey, type StepNumber } from '~/components/builder/draft-rules'
 import type { UseDraft } from '~/components/builder/use-draft'
 
 /** How one line reads on the card: the field it writes and its new value in words. */
@@ -95,6 +97,9 @@ function shown(line: StoredLine, before: Json, draft: UseDraft | null): string {
   }
 }
 
+/** What a saved Apply wrote. */
+export type Applied = { step: StepNumber; fields: FieldKey[] }
+
 type Row = { line: StoredLine; state: 'applied' | 'open' | 'refused'; reason: string | null }
 
 export function ProposalCard({
@@ -107,8 +112,8 @@ export function ProposalCard({
   /** Null on `/characters/new` before the draft exists: nothing can be applied yet. */
   draft: UseDraft | null
   onOpenStep: (step: StepNumber, show: boolean) => void
-  /** After Apply wrote to the draft (the panel marks the Builder tab). */
-  onApplied?: () => void
+  /** After Apply's change saved: the earliest step it wrote and the values it wrote (the builder moves there and writes them in). */
+  onApplied: (applied: Applied) => void
 }) {
   const [removed, setRemoved] = useState<ReadonlySet<string>>(new Set())
   const [applying, setApplying] = useState(false)
@@ -130,24 +135,21 @@ export function ProposalCard({
   const steps = [...new Set(rows.map((r) => lineStep(r.line)))].sort((a, b) => a - b)
 
   async function apply() {
-    if (!draft || !content) return
+    if (!draft) return
     setApplying(true)
     setUnsaved(false)
-    const result = applyCard(kept, content)
-    if (result.applied.length > 0) {
-      draft.update(() => result.builder)
-      draft.setPending(() => result.pending)
-    }
+    // The card's last run is the one on the draft that was saved (after a conflict, the other tab's).
+    let result: AppliedCard | null = null
+    draft.edit(cardEdit(kept, (r) => (result = r)))
     const saved = await draft.flush()
     setApplying(false)
     if (saved === null) {
-      // The changes stay in the draft on screen and the builder saves them with its next change.
+      // The change stays in the draft on screen and the builder saves it with its next change.
       setUnsaved(true)
       return
     }
-    if (result.applied.length > 0) onApplied?.()
-    // The builder moves to the step behind the chat; on phone the Assistant tab stays and Builder gets the dot.
-    if (result.earliestStep !== null) onOpenStep(result.earliestStep, false)
+    const wrote = result as AppliedCard | null
+    if (wrote && wrote.earliestStep !== null) onApplied({ step: wrote.earliestStep, fields: wrote.applied.map(lineField) })
   }
 
   return (
