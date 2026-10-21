@@ -2,7 +2,6 @@
 // the draft (after step 1, or on the assistant's first message); this route edits it until Finish. The current step is
 // in the URL (`?step=`) and so is the open tab on phone (`?panel=assistant`), so reload and Back keep the player's place.
 import { createFileRoute, notFound, redirect, useNavigate } from '@tanstack/react-router'
-import { useState } from 'react'
 import { AssistantPanel } from '~/components/assistant/AssistantPanel'
 import { useAssistant } from '~/components/assistant/use-assistant'
 import { BuilderLayout, BuilderShell, showingOf, toPanel, useDesktop, type Panel } from '~/components/builder/BuilderShell'
@@ -52,9 +51,6 @@ function BuildPage() {
   const desktop = useDesktop()
   const panel: Panel = search.panel ?? 'builder'
   const assistant = useAssistant({ characterId: initial.id, draft, showing: showingOf(desktop, panel) })
-  // The assistant's Applies on this page; the builder writes the step it moved to in again after each.
-  const [applied, setApplied] = useState(0)
-
   // Resume at the first unfinished step; a step the step bar would not open (an old link) shows that step instead.
   const reachable = reachableStep(draft.builder)
   const asked = search.step as StepNumber | undefined
@@ -63,10 +59,8 @@ function BuildPage() {
   const onStep = (next: StepNumber) => void navigate({ search: (s) => ({ ...s, step: next }) })
   // Switching tabs replaces the history entry: the URL keeps the tab for reload and Back, without one entry per switch.
   const onPanel = (next: Panel) => void navigate({ search: (s) => ({ ...s, panel: next === 'assistant' ? 'assistant' : undefined }), replace: true })
-  const onOpenStep = (next: StepNumber, show: boolean) => {
-    if (!show) setApplied((n) => n + 1)
+  const onOpenStep = (next: StepNumber, show: boolean) =>
     void navigate({ search: (s) => ({ ...s, step: next, panel: show ? undefined : s.panel }) })
-  }
 
   if (assistant.notFound) return <DraftNotFound />
   return (
@@ -75,7 +69,7 @@ function BuildPage() {
       onPanel={onPanel}
       unread={assistant.unread}
       builder={
-        <BuilderShell key={initial.id} draft={draft} step={step} onStep={onStep} applied={applied} visible={desktop || panel === 'builder'} />
+        <BuilderShell key={initial.id} draft={draft} step={step} onStep={onStep} />
       }
       assistant={<AssistantPanel assistant={assistant} draft={draft} onOpenStep={onOpenStep} />}
     />

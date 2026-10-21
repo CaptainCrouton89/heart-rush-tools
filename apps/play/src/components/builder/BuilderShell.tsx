@@ -25,23 +25,8 @@ const STATUS_TEXT: Record<Exclude<SaveStatus['kind'], 'failed'>, string> = { sav
  * has problems, which are listed), the draft's save status, and the pending step 6–7 actions the rules now refuse
  * (ruling 8) with a Remove for each. Step 7 ends with Finish instead of Continue. A navigation away from the builder
  * that is held because the last changes did not save asks, in place, whether to stay or leave without them.
- *
- * `applied` counts the assistant's Applies on this page. Once the builder is `visible` after one, the step it moved to
- * is written in with the restyle's write-in motion (`.written.fresh`), the only motion the assistant adds.
  */
-export function BuilderShell({
-  draft,
-  step,
-  onStep,
-  applied = 0,
-  visible = true,
-}: {
-  draft: UseDraft
-  step: StepNumber
-  onStep: (step: StepNumber) => void
-  applied?: number
-  visible?: boolean
-}) {
+export function BuilderShell({ draft, step, onStep }: { draft: UseDraft; step: StepNumber; onStep: (step: StepNumber) => void }) {
   const problems = stepProblems(step, draft.builder)
   const root = useRef<HTMLDivElement>(null)
   const heading = useRef<HTMLHeadingElement>(null)
@@ -55,19 +40,6 @@ export function BuilderShell({
       if (!active || active === document.body || root.current?.contains(active)) heading.current?.focus()
     }
   }, [step])
-  // The Applies already written in. On phone an Apply happens while the Builder tab is hidden, so it is written in
-  // when the tab is next shown, not while nobody can see it.
-  const [written, setWritten] = useState(applied)
-  if (visible && written !== applied) setWritten(applied)
-  // The write-in class is taken off and put back a frame later, so a second Apply plays it again without remounting
-  // the step (which would lose a step's own state, such as a search box).
-  const [fresh, setFresh] = useState(false)
-  useEffect(() => {
-    if (written === 0) return
-    setFresh(false)
-    const frame = requestAnimationFrame(() => setFresh(true))
-    return () => cancelAnimationFrame(frame)
-  }, [written])
 
   const go = (next: StepNumber) => {
     void draft.flush()
@@ -113,12 +85,7 @@ export function BuilderShell({
 
       <InvalidPending draft={draft} />
 
-      <div
-        className={cn(fresh && 'written fresh block')}
-        onAnimationEnd={(e) => e.target === e.currentTarget && e.animationName === 'settle' && setFresh(false)}
-      >
-        {body}
-      </div>
+      {body}
 
       <div className="flex flex-col gap-3 border-t border-border pt-4">
         {problems.length > 0 && (

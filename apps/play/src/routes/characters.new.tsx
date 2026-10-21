@@ -3,7 +3,7 @@
 // and every later visit are `/characters/$id/build`.
 import { createFileRoute, redirect, useNavigate } from '@tanstack/react-router'
 import { useServerFn } from '@tanstack/react-start'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ulid } from 'ulid'
 import { Alert, AlertDescription } from '@heartrush/ui/components/alert'
 import { Button } from '@heartrush/ui/components/button'
@@ -58,15 +58,33 @@ function NewCharacter() {
     }
   }
 
-  // The assistant's first message creates the draft (the name may still be empty), then the build page opens with
-  // the chat showing, whether or not the send succeeded: it shows the stored message and any failure with Retry.
+  // The assistant's first message creates the draft (the name may still be empty), then the build page opens with the
+  // chat showing. A message the server stored goes along whatever its run did (the build page shows it and any failure
+  // with Retry). A message the server never got, or refused, exists only on this page, so the page stays until Retry or
+  // a new message is taken, and then goes.
+  const [handoff, setHandoff] = useState<string | null>(null)
+  const [sending, setSending] = useState(0)
   const assistant = useAssistant({
     characterId: null,
     draft: null,
     showing: showingOf(desktop, panel),
     createDraft: () => createDraft(latest.current),
-    afterFirstSend: (draftId) => void navigate({ to: '/characters/$id/build', params: { id: draftId }, search: { panel: 'assistant' } }),
+    afterFirstSend: setHandoff,
   })
+  const settled = handoff !== null && sending === 0 && !assistant.unsent && assistant.sendProblem === null
+  useEffect(() => {
+    if (settled) void navigate({ to: '/characters/$id/build', params: { id: handoff }, search: { panel: 'assistant' } })
+  }, [settled, handoff, navigate])
+  /** Counts the sends and retries in flight, so the page does not leave in the middle of one. */
+  const tracked = <A extends unknown[], R>(f: (...a: A) => Promise<R>) => async (...a: A): Promise<R> => {
+    setSending((n) => n + 1)
+    try {
+      return await f(...a)
+    } finally {
+      setSending((n) => n - 1)
+    }
+  }
+  const panelState = { ...assistant, send: tracked(assistant.send), retry: tracked(assistant.retry) }
 
   async function onContinue(step: StepNumber = 2) {
     if (problems.length > 0 || busy) return
@@ -124,7 +142,7 @@ function NewCharacter() {
           {/* On phone the builder's alert is out of sight: a draft that could not be made shows here too. */}
           {!desktop && panel === 'assistant' && notice && <div className="px-5 pt-4">{notice}</div>}
           <div className="min-h-0 flex-1">
-            <AssistantPanel assistant={assistant} draft={null} onOpenStep={() => {}} />
+            <AssistantPanel assistant={panelState} draft={null} onOpenStep={() => {}} />
           </div>
         </div>
       }
