@@ -78,7 +78,8 @@ export function describeAction(a: Action, state?: StoredState, dpChange?: number
 const time = (iso: string) => new Date(iso).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })
 
 /**
- * Mount it with `key={characterId}` so another character's rows never show. The last 20 events, newest first (`listEventsFn`), refetched whenever `refreshKey` changes (the sheet passes the
+ * Mount it with `key={characterId}` so another character's rows never show. The last 20 events, newest first (`listEventsFn`;
+ * more when the undoable event is older, so its row is always listed), refetched whenever `refreshKey` changes (the sheet passes the
  * document's revision and whether a write is pending, so it refetches once each write has saved). Only `topEventId` (the
  * latest event that can still be undone) gets an **Undo** control; an undone event is struck through; an undo
  * event names what it undid.

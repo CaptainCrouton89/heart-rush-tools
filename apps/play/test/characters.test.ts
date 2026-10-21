@@ -292,6 +292,33 @@ test('undo of the top event works; undo of an older event → not_top_of_stack; 
   assert.equal(again.revision, 5)
 })
 
+test('listEvents still lists the undoable event after eleven undos in a row push it past the last 20 rows', async () => {
+  const { doc } = await finished('owner', 0)
+  const actions = Array.from({ length: 12 }, (_, i) => addItem(`Item ${i + 1}`))
+  let current = doc
+  for (const action of actions) current = ok(await applyCharacterAction(db, 'owner', { characterId: doc.id, revision: current.revision, action }))
+  for (let i = 0; i < 11; i++) {
+    const listed = await listEvents(db, 'owner', { characterId: doc.id })
+    assert.ok(listed.ok)
+    assert.equal(listed.topEventId, actions[11 - i]!.id)
+    current = ok(await undoCharacterEvent(db, 'owner', { characterId: doc.id, eventId: listed.topEventId! }))
+  }
+  assert.deepEqual(items(current), ['Item 1'])
+
+  const listed = await listEvents(db, 'owner', { characterId: doc.id })
+  assert.ok(listed.ok)
+  assert.equal(listed.topEventId, actions[0]!.id)
+  assert.equal(listed.events.length, 23, '11 undo events, 11 undone events and the undoable one: more than 20 rows')
+  assert.equal(listed.events.at(-1)!.id, actions[0]!.id, 'the list reaches the undoable event')
+  assert.deepEqual(listed.events.map((e) => e.seq), Array.from({ length: 23 }, (_, i) => 24 - i), 'contiguous, newest first')
+
+  assert.deepEqual(items(ok(await undoCharacterEvent(db, 'owner', { characterId: doc.id, eventId: actions[0]!.id }))), [])
+  const after = await listEvents(db, 'owner', { characterId: doc.id })
+  assert.ok(after.ok)
+  assert.equal(after.topEventId, null)
+  assert.equal(after.events.length, 20, 'with nothing to undo the list is the last 20')
+})
+
 test('listEvents reports what each event did to DP, the 10 DP cap and undo included', async () => {
   const { doc } = await finished('owner', 0)
   const loyal = doc.state.draft ? null : doc.state.aspects.find((x) => x.text === 'Loyal')!

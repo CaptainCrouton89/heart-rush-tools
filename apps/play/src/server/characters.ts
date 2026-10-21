@@ -326,25 +326,32 @@ export async function getCharacter(db: D1Database, userId: string, input: Charac
 
 const EVENT_LIMIT = 20
 
-/** The last 20 events (newest first) and the id of the one event Undo is offered on (null when there is none). */
+/**
+ * The id of the one event Undo is offered on (null when there is none) and the events newest first: the last 20, or
+ * more when the undoable event is older than that — the list always reaches it, so the sheet can offer its Undo.
+ */
 export async function listEvents(db: D1Database, userId: string, input: CharacterRef): Promise<ListEventsResult> {
   const bad = badId(input?.characterId, 'characterId')
   if (bad) return bad
   const loaded = await loadFor(db, userId, input.characterId, 'read')
   if (isRefusal(loaded)) return loaded
+  const all = await undoableEvents(db, input.characterId)
+  let top: UndoableEvent | null = null
+  try {
+    top = canUndo(all)
+  } catch (error) {
+    if (!(error instanceof RuleError && error.code === 'not_top_of_stack')) throw error
+  }
+  // Every event newer than the top one is an undo or undone, so ten undos in a row push it past 20 rows.
+  const topSeq = top?.seq ?? Infinity
+  const limit = Math.max(EVENT_LIMIT, all.filter((e) => e.seq >= topSeq).length)
   const { results: recent } = await db
     .prepare(
       `SELECT id, seq, action, undone, actor_user_id, created_at, json_extract(inverse, '$.slices.play.dp') AS dp_before
          FROM character_event WHERE character_id = ? ORDER BY seq DESC LIMIT ?`,
     )
-    .bind(input.characterId, EVENT_LIMIT)
+    .bind(input.characterId, limit)
     .all<{ id: string; seq: number; action: string; undone: number; actor_user_id: string; created_at: string; dp_before: number | null }>()
-  let topEventId: string | null = null
-  try {
-    topEventId = canUndo(await undoableEvents(db, input.characterId)).id
-  } catch (error) {
-    if (!(error instanceof RuleError && error.code === 'not_top_of_stack')) throw error
-  }
   // Newest first, and every event after the oldest listed one is listed, so the DP after each event is the next newer
   // event's DP-before (an event that changed nothing in `play` stores none), or the current DP for the newest.
   const current = stateOf(loaded.row)
@@ -356,7 +363,7 @@ export async function listEvents(db: D1Database, userId: string, input: Characte
     dpAfter = before
     return summary
   })
-  return { ok: true, topEventId, events }
+  return { ok: true, topEventId: top?.id ?? null, events }
 }
 
 async function undoableEvents(db: D1Database, characterId: string): Promise<UndoableEvent[]> {
