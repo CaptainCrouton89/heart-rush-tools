@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-10-21T02:01:45.718Z",
+  "deleted_at": null,
+  "extensions": null,
+  "id": "3zl47w7d-mvhguygm-8ae24d6e",
+  "kind": "knowledge",
+  "lint_ignore": null,
+  "name": "play/content-catalogue",
+  "preview": "When you change what play knows about talents, races or conditions, or play's typecheck or tests fail on missing @heartrush/content/play JSON, read this because play reads compiled catalogues that must be built first and race XP effects are hand-written typed kinds.",
+  "privacy": "public",
+  "revisions": [
+    {
+      "author": "3zl47w7d-mvhfwmuj-a16b6656",
+      "body": "# Play's content catalogue\n\nPlay does not read the rulebook Markdown. It imports the compiled JSON that `packages/content` writes to `dist/catalogues/play/{talents,races,conditions}.json`, exported as `@heartrush/content/play/<name>` and loaded in `apps/play/src/catalogue/index.ts`. The shapes are `PlayTalent`, `PlayRace`, `PlayChoice` and `RaceEffect` in `packages/content/src/types.ts`, mirrored by `packages/rules-engine/src/catalogue.ts`.\n\n## Build before play\n\n- Run `pnpm --filter @heartrush/content build` before play's typecheck or tests. `dist/` is not committed, so a fresh checkout or a source edit leaves play reading a missing or stale catalogue. Play's `build` and `test` scripts run it first; a bare `tsc --noEmit` in `apps/play` does not.\n- Two builds at once (a workspace `pnpm build` beside another agent's, or the pre-commit hook beside a test run) write `packages/content/dist` at the same time and fail or leave it half-written. When that happens, build content once, then run play's `tsc --noEmit` and `vite build` separately rather than the combined script.\n\n## Race effects are hand-written\n\nWhat a race changes mechanically — XP cost changes, die caps, aspect rank caps, award bonuses, attunements, creation-time choices — is written by hand in `packages/content/src/race-effects.ts`, keyed by race file stem and subrace heading id. The compiler does not parse it from the race text.\n\n- Express each effect as one of the typed `RaceEffect` kinds (`cost`, `dieCap`, `aspectRankCap`, `awardBonus`, `attunement`, `manual`). Never store a pre-computed total or a delta against another race; the rules engine computes totals from these kinds.\n- Something the kinds cannot express is a `manual` effect carrying the rule text, not a new ad-hoc field.\n- A choice the race text requires at creation is a `choice`, and only the selected option's abilities and effects apply ([[3zl47w7d-mvg8jc6i-331ad30f/kin-choices-contract]]).\n- When you edit a race file in `heart_rush/races/`, check whether its entry in `race-effects.ts` still matches the text.\n",
+      "body_hash": "e6db71752caa5b35ddf1cef138aa4c8ee5fc69671aa290fa644a2c095be588d5",
+      "created_at": "2026-10-21T02:01:45.718Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-mvgjo95d-ac0070c4",
+          "written_as": "3zl47w7d-mvg8jc6i-331ad30f/kin-choices-contract"
+        }
+      ],
+      "number": 1,
+      "parents": [],
+      "rationale": null,
+      "rev_id": "71fe4485-36a3-45da-a5f4-afe38d022333"
+    }
+  ],
+  "rules": [
+    {
+      "deliver": "preview",
+      "if": null,
+      "match": [
+        "**/packages/content/src/**",
+        "**/apps/play/src/catalogue/**",
+        "**/packages/rules-engine/src/catalogue.ts"
+      ],
+      "match_frontmatter": null,
+      "on": "file-read",
+      "position": 0
+    }
+  ],
+  "summary": "Play reads packages/content dist/catalogues/play/*.json; build @heartrush/content first; race effects are typed kinds in race-effects.ts.",
+  "unlisted": false,
+  "why_it_exists": "Agents ran play's typecheck or tests against a stale or missing content build, and parallel builds collided over packages/content/dist."
+}
