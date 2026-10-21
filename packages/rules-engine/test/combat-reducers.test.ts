@@ -3,7 +3,8 @@ import assert from 'node:assert/strict'
 import * as r from '../src/reducers/combat'
 import { effectiveMaxHp, maxHeartDie } from '../src/derived'
 import { CONDITION } from '../src/conditions'
-import { RuleError, type Action, type ActionBody, type Character, type Condition, type Talent } from '../src/types'
+import { applyAction, applyInverse, upgradeCharacter } from '../src/actions'
+import { RuleError, type Action, type ActionBody, type Aspect, type Character, type ClientAction, type Condition, type Talent } from '../src/types'
 import { makeCharacter, condition, conditions } from './fixtures'
 
 const AT = '2026-01-01T00:00:00.000Z'
@@ -378,6 +379,75 @@ describe('criterion 14: DP and sessions', () => {
     assert.equal(r.dpSet(makeCharacter(), act({ kind: 'dp:set', value: -2 })).play.dp, 0)
     assert.equal(r.dpSet(makeCharacter(), act({ kind: 'dp:set', value: 6 })).play.dp, 6)
     refuses('invalid_amount', () => r.dpSet(makeCharacter(), act({ kind: 'dp:set', value: 2.5 })))
+  })
+})
+
+describe('aspect:invoke and aspect:hinder', () => {
+  const aspect = (id: string, rank: number, over: Partial<Aspect> = {}): Aspect => ({ id, text: `Aspect ${id}`, rank, source: 'created', honor: false, ...over })
+  const frail = aspect('frail', 3, { text: 'Frail', source: 'age' })
+  const sheet = (dp: number, play: Partial<Character['play']> = {}) =>
+    withPlay(makeCharacter({ aspects: [aspect('one', 1), aspect('three', 3), frail] }), { dp, ...play })
+
+  test('bonus: spends 1…rank DP', () => {
+    for (const dp of [1, 2, 3]) assert.equal(r.aspectInvoke(sheet(5), act({ kind: 'aspect:invoke', aspectId: 'three', dp })).play.dp, 5 - dp)
+    assert.equal(r.aspectInvoke(sheet(1), act({ kind: 'aspect:invoke', aspectId: 'one', dp: 1 })).play.dp, 0)
+  })
+  test('bonus over the rank, below 1 or fractional is refused', () => {
+    refuses('invalid_amount', () => r.aspectInvoke(sheet(5), act({ kind: 'aspect:invoke', aspectId: 'three', dp: 4 })))
+    refuses('invalid_amount', () => r.aspectInvoke(sheet(5), act({ kind: 'aspect:invoke', aspectId: 'one', dp: 2 })))
+    refuses('invalid_amount', () => r.aspectInvoke(sheet(5), act({ kind: 'aspect:invoke', aspectId: 'three', dp: 0 })))
+    refuses('invalid_amount', () => r.aspectInvoke(sheet(5), act({ kind: 'aspect:invoke', aspectId: 'three', dp: 1.5 })))
+  })
+  test('bonus with too few DP is refused', () => {
+    refuses('not_enough_dp', () => r.aspectInvoke(sheet(2), act({ kind: 'aspect:invoke', aspectId: 'three', dp: 3 })))
+    refuses('not_enough_dp', () => r.aspectInvoke(sheet(0), act({ kind: 'aspect:invoke', aspectId: 'one', dp: 1 })))
+  })
+  test('Frail is never invoked for a bonus; an unknown aspect is not_found', () => {
+    refuses('bad_action', () => r.aspectInvoke(sheet(5), act({ kind: 'aspect:invoke', aspectId: 'frail', dp: 1 })))
+    refuses('not_found', () => r.aspectInvoke(sheet(5), act({ kind: 'aspect:invoke', aspectId: 'nope', dp: 1 })))
+    refuses('not_found', () => r.aspectHinder(sheet(5), act({ kind: 'aspect:hinder', aspectId: 'nope' })))
+  })
+  test('hinder gains the rank; Frail hinders like any aspect', () => {
+    assert.equal(r.aspectHinder(sheet(3), act({ kind: 'aspect:hinder', aspectId: 'three' })).play.dp, 6)
+    assert.equal(r.aspectHinder(sheet(3), act({ kind: 'aspect:hinder', aspectId: 'one' })).play.dp, 4)
+    assert.equal(r.aspectHinder(sheet(3), act({ kind: 'aspect:hinder', aspectId: 'frail' })).play.dp, 6)
+  })
+  test('hinder with Young and Foolish gains rank + 1', () => {
+    assert.equal(r.aspectHinder(sheet(3, { youngAndFoolish: true }), act({ kind: 'aspect:hinder', aspectId: 'three' })).play.dp, 7)
+    assert.equal(r.aspectHinder(sheet(3, { youngAndFoolish: true }), act({ kind: 'aspect:hinder', aspectId: 'one' })).play.dp, 5)
+  })
+  test('hinder caps DP at 10', () => {
+    assert.equal(r.aspectHinder(sheet(9), act({ kind: 'aspect:hinder', aspectId: 'three' })).play.dp, 10)
+    assert.equal(r.aspectHinder(sheet(10, { youngAndFoolish: true }), act({ kind: 'aspect:hinder', aspectId: 'one' })).play.dp, 10)
+  })
+  test('both are undone by their stored inverse', () => {
+    const catalogue = { conditions, talents: new Map() }
+    const start = sheet(4, { youngAndFoolish: true })
+    const used = applyAction(start, act({ kind: 'aspect:invoke', aspectId: 'three', dp: 2 }) as ClientAction, catalogue)
+    assert.equal(used.character.play.dp, 2)
+    assert.deepEqual(applyInverse(used.character, used.inverse).character, start)
+    const hindered = applyAction(start, act({ kind: 'aspect:hinder', aspectId: 'three' }) as ClientAction, catalogue)
+    assert.equal(hindered.character.play.dp, 8)
+    assert.deepEqual(applyInverse(hindered.character, hindered.inverse).character, start)
+  })
+  test('Frail cannot be renamed, and no aspect can be renamed into Frail; its honor tick still edits', () => {
+    const catalogue = { conditions, talents: new Map() }
+    const start = makeCharacter({ aspects: [aspect('one', 1), aspect('wisdom', 1, { text: 'Wisdom of Years', source: 'age' }), frail] })
+    const edit = (aspect: { id: string; text?: string; honor?: boolean }) => () => applyAction(start, act({ kind: 'aspect:edit', aspect }) as ClientAction, catalogue)
+    refuses('bad_action', edit({ id: 'frail', text: 'Sturdy' }))
+    refuses('bad_action', edit({ id: 'wisdom', text: 'Frail' }))
+    assert.equal(edit({ id: 'frail', honor: true })().character.aspects[2]!.honor, true)
+    assert.equal(edit({ id: 'one', text: 'Bold' })().character.aspects[0]!.text, 'Bold')
+  })
+  test('a stored state or stored inverse with the old dpPerComplication field reads as youngAndFoolish', () => {
+    const { youngAndFoolish: _, ...rest } = makeCharacter().play
+    const old = (n: number) => ({ ...makeCharacter(), play: { ...rest, dpPerComplication: n } })
+    const upgraded = upgradeCharacter(JSON.parse(JSON.stringify(old(2)))) as Character
+    assert.equal(upgraded.play.youngAndFoolish, true)
+    assert.equal('dpPerComplication' in upgraded.play, false)
+    assert.equal((upgradeCharacter(old(1)) as Character).play.youngAndFoolish, false)
+    const restored = applyInverse(makeCharacter(), { kind: 'restore', slices: { play: old(2).play as never } }).character
+    assert.deepEqual(restored.play, { ...rest, youngAndFoolish: true })
   })
 })
 

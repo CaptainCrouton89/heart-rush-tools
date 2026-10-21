@@ -92,7 +92,7 @@ export function createCharacter(input: BuilderInput, catalogue: Catalogue): Char
     hp: { baseMax, current: baseMax, heartDieCurrent: 8 }, wounds: [], conditions: [], aspects, professions, talents,
     gear: { weapons: [], armor: { name: '', weight: 'none', misc: 0, worn: false }, shield: { name: '', weight: 'none', misc: 0, worn: false }, items: [], coins: { iron: 0, obol: 0, lire: 0, ducat: 0, crown: 0 } },
     xp: { awarded, purchases: [] },
-    play: { round: 1, rushPoints: 0, dp: 3, baseSpeed: input.ageCategory === 'elderly' ? 40 : 60, staminaSpentRound: null, failedRestStreak: 0, dpPerComplication: input.ageBenefits.includes('young-and-foolish') ? 2 : 1, professionChallengeDelta: input.ageBenefits.includes('natural-learner') ? -1 : 0 },
+    play: { round: 1, rushPoints: 0, dp: 3, baseSpeed: input.ageCategory === 'elderly' ? 40 : 60, staminaSpentRound: null, failedRestStreak: 0, youngAndFoolish: input.ageBenefits.includes('young-and-foolish'), professionChallengeDelta: input.ageBenefits.includes('natural-learner') ? -1 : 0 },
     raceEffects, notes: '',
   }
 }

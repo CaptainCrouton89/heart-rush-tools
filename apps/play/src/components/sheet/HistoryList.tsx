@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useServerFn } from '@tanstack/react-start'
-import type { Action } from '@heartrush/rules-engine/types'
+import type { Action, Character, StoredState } from '@heartrush/rules-engine/types'
+import { hinderGain } from '@heartrush/rules-engine/reducers/combat'
 import { Button } from '@heartrush/ui/components/button'
 import { getCatalogue } from '~/catalogue'
 import { listEventsFn, type EventSummary, type ListEventsResult } from '~/server/characters'
@@ -9,8 +10,15 @@ import { refusalReason } from './refusal-text'
 
 const ABILITY: Record<string, string> = { might: 'Might', agility: 'Agility', cunning: 'Cunning', presence: 'Presence' }
 
-/** Plain words for one action, as the undo chip and the History list show it. */
-export function describeAction(a: Action): string {
+/**
+ * Plain words for one action, as the undo chip and the History list show it. `state` (the sheet's character) names the
+ * aspect an invocation used — the action carries only its id — and gives a hinder's nominal gain (rank, +1 with Young
+ * and Foolish). `dpChange` (the history's record of what the event did to DP) gives the gain exactly; without it — the undo
+ * chip, whose `state` is the one just after the hinder — the nominal gain is exact unless the hinder reached the 10 DP cap.
+ */
+export function describeAction(a: Action, state?: StoredState, dpChange?: number): string {
+  const character = state && !state.draft ? state : undefined
+  const aspect = (id: string) => character?.aspects.find((x) => x.id === id)
   switch (a.kind) {
     case 'damage': return a.amount >= 10 ? `Took ${a.amount}, wound added` : `Took ${a.amount} damage`
     case 'heal': return `Healed ${a.amount}`
@@ -43,6 +51,13 @@ export function describeAction(a: Action): string {
     case 'gear:wear': case 'gear:item:edit': case 'gear:item:remove': case 'gear:coins:set':
       return 'Changed gear'
     case 'aspect:edit': case 'aspect:remove': return 'Changed an aspect'
+    case 'aspect:invoke': { const x = aspect(a.aspectId); return `Used ${x ? `"${x.text}"` : 'an aspect'}: −${a.dp} DP` }
+    case 'aspect:hinder': {
+      const x = aspect(a.aspectId)
+      if (!x || !character) return 'Hindered by an aspect'
+      if (dpChange !== undefined) return `Hindered by "${x.text}": +${dpChange} DP`
+      return character.play.dp < 10 ? `Hindered by "${x.text}": +${hinderGain(character, x)} DP` : `Hindered by "${x.text}": DP to 10`
+    }
     case 'profession:add': return `Added ${a.profession.name}`
     case 'profession:edit': case 'profession:remove': case 'profession:challenge': case 'profession:practice':
     case 'profession:mission': case 'profession:advance':
@@ -66,11 +81,14 @@ const time = (iso: string) => new Date(iso).toLocaleString(undefined, { month: '
  */
 export function HistoryList({
   characterId,
+  character,
   refreshKey,
   canEdit,
   onUndo,
 }: {
   characterId: string
+  /** The sheet as shown, so an aspect invocation's line names the aspect. */
+  character: Character
   refreshKey: string
   canEdit: boolean
   onUndo: (eventId: string) => void
@@ -92,9 +110,9 @@ export function HistoryList({
 
   const byId = new Map<string, EventSummary>(result?.ok ? result.events.map((e) => [e.id, e]) : [])
   const label = (e: EventSummary) => {
-    if (e.action.kind !== 'undo') return describeAction(e.action)
+    if (e.action.kind !== 'undo') return describeAction(e.action, character, e.dpChange)
     const of = byId.get(e.action.of)
-    return of ? `Undid: ${describeAction(of.action)}` : 'Undid an earlier change'
+    return of ? `Undid: ${describeAction(of.action, character, of.dpChange)}` : 'Undid an earlier change'
   }
 
   return (

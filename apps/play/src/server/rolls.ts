@@ -5,9 +5,11 @@
 // logic and the tests call them; the `createServerFn` wrappers at the bottom resolve the signed-in user and `env`. Expected
 // refusals are values, `{ok: false, status, code, message}`; infrastructure failures throw.
 //
-// Rolling never writes `character` or `character_event` (spec criterion 14): a roll is not character state, so INV-ACTION does
-// not apply. A character in a campaign has its roll stored in `roll` and published to the campaign's channel (INV-LIVE, best
-// effort, after the write commits). A character in no campaign stores nothing.
+// A plain roll never writes `character` or `character_event` (spec criterion 14): a roll is not character state. A roll that
+// invokes an aspect (`aspect`) is the one exception: its DP spend is an `aspect:invoke` event (INV-ACTION), written in the same
+// batch as the roll row, so the DP is spent exactly when the roll is made. A character in a campaign has its roll stored in
+// `roll` and published to the campaign's channel (INV-LIVE, best effort, after the write commits). A character in no campaign
+// stores no roll.
 //
 // Completion protocol (ruling 24). A check with exactly one kept 1 is stored with `complication = 'pending'`; its roller then
 // picks once between Fail and Reroll-and-take-a-complication (`resolveComplication`). Two or more kept 1s are stored as
@@ -17,15 +19,16 @@ import { createServerFn } from '@tanstack/react-start'
 import { monotonicFactory } from 'ulid'
 import { rerollComplication, roll as rollDice, rollSpec, type RandomDie, type RolledDie, type RollResult, type RollType } from '@heartrush/rules-engine/dice'
 import { objectiveCn, type Stratagem } from '@heartrush/rules-engine/stratagem'
-import { upgradeCharacter } from '@heartrush/rules-engine/actions'
-import { RuleError, type AbilityId } from '@heartrush/rules-engine/types'
+import { applyAction, upgradeCharacter } from '@heartrush/rules-engine/actions'
+import { RuleError, type AbilityId, type Action, type Character, type ClientAction, type Inverse } from '@heartrush/rules-engine/types'
 import { getCatalogue } from '../catalogue'
 import { characterRole, mayWrite, roleIn } from './authz'
-import { publish, type LiveRoll } from './live'
+import { isBatchAbort } from './characters'
+import { publish, publishCharacterWrite, type LiveRoll } from './live'
 
 // ---- Types -------------------------------------------------------------------------------------
 
-export type RollErrorCode = 'forbidden' | 'not_found' | 'bad_input' | 'bad_roll' | 'is_draft' | 'already_resolved' | 'in_campaign'
+export type RollErrorCode = 'forbidden' | 'not_found' | 'bad_input' | 'bad_roll' | 'is_draft' | 'already_resolved' | 'in_campaign' | 'not_enough_dp' | 'conflict'
 
 /** An expected refusal. */
 export type RollRefusal = { ok: false; status: number; code: RollErrorCode; message: string }
@@ -65,8 +68,11 @@ export type RollInput = {
   /** Advantage (positive) or disadvantage (negative) dice, after cancelling. */
   net: number
   objective?: { stratagemId: string; index: number }
+  /** A positive aspect invocation: spends `dp` DP (1…the aspect's rank) and adds `dp` to the roll on top of `modifier`. */
+  aspect?: { aspectId: string; dp: number }
 }
-export type RollOk = { ok: true; result: RollView; roll: RollRecord | null }
+/** `character` is set when the roll spent DP: the character's new revision and DP. */
+export type RollOk = { ok: true; result: RollView; roll: RollRecord | null; character: { revision: number; dp: number } | null }
 export type ResolveOk = { ok: true; roll: RollRecord }
 export type RerollDieInput = { characterId: string; sides: number }
 export type ListRollsInput = { campaignId: string }
@@ -75,7 +81,9 @@ type PublishEnv = Parameters<typeof publish>[0]
 
 // ---- Helpers -----------------------------------------------------------------------------------
 
-const STATUS: Record<RollErrorCode, number> = { forbidden: 403, not_found: 404, bad_input: 400, bad_roll: 400, is_draft: 409, already_resolved: 409, in_campaign: 409 }
+const STATUS: Record<RollErrorCode, number> = {
+  forbidden: 403, not_found: 404, bad_input: 400, bad_roll: 400, is_draft: 409, already_resolved: 409, in_campaign: 409, not_enough_dp: 409, conflict: 409,
+}
 const refuse = (code: RollErrorCode, message: string): RollRefusal => ({ ok: false, status: STATUS[code], code, message })
 const isRefusal = (v: unknown): v is RollRefusal => typeof v === 'object' && v !== null && (v as { ok?: unknown }).ok === false
 
@@ -115,13 +123,41 @@ function badRollInput(input: RollInput): RollRefusal | null {
     if (typeof o !== 'object' || o === null || badId(o.stratagemId, 'stratagemId') || !Number.isSafeInteger(o.index) || o.index < 0) return refuse('bad_input', 'objective needs a stratagemId and an index')
     if (input.type !== 'check') return refuse('bad_input', 'A stratagem objective is rolled as a skill check')
   }
+  if (input.aspect !== undefined) {
+    const a = input.aspect
+    if (typeof a !== 'object' || a === null || badId(a.aspectId, 'aspectId') || !Number.isSafeInteger(a.dp) || a.dp < 1) return refuse('bad_input', 'aspect needs an aspectId and a whole number of DP from 1')
+    if (input.type !== 'check') return refuse('bad_input', 'An aspect is invoked on a skill check')
+    if (Math.abs(input.modifier + a.dp) > MAX_MODIFIER) return refuse('bad_input', `modifier must be a whole number within ±${MAX_MODIFIER}`)
+  }
   return null
 }
 
-type CharacterRow = { id: string; owner_user_id: string; campaign_id: string | null; name: string; state: string }
+type CharacterRow = { id: string; owner_user_id: string; campaign_id: string | null; name: string; state: string; revision: number }
 
 async function loadCharacter(db: D1Database, characterId: string): Promise<CharacterRow | null> {
-  return db.prepare('SELECT id, owner_user_id, campaign_id, name, state FROM character WHERE id = ?').bind(characterId).first<CharacterRow>()
+  return db.prepare('SELECT id, owner_user_id, campaign_id, name, state, revision FROM character WHERE id = ?').bind(characterId).first<CharacterRow>()
+}
+
+/**
+ * The `aspect:invoke` event a roll commits, as two statements for the roll's batch: the revision-checked UPDATE, then the
+ * event INSERT whose `seq` is NULL when the UPDATE matched nothing. NULL violates NOT NULL, so a stale revision rolls the
+ * whole batch back — the roll row included — and the caller reports `conflict` with nothing spent or stored. The same holds
+ * when the character moved into or out of a campaign since it was loaded.
+ */
+function invokeStatements(
+  db: D1Database, userId: string, row: CharacterRow, event: { action: Action; inverse: Inverse }, state: Character, now: string,
+): D1PreparedStatement[] {
+  return [
+    // `campaign_id IS ?`: joining or leaving a campaign does not bump the revision, and the roll row was built for the loaded campaign.
+    db.prepare('UPDATE character SET state = ?, name = ?, revision = revision + 1, updated_at = ? WHERE id = ? AND revision = ? AND campaign_id IS ?')
+      .bind(JSON.stringify(state), state.identity.name, now, row.id, row.revision, row.campaign_id),
+    db
+      .prepare(
+        `INSERT INTO character_event (id, character_id, actor_user_id, seq, action, inverse, undone, created_at)
+         VALUES (?, ?, ?, CASE WHEN changes() = 1 THEN ? END, ?, ?, 0, ?)`,
+      )
+      .bind(event.action.id, row.id, userId, row.revision + 1, JSON.stringify(event.action), JSON.stringify(event.inverse), now),
+  ]
 }
 
 const isDraft = (row: CharacterRow): boolean => (JSON.parse(row.state) as { draft?: unknown }).draft === true
@@ -219,21 +255,44 @@ export async function rollForCharacter(
     objective = { stratagemId: found.id, index: input.objective.index, cn: objectiveCn(stratagem, input.objective.index), label: objectiveLabel(found.goal, target.title) }
   }
 
+  const now = new Date().toISOString()
+  const character = upgradeCharacter(JSON.parse(row.state))
+  if (character.draft) return refuse('is_draft', 'A character still in the builder cannot roll')
+  // The invocation is applied before any die is drawn: a refused spend rolls nothing.
+  let invoked: { action: Action; inverse: Inverse; state: Character } | null = null
+  if (input.aspect) {
+    const action: ClientAction = { id: newRollId(), at: now, kind: 'aspect:invoke', aspectId: input.aspect.aspectId, dp: input.aspect.dp }
+    try {
+      const applied = applyAction(character, action, getCatalogue())
+      invoked = { action, inverse: applied.inverse, state: applied.character }
+    } catch (error) {
+      if (!(error instanceof RuleError)) throw error
+      if (error.code === 'not_enough_dp') return refuse('not_enough_dp', 'Not enough DP for that aspect')
+      if (error.code === 'not_found') return refuse('not_found', 'No such aspect on this character')
+      return refuse('bad_input', error.message)
+    }
+  }
+  const modifier = input.modifier + (input.aspect?.dp ?? 0)
+
   let result: RollResult
   try {
-    const character = upgradeCharacter(JSON.parse(row.state))
-    if (character.draft) return refuse('is_draft', 'A character still in the builder cannot roll')
     const spec = rollSpec(character, { type: input.type, ability: input.ability }, getCatalogue().conditions)
-    result = rollDice(spec, { modifier: input.modifier, net: input.net }, rand)
+    result = rollDice(spec, { modifier, net: input.net }, rand)
   } catch (error) {
     if (error instanceof RuleError && error.code === 'bad_roll') return refuse('bad_roll', error.message)
     throw error
   }
   const view: RollView = { ...result, complication: storedComplication(result) }
-  if (row.campaign_id === null) return { ok: true, result: view, roll: null }
+  const spent = invoked ? { revision: row.revision + 1, dp: invoked.state.play.dp } : null
+  const statements = invoked ? invokeStatements(db, userId, row, invoked, invoked.state, now) : []
+  if (row.campaign_id === null) {
+    if (statements.length > 0 && !(await commit(db, statements))) return refuse('conflict', 'The character changed while rolling; nothing was spent. Roll again')
+    return { ok: true, result: view, roll: null, character: spent }
+  }
 
   const id = newRollId()
-  await db.batch([
+  const committed = await commit(db, [
+    ...statements,
     db
       .prepare(
         `INSERT INTO roll (id, campaign_id, character_id, user_id, roll_type, ability, dice, modifier, total, complication,
@@ -241,17 +300,30 @@ export async function rollForCharacter(
          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       )
       .bind(
-        id, row.campaign_id, row.id, userId, input.type, input.ability, JSON.stringify(result.dice), input.modifier, result.total, view.complication,
-        objective?.stratagemId ?? null, objective?.index ?? null, objective?.cn ?? null, objective?.label ?? null, new Date().toISOString(),
+        id, row.campaign_id, row.id, userId, input.type, input.ability, JSON.stringify(result.dice), modifier, result.total, view.complication,
+        objective?.stratagemId ?? null, objective?.index ?? null, objective?.cn ?? null, objective?.label ?? null, now,
       ),
     db
       .prepare(`DELETE FROM roll WHERE campaign_id = ? AND id NOT IN (SELECT id FROM roll WHERE campaign_id = ? ORDER BY created_at DESC, id DESC LIMIT ${ROLL_LIMIT})`)
       .bind(row.campaign_id, row.campaign_id),
   ])
+  if (!committed) return refuse('conflict', 'The character changed while rolling; nothing was spent. Roll again')
   const record = await loadRecord(db, id)
   if (!record) throw new Error('roll insert committed but the row is missing')
+  if (spent) await publishCharacterWrite(env, { ok: true, character: { id: row.id, campaignId: row.campaign_id, revision: spent.revision } })
   await publish(env, row.campaign_id, { type: 'roll', roll: asLive(record) })
-  return { ok: true, result: view, roll: record }
+  return { ok: true, result: view, roll: record, character: spent }
+}
+
+/** Runs one batch; false when `invokeStatements` aborted it on a stale revision (nothing committed). */
+async function commit(db: D1Database, statements: D1PreparedStatement[]): Promise<boolean> {
+  try {
+    await db.batch(statements)
+    return true
+  } catch (error) {
+    if (isBatchAbort(error)) return false
+    throw error
+  }
 }
 
 /**

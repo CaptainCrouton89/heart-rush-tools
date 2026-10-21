@@ -37,6 +37,8 @@ function reduce(c: Character, a: ClientAction, catalogue: ActionCatalogue): Char
     case 'rush:set': return combat.rushSet(c, { ...a, kind: 'rush:set' })
     case 'dp:set': return combat.dpSet(c, { ...a, kind: 'dp:set' })
     case 'round:set': return combat.roundSet(c, { ...a, kind: 'round:set' })
+    case 'aspect:invoke': return combat.aspectInvoke(c, a)
+    case 'aspect:hinder': return combat.aspectHinder(c, a)
     case 'heartDie:spend': return combat.heartDieSpend(c, a)
     case 'heartDie:set': return combat.heartDieSet(c, a)
     case 'nextRound': return combat.nextRound(c, a, catalogue.conditions)
@@ -92,7 +94,8 @@ export function applyInverse(c: Character, inverse: Inverse): { character: Chara
   const keys = Object.keys(inverse.slices)
   const unknown = keys.find(k => !RESTORABLE.has(k))
   if (unknown !== undefined) throw new RuleError('bad_action', `Cannot restore ${unknown}`)
-  const character: Character = { ...c, ...inverse.slices }
+  const slices = inverse.slices.play ? { ...inverse.slices, play: upgradePlay(inverse.slices.play) } : inverse.slices
+  const character: Character = { ...c, ...slices }
   return { character, inverse: inverseOf(c, character) }
 }
 
@@ -112,9 +115,22 @@ export function canUndo(events: readonly UndoableEvent[], eventId?: string): Und
   return top
 }
 
-/** Brings a stored document to the current schema. Version 1 is the current one, so this is the identity. */
+/**
+ * `play` written before `youngAndFoolish` carried `dpPerComplication: 1 | 2` (2 for Young and Foolish). Reads the
+ * old field once; stored states and stored inverses written before the rename both pass through here.
+ */
+function upgradePlay(play: Character['play']): Character['play'] {
+  if (typeof play.youngAndFoolish === 'boolean') return play
+  const { dpPerComplication, ...rest } = play as Character['play'] & { dpPerComplication?: number }
+  return { ...rest, youngAndFoolish: dpPerComplication === 2 }
+}
+
+/** Brings a stored document to the current schema (version 1; `play.dpPerComplication` is read as `youngAndFoolish`). */
 export function upgradeCharacter(state: unknown): StoredState {
   const version = (state as { schemaVersion?: unknown } | null)?.schemaVersion
   if (version !== SCHEMA_VERSION) throw new RuleError('bad_action', `Unsupported schemaVersion: ${String(version)}`)
-  return state as StoredState
+  const stored = state as StoredState
+  if (stored.draft) return stored
+  const play = upgradePlay(stored.play)
+  return play === stored.play ? stored : { ...stored, play }
 }

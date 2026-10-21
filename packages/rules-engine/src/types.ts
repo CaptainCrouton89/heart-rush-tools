@@ -132,8 +132,8 @@ export type Play = {
   baseSpeed: number
   staminaSpentRound: number | null
   failedRestStreak: number
-  /** Young and Foolish sets 2. */
-  dpPerComplication: 1 | 2
+  /** Young and Foolish: a negative invocation gains 1 DP beyond the aspect's rank. */
+  youngAndFoolish: boolean
   /** Natural Learner sets −1. */
   professionChallengeDelta: 0 | -1
 }
@@ -258,6 +258,10 @@ export type ActionBody =
   /** New aspects and rank changes come only through `xp:buy`; these two edit text and honor or delete. */
   | { kind: 'aspect:edit'; aspect: { id: string; text?: string; honor?: boolean } }
   | { kind: 'aspect:remove'; aspectId: string }
+  /** Positive invocation: spend `dp` (1…rank) DP to add that much to a skill check. Frail is never invoked this way. */
+  | { kind: 'aspect:invoke'; aspectId: string; dp: number }
+  /** Negative invocation: the aspect hinders the character; DP goes up by its rank (+1 with Young and Foolish), capped at 10. */
+  | { kind: 'aspect:hinder'; aspectId: string }
   | { kind: 'profession:add'; profession: Partial<Omit<Profession, 'id'>> & { name: string } }
   | { kind: 'profession:edit'; profession: Partial<Omit<Profession, 'id'>> & { id: string } }
   | { kind: 'profession:remove'; professionId: string }
@@ -289,7 +293,7 @@ export type RuleErrorCode =
   | 'aspect_cap' | 'die_cap' | 'not_attuned' | 'insufficient_xp' | 'path_locked' | 'no_path' | 'tier_cap'
   // reducers
   | 'not_found' | 'invalid_amount' | 'not_enough_rush' | 'stamina_spent' | 'heart_die_floor' | 'heart_die_over_max'
-  | 'wrong_rolled_count' | 'bloodmark_not_owed' | 'not_ready'
+  | 'wrong_rolled_count' | 'bloodmark_not_owed' | 'not_ready' | 'not_enough_dp'
   // createCharacter
   | 'unknown_race' | 'unknown_subrace' | 'invalid_age_benefits' | 'invalid_dice' | 'invalid_professions' | 'kin_choice'
   // undo and client input

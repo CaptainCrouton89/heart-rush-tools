@@ -1,14 +1,17 @@
 // The roll panel (campaign spec §3.2, plan row RP). Ability and roll type (attack and defense only for Might, Agility and
 // Cunning), the advantage/disadvantage stepper starting at the engine's `defaultNet`, the modifier with a profession picker
-// that fills full or half rank (rounded down), and **Roll**. Every roll is made by the server (`rollForCharacterFn`); the
+// that fills full or half rank (rounded down), an aspect picker for a check (a positive invocation: the server spends the
+// chosen 1…rank DP and adds it to the roll, in the same request as the roll), and **Roll**. Every roll is made by the server (`rollForCharacterFn`); the
 // panel only previews the dice the engine's `rollSpec` says will be rolled.
 //
 // Phone (< 1024 px, the sheet's own breakpoint): a bottom sheet. Desktop: a popover beside `anchor`, or a dialog when the
 // caller has no element to anchor to.
 import { useEffect, useId, useRef, useState, type ReactNode, type RefObject } from 'react'
+import { useRouter } from '@tanstack/react-router'
 import { useServerFn } from '@tanstack/react-start'
 import { rollSpec, type RollType } from '@heartrush/rules-engine/dice'
-import type { AbilityId, Character } from '@heartrush/rules-engine/types'
+import { isFrail } from '@heartrush/rules-engine/reducers/combat'
+import type { AbilityId, Aspect, Character } from '@heartrush/rules-engine/types'
 import { Button } from '@heartrush/ui/components/button'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@heartrush/ui/components/dialog'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@heartrush/ui/components/dropdown-menu'
@@ -142,6 +145,7 @@ type RollFormProps = Omit<RollPanelProps, 'ability'> & { state: Character; abili
 
 function RollForm({ character: doc, state: character, ability, onAbility: setAbility, objective, onResult }: RollFormProps) {
   const roll = useServerFn(rollForCharacterFn)
+  const router = useRouter()
   const ids = useId()
 
   const [type, setType] = useState<RollType>('check')
@@ -155,6 +159,9 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
     setNet(defaultNet)
   }
   const [modifierText, setModifierText] = useState('')
+  // The aspect invoked on this roll and the DP spent on it (1…its rank; checks only). Frail may only be invoked against the character.
+  const [pick, setPick] = useState<{ aspectId: string; dp: number } | null>(null)
+  const invocable = character.aspects.filter((a) => !isFrail(a))
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [outcome, setOutcome] = useState<RollOutcome | null>(null)
@@ -163,6 +170,9 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
   const spec = rollSpec(character, { type: rollType, ability }, getCatalogue().conditions)
   const modifier = /^[-−]?\d+$/.test(modifierText) ? Number(modifierText.replace('−', '-')) : 0
   const modifierInvalid = modifierText !== '' && modifierText !== '-' && modifierText !== '−' && !/^[-−]?\d+$/.test(modifierText)
+  const aspect: Aspect | null = rollType === 'check' && pick ? (invocable.find((a) => a.id === pick.aspectId) ?? null) : null
+  const spend = aspect && pick ? Math.min(pick.dp, aspect.rank) : 0
+  const aspectShort = aspect !== null && character.play.dp < spend
 
   const pickAbility = (next: AbilityId) => {
     setAbility(next)
@@ -186,10 +196,16 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
           ability,
           modifier,
           net,
+          ...(aspect ? { aspect: { aspectId: aspect.id, dp: spend } } : {}),
           ...(objective ? { objective: { stratagemId: objective.stratagemId, index: objective.index } } : {}),
         },
       })
       if (!r.ok) return setError(r.message)
+      if (r.character) {
+        // The roll spent DP: the aspect is used up for this roll, and the page's loader adopts the new revision.
+        setPick(null)
+        void router.invalidate()
+      }
       show({
         characterId: doc.id,
         rollId: r.roll?.id ?? null,
@@ -307,7 +323,41 @@ function RollForm({ character: doc, state: character, ability, onAbility: setAbi
         </div>
       </Field>
 
-      <Button size="compact" variant="line-primary" type="button" disabled={busy || modifierInvalid} onClick={() => void submit()}>
+      {rollType === 'check' && invocable.length > 0 && (
+        <Field label="Aspect">
+          {aspect ? (
+            <div className="flex items-center gap-2">
+              <p className="min-w-0 flex-1 text-ui">
+                <span className="font-semibold">“{aspect.text}”</span> +{spend} · −{spend} DP
+                <span className="block text-meta text-muted-foreground">{aspectShort ? `not enough DP (${character.play.dp})` : `${character.play.dp} DP now; spent when you roll`}</span>
+              </p>
+              <Button size="compact" type="button" variant="ghost" className="shrink-0" aria-label={`Don't invoke "${aspect.text}"`} onClick={() => setPick(null)}>
+                Remove
+              </Button>
+            </div>
+          ) : (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button size="compact" type="button" variant="line" className="self-start px-3">
+                  Invoke an aspect ▾
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="max-h-80 overflow-y-auto">
+                <DropdownMenuLabel className="text-meta text-muted-foreground">Spend up to the aspect's rank in DP · {character.play.dp} DP</DropdownMenuLabel>
+                {invocable.flatMap((a) =>
+                  Array.from({ length: a.rank }, (_, i) => a.rank - i).map((n) => (
+                    <DropdownMenuItem key={`${a.id}:${n}`} className="min-h-11" disabled={character.play.dp < n} onSelect={() => setPick({ aspectId: a.id, dp: n })}>
+                      {a.text} +{n} · −{n} DP{character.play.dp < n ? ' · not enough DP' : ''}
+                    </DropdownMenuItem>
+                  )),
+                )}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          )}
+        </Field>
+      )}
+
+      <Button size="compact" variant="line-primary" type="button" disabled={busy || modifierInvalid || aspectShort} onClick={() => void submit()}>
         {busy ? 'Rolling…' : `Roll ${abilityLabel(ability)} ${typeLabel(rollType)}`}
       </Button>
 

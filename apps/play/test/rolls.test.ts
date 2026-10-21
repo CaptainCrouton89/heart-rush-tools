@@ -373,3 +373,118 @@ test('a stored roll cannot hold a value outside the five complication values (mi
   const r = ok(await rollForCharacter(db, env, 'owner', check(ysolde)))
   await assert.rejects(db.prepare("UPDATE roll SET complication = 'bogus' WHERE id = ?").bind(r.roll!.id).run())
 })
+
+// ---- aspect invocation on a roll (aspect:invoke in the roll's batch) --------------------------------
+
+type Stored = { play: { dp: number }; aspects: { id: string; text: string; rank: number; source: string; honor: boolean }[] }
+const stored = async (id: string) => {
+  const row = (await db.prepare('SELECT state, revision FROM character WHERE id = ?').bind(id).first<{ state: string; revision: number }>())!
+  return { state: JSON.parse(row.state) as Stored, revision: row.revision }
+}
+async function editState(id: string, edit: (s: Stored) => void) {
+  const { state } = await stored(id)
+  edit(state)
+  await db.prepare('UPDATE character SET state = ? WHERE id = ?').bind(JSON.stringify(state), id).run()
+}
+const loyal = async (id: string) => (await stored(id)).state.aspects.find((a) => a.text === 'Loyal')!
+const invokeEvents = async (id: string) =>
+  (await db.prepare('SELECT seq, action FROM character_event WHERE character_id = ? ORDER BY seq').bind(id).all<{ seq: number; action: string }>()).results
+    .map((e) => ({ seq: e.seq, action: JSON.parse(e.action) as { kind: string; aspectId: string; dp: number } }))
+    .filter((e) => e.action.kind === 'aspect:invoke')
+
+test('a check invoking a rank-2 aspect spends 2 DP once, writes one aspect:invoke event and adds 2 to the stored roll', async () => {
+  await editState(ysolde, (s) => { s.aspects.find((a) => a.text === 'Loyal')!.rank = 2 })
+  const aspect = await loyal(ysolde)
+  const before = await stored(ysolde)
+  const { env, events } = fakeChannel()
+  const r = ok(await rollForCharacter(db, env, 'owner', check(ysolde, { modifier: 1, aspect: { aspectId: aspect.id, dp: 2 } }), seq(5, 4)))
+  assert.equal(r.result.total, 12)
+  assert.equal(r.roll!.modifier, 3)
+  const after = await stored(ysolde)
+  assert.equal(after.state.play.dp, before.state.play.dp - 2)
+  assert.equal(after.revision, before.revision + 1)
+  assert.deepEqual(r.character, { revision: before.revision + 1, dp: before.state.play.dp - 2 })
+  const invokes = await invokeEvents(ysolde)
+  assert.equal(invokes.length, 1)
+  assert.deepEqual([invokes[0]!.seq, invokes[0]!.action.aspectId, invokes[0]!.action.dp], [before.revision + 1, aspect.id, 2])
+  assert.deepEqual(events.map((e) => e.event.type).sort(), ['character', 'roll'])
+})
+
+test('a character in no campaign spends the DP and stores no roll; a plain roll reports no character change', async () => {
+  const aspect = await loyal(wanderer)
+  const before = await stored(wanderer)
+  const r = ok(await rollForCharacter(db, fakeChannel().env, 'owner', check(wanderer, { aspect: { aspectId: aspect.id, dp: 1 } }), seq(5, 4)))
+  assert.equal(r.roll, null)
+  assert.equal(r.result.total, 10)
+  assert.equal((await stored(wanderer)).state.play.dp, before.state.play.dp - 1)
+  assert.equal((await invokeEvents(wanderer)).length, 1)
+  assert.equal(await count('roll'), 0)
+  assert.equal(ok(await rollForCharacter(db, fakeChannel().env, 'owner', check(wanderer))).character, null)
+})
+
+test('an aspect roll is refused with nothing rolled, stored or spent: too little DP, over rank, Frail, unknown aspect, not a check', async () => {
+  const aspect = await loyal(ysolde)
+  const { env, events } = fakeChannel()
+  await editState(ysolde, (s) => {
+    s.play.dp = 0
+    s.aspects.push({ id: 'frail', text: 'Frail', rank: 3, source: 'age', honor: false })
+  })
+  const before = await stored(ysolde)
+  refused(await rollForCharacter(db, env, 'owner', check(ysolde, { aspect: { aspectId: aspect.id, dp: 1 } })), 409, 'not_enough_dp')
+  await editState(ysolde, (s) => { s.play.dp = 5 })
+  const rich = await stored(ysolde)
+  refused(await rollForCharacter(db, env, 'owner', check(ysolde, { aspect: { aspectId: aspect.id, dp: 2 } })), 400, 'bad_input')
+  refused(await rollForCharacter(db, env, 'owner', check(ysolde, { aspect: { aspectId: 'frail', dp: 3 } })), 400, 'bad_input')
+  refused(await rollForCharacter(db, env, 'owner', check(ysolde, { aspect: { aspectId: 'nope', dp: 1 } })), 404, 'not_found')
+  refused(await rollForCharacter(db, env, 'owner', check(ysolde, { type: 'save', aspect: { aspectId: aspect.id, dp: 1 } })), 400, 'bad_input')
+  refused(await rollForCharacter(db, env, 'owner', check(ysolde, { aspect: { aspectId: aspect.id, dp: 0 } })), 400, 'bad_input')
+  assert.equal(before.state.play.dp, 0)
+  assert.deepEqual(await stored(ysolde), rich)
+  assert.equal(await count('roll'), 0)
+  assert.equal((await invokeEvents(ysolde)).length, 0)
+  assert.equal(events.length, 0)
+})
+
+/** A D1 whose batch is preceded by another writer running `sql` (bound to the character id). */
+const racingDb = (sql: string, id: string) =>
+  new Proxy(db, {
+    get(target, key) {
+      if (key === 'batch') {
+        return async (statements: D1PreparedStatement[]) => {
+          await target.prepare(sql).bind(id).run()
+          return target.batch(statements)
+        }
+      }
+      const value = Reflect.get(target, key)
+      return typeof value === 'function' ? value.bind(target) : value
+    },
+  })
+
+test('a sheet change landing between load and commit aborts the aspect roll: conflict, no roll row, no DP spent', async () => {
+  const aspect = await loyal(ysolde)
+  const before = await stored(ysolde)
+  const racing = racingDb('UPDATE character SET revision = revision + 1 WHERE id = ?', ysolde)
+  const { env, events } = fakeChannel()
+  refused(await rollForCharacter(racing, env, 'owner', check(ysolde, { aspect: { aspectId: aspect.id, dp: 1 } }), seq(5, 4)), 409, 'conflict')
+  const after = await stored(ysolde)
+  assert.equal(after.state.play.dp, before.state.play.dp)
+  assert.equal(after.revision, before.revision + 1)
+  assert.equal(await count('roll'), 0)
+  assert.equal((await invokeEvents(ysolde)).length, 0)
+  assert.equal(events.length, 0)
+})
+
+test('leaving the campaign between load and commit aborts the aspect roll: conflict, no roll row, no DP spent', async () => {
+  const aspect = await loyal(ysolde)
+  const before = await stored(ysolde)
+  // Leaving a campaign does not bump the revision; the campaign check alone must catch it.
+  const racing = racingDb('UPDATE character SET campaign_id = NULL WHERE id = ?', ysolde)
+  const { env, events } = fakeChannel()
+  refused(await rollForCharacter(racing, env, 'owner', check(ysolde, { aspect: { aspectId: aspect.id, dp: 1 } }), seq(5, 4)), 409, 'conflict')
+  const after = await stored(ysolde)
+  assert.equal(after.state.play.dp, before.state.play.dp)
+  assert.equal(after.revision, before.revision)
+  assert.equal(await count('roll'), 0)
+  assert.equal((await invokeEvents(ysolde)).length, 0)
+  assert.equal(events.length, 0)
+})

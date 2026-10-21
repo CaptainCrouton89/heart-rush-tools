@@ -75,7 +75,7 @@ describe('criterion 16: createCharacter', () => {
   test('young Natural Learner and Young and Foolish change their play fields with 2 ranks', () => {
     const c = createCharacter(input({ ageCategory: 'young', ageBenefits: ['natural-learner', 'young-and-foolish'], professions: [{ name: 'Scout', rank: 2 }] }), catalogue)
     assert.equal(c.play.professionChallengeDelta, -1)
-    assert.equal(c.play.dpPerComplication, 2)
+    assert.equal(c.play.youngAndFoolish, true)
     assert.deepEqual(c.professions.map(p => p.rank), [2])
     assert.equal(c.aspects.find(a => a.source === 'age')?.text, 'Eager to Prove Myself')
     error('invalid_age_benefits', () => createCharacter(input({ ageCategory: 'young', ageBenefits: ['natural-learner'], professions: [{ name: 'Scout', rank: 2 }] }), catalogue))

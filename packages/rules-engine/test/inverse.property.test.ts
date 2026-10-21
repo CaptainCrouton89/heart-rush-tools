@@ -91,7 +91,7 @@ const characterArb: fc.Arbitrary<Character> = fc.record({
   bloodmarkLevel: int(0, 6),
   hasBloodmark: fc.boolean(),
   path: fc.oneof(fc.constant(null), int(1, 3).map(tier => ({ pathId: 'path:vampire', tier: tier as 1 | 2 | 3 }))),
-  play: fc.record({ round: int(1, 5), rushPoints: int(0, 6), dp: int(0, 10), staminaSpentRound: fc.oneof(fc.constant(null), int(1, 5)), failedRestStreak: int(0, 3) }),
+  play: fc.record({ round: int(1, 5), rushPoints: int(0, 6), dp: int(0, 10), staminaSpentRound: fc.oneof(fc.constant(null), int(1, 5)), failedRestStreak: int(0, 3), youngAndFoolish: fc.boolean() }),
 }).map(r => {
   const dice = r.abilities.map(([start, steps]) => ({ start, current: Math.min(12, start + 2 * steps) as 4 | 6 | 8 | 10 | 12 }))
   const purchases = Array.from({ length: r.hpPurchases }, (_, i) => ({ id: `pu${i}`, kind: 'hp' as const, target: null, cost: i + 5, at: AT }))
@@ -178,6 +178,8 @@ function bodies(c: Character): Array<fc.Arbitrary<Body>> {
     int(0, 50).map(iron => ({ kind: 'gear:coins:set', coins: { iron } })),
     fc.tuple(idOf(c.aspects), fc.boolean()).map(([id, honor]) => ({ kind: 'aspect:edit', aspect: { id, text: 'Edited', honor } })),
     idOf(c.aspects).map(aspectId => ({ kind: 'aspect:remove', aspectId })),
+    fc.tuple(idOf(c.aspects), int(0, 6)).map(([aspectId, dp]) => ({ kind: 'aspect:invoke', aspectId, dp })),
+    idOf(c.aspects).map(aspectId => ({ kind: 'aspect:hinder', aspectId })),
     int(0, 7).map(rank => ({ kind: 'profession:add', profession: { name: 'Smith', rank } })),
     fc.tuple(idOf(c.professions), int(0, 7)).map(([id, rank]) => ({ kind: 'profession:edit', profession: { id, rank } })),
     idOf(c.professions).map(professionId => ({ kind: 'profession:remove', professionId })),
@@ -202,7 +204,7 @@ const ALL_KINDS: Record<Body['kind'], true> = {
   'xp:award': true, 'xp:buy': true, 'bloodmark:award': true, 'bloodmark:pick': true,
   'gear:weapon:add': true, 'gear:weapon:edit': true, 'gear:weapon:remove': true, 'gear:wield': true, 'gear:armor:set': true,
   'gear:shield:set': true, 'gear:wear': true, 'gear:item:add': true, 'gear:item:edit': true, 'gear:item:remove': true, 'gear:coins:set': true,
-  'aspect:edit': true, 'aspect:remove': true, 'profession:add': true, 'profession:edit': true, 'profession:remove': true,
+  'aspect:edit': true, 'aspect:remove': true, 'aspect:invoke': true, 'aspect:hinder': true, 'profession:add': true, 'profession:edit': true, 'profession:remove': true,
   'profession:challenge': true, 'profession:practice': true, 'profession:mission': true, 'profession:advance': true,
   'identity:set': true, 'notes:set': true, 'raceEffects:set': true, 'attunement:set': true,
 }

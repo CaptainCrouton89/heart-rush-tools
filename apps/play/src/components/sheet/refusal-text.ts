@@ -34,6 +34,7 @@ const REASON: Record<Code, string> = {
   // reducers
   invalid_amount: "that amount isn't allowed",
   not_enough_rush: 'not enough rush points',
+  not_enough_dp: 'not enough DP',
   stamina_spent: 'the heart die was already spent this round',
   heart_die_floor: "the heart die can't go below d4",
   heart_die_over_max: "that is bigger than the character's largest heart die",

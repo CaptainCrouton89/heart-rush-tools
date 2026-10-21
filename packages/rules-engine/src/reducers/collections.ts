@@ -2,6 +2,7 @@
 // Pure (INV-PURE): each takes a Character and an action and returns a new Character, or throws RuleError.
 // Records an action creates get the id `<action.id>:<n>` (ruling 6); all of these create at most one, so `:0`.
 import { RuleError } from '../types'
+import { isFrail } from './combat'
 import type { Action, Armor, Aspect, Character, Coins, GearItem, Profession, Shield, Weapon } from '../types'
 
 const COLLECTION_KINDS = [
@@ -107,6 +108,8 @@ export function reduceCollections(c: Character, a: CollectionAction): Character 
       const i = index(c.aspects, a.aspect.id, 'aspect')
       const old = c.aspects[i]!
       const next: Aspect = { ...old, text: a.aspect.text ?? old.text, honor: a.aspect.honor ?? old.honor }
+      // Frail is known by its text, so a rename must not make or unmake it (it may only be invoked against the character).
+      if (isFrail(old) !== isFrail(next)) throw new RuleError('bad_action', 'The Frail aspect cannot be renamed')
       return { ...c, aspects: replaceAt(c.aspects, i, next) }
     }
     case 'aspect:remove':

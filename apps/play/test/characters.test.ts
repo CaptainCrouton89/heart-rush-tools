@@ -292,6 +292,26 @@ test('undo of the top event works; undo of an older event → not_top_of_stack; 
   assert.equal(again.revision, 5)
 })
 
+test('listEvents reports what each event did to DP, the 10 DP cap and undo included', async () => {
+  const { doc } = await finished('owner', 0)
+  const loyal = doc.state.draft ? null : doc.state.aspects.find((x) => x.text === 'Loyal')!
+  const steps: ClientAction[] = [
+    { kind: 'dp:set', value: 9, id: ulid(), at: at() },
+    { kind: 'aspect:hinder', aspectId: loyal!.id, id: ulid(), at: at() },
+    addItem('A'),
+    { kind: 'aspect:hinder', aspectId: loyal!.id, id: ulid(), at: at() },
+    { kind: 'aspect:invoke', aspectId: loyal!.id, dp: 1, id: ulid(), at: at() },
+  ]
+  let revision = doc.revision
+  for (const action of steps) revision = ok(await applyCharacterAction(db, 'owner', { characterId: doc.id, revision, action })).revision
+  ok(await undoCharacterEvent(db, 'owner', { characterId: doc.id, eventId: steps[4]!.id }))
+  const listed = await listEvents(db, 'owner', { characterId: doc.id })
+  assert.ok(listed.ok)
+  assert.deepEqual(listed.events.map((e) => [e.kind, e.dpChange]), [
+    ['undo', 1], ['aspect:invoke', -1], ['aspect:hinder', 0], ['gear:item:add', 0], ['aspect:hinder', 1], ['dp:set', 6],
+  ])
+})
+
 test('a stale undo (the character moved on between read and write) → conflict, nothing marked undone', async () => {
   const { doc } = await finished('owner', 0)
   const a = addItem('A')

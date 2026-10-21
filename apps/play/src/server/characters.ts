@@ -103,6 +103,8 @@ export type EventSummary = {
   undone: boolean
   actorUserId: string
   createdAt: string
+  /** How much this event changed DP, from the stored inverses (each holds the DP before its event) and the current DP. */
+  dpChange: number
 }
 
 export type ListCharactersResult = { ok: true; characters: CharacterSummary[] }
@@ -331,23 +333,30 @@ export async function listEvents(db: D1Database, userId: string, input: Characte
   const loaded = await loadFor(db, userId, input.characterId, 'read')
   if (isRefusal(loaded)) return loaded
   const { results: recent } = await db
-    .prepare('SELECT id, seq, action, undone, actor_user_id, created_at FROM character_event WHERE character_id = ? ORDER BY seq DESC LIMIT ?')
+    .prepare(
+      `SELECT id, seq, action, undone, actor_user_id, created_at, json_extract(inverse, '$.slices.play.dp') AS dp_before
+         FROM character_event WHERE character_id = ? ORDER BY seq DESC LIMIT ?`,
+    )
     .bind(input.characterId, EVENT_LIMIT)
-    .all<{ id: string; seq: number; action: string; undone: number; actor_user_id: string; created_at: string }>()
+    .all<{ id: string; seq: number; action: string; undone: number; actor_user_id: string; created_at: string; dp_before: number | null }>()
   let topEventId: string | null = null
   try {
     topEventId = canUndo(await undoableEvents(db, input.characterId)).id
   } catch (error) {
     if (!(error instanceof RuleError && error.code === 'not_top_of_stack')) throw error
   }
-  return {
-    ok: true,
-    topEventId,
-    events: recent.map((r) => {
-      const action = JSON.parse(r.action) as Action
-      return { id: r.id, seq: r.seq, kind: action.kind, action, undone: r.undone === 1, actorUserId: r.actor_user_id, createdAt: r.created_at }
-    }),
-  }
+  // Newest first, and every event after the oldest listed one is listed, so the DP after each event is the next newer
+  // event's DP-before (an event that changed nothing in `play` stores none), or the current DP for the newest.
+  const current = stateOf(loaded.row)
+  let dpAfter = current.draft ? 0 : current.play.dp
+  const events = recent.map((r) => {
+    const action = JSON.parse(r.action) as Action
+    const before = r.dp_before ?? dpAfter
+    const summary: EventSummary = { id: r.id, seq: r.seq, kind: action.kind, action, undone: r.undone === 1, actorUserId: r.actor_user_id, createdAt: r.created_at, dpChange: dpAfter - before }
+    dpAfter = before
+    return summary
+  })
+  return { ok: true, topEventId, events }
 }
 
 async function undoableEvents(db: D1Database, characterId: string): Promise<UndoableEvent[]> {

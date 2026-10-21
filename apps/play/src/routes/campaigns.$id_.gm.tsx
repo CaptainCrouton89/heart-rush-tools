@@ -96,7 +96,7 @@ function GmSheet({ initial }: { initial: CharacterDoc }) {
     async (action: ActionDraft): Promise<Outcome> => {
       const outcome = await dispatch(action)
       if (outcome.status === 'saved' && outcome.action) {
-        setOffer({ eventId: outcome.action.id, text: describeAction(outcome.action), revision: outcome.character.revision })
+        setOffer({ eventId: outcome.action.id, text: describeAction(outcome.action, outcome.character.state), revision: outcome.character.revision })
       } else setOffer(null)
       return outcome
     },
@@ -132,7 +132,7 @@ function GmSheet({ initial }: { initial: CharacterDoc }) {
             {canEdit && <DamagePad dispatch={send} maxHp={derived.effectiveMaxHp} />}
           </>
         }
-        history={<HistoryList key={document.id} characterId={document.id} refreshKey={`${document.revision}:${pending}`} canEdit={canEdit} onUndo={undoEvent} />}
+        history={<HistoryList key={document.id} characterId={document.id} character={character} refreshKey={`${document.revision}:${pending}`} canEdit={canEdit} onUndo={undoEvent} />}
       />
       <UndoChip offer={shownOffer} notice={notice} onUndo={undoEvent} onExpire={expire} onDismissNotice={dismissNotice} />
     </>

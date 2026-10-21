@@ -2,7 +2,7 @@
 import type { ConditionCatalogue } from '../catalogue'
 import { SLEEP_ROLL_CONDITION } from '../conditions'
 import { effectiveMaxHp, maxHeartDie, minorUseCost } from '../derived'
-import { RuleError, type Action, type Character, type Condition, type HeartDie, type Wound } from '../types'
+import { RuleError, type Action, type Aspect, type Character, type Condition, type HeartDie, type Wound } from '../types'
 
 type Of<K extends Action['kind']> = Extract<Action, { kind: K }> | (Extract<Action, { kind: 'rush:set' | 'dp:set' | 'round:set' }> & { kind: K })
 
@@ -123,6 +123,31 @@ export function rushSet(c: Character, a: Of<'rush:set'>): Character {
 export function dpSet(c: Character, a: Of<'dp:set'>): Character {
   finiteInteger(a.value)
   return updatePlay(c, { dp: Math.max(0, Math.min(10, a.value)) })
+}
+/** The Frail aspect from Frail Body, Sharp Mind: rank 3, invoked only against the character. */
+export function isFrail(a: Pick<Aspect, 'source' | 'text'>): boolean {
+  return a.source === 'age' && a.text === 'Frail'
+}
+/** DP a negative invocation of this aspect gains: its rank, plus 1 with Young and Foolish. */
+export function hinderGain(c: Character, a: Pick<Aspect, 'rank'>): number {
+  return a.rank + (c.play.youngAndFoolish ? 1 : 0)
+}
+function aspectOf(c: Character, id: string): Aspect {
+  const aspect = c.aspects.find(a => a.id === id)
+  if (!aspect) throw new RuleError('not_found')
+  return aspect
+}
+export function aspectInvoke(c: Character, a: Of<'aspect:invoke'>): Character {
+  const aspect = aspectOf(c, a.aspectId)
+  if (isFrail(aspect)) throw new RuleError('bad_action', 'Frail can only be invoked against the character')
+  integer(a.dp, 1)
+  if (a.dp > aspect.rank) throw new RuleError('invalid_amount', `Spend at most ${aspect.rank} DP on this aspect`)
+  if (c.play.dp < a.dp) throw new RuleError('not_enough_dp')
+  return updatePlay(c, { dp: c.play.dp - a.dp })
+}
+export function aspectHinder(c: Character, a: Of<'aspect:hinder'>): Character {
+  const aspect = aspectOf(c, a.aspectId)
+  return updatePlay(c, { dp: Math.min(10, c.play.dp + hinderGain(c, aspect)) })
 }
 export function roundSet(c: Character, a: Of<'round:set'>): Character {
   integer(a.value, 1)

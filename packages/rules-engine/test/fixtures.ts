@@ -31,7 +31,7 @@ export function makeCharacter(over: Partial<Character> = {}): Character {
       coins: { iron: 0, obol: 0, lire: 0, ducat: 0, crown: 0 },
     },
     xp: { awarded: 0, purchases: [] },
-    play: { round: 1, rushPoints: 0, dp: 3, baseSpeed: 60, staminaSpentRound: null, failedRestStreak: 0, dpPerComplication: 1, professionChallengeDelta: 0 },
+    play: { round: 1, rushPoints: 0, dp: 3, baseSpeed: 60, staminaSpentRound: null, failedRestStreak: 0, youngAndFoolish: false, professionChallengeDelta: 0 },
     raceEffects: [],
     notes: '',
     ...over,

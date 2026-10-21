@@ -30,7 +30,7 @@ export function burningLevels(conditions: SectionProps['character']['conditions'
 /**
  * The fight controls under the damage pad: the heart die (Spend ▾ lists Endure / Focus / Surge under the row, greyed
  * after one spend this round or at d4; the die's ▾ sets it by hand up to the largest heart die), rush points, the round with **Next round**
- * (asking for Burning damage first) and **End fight**, and DP with **Start session** and the complication button.
+ * (asking for Burning damage first) and **End fight**, and DP with **Start session** (spending and gaining DP through an aspect is on the Aspects section).
  * Without `canEdit` the values show and the controls do not.
  */
 export function FightControls({ character, derived, dispatch, canEdit }: SectionProps) {
@@ -60,8 +60,6 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
     setBurning(null)
     void dispatch({ kind: 'nextRound' })
   }
-
-  const dpStep = play.dpPerComplication
 
   return (
     <section aria-label="Fight controls" className="flex flex-col gap-1 font-sans text-control">
@@ -154,11 +152,6 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
       {/* DP */}
       <div className="flex min-h-11 flex-wrap items-center gap-2">
         <Stepper label="DP" value={play.dp} canEdit={canEdit} min={0} max={10} onChange={(value) => void dispatch({ kind: 'dp:set', value })} />
-        {canEdit && dpStep === 2 && (
-          <Button size="compact" variant="line" className="px-3" disabled={play.dp >= 10} onClick={() => void dispatch({ kind: 'dp:set', value: Math.min(10, play.dp + 2) })}>
-            Complication: +{Math.min(2, 10 - play.dp) || 2} DP
-          </Button>
-        )}
         {canEdit && (
           <Button size="compact" variant="line" className="px-3" onClick={() => void dispatch({ kind: 'startSession' })}>
             Start session

@@ -92,7 +92,7 @@ function EditPage() {
       if (outcome.status === 'saved') failed.current.delete(target)
       else failed.current.set(target, outcome.text)
       if (outcome.status === 'saved' && outcome.action) {
-        setOffer({ eventId: outcome.action.id, text: describeAction(outcome.action), revision: outcome.character.revision })
+        setOffer({ eventId: outcome.action.id, text: describeAction(outcome.action, outcome.character.state), revision: outcome.character.revision })
       }
       else setOffer(null)
       setFailures((shown) => (shown.length === 0 ? shown : failureTexts()))
