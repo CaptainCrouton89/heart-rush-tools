@@ -16,10 +16,6 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
 # production
 /build
 
@@ -36,14 +32,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
-# vercel
-.vercel
-
 # typescript
 *.tsbuildinfo
-next-env.d.ts
 
-# Added by Task Master AI
 # Logs
 logs
 *.log
@@ -61,12 +52,6 @@ node_modules/
 *.sln
 *.sw?
 # OS specific
-# Task files
-tasks.json
-tasks/ 
-
-# Generated content directory
-/content/
 
 # Combined world wiki files (generated artifacts)
 world-wikis/**/Nations?And?Powers.md
@@ -76,10 +61,6 @@ world-wikis/**/Bestiary.md
 
 # Investigation and temporary docs
 /docs/
-
-# Ignore Next.js metadata icons (they cause LFS issues on Vercel)
-/src/app/icon.png
-/src/app/apple-icon.png
 
 # Claude Code metadata files
 .claude-md-manager.md
