@@ -1,7 +1,7 @@
 // The creation assistant's client state (design "Client (`use-assistant.ts`)"). The chat lives in D1 (`builder_chat`);
-// this hook shows it and drives it through the three server functions. On mount it reads the chat once; while a run is
-// in flight it waits on it with `getChat({wait: true})` in a loop (a network error waits 4 s and tries again), which is
-// how a reload or a second tab adopts the run or its settled result. `send` saves the builder first (the run reads the
+// this hook shows it and drives it through the three server functions. It reads the chat on mount and, while a run is in
+// flight, waits on it with `getChat({wait: true})` in a loop (a network error waits 4 s and tries again), which is how a
+// reload or a second tab adopts the run or its settled result. `send` saves the builder first (the run reads the
 // stored draft), shows the player's message at once and starts the run; a `busy` answer means another tab's run holds
 // the chat, so this one adopts it. The unread dots are client state only.
 import { useCallback, useEffect, useRef, useState } from 'react'
@@ -36,6 +36,8 @@ export type UseAssistant = {
   /** Why the last run gave no turn (`stopped` included), from the server. */
   error: ChatError | null
   sendProblem: SendProblem | null
+  /** The player's last message went out but no answer came back: Retry it before sending another (the Composer is off). */
+  unsent: boolean
   /** A chat function answered `not_found`: not the player's draft, finished, or gone. */
   notFound: boolean
   /** A dot on a tab that is not showing: a reply arrived (assistant), or Apply changed the draft (builder). */
@@ -74,7 +76,10 @@ export function useAssistant({ characterId, draft, showing, createDraft, afterFi
   const sendChat = useServerFn(sendChatFn)
   const stopChat = useServerFn(stopChatFn)
 
+  /** The draft whose chat this is: `characterId`, or the draft `createDraft` just made on `/characters/new`. */
+  const [chatId, setChatId] = useState(characterId)
   const [chat, setChat] = useState<ChatState | null>(null)
+  /** The player's message from this page until the server has stored it (also kept when its send went unanswered). */
   const [pending, setPending] = useState<PlayerMessage | null>(null)
   /** When this page's `sendChat` went out (ms), while it is in flight. */
   const [sending, setSending] = useState<number | null>(null)
@@ -84,60 +89,78 @@ export function useAssistant({ characterId, draft, showing, createDraft, afterFi
   const [notFound, setNotFound] = useState(false)
   const [unread, setUnread] = useState({ assistant: false, builder: false })
 
-  const live = useRef(true)
+  // Another draft's chat (the route moved to another character): start over for it.
+  if (characterId !== null && characterId !== chatId) {
+    setChatId(characterId)
+    setChat(null)
+    setPending(null)
+    setSending(null)
+    setStopping(false)
+    setStopUnconfirmed(false)
+    setSendProblem(null)
+    setNotFound(false)
+    setUnread({ assistant: false, builder: false })
+  }
+
+  /** The chat answers are for; an answer for any other draft is dropped. Cleared on unmount. */
+  const current = useRef<string | null>(chatId)
+  current.current = chatId
   useEffect(() => {
-    live.current = true
+    current.current = chatId
     return () => {
-      live.current = false
+      current.current = null
     }
-  }, [])
+  }, [chatId])
+  /** Set synchronously while a send or retry is under way, so two taps before a render cannot both send. */
+  const busy = useRef(false)
 
   const latest = useRef({ draft, createDraft, afterFirstSend, showing })
   latest.current = { draft, createDraft, afterFirstSend, showing }
 
-  /** Takes one server answer; false when the answer was not a chat (a redirect, an error page). */
-  const adopt = useCallback((r: unknown): boolean => {
-    if (!live.current || !isState(r)) return false
+  /** Takes one server answer for draft `id`; false when it was not a chat (a redirect, an error page) or is stale. */
+  const adopt = useCallback((id: string, r: unknown): boolean => {
+    if (current.current !== id || !isState(r)) return false
     if (r.ok) {
       setChat(r)
       setPending((p) => (p && r.messages.some((m) => m.id === p.id) ? null : p))
       return true
     }
     if (r.code === 'not_found') setNotFound(true)
-    else if (r.code === 'bad_input') setSendProblem({ kind: 'bad_input', message: r.message })
+    else if (r.code === 'bad_input') {
+      // The server refused the message itself, so it was not stored: it leaves the chat and goes back in the composer.
+      setPending(null)
+      setSendProblem({ kind: 'bad_input', message: r.message })
+    }
     return true
   }, [])
 
-  // First read.
+  // Reading the chat: once on mount, then while a run is in flight (and this page is not mid-send) wait on it in a
+  // loop. A network error waits 4 s and tries again. Starting a send or moving to another draft cancels the loop, so a
+  // read that answers late never replaces what the send brought.
+  const reading = chatId !== null && sending === null && !notFound && (chat === null || chat.running !== null)
   useEffect(() => {
-    if (!characterId) return
-    void getChat({ data: { characterId, wait: false } }).then(adopt, () => live.current && setSendProblem({ kind: 'unreachable' }))
-  }, [characterId, getChat, adopt])
-
-  // While a run is in flight (and this page is not mid-send), wait on it.
-  const waiting = characterId !== null && sending === null && chat?.running != null
-  useEffect(() => {
-    if (!waiting || !characterId) return
-    let stop = false
+    if (!reading || !chatId) return
+    let cancelled = false
     void (async () => {
-      while (!stop && live.current) {
+      let wait = false
+      while (!cancelled) {
         let r: unknown
         try {
-          r = await getChat({ data: { characterId, wait: true } })
+          r = await getChat({ data: { characterId: chatId, wait } })
         } catch {
           await new Promise((res) => setTimeout(res, RETRY_AFTER_MS))
           continue
         }
-        if (stop) return
-        adopt(r)
-        // The loop ends when the answer is no longer running (this effect is torn down and not restarted).
+        if (cancelled || !adopt(chatId, r)) return
+        // Ends when the chat is no longer running (this effect is torn down and not restarted).
         if (!isState(r) || !r.ok || !r.running) return
+        wait = true
       }
     })()
     return () => {
-      stop = true
+      cancelled = true
     }
-  }, [waiting, characterId, getChat, adopt])
+  }, [reading, chatId, getChat, adopt])
 
   // A reply that arrives while Builder shows puts a dot on Assistant.
   const assistantCount = chat?.messages.filter((m) => m.role === 'assistant').length ?? null
@@ -154,19 +177,36 @@ export function useAssistant({ characterId, draft, showing, createDraft, afterFi
     if (showing === 'builder' || showing === 'both') setUnread((u) => (u.builder ? { ...u, builder: false } : u))
   }, [showing])
 
+  /** Sends `message` (or, with null, runs the stored last message again); false when the server did not take the message. */
   const deliver = useCallback(
-    async (id: string, message: PlayerMessage | null): Promise<void> => {
+    async (id: string, message: PlayerMessage | null): Promise<boolean> => {
       setSending(Date.now())
       try {
         const r = await sendChat({ data: message ? { characterId: id, message: { id: message.id, text: message.text } } : { characterId: id, retry: true } })
         if (isState(r) && !r.ok && r.code === 'busy') {
-          // Another tab's run holds the chat: show it and wait on it.
-          adopt(await getChat({ data: { characterId: id, wait: false } }))
-        } else adopt(r)
+          // Another tab's run holds the chat and this message was not stored: it goes back in the composer, and this
+          // page shows that run and waits on it.
+          if (current.current === id) setPending(null)
+          adopt(id, await getChat({ data: { characterId: id, wait: false } }))
+          return false
+        }
+        adopt(id, r)
+        return !(isState(r) && !r.ok && r.code === 'bad_input')
       } catch {
-        if (live.current) setSendProblem({ kind: 'unreachable' })
+        if (current.current !== id) return true
+        // No answer: the server may have stored the message and started its run anyway. Read the chat to find out;
+        // until it shows the message, the message stays on screen with its id, so Retry resends it and the server will
+        // not store it twice.
+        setSendProblem({ kind: 'unreachable' })
+        try {
+          const r = await getChat({ data: { characterId: id, wait: false } })
+          if (adopt(id, r) && message && isState(r) && r.ok && r.messages.some((m) => m.id === message.id)) setSendProblem(null)
+        } catch {
+          // Still unreachable: Retry is the way on.
+        }
+        return true
       } finally {
-        if (live.current) setSending(null)
+        if (current.current === id) setSending(null)
       }
     },
     [sendChat, getChat, adopt],
@@ -175,56 +215,70 @@ export function useAssistant({ characterId, draft, showing, createDraft, afterFi
   const send = useCallback(
     async (raw: string): Promise<boolean> => {
       const text = raw.trim()
-      if (!text || sending !== null || chat?.running) return false
-      setSendProblem(null)
-      setStopUnconfirmed(false)
-      const { draft: d, createDraft: create, afterFirstSend: after } = latest.current
-      let id = characterId
-      if (!id) {
-        if (!create) throw new Error('useAssistant: createDraft is required before a draft exists')
-        id = await create()
-        if (!id) return false
-      } else if (d && (await d.flush()) === null) {
-        setSendProblem({ kind: 'unsaved' })
-        return false
+      // A message whose send went unanswered must be retried before another one goes.
+      if (!text || busy.current || chat?.running || pending) return false
+      busy.current = true
+      try {
+        setSendProblem(null)
+        setStopUnconfirmed(false)
+        const { draft: d, createDraft: create, afterFirstSend: after } = latest.current
+        let id = chatId
+        if (!id) {
+          if (!create) throw new Error('useAssistant: createDraft is required before a draft exists')
+          id = await create()
+          if (!id) return false
+          current.current = id
+          setChatId(id)
+        } else if (d && (await d.flush()) === null) {
+          setSendProblem({ kind: 'unsaved' })
+          return false
+        }
+        const message: PlayerMessage = { id: ulid(), role: 'player', text, at: new Date().toISOString() }
+        setPending(message)
+        setChat((c) => (c ? { ...c, error: null } : c))
+        const accepted = await deliver(id, message)
+        if (!chatId) after?.(id)
+        return accepted
+      } finally {
+        busy.current = false
       }
-      const message: PlayerMessage = { id: ulid(), role: 'player', text, at: new Date().toISOString() }
-      setPending(message)
-      setChat((c) => (c ? { ...c, error: null } : c))
-      await deliver(id, message)
-      if (!characterId) after?.(id)
-      return true
     },
-    [characterId, sending, chat?.running, deliver],
+    [chatId, chat?.running, pending, deliver],
   )
 
   const retry = useCallback(async () => {
-    if (!characterId) return
-    setSendProblem(null)
-    setStopUnconfirmed(false)
-    const d = latest.current.draft
-    if (d && (await d.flush()) === null) return setSendProblem({ kind: 'unsaved' })
-    // A message the server never stored goes again with the same id; otherwise the stored last message is run again.
-    await deliver(characterId, pending)
-  }, [characterId, pending, deliver])
+    if (!chatId || busy.current) return
+    busy.current = true
+    try {
+      setSendProblem(null)
+      setStopUnconfirmed(false)
+      const d = latest.current.draft
+      if (d && (await d.flush()) === null) return setSendProblem({ kind: 'unsaved' })
+      // A message the server never stored goes again with the same id; otherwise the stored last message is run again.
+      await deliver(chatId, pending)
+    } finally {
+      busy.current = false
+    }
+  }, [chatId, pending, deliver])
 
   const stop = useCallback(async () => {
-    if (!characterId) return
+    if (!chatId) return
     setStopping(true)
     setStopUnconfirmed(false)
     try {
-      const r: unknown = await stopChat({ data: { characterId } })
+      const r: unknown = await stopChat({ data: { characterId: chatId } })
+      if (current.current !== chatId) return
       if (isStop(r)) {
-        if (!r.ok) adopt(r)
+        if (!r.ok) adopt(chatId, r)
         else if (!r.stopped) setStopUnconfirmed(true)
       }
-      adopt(await getChat({ data: { characterId, wait: false } }))
+      adopt(chatId, await getChat({ data: { characterId: chatId, wait: false } }))
     } catch {
-      if (live.current) setStopUnconfirmed(true)
+      if (current.current === chatId) setStopUnconfirmed(true)
     } finally {
-      if (live.current) setStopping(false)
+      if (current.current === chatId) setStopping(false)
     }
-  }, [characterId, stopChat, getChat, adopt])
+  }, [chatId, stopChat, getChat, adopt])
 
   const noteApplied = useCallback(() => {
     if (latest.current.showing === 'assistant') setUnread((u) => ({ ...u, builder: true }))
@@ -238,12 +292,13 @@ export function useAssistant({ characterId, draft, showing, createDraft, afterFi
 
   return {
     messages,
-    loaded: characterId === null || chat !== null || notFound,
+    loaded: chatId === null || chat !== null || notFound,
     running,
     stopping,
     stopUnconfirmed,
     error: sending !== null ? null : (chat?.error ?? null),
     sendProblem,
+    unsent: pending !== null && sending === null,
     notFound,
     unread,
     send,

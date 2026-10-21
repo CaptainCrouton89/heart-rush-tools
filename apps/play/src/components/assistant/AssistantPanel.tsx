@@ -57,6 +57,8 @@ export function AssistantPanel({
 
   const send = (text: string) => void assistant.send(text)
   const empty = messages.length === 0 && !running
+  // Nothing new goes out while a run is in flight or the last message is waiting for Retry.
+  const busy = running !== null || assistant.unsent
 
   return (
     <section aria-label="Character assistant" className="flex h-full min-h-0 flex-col">
@@ -80,7 +82,7 @@ export function AssistantPanel({
                 message={m}
                 draft={draft}
                 latest={i === lastAssistant && i === messages.length - 1}
-                busy={running !== null}
+                busy={busy}
                 onSend={send}
                 onOpenStep={onOpenStep}
                 onApplied={assistant.noteApplied}
@@ -92,7 +94,7 @@ export function AssistantPanel({
 
       <div className="flex flex-col gap-3 border-t border-border bg-background px-5 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:px-6">
         <RunLine assistant={assistant} />
-        <Composer label="Message to the assistant" placeholder={empty ? 'Describe who you want to play…' : 'Reply, or ask for a change…'} disabled={running !== null} onSend={(text) => assistant.send(text)} />
+        <Composer label="Message to the assistant" placeholder={empty ? 'Describe who you want to play…' : 'Reply, or ask for a change…'} disabled={busy} onSend={(text) => assistant.send(text)} />
       </div>
     </section>
   )

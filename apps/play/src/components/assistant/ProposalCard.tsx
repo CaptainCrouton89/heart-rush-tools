@@ -111,8 +111,9 @@ export function ProposalCard({
   onApplied?: () => void
 }) {
   const [removed, setRemoved] = useState<ReadonlySet<string>>(new Set())
-  const [justApplied, setJustApplied] = useState<ReadonlySet<string>>(new Set())
   const [applying, setApplying] = useState(false)
+  /** Apply wrote to the draft but saving it failed (the builder's save status says why). */
+  const [unsaved, setUnsaved] = useState(false)
 
   const kept = card.lines.filter((l) => !removed.has(l.id))
   const content = draft ? { builder: draft.builder, pending: draft.pending } : null
@@ -131,15 +132,20 @@ export function ProposalCard({
   async function apply() {
     if (!draft || !content) return
     setApplying(true)
+    setUnsaved(false)
     const result = applyCard(kept, content)
     if (result.applied.length > 0) {
       draft.update(() => result.builder)
       draft.setPending(() => result.pending)
-      setJustApplied(new Set(result.applied.map((l) => l.id)))
-      onApplied?.()
     }
-    await draft.flush()
+    const saved = await draft.flush()
     setApplying(false)
+    if (saved === null) {
+      // The changes stay in the draft on screen and the builder saves them with its next change.
+      setUnsaved(true)
+      return
+    }
+    if (result.applied.length > 0) onApplied?.()
     // The builder moves to the step behind the chat; on phone the Assistant tab stays and Builder gets the dot.
     if (result.earliestStep !== null) onOpenStep(result.earliestStep, false)
   }
@@ -161,7 +167,6 @@ export function ProposalCard({
                   key={r.line.id}
                   row={r}
                   draft={draft}
-                  fresh={justApplied.has(r.line.id) && r.state === 'applied'}
                   onRemove={() => setRemoved((s) => new Set([...s, r.line.id]))}
                 />
               ))}
@@ -175,14 +180,20 @@ export function ProposalCard({
           <Button size="compact" variant="line-primary" type="button" disabled={!canApply} onClick={() => void apply()}>
             {applying ? 'Applying…' : 'Apply'}
           </Button>
-          {!canApply && !applying && rows.every((r) => r.state === 'applied') && <p className="text-meta text-muted-foreground">Applied.</p>}
+          {unsaved ? (
+            <p role="alert" className="text-meta text-muted-foreground">
+              Applied to the draft, but saving failed. The builder shows why and tries again with your next change.
+            </p>
+          ) : (
+            !canApply && !applying && rows.every((r) => r.state === 'applied') && <p className="text-meta text-muted-foreground">Applied.</p>
+          )}
         </div>
       )}
     </section>
   )
 }
 
-function CardLineRow({ row, draft, fresh, onRemove }: { row: Row; draft: UseDraft | null; fresh: boolean; onRemove: () => void }) {
+function CardLineRow({ row, draft, onRemove }: { row: Row; draft: UseDraft | null; onRemove: () => void }) {
   const { label, value, before } = describe(row.line, draft)
   const refused = row.state === 'refused'
   return (
@@ -196,7 +207,7 @@ function CardLineRow({ row, draft, fresh, onRemove }: { row: Row; draft: UseDraf
               {before}
             </s>
           )}
-          <span className={cn('font-hand text-[17px]', refused ? 'text-muted-foreground' : 'text-foreground', fresh && 'written fresh')}>{value}</span>
+          <span className={cn('font-hand text-[17px]', refused ? 'text-muted-foreground' : 'text-foreground')}>{value}</span>
           {row.state === 'applied' && <span className="text-meta text-muted-foreground">✓ in the draft</span>}
         </p>
         <p className="rules-text text-muted-foreground">{row.line.reason}</p>
