@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-10-21T02:01:25.212Z",
+  "deleted_at": null,
+  "extensions": null,
+  "id": "3zl47w7d-mvhguin0-3b9de5e4",
+  "kind": "knowledge",
+  "lint_ignore": null,
+  "name": "dev/acting-as-silas",
+  "preview": "When you need to check a Heart Rush change in a browser — signed in on production as Silas, or on a local dev server — read this because his Arc browser is already reachable over CDP and the dev server needs a seeded session, so you never need to ask him to click or paste.",
+  "privacy": "public",
+  "revisions": [
+    {
+      "author": "3zl47w7d-mvhfwmuj-a16b6656",
+      "body": "# Checking Heart Rush in a browser\n\nNorthlight sign-in only redirects to the registered hosts (production, and localhost:3911/3912 in the source checkout), so where you check decides how you get a signed-in session. Never ask Silas to click through or paste a snippet; see [[act-in-silas-logged-in-app]].\n\n## On production, as Silas\n\nHis Arc browser exposes CDP on port 9222 and is signed in to play.heartrush.party and tools.heartrush.party.\n\n- Open a tab on the site you need: `crtr capture tab open --port 9222 <url>`, then run code there with `crtr capture page exec --port 9222 --target <tab id> '<js>'`. `fetch` from that tab carries his `hr_session` cookie.\n- Open the tab on the origin you are calling. A `fetch` from a play tab to tools (or the reverse) is cross-origin and fails even though the cookie is shared across `.heartrush.party`.\n- Close the tabs you opened; leave his other tabs alone.\n- Playwright specs in `apps/play/e2e` attach to the same browser over CDP (`PLAY_CDP`, default `http://localhost:9222`) and run against production: `pnpm --filter play e2e`. They open and close their own tabs and use one worker because they share his account's data. Things the specs create are named `V1 Hero` and `V1 Campaign`.\n- Anything that needs a real Northlight run (the AI features) can only be checked here: the local dev user has no Northlight connection, so a dev server cannot produce a real reply.\n\n## On a local dev server\n\nStart and stop the server as [[heart-rush-tools/dev/shared-machine]] says (own port, never 3912, killed before you finish).\n\n- Seed a user and a session row in the local `AUTH_DB` the way `apps/play/test/*.test.ts` and `apps/play/scripts/deploy.ts` do: `INSERT INTO user (id, display_name) …` and `INSERT INTO session (id, user_id, expires_at) …` (tools' `session` table is the one session store play reads). Set that id as the `hr_session` cookie.\n- Drive headless Chrome with `crtr capture` (`crtr capture -h`), and quit any browser you launched before you finish.\n",
+      "body_hash": "7bdc21d7abbf1b073a5de20f5d4e5001d91c42be63416ee2787f26645a324f1e",
+      "created_at": "2026-10-21T02:01:25.212Z",
+      "links": [
+        {
+          "dst": "3zl47w7d-muislby4-6dfdd194",
+          "written_as": "act-in-silas-logged-in-app"
+        },
+        {
+          "dst": "3zl47w7d-mvhgtt7a-1f69ddb8",
+          "written_as": "heart-rush-tools/dev/shared-machine"
+        }
+      ],
+      "number": 1,
+      "parents": [],
+      "rationale": null,
+      "rev_id": "273bcd71-1f3f-4574-a181-6ef059b5ed82"
+    }
+  ],
+  "rules": [],
+  "summary": "Production checks go through Silas's Arc over CDP port 9222 (capture tab open, page exec, pnpm --filter play e2e); dev checks seed a user and session and use headless Chrome.",
+  "unlisted": false,
+  "why_it_exists": "Agents verifying play and tools changes asked Silas to try things by hand, or tried cross-origin fetches from the wrong tab, instead of driving his signed-in browser."
+}
