@@ -3,3 +3,5 @@
 *.jpeg filter=lfs diff=lfs merge=lfs -text
 *.gif filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
+# Bundled into the hub Worker, so it must be a real file in CI checkouts, which do not fetch LFS objects.
+apps/hub/src/og.jpg -filter -diff -merge -text
