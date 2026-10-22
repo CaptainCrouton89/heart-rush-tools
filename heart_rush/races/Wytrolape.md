@@ -18,7 +18,7 @@ They struggle constantly against this inner beast, seeking civilization as a way
 ### Moon Rage
 
 **Passive ability.**
-Under the War Moon (both moons dark, typically 2-3 days per month) or when reduced to below half your maximum HP, you must make a CN 12 Presence save at the start of each of your turns. On a failure, you enter a rage:
+Under the War Moon (both moons dark, typically 2-3 days per month) or when reduced to below half your maximum HP, you must make a CN 12 Presence save at the start of each round. On a failure, you enter a rage:
 
 - You gain A2 on all attack rolls and might checks
 - Your unarmed attacks deal an additional 1d6 damage

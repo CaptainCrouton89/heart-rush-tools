@@ -303,7 +303,7 @@ _Cursed Guardian of the Fallen Temple_
 - **Ghostly**: Can move through creatures/objects, difficult terrain doesn't slow
 - **Punish Aggression**: When attacked in might stance, attacker takes 1d6 psychic damage
 - **Spectral Chains**: On stance beat, MC12 or pulled 10ft and grappled
-- **Fade**: 1/combat, become incorporeal until next turn (can't attack or be attacked)]]
+- **Fade**: 1/combat, become incorporeal until the next round (can't attack or be attacked)]]
 
 This creates a monster that:
 

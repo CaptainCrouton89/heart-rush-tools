@@ -98,7 +98,9 @@ You have disadvantage on ability rolls requiring hearing. If you have 5 levels o
 
 _Ongoing._
 
-Whenever you end your turn while suffocating, and again whenver you dash or take an action, roll your might die. On a 1, it decreases by one size for as long as you are suffocating. If you would roll a 1 while your might die is a d4, you fall unconscious. While unconscious, continue rolling your might die at the end of each turn. On future 1s, your cunning die permanently decreases by one size.
+You cannot breathe. **At the end of each round while suffocating, your heart die drops one size.** You gain nothing for the drop, and you cannot spend stamina while suffocating. If your heart die would drop below a d4, you fall unconscious. While unconscious and still suffocating, you take 10 damage at the end of each round; this is not a single hit, so it marks no wound.
+
+The condition ends when you can breathe again. Your heart die recovers with a short rest as usual.
 
 ### Slowed
 

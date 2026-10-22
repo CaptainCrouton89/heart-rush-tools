@@ -63,7 +63,7 @@ You must be bitten by another vampire and fail a might saving throw (CN = 10 + v
 **Drawbacks:**
 
 - "Cannot resist the taste of blood" increases to rank 3
-- Take 5 damage whenever you start or end your turn in contact with running fresh water
+- Take 5 damage at the end of each round you spend in contact with running fresh water
 - Bright light (including daylight) inflicts one level of blinded
 - If you go more than a month without blood, gain one level of physical vulnerability per week until fed
 

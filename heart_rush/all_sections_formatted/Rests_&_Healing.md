@@ -16,7 +16,7 @@ When you go to sleep for the night, that is a long rest. Long rests must be at l
 
 When taking a long rest away from shelter, bed, and warmth, you must also make a sleeping check. Succeeding at a sleeping check results in a “successful” long rest. On failing the check, you have an unsuccessful long rest.
 
-To make the sleeping check, roll 1d100 and add all the relevant modifiers from the Sleeping Conditions table below. On a 100 or higher, you succeed.
+To make the sleeping check, make a Might check against CN 18, adjusted by the Sleeping Conditions table below. Each item in the table lowers or raises the CN by 3.
 
 While you do have warmth, a bed, and full shelter, you do not need to make this check and are assumed to succeed. If you do not rest for the night, take the penalties associated with failing a sleeping check.
 
@@ -33,30 +33,26 @@ On a success, reduce the ranks of each of your wounds by one, and heal hit point
 
 On a failure, do not reduce the ranks of your wounds, and regain half of your missing hit points, rounded down. Additionally, take a level of weakened, off-balanced, or dazed, chosen at random. A second night of failed sleep inflicts two conditions at random, and a third night, along with every night thereafter, inflicts one condition at random.
 
-### Sleep Condition Bonus
+### Sleeping Conditions
 
-| Condition           | Bonus |
-| ------------------- | ----- |
-| Shelter             |       |
-| Permanent structure | +40   |
-| Tent                | +20   |
-| No shelter          | +0    |
-| Bed                 |       |
-| Straw bed or better | +40   |
-| Bedroll             | +20   |
-| No bed              | +0    |
-| Warmth              |       |
-| Searing hot         | -30   |
-| Muggy/Sweltering    | -10   |
-| Comfortable         | +30   |
-| Chilly              | +10   |
-| Freezing            | -10   |
-| Bone-chilling       | -30   |
-| Watch               |       |
-| No watch            | +0    |
-| Keeping watch       | -20   |
-| Drugs               |       |
-| Dreamwort Root      | +20   |
+| Condition | CN change |
+| --- | --- |
+| **Shelter** | |
+| Tent or better | −3 |
+| Permanent structure | −3 more |
+| **Bed** | |
+| Bedroll or better | −3 |
+| Straw bed or better | −3 more |
+| **Warmth** | |
+| Comfortable or chilly | −3 |
+| Muggy/sweltering | 0 |
+| Searing hot, freezing, or bone-chilling | +3 |
+| **Watch** | |
+| Keeping watch | +3 |
+| **Drugs** | |
+| Dreamwort root | −3 |
+
+With a tent, a bedroll and comfortable weather, the CN is 9. Sleeping on bare ground in the open at a comfortable temperature, the CN is 15.
 
 [[GM Note
 The pacing of Heart Rush tends to be a bit slower than other games; letting players take long rests does not let them heal all that much, so don't feel pressured to pack multiple combats into only a single day. A long trip through the wilderness where good rest is uncertain and combat is intermittent is plenty grueling for most parties. Thereafter, inflicts one level of each condition. A successful long rest removes all conditions gained this way.]]

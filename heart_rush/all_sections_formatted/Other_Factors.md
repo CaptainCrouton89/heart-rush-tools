@@ -44,7 +44,7 @@ There are no penalties to vision or combat while in a brightly lit area.
 
 Dim light can be found in alleyways, twilight, and in all the spaces between bright light and darkness.
 
-Perception and observation skill checks are made with disadvantage for creatures that require light to see. Additionally, attacks against creatures in dim light have disadvantage, and defense rolls against obscured creatures have disadvantage.
+Perception and observation skill checks are made with disadvantage for creatures that require light to see. Additionally, attacks against creatures in dim light have disadvantage. A creature you cannot see at all is obscured (see Conditions).
 
 Darkness is anywhere there is no light.
 
@@ -62,7 +62,7 @@ If the environment provides suitable places to hide and the GM deems it reasonab
 
 This requires more than a single action, and cannot be performed during combat.
 
-When you attempt to hide, make a stealth skill check.
+When you attempt to hide, make a **stealth check**: an Agility check, adding any profession that applies. Abilities that mention stealth checks refer to this roll. The CN is the cunning challenge number of the most perceptive creature you are hiding from; if nobody is watching, the GM sets the CN.
 
 On a success you are hidden, and count as unseen for the purposes of attacking.
 

@@ -218,7 +218,7 @@ Attacks resolve in strict phases to maintain clarity:
 
 Within each phase, attacks effectively occur simultaneously. If two might-stance fighters kill each other, both attacks complete. If an effect is created during a phase, treat it as being created at the very end of the phase—it does not impact other attack and defense rolls made in the same phase, since all of these rolls are treated as being made simultaneously.
 
-However, side-effects of stances absolutely _do_ impact later phases. If you are pushed away during an earlier phase, might be out of range when your turn arrives, and no longer able to attack.
+However, side-effects of stances absolutely _do_ impact later phases. If you are pushed away during an earlier phase, you might be out of range when your phase arrives, and no longer able to attack.
 
 #### Same Stance Combat
 
@@ -306,7 +306,7 @@ _The GM locks in enemy stances: orc picks might, wolf selects cunning. You and y
 
 **Cunning Phase**: The wolf's cunning beats your agility. It bites, rolling 16, you roll 10, so you take 6 damage. However, it also gets it's cunning stance bonus, and inflicts two levels of off-balanced, which sucks, because it means that you'll have disadvantage on your agility attack.
 
-Your archer chose cunning as well, and although she can't attack the orc (who chose might), she can attack the wolf. She rolls her attack, the wolf rolls defense, and the archer uses here Execute instant ability. She deals extra damage from her execute ability, but doesn't get to apply extra conditions from her cunning stance, since she is attacking a creature that chose the same stance.
+Your archer chose cunning as well, and although she can't attack the orc (who chose might), she can attack the wolf. She rolls her attack, the wolf rolls defense, and the archer uses here Execute instant ability. Her attack would bring the wolf to 0 hit points, so Execute kills it outright, but she doesn't get to apply extra conditions from her cunning stance, since she is attacking a creature that chose the same stance.
 
 **Agility Phase**: You chose agility, which beats the orc's might. You make your attack, deal damage, and then sidestep away from the orc. The orc sidestep wasn't necessary because the orc couldn't attack you anyways, because the orc chose might, but now you have more freedom to move without provoking opportunity attacks.
 
@@ -483,7 +483,7 @@ _The orc champion raises his massive blade for a killing blow on your fallen com
 - **Action:** Sand in the eyes (Blind effect)
 - **Result:** Orc gains 1 level of blinded
 - **Impact:** His next attack suffers disadvantage, likely rolling low on his attack
-- **Next turn:** Your ally scrambles to safety while the orc clears his vision]]
+- **Next round:** Your ally scrambles to safety while the orc clears his vision]]
 
 ### Stunt
 
@@ -504,7 +504,7 @@ Combat rarely unfolds in perfect conditions. Enemies ambush from shadows, battle
 
 ### Surprise
 
-Ambushes and sudden betrayals create devastating first-strike advantages. **When combat erupts unexpectedly, surprised creatures lose their entire first turn** while prepared combatants unleash opportunity attacks.
+Ambushes and sudden betrayals create devastating first-strike advantages. **When combat erupts unexpectedly, surprised creatures have no action, cannot move, and cannot use abilities during the first round, so they cannot attack in its engagement,** while prepared combatants unleash opportunity attacks.
 
 **You avoid surprise if:**
 

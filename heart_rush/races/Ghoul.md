@@ -29,7 +29,7 @@ When you ingest a creature's soul, choose one from the following list:
 - **Replenish:** Regain 5 hp and any conditions affecting you.
 - **Inspect:** The GM must tell you one secret about this creature's past life.
 - **Devour:** If the creature had an ability die higher than your own, you may replace your ability die with their ability die for the next ten minutes.
-- **Infuse:** For the next 1d10 days, spelltouched cannot use their action to inflict wounds upon you, as detailed in the Deoric Origins ability described below.
+- **Infuse:** For the next 1d10 days, creatures with elemental attunement cannot use their action to inflict damage on you, as detailed in the Deoric Origins ability described below.
 
 While flesh is a preferred substitute for standard food, you can still consume normal foodstuffs for nutrients.
 

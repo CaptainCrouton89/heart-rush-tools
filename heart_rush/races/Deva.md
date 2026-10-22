@@ -24,7 +24,7 @@ When a deva dies, their body dissipates—there is no body left over. If they fa
 ### Naturally Charismatic
 
 **Passive ability.**
-Increasing your presence die costs 2 less XP. You do not need to reach PL2 in order to take the Draconic Presence paragon level.
+Increasing your presence die costs 2 less XP. You do not need 6 bloodmarks to take the Draconic Presence paragon ability.
 
 ### Memories Passed
 

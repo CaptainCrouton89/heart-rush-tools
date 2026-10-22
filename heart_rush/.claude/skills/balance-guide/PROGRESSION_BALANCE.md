@@ -34,4 +34,4 @@ The Heart Die (stamina) scales automatically with **Total XP earned** (spent or 
 ## Balancing Tips
 *   **HP vs Mitigation**: HP is expensive to raise. Mitigation (Armor, Defense rolls) is often more XP-efficient early on.
 *   **Talent Bloat**: The increasing cost of talents discourages hoarding low-level abilities and encourages taking Destiny Levels (upgrading existing ones) or diversifying into non-combat areas.
-*   **Elemental Magic**: Intentionally priced high to represent the difficulty and power of magic. Spelltouched races bypass this premium.
+*   **Elemental Magic**: Intentionally priced high to represent the difficulty and power of magic. The Warcaster specialization lowers this premium.

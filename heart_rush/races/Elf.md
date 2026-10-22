@@ -112,7 +112,7 @@ Each curse wound you take is a separate wound that stacks with all other wounds 
 
 **Empowerment:**
 While you have Curse Points, you gain the following benefits:
-- **Regeneration:** At the start of each of your turns in combat, regain HP equal to your current Curse Points
+- **Regeneration:** At the start of each round in combat, regain HP equal to your current Curse Points
 - **Power Strike:** You gain a bonus to all attack and damage rolls equal to your current Curse Points
 - **Crimson Glow:** Your blood glows with increasing intensity through your skin. At high Curse Points, your veins are visibly luminous.
 

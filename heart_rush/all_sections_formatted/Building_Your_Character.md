@@ -639,7 +639,7 @@ Each bloodmark you earn unlocks new abilities:
 
 **Signature Abilities** are powerful techniques you activate by spending rush points—tactical commands that enhance your whole team, defensive stances that turn attacks into counterstrikes, or mobility tricks that let you control battlefield positioning. Each costs escalating rush points per fight (1 for first use, 2 for second, etc.). Select from the Signature Abilities list below.
 
-**Combat Masteries** represent once-per-day ultimate techniques—abilities so powerful they can single-handedly turn the tide of battle. Whether you're shrugging off lethal damage, inspiring allies beyond their limits, or unleashing devastating combination attacks, these define your heroic moments. Choose from the Combat Masteries list below.
+**Combat Masteries** represent once-per-long-rest ultimate techniques—abilities so powerful they can single-handedly turn the tide of battle. Whether you're shrugging off lethal damage, inspiring allies beyond their limits, or unleashing devastating combination attacks, these define your heroic moments. Choose from the Combat Masteries list below.
 
 **Paragon Abilities** transcend normal combat entirely—techniques that mark you as a legendary warrior. From assassinating enemies in a single strike to commanding the battlefield with tactical supremacy, these abilities separate mythic heroes from everyday adventurers. Select from the Paragon Abilities list below when you achieve your fifth bloodmark.
 
@@ -665,7 +665,7 @@ Your attacks are vicious and true. Whenever you roll the maximum result on one o
 
 _Passive ability._
 
-Even while in the thick of combat, you are keenly aware of your surroundings and able to act with a cool head.Once per round, you may make an object interaction, sidestep, help, or trip action for free.
+Even while in the thick of combat, you are keenly aware of your surroundings and able to act with a cool head. Once per round, you may make an object interaction, sidestep, or help action for free.
 
 #### Warcaster
 
@@ -764,7 +764,7 @@ You shout out, have a moment of inner peace, or by some other means recenter you
 
 - Remove all levels of one condition from yourself.
 - Remove one level of every condition from yourself.
-- Gain hit points equal to your maximum heart die.
+- Gain hit points equal to the highest face of your heart die at its full, unshrunk size.
 
 #### Violent Defense
 
@@ -831,7 +831,7 @@ You may apply the effects of your stance twice during the current engagement.
 
 #### Power Strike
 
-_Minor ability. Instant._
+_Minor ability. Instant. Specialization: Brutal Attacks._
 
 Before you announce your stance in an engagement, you may declare the attack to be a power strike. If you do, all dice used in the attack roll trigger your Brutal Attacks ability if they land on a result greater than half the size of the die. For example, you would reroll and add another 1d10 to the result if you rolled a 6-10 on a d10 in your attack roll.
 
@@ -845,7 +845,11 @@ Whenever you deal damage to a creature, you may choose for it to be an execution
 
 _Minor ability. Instant._
 
-Your reflexes are faster than anyone else's on the battlefield. Treat your agility die as a d20 when determining who can go first when multiple people want to take actions. Nobody can interrupt you if you want to use multiple abilities in a row.
+Your reflexes are faster than anyone else's on the battlefield. Until the end of the round:
+
+- Treat your agility die as a d20 when determining who acts first, including when several combatants claim the free sidestep from winning in agility stance.
+- Other creatures cannot interrupt you when you take several actions and abilities in a row. Opportunity attacks you provoke still happen.
+- In the engagement, your attacks resolve before every other attack in your stance's phase. Their damage and effects apply immediately, so a creature they knock unconscious or kill does not make its own attack in that phase.
 
 #### Bloodthirsty
 
@@ -903,7 +907,7 @@ Choose one:
 - Shenanigans: The next time you perform a stunt, you have +3 on the contested ability check.
 - Switcheroo: The next time you sidestep, you may sidestep into an adjacent and willing creature's space. Switch places with that creature. The creature must be no more than one size bigger or smaller than you.
 - Taunt: After stances are chosen but before stances are revealed, you may choose a creature and call out their stance. After stances are revealed, if you guessed correctly, that creature gains a level of aggravated towards you.
-- Quick Reflexes: Other creatures cannot interupt actions and abilities you take this round. Treat your agility die as a d20 for the purposes of determining order of activities in the action phase.
+- Sleight of Hand: Make one object interaction without using your action. You may make it at any moment this round, including during the engagement. It cannot be a complex task that requires your full action, such as picking a lock.
 
 #### Elusive
 
@@ -917,7 +921,7 @@ You react to danger with fluid grace, slipping away from harm at the last moment
 
 ### Combat Masteries
 
-You may use a major ability once per day.
+You may use a major ability once per long rest.
 
 #### Eternal Fortitude
 
@@ -941,7 +945,7 @@ _Major ability._
 
 For each rush point spent on this ability, choose one of the following effects. The number of times you choose a given effect cannot be more than one more than the least-chosen effect. You and all creatures of your choice within 10 feet of you gain the benefits of the chosen effects until the end of combat. For each ability, replace X with the number of rush points spent on this ability.
 
-- Gain 2X hit points at the start of your turn
+- Gain 2X hit points at the start of each round
 - +X to all defense rolls
 - +X to all attack rolls
 - Move speed +10X
@@ -1007,13 +1011,13 @@ When you would make an attack roll, you may instead attempt to assassinate the c
 
 #### Battlespirit
 
-_Passive ability: Any._
+_Passive ability._
 
 You gain twice as many rush points at the start of each round of combat.
 
 #### Battletuned
 
-_Passive ability. Signature ability: Everywhere at Once OR Specialization: In the Thick of It._
+_Passive ability. Specialization: Everywhere at Once OR Specialization: In the Thick of It._
 
 You may make an attack against an additional valid target during each egagement.
 
@@ -1067,7 +1071,7 @@ Whenever you make an attack roll, you may move 5 feet. This does not provoke opp
 
 #### Divine Dexterity
 
-_Passive ability. Agility die: d12. Bloodmark: 6 2._
+_Passive ability. Agility die: d12. Bloodmark: 6._
 
 Your agility die becomes a d20.
 
@@ -1139,7 +1143,7 @@ So long as you have more than 0 hit points, regain 10 hit points at the beginnin
 
 #### Ingenious Cunning
 
-_Passive ability. Cunning die: d12. Bloodmark: 6 2._
+_Passive ability. Cunning die: d12. Bloodmark: 6._
 
 Your cunning die becomes a d20.
 
@@ -1159,7 +1163,7 @@ Gain any combination of three martial talents or destiny levels. These don't cou
 
 _Passive ability. Combat mastery: Battle Spirited._
 
-Whenever you use _Battle Spirited_, you may choose two options per rush point instead of one. You may take this paragon level additional times to increase the number of options by one each time.
+Whenever you use _Battle Spirited_, you may choose two options per rush point instead of one. You may take this paragon ability additional times to increase the number of options by one each time.
 
 #### Piercing Shot
 
@@ -1199,9 +1203,9 @@ Your might die becomes a d20.
 
 #### Trickster
 
-_Passive ability. Specialization: Improved Interference. Combat mastery: Bag of Tricks._
+_Passive ability. Specialization: Improved Interference. Signature ability: Bag of Tricks._
 
-When you choose to interfere, choose two options rather than one. When you use your Bag of Tricks ability, you may choose two options instead of one.
+When you choose to hinder, choose two options rather than one. When you use your Bag of Tricks ability, you may choose two options instead of one.
 
 #### Savior
 
@@ -1222,7 +1226,7 @@ During the next minute, you may use each of the following options once:
 
 _Passive ability. Signature ability: I Didn't Feel a Thing._
 
-The threshold at which damage causes wounds increases by 10. You may take this paragon level any number of times.
+The threshold at which damage causes wounds increases by 10. You may take this paragon ability any number of times.
 
 #### Uncanny Accuracy
 
@@ -1234,7 +1238,7 @@ You gain A3 on all attack rolls.
 
 _Major ability. Bloodmark: 6._
 
-You may use the major ability granted by your subclass again.
+You may use your combat mastery again.
 
 #### War Borne
 
@@ -1246,7 +1250,7 @@ If you begin and end the round adjacent to three or more enemies, you may make a
 
 _Passive ability. Talent: Beastform._
 
-You may transform into a minuscule or large creature. The creature may have two d10s or d6 and d12 agility and might ability dice. If you take this paragon level again, you may choose creatures with a fly speed of up to 40 feet.
+You may transform into a minuscule or large creature. The creature may have two d10s or d6 and d12 agility and might ability dice. If you take this paragon ability again, you may choose creatures with a fly speed of up to 40 feet.
 
 ### Battle-Tested Combat Approaches
 
@@ -1359,11 +1363,11 @@ _For warriors who thrive against hordes_
 **Recommended Abilities:**
 
 - **Everywhere at Once** (Specialization): Strike multiple enemies per attack
-- **Lightning Reflexes** (Signature Ability): Act first, uninterruptible
+- **Lightning Reflexes** (Signature Ability): Strike first in your stance's phase, uninterrupted
 - **Bloodthirsty** (Signature Ability): Fresh targets fuel your rampage
 - **Blitz** (Combat Mastery): Turn the battlefield into your personal highway
 
-**Combat Flow:** Lightning Reflexes ensures you strike first. Dive into enemy groups with Everywhere at Once, letting Brutal Attacks create cascading damage. Bloodthirsty rewards target switching while Blitz provides ultimate mobility to reach fresh victims. You're not holding a position—you're thinning the herd.
+**Combat Flow:** Lightning Reflexes lets your attacks land before anyone else's in your stance's phase, and makes sure Bloodthirsty's bonus is yours. Dive into enemy groups with Everywhere at Once, letting Brutal Attacks create cascading damage. Bloodthirsty rewards target switching while Blitz provides ultimate mobility to reach fresh victims. You're not holding a position—you're thinning the herd.
 
 #### The Battle Commander
 

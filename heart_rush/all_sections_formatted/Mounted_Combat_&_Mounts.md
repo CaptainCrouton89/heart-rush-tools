@@ -30,7 +30,7 @@ Combat while mounted adds layers of tactical complexity. Your elevated position 
 
 When mounted, you and your mount function as a coordinated unit in combat, though enemies can choose to engage either of you separately. When an enemy initiates an engagement, they must declare whether they're targeting you or your mount. If they target your mount, you are not automatically part of that engagement unless you choose to enter it using your action. Similarly, if they target you, your mount isn't automatically included.
 
-Either you or your mount can initiate an engagement on your turn, but not both, as doing so requires an action. Once in an engagement, both you and your mount participate together if you're both valid targets.
+Either you or your mount can attack in the engagement each round, but not both, as doing so requires an action. Once in an engagement, both you and your mount participate together if you're both valid targets.
 
 ### Stance Resolution for Mounts
 

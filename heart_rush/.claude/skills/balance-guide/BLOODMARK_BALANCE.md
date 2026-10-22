@@ -29,12 +29,12 @@ Source: `all_sections_formatted/Building_Your_Character.md`, "Bloodmark Progress
 ### 3. Combat Masteries (Major)
 *   **Cost**: Major ability (once per long rest).
 *   **Effect**: Ultimate moves. Can turn the tide of a boss fight.
-*   *Examples*: "Halve incoming damage for team", "Free opportunity attacks + sidesteps", "Reroll defense dice from a pool".
+*   *Examples*: Rallying Cry (rush points buy extra actions, A2 or condition removal for allies), Blitz (opportunity attacks and sidesteps for one rush point each), Eternal Fortitude (rush points become a pool of 2d6 defense dice).
 
 ### 4. Paragon Abilities (Legendary)
 *   **Requirement**: 5th Bloodmark+.
 *   **Effect**: God-tier passives or upgrades to Masteries. Breaks standard rules.
-*   *Examples*: "Assassinate (double damage on hit)", "Ability Die becomes d20", "Act twice per round".
+*   *Examples*: Assassinate (double damage when a hit deals half the target's remaining HP), Titanic Strength (might die becomes a d20), Battlespirit (twice as many rush points each round).
 *   **Balance**: These are meant to be "broken" or end-game power levels.
 
 ## Design Philosophy

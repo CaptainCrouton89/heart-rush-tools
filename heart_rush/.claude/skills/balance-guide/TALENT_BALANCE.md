@@ -11,7 +11,7 @@ The cost of a new talent depends on how many you already have of that type.
 | **Combat Talent** | `Current Combat Talents + 3` | Martial or Cognitive tags. |
 | **Noncombat Talent** | `Current Noncombat Talents + 3` | Utility, social, crafting. |
 | **Elemental Talent** | `(Current Combat Talents * 2) + 3` | Requires attunement. High cost reflects power. |
-| **Elemental (Spelltouched)** | `Current Combat Talents + 3` | Spelltouched race/background gets discount. |
+| **Elemental (Warcaster)** | `Current Elemental Talents + 3` | Characters with the Warcaster specialization get this discount. |
 | **Destiny Level** | `Current Destiny Levels + 5` | Upgrades an existing talent. |
 
 ## Talent Structure

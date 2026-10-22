@@ -31,7 +31,7 @@ The social structure of Skree packs is fluid and violent, with leadership consta
 
 **Passive ability**
 
-Your violent nature intensifies when fighting alongside allies. When you are adjacent to an ally at the start of your turn, you gain one additional rush point. Additionally, when an adjacent ally deals damage to a creature, you have advantage on your next attack roll against that same creature until the end of the round.
+Your violent nature intensifies when fighting alongside allies. When you are adjacent to an ally at the start of the round, you gain one additional rush point. Additionally, when an adjacent ally deals damage to a creature, you have advantage on your next attack roll against that same creature until the end of the round.
 
 ### Terrogones (The Bone Crushers)
 

@@ -10,35 +10,23 @@ Combat is one of the most common ways to lose health.
 
 Check out the Combat section to learn more.
 
-### Hazards & Traps
+### Hazards
 
-There will be times when you have to avoid damage from the environment.
+A hazard is anything that hurts you without an attack roll: a fall, a dart trap, a rockslide, the jibing boom of a ship. Every hazard has a **rating**. For a fall, the rating is the height in feet. For a trap or an environmental hazard, the GM sets it: 10 is a nasty trap, 20 is a rockslide, 30 is a collapsing tower.
 
-For example, being hit by a falling rock, struck with a dart trap, or getting knocked over by the jibing boom of a ship.
+When a hazard hits you, make a saving throw. The ability depends on how you would avoid it: Agility to twist away or catch yourself, Might to brace. **If you roll less than the rating, you take the difference as damage.** Damage of 10 or more marks a wound as usual.
 
-In these cases, you should make a saving throw, detailed in the Saving Throws section.
-
-On a failure, you will take damage.
+You can spend stamina on the saving throw (Focus) and on the damage (Endure) as you would in combat. A hazard that cannot be avoided says so and deals its rating as damage.
 
 ### Falling
 
-When falling from 5 feet or more, roll an agility saving throw against the height fallen.
-
-If you roll less than the distance fallen, you take the difference as damage, and fall prone.
+A fall of 5 feet or more is a hazard with a rating equal to the height in feet. Make an Agility saving throw; if you roll less than the height, you take the difference as damage. You also land prone.
 
 ### Suffocation and Strangulation
 
-There are different effects on one's body depending if you are holding your breath, or getting strangled or suffocated by something else.
+When you hold your breath, make a Might check. You can hold your breath for a number of rounds equal to the result. Each action or dash you take while holding your breath costs one extra round.
 
-When holding your breath, make a might check.
-
-You can hold your breath a number of rounds equal to your result.
-
-Subtract one from the total number of rounds whenever you take an action or move while holding your breath.
-
-After you run out of breath, you take the suffocating condition.
-
-If you are strangled, unable to breathe, or were suddenly prevented from breathing, then you begin suffocating immediately.
+When you run out of breath, you take the suffocating condition (see Conditions). If you are strangled, or are suddenly unable to breathe, you begin suffocating immediately.
 
 ### Poisons
 

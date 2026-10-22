@@ -20,7 +20,7 @@ Despite their jovial nature, Gillykin face a constant challenge—their amphibia
 
 **Passive ability.**
 
-Rather than moving any amount of distance up to your move speed, you get two hops each turn. With each hop you may move up to half your move speed. Ignore all difficult terrain, enemies, and opportunity attacks between your starting location and ending location. Whenever you hop, you may forgo any amount of horizontal distance for half as much vertical height.
+Rather than moving any amount of distance up to your move speed, you get two hops each round. With each hop you may move up to half your move speed. Ignore all difficult terrain, enemies, and opportunity attacks between your starting location and ending location. Whenever you hop, you may forgo any amount of horizontal distance for half as much vertical height.
 
 ### Amphibious
 

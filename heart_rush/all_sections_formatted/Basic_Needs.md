@@ -49,7 +49,7 @@ If you spend a quarter of the day freezing, roll 1d10 and take a wound of rank e
 
 #### Bone-chilling
 
-If you spend a quarter of the day where your temperature is bone-chilling, roll 6d10 and take a wound of rank equal to the result, labeling it frostbite. So long as you are freezing, this wound does not heal.
+If you spend a quarter of the day where your temperature is bone-chilling, roll 6d10 and take a wound of rank equal to the result, labeling it frostbite. So long as you are bone-chilling or freezing, this wound does not heal.
 
 ### Modulating Temperature
 

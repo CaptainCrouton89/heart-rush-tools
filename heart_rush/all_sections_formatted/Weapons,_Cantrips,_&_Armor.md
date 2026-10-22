@@ -129,10 +129,9 @@ Also, since elemental attacks are not always physical, they don't always deal da
 
 **Cantrips Are NOT Spells**
 
-- Cantrips have no cooldowns, casting restrictions, or action requirements
+- Cantrips have no frequency tag: there is no limit on how often you use them, and they cost no action beyond the attack itself
 - They're used exactly like weapons during engagements
-- They don't count toward your "one spell per round" limit
-- Movement restrictions for spellcasting don't apply to cantrips
+- Spells are abilities with frequency tags (minor, major, weekly, monthly) and are used during the action phase; none of those limits apply to cantrips
 
 **Concept:**  
 Cantrips and weapons are conceptually different. However, the rules for spells are similar to ranged weapons. Unlike spells, they are used during engagements in the same way as weapons.  
@@ -169,7 +168,7 @@ This attack deals damage as a light, ranged, bludgeoning, spell-weapon attack.
 On a hit, the target is drenched in water, and takes a level of off-balanced.
 
 **Earthen Bolt**  
-Water.  
+Earth.  
 You may launch a massive stone from your hand.  
 This attack deals damage as a heavy, ranged, bludgeoning, spell-weapon attack.
 
@@ -201,7 +200,7 @@ This attack does no damage, but the target takes 2 levels of blinded as light ri
 **Time Bolt**  
 Time.  
 You shoot a bolt of time from your hand.  
-This attack does no damage but the target takes a level of stunned as time temporarily freezes for the creature.  
+This attack does no damage but the target is stunned until the end of the round as time temporarily freezes for the creature.  
 Once a creature has been stunned from a time effect, it is immune until 24 hours have passed.  
 **Might Stance Bonus:** Add two levels of dazed.
 
@@ -266,7 +265,7 @@ This attack does no damage, but targets take two levels of blinded as light engu
 Time.  
 You spread your arms, causing time to distort around you.  
 This counts as a light, melee, spell-weapon attack.  
-On a hit, this attack does no damage, but the target takes a level of stunned as time temporarily freezes for the creature.  
+On a hit, this attack does no damage, but the target is stunned until the end of the round as time temporarily freezes for the creature.  
 Once a creature has been stunned from a time effect, it is immune until 24 hours have passed.  
 **Might Stance Bonus:** Add two levels of dazed.
 

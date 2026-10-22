@@ -146,11 +146,12 @@ You don't wait for "Level Ups". You spend XP as you earn it to buy upgrades dire
 *   **Aspects:** Add new personality traits or upgrade existing ones.
 
 ### Bloodmarks
-Earned by performing legendary feats in combat (awarded by GM). Bloodmarks are your "Warrior Level".
+Earned by performing legendary feats in combat (awarded by GM). Bloodmarks measure combat prowess and are separate from XP.
 *   **1st Bloodmark:** Gain a **Specialization** (Passive buff).
-*   **2nd-3rd:** Gain **Signature Abilities** (spend Rush Points to activate).
-*   **4th:** Gain a **Combat Mastery** (Once-per-day ultimate).
-*   **5th:** Gain a **Paragon Ability** (God-tier passive).
+*   **2nd:** Gain a second **Specialization** and a **Signature Ability** (spend Rush Points to activate).
+*   **3rd:** Gain two more **Signature Abilities**.
+*   **4th:** Gain a **Combat Mastery** (once-per-long-rest ultimate).
+*   **5th and each after:** Gain a **Paragon Ability** (end-game power).
 
 ---
 

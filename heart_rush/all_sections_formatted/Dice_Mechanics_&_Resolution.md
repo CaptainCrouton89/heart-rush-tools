@@ -14,7 +14,7 @@ At the heart of every uncertain action lies a simple formula: combine your curre
 
 **The fundamental mechanic:**
 
-- **Your Heart Die**: Represents your stamina and vitality—as you tire or take wounds, this die shrinks
+- **Your Heart Die**: Represents your stamina and vitality—as you spend stamina it shrinks, and a short rest restores it
 - **An Ability Die**: Represents your natural talent in one of four areas (Might, Agility, Cunning, or Presence)
 
 The sum of these dice, plus any modifiers from your training and circumstances, determines whether you succeed or fail. This creates a dynamic where even skilled characters must manage their resources carefully, while less talented heroes can still triumph when fresh and determined.
@@ -97,14 +97,15 @@ Where skill checks represent your active attempts to accomplish goals, saving th
 
 **CN Determination**:
 
-- Against creatures: Their ability challenge number
-- Environmental effects: GM sets CN
+- Against creatures: Their ability challenge number (heart challenge number for elemental talents)
+- Hazards: The hazard's rating; you take the shortfall as damage (see Hazards in Damage & Consequences)
+- Other environmental effects: GM sets CN
 
-**Example**: _Dodging a falling boulder_
+**Example**: _Dodging a rockslide (rating 20)_
 
 - Roll: Heart die + Agility die
-- CN: 12 (set by GM)
-- Success avoids damage, failure takes full damage
+- Result 14: you take 6 damage
+- Result 20 or more: you take none
 
 ### 3. Attack & Defense Rolls (A/D Rolls)
 
@@ -309,9 +310,9 @@ This table serves as your primary reference for setting and understanding diffic
 
 ### Ability Challenge Numbers
 
-Not all challenges come from the environment—sometimes you're the one creating effects that others must resist. When you grapple a foe, dazzle a crowd with your presence, or weave magical effects, your natural abilities determine how hard you are to resist. These numbers scale with your growth as a hero through paragon levels, ensuring that your innate talents remain relevant throughout your adventures. Different characters excel at different types of effects based on their strongest abilities.
+Not all challenges come from the environment—sometimes you're the one creating effects that others must resist. When you grapple a foe, dazzle a crowd with your presence, or weave magical effects, your natural abilities determine how hard you are to resist. These numbers scale with your growth as a hero through paragon abilities, ensuring that your innate talents remain relevant throughout your adventures. Different characters excel at different types of effects based on their strongest abilities.
 
-**Calculation**: Maximum of relevant ability die + (2 × paragon level)
+**Calculation**: Maximum of relevant ability die + (2 × number of bloodmarks beyond your 4th)
 
 **Types**:
 
@@ -319,12 +320,14 @@ Not all challenges come from the environment—sometimes you're the one creating
 - Agility Challenge Number
 - Cunning Challenge Number
 - Presence Challenge Number
-- Heart Challenge Number (for magical effects)
+- Heart Challenge Number: maximum of your heart die + (2 × number of bloodmarks beyond your 4th). Every elemental talent that allows a saving throw uses this number.
 
-**Example**: _A veteran warrior (Might d10, Paragon 2)_
+**Example**: _A veteran commander (Presence d10, 6 bloodmarks)_
 
-- Might Challenge Number = 10 + (2 × 2) = 14
-- Enemies must meet or beat 14 to resist their grapples
+- Presence Challenge Number = 10 + (2 × 2) = 14
+- A creature she has frightened must roll 14 or higher on its cunning saving throw to shake the fear off (see Frightened in Conditions)
+
+A challenge number is for effects you impose. When both creatures are actively struggling, such as a grapple, both roll and the higher result wins (see Grappling in Combat).
 
 ### Stratagem CNs
 

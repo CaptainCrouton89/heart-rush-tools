@@ -43,7 +43,7 @@ Each upgrade type serves a different purpose in shaping your character:
 | **New Elemental Talent** | (Current Combat Talents × 2) + 3\* | Master elemental combat arts                      |
 | **Destiny Level**        | Current Destiny Levels + 5         | Unlock a talent's ultimate potential              |
 
-\*Spelltouched characters pay only (Current Combat Talents + 3) for elemental talents
+\*Characters with the Warcaster specialization pay only (Current Elemental Talents + 3) for elemental talents
 
 ### Understanding Your Options
 

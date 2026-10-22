@@ -8066,14 +8066,6 @@ For generations, the goblins have mined and enchanted under the dragon's rule. T
 
 Now Akta has disrupted the tribute. Glorin's wealth has caught his attention. Morgnor is greedy, patient, and very, very powerful. Something is going to change.
 
-## Mosoyevo
-
-Tags: state, shacklands
-
-A state in the Shacklands region. Listed among the southern powers near Gorath, Kyagos, and Lethos.
-
-TODO: Develop geography, government, culture, and relations.
-
 ## Movasi
 
 Tags: state, theocracy, pilgrimage, velwey, greenwater-isles
@@ -13951,11 +13943,3 @@ Occasionally, outsiders try to capture or kill the great raptors. This unites al
 The Gozi have lived in these canyons for as long as anyone remembers. They bonded with the raptors, learned to fly the gorges, and built their society around the birds and the stone. The outside world passed them by, and they were content.
 
 They remain content. The canyons provide everything they need. The raptors are their partners, not their property. The tribes are family. Why would anyone want anything else?
-
-## Øsmil
-
-Tags: state, shacklands
-
-A state in the Shacklands region. Listed among the southern powers near Gorath, Kyagos, and Lethos.
-
-TODO: Develop geography, government, culture, and relations.
