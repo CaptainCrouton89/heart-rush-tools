@@ -32,14 +32,16 @@ export function burningLevels(conditions: SectionProps['character']['conditions'
  * The fight controls under the damage pad. At 0 HP or below (`Combat.md` Zero Hit points): the death threshold and, while
  * not Unconscious, **Go unconscious** ("or in 10 minutes"). Then the heart die (Spend ▾ lists Endure / Surge under the row,
  * greyed after one spend this round, at d4 or while Suffocating; Focus is on a roll result; the die's ▾ sets it by hand up to
- * the largest heart die), rush points, the round with **Next round** (asking for Burning damage first; it sets rush to the
- * new round and applies Suffocating's round-end step) and **End fight**, and DP with **Start session** (spending and gaining
+ * the largest heart die), rush points, the round with **Next round** (asking for Burning damage first, then — while
+ * Suffocating and conscious — whether the heart die rolled a 1; it sets rush to the new round and applies Suffocating's
+ * round-end step) and **End fight**, and DP with **Start session** (spending and gaining
  * DP through an aspect is on the Aspects section). Without `canEdit` the values show and the controls do not.
  */
 export function FightControls({ character, derived, dispatch, canEdit }: SectionProps) {
   const { play, hp } = character
   const [spending, setSpending] = useState(false)
   const [burning, setBurning] = useState<{ levels: number; amount: string; description: string } | null>(null)
+  const [choking, setChoking] = useState(false)
 
   const spentThisRound = play.staminaSpentRound === play.round
   const atFloor = hp.heartDieCurrent === 4
@@ -48,12 +50,21 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
   const spendBlocked = spentThisRound ? 'Spent this round' : atFloor ? 'No stamina left at d4' : suffocating ? 'No stamina while suffocating' : null
   const atZero = hp.current <= 0
 
-  // Suffocating's step is computed here so the history line can name it; damage from Burning does not change it.
-  const advance = () => void dispatch({ kind: 'nextRound', suffocation: suffocationStep(character) })
+  // Suffocating's step is computed here so the history line can name it; damage from Burning does not change it. A
+  // conscious suffocating character rolls the heart die first (Conditions.md: on a 1 it drops), so Next round asks.
+  const advance = (rolledOne = false) => void dispatch({ kind: 'nextRound', suffocation: suffocationStep(character, rolledOne) })
+  const afterBurn = () => {
+    if (suffocating && !unconscious) return setChoking(true)
+    advance()
+  }
   const nextRound = () => {
     const levels = burningLevels(character.conditions)
     if (levels > 0) return setBurning({ levels, amount: '', description: '' })
-    advance()
+    afterBurn()
+  }
+  const chokeRolled = (one: boolean) => {
+    setChoking(false)
+    advance(one)
   }
   const burnAmount = burning && /^\d+$/.test(burning.amount) ? Number(burning.amount) : 0
   const takeBurn = (e: FormEvent) => {
@@ -61,12 +72,12 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
     if (!burning || burnAmount < 1) return
     const description = burnAmount >= WOUND_AT ? burning.description.trim() : undefined
     void dispatch({ kind: 'damage', amount: burnAmount, ...(description !== undefined ? { woundDescription: description } : {}) })
-    advance()
     setBurning(null)
+    afterBurn()
   }
   const skipBurn = () => {
     setBurning(null)
-    advance()
+    afterBurn()
   }
 
   return (
@@ -227,6 +238,27 @@ export function FightControls({ character, derived, dispatch, canEdit }: Section
               </Button>
             </DialogFooter>
           </form>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={choking} onOpenChange={(open) => !open && setChoking(false)}>
+        <DialogContent showClose={false}>
+          <DialogHeader className="pr-0">
+            <DialogTitle>Suffocating: roll your heart die (d{hp.heartDieCurrent})</DialogTitle>
+            <DialogDescription>
+              {hp.heartDieCurrent === 4
+                ? 'On a 1 you fall unconscious. Otherwise the die holds. Then the round advances.'
+                : `On a 1 it drops to d${HEART_DICE[HEART_DICE.indexOf(hp.heartDieCurrent) - 1]}. Otherwise it holds. Then the round advances.`}
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button size="compact" type="button" variant="line" onClick={() => chokeRolled(false)}>
+              Not a 1
+            </Button>
+            <Button size="compact" type="button" variant="line-primary" onClick={() => chokeRolled(true)}>
+              Rolled a 1
+            </Button>
+          </DialogFooter>
         </DialogContent>
       </Dialog>
     </section>

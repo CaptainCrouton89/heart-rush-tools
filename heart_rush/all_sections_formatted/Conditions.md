@@ -98,7 +98,7 @@ You have disadvantage on ability rolls requiring hearing. If you have 5 levels o
 
 _Ongoing._
 
-You cannot breathe. **At the end of each round while suffocating, your heart die drops one size.** You gain nothing for the drop, and you cannot spend stamina while suffocating. If your heart die would drop below a d4, you fall unconscious. While unconscious and still suffocating, you take 10 damage at the end of each round; this is not a single hit, so it marks no wound.
+You cannot breathe. **At the end of each round while suffocating, roll your heart die. On a 1, it drops one size.** You gain nothing for the drop, and you cannot spend stamina while suffocating. If your heart die would drop below a d4, you fall unconscious. While unconscious and still suffocating, you take 10 damage at the end of each round; this is not a single hit, so it marks no wound.
 
 The condition ends when you can breathe again. Your heart die recovers with a short rest as usual.
 

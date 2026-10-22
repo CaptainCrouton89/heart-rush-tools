@@ -6,7 +6,7 @@ import { applyAction, applyInverse, canUndo, upgradeCharacter, type UndoableEven
 import { xpRemaining } from '../src/pricing'
 import { ELEMENTAL_AFFINITY_ID, indexById, type PlayTalent } from '../src/catalogue'
 import { RuleError, type ActionBody, type Character, type ClientAction, type Inverse } from '../src/types'
-import { SLEEP_EACH } from '../src/reducers/combat'
+import { SLEEP_EACH, suffocationStep } from '../src/reducers/combat'
 import { conditions, makeCharacter } from './fixtures'
 
 const AT = '2026-01-01T00:00:00.000Z'
@@ -123,7 +123,7 @@ function bodies(c: Character): Array<fc.Arbitrary<Body>> {
   const ability = pick(['might', 'agility', 'cunning', 'presence'] as const)
   const level = fc.oneof(fc.constant(null), int(0, 6))
   const night = c.play.failedRestStreak + 1
-  const rolled = night >= 3 ? fc.constant([...SLEEP_EACH]) : fc.array(pick(WOUND_NAMES), { minLength: night, maxLength: night })
+  const rolled = night >= 3 ? fc.constant(Array.from(SLEEP_EACH)) : fc.array(pick(WOUND_NAMES), { minLength: night, maxLength: night })
   const customRows = c.conditions.filter(k => k.conditionId === null)
   const buy = (purchase: Extract<Body, { kind: 'xp:buy' }>['purchase'], rest: fc.Arbitrary<Partial<Extract<Body, { kind: 'xp:buy' }>>> = fc.constant({})) =>
     rest.map(r => ({ kind: 'xp:buy', purchase, ...r }) as Body)
@@ -145,7 +145,7 @@ function bodies(c: Character): Array<fc.Arbitrary<Body>> {
     int(1, 9).map(value => ({ kind: 'round:set', value })),
     pick(['endure', 'focus', 'surge'] as const).map(effect => ({ kind: 'heartDie:spend', effect })),
     pick(HEART).map(value => ({ kind: 'heartDie:set', value })),
-    fc.constant({ kind: 'nextRound' }),
+    fc.boolean().map(one => ({ kind: 'nextRound', suffocation: suffocationStep(c, one) })),
     fc.constant({ kind: 'endFight' }),
     fc.constant({ kind: 'shortRest' }),
     fc.constant({ kind: 'longRest', successful: true }),

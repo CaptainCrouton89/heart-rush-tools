@@ -213,8 +213,15 @@ export type BoughtTalent = {
   attunementElement?: string
 }
 
-/** What Suffocating does at the end of a round (`Conditions.md` Suffocating). */
-export type SuffocationStep = { kind: 'drop'; from: HeartDie; to: HeartDie } | { kind: 'unconscious' } | { kind: 'damage'; amount: 10 }
+/**
+ * What Suffocating does at the end of a round (`Conditions.md` Suffocating). A conscious character rolls the heart die:
+ * `held` when it was not a 1, `drop` or `unconscious` when it was. An unconscious one takes 10 damage without a roll.
+ */
+export type SuffocationStep =
+  | { kind: 'held'; die: HeartDie }
+  | { kind: 'drop'; from: HeartDie; to: HeartDie }
+  | { kind: 'unconscious' }
+  | { kind: 'damage'; amount: 10 }
 
 export type CustomConditionFields = { name: string; affects: AbilityId[] }
 
@@ -238,8 +245,9 @@ export type ActionBody =
   | { kind: 'heartDie:set'; value: HeartDie }
   /**
    * Rush becomes the new round number (0 while Unconscious); fading conditions drop a level; Suffocating applies its round-end
-   * step. `suffocation` is that step as the client computed it (`suffocationStep`), stored so the history can name it; the
-   * reducer refuses a value that differs from the step it applies.
+   * step. `suffocation` is that step as the client computed it (`suffocationStep`, from whether the heart die rolled a 1),
+   * stored so the history can name it; the reducer refuses a value that differs from the step it would apply, and refuses a
+   * missing one while a conscious character is suffocating, because the roll is the player's.
    */
   | { kind: 'nextRound'; suffocation?: SuffocationStep | null }
   | { kind: 'endFight' }

@@ -39,7 +39,12 @@ export function describeAction(a: Action, state?: StoredState, dpChange?: number
     case 'nextRound': {
       const step = a.suffocation
       if (!step) return 'Next round'
-      return `Next round · Suffocating: ${step.kind === 'drop' ? `heart die d${step.from} → d${step.to}` : step.kind === 'damage' ? `${step.amount} damage` : 'unconscious'}`
+      const what =
+        step.kind === 'held' ? `heart die held at d${step.die}`
+        : step.kind === 'drop' ? `rolled a 1, heart die d${step.from} → d${step.to}`
+        : step.kind === 'damage' ? `${step.amount} damage`
+        : 'rolled a 1 at d4, unconscious'
+      return `Next round · Suffocating: ${what}`
     }
     case 'endFight': return 'Ended the fight'
     case 'shortRest': return 'Short rest'

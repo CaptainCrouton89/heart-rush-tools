@@ -268,25 +268,39 @@ describe('nextRound: rush', () => {
 
 describe('nextRound: Suffocating', () => {
   const suffocating = (over: Partial<Character> = {}) => makeCharacter({ conditions: [condition(CONDITION.suffocating, null, { id: 's' })], ...over })
-  test('heart die d8 drops to d6; HP and conditions otherwise unchanged; the step is reported', () => {
+  test('the heart die rolled a 1: d8 drops to d6; HP and conditions otherwise unchanged; the step is reported', () => {
     const c = suffocating()
-    assert.deepEqual(r.suffocationStep(c), { kind: 'drop', from: 8, to: 6 })
+    assert.deepEqual(r.suffocationStep(c, true), { kind: 'drop', from: 8, to: 6 })
     const after = r.nextRound(c, act({ kind: 'nextRound', suffocation: { kind: 'drop', from: 8, to: 6 } }), conditions)
     assert.equal(after.hp.heartDieCurrent, 6)
     assert.equal(after.hp.current, 40)
     assert.equal(after.play.staminaSpentRound, null)
   })
-  test('at d4 the character falls unconscious (an ongoing row without a level); the die stays d4; rush is 0', () => {
+  test('the heart die did not roll a 1: it holds, the round still advances', () => {
+    const c = suffocating()
+    assert.deepEqual(r.suffocationStep(c, false), { kind: 'held', die: 8 })
+    const after = r.nextRound(c, act({ kind: 'nextRound', suffocation: { kind: 'held', die: 8 } }), conditions)
+    assert.equal(after.hp.heartDieCurrent, 8)
+    assert.equal(after.play.round, 2)
+    assert.equal(after.play.rushPoints, 2)
+  })
+  test('a conscious suffocating character must report the roll; a step for the wrong die is refused', () => {
+    refuses('bad_action', () => r.nextRound(suffocating(), act({ kind: 'nextRound' }), conditions))
+    refuses('bad_action', () => r.nextRound(suffocating(), act({ kind: 'nextRound', suffocation: { kind: 'held', die: 6 } }), conditions))
+  })
+  test('a 1 at d4: the character falls unconscious (an ongoing row without a level); the die stays d4; rush is 0', () => {
     const c = suffocating({ hp: { baseMax: 40, current: 40, heartDieCurrent: 4 } })
-    assert.deepEqual(r.suffocationStep(c), { kind: 'unconscious' })
-    const after = r.nextRound(c, act({ kind: 'nextRound' }, 'N1'), conditions)
+    assert.deepEqual(r.suffocationStep(c, true), { kind: 'unconscious' })
+    assert.deepEqual(r.suffocationStep(c, false), { kind: 'held', die: 4 })
+    const after = r.nextRound(c, act({ kind: 'nextRound', suffocation: { kind: 'unconscious' } }, 'N1'), conditions)
     assert.equal(after.hp.heartDieCurrent, 4)
     assert.deepEqual(after.conditions.find(k => k.conditionId === CONDITION.unconscious), { id: 'N1:0', conditionId: CONDITION.unconscious, name: null, level: null, permanent: false, source: 'manual', affects: [] })
     assert.equal(after.play.rushPoints, 0)
   })
   test('unconscious and suffocating: 10 damage, no wound; the die does not drop', () => {
     const c = suffocating({ conditions: [condition(CONDITION.suffocating, null), condition(CONDITION.unconscious, null)], hp: { baseMax: 40, current: 5, heartDieCurrent: 6 } })
-    assert.deepEqual(r.suffocationStep(c), { kind: 'damage', amount: 10 })
+    assert.deepEqual(r.suffocationStep(c, false), { kind: 'damage', amount: 10 })
+    assert.deepEqual(r.suffocationStep(c, true), { kind: 'damage', amount: 10 })
     const after = r.nextRound(c, act({ kind: 'nextRound' }), conditions)
     assert.equal(after.hp.current, -5)
     assert.equal(after.hp.heartDieCurrent, 6)

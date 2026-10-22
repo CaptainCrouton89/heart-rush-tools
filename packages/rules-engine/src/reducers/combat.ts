@@ -168,22 +168,27 @@ export function heartDieSet(c: Character, a: Of<'heartDie:set'>): Character {
   return { ...c, hp: { ...c.hp, heartDieCurrent: a.value } }
 }
 /**
- * Suffocating at the end of a round (`Conditions.md`): unconscious → 10 damage, no wound; heart die d4 → falls unconscious;
- * otherwise the heart die drops one size. Null when the character is not suffocating.
+ * Suffocating at the end of a round (`Conditions.md`): unconscious → 10 damage, no wound. Otherwise the player rolls the
+ * heart die; `rolledOne` says whether it showed a 1. Not a 1 → the die holds; a 1 at d4 → falls unconscious; a 1 above d4 →
+ * the die drops one size. Null when the character is not suffocating.
  */
-export function suffocationStep(c: Character): SuffocationStep | null {
+export function suffocationStep(c: Character, rolledOne: boolean): SuffocationStep | null {
   if (!hasCondition(c, CONDITION.suffocating)) return null
   if (hasCondition(c, CONDITION.unconscious)) return { kind: 'damage', amount: 10 }
+  if (!rolledOne) return { kind: 'held', die: c.hp.heartDieCurrent }
   const index = HEART_STEPS.indexOf(c.hp.heartDieCurrent)
   if (index <= 0) return { kind: 'unconscious' }
   return { kind: 'drop', from: c.hp.heartDieCurrent, to: HEART_STEPS[index - 1]! }
 }
 function sameStep(a: SuffocationStep | null, b: SuffocationStep | null): boolean {
   if (a === null || b === null) return a === b
-  return a.kind === b.kind && (a.kind !== 'drop' || (b.kind === 'drop' && a.from === b.from && a.to === b.to))
+  if (a.kind !== b.kind) return false
+  if (a.kind === 'drop') return b.kind === 'drop' && a.from === b.from && a.to === b.to
+  if (a.kind === 'held') return b.kind === 'held' && a.die === b.die
+  return true
 }
 function suffocate(c: Character, step: SuffocationStep | null, id: string): Character {
-  if (step === null) return c
+  if (step === null || step.kind === 'held') return c
   if (step.kind === 'damage') return updateHp(c, c.hp.current - step.amount)
   if (step.kind === 'drop') return { ...c, hp: { ...c.hp, heartDieCurrent: step.to } }
   const row: Condition = { id: `${id}:0`, conditionId: CONDITION.unconscious, name: null, level: null, permanent: false, source: 'manual', affects: [] }
@@ -191,7 +196,9 @@ function suffocate(c: Character, step: SuffocationStep | null, id: string): Char
 }
 
 export function nextRound(c: Character, a: Of<'nextRound'>, catalogue: ConditionCatalogue): Character {
-  const step = suffocationStep(c)
+  const rolledOne = a.suffocation?.kind === 'drop' || a.suffocation?.kind === 'unconscious'
+  const step = suffocationStep(c, rolledOne)
+  if (a.suffocation === undefined && step !== null && step.kind !== 'damage') throw new RuleError('bad_action', 'Suffocating: roll the heart die first')
   if (a.suffocation !== undefined && !sameStep(a.suffocation, step)) throw new RuleError('bad_action', 'The sheet changed before the round ended; try Next round again')
   const round = c.play.round + 1
   const decremented = new Set<string>()
