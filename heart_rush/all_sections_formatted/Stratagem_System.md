@@ -22,7 +22,7 @@ Before the first roll, the GM and players settle six things:
 
 1. **The goal.** Be specific: "capture the fortress island" works, "defeat the pirates" does not.
 2. **The objectives.** See below.
-3. **The time each roll covers.** Hours for a rescue before dawn, a week for a siege, a season for a trade route. A longer period means fewer rolls, so choose it to match how often you want to roll.
+3. **The time each roll covers.** Hours for a rescue before dawn, a week for a siege, a season for a trade route. Choose about how long one objective would take. The period sets how much time passes in the world with each roll, which matters against a deadline and for what other people do meanwhile. It does not change how many rolls the stratagem takes; the objectives decide that.
 4. **The setup CN.** See below.
 5. **The known threats.** The GM names any threat the players already know about, such as "the Duke of Vell may send relief." A threat is not in the CN. If it arrives, the GM decides from the fiction whether it becomes a hindrance or starts a scene or a fight (see Ending in a Fight).
 6. **The deadline, if any.** When it passes, the stratagem ends and the event it guards happens with whatever the players have finished; unfinished objectives are not finished.

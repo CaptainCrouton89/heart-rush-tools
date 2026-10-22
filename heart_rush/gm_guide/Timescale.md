@@ -46,7 +46,7 @@ This is guidance for the GM. The rules are in the Stratagem System section.
 
 ### Choose the Time per Roll
 
-Choose the time per roll from the goal: hours for a rescue before dawn, a week for a siege, a season for a trade route. A shorter time means more rolls and more room for scenes between them. A longer time means fewer rolls and more is summarized.
+Choose the time per roll from the goal: hours for a rescue before dawn, a week for a siege, a season for a trade route. Choose about how long one objective would take. The time sets how much passes in the world with each roll, which matters against a deadline and for what other people do meanwhile. It does not change how many rolls the stratagem takes; the objectives decide that.
 
 Pick a time that is long enough that nobody wants to play it moment by moment, and short enough that the situation can change between rolls.
 
