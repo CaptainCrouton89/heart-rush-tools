@@ -98,7 +98,7 @@ Where skill checks represent your active attempts to accomplish goals, saving th
 **CN Determination**:
 
 - Against creatures: Their ability challenge number (heart challenge number for elemental talents)
-- Hazards: The hazard's rating; you take the shortfall as damage (see Hazards in Damage & Consequences)
+- Hazards: A graded hazard's rating, where you take the shortfall as damage, or an all-or-nothing hazard's CN, where a failure takes its full damage (see Hazards in Damage & Consequences)
 - Other environmental effects: GM sets CN
 
 **Example**: _Dodging a rockslide (rating 20)_

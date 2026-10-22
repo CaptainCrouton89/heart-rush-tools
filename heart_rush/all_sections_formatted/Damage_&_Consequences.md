@@ -12,11 +12,13 @@ Check out the Combat section to learn more.
 
 ### Hazards
 
-A hazard is anything that hurts you without an attack roll: a fall, a dart trap, a rockslide, the jibing boom of a ship. Every hazard has a **rating**. For a fall, the rating is the height in feet. For a trap or an environmental hazard, the GM sets it: 10 is a nasty trap, 20 is a rockslide, 30 is a collapsing tower.
+A hazard is anything that hurts you without an attack roll: a fall, a dart trap, a rockslide, the jibing boom of a ship. When a hazard hits you, make a saving throw. The ability depends on how you would avoid it: Agility to twist away or catch yourself, Might to brace. The GM decides which of two shapes the hazard takes.
 
-When a hazard hits you, make a saving throw. The ability depends on how you would avoid it: Agility to twist away or catch yourself, Might to brace. **If you roll less than the rating, you take the difference as damage.** Damage of 10 or more marks a wound as usual.
+**Graded hazards.** A fall, a rockslide, a collapsing floor: you can get partly clear, and how far short you fall is how badly you are hurt. The hazard has a **rating**. For a fall, the rating is the height in feet. Otherwise the GM sets it: 20 is a rockslide, 30 is a collapsing tower. **If you roll less than the rating, you take the difference as damage.**
 
-You can spend stamina on the saving throw (Focus) and on the damage (Endure) as you would in combat. A hazard that cannot be avoided says so and deals its rating as damage.
+**All-or-nothing hazards.** A dart trap, a swinging blade, a crossbow rigged to a door: you either get out of the way or you take the whole thing. The hazard has a **CN** and a **damage** amount. **If you roll less than the CN, you take the full damage; otherwise you take none.** A nasty trap is CN 12 for 2d8 damage; a deadly one is CN 15 for 4d8.
+
+In either case, damage of 10 or more marks a wound as usual. You can spend stamina on the saving throw (Focus) and on the damage (Endure) as you would in combat. A hazard that cannot be avoided says so and deals its damage without a save.
 
 ### Falling
 
