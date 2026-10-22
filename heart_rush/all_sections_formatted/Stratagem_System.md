@@ -15,7 +15,6 @@ You are never forced to roll. Before any roll you can play the objective out as 
 - **The task is routine or safe.** Narrate it.
 - **One character can do it in one check.** Make a skill check.
 - **The table wants to play it.** Play it out.
-- **It is a chase.** A chase takes seconds per roll and measures distance rather than objectives. Use the Chase rules.
 
 ## Setting Up
 
