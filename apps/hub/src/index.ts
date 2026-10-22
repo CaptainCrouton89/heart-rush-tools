@@ -1,18 +1,20 @@
 // heartrush.party: `/` is a links page to the Heart Rush sites; `/health` answers 200; the two font files the page
-// uses are served under /_hub/fonts/; every other path is a 301 to the same path and query on rules.heartrush.party.
+// uses are served under /_hub/fonts/; `/og.jpg` is the link-preview image all the sites share; every other path is a 301 to the same path and query on rules.heartrush.party.
 import uiStyles from '@heartrush/ui/styles.css'
 import { appearanceScript } from '@heartrush/ui/appearance'
 import plexSans from '@fontsource-variable/ibm-plex-sans/files/ibm-plex-sans-latin-wght-normal.woff2'
 import sourceSerif from '@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2'
+// The 1200×630 link-preview image every Heart Rush site names in its og:image tag.
+import ogImage from './og.jpg'
 
 const FONTS: Record<string, ArrayBuffer> = {
   '/_hub/fonts/ibm-plex-sans-latin-wght-normal.woff2': plexSans,
   '/_hub/fonts/source-serif-4-latin-wght-normal.woff2': sourceSerif,
 }
 
-// The first sentence of the rulebook's introduction (heart_rush/all_sections_formatted/Intro.md).
+// The first paragraph of the rulebook's introduction (heart_rush/all_sections_formatted/Intro.md).
 const DESCRIPTION =
-  'Heart Rush is a crunchy fantasy TTRPG that does one thing exceptionally well: dangerous, tactical combat that actually moves fast.'
+  'Heart Rush is a crunchy fantasy tabletop RPG with dangerous, tactical combat in which everyone decides at the same time. The same check resolves a single sword swing or a year spent building a trade empire, so a campaign can grow from street fights to ruling a kingdom.'
 
 const LINKS = [
   { title: 'Rules', href: 'https://rules.heartrush.party/', line: 'The rulebook, GM guide and Alaria wiki' },
@@ -75,6 +77,17 @@ const PAGE = `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Heart Rush</title>
 <meta name="description" content="${DESCRIPTION}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Heart Rush">
+<meta property="og:title" content="Heart Rush">
+<meta property="og:description" content="${DESCRIPTION}">
+<meta property="og:url" content="https://heartrush.party/">
+<meta property="og:image" content="https://heartrush.party/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Heart Rush: from street fights to ruling a kingdom.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://heartrush.party/og.jpg">
 <script>${appearanceScript}</script>
 <link rel="preload" href="/_hub/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/_hub/fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -106,6 +119,11 @@ export default {
       })
     }
     if (readable && source.pathname === '/health') return Response.json({ ok: true, app: 'hub' })
+    if (readable && source.pathname === '/og.jpg') {
+      return new Response(ogImage, {
+        headers: { 'content-type': 'image/jpeg', 'cache-control': 'public, max-age=86400' },
+      })
+    }
     const font = readable ? FONTS[source.pathname] : undefined
     if (font) {
       return new Response(font, {

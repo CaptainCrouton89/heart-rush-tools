@@ -9,6 +9,6 @@
   // The page reads its tokens from @heartrush/ui's stylesheet text and serves the Fontsource files the stylesheet uses.
   "rules": [
     { "type": "Text", "globs": ["**/*.css"], "fallthrough": true },
-    { "type": "Data", "globs": ["**/*.woff2"], "fallthrough": true }
+    { "type": "Data", "globs": ["**/*.woff2", "**/*.jpg"], "fallthrough": true }
   ]
 }
