@@ -24,7 +24,7 @@ function Home() {
     <SiteShell nav={null} activePath="/">
       <div className="max-w-[1040px] lg:pt-6">
         <h1 className="font-serif text-h1-sm font-semibold text-foreground md:text-home-title">Heart Rush</h1>
-        <p className="mt-2 font-serif text-h3 text-muted-foreground">Rules for dangerous, tactical fantasy</p>
+        <p className="mt-2 font-serif text-h3 text-muted-foreground">A fantasy tabletop roleplaying game</p>
         <p className="mt-6 max-w-[720px] font-serif text-body-sm text-foreground md:text-body">{intro}</p>
 
         <button

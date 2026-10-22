@@ -1,6 +1,6 @@
 # A Brief Intro
 
-Heart Rush is a crunchy fantasy TTRPG that does one thing exceptionally well: dangerous, tactical combat that actually moves fast. But here's the kicker—it scales seamlessly from gritty street fights to conquering kingdoms.
+Heart Rush is a crunchy fantasy tabletop RPG with dangerous, tactical combat in which everyone decides at the same time. The same check resolves a single sword swing or a year spent building a trade empire, so a campaign can grow from street fights to ruling a kingdom.
 
 ## What Makes Heart Rush Different
 
