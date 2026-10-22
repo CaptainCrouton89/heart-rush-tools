@@ -27,6 +27,15 @@ export const SLEEP_ROLL_CONDITION = {
   dazed: CONDITION.dazed,
 } as const
 
+/**
+ * What a failed sleeping check inflicts on night N of the streak (`Rests_&_Healing.md`): night 1 rolls one random condition,
+ * night 2 rolls two, night 3 and every night after gives one level of each of the three with no roll.
+ */
+export function sleepPenalty(night: number): { kind: 'roll'; count: 1 | 2 } | { kind: 'each' } {
+  if (night >= 3) return { kind: 'each' }
+  return { kind: 'roll', count: night === 2 ? 2 : 1 }
+}
+
 /** True when any condition row with this catalogue id exists (rows of one condition may be split by source). */
 export function hasCondition(c: Character, conditionId: string): boolean {
   return c.conditions.some(k => k.conditionId === conditionId)

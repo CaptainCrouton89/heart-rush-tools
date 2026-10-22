@@ -121,10 +121,14 @@ describe('criterion 10b: sleep conditions', () => {
     assert.equal(level(CONDITION.weakened, 'manual') + level(CONDITION.weakened, 'sleep'), 2)
     assert.equal(level(CONDITION.weakened, 'sleep'), 1)
     assert.equal(level(CONDITION.offBalanced, 'sleep'), 1)
-    // night 3 with streak 2: one roll accepted; two refused
-    refuses('wrong_rolled_count', () => r.longRest(c, act({ kind: 'longRest', successful: false, rolled: ['dazed', 'weakened'] }, 'N3')))
-    c = r.longRest(c, act({ kind: 'longRest', successful: false, rolled: ['dazed'] }, 'N3'))
+    // night 3 with streak 2: one level of each, in the fixed order; a roll is refused
+    refuses('wrong_rolled_count', () => r.longRest(c, act({ kind: 'longRest', successful: false, rolled: ['dazed'] }, 'N3')))
+    refuses('wrong_rolled_count', () => r.longRest(c, act({ kind: 'longRest', successful: false, rolled: ['dazed', 'weakened', 'off-balanced'] }, 'N3')))
+    c = r.longRest(c, act({ kind: 'longRest', successful: false, rolled: ['weakened', 'off-balanced', 'dazed'] }, 'N3'))
     assert.equal(c.play.failedRestStreak, 3)
+    assert.equal(level(CONDITION.weakened, 'sleep'), 2)
+    assert.equal(level(CONDITION.offBalanced, 'sleep'), 2)
+    assert.equal(level(CONDITION.dazed, 'sleep'), 2)
     // success: sleep rows go, the manual Weakened 1 stays, streak back to 0
     c = r.longRest(c, act({ kind: 'longRest', successful: true }, 'N4'))
     assert.deepEqual(c.conditions.map(k => [k.id, k.conditionId, k.level, k.source]), [['m1', CONDITION.weakened, 1, 'manual']])
@@ -151,20 +155,22 @@ describe('criterion 10b: sleep conditions', () => {
       ['R9:1', CONDITION.dazed, 1, 'sleep', false],
     ])
   })
-  test('required count: 1 at streak 0, 2 at streak 1, 1 at streak 2 and beyond', () => {
+  test('required count: 1 at streak 0, 2 at streak 1, all three at streak 2 and beyond', () => {
     const rolled2 = ['dazed', 'weakened'] as ['dazed', 'weakened']
     const rolled1 = ['dazed'] as ['dazed']
+    const each = ['weakened', 'off-balanced', 'dazed'] as ['weakened', 'off-balanced', 'dazed']
     const run = (streak: number, rolled: Array<'weakened' | 'off-balanced' | 'dazed'>) =>
       r.longRest(withPlay(makeCharacter(), { failedRestStreak: streak }), act({ kind: 'longRest', successful: false, rolled }))
     refuses('wrong_rolled_count', () => run(0, rolled2))
     refuses('wrong_rolled_count', () => run(0, []))
     refuses('wrong_rolled_count', () => run(1, rolled1))
     refuses('wrong_rolled_count', () => run(2, rolled2))
+    refuses('wrong_rolled_count', () => run(2, rolled1))
     refuses('wrong_rolled_count', () => run(5, rolled2))
     assert.equal(run(0, rolled1).play.failedRestStreak, 1)
     assert.equal(run(1, rolled2).play.failedRestStreak, 2)
-    assert.equal(run(2, rolled1).play.failedRestStreak, 3)
-    assert.equal(run(5, rolled1).play.failedRestStreak, 6)
+    assert.equal(run(2, each).play.failedRestStreak, 3)
+    assert.equal(run(5, each).play.failedRestStreak, 6)
     refuses('bad_action', () => run(0, ['burning' as 'dazed']))
   })
   test('rulebook example: 14 hp, d4 heart die, rank 12 wound; failed → 21 hp and Dazed; successful next → wound 11, hp 29, Dazed gone', () => {

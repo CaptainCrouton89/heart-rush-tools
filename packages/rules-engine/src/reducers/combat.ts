@@ -1,6 +1,6 @@
 // Pure combat, condition and rest reducers. The action supplies every new row's id and timestamp.
 import type { ConditionCatalogue } from '../catalogue'
-import { CONDITION, SLEEP_ROLL_CONDITION, hasCondition } from '../conditions'
+import { CONDITION, SLEEP_ROLL_CONDITION, hasCondition, sleepPenalty } from '../conditions'
 import { effectiveMaxHp, maxHeartDie, minorUseCost } from '../derived'
 import { RuleError, type Action, type Aspect, type Character, type Condition, type HeartDie, type SuffocationStep, type Wound } from '../types'
 
@@ -221,6 +221,8 @@ export function endFight(c: Character, _a: Of<'endFight'>): Character {
 export function shortRest(c: Character, _a: Of<'shortRest'>): Character {
   return { ...c, hp: { ...c.hp, heartDieCurrent: maxHeartDie(c) } }
 }
+/** The order a night-3+ failed rest lists its three conditions in (`longRest.rolled`). */
+export const SLEEP_EACH = ['weakened', 'off-balanced', 'dazed'] as const
 export function longRest(c: Character, a: Of<'longRest'>): Character {
   if (a.successful) {
     const wounds = c.wounds.filter(w => w.rank > 1).map(w => ({ ...w, rank: w.rank - 1 }))
@@ -234,7 +236,11 @@ export function longRest(c: Character, a: Of<'longRest'>): Character {
     }
   }
   const streak = c.play.failedRestStreak + 1
-  if (a.rolled.length !== (streak === 2 ? 2 : 1)) throw new RuleError('wrong_rolled_count')
+  const penalty = sleepPenalty(streak)
+  if (penalty.kind === 'each') {
+    // Night 3 and after: one level of each, no roll, so the action carries exactly the three.
+    if (a.rolled.length !== 3 || SLEEP_EACH.some((name, i) => a.rolled[i] !== name)) throw new RuleError('wrong_rolled_count')
+  } else if (a.rolled.length !== penalty.count) throw new RuleError('wrong_rolled_count')
   const added: Condition[] = []
   a.rolled.forEach((name, i) => {
     if (!Object.hasOwn(SLEEP_ROLL_CONDITION, name)) throw new RuleError('bad_action')
