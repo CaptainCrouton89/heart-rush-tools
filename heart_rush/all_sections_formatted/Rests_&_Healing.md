@@ -27,11 +27,11 @@ You realize you can spend some time in the town without feeling pressured to lea
 
 #### Successful Sleeping Check
 
-On a success, reduce the ranks of each of your wounds by one, and heal hit points up to your current maximum (it will be reduced if you have wounds).
+On a success, reduce the ranks of each of your wounds by one, and heal hit points up to your current maximum (it will be reduced if you have wounds). You also remove all conditions gained from failed sleeping checks.
 
 #### Failed Sleeping Check
 
-On a failure, do not reduce the ranks of your wounds, and regain half of your missing hit points, rounded down. Additionally, take a level of weakened, off-balanced, or dazed, chosen at random. A second night of failed sleep inflicts two conditions at random, and a third night, along with every night thereafter, inflicts one condition at random.
+On a failure, do not reduce the ranks of your wounds, and regain half of your missing hit points, rounded down. Additionally, take a level of weakened, off-balanced, or dazed, chosen at random. A second night of failed sleep inflicts two levels, each chosen at random. A third night, and every night thereafter, inflicts one level of each: weakened, off-balanced, and dazed.
 
 ### Sleeping Conditions
 
@@ -55,7 +55,7 @@ On a failure, do not reduce the ranks of your wounds, and regain half of your mi
 With a tent, a bedroll and comfortable weather, the CN is 9. Sleeping on bare ground in the open at a comfortable temperature, the CN is 15.
 
 [[GM Note
-The pacing of Heart Rush tends to be a bit slower than other games; letting players take long rests does not let them heal all that much, so don't feel pressured to pack multiple combats into only a single day. A long trip through the wilderness where good rest is uncertain and combat is intermittent is plenty grueling for most parties. Thereafter, inflicts one level of each condition. A successful long rest removes all conditions gained this way.]]
+The pacing of Heart Rush tends to be a bit slower than other games; letting players take long rests does not let them heal all that much, so don't feel pressured to pack multiple combats into only a single day. A long trip through the wilderness where good rest is uncertain and combat is intermittent is plenty grueling for most parties.]]
 
 ## Healing Potions
 

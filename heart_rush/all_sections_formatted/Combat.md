@@ -331,7 +331,7 @@ When you take damage, you can spend stamina to reduce the harm (see **Spending S
 
 Whatever damage you do take gets subtracted from your hit points. **If this would cause your hit points to reach a negative amount equal to your maximum hit points, you are dead**.
 
-### More than 10 Damage
+### 10 or More Damage
 
 If you take 10 or more damage, this represents serious bodily harm. **In addition to reducing your hit points, mark a wound**. The GM will give you a plain English description of the wound. For example, a wound could be "a nasty gash in your arm," or "a fractured leg," or "your guts are spilling out". Write this down. Next to it, write the rank of the wound. The rank is equal to the amount of damage you took. Read more about wounds in the next section.
 
